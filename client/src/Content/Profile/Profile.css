@@ -9,11 +9,24 @@
 }
 
 .profile-header{
-    margin-top: 60px;
     font-family: 'Righteous', cursive;
+}
+
+.profile-picture {
+    width: calc(50px + 33vw);
+    height: 365px;
+    border-radius: 50%;
+    background-size: 140%;
+    box-shadow: 0 6px 0 0 #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/abass-profile.jpg');
 }
 
 .profile-socieal-links a{
     padding: 8px;
     font-size: 25px;
+}
+.profile-separator {
+    height: 30px;
 }
