@@ -9,13 +9,13 @@ export default function Profile() {
         <div className='row'>
             <div className='col-12 mt-4 mb-4 profile-header'>
                 <div className='text-center mb-4 profile-socieal-links'>
-                     <a href='#'>
+                     <a href='https://www.facebook.com/abasscheik.ben'>
                         <i className="fa fa-facebook"></i>
                      </a>
-                     <a href='#'>
+                     <a href='https://twitter.com/abasscheik1'>
                         <i className="fa fa-twitter"></i>
                      </a>
-                     <a href='#'>
+                     <a href='https://github.com/abass-dev'>
                         <i className="fa fa-github"></i>
                      </a>
         </div>
