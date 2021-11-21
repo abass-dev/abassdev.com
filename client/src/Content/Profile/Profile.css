@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-.profile-container {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('../../assets/images/black-bg1.jpg');
-}
-
 .profile-header{
     font-family: 'Righteous', cursive;
 }
