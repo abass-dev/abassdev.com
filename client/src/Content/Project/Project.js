@@ -8,7 +8,7 @@ export default function Project() {
     <div className='container'>
     <div className='row'>
         <div className='col-md-12 mb-2 mt-4'>
-            <h1 className='text-start fw-bold text-white'>PROJECT</h1>
+            <h1 className='text-start fw-bold text-white'>PROJETS</h1>
         </div>
                 
         <div className='col-md-6 mb-4'>
