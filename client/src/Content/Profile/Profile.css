@@ -13,14 +13,14 @@
 }
 
 .profile-picture {
-    width: calc(50px + 33vw);
-    height: 365px;
+    width: calc(40px + 30vw);
+    height: 330px;
     border-radius: 50%;
     background-size: 140%;
     box-shadow: 0 6px 0 0 #fff;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../../assets/images/abass-profile.jpg');
+    background-image: url('../../assets/images/profile-picture.jpg');
 }
 
 .profile-socieal-links a{
