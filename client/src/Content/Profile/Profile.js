@@ -7,8 +7,8 @@ export default function Profile() {
     return (
         <div className='container'>
         <div className='row'>
-            <div className='col-12 text-center mt-4 mb-4 profile-header'>
-                <div className='profile-socieal-links'>
+            <div className='col-12 mt-4 mb-4 profile-header'>
+                <div className='text-center mb-4 profile-socieal-links'>
                      <a href='#'>
                         <i className="fa fa-facebook"></i>
                      </a>
@@ -43,8 +43,7 @@ export default function Profile() {
                 
                 <div className='col-md-6'>
                     <p className='lead text-white text-start'>
-                    Je suis développeur Full Stack. Passionné de l'internet et de la programmation depuis plus 6 ans.
-                    
+                        Je suis développeur Full Stack. Passionné de l'internet et de la programmation depuis plus 6 ans.
                     </p>
                 </div>
                 
