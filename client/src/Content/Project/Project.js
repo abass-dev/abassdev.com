@@ -80,7 +80,7 @@ export default function Project() {
                     PHP, Bootstrap
                      </span>
                     <p className='lead'>
-                    Form builder eat une créateur de formulaire(form builder) HTML.
+                    Form builder est une créateur de formulaire(form builder) HTML.
                     </p>
                 </div>
             </div>

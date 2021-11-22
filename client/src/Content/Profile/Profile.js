@@ -35,7 +35,8 @@ export default function Profile() {
                  </h2>
             <div className='row align-items-center'>
             
-                <div className='col-12 mx-4'></div>
+                <div className='col-12 mx-4'>
+                </div>
                
                 <div className='mt-4 d-none d-md-block col-md-6'>
                     <div className='profile-picture'></div>
