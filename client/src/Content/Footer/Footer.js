@@ -7,13 +7,13 @@ export default function Footer() {
     <form action='#' method='post' className='text-white contact-me bg-transparent'>
     <h1>CONTACT</h1>
     <div className="contact-me-input mt-4">
-      <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" className="form-control text-white" id="exampleFormControlInput1" placeholder="name@example.com" />
+      <label for="emailId" class="form-label">Adresse E-mail</label>
+      <input type="email" className="form-control text-white" id="emailId" placeholder="name@example.com" />
     </div>
     
     <div className="contact-me-input my-4">
-      <label for="exampleFormControlTextarea1" className="form-label">Message</label>
-      <textarea className="form-control text-white" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <label for="messageId" className="form-label">Message</label>
+      <textarea className="form-control text-white" id="messageId" rows="3"></textarea>
     </div>
     <button className='contact-me-button btn btn-primary-outline'>Envoyer</button>
    <p className='mt-4 text-white'>© 2021 Abass Dev</p>
