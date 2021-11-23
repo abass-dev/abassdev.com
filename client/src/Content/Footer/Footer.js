@@ -7,6 +7,10 @@ export default function Footer() {
     <form action='#' method='post' className='text-white contact-me bg-transparent'>
     <h1>CONTACT</h1>
     <div className="contact-me-input mt-4">
+      <label for="nameId" class="form-label">Nom</label>
+      <input type="text" className="form-control text-white" id="nameId" placeholder="John" />
+    </div>
+    <div className="contact-me-input mt-4">
       <label for="emailId" class="form-label">Adresse E-mail</label>
       <input type="email" className="form-control text-white" id="emailId" placeholder="name@example.com" />
     </div>
