@@ -13,16 +13,16 @@ export default function Project() {
                 
         <div className='col-md-6 mb-4'>
             <div className='card border-secondary'>
-                <img className='card-img-top' src={projectCode} />
+                <img alt='' className='card-img-top' src={projectCode} />
                 <div class="text-white card-img-overlay">
                     <p className='h2 card-title'>
                         NIGATEDEV FRAMEWORK
                     </p>
                  <a href="http://github.com/nigatedev/nigatedev" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-github'></i> Code</a>
                 {" "}
-                 <a className='text-center' href="https://packagist.org/packages/nigatedev/nigatedev" title="version"><img src="https://img.shields.io/packagist/v/nigatedev/nigatedev.svg?style=flat-square" /></a>
+                 <a className='text-center' href="https://packagist.org/packages/nigatedev/nigatedev" title="version"><img alt='' src="https://img.shields.io/packagist/v/nigatedev/nigatedev.svg?style=flat-square" /></a>
                 {" "}
-                <a href="https://github.com/nigatedev/nigatedev/blob/master/LICENSE" title="license"><img src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
+                <a href="https://github.com/nigatedev/nigatedev/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
 
                 {" "}
                 <a href="https://github.com/nigatedev/nigatedev/issues"><img alt="Issues" src="https://img.shields.io/github/issues/nigatedev/nigatedev?color=0088ff" /></a>
@@ -43,12 +43,12 @@ export default function Project() {
             
         <div className='col-md-6 mb-4'>
             <div className='card border-secondary'>
-                <img className='card-img-top' src={projectTodaydevs} />
+                <img alt='' className='card-img-top' src={projectTodaydevs} />
                 <div class="text-white card-img-overlay">
                     <p className='h2 text-light card-title'>
                         TODAYDEVS SITE INTERNET
                     </p>
-                 <a href="#" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Site</a>
+                 <a href="https://todaydevs.com" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Site</a>
                 </div>
                 <div className='card-body'>
                     <i className='fw-bold fa fa-code'></i>
@@ -66,7 +66,7 @@ export default function Project() {
             
         <div className='col-md-6 mb-4'>
             <div className='card border-secondary'>
-                <img className='card-img-top' src={projectCode} />
+                <img alt='' className='card-img-top' src={projectCode} />
                 <div class="text-white card-img-overlay">
                     <p className='h2 text-light card-title'>
                        HTML FORM BUILDER
