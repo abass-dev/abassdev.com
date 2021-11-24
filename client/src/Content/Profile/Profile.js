@@ -7,17 +7,6 @@ export default function Profile() {
     return (
         <div className='container'>
         <div className='row'>
-            <div className='col-12 mt-4 mb-4'>
-                <div className='navbar'>
-                    <ul>
-                        <li>
-                         <a href='#apropos' className='nav-link'>À-PROPOS</a>
-                         <a href='#apropos' className='nav-link'>COMPETENCE</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
             <div className='col-12 profile-header'>
                 <div className='text-center mb-4 profile-socieal-links'>
                      <a href='https://www.facebook.com/abasscheik.ben'>
