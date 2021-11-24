@@ -12,13 +12,11 @@ export default function Home() {
             <div className='row'>
                 <div className='profile-container'>
                     <Profile />
-                    <div className='home-container'>
                     <Skill />
                     <Project />
-                </div>
                     <Footer />
+                </div>
             </div>
-        </div>
         </div>
     );
 }

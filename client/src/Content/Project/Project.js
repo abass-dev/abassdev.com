@@ -5,6 +5,7 @@ import projectTodaydevs from '../../assets/images/projet-todaydevs.jpg'
 
 export default function Project() {
     return (
+  <div className='home-container'>
     <div className='container'>
     <div className='row'>
         <div className='col-md-12'>
@@ -83,13 +84,10 @@ export default function Project() {
                     Form builder est une créateur de formulaire(form builder) HTML.
                     </p>
                 </div>
+              </div>
             </div>
-            </div>
-            
-            
         </div>
-        
-        
     </div>
+</div>
 )
 }
