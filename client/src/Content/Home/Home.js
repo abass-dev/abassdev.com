@@ -15,7 +15,7 @@ export default function Home() {
                     <Skill />
                     <Project />
                 </div>
-                <Footer />
+                    <Footer />
             </div>
         </div>
         </div>
