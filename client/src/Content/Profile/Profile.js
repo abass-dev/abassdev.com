@@ -7,7 +7,18 @@ export default function Profile() {
     return (
         <div className='container'>
         <div className='row'>
-            <div className='col-12 mt-4 mb-4 profile-header'>
+            <div className='col-12 mt-4 mb-4'>
+                <div className='navbar'>
+                    <ul>
+                        <li>
+                         <a href='#apropos' className='nav-link'>À-PROPOS</a>
+                         <a href='#apropos' className='nav-link'>COMPETENCE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div className='col-12 profile-header'>
                 <div className='text-center mb-4 profile-socieal-links'>
                      <a href='https://www.facebook.com/abasscheik.ben'>
                         <i className="fa fa-facebook"></i>
@@ -19,7 +30,7 @@ export default function Profile() {
                         <i className="fa fa-github"></i>
                      </a>
         </div>
-                <h1 className='text-white fw-bold'><span className='text-primary'>HELLO,</span> JE SUIS ABASS DEV</h1>
+                <h1 id='apropos' className='text-white fw-bold'><span className='text-primary'>HELLO,</span> JE SUIS ABASS</h1>
                  <h2 className='text-primary'>
                  <Typical
                 steps={[
