@@ -8,18 +8,18 @@ export default function Skill() {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-12'>
+                <div className='col-12 mb-4'>
                     <h1 className='text-start  mt-4 fw-bold text-white'>COMPÉTENCE & OUTILES</h1>
                     <img alt="compétence détails" width='100%' height='auto' className="img img-thumbnail" src={skillDetailes} />
                 </div>
 
-                <div className='col-md-6 my-4'>
+                <div className='col-md-6 mb-4'>
                     <div className="progress">
                         <span className='bg-transparent mx-1 text-dark skill-progress-title'>PHP </span> <div style={{ width: '75%' }} className="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                     </div>
                 </div>
 
-                <div className='col-md-6 my-4'>
+                <div className='col-md-6 mb-4'>
                     <div className="progress">
                         <span className='bg-transparent mx-1 text-dark skill-progress-title'>JAVA </span> <div style={{ width: '45%' }} className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
                     </div>
