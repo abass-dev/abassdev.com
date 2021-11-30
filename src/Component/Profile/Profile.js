@@ -2,7 +2,6 @@ import React from "react"
 import "./Profile.css"
 import Typical from "react-typical"
 import 'font-awesome/css/font-awesome.min.css'
-import logo from '../../assets/images/logo.jpg'
 
 function navbarToggler() {
     const collapseBtn = document.querySelector('.collapseBtn').classList
