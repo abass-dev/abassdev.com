@@ -13,7 +13,7 @@ export default function Profile() {
         <div className='container mb-4'>
       <div className='row'>
         <div className='col-12 my-4'>
-            <nav className="navbar navbarTextColor navbar-expand-sm navbar-dark bg-transparent">
+            <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
               <div className="container-fluid">
                 <button onClick={navbarToggler} className="navbar-toggler btn btn-success-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="fa fa-bars text-success"></span>
@@ -36,11 +36,13 @@ export default function Profile() {
           <h2 className='text-primary'>
             <Typical
                     steps={[
-                        'Full stack developer 💻',
+                        'Je suis freelance',
                         2000,
-                        '6+ ans d\'expérience 📆',
+                        'Je suis développeur Full-Stack 💻',
                         2000,
-                        'Open-source lover 💗',
+                        'J\'ai 6+ ans d\'expérience 📆',
+                        2000,
+                        'J\'💗ime l\'Open-Source',
                         2000,
                     ]}
                     loop={Infinity}
@@ -59,10 +61,10 @@ export default function Profile() {
                         Pendant mon temps libre, j'écris des articles sur <a href='https://todaydevs.com'>todaydevs</a> et contribue à la communauté <a href='https://github.com/abass-dev?tab=repositories'>Open-Source</a>
                     </p>
             <div className='row'>
-            <div className='col-3'>
-              <button className='btn btn-success'>Résume</button>
+            <div className='col'>
+              <button className='btn btn-success'>MON CV <span className='fa fa-download'></span></button>
             </div>
-                <div className='col  text-end profile-socieal-links'>
+                <div className='col text-end profile-socieal-links'>
             <a href='https://www.facebook.com/abasscheik.ben'>
               <i className="fa fa-facebook"></i>
             </a>

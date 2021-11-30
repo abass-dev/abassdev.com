@@ -3,3 +3,11 @@
 .skill-progress-title {
     font-family: 'Righteous', cursive;
 }
+.skill-card-bg {
+    background: #050f12;
+}
+
+.skill-card-text {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
