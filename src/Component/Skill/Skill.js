@@ -9,7 +9,7 @@ export default function Skill() {
         <div className='container'>
             <div className='row'>
                 <div className='col-12 mb-4'>
-                    <h1 className='text-start  mt-4 fw-bold text-white'>COMPÉTENCE & OUTILES</h1>
+                    <h1 id='competence' className='text-start  mt-4 fw-bold text-white'>COMPÉTENCE & OUTILES</h1>
                     <img alt="compétence détails" width='100%' height='auto' className="img img-thumbnail" src={skillDetailes} />
                 </div>
 

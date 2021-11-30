@@ -22,3 +22,6 @@
 .profile-separator {
     height: 30px;
 }
+.nav-link {
+    font-weight: bold;
+}
