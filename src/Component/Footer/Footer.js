@@ -12,9 +12,9 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <div id='contact'>
+      <div id='contact' className='md-title'>
         <form action='#' method='post' className='text-white contact-me bg-transparent'>
-          <h1>CONTACT</h1>
+          <h1 className='large-title'>CONTACT</h1>
           <div className="contact-me-input">
             <label for="nameId" class="form-label">Nom</label>
             <input type="text" className="form-control text-white" id="nameId" placeholder="John" />

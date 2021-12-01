@@ -9,14 +9,14 @@ export default function Project() {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12'>
-                        <h1 id='projets' className='mt-4 text-start fw-bold text-white'>PROJETS</h1>
+                        <h1 id='projets' className='mt-4 large-title text-start fw-bold text-white'>PROJETS</h1>
                     </div>
 
                     <div className='col-md-6 mb-4'>
                         <div className='card border-secondary'>
                             <img alt='' className='card-img-top' src={projectCode} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 card-title'>
+                                <p className='h2 md-title card-title'>
                                     NIGATEDEV FRAMEWORK
                                 </p>
                                 <a href="http://github.com/nigatedev/nigatedev" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-github'></i> Code</a>
@@ -35,7 +35,7 @@ export default function Project() {
                                     PHP, JavaScript, Sass, Shell, Twig
                     </span>
                                 {" "}
-                                <p className='lead'>
+                                <p className='md-title'>
                                     Nigatedev est un framework PHP qui permet de gagner du temps.
                     </p>
                             </div>
@@ -46,7 +46,7 @@ export default function Project() {
                         <div className='card border-secondary'>
                             <img alt='' className='card-img-top' src={projectTodaydevs} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 text-light card-title'>
+                                <p className='h2 md-title text-light card-title'>
                                     TODAYDEVS SITE INTERNET
                     </p>
                                 <a href="https://todaydevs.com" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Site</a>
@@ -57,7 +57,7 @@ export default function Project() {
                                     {" "}
                     WordPress
                      </span>
-                                <p className='lead'>
+                                <p className='md-title'>
                                     Todaydevs est un site/blog qui vous tiendra informé des nouvelles technologies.
                     </p>
                             </div>
@@ -69,7 +69,7 @@ export default function Project() {
                         <div className='card border-secondary'>
                             <img alt='' className='card-img-top' src={projectCode} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 text-light card-title'>
+                                <p className='h2 md-title text-light card-title'>
                                     HTML FORM BUILDER
                     </p>
                                 <a href="https://github.com/abass-dev/BenOSP-FormBuilder" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-globe'></i> Code</a>
@@ -80,7 +80,7 @@ export default function Project() {
                                     {" "}
                     PHP, Bootstrap
                      </span>
-                                <p className='lead'>
+                                <p className='md-title'>
                                     Form builder est une créateur de formulaire(form builder) HTML.
                     </p>
                             </div>

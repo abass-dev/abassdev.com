@@ -19,7 +19,7 @@ export default function Profile() {
                   <span className="fa fa-bars text-success"></span>
                 </button>
                 <div className="collapseBtn collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav">
+                  <div className="navbar-nav md-title">
                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                     <a className="nav-link text-white" href="#apropos">À-propos</a>
                     <a className="nav-link text-white" href="#competence">Compétence</a>

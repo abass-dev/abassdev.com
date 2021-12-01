@@ -9,13 +9,13 @@ export default function Skill() {
         <div className='container'>
             <div className='row'>
                 <div className='col-12 mb-4'>
-                    <h1 id='competence' className='text-start  mt-4 fw-bold text-white'>COMPÉTENCE & OUTILES</h1>
+                    <h1 id='competence' className='text-start large-title mt-4 fw-bold text-white'>COMPÉTENCE & OUTILES</h1>
                 </div>
                 
                 <div className='col-12 mb-4 text-white'>
                   <div className='row'>
                     <div className='col-md-6 mb-4'>
-                    <h4>Connaissance en Front-end</h4>
+                    <h4 className='md-title'>Connaissance en Front-end</h4>
                     <div className='card bg-secondary'>
                     <div className='card-body'>
                     <div className='row skill-card-bg'>
@@ -41,7 +41,7 @@ export default function Skill() {
                     </div>
                     
                     <div className='col-md-6 mb-4'>
-                    <h4>Connaissance en Back-end</h4>
+                    <h4 className='md-title'>Connaissance en Back-end</h4>
                     <div className='card bg-warning'>
                     <div className='card-body'>
                     <div className='row skill-card-bg'>
@@ -68,7 +68,7 @@ export default function Skill() {
 
                     </div>
                     <div className='col-md-6 mb-4'>
-                    <h4>Base de données</h4>
+                    <h4 className='md-title'>Base de données</h4>
                     <div className='card bg-success'>
                     <div className='card-body'>
                         <div className='row skill-card-bg'>
@@ -89,7 +89,7 @@ export default function Skill() {
                     </div>
                     </div>
                     <div className='col-md-6 mb-4'>
-                    <h4>Outils</h4>
+                    <h4 className='md-title'>Outils</h4>
                     <div className='card bg-info'>
                     <div className='card-body'>
                         <div className='row skill-card-bg'>
@@ -111,7 +111,7 @@ export default function Skill() {
                     </div>
                     
                     <div className='col-md-6 mb-4'>
-                    <h4>Application Android & IOS</h4>
+                    <h4 className='md-title'>Application Android & IOS</h4>
                     <div className='card bg-secondary'>
                     <div className='card-body'>
                         <div className='row skill-card-bg'>
@@ -125,7 +125,7 @@ export default function Skill() {
                     </div>
                     
                     <div className='col-md-6 mb-4'>
-                    <h4>Développement de logiciels</h4>
+                    <h4 className='md-title'>Développement de logiciels</h4>
                     <div className='card bg-danger'>
                     <div className='card-body'>
                         <div className='row skill-card-bg'>

@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+.profile-header{
+    font-family: 'Righteous', cursive;
+}
+
+.large-title {
+    font-family: 'Noto Sans', sans-serif;
+}
+.md-title {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .home-container {
     background-size: contain;
     background-position: bottom;
