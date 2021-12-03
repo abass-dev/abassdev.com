@@ -57,8 +57,9 @@ export default function Profile() {
             <div className='col-md-6 text-white'>
               <h1 className='mt-4'>À-propos de moi</h1>
               <p className='lead text-start'>
-                Je suis développeur Full Stack. Passionné de l'internet et de la programmation depuis plus 6 ans.
-                        Pendant mon temps libre, j'écris des articles sur <a href='https://todaydevs.com'>todaydevs</a> et contribue à la communauté <a href='https://github.com/abass-dev?tab=repositories'>Open-Source</a>
+                Je suis un développeur web, mobile et logiciel complet avec un œil pour la simplicité et la conception axée sur la fonctionnalité.
+                 Passionné de l'internet et de la programmation depuis plus 6 ans.
+                Enfin, pendant mon temps libre, j'écris des articles sur <a href='https://todaydevs.com'>todaydevs</a> et contribue à la communauté <a href='https://github.com/abass-dev?tab=repositories'>Open-Source</a>
                     </p>
             <div className='row'>
             <div className='col'>

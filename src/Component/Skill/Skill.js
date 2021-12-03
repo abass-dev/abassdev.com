@@ -17,7 +17,7 @@ export default function Skill() {
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>Connaissance en Front-end</h4>
                     <div className='card bg-secondary'>
-                    <div className='card-body'>
+                    <div className='card-body md-title'>
                     <div className='row skill-card-bg'>
                      <div className='col-12 skill-card-text'>
                         <i class="devicon-sass-original colored"></i>
@@ -43,7 +43,7 @@ export default function Skill() {
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>Connaissance en Back-end</h4>
                     <div className='card bg-warning'>
-                    <div className='card-body'>
+                    <div className='card-body md-title'>
                     <div className='row skill-card-bg'>
                     <div className='col-12 skill-card-text'>
                         <i class="devicon-php-plain colored"></i>
@@ -70,7 +70,7 @@ export default function Skill() {
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>Base de données</h4>
                     <div className='card bg-success'>
-                    <div className='card-body'>
+                    <div className='card-body md-title'>
                         <div className='row skill-card-bg'>
                         <div className='col-12 skill-card-text'>
                         <i class="devicon-mongodb-plain colored"></i>
@@ -91,7 +91,7 @@ export default function Skill() {
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>Outils</h4>
                     <div className='card bg-info'>
-                    <div className='card-body'>
+                    <div className='card-body md-title'>
                         <div className='row skill-card-bg'>
                         <div className='col-12 skill-card-text'>
                         <i class="devicon-git-plain colored"></i>
@@ -113,7 +113,7 @@ export default function Skill() {
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>Application Android & IOS</h4>
                     <div className='card bg-secondary'>
-                    <div className='card-body'>
+                    <div className='card-body md-title'>
                         <div className='row skill-card-bg'>
                         <div className='col-12 skill-card-text'>
                         <i class="devicon-react-plain colored"></i>
@@ -127,7 +127,7 @@ export default function Skill() {
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>Développement de logiciels</h4>
                     <div className='card bg-danger'>
-                    <div className='card-body'>
+                    <div className='card-body md-title'>
                         <div className='row skill-card-bg'>
                         <div className='col-12 skill-card-text'>
                         <i class="devicon-python-plain colored"></i>
