@@ -3,7 +3,7 @@
     width: calc(40px + 30vw);
     height: 330px;
     border-radius: 50%;
-    background-size: 100%;
+    background-size: cover;
     box-shadow: 0 9px 10px 0 #00ccff33;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,4 +19,18 @@
 }
 .nav-link {
     font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 0 5px 7px 0 #00ccff22;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    }
 }

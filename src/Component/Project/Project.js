@@ -72,7 +72,7 @@ export default function Project() {
                                 <p className='h2 md-title text-light card-title'>
                                     HTML FORM BUILDER
                     </p>
-                                <a href="https://github.com/abass-dev/BenOSP-FormBuilder" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-globe'></i> Code</a>
+                                <a href="https://github.com/abass-dev/BenOSP-FormBuilder" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-github'></i> Code</a>
                             </div>
                             <div className='card-body'>
                                 <i className='fw-bold fa fa-code'></i>
