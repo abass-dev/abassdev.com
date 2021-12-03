@@ -3,11 +3,11 @@
     width: calc(40px + 30vw);
     height: 330px;
     border-radius: 50%;
-    background-size: 130%;
+    background-size: 100%;
     box-shadow: 0 9px 10px 0 #00ccff33;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../../assets/images/profile-picture2.jpg');
+    background-image: url('../../assets/images/abass-profile.jpg');
 }
 
 .profile-socieal-links a{
