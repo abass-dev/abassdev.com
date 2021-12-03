@@ -57,7 +57,7 @@ export default function Profile() {
             <div className='col-md-6 text-white'>
               <h1 className='mt-4'>À-propos de moi</h1>
               <p className='lead text-start'>
-                Je suis un développeur web mobile 
+                Je suis un développeur web et mobile 
                 passionné de l'internet et de la programmation depuis plus 6 ans.
                 Pendant mon temps libre, j'écris des articles sur <a href='https://todaydevs.com'>todaydevs</a> et contribue à la communauté <a href='https://github.com/abass-dev?tab=repositories'>Open-Source</a>
               </p>
