@@ -2,6 +2,7 @@ import React from "react"
 import "./Profile.css"
 import Typical from "react-typical"
 import 'font-awesome/css/font-awesome.min.css'
+import resume from "../../assets/pdf/abass_cv_fr.pdf"
 
 function navbarToggler() {
     const collapseBtn = document.querySelector('.collapseBtn').classList
@@ -59,11 +60,11 @@ export default function Profile() {
               <p className='lead text-start'>
                 Je suis un développeur web et mobile 
                 passionné de l'internet et de la programmation depuis plus 6 ans.
-                Pendant mon temps libre, j'écris des articles sur <a href='https://todaydevs.com'>todaydevs</a> et contribue à la communauté <a href='https://github.com/abass-dev?tab=repositories'>Open-Source</a>
+                <br /> Pendant mon temps libre, j'écris des articles sur <a href='https://todaydevs.com'>todaydevs</a> et contribue à la communauté <a href='https://github.com/abass-dev?tab=repositories'>Open-Source</a>
               </p>
             <div className='row'>
             <div className='col'>
-              <button className='btn btn-success'>MON CV <span className='fa fa-download'></span></button>
+              <a href={resume} download className='btn btn-success'>MON CV <span className='fa fa-download'></span></a>
             </div>
                 <div className='col text-end profile-socieal-links'>
             <a href='https://www.facebook.com/abasscheik.ben'>
