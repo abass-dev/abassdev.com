@@ -1,0 +1,26 @@
+{
+    "title": "Translate to English",
+    "profile": {
+        "sayHello": "I'M ABASS DEV",
+        "introduce1": "I'm freelancer 🌠",
+        "introduce2": "I'm Full-Stack Developer💻",
+        "introduce3": "I have 6+ years of experience 📆",
+        "introduce4": "Open-source l💗ver",
+        
+        "about": {
+            "title": "About me",
+            "description": "I am a web and mobile developer with a passion for the internet and programming for over 6 years. In my free time, I write articles on todaydevs and contribute to the Open-Source community"
+        },
+        
+        "cv": "RESUME",
+        "cvlink": "../../assets/pdf/abass_cv_en.pdf",
+        
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "skill": "Skill",
+            "projects": "Projects",
+            "contact": "Contact"
+        }
+    }
+}

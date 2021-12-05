@@ -1,0 +1,28 @@
+{
+    "title": "Traduire en français",
+    "profile": {
+        "sayHello": "JE SUIS ABASS DEV",
+        "introduce1": "Je suis freelance 🌠",
+        "introduce2": "Je suis développeur Full-Stack 💻",
+        "introduce3": "J'ai 6+ ans d'expérience 📆",
+        "introduce4": "J'💗ime l'Open-Source",
+        
+        "about": {
+            "title": "À-propos de moi",
+            "description": "Je suis un développeur web et mobile passionné de l'internet et de la programmation depuis plus 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs et contribue à la communauté Open-Source"
+        },
+        
+        "cv": "MON CV",
+        "cvlink": "../../assets/pdf/abass_cv_fr.pdf",
+        
+        "links": {
+            "home": "Acceuil",
+            "about": "À-propos",
+            "skill": "Compétence",
+            "projects": "Projets",
+            "contact": "Contact"
+        }
+        
+        
+    }
+}

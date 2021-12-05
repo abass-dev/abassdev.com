@@ -1,8 +1,6 @@
 import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'
 import './Skill.css'
-import skillDetailes from '../../assets/images/abass-bencheik.jpg'
-
 
 export default function Skill() {
     return (
