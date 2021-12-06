@@ -2,14 +2,16 @@ import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'
 import projectCode from '../../assets/images/project-nigatedev.jpg'
 import projectTodaydevs from '../../assets/images/projet-todaydevs.jpg'
+import {useTranslation} from 'react-i18next'
 
 export default function Project() {
+    const {t, i18n} = useTranslation();
     return (
         <div className='home-container'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12'>
-                        <h1 id='projets' className='mt-4 large-title text-start fw-bold text-white'>PROJETS</h1>
+                        <h1 id='projets' className='mt-4 large-title text-start fw-bold text-white'>{t("project.title")}</h1>
                     </div>
 
                     <div className='col-md-6 mb-4'>
@@ -17,7 +19,7 @@ export default function Project() {
                             <img alt='' className='card-img-top' src={projectCode} />
                             <div class="text-white card-img-overlay">
                                 <p className='h2 md-title card-title'>
-                                    NIGATEDEV FRAMEWORK
+                                    {t("project.nigatedev.title")}
                                 </p>
                                 <a href="http://github.com/nigatedev/nigatedev" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-github'></i> Code</a>
                                 {" "}
@@ -36,8 +38,8 @@ export default function Project() {
                     </span>
                                 {" "}
                                 <p className='md-title'>
-                                    Nigatedev est un framework PHP qui permet de gagner du temps.
-                    </p>
+                                    {t("project.nigatedev.description")}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -47,8 +49,8 @@ export default function Project() {
                             <img alt='' className='card-img-top' src={projectTodaydevs} />
                             <div class="text-white card-img-overlay">
                                 <p className='h2 md-title text-light card-title'>
-                                    TODAYDEVS SITE INTERNET
-                    </p>
+                                    {t("project.todaydevs.title")}
+                                </p>
                                 <a href="https://todaydevs.com" class="btn mt-2 bg-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Site</a>
                             </div>
                             <div className='card-body'>
@@ -58,8 +60,8 @@ export default function Project() {
                     WordPress
                      </span>
                                 <p className='md-title'>
-                                    Todaydevs est un site/blog qui vous tiendra informé des nouvelles technologies.
-                    </p>
+                                   {t("project.todaydevs.description")} 
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -70,8 +72,8 @@ export default function Project() {
                             <img alt='' className='card-img-top' src={projectCode} />
                             <div class="text-white card-img-overlay">
                                 <p className='h2 md-title text-light card-title'>
-                                    HTML FORM BUILDER
-                    </p>
+                                    {t("project.formbuilder.title")}
+                                </p>
                                 <a href="https://github.com/abass-dev/BenOSP-FormBuilder" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-github'></i> Code</a>
                             </div>
                             <div className='card-body'>
@@ -81,8 +83,8 @@ export default function Project() {
                     PHP, Bootstrap
                      </span>
                                 <p className='md-title'>
-                                    Form builder est une créateur de formulaire(form builder) HTML.
-                    </p>
+                                    {t("project.formbuilder.description")}
+                                </p>
                             </div>
                         </div>
                     </div>

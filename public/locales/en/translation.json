@@ -22,5 +22,33 @@
             "projects": "Projects",
             "contact": "Contact"
         }
+    },
+        "skill": {
+        "title": "SKILLS AND TOOLS",
+        "frontend": "Front-end knowledge",
+        "backend": "Back-end knowledge",
+        "database": "Databases",
+        "tools": "Tools",
+        "mobiles": "Application Android & IOS",
+        "software": "Software development"
+    },
+    
+    "project": {
+        "title": "PROJECTS",
+        
+        "nigatedev": {
+            "title": "NIGATEDEV FRAMEWORK",
+            "description": "Nigatedev is a PHP framework coded by Abass Ben Cheik & contributors"
+        },
+        
+        "todaydevs": {
+            "title": "TODAYDEVS WEBSITE",
+            "description": "With TodayDevs, stay informed about new technology !"
+        },
+        
+        "formbuilder": {
+            "title": "FORM BUILDER",
+            "description": "Form builder"
+        }
     }
 }

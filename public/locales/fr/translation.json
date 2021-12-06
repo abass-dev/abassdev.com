@@ -22,7 +22,34 @@
             "projects": "Projets",
             "contact": "Contact"
         }
+    },
+    
+    "skill": {
+        "title": "COMPÉTENCE & OUTILES",
+        "frontend": "Connaissance en Front-end",
+        "backend": "Connaissance en Back-end",
+        "database": "Base de données",
+        "tools": "Outils",
+        "mobiles": "Application Android & IOS",
+        "software": "Développement de logiciels"
+    },
+    
+    "project": {
+        "title": "PROJETS",
         
+        "nigatedev": {
+            "title": "NIGATEDEV FRAMEWORK",
+            "description": "Nigatedev est un framework PHP codé par Abass Ben Cheik & collaborateurs."
+        },
         
+        "todaydevs": {
+            "title": "TODAYDEVS SITE INTERNET",
+            "description": "Avec Todaydevs, restez informé de la nouvelle technologie !"
+        },
+        
+        "formbuilder": {
+            "title": "FORM BUILDER",
+            "description": "Form builder"
+        }
     }
 }
