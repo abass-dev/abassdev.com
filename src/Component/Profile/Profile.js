@@ -3,7 +3,7 @@ import "./Profile.css"
 import Typical from "react-typical"
 import 'font-awesome/css/font-awesome.min.css'
 import resume from "../../assets/pdf/abass_cv_fr.pdf"
-import {Trans, useTranslation} from 'react-i18next'
+import {useTranslation} from 'react-i18next'
 const reactStringReplace = require('react-string-replace')
 
 function navbarToggler() {

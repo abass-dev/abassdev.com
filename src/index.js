@@ -4,10 +4,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
 import './custom.scss';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="lds-ripple"><div></div><div></div></div>}>
         <App />
     </Suspense>
   </React.StrictMode>,
