@@ -51,5 +51,23 @@
             "title": "FORM BUILDER",
             "description": "Form builder"
         }
+    },
+    
+    "work": {
+        "title": "MON TRAVAIL",
+        "webdev": {
+            "title": "Développement Web",
+            "description": "Je fournis des services web fonctionnels tels que le développement de sites web personnalisés, le développement de wordpress, les solutions de commerce électronique et bien plus encore."
+        },
+        
+        "seo": {
+            "title": "SEO et sécurité",
+            "description": "Je propose d'excellentes solutions en matière de sécurité logicielle et de pratiques de référencement qui augmenteront la quantité et la qualité du trafic vers votre site internet."
+        },
+        
+        "webdesign": {
+            "title": "Web Design",
+            "description": "Je conçois des sites Web étonnants et intuitifs qui représentent votre marque et l'identité de votre entreprise grâce à un design UI/UX exceptionnel."
+        }
     }
 }

@@ -23,7 +23,8 @@
             "contact": "Contact"
         }
     },
-        "skill": {
+    
+    "skill": {
         "title": "SKILLS AND TOOLS",
         "frontend": "Front-end knowledge",
         "backend": "Back-end knowledge",
@@ -49,6 +50,24 @@
         "formbuilder": {
             "title": "FORM BUILDER",
             "description": "Form builder"
+        }
+    },
+    
+    "work": {
+        "title": "MY WORK",
+        "webdev": {
+            "title": "Web development",
+            "description": "I provide functional web services such as custom website development, wordpress development, e-commerce solutions and much more."
+        },
+        
+        "seo": {
+            "title": "SEO and security",
+            "description": "I offer excellent solutions in software security and SEO practices that will increase the quantity and quality of traffic to your website."
+        },
+        
+        "webdesign": {
+            "title": "Web Design",
+            "description": "I design stunning, intuitive websites that represent your brand and corporate identity through exceptional UI/UX design."
         }
     }
 }
