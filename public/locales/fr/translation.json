@@ -2,10 +2,10 @@
     "title": "Traduire en français",
     "profile": {
         "sayHello": "JE SUIS ABASS DEV",
-        "introduce1": "Je suis freelance 🌠",
-        "introduce2": "Je suis développeur Full-Stack 💻",
-        "introduce3": "J'ai 6+ ans d'expérience 📆",
-        "introduce4": "J'💗ime l'Open-Source",
+        "introduce1": "Freelance 🌠",
+        "introduce2": "Full-Stack Développeur 💻",
+        "introduce3": "6+ ans d'expérience 📆",
+        "introduce4": "Open-Source 💗",
         
         "about": {
             "title": "À-propos de moi",
@@ -50,6 +50,11 @@
         "formbuilder": {
             "title": "FORM BUILDER",
             "description": "Form builder"
+        },
+        
+        "portfolio": {
+            "title": "PORTFOLIO",
+            "description": "Mon portfolio"
         }
     },
     
@@ -68,6 +73,16 @@
         "webdesign": {
             "title": "Web Design",
             "description": "Je conçois des sites Web étonnants et intuitifs qui représentent votre marque et l'identité de votre entreprise grâce à un design UI/UX exceptionnel."
+        }
+    },
+    
+    "footer": {
+        "form": {
+            "title": "CONTACT",
+            "inamelabel": "Nom:",
+            "iemaillabel": "Adresse mail:",
+            "imessagelabel": "Votre message:",
+            "btnsubmit": "Envoyer"
         }
     }
 }

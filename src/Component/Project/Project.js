@@ -2,6 +2,7 @@ import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'
 import projectCode from '../../assets/images/project-nigatedev.jpg'
 import projectTodaydevs from '../../assets/images/projet-todaydevs.jpg'
+import projectPortfolio from '../../assets/images/project-portfolio.jpg'
 import {useTranslation} from 'react-i18next'
 
 export default function Project() {
@@ -88,6 +89,29 @@ export default function Project() {
                             </div>
                         </div>
                     </div>
+
+                    <div className='col-md-6 mb-4'>
+                        <div className='card border-secondary'>
+                            <img alt='' className='card-img-top' src={projectPortfolio} />
+                            <div class="text-white card-img-overlay">
+                                <p className='h2 md-title text-light card-title'>
+                                    {t("project.portfolio.title")}
+                                </p>
+                                <a href="https://abassdev.com" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-globe'></i> Site</a>
+                            </div>
+                            <div className='card-body'>
+                                <i className='fw-bold fa fa-code'></i>
+                                <span className='fw-lighter'>
+                                    {" "}
+                                    React, NodeJs, Express
+                                </span>
+                                <p className='md-title'>
+                                    {t("project.portfolio.description")}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
