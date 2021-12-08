@@ -28,7 +28,7 @@ export default function Profile() {
     ))
     
     return (
-        <div className='container mb-4'>
+    <div className='container mb-4'>
       <div className='row'>
         <div className='col-12 mt-4'>
             <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">

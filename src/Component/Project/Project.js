@@ -99,7 +99,7 @@ export default function Project() {
                                 </p>
                                 <a href="https://abassdev.com" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-globe'></i> Site</a>
                             </div>
-                            <div className='card-body'>
+                            <div className='card-body bg-dark text-light'>
                                 <i className='fw-bold fa fa-code'></i>
                                 <span className='fw-lighter'>
                                     {" "}
