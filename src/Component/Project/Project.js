@@ -94,7 +94,7 @@ export default function Project() {
                         <div className='card border-secondary'>
                             <img alt='' className='card-img-top' src={projectPortfolio} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title text-light card-title'>
+                                <p className='h2 bg-dark md-title text-light card-title'>
                                     {t("project.portfolio.title")}
                                 </p>
                                 <a href="https://abassdev.com" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-globe'></i> Site</a>
