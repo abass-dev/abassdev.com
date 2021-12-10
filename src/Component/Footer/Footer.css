@@ -17,9 +17,17 @@
     color: #fff;
 }
 
-.foot-wave, .copy-right{
+.foot-wave{
     position: absolute;
     left: 0;
     margin: 0;
     padding: 0;
+}
+.copyright {
+    color: #fff;
+    position: absolute;
+    z-index: 99;
+    padding-top: 13vh;
+    font-size: 13px;
+    font-family: Monospace;
 }
