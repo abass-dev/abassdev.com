@@ -116,6 +116,10 @@ export default function Skill() {
                     <div className='card-body md-title'>
                         <div className='row skill-card-bg'>
                         <div className='col-12 skill-card-text'>
+                        <i class="devicon-java-plain colored"></i>
+                        <span> Java</span>
+                        </div>
+                        <div className='col-12 skill-card-text'>
                         <i class="devicon-react-plain colored"></i>
                         <span> React Native</span>
                     </div>
