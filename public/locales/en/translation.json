@@ -21,6 +21,12 @@
             "skill": "Skill",
             "projects": "Projects",
             "contact": "Contact"
+        },
+        
+        "mystory": {
+            "showbtn": "Read My Story 📃",
+            "webstory": "My history with the internet",
+            "starting": "When did it all start?"
         }
     },
     
