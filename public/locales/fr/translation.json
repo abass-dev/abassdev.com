@@ -21,6 +21,13 @@
             "skill": "Compétence",
             "projects": "Projets",
             "contact": "Contact"
+        },
+        
+        "mystory": {
+            "showbtn": "Lu Mon  Histoire 📃",
+            "webstory": "Mon histoire avec l'internet",
+            "starting": "Quand tout à commencer?"
+            
         }
     },
     

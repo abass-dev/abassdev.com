@@ -1,15 +1,12 @@
 import React from "react"
 import "./Profile.css"
 import Typical from "react-typical"
+import {useTranslation} from 'react-i18next'
 import 'font-awesome/css/font-awesome.min.css'
 import resume from "../../assets/pdf/abass_cv_fr.pdf"
-import {useTranslation} from 'react-i18next'
+import MyStory from '../Story/MyStory'
 const reactStringReplace = require('react-string-replace')
 
-function navbarToggler() {
-    const collapseBtn = document.querySelector('.collapseBtn').classList
-    collapseBtn.toggle('collapse')
-}
 
 export default function Profile() {
 
@@ -33,7 +30,7 @@ export default function Profile() {
         <div className='col-12 mt-4'>
             <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
               <div className="container-fluid">
-                <button onClick={navbarToggler} className="navbar-toggler btn btn-success-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler btn btn-success-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="fa fa-bars text-success"></span>
                 </button>
                 <div className="collapseBtn collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -44,9 +41,9 @@ export default function Profile() {
                     <a className="nav-link text-white" href="#projets">{t("profile.links.projects")}</a>
                     <a className="nav-link text-white" href="#contact">{t("profile.links.contact")}</a>
                     <a className="nav-link text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 054 312 2816</a>
-        </div>
-        </div>
-        </div>
+                  </div>
+                </div>
+            </div>
         </nav>
         </div>
         <div className='col-12 profile-header'>
@@ -68,7 +65,7 @@ export default function Profile() {
                         2000,
                     ]}
                     loop={Infinity}
-                    />
+            />
           </h2>
           <div className='row align-items-center'>
             <div className='col-12 mx-4'>
@@ -101,6 +98,7 @@ export default function Profile() {
           
                 </div>
             </div>
+            <MyStory />
         </div>
         </div>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { bootstrap } from 'bootstrap'
 import Profile from '../Profile/Profile'
 import Skill from '../Skill/Skill'
 import Project from '../Project/Project'
@@ -12,8 +13,8 @@ export default function Home() {
             <div className='row'>
                 <div className='profile-container'>
                     <Profile />
-                    <Skill />
                     <Project />
+                    <Skill />
                     <Work />
                     <Footer />
                 </div>
