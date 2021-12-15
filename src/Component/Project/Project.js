@@ -36,7 +36,7 @@ export default function Project() {
                                 {" "}
                                 <span className='fw-lighter'>
                                     PHP, JavaScript, Sass, Shell, Twig
-                    </span>
+                                </span>
                                 {" "}
                                 <p className='md-title'>
                                     {t("project.nigatedev.description")}
@@ -66,8 +66,6 @@ export default function Project() {
                             </div>
                         </div>
                     </div>
-
-
                     <div className='col-md-6 mb-4'>
                         <div className='card border-secondary'>
                             <img alt='' className='card-img-top' src={projectCode} />
@@ -76,13 +74,19 @@ export default function Project() {
                                     {t("project.formbuilder.title")}
                                 </p>
                                 <a href="https://github.com/abass-dev/BenOSP-FormBuilder" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-github'></i> Code</a>
+                                    <a className='text-center' href="https://packagist.org/packages/benosp/formbuilder" title="version"><img alt='' src="https://img.shields.io/packagist/v/benosp/formbuilder.svg?style=flat-square" /></a>
+                                {" "}
+                                <a href="https://github.com/abass-dev/BenOSP-FormBuilder/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
+
+                                {" "}
+                                <a href="https://github.com/abass-dev/BenOSP-FormBuilder/issues"><img alt="Issues" src="https://img.shields.io/github/issues/abass-dev/BenOSP-FormBuilder?color=0088ff" /></a>
                             </div>
                             <div className='card-body'>
                                 <i className='fw-bold fa fa-code'></i>
                                 <span className='fw-lighter'>
                                     {" "}
-                    PHP, Bootstrap
-                     </span>
+                              PHP, Bootstrap
+                          </span>
                                 <p className='md-title'>
                                     {t("project.formbuilder.description")}
                                 </p>
@@ -97,7 +101,11 @@ export default function Project() {
                                 <p className='h2 bg-dark md-title text-light card-title'>
                                     {t("project.portfolio.title")}
                                 </p>
-                                <a href="https://abassdev.com" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-globe'></i> Site</a>
+                                <a href="https://github.com/abass-dev/portfolio" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-dark"><i className='fa fa-github'></i> Code</a>
+                                {" "}
+                                <a href="https://github.com/abass-dev/portfolio/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
+                                {" "}
+                                <a href="https://github.com/abass-dev/portfolio/issues"><img alt="Issues" src="https://img.shields.io/github/issues/abass-dev/portfolio?color=0088ff" /></a>
                             </div>
                             <div className='card-body bg-dark text-light'>
                                 <i className='fw-bold fa fa-code'></i>
