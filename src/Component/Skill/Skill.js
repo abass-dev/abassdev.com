@@ -8,7 +8,7 @@ export default function Skill() {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-12 mb-4'>
+                <div className='col-12'>
                     <h1 id='competence' className='text-start large-title mt-4 fw-bold text-white'>{t("skill.title")}</h1>
                 </div>
                 
@@ -18,7 +18,7 @@ export default function Skill() {
                     <h4 className='md-title'>{t("skill.frontend")}</h4>
                     <div className='card border-primary bg-transparent'>
                     <div className='card-body md-title'>
-                    <div className='row'>
+                    <div className='row card-text'>
                      <div className='col-12 skill-card-text card-text'>
                         <i class="devicon-sass-original colored"></i>
                         <span> Sass</span>
@@ -44,7 +44,7 @@ export default function Skill() {
                     <h4 className='md-title'>{t("skill.backend")}</h4>
                     <div className='card bg-transparent border-primary'>
                     <div className='card-body md-title'>
-                    <div className='row'>
+                    <div className='row card-text'>
                     <div className='col-12 skill-card-text card-text'>
                         <i class="devicon-php-plain colored"></i>
                         <span> PHP</span>
@@ -71,7 +71,7 @@ export default function Skill() {
                     <h4 className='md-title'>{t("skill.database")}</h4>
                     <div className='card bg-transparent border-primary'>
                     <div className='card-body md-title'>
-                        <div className='row'>
+                        <div className='row card-text'>
                         <div className='col-12 skill-card-text card-text'>
                         <i class="devicon-mongodb-plain colored"></i>
                         <span> MongoDB</span>
@@ -92,7 +92,7 @@ export default function Skill() {
                     <h4 className='md-title'>{t("skill.tools")}</h4>
                     <div className='card bg-transparent border-primary'>
                     <div className='card-body md-title'>
-                        <div className='row'>
+                        <div className='row card-text'>
                         <div className='col-12 skill-card-text card-text'>
                         <i class="devicon-git-plain colored"></i>
                         <span> Git</span>
@@ -114,7 +114,7 @@ export default function Skill() {
                     <h4 className='md-title'>{t("skill.mobiles")}</h4>
                     <div className='card border-primary bg-transparent'>
                     <div className='card-body md-title'>
-                        <div className='row'>
+                        <div className='row card-text'>
                         <div className='col-12 skill-card-text card-text'>
                         <i class="devicon-java-plain colored"></i>
                         <span> Java</span>
@@ -132,8 +132,8 @@ export default function Skill() {
                     <h4 className='md-title'>{t("skill.software")}</h4>
                     <div className='card bg-transparent border-primary'>
                     <div className='card-body md-title'>
-                        <div className='row'>
-                        <div className='col-12 card-text'>
+                        <div className='row card-text'>
+                        <div className='col-12 skill-card-text'>
                         <i class="devicon-python-plain colored"></i>
                         <span> Python</span>
                     </div>
