@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import './Skill.css'
 
 export default function Skill() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     return (
         <div className='container'>
             <div className='row'>

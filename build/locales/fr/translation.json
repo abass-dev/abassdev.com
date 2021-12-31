@@ -1,0 +1,95 @@
+{
+    "title": "Traduire en français",
+    "profile": {
+        "sayHello": "JE SUIS ABASS DEV",
+        "introduce1": "Freelance 🌠",
+        "introduce2": "Full-Stack Développeur 💻",
+        "introduce3": "6+ ans d'expérience 📆",
+        "introduce4": "Open-Source 💗",
+        
+        "about": {
+            "title": "À-propos de moi",
+            "description": "Je suis développeur web et mobile passionné de l'internet et de la programmation depuis plus 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs et contribue à la communauté Open-Source"
+        },
+        
+        "cv": "MON CV",
+        "cvlink": "../../assets/pdf/abass_cv_fr.pdf",
+        
+        "links": {
+            "home": "Acceuil",
+            "about": "À-propos",
+            "skill": "Compétence",
+            "projects": "Projets",
+            "contact": "Contact"
+        },
+        
+        "mystory": {
+            "showbtn": "Lu Mon  Histoire 📃",
+            "webstory": "Mon histoire avec l'internet",
+            "starting": "Quand tout à commencer?"
+            
+        }
+    },
+    
+    "skill": {
+        "title": "COMPÉTENCE & OUTILES",
+        "frontend": "Connaissance en Front-end",
+        "backend": "Connaissance en Back-end",
+        "database": "Base de données",
+        "tools": "Outils",
+        "mobiles": "Application Android & IOS",
+        "software": "Développement de logiciels"
+    },
+    
+    "project": {
+        "title": "PROJETS RÉCENTS",
+        
+        "nigatedev": {
+            "title": "NIGATEDEV FRAMEWORK",
+            "description": "Nigatedev est un framework PHP codé par Abass Ben Cheik & collaborateurs."
+        },
+        
+        "todaydevs": {
+            "title": "TODAYDEVS SITE INTERNET",
+            "description": "Avec Todaydevs, restez informé de la nouvelle technologie !"
+        },
+        
+        "formbuilder": {
+            "title": "FORM BUILDER",
+            "description": "Form builder"
+        },
+        
+        "portfolio": {
+            "title": "PORTFOLIO",
+            "description": "Mon portfolio"
+        }
+    },
+    
+    "work": {
+        "title": "MON TRAVAIL",
+        "webdev": {
+            "title": "Développement Web",
+            "description": "Je fournis des services web fonctionnels tels que le développement de sites web personnalisés, le développement de wordpress, les solutions de commerce électronique et bien plus encore."
+        },
+        
+        "seo": {
+            "title": "SEO et sécurité",
+            "description": "Je propose d'excellentes solutions en matière de sécurité logicielle et de pratiques de référencement qui augmenteront la quantité et la qualité du trafic vers votre site internet."
+        },
+        
+        "webdesign": {
+            "title": "Web Design",
+            "description": "Je conçois des sites Web étonnants et intuitifs qui représentent votre marque et l'identité de votre entreprise grâce à un design UI/UX exceptionnel."
+        }
+    },
+    
+    "footer": {
+        "form": {
+            "title": "CONTACT",
+            "inamelabel": "Nom:",
+            "iemaillabel": "Adresse mail:",
+            "imessagelabel": "Votre message:",
+            "btnsubmit": "Envoyer"
+        }
+    }
+}

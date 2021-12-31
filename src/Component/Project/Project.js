@@ -6,7 +6,7 @@ import projectPortfolio from '../../assets/images/project-portfolio.jpg'
 import {useTranslation} from 'react-i18next'
 
 export default function Project() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     return (
         <div className='home-container'>
             <div className='container'>

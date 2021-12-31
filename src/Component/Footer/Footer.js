@@ -3,7 +3,7 @@ import './Footer.css'
 import { useTranslation } from 'react-i18next'
 
 export default function Footer () {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     return (
       <div id='contact' className='md-title'>
         <form action='#' method='post' className='text-white contact-me bg-transparent'>

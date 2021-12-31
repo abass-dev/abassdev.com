@@ -4,7 +4,7 @@ import './Work.css'
 import { useTranslation } from 'react-i18next'
 
 export default function Work () {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     return (
         <div className='container text-white mb-4 md-title'>
             <div className='row'>

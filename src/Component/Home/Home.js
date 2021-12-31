@@ -1,7 +1,7 @@
 import React from 'react'
-import { bootstrap } from 'bootstrap'
 import Profile from '../Profile/Profile'
 import Skill from '../Skill/Skill'
+import { bootstrap } from 'bootstrap'
 import Project from '../Project/Project'
 import Work from '../Work/Work'
 import Footer from '../Footer/Footer'
