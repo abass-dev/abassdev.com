@@ -29,7 +29,7 @@ class MyStory extends Component {
                             <h5>{t("profile.mystory.starting")}</h5>
                             <ul>
                                 <p>
-                                    Legereprodesset sit cursus hinc consetetur salutatus veri te consectetur sapientem persecuti nonumy gloriatur.  Discerepericula mattis graecis maecenas luctus convallis voluptaria erroribus propriae veri honestatis definitiones odio labores populo moderatius justo.  Possitimpetus litora quidam maximus leo saperet nulla platea.  Aliquethendrerit amet noluisse referrentur eruditi noster aliquet iuvaret corrumpit taciti inani error vituperatoribus elementum signiferumque.  Vixeloquentiam volutpat tacimates definitionem quaestio persius vehicula sapien sed vero tractatos natum nascetur reprimique.
+                                {t("profile.mystory.textcontent")}
                                 </p>
                             </ul>
                         </li>

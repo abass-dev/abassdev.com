@@ -6,6 +6,10 @@
         "introduce2": "Full-Stack Développeur 💻",
         "introduce3": "6+ ans d'expérience 📆",
         "introduce4": "Open-Source 💗",
+        "lang" : {
+            "fr": "Français",
+            "en": "Anglais"
+        },
         
         "about": {
             "title": "À-propos de moi",
@@ -26,7 +30,8 @@
         "mystory": {
             "showbtn": "Lu Mon  Histoire 📃",
             "webstory": "Mon histoire avec l'internet",
-            "starting": "Quand tout à commencer?"
+            "starting": "Quand tout à commencer?",
+            "textcontent": "Tout a commencé en 2012 lorsque j'ai essayé de créer un blog sur Blogspot. Au début, cela fonctionnait bien. Mais, après seulement quelques jours, j'étais limité par les fonctionnalités disponibles. Cela m'a motivé à trouver une solution différente, c'est à ce moment-là que j'ai commencé à apprendre le développement Web. Mon objectif est d'amener les connaissances et les compétences que j'ai acquises dans une direction positive. Plus que de profiter de moi-même, je veux aider les autres."
             
         }
     },

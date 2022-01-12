@@ -48,8 +48,8 @@ export default function Profile() {
         </div>
         <div className='col-12 profile-header'>
             <div className="text-end my-4">
-                <button className="btn btn-primary-outline btn-sm text-white" onClick={() => changeLanguage('en')}>En 🇺🇸</button>
-                <button className="btn btn-primary-outline btn-sm text-white" onClick={() => changeLanguage('fr')}>Fr 🇫🇷</button>
+                <button className="btn btn-primary-outline btn-sm text-white" onClick={() => changeLanguage('en')}>{t("profile.lang.en")} 🇺🇸</button>
+                <button className="btn btn-primary-outline btn-sm text-white" onClick={() => changeLanguage('fr')}>{t("profile.lang.fr")} 🇫🇷</button>
             </div>
          <h1 id='apropos' className='text-white fw-bold'><span className='text-primary'>HELLO, </span>{t("profile.sayHello")}</h1>
           <h2 className='text-primary'>

@@ -6,7 +6,10 @@
         "introduce2": "Full-Stack Developer 💻",
         "introduce3": "6+ years of experience 📆",
         "introduce4": "Open-source 💗",
-        
+        "lang" : {
+            "fr": "French",
+            "en": "English"
+        },
         "about": {
             "title": "About me",
             "description": "I am a web and mobile developer passionate about the internet and programming for over 6 years. In my free time, I write articles on todaydevs and contribute to the Open-Source community"
@@ -26,7 +29,8 @@
         "mystory": {
             "showbtn": "Read My Story 📃",
             "webstory": "My history with the internet",
-            "starting": "When did it all start?"
+            "starting": "When did it all start?",
+            "textcontent": "It all started in 2012 when I tried to create a blog on Blogspot. At first, it worked well. But, after only a few days, I was limited by the features available. This motivated me to find a different solution, that's when I started learning web development. My goal is to take the knowledge and skills I have acquired in a positive direction. More than just enjoying myself, I want to help others."
         }
     },
     
