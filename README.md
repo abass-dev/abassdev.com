@@ -1,5 +1,5 @@
 ## About me
-### Hi, I'm Abass Dev
-I am a web and mobile developer passionate about the internet and programming for over 6 years. In my free time, I write articles on todaydevs and contribute to the Open-Source community
+### Hi, I'm Abass Dev (Abass Ben Cheik)
+I am a web, Mobile and software developer passionate about the internet and programming for over 6 years. In my free time, I write articles on https://todaydevs.com and contribute to the Open-Source (GitLab, Github...) community
 
-For the moment this [site](https://abassdev.herokuapp.com) is deployed on heroku only
+Visite my [portfolio](https://abassdev.todaydevs.com) online
