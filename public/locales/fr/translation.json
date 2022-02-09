@@ -51,7 +51,7 @@
         
         "nigatedev": {
             "title": "NIGATEDEV FRAMEWORK",
-            "description": "Nigatedev est un framework PHP codé par Abass Ben Cheik & collaborateurs."
+            "description": "Nigatedev est un framework PHP permettant de gagner du temps, codé par Abass Ben Cheik et ses collaborateurs."
         },
         
         "todaydevs": {
@@ -61,7 +61,7 @@
         
         "formbuilder": {
             "title": "FORM BUILDER",
-            "description": "Form builder"
+            "description": "Form builder est un projet Open-Source écrit en PHP et stylisé avec le css bootstrap par Abass Ben Cheik pour être facilement utilisé pour construire des formulaires html."
         },
         
         "portfolio": {
