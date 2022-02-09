@@ -9,7 +9,7 @@ export default function Work () {
         <div className='container text-white mb-4 md-title'>
             <div className='row'>
                 <div className='col-12'>
-                <h1 className='large-title fw-bold'>{t("work.title")}</h1>
+                <h1 id="work" className='large-title fw-bold'>{t("work.title")}</h1>
                 </div>
                 <div className='col-md-4 mb-4'>
                     <div className='card work-card-gb border-0'>

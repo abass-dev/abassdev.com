@@ -24,6 +24,7 @@
             "about": "À-propos",
             "skill": "Compétence",
             "projects": "Projets",
+            "work": "Travail",
             "contact": "Contact"
         },
         
@@ -66,7 +67,7 @@
         
         "portfolio": {
             "title": "PORTFOLIO",
-            "description": "Mon portfolio"
+            "description": "Mon portfolio (ReactJs)"
         }
     },
     
