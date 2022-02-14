@@ -14,10 +14,8 @@
             "title": "About me",
             "description": "I'm a Web, Mobile and Software developer passionate about the internet and programming for over 6 years. In my free time, I write articles on todaydevs.com, share videos on YouTube and contribute to the Open-Source community. I'm the Creator of Nigatedev framework and author of todaydevs (New Website)"
         },
-        
         "cv": "RESUME",
         "cvlink": "../../assets/pdf/abass_cv_en.pdf",
-        
         "links": {
             "home": "Home",
             "about": "About",
@@ -26,7 +24,6 @@
             "work": "Work",
             "contact": "Contact"
         },
-        
         "mystory": {
             "showbtn": "Read My Story 📃",
             "webstory": "My history with the internet",
@@ -34,7 +31,6 @@
             "textcontent": "It all started in 2012 when I tried to create a blog on Blogspot. At first, it worked well. But, after only a few days, I was limited by the features available. This motivated me to find a different solution, that's when I started learning web development. My goal is to take the knowledge and skills I have acquired in a positive direction. More than just enjoying myself, I want to help others."
         }
     },
-    
     "skill": {
         "title": "SKILLS AND TOOLS",
         "frontend": "Front-end knowledge",
@@ -44,49 +40,48 @@
         "mobiles": "Application Android & IOS",
         "software": "Software development"
     },
-    
     "project": {
         "title": "RECENT PROJECTS",
-        
         "nigatedev": {
             "title": "NIGATEDEV FRAMEWORK",
             "description": "Nigatedev is a time-saving PHP framework coded by Abass Ben Cheik and contributors."
         },
-        
         "todaydevs": {
             "title": "TODAYDEVS WEBSITE",
             "description": "With TodayDevs, stay informed about new technology! We share everything about new technologies concerning web, mobile and software while trying to stay up to date with new technologies."
         },
-        
         "formbuilder": {
             "title": "FORM BUILDER",
             "description": "Form builder is an open-source project written in PHP and styled with bootstrap css by Abass Ben Cheik to be easily used to build html forms."
         },
-        
         "portfolio": {
-            "title": "PORTFOLIO",
+            "title": "MY PORTFOLIO",
             "description": "My portfolio (ReactJs)"
+        },
+        "dynacard": {
+            "title": "DYNACARD (ReactNative Dependency)",
+            "description": "Dynacard is open-source and it can help you to easily create nice cards for your ReactNative application."
+        },
+        "reactnative1": {
+            "title": "Android Application (ReactNative)",
+            "description": "My portfolio to Android application using ReactNative"
         }
     },
-    
     "work": {
         "title": "MY WORK",
         "webdev": {
             "title": "Web development",
             "description": "I provide functional web services such as custom website development, wordpress development, e-commerce solutions and much more."
         },
-        
         "seo": {
             "title": "SEO and security",
             "description": "I offer excellent solutions in software security and SEO practices that will increase the quantity and quality of traffic to your website."
         },
-        
         "webdesign": {
             "title": "Web Design",
             "description": "I design stunning, intuitive websites that represent your brand and corporate identity through exceptional UI/UX design."
         }
     },
-    
     "footer": {
         "form": {
             "title": "CONTACT",
