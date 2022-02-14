@@ -1,3 +1,7 @@
+.footer-contact {
+    text-align: center;
+    color: #fff;
+}
 .contact-me {
     display: flex;
     flex-direction: column;
@@ -25,9 +29,7 @@
 }
 .copyright {
     color: #fff;
-    position: absolute;
-    z-index: 99;
-    padding-top: 10vh;
-    font-size: 13px;
+    padding-top: 5rem;
+    font-size: 14px;
     font-family: Monospace;
 }

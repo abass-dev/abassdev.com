@@ -78,10 +78,10 @@ export default function Profile() {
               <h1 className='mt-4'>{t("profile.about.title")}</h1>
               <p className='lead text-start'>{description}</p>
             <div className='row'>
-            <div className='col'>
+            <div className='col-5'>
               <a href={resume} download className='btn btn-success'>{t("profile.cv")} <span className='fa fa-download'></span></a>
             </div>
-                <div className='col text-end profile-socieal-links'>
+                <div className='col-7 text-end profile-socieal-links'>
             <a href='https://www.facebook.com/abasscheik.ben'>
               <i className="fa fa-facebook"></i>
             </a>
@@ -93,6 +93,9 @@ export default function Profile() {
             </a>
             <a href='https://github.com/abass-dev?tab=repositories'>
               <i className="fa fa-linkedin"></i>
+            </a>
+            <a href='mailto:cheikabassben@gmail.com'>
+              <i className="fa fa-envelope"></i>
             </a>
             </div>
             </div>
