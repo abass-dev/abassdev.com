@@ -59,8 +59,8 @@
             "description": "My portfolio (ReactJs)"
         },
         "dynacard": {
-            "title": "DYNACARD (ReactNative Dependency)",
-            "description": "Dynacard is open-source ReactNative library that can help you to easily create nice cards for your ReactNative application."
+            "title": "DYNACARD (ReactNative library)",
+            "description": "Dynacard is an open-source ReactNative library that can help you easily create beautiful cards for your ReactNative application."
         },
         "reactnative1": {
             "title": "Android Application (ReactNative)",
