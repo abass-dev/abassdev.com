@@ -25,9 +25,9 @@ export default function Profile() {
     ))
     
     return (
-    <div className='container mb-4'>
+    <div className='mb-4'>
       <div className='row'>
-        <div className='col-12 mt-4'>
+        <div className='col-12 mt-1'>
             <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
               <div>
                 <button className="navbar-toggler btn btn-success-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@ export default function Profile() {
                     <a className="nav-link text-white" href="#projets">{t("profile.links.projects")}</a>
                     <a className="nav-link text-white" href="#work">{t("profile.links.work")}</a>
                     <a className="nav-link text-white" href="#contact">{t("profile.links.contact")}</a>
-                    <a className="nav-link text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 054 312 2816</a>
+                    <a className="text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 054 312 2816</a>
                   </div>
                 </div>
             </div>
@@ -70,11 +70,11 @@ export default function Profile() {
           </h2>
           <div className='row align-items-center'>
             <div className='col-12 mx-4'>
-                </div>
-            <div className='mt-4 col-md-6'>
+            </div>
+            <div className='mt-4 col-md-5'>
               <div className='profile-picture'></div>
             </div>
-            <div className='col-md-6 text-white'>
+            <div className='col-md-7 text-white'>
               <h1 className='mt-4'>{t("profile.about.title")}</h1>
               <p className='lead text-start'>{description}</p>
             <div className='row'>
