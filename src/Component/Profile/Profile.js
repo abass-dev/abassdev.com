@@ -97,6 +97,9 @@ export default function Profile() {
             <a href='https://www.instagram.com/abassdev'>
               <i className="fa fa-instagram"></i>
             </a>
+            <a href='https://www.pinterest.com/abassdev'>
+              <i className="fa fa-pinterest"></i>
+            </a>
             <a href='mailto:cheikabassben@gmail.com'>
               <i className="fa fa-envelope"></i>
             </a>
