@@ -11,10 +11,9 @@ class MyStory extends Component {
     showbtn() {
         document.querySelector(".chevron").classList.toggle("rotate-chevron")
     }
-    
     render() {
-    const {t} = this.props;
-        return (
+      const {t} = this.props;
+      return (
         <div className="text-white mt-4">
             <p>
               <button onClick={this.showbtn} className="showbtn btn text-white w-100 btn-outline-primary border-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseMyStory" aria-expanded="false" aria-controls="collapseMyStory">
@@ -23,17 +22,8 @@ class MyStory extends Component {
             </p>
             <div className="collapse" id="collapseMyStory">
                 <div className="text-white card card-body bg-transparent border-primary">
-                    <h4>{t("profile.mystory.webstory")}</h4>
-                    <ul>
-                        <li>
-                            <h5>{t("profile.mystory.starting")}</h5>
-                            <ul>
-                                <p>
-                                {t("profile.mystory.textcontent")}
-                                </p>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h4>{t("profile.mystory.whoami")}</h4>
+                    <p>{t("profile.mystory.textcontent")}</p>
                 </div>
             </div>
         </div>

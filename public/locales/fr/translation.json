@@ -30,9 +30,8 @@
         
         "mystory": {
             "showbtn": "Lu Mon  Histoire 📃",
-            "webstory": "Mon histoire avec l'internet",
-            "starting": "Quand tout à commencer?",
-            "textcontent": "Tout a commencé en 2012 lorsque j'ai essayé de créer un blog sur Blogspot. Au début, cela fonctionnait bien. Mais, après seulement quelques jours, j'étais limité par les fonctionnalités disponibles. Cela m'a motivé à trouver une solution différente, c'est à ce moment-là que j'ai commencé à apprendre le développement Web. Mon objectif est d'amener les connaissances et les compétences que j'ai acquises dans une direction positive. Plus que de profiter de moi-même, je veux aider les autres."
+            "whoami": "Qui suis-je ?",
+            "textcontent": "Abass Ben Cheik ou AbassDev est né le 02 février 1995 (27 ans) à Niamey au Niger et est un développeur Full-Stack (autodidacte), il a commencé à s'intéresser au développement web à l'âge de 14 ans, en 2009 mais ne savait même pas par où commencer. En 2011 il s'est fait un ami sur Skyrock (réseau social) qui lui a demandé de l'aider à gérer son blog qu'il a crée sur wix et c'est à ce moment qu'AbassDev a commencé le développement web, enfin en 2012 il a décidé de créer son propre blog sur blogspot (Créé par Google), au début, ça marchait bien. Mais, après seulement quelques jours, il était limité par les fonctionnalités disponibles cela l'a motivé à trouver une solution différente c'est alors qu'il a commencé à apprendre le développement web profond avec les vrais langages créés pour le développement web (HTML, CSS JavaScript,..)."
             
         }
     },
