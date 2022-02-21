@@ -15,9 +15,7 @@
 .nav-link {
     font-weight: bold;
 }
-
 @media only screen and (max-width: 600px) {
-    
 .profile-picture {
         width: 150px;
         height: 150px;
