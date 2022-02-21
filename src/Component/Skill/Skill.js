@@ -10,7 +10,8 @@ export default function Skill() {
             <div className='row'>
                 <div className='col-12'>
                     <h1 id='competence' className='text-start large-title mt-4 fw-bold text-white'>{t("skill.title")}</h1>
-                </div>
+                    <p className="after-title"></p>
+                    </div>
                 
                 <div className='col-12 mb-4 text-white'>
                   <div className='row'>

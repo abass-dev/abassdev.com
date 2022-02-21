@@ -15,6 +15,7 @@ export default function Project() {
                 <div className='row'>
                     <div className='col-md-12'>
                         <h1 id='projets' className='mt-4 large-title text-start fw-bold text-white'>{t("project.title")}</h1>
+                        <p className="after-title"></p>
                     </div>
 
                     <div className='col-md-6 mb-4'>

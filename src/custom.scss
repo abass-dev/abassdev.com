@@ -2,12 +2,8 @@
 $primary: #9ceafd;
 $body-bg: #000f12;
 
-.active {
+.active, a:hover{
     color: $primary !important;
 }
-a:hover {
-    color: $primary !important;
-}
-
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

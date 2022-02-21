@@ -5,10 +5,9 @@ import { useTranslation } from 'react-i18next'
 export default function Footer () {
     const {t} = useTranslation();
     return (
-      <div>
-          <div className="row">
+        <div className="row">
             <div className="col-md-3"></div>
-                <div className="col-md-6 footer-contact">
+                <div className="col-md-6 text-center text-white">
                     <h4 className="text-primary">What's Next?</h4>
                     <h2>Let's Connect</h2>
                     <p>If you are interested in working on a project or have any questions, please leave an email and I will get back to you as soon as possible.</p>
@@ -37,9 +36,7 @@ export default function Footer () {
                         </a>
                     </div>
                 </div>
-            <div className="col-md-3"></div>
-            <p className="copyright">Copyright © 2021 by Abass Dev, All right reserved</p>
+            <p className="copyright">Copyright © 2021 - 2022 by <a href="https://github.com/abass-dev/">AbassDev</a>, All right reserved</p>
           </div>
-      </div>
     );
   }

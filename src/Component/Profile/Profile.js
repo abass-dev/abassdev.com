@@ -76,12 +76,10 @@ export default function Profile() {
             </div>
             <div className='col-md-7 text-white'>
               <h1 className='mt-4'>{t("profile.about.title")}</h1>
+              <p className="after-title"></p>
               <p className='lead text-start'>{description}</p>
             <div className='row'>
-            <div className='col-5'>
-              <a href={resume} download className='btn btn-success'>{t("profile.cv")} <span className='fa fa-download'></span></a>
-            </div>
-                <div className='col-7 text-end profile-socieal-links'>
+                <div className='col-12 mt-2 col-md-7 text-center profile-socieal-links'>
             <a href='https://www.facebook.com/abasscheik.ben'>
               <i className="fa fa-facebook"></i>
             </a>
@@ -103,6 +101,9 @@ export default function Profile() {
             <a href='mailto:cheikabassben@gmail.com'>
               <i className="fa fa-envelope"></i>
             </a>
+            </div>
+              <div className='text-center mt-2 col-12 col-md-5'>
+              <a href={resume} download className='btn btn-success'>{t("profile.cv")} <span className='fa fa-download'></span></a>
             </div>
             </div>
           

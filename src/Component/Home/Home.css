@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 .profile-header{
-    font-family: 'Righteous', cursive;
+    font-family: 'Righteous', Sans-Serif;
 }
 .md-title, .large-title{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', Sans-Serif;
 }
-
 .home-container {
     background-size: contain;
     background-position: bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    
     background-image: url('../../assets/images/bg.png');
+}
+.after-title {
+  width: 36vw;
+  height: 1px;
+  background: red;
 }
