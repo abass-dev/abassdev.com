@@ -8,10 +8,10 @@ export default function Footer () {
         <div className="row">
             <div className="col-md-3"></div>
                 <div className="col-md-6 text-center text-white">
-                    <h4 id="contact" className="text-primary">What's Next?</h4>
-                    <h2>Let's Connect</h2>
-                    <p>If you are interested in working on a project or have any questions, please leave an email and I will get back to you as soon as possible.</p>
-                    <a href="mailto:cheikabassben@gmail.com" className="btn btn-warring border text-white my-4">Say Hello 👋</a>
+                    <h4 id="contact" className="text-primary">{t("footer.thenext")}</h4>
+                    <h2>{t("footer.letsconnect")}</h2>
+                    <p>{t("footer.contactdesk")}</p>
+                    <a href="mailto:cheikabassben@gmail.com" className="btn btn-warring border text-white my-4">{t("footer.sayhi")} 👋</a>
                     <div className='col mb-4 text-center profile-socieal-links'>
                         <a href='https://www.facebook.com/abasscheik.ben'>
                           <i className="fa fa-facebook"></i>
@@ -36,7 +36,7 @@ export default function Footer () {
                         </a>
                     </div>
                 </div>
-            <p className="copyright">Copyright © 2021 - 2022 by <a href="https://github.com/abass-dev/">AbassDev</a>, All right reserved</p>
+            <p className="copyright">{t("footer.copyright")}</p>
           </div>
     );
   }

@@ -84,12 +84,10 @@
         }
     },
     "footer": {
-        "form": {
-            "title": "CONTACT",
-            "inamelabel": "Name:",
-            "iemaillabel": "Email address:",
-            "imessagelabel": "Message:",
-            "btnsubmit": "Send"
-        }
+        "copyright": "Copyright © 2021 - 2022 by AbassDev. All rights reserved",
+        "thenext": "What's Next?",
+        "letsconnect": "Let's Connect",
+        "contactdesk": "If you are interested in working on a project or have any questions, please leave an email and I will get back to you as soon as possible.",
+        "sayhi": "Say Hello"
     }
 }

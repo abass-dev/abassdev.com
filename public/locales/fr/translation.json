@@ -91,12 +91,10 @@
     },
     
     "footer": {
-        "form": {
-            "title": "CONTACT",
-            "inamelabel": "Nom:",
-            "iemaillabel": "Adresse mail:",
-            "imessagelabel": "Votre message:",
-            "btnsubmit": "Envoyer"
-        }
+        "copyright": "Copyright © 2021 - 2022 par AbassDev. Tous droits réservés",
+        "thenext": "Quelle est la suite ?",
+        "letsconnect": "Contact moi",
+        "contactdesk": "Si vous souhaitez travailler sur un projet ou si vous avez des questions, veuillez laisser un courriel et je vous répondrai dès que possible.",
+        "sayhi": "Dites Bonjour"
     }
 }
