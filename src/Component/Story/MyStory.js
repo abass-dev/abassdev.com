@@ -22,7 +22,7 @@ class MyStory extends Component {
             </p>
             <div className="collapse" id="collapseMyStory">
                 <div className="text-white card card-body bg-transparent border-primary">
-                    <h4>{t("profile.mystory.whoami")}</h4>
+                    <h1 id="whoisabassdev">{t("profile.mystory.whoami")}</h1>
                     <p>{t("profile.mystory.textcontent")}</p>
                 </div>
             </div>
