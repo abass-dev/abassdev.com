@@ -37,8 +37,8 @@ export default function Profile() {
                   <div className="navbar-nav md-title">
                     <a className="nav-link active" aria-current="page" href="/">{t("profile.links.home")}</a>
                     <a className="nav-link text-white" href="#apropos">{t("profile.links.about")}</a>
-                    <a className="nav-link text-white" href="#competence">{t("profile.links.skill")}</a>
                     <a className="nav-link text-white" href="#projets">{t("profile.links.projects")}</a>
+                    <a className="nav-link text-white" href="#competence">{t("profile.links.skill")}</a>
                     <a className="nav-link text-white" href="#work">{t("profile.links.work")}</a>
                     <a className="nav-link text-white" href="#contact">{t("profile.links.contact")}</a>
                     <a className="text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 054 312 2816</a>
