@@ -23,7 +23,9 @@ class MyStory extends Component {
             <div className="collapse" id="collapseMyStory">
                 <div className="text-white card card-body bg-transparent border-primary">
                     <h1 id="whoisabassdev">{t("profile.mystory.whoami")}</h1>
-                    <p>{t("profile.mystory.textcontent")}</p>
+                    <p>{t("profile.mystory.para1")}</p>
+                    <p>{t("profile.mystory.para2")}</p>
+                    <p>{t("profile.mystory.para3")}</p>
                 </div>
             </div>
         </div>
