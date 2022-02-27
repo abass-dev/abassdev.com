@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -19,8 +19,14 @@
     
       gtag('config', 'G-MKNDLB3PC5');
     </script>
+    <script type="text/javascript"> 
+      function disableRightClick() { 
+        alert("Sorry, right click is not allowed !! Copyright © 2022 by AbassDev"); 
+        return false; 
+      } 
+  </script> 
   </head>
-  <body>
+  <body oncontextmenu="return disableRightClick();">  
     <noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
     <div id="root"></div>
   </body>
