@@ -13,7 +13,7 @@
         
         "about": {
             "title": "À-propos de moi",
-            "description": "Je suis un développeur Web, mobile et logiciel passionné par l'internet et la programmation depuis plus de 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs.com, partage des vidéos sur YouTube et contribue à la communauté Open-Source."
+            "description": "Je suis un développeur Web, mobile et logiciel passionné par l'internet et la programmation depuis plus de 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs.com, je partage des vidéos sur YouTube et je contribue à la communauté Open-Source. Je suis le créateur du framework Nigatedev et l'auteur de todaydevs (nouveau site web)."
         },
         
         "cv": "MON CV",
@@ -65,10 +65,17 @@
             "title": "FORM BUILDER",
             "description": "Form builder est un projet Open-Source écrit en PHP et stylisé avec le css bootstrap par Abass Ben Cheik pour être facilement utilisé pour construire des formulaires html."
         },
-        
         "portfolio": {
             "title": "PORTFOLIO",
             "description": "Mon portfolio (ReactJs)"
+        },
+        "dynacard": {
+            "title": "DYNACARD (ReactNative library)",
+            "description": "Dynacard est une bibliothèque ReactNative open-source qui peut vous aider à créer facilement de belles cartes pour votre application ReactNative."
+        },
+        "reactnative1": {
+            "title": "Android Application (ReactNative)",
+            "description": "Convertir mon portfolio en application Android avec ReactNative"
         }
     },
     
