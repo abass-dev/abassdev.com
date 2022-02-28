@@ -22,7 +22,7 @@ export default function Footer () {
                         <a href='https://github.com/abass-dev'>
                           <i className="fa fa-github"></i>
                         </a>
-                        <a href='https://github.com/abass-dev?tab=repositories'>
+                        <a href='https://www.linkedin.com/in/abassdev'>
                           <i className="fa fa-linkedin"></i>
                         </a>
                         <a href='https://www.instagram.com/abassdev'>
@@ -30,6 +30,9 @@ export default function Footer () {
                         </a>
                         <a href='https://www.pinterest.com/abassdev'>
                            <i className="fa fa-pinterest"></i>
+                        </a>
+                        <a href='https://youtube.com/channel/UC51YhGiRSH_IBPjYdPAmRew'>
+                          <i className="fa fa-youtube"></i>
                         </a>
                         <a href='mailto:cheikabassben@gmail.com'>
                           <i className="fa fa-envelope"></i>

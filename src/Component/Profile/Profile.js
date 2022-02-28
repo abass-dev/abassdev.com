@@ -79,7 +79,7 @@ export default function Profile() {
               <p className="after-title"></p>
               <p className='lead text-start'>{description}</p>
             <div className='row'>
-                <div className='col-12 mt-2 col-md-7 text-center profile-socieal-links'>
+            <div className='col-12 mt-2 col-md-7 text-center profile-socieal-links'>
             <a href='https://www.facebook.com/abasscheik.ben'>
               <i className="fa fa-facebook"></i>
             </a>
@@ -89,7 +89,7 @@ export default function Profile() {
             <a href='https://github.com/abass-dev'>
               <i className="fa fa-github"></i>
             </a>
-            <a href='https://github.com/abass-dev?tab=repositories'>
+            <a href='https://www.linkedin.com/in/abassdev'>
               <i className="fa fa-linkedin"></i>
             </a>
             <a href='https://www.instagram.com/abassdev'>
@@ -97,6 +97,9 @@ export default function Profile() {
             </a>
             <a href='https://www.pinterest.com/abassdev'>
               <i className="fa fa-pinterest"></i>
+            </a>
+            <a href='https://youtube.com/channel/UC51YhGiRSH_IBPjYdPAmRew'>
+                <i className="fa fa-youtube"></i>
             </a>
             <a href='mailto:cheikabassben@gmail.com'>
               <i className="fa fa-envelope"></i>
