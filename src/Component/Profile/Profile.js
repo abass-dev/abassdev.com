@@ -14,6 +14,7 @@ export default function Profile() {
     
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
+        window.location.reload(false);
     };
 
     let description = t("profile.about.description")
