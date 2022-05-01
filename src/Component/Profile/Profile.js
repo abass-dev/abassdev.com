@@ -42,7 +42,7 @@ export default function Profile() {
                     <a className="nav-link text-white" href="#competence">{t("profile.links.skill")}</a>
                     <a className="nav-link text-white" href="#work">{t("profile.links.work")}</a>
                     <a className="nav-link text-white" href="#contact">{t("profile.links.contact")}</a>
-                    <a className="text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 054 312 2816</a>
+                    <a className="text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 59 157 5606</a>
                   </div>
                 </div>
             </div>
