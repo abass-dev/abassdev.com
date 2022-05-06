@@ -55,7 +55,7 @@ export default function Project() {
                                 <p className='h2 md-title text-light card-title'>
                                     {t("project.todaydevs.title")}
                                 </p>
-                                <a href="https://todaydevs.com" class="btn mt-2 card-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Site</a>
+                                <a href="https://todaydevs.com" class="btn mt-2 card-dark text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Visit the site</a>
                             </div>
                             <div className='card-body'>
                                 <i className='fw-bold fa fa-code'></i>
@@ -160,7 +160,7 @@ export default function Project() {
                                 {" "}
                                 <a href="https://github.com/abass-dev/portfolio-with-react-native/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
                                 {" "}
-                                <a href="https://github.com/abass-dev/portfolio-with-react-native/issues"><img alt="Issues" src="https://img.shields.io/github/issues/abass-dev/portfolio-with-react-native?color=0088ff" /></a>
+                                <a href="https://abassdev.todaydevs.com/abassdev.apk"> Download the Apk</a>
                             </div>
                             <div className='card-body text-dark'>
                                 <i className='fw-bold fa fa-code'></i>

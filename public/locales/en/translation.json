@@ -42,7 +42,7 @@
         "software": "Software development"
     },
     "project": {
-        "title": "RECENT PROJECTS",
+        "title": "NOTABLE PROJECTS",
         "nigatedev": {
             "title": "NIGATEDEV FRAMEWORK",
             "description": "Nigatedev is a time-saving PHP framework coded by Abass Ben Cheik and contributors."
@@ -57,7 +57,7 @@
         },
         "portfolio": {
             "title": "MY PORTFOLIO",
-            "description": "My portfolio (ReactJs)"
+            "description": "This portfolio was build using ReactJs"
         },
         "dynacard": {
             "title": "DYNACARD (ReactNative library)",

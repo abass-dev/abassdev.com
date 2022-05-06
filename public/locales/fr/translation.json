@@ -49,7 +49,7 @@
     },
     
     "project": {
-        "title": "PROJETS RÉCENTS",
+        "title": "PROJETS NOTABLES",
         
         "nigatedev": {
             "title": "NIGATEDEV FRAMEWORK",
@@ -67,7 +67,7 @@
         },
         "portfolio": {
             "title": "PORTFOLIO",
-            "description": "Mon portfolio (ReactJs)"
+            "description": "Ce portfolio a été construit en utilisant ReactJs"
         },
         "dynacard": {
             "title": "DYNACARD (ReactNative library)",

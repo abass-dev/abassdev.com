@@ -16,7 +16,7 @@ class MyStory extends Component {
       return (
         <div className="text-white mt-4">
             <p>
-            <img width="100%" height="auto" className="img"  src={StoryImg} />
+            <img alt="Abass Ben Cheik" width="100%" height="auto" className="img"  src={StoryImg} />
               <button onClick={this.showbtn} className="showbtn btn text-white w-100 btn-outline-primary border-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseMyStory" aria-expanded="false" aria-controls="collapseMyStory">
                 <i className="h5 chevron text-success fa fa-angle-double-down"></i> {t("profile.mystory.showbtn")} 
               </button>
