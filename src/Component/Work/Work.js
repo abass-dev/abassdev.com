@@ -9,10 +9,10 @@ export default function Work () {
         <div className='container text-white mb-4 md-title'>
             <div className='row'>
                 <div className='col-12'>
-                <h1 id="work" className='large-title fw-bold'>{t("work.title")}</h1>
+                <h1 id="work" className='large-title text-dark fw-bold'>{t("work.title")}</h1>
                     <p className="after-title"></p>
                     </div>
-                <div className='col-md-4 mb-4'>
+                <div className='col-md-6 mb-4'>
                     <div className='card work-card-gb border-0'>
                         <div className='card-body'>
                             <p className='card-title text-center'>
@@ -24,7 +24,7 @@ export default function Work () {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-4 mb-4'>
+                <div className='col-md-6 mb-4'>
                     <div className='card work-card-gb border-0'>
                         <div className='card-body'>
                             <p className='card-title text-center'>
@@ -36,7 +36,7 @@ export default function Work () {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-4 mb-4'>
+                <div className='col-md-6 mb-4'>
                     <div className='card work-card-gb border-0'>
                         <div className='card-body'>
                             <p className='card-title text-center'>

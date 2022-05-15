@@ -7,11 +7,11 @@ export default function Footer () {
     return (
         <div className="row">
             <div className="col-md-3"></div>
-                <div className="col-md-6 text-center text-white">
+                <div className="col-md-6 text-center">
                     <h4 id="contact" className="text-primary">{t("footer.thenext")}</h4>
                     <h2>{t("footer.letsconnect")}</h2>
                     <p>{t("footer.contactdesk")}</p>
-                    <a href="mailto:cheikabassben@gmail.com" className="btn btn-warring border text-white my-4">{t("footer.sayhi")} 👋</a>
+                    <a href="mailto:cheikabassben@gmail.com" className="btn border my-4">{t("footer.sayhi")} 👋</a>
                     <div className='col mb-4 text-center profile-socieal-links'>
                         <a href='https://www.facebook.com/abasscheik.ben'>
                           <i className="fa fa-facebook"></i>
@@ -39,7 +39,7 @@ export default function Footer () {
                         </a>
                     </div>
                 </div>
-            <p className="copyright">{t("footer.copyright")}</p>
+            <p className="copyright bg-secondary">{t("footer.copyright")}</p>
           </div>
     );
   }

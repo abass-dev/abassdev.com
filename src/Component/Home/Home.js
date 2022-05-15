@@ -1,4 +1,5 @@
 import React from 'react'
+import Nav from '../Nav/Nav'
 import Profile from '../Profile/Profile'
 import Skill from '../Skill/Skill'
 import { bootstrap } from 'bootstrap'
@@ -10,15 +11,12 @@ import './Home.css'
 export default function Home() {
     return (
         <div className='container-fluid'>
-            <div className='row'>
-                <div className='profile-container'>
-                    <Profile />
-                    <Project />
-                    <Skill />
-                    <Work />
-                    <Footer />
-                </div>
-            </div>
+          <Nav />
+          <Profile />
+          <Project />
+          <Skill />
+          <Work />
+          <Footer />
         </div>
     );
 }

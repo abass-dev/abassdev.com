@@ -7,7 +7,6 @@ import resume from "../../assets/pdf/abass_cv_fr.pdf"
 import MyStory from '../Story/MyStory'
 const reactStringReplace = require('react-string-replace')
 
-
 export default function Profile() {
 
     const {t, i18n} = useTranslation();
@@ -28,32 +27,12 @@ export default function Profile() {
     return (
     <div className='mb-4'>
       <div className='row'>
-        <div className='col-12 mt-1'>
-            <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
-              <div>
-                <button className="navbar-toggler btn btn-success-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="fa fa-bars text-success"></span>
-                </button>
-                <div className="collapseBtn collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav md-title">
-                    <a className="nav-link active" aria-current="page" href="/">{t("profile.links.home")}</a>
-                    <a className="nav-link text-white" href="#apropos">{t("profile.links.about")}</a>
-                    <a className="nav-link text-white" href="#projets">{t("profile.links.projects")}</a>
-                    <a className="nav-link text-white" href="#competence">{t("profile.links.skill")}</a>
-                    <a className="nav-link text-white" href="#work">{t("profile.links.work")}</a>
-                    <a className="nav-link text-white" href="#contact">{t("profile.links.contact")}</a>
-                    <a className="text-white btn-sm lead text-white btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 59 157 5606</a>
-                  </div>
-                </div>
-            </div>
-        </nav>
-        </div>
         <div className='col-12 profile-header'>
             <div className="text-end my-4">
-                <button className="btn btn-primary-outline btn-sm text-white" onClick={() => changeLanguage('en')}>{t("profile.lang.en")} 🇺🇸</button>
-                <button className="btn btn-primary-outline btn-sm text-white" onClick={() => changeLanguage('fr')}>{t("profile.lang.fr")} 🇫🇷</button>
+                <button className="btn btn-primary-outline btn-sm text-dark" onClick={() => changeLanguage('en')}>{t("profile.lang.en")} 🇺🇸</button>
+                <button className="btn btn-primary-outline btn-sm text-dark" onClick={() => changeLanguage('fr')}>{t("profile.lang.fr")} 🇫🇷</button>
             </div>
-         <h1 id='apropos' className='text-white fw-bold'><span className='text-primary'>HELLO, </span>{t("profile.sayHello")}</h1>
+         <h1 id='apropos' className='text-dark fw-bold'><span className='text-primary'>HELLO, </span>{t("profile.sayHello")}</h1>
           <h2 className='text-primary'>
             <Typical
                     steps={[
@@ -75,7 +54,7 @@ export default function Profile() {
             <div className='mt-4 col-md-5'>
               <div className='profile-picture'></div>
             </div>
-            <div className='col-md-7 text-white'>
+            <div className='col-md-7 text-dark'>
               <h1 className='mt-4'>{t("profile.about.title")}</h1>
               <p className="after-title"></p>
               <p className='lead text-start'>{description}</p>

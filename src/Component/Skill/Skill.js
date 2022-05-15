@@ -9,7 +9,7 @@ export default function Skill() {
         <div className='container'>
             <div className='row'>
                 <div className='col-12'>
-                    <h1 id='competence' className='text-start large-title mt-4 fw-bold text-white'>{t("skill.title")}</h1>
+                    <h1 id='competence' className='text-start large-title mt-4 fw-bold'>{t("skill.title")}</h1>
                     <p className="after-title"></p>
                     </div>
                 
@@ -17,7 +17,7 @@ export default function Skill() {
                   <div className='row'>
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>{t("skill.frontend")}</h4>
-                    <div className='card border-primary bg-transparent'>
+                    <div className='card border-gray bg-light'>
                     <div className='card-body md-title'>
                     <div className='row card-text'>
                      <div className='col-12 skill-card-text card-text'>
@@ -43,7 +43,7 @@ export default function Skill() {
                     
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>{t("skill.backend")}</h4>
-                    <div className='card bg-transparent border-primary'>
+                    <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                     <div className='row card-text'>
                     <div className='col-12 skill-card-text card-text'>
@@ -70,7 +70,7 @@ export default function Skill() {
                     </div>
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>{t("skill.database")}</h4>
-                    <div className='card bg-transparent border-primary'>
+                    <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
                         <div className='col-12 skill-card-text card-text'>
@@ -91,7 +91,7 @@ export default function Skill() {
                     </div>
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>{t("skill.tools")}</h4>
-                    <div className='card bg-transparent border-primary'>
+                    <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
                         <div className='col-12 skill-card-text card-text'>
@@ -113,7 +113,7 @@ export default function Skill() {
                     
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>{t("skill.mobiles")}</h4>
-                    <div className='card border-primary bg-transparent'>
+                    <div className='card border-gray bg-light'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
                         <div className='col-12 skill-card-text card-text'>
@@ -131,7 +131,7 @@ export default function Skill() {
                     
                     <div className='col-md-6 mb-4'>
                     <h4 className='md-title'>{t("skill.software")}</h4>
-                    <div className='card bg-transparent border-primary'>
+                    <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
                         <div className='col-12 skill-card-text'>
