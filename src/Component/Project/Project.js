@@ -19,12 +19,12 @@ export default function Project() {
                     </div>
 
                     <div className='col-md-6 mb-4'>
+                        <p className='h2 md-title'>
+                            {t("project.nigatedev.title")}
+                        </p>
                         <div className='card border-gray '>
                             <img alt='' className='card-img-top' src={projectPHPCode} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title card-title'>
-                                    {t("project.nigatedev.title")}
-                                </p>
                                 <a href="http://github.com/nigatedev/nigatedev" class="btn mt-2 bg-light text-dark  text-primary btn-primary-outline btn-sm"><i className='fa fa-github'></i> Code</a>
                                 {" "}
                                 <a className='text-center' href="https://packagist.org/packages/nigatedev/nigatedev" title="version"><img alt='' src="https://img.shields.io/packagist/v/nigatedev/nigatedev.svg?style=flat-square" /></a>
@@ -49,12 +49,12 @@ export default function Project() {
                     </div>
 
                     <div className='col-md-6 mb-4'>
+                        <p className='h2 md-title'>
+                            {t("project.todaydevs.title")}
+                        </p>
                         <div className='card border-gray '>
                             <img alt='todaydevs' className='card-img-top' src={projectTodaydevs} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title text-light card-title'>
-                                    {t("project.todaydevs.title")}
-                                </p>
                                 <a href="https://todaydevs.com" class="btn mt-2 bg-light text-dark  text-primary btn-primary-outline btn-sm"><i className='fa fa-globe'></i> Visit the site</a>
                             </div>
                             <div className='card-body bg-light'>
@@ -70,12 +70,12 @@ export default function Project() {
                         </div>
                     </div>
                     <div className='col-md-6 mb-4'>
+                        <p className='h2 md-title'>
+                            {t("project.formbuilder.title")}
+                        </p>
                         <div className='card border-gray '>
                             <img alt='' className='card-img-top' src={projectCode} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title text-light card-title'>
-                                    {t("project.formbuilder.title")}
-                                </p>
                                 <a href="https://github.com/abass-dev/BenOSP-FormBuilder" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "><i className='fa fa-github'></i> Code</a>
                                     <a className='text-center' href="https://packagist.org/packages/benosp/formbuilder" title="version"><img alt='' src="https://img.shields.io/packagist/v/benosp/formbuilder.svg?style=flat-square" /></a>
                                 {" "}
@@ -98,12 +98,12 @@ export default function Project() {
                     </div>
 
                     <div className='col-md-6 mb-4'>
+                        <p className='h2 md-title'>
+                            {t("project.portfolio.title")}
+                        </p>
                         <div className='card border-gray '>
                             <img alt='' className='card-img-top' src={projectPortfolio} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title text-light card-title'>
-                                    {t("project.portfolio.title")}
-                                </p>
                                 <a href="https://github.com/abass-dev/portfolio" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "><i className='fa fa-github'></i> Code</a>
                                 {" "}
                                 <a href="https://github.com/abass-dev/portfolio/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
@@ -124,12 +124,12 @@ export default function Project() {
                     </div>
 
                     <div className='col-md-6 mb-4'>
+                        <p className='h2 md-title'>
+                            {t("project.dynacard.title")}
+                        </p>
                         <div className='card border-gray '>
                             <img alt='' className='card-img-top' src={projectCode} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title text-light card-title'>
-                                    {t("project.dynacard.title")}
-                                </p>
                                 <a href="https://github.com/abass-dev/dynacard" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "><i className='fa fa-github'></i> Code</a>
                                 {" "}
                                 <a href="https://github.com/abass-dev/dynacard/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
@@ -150,12 +150,12 @@ export default function Project() {
                     </div>
 
                     <div className='col-md-6 mb-4'>
+                        <p className='h2 md-title'>
+                            {t("project.reactnative1.title")}
+                        </p>
                         <div className='card border-gray '>
                             <img alt='' className='card-img-top' src={projectReactNative1} />
                             <div class="text-white card-img-overlay">
-                                <p className='h2 md-title text-light card-title'>
-                                    {t("project.reactnative1.title")}
-                                </p>
                                 <a href="https://github.com/abass-dev/portfolio-with-react-native" class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "><i className='fa fa-github'></i> Code</a>
                                 {" "}
                                 <a href="https://github.com/abass-dev/portfolio-with-react-native/blob/master/LICENSE" title="license"><img alt='' src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" /></a>
