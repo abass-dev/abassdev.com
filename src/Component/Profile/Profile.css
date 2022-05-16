@@ -4,7 +4,7 @@
     height: 330px;
     border-radius: 50%;
     background-size: cover;
-    box-shadow: 0 9px 10px 0 #00ccff33;
+    box-shadow: 0 9px 10px 0 #000f12;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../../assets/images/profile-pic2.jpg');
@@ -20,6 +20,6 @@
 .profile-picture {
         width: 150px;
         height: 150px;
-        box-shadow: 0 5px 7px 0 #00ccff22;
+        box-shadow: 0 5px 7px 0 #000f12;
     }
 }

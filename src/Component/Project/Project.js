@@ -6,9 +6,11 @@ import projectPortfolio from '../../assets/images/project-portfolio.jpg'
 import projectPHPCode from '../../assets/images/php_code.jpg'
 import projectReactNative1 from '../../assets/images/screenshot.jpg'
 import {useTranslation} from 'react-i18next'
+import {Link, Outlet} from 'react-router-dom'
 import './Project.css'
+
 export default function Project() {
-    const {t} = useTranslation();
+    const {t, i18n} = useTranslation();
     return (
         <div className='home-container'>
             <div className='container'>
@@ -17,7 +19,6 @@ export default function Project() {
                         <h1 id='projets' className='mt-4 large-title text-start fw-bold'>{t("project.title")}</h1>
                         <p className="after-title"></p>
                     </div>
-
                     <div className='col-md-6 mb-4'>
                         <p className='md-title text-secondary'>
                             {t("project.nigatedev.title")}
@@ -158,6 +159,11 @@ export default function Project() {
                                 <p className='md-title'>
                                     {t("project.dynacard.description")}
                                 </p>
+                                <p>
+                                    {t("project.dynacard.demo")}
+                                  <a href="https://abassdev.todaydevs.com/abassdev.apk"> abassdev.apk ( Install the app here )</a>
+                                
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -190,8 +196,7 @@ export default function Project() {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
-                    <a href="#">More projects</a>
+                    <div className="col border-bottom border-2">
                     </div>
                 </div>
             </div>

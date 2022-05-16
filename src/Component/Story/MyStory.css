@@ -2,3 +2,11 @@
     transform: rotate(180deg);
     transition: .5s;
 }
+.showbtn {
+  z-index: 10;
+  position: relative;
+}
+.story-img {
+  overflow: hidden;
+  transition: transform .5s ease;
+}

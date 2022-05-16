@@ -10,12 +10,14 @@ import './Home.css'
 
 export default function Home() {
     return (
+      <div>
         <div className='container-fluid'>
           <Nav />
           <Profile />
           <Project />
           <Skill />
           <Work />
+        </div>
           <Footer />
         </div>
     );

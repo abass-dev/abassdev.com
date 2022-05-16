@@ -1,7 +1,15 @@
 import {useTranslation} from 'react-i18next'
-
-export default function Nav(){
+import {useLocation} from 'react-router-dom'
+export default function Navigation(){
+  
   const {t, i18n} = useTranslation();
+  const path = useLocation()
+  
+   const moveTo = (link) => {
+     let cleanPath = window.location.href.replace(path.pathname, '') + link
+     return cleanPath
+   
+   }
   const changeLanguage = (language) => {
         i18n.changeLanguage(language);
     };
@@ -17,12 +25,12 @@ export default function Nav(){
                 <div className="collapseBtn collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div className="navbar-nav md-title">
                     <a className="nav-link active" aria-current="page" href="/">{t("profile.links.home")}</a>
-                    <a className="nav-link text-dark" href="#apropos">{t("profile.links.about")}</a>
-                    <a className="nav-link text-dark" href="#projets">{t("profile.links.projects")}</a>
-                    <a className="nav-link text-dark" href="#competence">{t("profile.links.skill")}</a>
-                    <a className="nav-link text-dark" href="#work">{t("profile.links.work")}</a>
-                    <a className="nav-link text-dark" href="#contact">{t("profile.links.contact")}</a>
-                    <a className="text-white btn-sm lead btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 59 157 5606</a>
+                    <a className="nav-link text-dark" href={moveTo("#apropos")}>{t("profile.links.about")}</a>
+                    <a className="nav-link text-dark" href={moveTo("#projets")}>{t("profile.links.projects")}</a>
+                    <a className="nav-link text-dark" href={moveTo("#competence")}>{t("profile.links.skill")}</a>
+                    <a className="nav-link text-dark" href={moveTo("#work")}>{t("profile.links.work")}</a>
+                    <a className="nav-link text-dark" href={moveTo("#contact")}>{t("profile.links.contact")}</a>
+                    <a className="text-white btn-sm btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 59 157 5606</a>
                     </div>
                   </div>
               </div>
