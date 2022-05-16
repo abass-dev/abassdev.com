@@ -16,7 +16,7 @@ export default function Skill() {
                 <div className='col-12 mb-4 text-white'>
                   <div className='row'>
                     <div className='col-md-6 mb-4'>
-                    <h4 className='md-title'>{t("skill.frontend")}</h4>
+                    <h4 className='md-title text-secondary'>{t("skill.frontend")}</h4>
                     <div className='card border-gray bg-light'>
                     <div className='card-body md-title'>
                     <div className='row card-text'>
@@ -42,7 +42,7 @@ export default function Skill() {
                     </div>
                     
                     <div className='col-md-6 mb-4'>
-                    <h4 className='md-title'>{t("skill.backend")}</h4>
+                    <h4 className='md-title text-secondary'>{t("skill.backend")}</h4>
                     <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                     <div className='row card-text'>
@@ -69,7 +69,7 @@ export default function Skill() {
 
                     </div>
                     <div className='col-md-6 mb-4'>
-                    <h4 className='md-title'>{t("skill.database")}</h4>
+                    <h4 className='md-title text-secondary'>{t("skill.database")}</h4>
                     <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
@@ -90,7 +90,7 @@ export default function Skill() {
                     </div>
                     </div>
                     <div className='col-md-6 mb-4'>
-                    <h4 className='md-title'>{t("skill.tools")}</h4>
+                    <h4 className='md-title text-secondary'>{t("skill.tools")}</h4>
                     <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
@@ -112,7 +112,7 @@ export default function Skill() {
                     </div>
                     
                     <div className='col-md-6 mb-4'>
-                    <h4 className='md-title'>{t("skill.mobiles")}</h4>
+                    <h4 className='md-title text-secondary'>{t("skill.mobiles")}</h4>
                     <div className='card border-gray bg-light'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>
@@ -130,7 +130,7 @@ export default function Skill() {
                     </div>
                     
                     <div className='col-md-6 mb-4'>
-                    <h4 className='md-title'>{t("skill.software")}</h4>
+                    <h4 className='md-title text-secondary'>{t("skill.software")}</h4>
                     <div className='card bg-light border-gray'>
                     <div className='card-body md-title'>
                         <div className='row card-text'>

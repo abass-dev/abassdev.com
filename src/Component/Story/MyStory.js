@@ -14,10 +14,10 @@ class MyStory extends Component {
     render() {
       const {t} = this.props;
       return (
-        <div className="text-dark mt-4">
+        <div className="text-dark mt-1">
             <p>
             <img alt="Abass Ben Cheik" width="100%" height="auto" className="img"  src={StoryImg} />
-              <button onClick={this.showbtn} className="showbtn btn text-dark w-100 btn-outline-primary border-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseMyStory" aria-expanded="false" aria-controls="collapseMyStory">
+              <button onClick={this.showbtn} className="showbtn btn text-dark w-100 btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#collapseMyStory" aria-expanded="false" aria-controls="collapseMyStory">
                 <i className="h5 chevron text-success fa fa-angle-double-down"></i> {t("profile.mystory.showbtn")} 
               </button>
             </p>

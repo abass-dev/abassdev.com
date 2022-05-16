@@ -10,11 +10,6 @@ const reactStringReplace = require('react-string-replace')
 export default function Profile() {
 
     const {t, i18n} = useTranslation();
-    
-    const changeLanguage = (language) => {
-        i18n.changeLanguage(language);
-        window.location.reload(false);
-    };
 
     let description = t("profile.about.description")
     description = reactStringReplace(description, "Open-Source", (match, i) => (
@@ -25,13 +20,9 @@ export default function Profile() {
     ))
     
     return (
-    <div className='mb-4'>
+    <div className='my-4'>
       <div className='row'>
         <div className='col-12 profile-header'>
-            <div className="text-end my-4">
-                <button className="btn btn-primary-outline btn-sm text-dark" onClick={() => changeLanguage('en')}>{t("profile.lang.en")} 🇺🇸</button>
-                <button className="btn btn-primary-outline btn-sm text-dark" onClick={() => changeLanguage('fr')}>{t("profile.lang.fr")} 🇫🇷</button>
-            </div>
          <h1 id='apropos' className='text-dark fw-bold'><span className='text-primary'>HELLO, </span>{t("profile.sayHello")}</h1>
           <h2 className='text-primary'>
             <Typical

@@ -45,7 +45,8 @@
         "title": "NOTABLE PROJECTS",
         "nigatedev": {
             "title": "NIGATEDEV FRAMEWORK",
-            "description": "Nigatedev is a time-saving PHP framework coded by Abass Ben Cheik and contributors."
+            "description": "Nigatedev is a time-saving PHP framework coded by Abass Ben Cheik and contributors.",
+            "demo": "List of demo"
         },
         "todaydevs": {
             "title": "TODAYDEVS WEBSITE",
@@ -53,7 +54,8 @@
         },
         "formbuilder": {
             "title": "FORM BUILDER",
-            "description": "Form builder is an open-source project written in PHP and styled with bootstrap css by Abass Ben Cheik to be easily used to build html forms."
+            "description": "Form builder is an open-source project written in PHP and styled with bootstrap css by Abass Ben Cheik to be easily used to build html forms.",
+            "demo": "Live demo on heroku"
         },
         "portfolio": {
             "title": "MY PORTFOLIO",
