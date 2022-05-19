@@ -1,6 +1,7 @@
 {
     "title": "Traduire en français",
     "profile": {
+        "hello": "SALUT",
         "sayHello": "JE SUIS ABASS DEV",
         "introduce1": "Freelance 🌠",
         "introduce2": "Full-Stack Développeur 💻",
@@ -13,7 +14,7 @@
         
         "about": {
             "title": "À-propos de moi",
-            "description": "Je suis un développeur Web, mobile et logiciel passionné par l'internet et la programmation depuis plus de 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs.com, je partage des vidéos sur YouTube et je contribue à la communauté Open-Source. Je suis le créateur du framework Nigatedev et l'auteur de todaydevs (nouveau site web)."
+            "description": "Je suis un développeur Web, mobile et logiciel passionné par l'internet et de la programmation depuis plus de 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs.com, partage des vidéos sur YouTube et contribue à la communauté Open-Source. Je suis le créateur du framework Nigatedev et l'auteur de todaydevs.com (nouveau site web)."
         },
         
         "cv": "MON CV",
