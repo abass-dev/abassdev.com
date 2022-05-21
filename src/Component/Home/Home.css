@@ -14,3 +14,14 @@
   height: 1px;
   background: red;
 }
+.showcookie {
+  position: fixed;
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  padding: 7px;
+}

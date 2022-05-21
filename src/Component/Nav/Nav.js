@@ -1,4 +1,5 @@
 import {useTranslation} from 'react-i18next'
+import {Link, Outlet} from 'react-router-dom'
 
 export default function Nav(){
   const {t, i18n} = useTranslation();
@@ -21,7 +22,8 @@ export default function Nav(){
                     <a className="nav-link text-dark" href="#projets">{t("profile.links.projects")}</a>
                     <a className="nav-link text-dark" href="#competence">{t("profile.links.skill")}</a>
                     <a className="nav-link text-dark" href="#work">{t("profile.links.work")}</a>
-                    <a className="nav-link text-dark" href="#contact">{t("profile.links.contact")}</a>
+                    <Link className="nav-link text-dark" to="/contact">{t("profile.links.contact")}</Link>
+                    <Outlet/>
                     <a className="text-white btn-sm lead btn btn-success" href="tel:+233-54-312-2816">Tel: <span className='fs-4 fa fa-mobile'></span> +233 59 157 5606</a>
                     </div>
                   </div>

@@ -6,7 +6,6 @@ import projectPortfolio from '../../assets/images/project-portfolio.jpg'
 import projectPHPCode from '../../assets/images/php_code.jpg'
 import projectReactNative1 from '../../assets/images/screenshot.jpg'
 import {useTranslation} from 'react-i18next'
-import {Link, Outlet} from 'react-router-dom'
 import './Project.css'
 
 export default function Project() {
