@@ -27,10 +27,10 @@
         },
         "mystory": {
             "showbtn": "Read My Story 📃",
-            "whoami": "Who is AbassDev?",
-            "para1": "Abass Ben Cheik or AbassDev was born on February 02, 1995 (27 years old) in Niamey, Niger and he is a Full-Stack developer (self-taught).",
+            "whoami": "Who is Abass Dev?",
+            "para1": "Abass Ben Cheik or Abass Dev was born on February 02, 1995 (27 years old) in Niamey, Niger and he is a Full-Stack developer (self-taught).",
             "para2": "He started to be interested in web development at the age of 14, in 2009 but did not even know where to start.",
-            "para3": "In 2011 he made a friend on Skyrock (social network) who asked him to help him manage his blog that he created on wix and that's when AbassDev started web development, finally in 2012 he decided to create his own blog on blogspot (Created by Google), at the beginning it was working well. But, after only a few days, he was limited by the available features that motivated him to find a different solution that's when he started to learn deep web development with the real languages created for web development (HTML, CSS, JavaScript, PHP, SQL...)."
+            "para3": "In 2011 he made a friend on Skyrock (social network) who asked him to help him manage his blog that he created on wix and that's when Abass Dev started web development, finally in 2012 he decided to create his own blog on blogspot (Created by Google), at the beginning it was working well. But, after only a few days, he was limited by the available features that motivated him to find a different solution that's when he started to learn deep web development with the real languages created for web development (HTML, CSS, JavaScript, PHP, SQL...)."
         }
     },
     "skill": {
@@ -40,13 +40,14 @@
         "database": "Databases",
         "tools": "Tools",
         "mobiles": "Application Android & IOS",
-        "software": "Software development"
+        "software": "Software development",
+        "editor": "Editors"
     },
     "project": {
         "title": "NOTABLE PROJECTS",
         "nigatedev": {
             "title": "NIGATEDEV FRAMEWORK",
-            "description": "Nigatedev is a time-saving PHP framework coded by Abass Ben Cheik and contributors.",
+            "description": "Nigatedev is a time-saving PHP framework coded by Abass Dev (Abass Ben Cheik) and contributors.",
             "demo": "List of demo"
         },
         "todaydevs": {
@@ -55,7 +56,7 @@
         },
         "formbuilder": {
             "title": "FORM BUILDER",
-            "description": "Form builder is an open-source project written in PHP and styled with bootstrap css by Abass Ben Cheik to be easily used to build html forms.",
+            "description": "Form builder is an open-source project written in PHP and styled with bootstrap css by Abass Dev (Abass Ben Cheik) to be easily used to build html forms.",
             "demo": "Live demo on heroku"
         },
         "portfolio": {
@@ -88,7 +89,7 @@
         }
     },
     "footer": {
-        "copyright": "Copyright © 2021 - 2022 by AbassDev, All rights reserved.",
+        "copyright": "Copyright © 2021 - 2022 by Abass Dev, All rights reserved.",
         "thenext": "What's Next?",
         "letsconnect": "Let's Connect",
         "contactdesk": "If you are interested in working on a project or have any questions, please leave an email and I will get back to you as soon as possible.",

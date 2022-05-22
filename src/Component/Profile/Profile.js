@@ -5,12 +5,36 @@ import {useTranslation} from 'react-i18next'
 import 'font-awesome/css/font-awesome.min.css'
 import resume from "../../assets/pdf/abass_cv_fr.pdf"
 import MyStory from '../Story/MyStory'
+import i18n from "../../i18n"
+import {useCookies} from 'react-cookie';
 const reactStringReplace = require('react-string-replace')
 
 export default function Profile() {
-
-    const {t, i18n} = useTranslation();
-
+  
+  
+  const [cookie, setCookie] = useCookies(['transalertbox'])
+  const cookExpire = 3600*10
+  const handle = () => {
+     setCookie('transalertbox', "transAlertBox",{maxAge : cookExpire})
+   }
+   const alertBox = () => {
+       if(!cookie.transalertbox) {
+         return (
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+             <strong>Note: </strong>This website has been translated from <button className="btn btn-outline-primary border-none btn-sm" onClick={() => changeLanguage("fr")}>French</button> to English, which means it may be incomplete. You can also help to improve the translation by cloning the repository <a href="https://github.com/abass-dev/portfolio/tree/master/public/locales">here.</a> Thanks anyway 🙏
+             <button onClick={handle} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          )
+       } else {
+         return null;
+       }
+     
+   }
+  const {t, i18n} = useTranslation();
+  const changeLanguage = (language) => {
+      i18n.changeLanguage(language);
+    };
+   
     let description = t("profile.about.description")
     description = reactStringReplace(description, "Open-Source", (match, i) => (
         <a href="https://github.com/abass-dev?tab=repositories">{match}</a>
@@ -39,6 +63,7 @@ export default function Profile() {
                     loop={Infinity}
             />
           </h2>
+            {alertBox()}
           <div className='row align-items-center'>
             <div className='col-12 mx-4'>
             </div>
@@ -72,7 +97,7 @@ export default function Profile() {
             <a href='https://youtube.com/channel/UC51YhGiRSH_IBPjYdPAmRew'>
                 <i className="fa fa-youtube"></i>
             </a>
-            <a href='mailto:cheikabassben@gmail.com'>
+            <a href='mailto:abassthedev@gmail.com'>
               <i className="fa fa-envelope"></i>
             </a>
             </div>

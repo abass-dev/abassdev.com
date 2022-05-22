@@ -36,7 +36,7 @@ export default function Footer () {
                         <a href='https://youtube.com/channel/UC51YhGiRSH_IBPjYdPAmRew'>
                           <i className="fa fa-youtube"></i>
                         </a>
-                        <a href='mailto:cheikabassben@gmail.com'>
+                        <a href='mailto:abassthedev@gmail.com'>
                           <i className="fa fa-envelope"></i>
                         </a>
                 </div>

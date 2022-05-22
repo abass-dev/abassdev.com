@@ -7,8 +7,8 @@ import Project from '../Project/Project'
 import Work from '../Work/Work'
 import {useCookies} from 'react-cookie';
 import Footer from '../Footer/Footer'
+import i18n from "../../i18n"
 import './Home.css'
-
 const Home = () => {
   const [cookie, setCookie] = useCookies(['alertbox'])
   const cookExpire = 3600*10

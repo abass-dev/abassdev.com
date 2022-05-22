@@ -1,5 +1,6 @@
 import {useTranslation} from 'react-i18next'
 import {Link, Outlet} from 'react-router-dom'
+import i18n from "../../i18n"
 
 export default function Nav(){
   const {t, i18n} = useTranslation();

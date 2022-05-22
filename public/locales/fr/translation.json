@@ -14,7 +14,7 @@
         
         "about": {
             "title": "À-propos de moi",
-            "description": "Je suis un développeur Web, mobile et logiciel passionné par l'internet et de la programmation depuis plus de 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs.com, partage des vidéos sur YouTube et contribue à la communauté Open-Source. Je suis le créateur du framework Nigatedev et l'auteur de todaydevs.com (nouveau site web)."
+            "description": "Je suis développeur Web, mobile et logiciel passionné par l'internet et de la programmation depuis plus de 6 ans. Pendant mon temps libre, j'écris des articles sur todaydevs.com, partage des vidéos sur YouTube et contribue à la communauté Open-Source. Je suis le créateur du framework Nigatedev et l'auteur de todaydevs.com (nouveau site web)."
         },
         
         "cv": "MON CV",
@@ -30,11 +30,11 @@
         },
         
         "mystory": {
-            "showbtn": "Lu Mon  Histoire 📃",
-            "whoami": "Qui est AbassDev ?",
-            "para1": "Abass Ben Cheik ou AbassDev est né le 02 février 1995 (27 ans) à Niamey au Niger et est un développeur Full-Stack (autodidacte).",
+            "showbtn": "Lu mon  histoire 📃",
+            "whoami": "Qui est Abass Dev ?",
+            "para1": "Abass Ben Cheik ou Abass Dev est né le 02 février 1995 (27 ans) à Niamey au Niger et est un développeur Full-Stack (autodidacte).",
             "para2": "Il a commencé à s'intéresser au développement web à l'âge de 14 ans, en 2009 mais ne savait même pas par où commencer.",
-            "para3": "En 2011 il s'est fait un ami sur Skyrock (réseau social) qui lui a demandé de l'aider à gérer son blog qu'il a crée sur wix et c'est à ce moment qu'AbassDev a commencé le développement web, enfin en 2012 il a décidé de créer son propre blog sur blogspot (Créé par Google), au début, ça marchait bien. Mais, après seulement quelques jours, il était limité par les fonctionnalités disponibles cela l'a motivé à trouver une solution différente c'est alors qu'il a commencé à apprendre le développement web profond avec les vrais langages créés pour le développement web (HTML, CSS JavaScript,..)."
+            "para3": "En 2011 il s'est fait un ami sur Skyrock (réseau social) qui lui a demandé de l'aider à gérer son blog qu'il a crée sur wix et c'est à ce moment qu'Abass Dev a commencé le développement web, enfin en 2012 il a décidé de créer son propre blog sur blogspot (Créé par Google), au début, ça marchait bien. Mais, après seulement quelques jours, il était limité par les fonctionnalités disponibles cela l'a motivé à trouver une solution différente c'est alors qu'il a commencé à apprendre le développement web profond avec les vrais langages créés pour le développement web (HTML, CSS JavaScript,..)."
             
         }
     },
@@ -99,7 +99,7 @@
     },
     
     "footer": {
-        "copyright": "Copyright © 2021 - 2022 par AbassDev. Tous droits réservés",
+        "copyright": "Copyright © 2021 - 2022 par Abass Dev. Tous droits réservés",
         "thenext": "Quelle est la suite ?",
         "letsconnect": "Contact moi",
         "contactdesk": "Si vous souhaitez travailler sur un projet ou si vous avez des questions, veuillez laisser un courriel et je vous répondrai dès que possible.",
