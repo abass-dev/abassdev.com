@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 export default function Footer () {
     const {t} = useTranslation();
     return (
-        <div className="container-lg bg-light">
+        <div className="bg-light">
         <div className="row pt-1">
                 <div className="col-md-6 text-center">
                     <h4 id="contact" className="text-primary">{t("footer.thenext")}</h4>

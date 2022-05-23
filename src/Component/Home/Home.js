@@ -32,16 +32,14 @@ const Home = () => {
    }
   
    return (
-      <div>
         <div className='container-fluid'>
           <Nav />
           <Profile />
           <Project />
           <Skill />
           <Work />
-        </div>
           <Footer />
-        {showCookieBox()}
+          {showCookieBox()}
         </div>
        )
 } 

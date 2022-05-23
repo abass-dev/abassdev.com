@@ -16,6 +16,9 @@
 }
 .showcookie {
   position: fixed;
+  max-width: 355px;
+  margin: 10px;
+  border-radius: 4px;
   background-color: rgba(0,0,0,0.9);
   color: white;
   bottom: 0;

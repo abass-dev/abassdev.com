@@ -1,8 +1,31 @@
 const Item = (props) => {
+  let title = props.title
+  let icon = props.icon
+  let description = props.desk
+  let link = props.link
   
-  const action = () => {
+  if (!title || title === " ") {
+    title = "Untitled"
+  }
+  
+  if(!description || description === " ") {
+    description = "No description for " + title
+    }
+    
+  let learnMoreLink = () => {
+    if (!link || link === " ") {
+      return null;
+    } else {
+      return (
+          <p>
+            <a href={link}>Learn more about {title}</a>
+          </p>
+        )
+    }
+  }
+ const action = () => {
     document.querySelector("."+props.target+"-chevron").classList.toggle("rotate-chevron")
-    document.querySelector("."+props.target+"-desk").classList.toggle("hideit")
+    document.querySelector("."+props.target+"-desk").classList.toggle("toggle-it")
   }
   
   return (
@@ -10,20 +33,19 @@ const Item = (props) => {
         <div className="row skill-card-focus">
          
           <div className="col">
-            <i class={props.icon + " colored"}></i>
+            <i class={icon + " colored"}></i>
             {" "}
-            <span>{props.title}</span>
+            <span>{title}</span>
           </div>
          
           <div className="col text-end">
             <i className={props.target + "-chevron fa fa-angle-double-down text-success"}></i>
           </div>
           
-          <div className={props.target +"-desk hideit col-12 bg-white skill-card-desk"}>
+          <div className={props.target +"-desk toggle-it col-12 bg-white skill-card-desk"}>
             <p>
-              {props.desk}
-              <br />
-              <a href={props.link}>Learn more about {props.title}</a>
+              {description}
+              {learnMoreLink()}
             </p>
           </div>
           

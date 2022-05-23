@@ -16,7 +16,7 @@
     transform: rotate(180deg);
     transition: .5s;
 }
-.hideit {
+.toggle-it {
   display: none;
 }
 .showit {

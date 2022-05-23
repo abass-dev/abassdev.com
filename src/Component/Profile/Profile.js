@@ -5,6 +5,7 @@ import {useTranslation} from 'react-i18next'
 import 'font-awesome/css/font-awesome.min.css'
 import resume from "../../assets/pdf/abass_cv_fr.pdf"
 import MyStory from '../Story/MyStory'
+import ProfilePicture from "../../assets/images/profile-picture.png"
 import i18n from "../../i18n"
 import {useCookies} from 'react-cookie';
 const reactStringReplace = require('react-string-replace')
@@ -64,16 +65,15 @@ export default function Profile() {
             />
           </h2>
             {alertBox()}
-          <div className='row align-items-center'>
-            <div className='col-12 mx-4'>
+          <div className='row py-4 m-1 bg-body rounded shadow'>
+            <div className='col-md-6'>
+            <img className="img-thumbnail border-0" alt="Profile picture (Abass Dev" src={ProfilePicture} />
             </div>
-            <div className='mt-4 col-md-5'>
-              <div className='profile-picture'></div>
-            </div>
-            <div className='col-md-7 text-dark'>
+            <div className='col-md-6 text-dark'>
               <h1 className='mt-4'>{t("profile.about.title")}</h1>
               <p className="after-title"></p>
               <p className='lead text-start'>{description}</p>
+            
             <div className='row'>
             <div className='col-12 mt-2 col-md-7 text-center profile-socieal-links'>
             <a href='https://www.facebook.com/abasscheik.ben'>
