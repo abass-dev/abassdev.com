@@ -3,13 +3,13 @@ const Item = (props) => {
   let icon = props.icon
   let description = props.desk
   let link = props.link
-  
-  if (!title || title === " ") {
+
+ if (!title || title === " ") {
     title = "Untitled"
   }
   
   if(!description || description === " ") {
-    description = "No description for " + title
+    description = "No description for " + title + " yet."
     }
     
   let learnMoreLink = () => {

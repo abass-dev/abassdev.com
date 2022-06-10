@@ -38,8 +38,8 @@ const Home = () => {
           <Project />
           <Skill />
           <Work />
-          <Footer />
           {showCookieBox()}
+          <Footer />
         </div>
        )
 } 

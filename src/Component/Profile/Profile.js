@@ -51,17 +51,17 @@ export default function Profile() {
          <h1 id='apropos' className='text-dark fw-bold'><span className='text-primary'>{t("profile.hello")}, </span>{t("profile.sayHello")}</h1>
           <h2 className='text-primary'>
             <Typical
-                    steps={[
-                        t("profile.introduce1"),
-                        2000,
-                        t("profile.introduce2"),
-                        2000,
-                        t("profile.introduce3"),
-                        2000,
-                        t("profile.introduce4"),
-                        2000,
-                    ]}
-                    loop={Infinity}
+              steps={[
+                  t("profile.introduce1"),
+                  2000,
+                  t("profile.introduce2"),
+                  2000,
+                  t("profile.introduce3"),
+                  2000,
+                  t("profile.introduce4"),
+                  2000,
+              ]}
+              loop={Infinity}
             />
           </h2>
             {alertBox()}
@@ -105,8 +105,7 @@ export default function Profile() {
               <a href={resume} download className='btn btn-success'>{t("profile.cv")} <span className='fa fa-download'></span></a>
             </div>
             </div>
-          
-                </div>
+              </div>
             </div>
             <MyStory />
         </div>

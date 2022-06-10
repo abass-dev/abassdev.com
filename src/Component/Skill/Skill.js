@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-//import 'font-awesome/css/font-awesome.min.css'
 import './Skill.css'
 import Item from "./Item"
 
@@ -22,7 +21,7 @@ export default function Skill() {
                   <div className='card-body md-title'>
                     <div className='row card-text'>
                     
-                      <Item  
+                      <Item 
                         title="HTML" 
                         target="html"
                         icon="devicon-html5-plain"

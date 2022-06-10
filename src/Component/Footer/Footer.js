@@ -5,15 +5,14 @@ import { useTranslation } from 'react-i18next'
 export default function Footer () {
     const {t} = useTranslation();
     return (
-        <div className="bg-light">
-        <div className="row pt-1">
+        <div className="row bg-light pt-1">
                 <div className="col-md-6 text-center">
                     <h4 id="contact" className="text-primary">{t("footer.thenext")}</h4>
                     <h2>{t("footer.letsconnect")}</h2>
                     <p>{t("footer.contactdesk")}</p>
                     </div>
                     <div className='col-md-6 text-center profile-socieal-links'>
-                    <a href="mailto:cheikabassben@gmail.com" className="btn border my-4">{t("footer.sayhi")} 👋</a>
+                    <a href="mailto:abassthedev@gmail.com" className="btn border my-4">{t("footer.sayhi")} 👋</a>
                         <br />
                         <a href='https://www.facebook.com/abasscheik.ben'>
                           <i className="fa fa-facebook"></i>
@@ -41,7 +40,6 @@ export default function Footer () {
                         </a>
                 </div>
             <p className="copyright bg-secondary">{t("footer.copyright")}</p>
-          </div>
           </div>
     );
   }
