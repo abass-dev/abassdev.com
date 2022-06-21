@@ -9,6 +9,9 @@
     background-repeat: no-repeat;
     background-image: url('../../assets/images/profile-pic2.jpg');
 }
+.profpic {
+  border-radius: 50% !important;
+}
 .profile-socieal-links a{
     padding: 7px;
     font-size: 20px;
