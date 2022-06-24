@@ -5,7 +5,7 @@ import {useTranslation} from 'react-i18next'
 import 'font-awesome/css/font-awesome.min.css'
 import resume from "../../assets/pdf/abass_cv_fr.pdf"
 import MyStory from '../Story/MyStory'
-import ProfilePicture from "../../assets/images/abassdev2022-6.jpg"
+import ProfilePicture from "../../assets/images/abass2022-07.jpg"
 import i18n from "../../i18n"
 import {useCookies} from 'react-cookie';
 const reactStringReplace = require('react-string-replace')
