@@ -1,40 +1,48 @@
 .skill-card-bg {
-    background: #050f12;
+  background: #050f12;
 }
 
 .skill-card-text {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: black;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: black;
 }
+
 .skill-card-desk {
-    font-size: 14px;
-    padding: 8px;
+  font-size: 14px;
+  padding: 8px;
 }
 
 .rotate-chevron {
-    transform: rotate(180deg);
-    transition: .5s;
+  transform: rotate(180deg);
+  transition: .5s;
 }
+
 .toggle-it {
   display: none;
 }
+
 .showit {
   display: block;
 }
-.skill-card-focus:hover{
+
+.skill-card-focus:hover {
   background-color: #cae1c0;
 }
-.progress  {
+
+.progress {
   height: 24px !important;
   font-size: 17px !important;
 }
+
 .progress .french {
- width: 75%; 
+  width: 75%;
 }
+
 .progress .haussa {
- width: 45%; 
+  width: 45%;
 }
+
 .progress .english {
- width: 35%; 
+  width: 35%;
 }

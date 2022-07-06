@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
-.profile-header, .md-title, .large-title{
-    font-family: 'Ubuntu', Sans-Serif;
+
+.profile-header,
+.md-title,
+.large-title {
+  font-family: 'Ubuntu', Sans-Serif;
 }
+
 /*.home-container {
     background-size: contain;
     background-position: bottom;
@@ -14,12 +18,13 @@
   height: 1px;
   background: red;
 }
+
 .showcookie {
   position: fixed;
   max-width: 355px;
   margin: 10px;
   border-radius: 4px;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   bottom: 0;
   right: 0;

@@ -9,18 +9,22 @@
     background-repeat: no-repeat;
     background-image: url('../../assets/images/profile-pic2.jpg');
 }
+
 .profpic {
-  border-radius: 50% !important;
+    border-radius: 50% !important;
 }
-.profile-socieal-links a{
+
+.profile-socieal-links a {
     padding: 7px;
     font-size: 20px;
 }
+
 .nav-link {
     font-weight: bold;
 }
+
 @media only screen and (max-width: 600px) {
-.profile-picture {
+    .profile-picture {
         width: 150px;
         height: 150px;
         box-shadow: 0 5px 7px 0 #000f12;
