@@ -11,7 +11,7 @@
 }
 
 .profpic {
-    border-radius: 50% !important;
+    border-radius: 90% !important;
 }
 
 .profile-socieal-links a {
@@ -22,6 +22,7 @@
 .nav-link {
     font-weight: bold;
 }
+
 
 @media only screen and (max-width: 600px) {
     .profile-picture {

@@ -17,14 +17,14 @@ export default function Navigation() {
   return (
     <div className="row pt-2 bg-light">
       <div className='col-6 col-md-9 text-start'>
-        <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
+        <nav className="navbar navbarTextColor navbar-expand-md bg-transparent">
           <div>
             <button className="navbar-toggler btn btn-success-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span className="fa fa-bars text-success"></span>
             </button>
             <div className="collapseBtn collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav md-title">
-                <a className="nav-link active" aria-current="page" href="/">{t("profile.links.home")}</a>
+                <a className="nav-link" href="/">{t("profile.links.home")}</a>
                 <a className="nav-link text-dark" href={moveTo("/#apropos")}>{t("profile.links.about")}</a>
                 <a className="nav-link text-dark" href={moveTo("/#projets")}>{t("profile.links.projects")}</a>
                 <a className="nav-link text-dark" href={moveTo("/#competence")}>{t("profile.links.skill")}</a>

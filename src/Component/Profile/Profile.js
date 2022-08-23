@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import 'font-awesome/css/font-awesome.min.css'
 import resume from "../../assets/pdf/abass_cv_fr.pdf"
 import MyStory from '../Story/MyStory'
-import ProfilePicture from "../../assets/images/abass2022-07.jpg"
+import ProfilePicture from "../../assets/images/abassdev2022-6.jpg"
 import i18n from "../../i18n"
 import { useCookies } from 'react-cookie';
 const reactStringReplace = require('react-string-replace')
@@ -67,7 +67,7 @@ export default function Profile() {
           {alertBox()}
           <div className='row py-4 m-1 bg-body rounded shadow'>
             <div className='col-md-6'>
-              <img className="img-thumbnail border-0 profpic" alt="Profile picture (Abass Dev)" src={ProfilePicture} />
+              <img width="100%"  height="auto" className="profpic" alt="Profile picture (Abass Dev)" src={ProfilePicture} />
             </div>
             <div className='col-md-6 text-dark'>
               <h1 className='mt-4'>{t("profile.about.title")}</h1>

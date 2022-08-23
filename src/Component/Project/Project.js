@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 import './Project.css'
 
 export default function Project() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <div className='home-container'>
             <div className='container'>

@@ -1,12 +1,17 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
+import { CookiesProvider } from 'react-cookie'
 import Contact from '../src/Component/Contact/Contact'
 import reportWebVitals from './reportWebVitals';
 import './i18n';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { CookiesProvider } from 'react-cookie'
-import './custom.scss';
 import './index.css';
 ReactDOM.render(
   <React.StrictMode>

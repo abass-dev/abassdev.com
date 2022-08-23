@@ -1,6 +1,8 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next'
 import { Link, Outlet } from 'react-router-dom'
-import i18n from "../../i18n"
+
+import "./Nav.css"
 
 export default function Nav() {
   const { t, i18n } = useTranslation();
@@ -18,7 +20,7 @@ export default function Nav() {
             </button>
             <div className="collapseBtn collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav md-title">
-                <a className="nav-link active" aria-current="page" href="/">{t("profile.links.home")}</a>
+                <a className="nav-link text-dark active" aria-current="page" href="/">{t("profile.links.home")}</a>
                 <a className="nav-link text-dark" href="#apropos">{t("profile.links.about")}</a>
                 <a className="nav-link text-dark" href="#projets">{t("profile.links.projects")}</a>
                 <a className="nav-link text-dark" href="#competence">{t("profile.links.skill")}</a>

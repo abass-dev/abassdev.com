@@ -1,7 +1,6 @@
 import { Component } from 'react'
 import { withTranslation } from 'react-i18next'
 import "./MyStory.css"
-import StoryImg from "../../assets/images/abassdev_story1.png"
 
 class MyStory extends Component {
     constructor(props) {
