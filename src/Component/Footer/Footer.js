@@ -39,7 +39,7 @@ export default function Footer() {
           <i className="fa fa-envelope"></i>
         </a>
       </div>
-      <p className="copyright bg-secondary">{t("footer.copyright")}</p>
+      <p className="copyright bg-secondary">{t("footer.copyright")} <br /> Version: 2.0.0</p>
     </div>
   );
 }
