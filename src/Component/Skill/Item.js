@@ -42,7 +42,7 @@ const Item = (props) => {
           <i className={props.target + "-chevron fa fa-angle-double-down text-success"}></i>
         </div>
 
-        <div className={props.target + "-desk col-12 bg-white skill-card-desk"}>
+        <div className={props.target + "-desk toggle-it col-12 bg-white skill-card-desk"}>
           <p>
             {description}
             {learnMoreLink()}
