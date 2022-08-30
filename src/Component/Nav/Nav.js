@@ -16,7 +16,7 @@ export default function Nav() {
         <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
           <div>
             <button
-              className="navbar-toggler btn btn-success-outline"
+              className="navbar-toggler btn btn-success"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup"
@@ -66,14 +66,14 @@ export default function Nav() {
           </div>
         </nav>
       </div>
-            
-      <div className="col-6 col-md-3 text-end">
-              <a
-                className="btn btn-secondary btn-sm"
-                href="https://blog.abassdev.com"
-              >
-                BLOG
-              </a>
+
+      <div className="col-6 col-md-3 mt-2 text-end">
+        <a
+          className="btn btn-secondary btn-sm"
+          href="https://blog.abassdev.com"
+        >
+          BLOG
+        </a>
         <button
           className="btn btn-primary-outline btn-sm text-dark"
           onClick={() => changeLanguage("en")}
