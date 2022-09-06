@@ -86,8 +86,8 @@ export default function Profile() {
             />
           </h2>
           {alertBox()}
-          <div className="row py-4 m-1 rounded shadow">
-            <div className="col-md-6">
+          <div className="row py-4 m-1 align-items-center rounded shadow">
+            <div className="col-md-6 my-4 py-4">
               <img
                 width="100%"
                 height="auto"
