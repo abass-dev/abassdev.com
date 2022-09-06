@@ -1,6 +1,6 @@
 {
   "name": "abassdev.com",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": ".",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^5.2.0",
+    "dotenv": "^16.0.2",
     "font-awesome": "^4.7.0",
     "i18next": "^21.5.4",
     "i18next-browser-languagedetector": "^6.1.2",
