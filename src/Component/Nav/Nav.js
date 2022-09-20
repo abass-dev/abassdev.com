@@ -56,7 +56,7 @@ export default function Nav() {
                 <Outlet />
                 <a
                   className="text-white btn-sm lead btn btn-success"
-                  href="tel:+233-54-312-2816"
+                  href="tel:+233-59-157-5606"
                 >
                   Tel: <span className="fs-4 fa fa-mobile"></span> +233 59 157
                   5606
@@ -69,7 +69,7 @@ export default function Nav() {
 
       <div className="col-6 col-md-3 mt-2 text-end">
         <a
-          className="btn btn-secondary btn-sm"
+          className="btn btn-success-outline btn-sm"
           href="https://blog.abassdev.com"
         >
           BLOG

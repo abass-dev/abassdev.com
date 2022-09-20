@@ -58,8 +58,8 @@ export default function Profile() {
   description = reactStringReplace(description, "Open-Source", (match, i) => (
     <a href="https://github.com/abass-dev?tab=repositories">{match}</a>
   ));
-  description = reactStringReplace(description, "todaydevs.com", (match, i) => (
-    <a href="https://todaydevs.com">{match}</a>
+  description = reactStringReplace(description, "blog", (match, i) => (
+    <a href="https://blog.abassdev.com">{match}</a>
   ));
 
   return (
