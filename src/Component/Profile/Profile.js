@@ -12,7 +12,7 @@ const reactStringReplace = require("react-string-replace");
 
 export default function Profile() {
   const [cookie, setCookie] = useCookies(["transalertbox"]);
-  const cookExpire = 3600 * 10;
+  const cookExpire = 3600 * 60;
   const handle = () => {
     setCookie("transalertbox", "transAlertBox", { maxAge: cookExpire });
   };
@@ -20,7 +20,7 @@ export default function Profile() {
     if (!cookie.transalertbox) {
       return (
         <div
-          class="alert alert-warning alert-dismissible fade show"
+          class="col-md-6 alert alert-warning alert-dismissible fade show"
           role="alert"
         >
           <strong>Note: </strong>This website has been translated from{" "}
@@ -103,10 +103,10 @@ export default function Profile() {
 
               <div className="row">
                 <div className="col-12 mt-2 col-md-7 text-center profile-socieal-links">
-                  <a href="https://www.facebook.com/abasscheik.ben">
+                  <a href="https://m.facebook.com/abassthedev">
                     <i className="fa fa-facebook"></i>
                   </a>
-                  <a href="https://twitter.com/abasscheik1">
+                  <a href="https://twitter.com/abass_dev">
                     <i className="fa fa-twitter"></i>
                   </a>
                   <a href="https://github.com/abass-dev">
@@ -121,10 +121,7 @@ export default function Profile() {
                   <a href="https://www.pinterest.com/abassdev">
                     <i className="fa fa-pinterest"></i>
                   </a>
-                  <a href="https://youtube.com/channel/UC51YhGiRSH_IBPjYdPAmRew">
-                    <i className="fa fa-youtube"></i>
-                  </a>
-                  <a href="mailto:abassthedev@gmail.com">
+                  <a href="mailto:abass@abassdev.com">
                     <i className="fa fa-envelope"></i>
                   </a>
                 </div>

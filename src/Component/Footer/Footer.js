@@ -14,14 +14,14 @@ export default function Footer() {
         <p>{t("footer.contactdesk")}</p>
       </div>
       <div className="col-md-6 text-center profile-socieal-links">
-        <a href="mailto:abassthedev@gmail.com" className="btn border my-4">
+        <a href="mailto:abass@abassdev.com" className="btn border my-4">
           {t("footer.sayhi")} 👋
         </a>
         <br />
-        <a href="https://www.facebook.com/abasscheik.ben">
+        <a href="https://m.facebook.com/abassthedev">
           <i className="fa fa-facebook"></i>
         </a>
-        <a href="https://twitter.com/abasscheik1">
+        <a href="https://twitter.com/abass_dev">
           <i className="fa fa-twitter"></i>
         </a>
         <a href="https://github.com/abass-dev">
@@ -36,15 +36,12 @@ export default function Footer() {
         <a href="https://www.pinterest.com/abassdev">
           <i className="fa fa-pinterest"></i>
         </a>
-        <a href="https://youtube.com/channel/UC51YhGiRSH_IBPjYdPAmRew">
-          <i className="fa fa-youtube"></i>
-        </a>
-        <a href="mailto:abassthedev@gmail.com">
+        <a href="mailto:abass@abassdev.com">
           <i className="fa fa-envelope"></i>
         </a>
       </div>
       <p className="copyright bg-secondary">
-        {t("footer.copyright")} <br /> Version: {process.env.REACT_APP_VERSION}
+        {t("footer.copyright")} <br /> Version: 2.0.1
       </p>
     </div>
   );
