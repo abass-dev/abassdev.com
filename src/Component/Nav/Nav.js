@@ -87,7 +87,7 @@ export default function Nav() {
                 className="btn btn-primary-outline btn-sm text-white"
                 onClick={() => changeLanguage("fr")}
               >
-                {t("profile.lang.en")} FR
+                {t("profile.lang.fr")} FR
               </button>
             </li>
           </ul>
