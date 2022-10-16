@@ -11,82 +11,88 @@ export default function Nav() {
   };
 
   return (
-    <div className="row pt-2 bg-light">
-      <div className="col-6 col-md-9 text-start">
-        <nav className="navbar navbarTextColor navbar-expand-md navbar-dark bg-transparent">
-          <div>
-            <button
-              className="navbar-toggler btn btn-success"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="fa fa-bars text-success"></span>
-            </button>
-            <div
-              className="collapseBtn collapse navbar-collapse"
-              id="navbarNavAltMarkup"
-            >
-              <div className="navbar-nav md-title">
-                <a
-                  className="nav-link text-dark active"
-                  aria-current="page"
-                  href="/"
-                >
-                  {t("profile.links.home")}
-                </a>
-                <a className="nav-link text-dark" href="#apropos">
-                  {t("profile.links.about")}
-                </a>
-                <a className="nav-link text-dark" href="#projets">
-                  {t("profile.links.projects")}
-                </a>
-                <a className="nav-link text-dark" href="#competence">
-                  {t("profile.links.skill")}
-                </a>
-                <a className="nav-link text-dark" href="#work">
-                  {t("profile.links.work")}
-                </a>
-                <Link className="nav-link text-dark" to="/contact">
-                  {t("profile.links.contact")}
-                </Link>
-                <Outlet />
-                <a
-                  className="text-white btn-sm lead btn btn-success"
-                  href="tel:+233-59-157-5606"
-                >
-                  Tel: <span className="fs-4 fa fa-mobile"></span> +233 59 157
-                  5606
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <div className="col-6 col-md-3 mt-2 text-end">
-        <a
-          className="btn btn-success-outline btn-sm"
-          href="https://blog.abassdev.com"
-        >
-          BLOG
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          MENU
         </a>
         <button
-          className="btn btn-primary-outline btn-sm text-dark"
-          onClick={() => changeLanguage("en")}
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          {t("profile.lang.en")} 🇺🇸
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button
-          className="btn btn-primary-outline btn-sm text-dark"
-          onClick={() => changeLanguage("fr")}
-        >
-          {t("profile.lang.fr")} 🇫🇷
-        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#apropos">
+                About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#projects">
+                Projects
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#skills-tools">
+                Skills And Tools
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#work">
+                Work
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                className="text-white btn-sm lead btn btn-success"
+                href="tel:+233-59-157-5606"
+              >
+                Tel: <span className="fs-4 fa fa-mobile"></span> +233 59 157
+                5606
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav  mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-success"
+                href="https://blog.abassdev.com"
+              >
+                BLOG
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <button
+                className="btn btn-primary-outline btn-sm text-white"
+                onClick={() => changeLanguage("en")}
+              >
+                {t("profile.lang.en")} US
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                className="btn btn-primary-outline btn-sm text-white"
+                onClick={() => changeLanguage("fr")}
+              >
+                {t("profile.lang.en")} FR
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }

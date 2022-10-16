@@ -15,7 +15,7 @@ export default function Project() {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 id="projets" className="mt-4 large-title text-start fw-bold">
+            <h1 id="projects" className="mt-4 large-title text-start fw-bold">
               {t("project.title")}
             </h1>
             <p className="after-title"></p>
