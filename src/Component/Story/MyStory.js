@@ -30,7 +30,7 @@ class MyStory extends Component {
         </p>
         <div className="collapse shadow" id="collapseMyStory">
           <img src={aboutImage} class="img-fluid" alt="Who is Abass Dev?" />
-          <div className="text-light bg-dark card card-body">
+          <div className="text-light bg-dark px-4 py-3">
             <h1 id="whoisabassdev">{t("profile.mystory.whoami")}</h1>
             <p>{t("profile.mystory.para1")}</p>
             <p>{t("profile.mystory.para2")}</p>
