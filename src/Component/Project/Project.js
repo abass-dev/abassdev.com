@@ -246,7 +246,7 @@ export default function Project() {
                 <p className="md-title">{t("project.dynacard.description")}</p>
                 <p>
                   {t("project.dynacard.demo")}
-                  <a href="https://abassdev.todaydevs.com/abassdev.apk">
+                  <a href="https://abassdev.com/abassdev.apk">
                     {" "}
                     abassdev.apk ( Install the app here )
                   </a>
@@ -285,7 +285,7 @@ export default function Project() {
                 </p>
                 <p className="md-title">
                   {t("project.reactnative1.description")}.{" "}
-                  <a href="https://abassdev.todaydevs.com/abassdev.apk">
+                  <a href="https://abassdev.com/abassdev.apk">
                     {" "}
                     Download the Apk
                   </a>
