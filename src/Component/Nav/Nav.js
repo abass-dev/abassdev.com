@@ -11,7 +11,7 @@ export default function Nav() {
   };
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           MENU
@@ -87,7 +87,7 @@ export default function Nav() {
                 className="btn btn-primary-outline btn-sm text-white"
                 onClick={() => changeLanguage("fr")}
               >
-                {t("profile.lang.en")} FR
+                {t("profile.lang.fr")} FR
               </button>
             </li>
           </ul>
