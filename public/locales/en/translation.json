@@ -1,8 +1,8 @@
 {
   "title": "Translate to English",
   "profile": {
-    "hello": "HELLO",
-    "sayHello": "I'M ABASS DEV",
+    "hello": "Hi there 👋",
+    "sayHello": "It's Abass Dev!",
     "introduce1": "Freelancer 🌠",
     "introduce2": "Full-Stack Developer 💻",
     "introduce3": "6+ years of experience 📆",
@@ -13,7 +13,7 @@
     },
     "about": {
       "title": "About me",
-      "description": "I'm Web, Mobile and Software developer passionate about the internet and programming for over 6 years. In my free time, I write articles on my blog and contribute to the Open-Source community. I'm the Creator of Nigatedev framework."
+      "description": "I'm a Web and Mobile App developer passionate about the internet and programming for over 6 years. In my free time, I write articles on my blog and contribute to the Open-Source community. I'm the Creator of Nigatedev framework."
     },
     "cv": "RESUME",
     "cvlink": "../../assets/pdf/abass_cv_en.pdf",

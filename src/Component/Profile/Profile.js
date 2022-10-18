@@ -67,7 +67,7 @@ export default function Profile() {
       <div className="row">
         <div className="col-12 profile-header">
           <h1 id="apropos" className="mt-4 pt-4 text-dark fw-bold">
-            <span className="text-primary">{t("profile.hello")}, </span>
+            <span className="text-primary">{t("profile.hello")} </span>
             {t("profile.sayHello")}
           </h1>
           <h2 className="text-primary">
