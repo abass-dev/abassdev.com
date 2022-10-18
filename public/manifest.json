@@ -1,6 +1,6 @@
 {
-  "short_name": "Abass",
-  "name": "Abass Dev | Full-stack développeur",
+  "short_name": "Abass Dev",
+  "name": "Abass Dev | Full-stack developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "favicon-32x32.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "favicon-32x32.png",
       "type": "image/png",
       "sizes": "512x512"
     }
