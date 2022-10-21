@@ -1,21 +1,22 @@
 import React from "react";
 import "./Footer.css";
-import { useTranslation } from "react-i18next";
 
 export default function Footer() {
-  const { t } = useTranslation();
   return (
     <div className="row bg-light pt-1">
       <div className="col-md-6 text-center">
         <h4 id="contact" className="text-primary">
-          {t("footer.thenext")}
+          What's Next?
         </h4>
-        <h2>{t("footer.letsconnect")}</h2>
-        <p>{t("footer.contactdesk")}</p>
+        <h2>Let's Connect</h2>
+        <p>
+          If you are interested in working on a project or have any questions,
+          please leave an email and I will get back to you as soon as possible.
+        </p>
       </div>
       <div className="col-md-6 text-center profile-socieal-links">
         <a href="mailto:abass@abassdev.com" className="btn border my-4">
-          {t("footer.sayhi")} 👋
+          Hi to me? 👋
         </a>
         <br />
         <a href="https://m.facebook.com/abassthedev">
@@ -41,7 +42,8 @@ export default function Footer() {
         </a>
       </div>
       <p className="copyright bg-secondary">
-        {t("footer.copyright")} <br /> Version: 2.0.1
+        Copyright © 2021 - 2022 by Abass Dev, All rights reserved. <br />{" "}
+        Version: 2.0.1
       </p>
     </div>
   );

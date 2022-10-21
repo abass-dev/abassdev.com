@@ -2,28 +2,24 @@ import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import projectCode from "../../assets/images/project-nigatedev.jpg";
 import projectTodaydevs from "../../assets/images/projet-todaydevs.jpg";
-import projectPortfolio from "../../assets/images/project-portfolio.jpg";
+import projectPortfolio from "../../assets/images/project-portfolio.png";
 import projectPHPCode from "../../assets/images/php_code.jpg";
 import projectReactNative1 from "../../assets/images/screenshot.jpg";
-import { useTranslation } from "react-i18next";
 import "./Project.css";
 
 export default function Project() {
-  const { t } = useTranslation();
   return (
     <div className="home-container">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <h1 id="projects" className="mt-4 large-title text-start fw-bold">
-              {t("project.title")}
+              NOTABLE PROJECTS
             </h1>
             <p className="after-title"></p>
           </div>
           <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">
-              {t("project.nigatedev.title")}
-            </p>
+            <p className="md-title text-secondary">NIGATEDEV FRAMEWORK</p>
             <div className="card border-gray ">
               <img
                 alt="Php code"
@@ -68,20 +64,19 @@ export default function Project() {
                     />
                   </a>
                 </p>
-                <p className="md-title">{t("project.nigatedev.description")}</p>
+                <p className="md-title">
+                  Nigatedev is a time-saving PHP framework coded by Abass Dev
+                  (Abass Ben Cheik) and contributors.
+                </p>
                 <p>
-                  <a href="https://nigatedev.herokuapp.com/">
-                    {t("project.nigatedev.demo")}
-                  </a>
+                  <a href="https://nigatedev.herokuapp.com/">List of demo</a>
                 </p>
               </div>
             </div>
           </div>
 
           <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">
-              {t("project.todaydevs.title")}
-            </p>
+            <p className="md-title text-secondary">TODAYDEVS WEBSITE</p>
             <div className="card border-gray ">
               <img
                 alt="todaydevs website"
@@ -101,14 +96,17 @@ export default function Project() {
                     <i className="fa fa-globe"></i> Visit the site
                   </a>
                 </p>
-                <p className="md-title">{t("project.todaydevs.description")}</p>
+                <p className="md-title">
+                  With TodayDevs, stay informed about new technology! We share
+                  everything about new technologies concerning web, mobile and
+                  software while trying to stay up to date with new
+                  technologies.
+                </p>
               </div>
             </div>
           </div>
           <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">
-              {t("project.formbuilder.title")}
-            </p>
+            <p className="md-title text-secondary">FORM BUILDER</p>
             <div className="card border-gray ">
               <img
                 alt="BOSP FormBuilder"
@@ -154,10 +152,12 @@ export default function Project() {
                   </a>
                 </p>
                 <p className="md-title">
-                  {t("project.formbuilder.description")}
+                  Form builder is an open-source project written in PHP and
+                  styled with bootstrap css by Abass Dev (Abass Ben Cheik) to be
+                  easily used to build html forms.
                 </p>
                 <p>
-                  {t("project.formbuilder.demo")}{" "}
+                  Live demo on
                   <a href="https://nigatedev.herokuapp.com/todo">
                     ( Todo list )
                   </a>
@@ -168,7 +168,7 @@ export default function Project() {
 
           <div className="col-md-6 mb-4">
             <p className="md-title text-secondary">
-              {t("project.portfolio.title")}
+              MY PORTFOLIO (This website)
             </p>
             <div className="card border-gray ">
               <img
@@ -204,14 +204,16 @@ export default function Project() {
                     />
                   </a>
                 </p>
-                <p className="md-title">{t("project.portfolio.description")}</p>
+                <p className="md-title">
+                  This portfolio was build using ReactJs
+                </p>
               </div>
             </div>
           </div>
 
           <div className="col-md-6 mb-4">
             <p className="md-title text-secondary">
-              {t("project.dynacard.title")}
+              DYNACARD (ReactNative library)
             </p>
             <div className="card border-gray ">
               <img alt="" className="card-img-top" src={projectCode} />
@@ -243,9 +245,13 @@ export default function Project() {
                     />
                   </a>
                 </p>
-                <p className="md-title">{t("project.dynacard.description")}</p>
+                <p className="md-title">
+                  Dynacard is an open-source ReactNative library that can help
+                  you easily create beautiful cards for your ReactNative
+                  application.
+                </p>
                 <p>
-                  {t("project.dynacard.demo")}
+                  Live demo
                   <a href="https://abassdev.com/abassdev.apk">
                     {" "}
                     abassdev.apk ( Install the app here )
@@ -257,7 +263,7 @@ export default function Project() {
 
           <div className="col-md-6 mb-1">
             <p className="md-title text-secondary">
-              {t("project.reactnative1.title")}
+              Android Application (ReactNative)
             </p>
             <div className="card border-gray ">
               <img alt="" className="card-img-top" src={projectReactNative1} />
@@ -284,7 +290,7 @@ export default function Project() {
                   </a>{" "}
                 </p>
                 <p className="md-title">
-                  {t("project.reactnative1.description")}.{" "}
+                  Convert my portfolio to Android App using ReactNative
                   <a href="https://abassdev.com/abassdev.apk">
                     {" "}
                     Download the Apk

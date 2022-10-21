@@ -1,15 +1,7 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { Link, Outlet } from "react-router-dom";
-
 import "./Nav.css";
 
 export default function Nav() {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
-
   return (
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
       <div class="container-fluid">
@@ -41,7 +33,7 @@ export default function Nav() {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/#skills-tools">
-                Skills And Tools
+                Skills & Tools
               </a>
             </li>
             <li class="nav-item">
@@ -67,23 +59,6 @@ export default function Nav() {
               >
                 BLOG
               </a>
-            </li>
-
-            <li class="nav-item">
-              <button
-                className="btn btn-primary-outline btn-sm text-white"
-                onClick={() => changeLanguage("en")}
-              >
-                {t("profile.lang.en")} US
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                className="btn btn-primary-outline btn-sm text-white"
-                onClick={() => changeLanguage("fr")}
-              >
-                {t("profile.lang.fr")} FR
-              </button>
             </li>
           </ul>
         </div>

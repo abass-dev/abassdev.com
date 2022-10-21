@@ -1,8 +1,8 @@
-import Navigation from "../Nav/Navigation";
+import Nav from "../Nav/Nav";
 const Contact = () => {
   return (
     <div className="container-lg">
-      <Navigation />
+      <Nav />
       {"TODO..."}
     </div>
   );

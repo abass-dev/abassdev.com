@@ -1,16 +1,14 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import "./Skill.css";
 import Item from "./Item";
 
 export default function Skill() {
-  const { t } = useTranslation();
   return (
     <div className="container">
       <div className="row">
         <div className="col-12">
           <h1 id="skills-tools" className="text-start large-title mt-4 fw-bold">
-            {t("skill.title")}
+            SKILLS AND TOOLS
           </h1>
           <p className="after-title"></p>
         </div>
@@ -18,7 +16,7 @@ export default function Skill() {
         <div className="col-12 mb-4 text-white">
           <div className="row">
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.frontend")}</h4>
+              <h4 className="md-title text-secondary">Front-end knowledge</h4>
               <div className="card border-gray bg-light">
                 <div className="card-body md-title">
                   <div className="row card-text">
@@ -67,7 +65,7 @@ export default function Skill() {
             </div>
 
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.backend")}</h4>
+              <h4 className="md-title text-secondary">Back-end knowledge</h4>
               <div className="card bg-light border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
@@ -107,7 +105,7 @@ export default function Skill() {
               </div>
             </div>
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.database")}</h4>
+              <h4 className="md-title text-secondary">Databases</h4>
               <div className="card bg-light border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
@@ -139,7 +137,7 @@ export default function Skill() {
               </div>
             </div>
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.tools")}</h4>
+              <h4 className="md-title text-secondary">Tools</h4>
               <div className="card bg-light border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
@@ -161,7 +159,9 @@ export default function Skill() {
             </div>
 
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.mobiles")}</h4>
+              <h4 className="md-title text-secondary">
+                Application Android & IOS
+              </h4>
               <div className="card border-gray bg-light">
                 <div className="card-body md-title">
                   <div className="row card-text">
@@ -179,7 +179,7 @@ export default function Skill() {
             </div>
 
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.software")}</h4>
+              <h4 className="md-title text-secondary">Software development</h4>
               <div className="card bg-light border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
@@ -196,7 +196,7 @@ export default function Skill() {
               </div>
             </div>
             <div className="col-md-6 mb-4">
-              <h4 className="md-title text-secondary">{t("skill.editor")}</h4>
+              <h4 className="md-title text-secondary">Editors</h4>
               <div className="card bg-light border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">

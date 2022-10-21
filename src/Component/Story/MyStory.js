@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { withTranslation } from "react-i18next";
 import "./MyStory.css";
 import aboutImage from "../../assets/images/abassdev-about.png";
 
@@ -12,7 +11,6 @@ class MyStory extends Component {
     document.querySelector(".chevron").classList.toggle("rotate-chevron");
   }
   render() {
-    const { t } = this.props;
     return (
       <div className="mt-4">
         <p>
@@ -25,16 +23,33 @@ class MyStory extends Component {
             aria-controls="collapseMyStory"
           >
             <i className="h5 chevron text-success fa fa-angle-double-down"></i>{" "}
-            {t("profile.mystory.showbtn")}
+            Read My Story 📃
           </button>
         </p>
         <div className="collapse shadow" id="collapseMyStory">
           <img src={aboutImage} class="img-fluid" alt="Who is Abass Dev?" />
           <div className="text-light bg-dark px-4 py-3">
-            <h1 id="whoisabassdev">{t("profile.mystory.whoami")}</h1>
-            <p>{t("profile.mystory.para1")}</p>
-            <p>{t("profile.mystory.para2")}</p>
-            <p>{t("profile.mystory.para3")}</p>
+            <h1 id="whoisabassdev">Who is Abass Dev?</h1>
+            <p>
+              Abass Ben Cheik or Abass Dev was born on February 02, 1995 (27
+              years old) in Niamey, Niger is a Full-Stack developer
+              (self-taught).
+            </p>
+            <p>
+              Hi started to be interested in web development at the age of 14,
+              in 2009 but did not even know where to start.
+            </p>
+            <p>
+              In 2011, he made a friend on Skyrock (social network) who asked
+              him to help with the administration of a blog created with Wix
+              that's when Abass Dev started web development, finally in 2012 he
+              decided to create his own blog on blogspot (Created by Google), at
+              the beginning it was working well. But, after only a few days, he
+              was limited by the available features that motivated him to find a
+              different solution that's when he started to learn deep web
+              development with the real languages created for web development
+              (HTML, CSS, JavaScript, PHP, SQL...).
+            </p>
           </div>
         </div>
       </div>
@@ -42,4 +57,4 @@ class MyStory extends Component {
   }
 }
 
-export default withTranslation()(MyStory);
+export default MyStory;

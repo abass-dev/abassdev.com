@@ -10,14 +10,16 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="container-lg">
-      <Nav />
-      <Profile />
-      <Project />
-      <Skill />
-      <Work />
+    <>
+      <div className="container-lg">
+        <Nav />
+        <Profile />
+        <Project />
+        <Skill />
+        <Work />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
