@@ -19,13 +19,8 @@ export default function Profile() {
           class="col-md-6 alert alert-warning alert-dismissible fade show"
           role="alert"
         >
-          <strong>Note: </strong>This website has been translated from to
-          English, which means it may be incomplete. You can also help to
-          improve the translation by cloning the repository{" "}
-          <a href="https://github.com/abass-dev/portfolio/tree/master/public/locales">
-            here.
-          </a>{" "}
-          Thanks anyway 🙏
+          <strong>Note: </strong>This website has been translated from French to
+          English and the translation may not be complete.
           <button
             onClick={handle}
             type="button"
