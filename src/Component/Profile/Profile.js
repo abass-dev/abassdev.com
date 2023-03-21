@@ -7,33 +7,6 @@ import ProfilePicture from "../../assets/images/profile-pic2.jpg";
 import { useCookies } from "react-cookie";
 
 export default function Profile() {
-  const [cookie, setCookie] = useCookies(["transalertbox"]);
-  const cookExpire = 3600 * 60;
-  const handle = () => {
-    setCookie("transalertbox", "transAlertBox", { maxAge: cookExpire });
-  };
-  const alertBox = () => {
-    if (!cookie.transalertbox) {
-      return (
-        <div
-          class="col-md-6 alert alert-warning alert-dismissible fade show"
-          role="alert"
-        >
-          <strong>Note: </strong>This website has been translated from French to
-          English and the translation may not be complete.
-          <button
-            onClick={handle}
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
-        </div>
-      );
-    } else {
-      return null;
-    }
-  };
   return (
     <div className="my-4">
       <div className="row">
@@ -57,27 +30,20 @@ export default function Profile() {
               loop={Infinity}
             />
           </h2>
-          {alertBox()}
           <div className="row py-4 m-1 align-items-center rounded shadow">
             <div className="col-md-6 my-4 py-4">
               <img
                 width="100%"
                 height="auto"
                 className="profpic"
-                alt="Abass Dev profile picture"
+                alt="Abass Dev"
                 src={ProfilePicture}
               />
             </div>
             <div className="col-md-6 text-dark">
               <h1 className="mt-4">About me</h1>
               <p className="after-title"></p>
-              <p className="lead text-start">
-                I'm a Web and Mobile App developer passionate about the internet
-                and programming for over 6 years. In my free time, I write
-                articles on my blog and contribute to the Open-Source community.
-                I'm the Creator of Nigatedev framework.
-              </p>
-
+              <p className="lead text-start">I am a passionate web and mobile app developer with over 6 years of experience in programming and the internet. In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.</p>
               <div className="row">
                 <div className="col-12 mt-2 col-md-7 text-center profile-socieal-links">
                   <a href="https://m.facebook.com/abassthedev">

@@ -20,9 +20,7 @@ export default function Work() {
                 <h2>Web development</h2>
               </p>
               <p>
-                I provide functional web services such as custom website
-                development, wordpress development, e-commerce solutions and
-                much more.
+              I specialize in providing functional web services that include custom website development, WordPress development, e-commerce solutions, and more. 
               </p>
             </div>
           </div>
@@ -34,10 +32,7 @@ export default function Work() {
                 <span className="work-icon text-warning fa fa-line-chart"></span>{" "}
                 <h2>SEO and security</h2>
               </p>
-              <p>
-                I offer excellent solutions in software security and SEO
-                practices that will increase the quantity and quality of traffic
-                to your website.
+              <p>I offer top-notch solutions in both software security and SEO practices that can help boost the quantity and quality of traffic to your website.
               </p>
             </div>
           </div>
@@ -50,9 +45,7 @@ export default function Work() {
                 <h2>Web Design</h2>
               </p>
               <p>
-                I design stunning, intuitive websites that represent your brand
-                and corporate identity through exceptional UI/UX design.
-              </p>
+              My web design services include creating stunning, intuitive websites that effectively represent your brand and corporate identity through exceptional UI/UX design.</p>
             </div>
           </div>
         </div>

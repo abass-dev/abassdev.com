@@ -19,7 +19,7 @@ export default function Project() {
             <p className="after-title"></p>
           </div>
           <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">NIGATEDEV FRAMEWORK</p>
+            <p className="md-title text-secondary">NigaPHP FRAMEWORK</p>
             <div className="card border-gray ">
               <img
                 alt="Php code"
@@ -65,8 +65,7 @@ export default function Project() {
                   </a>
                 </p>
                 <p className="md-title">
-                  Nigatedev is a time-saving PHP framework coded by Abass Dev
-                  (Abass Ben Cheik) and contributors.
+                  NigaPHP is a time-saving PHP framework coded by Abass Dev and contributors.
                 </p>
                 <p>
                   <a href="https://nigatedev.herokuapp.com/">List of demo</a>
@@ -153,8 +152,8 @@ export default function Project() {
                 </p>
                 <p className="md-title">
                   Form builder is an open-source project written in PHP and
-                  styled with bootstrap css by Abass Dev (Abass Ben Cheik) to be
-                  easily used to build html forms.
+                  styled with bootstrap css by Abass Dev to be
+                  easily used for build html forms.
                 </p>
                 <p>
                   Live demo on
@@ -168,7 +167,7 @@ export default function Project() {
 
           <div className="col-md-6 mb-4">
             <p className="md-title text-secondary">
-              MY PORTFOLIO (This website)
+              MY PORTFOLIO (Website)
             </p>
             <div className="card border-gray ">
               <img
@@ -213,7 +212,7 @@ export default function Project() {
 
           <div className="col-md-6 mb-4">
             <p className="md-title text-secondary">
-              DYNACARD (ReactNative library)
+              DYNACARD (React Native library)
             </p>
             <div className="card border-gray ">
               <img alt="" className="card-img-top" src={projectCode} />
@@ -247,7 +246,7 @@ export default function Project() {
                 </p>
                 <p className="md-title">
                   Dynacard is an open-source ReactNative library that can help
-                  you easily create beautiful cards for your ReactNative
+                  you easily create beautiful cards for your React Native
                   application.
                 </p>
                 <p>
@@ -263,7 +262,7 @@ export default function Project() {
 
           <div className="col-md-6 mb-1">
             <p className="md-title text-secondary">
-              Android Application (ReactNative)
+              Android Application
             </p>
             <div className="card border-gray ">
               <img alt="" className="card-img-top" src={projectReactNative1} />
@@ -290,7 +289,7 @@ export default function Project() {
                   </a>{" "}
                 </p>
                 <p className="md-title">
-                  Convert my portfolio to Android App using ReactNative
+                  Convert my portfolio to an Android App using React Native {' '}
                   <a href="https://abassdev.com/abassdev.apk">
                     {" "}
                     Download the Apk

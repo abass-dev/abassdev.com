@@ -38,16 +38,15 @@ export default function Nav() {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/#work">
-                Work
+                Works
               </a>
             </li>
             <li class="nav-item">
               <a
                 className="text-white btn-sm lead btn btn-success"
-                href="tel:+233-59-157-5606"
+                href="tel:+233598208469"
               >
-                Tel: <span className="fs-4 fa fa-mobile"></span> +233 59 157
-                5606
+                Tel: <span className="fs-4 fa fa-mobile"></span> +233 59 820 8469
               </a>
             </li>
           </ul>
