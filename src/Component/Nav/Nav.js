@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+import TagManager from 'react-gtm-module'
 
 export default function Nav() {
   return (
@@ -22,27 +23,28 @@ export default function Nav() {
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/#apropos">
+              <a onClick={() => TagManager.dataLayer({"aboutSection": "Scrolling to about page"})} class="nav-link active" aria-current="page" href="/#apropos">
                 About
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#projects">
+              <a onClick={() => TagManager.dataLayer({"projectsSection": "Scrolling to projects page"})}class="nav-link" href="/#projects">
                 Projects
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#skills-tools">
+              <a onClick={() => TagManager.dataLayer({"skillsToolsSection": "Scrolling to Skills and Tools page"})} class="nav-link" href="/#skills-tools">
                 Skills & Tools
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#work">
+              <a onClick={() => TagManager.dataLayer({"worksSection": "Scrolling to Works page"})} class="nav-link" href="/#work">
                 Works
               </a>
             </li>
             <li class="nav-item">
               <a
+               onClick={() => TagManager.dataLayer({"contactMeNumber": "Click on contact me number"})}
                 className="text-white btn-sm lead btn btn-success"
                 href="tel:+233598208469"
               >
@@ -53,6 +55,7 @@ export default function Nav() {
           <ul class="navbar-nav  mb-2 mb-lg-0">
             <li class="nav-item">
               <a
+              onClick={() => TagManager.dataLayer({"blogLink": "Click on the blog link"})}
                 class="nav-link btn btn-outline-success"
                 href="https://blog.abassdev.com"
               >

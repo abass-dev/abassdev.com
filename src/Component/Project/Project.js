@@ -3,6 +3,7 @@ import "font-awesome/css/font-awesome.min.css";
 import projectCode from "../../assets/images/project-nigatedev.jpg";
 import projectTodaydevs from "../../assets/images/projet-todaydevs.jpg";
 import projectPortfolio from "../../assets/images/project-portfolio.png";
+import projectSocialContributionApp from "../../assets/images/social_contribution_app.jpg";
 import projectPHPCode from "../../assets/images/php_code.jpg";
 import projectReactNative1 from "../../assets/images/screenshot.jpg";
 import "./Project.css";
@@ -104,6 +105,29 @@ export default function Project() {
               </div>
             </div>
           </div>
+
+          <div className="col-md-6 mb-4">
+            <p className="md-title text-secondary">SOCIAL CONTRIBUTION APP</p>
+            <div className="card border-gray ">
+              <img
+                alt="Social contribution app"
+                className="card-img-top"
+                src={projectSocialContributionApp}
+              />
+              <div className="card-body bg-light">
+                <p>
+                  <i className="fw-bold fa fa-code"></i>
+                  <span className="fw-lighter"> React Native</span>
+                </p>
+                <p>
+                </p>
+                <p className="md-title">
+                  Source: private 
+                </p>
+              </div>
+            </div>
+          </div>
+          
           <div className="col-md-6 mb-4">
             <p className="md-title text-secondary">FORM BUILDER</p>
             <div className="card border-gray ">
