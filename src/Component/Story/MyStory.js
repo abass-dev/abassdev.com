@@ -44,7 +44,9 @@ class MyStory extends Component {
             Read My Story 📃
           </button>
         <div className="shadow" id="collapseMyStory">
+         <div className='image-bg'>
           <img src={aboutImage} className="img-fluid story-img" alt="Who is Abass Dev?" />
+         </div>
           <div className="text-light bg-dark px-4 py-3">
             <h1 id="whoisabassdev">Who is Abass Dev?</h1>
             <p>

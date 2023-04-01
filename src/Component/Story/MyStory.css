@@ -8,7 +8,9 @@
   position: relative;
 }
 
-.story-img {
-  overflow: hidden;
-  transition: transform .5s ease;
+.image-bg {
+  background-image: url('../../assets/images/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
