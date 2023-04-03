@@ -26,7 +26,7 @@ class MyStory extends Component {
   const diffMonths = Math.floor((diffDays - (diffYears * 365)) / 30);
   const diffDaysRemaining = diffDays - (diffYears * 365) - (diffMonths * 30);
 
-  const formattedDiff = `${diffYears} years, ${diffMonths} months, and ${diffDaysRemaining} days old.`;
+  const formattedDiff = `${diffYears} years, ${diffMonths} months, and ${diffDaysRemaining} days old today.`;
 
   return formattedDiff;
 }

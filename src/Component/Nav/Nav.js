@@ -8,7 +8,7 @@ export default function Nav() {
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
-          <img alt='Abass Dev Logo' style={{borderRadius: 100}} width='35px' height='35px' src={ProfilePicture}/>
+          <img alt='Abass Dev Logo' style={{borderRadius: '100%', border: '1px solid red'}} width='35px' height='35px' src={ProfilePicture}/>
         </a>
         <button
           class="navbar-toggler"
