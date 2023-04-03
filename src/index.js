@@ -32,7 +32,7 @@ ReactDOM.render(
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="mystory" element={<MyStory pathName={pathName} />} />
+            <Route path="/mystory" element={<MyStory pathName={pathName} />} />
           </Routes>
         </BrowserRouter>
       </Suspense>
