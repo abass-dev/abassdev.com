@@ -1,16 +1,24 @@
-.rotate-chevron {
-  transform: rotate(180deg);
+.rotate {
+  transform: rotate(-90deg);
   transition: .5s;
 }
-
+.chevron {
+  transition: .5s;
+}
 .showbtn {
   z-index: 10;
   position: relative;
 }
-
+.mystory {
+  transition: .5s;
+}
 .image-bg {
   background-image: url('../../assets/images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+}
+
+.hide {
+  display: none;
 }

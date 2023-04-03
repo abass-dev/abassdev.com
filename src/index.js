@@ -10,10 +10,16 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { CookiesProvider } from "react-cookie";
 import Contact from "../src/Component/Contact/Contact";
+import MyStory from "../src/Component/Story/MyStory";
+import Nav from "./Component/Nav/Nav";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
+
+const pathName = window.location.pathname 
+
 ReactDOM.render(
   <React.StrictMode>
+  <Nav />
     <CookiesProvider>
       <Suspense
         fallback={
@@ -26,7 +32,7 @@ ReactDOM.render(
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="mystory" element={<MyStory pathName={pathName} />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

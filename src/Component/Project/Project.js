@@ -76,37 +76,6 @@ export default function Project() {
           </div>
 
           <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">TODAYDEVS WEBSITE</p>
-            <div className="card border-gray ">
-              <img
-                alt="todaydevs website"
-                className="card-img-top"
-                src={projectTodaydevs}
-              />
-              <div className="card-body bg-light">
-                <p>
-                  <i className="fw-bold fa fa-code"></i>
-                  <span className="fw-lighter"> WordPress</span>
-                </p>
-                <p>
-                  <a
-                    href="https://todaydevs.com"
-                    class="btn mt-2 bg-light text-dark  text-primary btn-primary btn-sm"
-                  >
-                    <i className="fa fa-globe"></i> Visit the site
-                  </a>
-                </p>
-                <p className="md-title">
-                  With TodayDevs, stay informed about new technology! We share
-                  everything about new technologies concerning web, mobile and
-                  software while trying to stay up to date with new
-                  technologies.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-6 mb-4">
             <p className="md-title text-secondary">SOCIAL CONTRIBUTION APP</p>
             <div className="card border-gray ">
               <img

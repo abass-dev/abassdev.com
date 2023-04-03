@@ -12,6 +12,7 @@
 
 .profpic {
   border-radius: 100% !important;
+  box-shadow: 0 4px 8px #00000090;
 }
 
 .profile-socieal-links a {

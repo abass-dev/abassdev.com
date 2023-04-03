@@ -2,8 +2,7 @@ import Nav from "../Nav/Nav";
 const Contact = () => {
   return (
     <div className="container-lg">
-      <Nav />
-      {"TODO..."}
+      <p style={{marginTop: 75}}>TODO...</p>
     </div>
   );
 };

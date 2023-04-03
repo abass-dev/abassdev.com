@@ -1,6 +1,6 @@
 import Home from "./Component/Home/Home";
 import TagManager from "react-gtm-module";
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const tagManagerArgs = {
   gtmId: "G-N8ZTB9NPSP",

@@ -4,7 +4,6 @@ import Typical from "react-typical";
 import "font-awesome/css/font-awesome.min.css";
 import MyStory from "../Story/MyStory";
 import ProfilePicture from "../../assets/images/profile-pic2.jpg";
-import { useCookies } from "react-cookie";
 
 export default function Profile() {
   return (
@@ -31,7 +30,7 @@ export default function Profile() {
             />
           </h2>
           <div className="row py-4 m-1 align-items-center rounded shadow">
-            <div className="col-md-6 my-4 py-4">
+            <div className="col-md-5 my-4 py-4">
               <img
                 width="100%"
                 height="auto"
@@ -40,10 +39,10 @@ export default function Profile() {
                 src={ProfilePicture}
               />
             </div>
-            <div className="col-md-6 text-dark">
+            <div className="col-md-7 text-dark">
               <h1 className="mt-4">About me</h1>
               <p className="after-title"></p>
-              <p className="lead text-start">I am a passionate web and mobile app developer with over 6 years of experience in programming and the internet. In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.</p>
+              <p className="lead text-start">A passionate web and mobile app developer with over 6 years of experience in programming and the internet. In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.</p>
               <div className="row">
                 <div className="col-12 mt-2 col-md-7 text-center profile-socieal-links">
                   <a href="https://m.facebook.com/abassthedev">
