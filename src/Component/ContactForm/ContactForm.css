@@ -1,0 +1,43 @@
+.my-container {
+  display: flex;;
+  width: 100%;
+  min-height: 200px;
+  justify-content:center;
+}
+.form-bg {
+}
+.contact-form {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  flex-direction: column;
+}
+.contact-form-input:hover {
+  border: none;
+}
+.contact-form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+input, textarea {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #00000080;
+  min-width: 300px;
+  outline: none !important;
+  min-height: 40px;
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 18px !important;
+}
+
+label {
+  text-align: left;
+  opacity: 0.8;
+}
+.form-submit-button {
+  border: none;
+  opacity: 0.8;
+  min-height:50px;
+}

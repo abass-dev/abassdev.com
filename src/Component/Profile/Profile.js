@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState, useEffect, useRef }from "react";
 import "./Profile.css";
 import Typical from "react-typical";
 import "font-awesome/css/font-awesome.min.css";
 import MyStory from "../Story/MyStory";
 import ProfilePicture from "../../assets/images/profile-pic2.jpg";
-
+import { SlideAnim } from '../Util/Util'
 export default function Profile() {
+  const profileRef = useRef(null)
+  SlideAnim(profileRef, "#profileRefId")
+  
   return (
     <div className="my-4">
       <div className="row">
-        <div className="col-12 profile-header">
-          <h1 id="apropos" className="mt-4 pt-4 text-dark fw-bold">
-            <span className="text-primary">Hi there 👋</span>
+       <div className="col-12">
+          <h1 id="apropos" className="profile-title mt-4 pt-4 primary-font fw-bold">
+            <span className="primary-text">Hi there, 👋 </span>
             It's Abass Dev!
           </h1>
-          <h2 className="text-primary">
+          <h2 className="profile-title primary-text primary-font">
             <Typical
               steps={[
                 "Freelancer 🌠",
@@ -29,22 +32,21 @@ export default function Profile() {
               loop={Infinity}
             />
           </h2>
-          <div className="row py-4 m-1 align-items-center rounded shadow">
-            <div className="col-md-5 my-4 py-4">
+          <div id='main' ref={profileRef} className="row py-4 m-1 bg-white align-items-center rounded shadow">
+            <div id='profileRefId' className="col-md-4 my-4 py-4">
               <img
                 width="100%"
                 height="auto"
-                className="profpic"
+                className="img-fluid  profpic"
                 alt="Abass Dev"
                 src={ProfilePicture}
               />
             </div>
-            <div className="col-md-7 text-dark">
-              <h1 className="mt-4">About me</h1>
+            <div id='profileRefId' className="col-md-8 text-dark">
+              <h1 className="mt-4 primary-font primary-text">About me</h1>
               <p className="after-title"></p>
               <p className="lead text-start">A passionate web and mobile app developer with over 6 years of experience in programming and the internet. In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.</p>
-              <div className="row">
-                <div className="col-12 mt-2 col-md-7 text-center profile-socieal-links">
+              <div className="col-12 mt-2 text-center profile-socieal-links">
                   <a href="https://m.facebook.com/abassthedev">
                     <i className="fa fa-facebook"></i>
                   </a>
@@ -78,7 +80,6 @@ export default function Profile() {
                 </div>
               </div>
             </div>
-          </div>
           <MyStory />
         </div>
       </div>

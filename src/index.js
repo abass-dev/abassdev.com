@@ -9,11 +9,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { CookiesProvider } from "react-cookie";
-import Contact from "../src/Component/Contact/Contact";
 import MyStory from "../src/Component/Story/MyStory";
+import NotFound from "../src/Component/NotFound/NotFound";
 import Nav from "./Component/Nav/Nav";
 import reportWebVitals from "./reportWebVitals";
+import TagManager from "react-gtm-module";
 import "./index.css";
+
+const tagManagerArgs = {
+  gtmId: "G-N8ZTB9NPSP",
+};
+
+TagManager.initialize(tagManagerArgs);
 
 const pathName = window.location.pathname 
 
@@ -33,6 +40,7 @@ ReactDOM.render(
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/mystory" element={<MyStory pathName={pathName} />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

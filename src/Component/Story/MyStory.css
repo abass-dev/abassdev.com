@@ -12,11 +12,13 @@
 .mystory {
   transition: .5s;
 }
+
 .image-bg {
   background-image: url('../../assets/images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  background-color: #fff;
 }
 
 .hide {

@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import projectCode from "../../assets/images/project-nigatedev.jpg";
-import projectTodaydevs from "../../assets/images/projet-todaydevs.jpg";
 import projectPortfolio from "../../assets/images/project-portfolio.png";
 import projectSocialContributionApp from "../../assets/images/social_contribution_app.jpg";
 import projectPHPCode from "../../assets/images/php_code.jpg";
 import projectReactNative1 from "../../assets/images/screenshot.jpg";
+import { SingleSlideAnim } from '../Util/Util'
 import "./Project.css";
 
 export default function Project() {
+  const nigaPHPRef = useRef(null)
+  const portfolioRef = useRef(null)
+  const formBuilderRef = useRef(null)
+  const dinacardRef = useRef(null)
+  
+  SingleSlideAnim(nigaPHPRef, '.projetRefId')
+  SingleSlideAnim(portfolioRef, '.projetRefId')
+  SingleSlideAnim(formBuilderRef, '.projetRefId')
+  SingleSlideAnim(dinacardRef, '.projetRefId')
   return (
     <div className="home-container">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 id="projects" className="mt-4 large-title text-start fw-bold">
+            <h1 id="projects" className="mt-4 primary-text primary-font text-start fw-bold">
               NOTABLE PROJECTS
             </h1>
             <p className="after-title"></p>
           </div>
-          <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">NigaPHP FRAMEWORK</p>
-            <div className="card border-gray ">
+          <div ref={nigaPHPRef} className="col-md-6 mb-4">
+            <h2 className="md-title h4 text-secondary">NigaPHP FRAMEWORK</h2>
+            <div className="projetRefId card border-0 shadow single-slide-in-scale">
               <img
                 alt="Php code"
                 className="card-img-top"
                 src={projectPHPCode}
               />
-              <div className="card-body bg-light border-gray">
+              <div className="card-body text-secondary">
                 <i className="fw-bold fa fa-code"></i>{" "}
                 <span className="fw-lighter">
                   PHP, JavaScript, Sass, Shell, Twig
@@ -54,58 +63,81 @@ export default function Project() {
                     title="license"
                   >
                     <img
-                      alt="Nigatedev Framework License"
+                      alt="NigaPHP Framework License"
                       src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"
                     />
                   </a>{" "}
                   <a href="https://github.com/nigatedev/nigatedev/issues">
                     <img
-                      alt="Report Nigatedev Framework Issues"
+                      alt="Report NigaPHP Framework Issues"
                       src="https://img.shields.io/github/issues/nigatedev/nigatedev?color=0088ff"
                     />
                   </a>
                 </p>
                 <p className="md-title">
-                  NigaPHP is a time-saving PHP framework coded by Abass Dev and contributors.
+                NigaPHP is a lightweight PHP web application framework designed to simplify and speed up the development process for PHP developers. It was initially created by Abass Dev and has since been maintained and contributed to by a community of developers. With its user-friendly interface and powerful features, NigaPHP has become a popular choice for building scalable and secure web applications. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div ref={portfolioRef} className="col-md-6 mb-4">
+            <h2 className="md-title h4 text-secondary">
+              MY PORTFOLIO (Website)
+            </h2>
+            <div  className="projetRefId card border-0 shadow single-slide-in-scale">
+              <img
+                alt="Abass Dev portfolio code source (Gitbub)"
+                className="card-img-top"
+                src={projectPortfolio}
+              />
+              <div className="card-body text-secondary">
+                <p>
+                  <i className="fw-bold fa fa-code"></i>
+                  <span className="fw-lighter"> React, NodeJs, Express</span>
                 </p>
                 <p>
-                  <a href="https://nigatedev.herokuapp.com/">List of demo</a>
+                  <a
+                    href="https://github.com/abass-dev/portfolio"
+                    class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "
+                  >
+                    <i className="fa fa-github"></i> Code
+                  </a>{" "}
+                  <a
+                    href="https://github.com/abass-dev/portfolio/blob/master/LICENSE"
+                    title="license"
+                  >
+                    <img
+                      alt=""
+                      src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"
+                    />
+                  </a>{" "}
+                  <a href="https://github.com/abass-dev/portfolio/issues">
+                    <img
+                      alt="Issues"
+                      src="https://img.shields.io/github/issues/abass-dev/portfolio?color=0088ff"
+                    />
+                  </a>
                 </p>
+                <p className="md-title">
+                  This portfolio was build using ReactJs.
+                </p>
+                 <p>
+                  By using ReactJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. ReactJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques.
+                 </p>
+                 <a href='https://react.dev/'>Learn more about ReactJs...</a>
               </div>
             </div>
           </div>
 
-          <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">SOCIAL CONTRIBUTION APP</p>
-            <div className="card border-gray ">
-              <img
-                alt="Social contribution app"
-                className="card-img-top"
-                src={projectSocialContributionApp}
-              />
-              <div className="card-body bg-light">
-                <p>
-                  <i className="fw-bold fa fa-code"></i>
-                  <span className="fw-lighter"> React Native</span>
-                </p>
-                <p>
-                </p>
-                <p className="md-title">
-                  Source: private 
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">FORM BUILDER</p>
-            <div className="card border-gray ">
+          <div ref={formBuilderRef} className="col-md-6 mb-4">
+            <h2 className="md-title h4 text-secondary">FORM BUILDER</h2>
+            <div className="projetRefId single-slide-in-scale card border-0 shadow">
               <img
                 alt="BOSP FormBuilder"
                 className="card-img-top"
                 src={projectCode}
               />
-              <div className="card-body bg-light">
+              <div className="card-body text-secondary">
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> PHP, HTML, Bootstrap</span>
@@ -158,58 +190,13 @@ export default function Project() {
             </div>
           </div>
 
-          <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">
-              MY PORTFOLIO (Website)
-            </p>
-            <div className="card border-gray ">
-              <img
-                alt="Abass Dev portfolio code source (Gitbub)"
-                className="card-img-top"
-                src={projectPortfolio}
-              />
-              <div className="card-body bg-light text-dark  text-light">
-                <p>
-                  <i className="fw-bold fa fa-code"></i>
-                  <span className="fw-lighter"> React, NodeJs, Express</span>
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/abass-dev/portfolio"
-                    class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "
-                  >
-                    <i className="fa fa-github"></i> Code
-                  </a>{" "}
-                  <a
-                    href="https://github.com/abass-dev/portfolio/blob/master/LICENSE"
-                    title="license"
-                  >
-                    <img
-                      alt=""
-                      src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"
-                    />
-                  </a>{" "}
-                  <a href="https://github.com/abass-dev/portfolio/issues">
-                    <img
-                      alt="Issues"
-                      src="https://img.shields.io/github/issues/abass-dev/portfolio?color=0088ff"
-                    />
-                  </a>
-                </p>
-                <p className="md-title">
-                  This portfolio was build using ReactJs
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-6 mb-4">
-            <p className="md-title text-secondary">
-              DYNACARD (React Native library)
-            </p>
-            <div className="card border-gray ">
+          <div ref={dinacardRef} className="col-md-6 mb-4">
+            <h2 className="md-title h4 text-secondary">
+              DYNACARD
+            </h2>
+            <div className="projetRefId single-slide-in-scale card border-0 shadow">
               <img alt="" className="card-img-top" src={projectCode} />
-              <div className="card-body bg-light text-dark  text-light">
+              <div className="card-body text-secondary">
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> JavaScript</span>
@@ -253,13 +240,35 @@ export default function Project() {
             </div>
           </div>
 
+          <div className="col-md-6 mb-4">
+            <h2 className="md-title h4 text-secondary">SOCIAL CONTRIBUTION APP</h2>
+            <div className="card border-0 shadow">
+              <img
+                alt="Social contribution app"
+                className="card-img-top"
+                src={projectSocialContributionApp}
+              />
+              <div className="card-body text-secondary">
+                <p>
+                  <i className="fw-bold fa fa-code"></i>
+                  <span className="fw-lighter"> React Native</span>
+                </p>
+                <p>
+                </p>
+                <p className="md-title">
+                  Source: private repository
+                </p>
+              </div>
+            </div>
+          </div>
+          
           <div className="col-md-6 mb-1">
-            <p className="md-title text-secondary">
+            <h2 className="md-title h4 text-secondary">
               Android Application
-            </p>
-            <div className="card border-gray ">
+            </h2>
+            <div className="card border-0 shadow">
               <img alt="" className="card-img-top" src={projectReactNative1} />
-              <div className="card-body text-dark bg-light">
+              <div className="card-body text-secondary">
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> ReactNative</span>
@@ -291,7 +300,6 @@ export default function Project() {
               </div>
             </div>
           </div>
-          <div className="col border-bottom border-2"></div>
         </div>
       </div>
     </div>

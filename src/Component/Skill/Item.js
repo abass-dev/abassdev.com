@@ -33,7 +33,7 @@ const Item = (props) => {
       <div className="row skill-card-focus">
 
         <div className="col">
-          <i class={icon + " colored"}></i>
+          <i class={icon}></i>
           {" "}
           <span>{title}</span>
         </div>

@@ -7,7 +7,7 @@ export default function Skill() {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <h1 id="skills-tools" className="text-start large-title mt-4 fw-bold">
+          <h1 id="skills-tools" className="text-start primary-font primary-text mt-4 fw-bold">
             SKILLS AND TOOLS
           </h1>
           <p className="after-title"></p>
@@ -17,7 +17,7 @@ export default function Skill() {
           <div className="row">
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Front-end knowledge</h4>
-              <div className="card border-gray bg-light">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <Item
@@ -66,7 +66,7 @@ export default function Skill() {
 
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Back-end knowledge</h4>
-              <div className="card bg-light border-gray">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <Item
@@ -106,7 +106,7 @@ export default function Skill() {
             </div>
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Databases</h4>
-              <div className="card bg-light border-gray">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <Item
@@ -138,19 +138,23 @@ export default function Skill() {
             </div>
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Tools</h4>
-              <div className="card bg-light border-gray">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <div className="col-12 skill-card-text card-text">
-                      <i class="devicon-git-plain colored"></i>
+                      <i class="devicon-git-plain"></i>
                       <span> Git</span>
                     </div>
+                    <div className="col-12 skill-card-text card-text">
+                      <i class="devicon-docker-plain"></i>
+                      <span> Docker</span>
+                    </div>
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-heroku-plain colored"></i>
+                      <i class="devicon-heroku-plain"></i>
                       <span> Heroku</span>
                     </div>
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-github-original colored"></i>
+                      <i class="devicon-github-original"></i>
                       <span> Github</span>
                     </div>
                   </div>
@@ -162,15 +166,15 @@ export default function Skill() {
               <h4 className="md-title text-secondary">
                 Application Android & IOS
               </h4>
-              <div className="card border-gray bg-light">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <div className="col-12 skill-card-text card-text">
-                      <i class="devicon-java-plain colored"></i>
+                      <i class="devicon-java-plain"></i>
                       <span> Java</span>
                     </div>
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-react-plain colored"></i>
+                      <i class="devicon-react-plain"></i>
                       <span> React Native</span>
                     </div>
                   </div>
@@ -180,15 +184,15 @@ export default function Skill() {
 
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Software development</h4>
-              <div className="card bg-light border-gray">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-python-plain colored"></i>
+                      <i class="devicon-python-plain"></i>
                       <span> Python</span>
                     </div>
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-java-plain colored"></i>
+                      <i class="devicon-java-plain"></i>
                       <span> Java</span>
                     </div>
                   </div>
@@ -197,16 +201,20 @@ export default function Skill() {
             </div>
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Editors</h4>
-              <div className="card bg-light border-gray">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-vscode-plain colored"></i>
+                      <i class="devicon-vscode-plain"></i>
                       <span> VsCode</span>
                     </div>
                     <div className="col-12 skill-card-text">
-                      <i class="devicon-androidstudio-plain colored"></i>
+                      <i class="devicon-androidstudio-plain"></i>
                       <span> Android Studio</span>
+                    </div>
+                    <div className="col-12 skill-card-text">
+                      <i class="devicon-firefox-plain"></i>
+                      <span> Firefox</span>
                     </div>
                   </div>
                 </div>
@@ -214,7 +222,7 @@ export default function Skill() {
             </div>
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Spoken languages</h4>
-              <div className="card bg-light border-gray">
+              <div className="card border-gray">
                 <div className="card-body md-title">
                   <div className="row card-text">
                     <div className="col-12 skill-card-text">
