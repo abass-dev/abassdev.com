@@ -34,7 +34,7 @@ const appVersion = packageJson.version;
         <a href="https://www.pinterest.com/abassdev">
           <i className="fa fa-pinterest"></i>
         </a>
-        <a href="mailto:abass@abassdev.com">
+        <a href="/contact">
           <i className="fa fa-envelope"></i>
         </a>
       </div>

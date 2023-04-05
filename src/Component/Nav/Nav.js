@@ -29,7 +29,7 @@ export default function Nav() {
               </a>
             </li>
             <li className="nav-item">
-              <a onClick={() => TagManager.dataLayer({"myStorySection": "Scrolling to my story page"})} className="nav-link" aria-current="page" href="/#myStory">
+              <a onClick={() => TagManager.dataLayer({"myStorySection": "Scrolling to my story page"})} className="nav-link" aria-current="page" href="/myStory">
                 My Story
               </a>
             </li>
@@ -49,7 +49,7 @@ export default function Nav() {
               </a>
             </li>
             <li className="nav-item">
-              <a onClick={() => TagManager.dataLayer({"contactSection": "Scrolling to contact page"})} className="nav-link" href="/#contact">
+              <a onClick={() => TagManager.dataLayer({"contactSection": "Scrolling to contact page"})} className="nav-link" href="/contact">
                 Contact
               </a>
             </li>
@@ -72,6 +72,11 @@ export default function Nav() {
             <li className="nav-item">
                   <a className='nav-link' href="https://github.com/abass-dev">
                     <i style={{fontSize: 24}} className="fa fa-github"></i>
+                  </a> 
+            </li>
+            <li className="nav-item">
+                  <a className='nav-link' href="/contact">
+                    <i style={{fontSize: 24}} className="fa fa-envelope"></i>
                   </a> 
             </li>
           </ul>

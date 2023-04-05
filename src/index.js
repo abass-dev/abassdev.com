@@ -10,6 +10,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { CookiesProvider } from "react-cookie";
 import MyStory from "../src/Component/Story/MyStory";
+import Contact from "../src/Component/Contact";
 import NotFound from "../src/Component/NotFound/NotFound";
 import Nav from "./Component/Nav/Nav";
 import reportWebVitals from "./reportWebVitals";
@@ -40,6 +41,7 @@ ReactDOM.render(
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/mystory" element={<MyStory pathName={pathName} />} />
+            <Route path="/contact" element={<Contact pathName={pathName} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

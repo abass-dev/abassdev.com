@@ -52,6 +52,9 @@ setLoading(true)
  emailjs.send('service_jebasxm','template_us13arq', templateParams, '9QHGoEPmDaBELUbZn')
 	.then((response) => {
 	   notyf.success('Message sent!');
+	   userInput.name = ''
+	   userInput.email = ''
+	   userInput.message = ''
 	   setLoading(false)
 	}, (err) => {
 	   notyf.error('FAILED...' + err);
