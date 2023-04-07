@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef }from "react";
+import React, { useRef }from "react";
 import "./Profile.css";
 import Typical from "react-typical";
 import "font-awesome/css/font-awesome.min.css";
-import MyStory from "../Story/MyStory";
+import { MyStory } from "../";
 import ProfilePicture from "../../assets/images/profile-pic2.jpg";
 import { SlideAnim } from '../Util/Util'
 export default function Profile() {

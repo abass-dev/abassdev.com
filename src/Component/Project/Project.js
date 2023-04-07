@@ -13,11 +13,16 @@ export default function Project() {
   const portfolioRef = useRef(null)
   const formBuilderRef = useRef(null)
   const dinacardRef = useRef(null)
+  const socialAppRef = useRef(null)
+  const portfolioApkRef = useRef(null)
   
   SingleSlideAnim(nigaPHPRef, '.projetRefId')
   SingleSlideAnim(portfolioRef, '.projetRefId')
   SingleSlideAnim(formBuilderRef, '.projetRefId')
   SingleSlideAnim(dinacardRef, '.projetRefId')
+  SingleSlideAnim(socialAppRef, '.projetRefId')
+  SingleSlideAnim(portfolioApkRef , '.projetRefId')
+  
   return (
     <div className="home-container">
       <div className="container">
@@ -30,7 +35,7 @@ export default function Project() {
           </div>
           <div ref={nigaPHPRef} className="col-md-6 mb-4">
             <h2 className="md-title h4 text-secondary">NigaPHP FRAMEWORK</h2>
-            <div className="projetRefId card border-0 shadow single-slide-in-scale">
+            <div className="projetRefId card border-0 shadow slide-first">
               <img
                 alt="Php code"
                 className="card-img-top"
@@ -84,7 +89,7 @@ export default function Project() {
             <h2 className="md-title h4 text-secondary">
               MY PORTFOLIO (Website)
             </h2>
-            <div  className="projetRefId card border-0 shadow single-slide-in-scale">
+            <div  className="projetRefId card border-0 shadow slide-second">
               <img
                 alt="Abass Dev portfolio code source (Gitbub)"
                 className="card-img-top"
@@ -131,7 +136,7 @@ export default function Project() {
 
           <div ref={formBuilderRef} className="col-md-6 mb-4">
             <h2 className="md-title h4 text-secondary">FORM BUILDER</h2>
-            <div className="projetRefId single-slide-in-scale card border-0 shadow">
+            <div className="projetRefId slide-first card border-0 shadow">
               <img
                 alt="BOSP FormBuilder"
                 className="card-img-top"
@@ -176,12 +181,10 @@ export default function Project() {
                   </a>
                 </p>
                 <p className="md-title">
-                  Form builder is an open-source project written in PHP and
-                  styled with bootstrap css by Abass Dev to be
-                  easily used for build html forms.
+                Looking for a user-friendly solution for building HTML forms? Check out Form Builder, an open-source project created by Abass Dev. The project is built with PHP and styled using Bootstrap CSS, making it simple to create custom forms with ease.
                 </p>
                 <p>
-                  Live demo on
+                  Live demo on {" "}
                   <a href="https://nigatedev.herokuapp.com/todo">
                     ( Todo list )
                   </a>
@@ -194,7 +197,7 @@ export default function Project() {
             <h2 className="md-title h4 text-secondary">
               DYNACARD
             </h2>
-            <div className="projetRefId single-slide-in-scale card border-0 shadow">
+            <div className="projetRefId slide-second card border-0 shadow">
               <img alt="" className="card-img-top" src={projectCode} />
               <div className="card-body text-secondary">
                 <p>
@@ -225,10 +228,8 @@ export default function Project() {
                   </a>
                 </p>
                 <p className="md-title">
-                  Dynacard is an open-source ReactNative library that can help
-                  you easily create beautiful cards for your React Native
-                  application.
-                </p>
+               Dynacard is a React Native library that enables developers to effortlessly design visually stunning cards for their applications. This open-source library provides a flexible and customizable platform for creating beautiful cards within your React Native project.
+               </p>
                 <p>
                   Live demo
                   <a href="https://abassdev.com/abassdev.apk">
@@ -240,9 +241,9 @@ export default function Project() {
             </div>
           </div>
 
-          <div className="col-md-6 mb-4">
+          <div ref={socialAppRef} className="col-md-6 mb-4">
             <h2 className="md-title h4 text-secondary">SOCIAL CONTRIBUTION APP</h2>
-            <div className="card border-0 shadow">
+            <div className="card projetRefId slide-first border-0 shadow">
               <img
                 alt="Social contribution app"
                 className="card-img-top"
@@ -262,11 +263,11 @@ export default function Project() {
             </div>
           </div>
           
-          <div className="col-md-6 mb-1">
+          <div ref={portfolioApkRef} className="col-md-6 mb-1">
             <h2 className="md-title h4 text-secondary">
               Android Application
             </h2>
-            <div className="card border-0 shadow">
+            <div className="card projetRefId slide-second border-0 shadow">
               <img alt="" className="card-img-top" src={projectReactNative1} />
               <div className="card-body text-secondary">
                 <p>
@@ -291,12 +292,12 @@ export default function Project() {
                   </a>{" "}
                 </p>
                 <p className="md-title">
-                  Convert my portfolio to an Android App using React Native {' '}
-                  <a href="https://abassdev.com/abassdev.apk">
+                 Transform my portfolio into an interactive Android app with the power of React Native.
+                </p>
+                 <a href="https://abassdev.com/abassdev.apk">
                     {" "}
                     Download the Apk
                   </a>
-                </p>
               </div>
             </div>
           </div>

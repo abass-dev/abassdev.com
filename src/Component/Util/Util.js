@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 export function SlideAnim(mainRef, targetId) {
   const [isIntersecting, setIsIntersecting] = useState(false);
   

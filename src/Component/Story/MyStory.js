@@ -1,18 +1,13 @@
 import React, { useRef } from "react";
-import Footer from '../Footer/Footer'
-import { SlideAnim } from '../Util/Util'
+import { Footer } from '../'
+import { SingleSlideAnim } from '../Util/Util'
 import "./MyStory.css";
 import aboutImage from "../../assets/images/abassdev-about.png";
 
 function MyStory(props) {
   const storyRef = useRef(null)
-  SlideAnim(storyRef, '#storyRefId')
-  function showbtn() {
-    document.querySelector(".chevron").classList.toggle("rotate");
-    document.querySelector('#collapseMyStory').classList.toggle('hide')
-    window.dataLayer.push({"myStory": "Collapse my story"});
-            
-  }
+  SingleSlideAnim(storyRef, '.storyRefId')
+  
   function birthday(date2Str) {
   const date1 = new Date();
   const date2 = new Date(date2Str);
@@ -38,8 +33,9 @@ function MyStory(props) {
             </h1>
             <p className="after-title"></p>
          
-        <div id='main' ref={storyRef} about="Who is Abass Dev" className="shadow mb-4">
-         <div id='storyRefId' className='image-bg'>
+        <div ref={storyRef} about="Who is Abass Dev" className="mb-4">
+        <div className="shadow storyRefId slide-first">
+         <div className='image-bg'>
           <img src={aboutImage} className="img-fluid story-img" alt="Who is Abass Dev?" />
          </div>
           <div id='storyRefId' className="text-light bg-dark px-4 py-3">
@@ -65,12 +61,13 @@ function MyStory(props) {
             Abass Dev is a true testament to the power of self-education and perseverance. His passion and commitment to his craft have led him to become a respected figure in the web development community, and a source of inspiration for aspiring developers around the world.
             </p> 
             </>
-            : <a className='link' href='/mystory'>Read more...</a>
+            : <a className='link' href='/mystory'>Read more about me...</a>
             }
           </div>
         </div>
       </div>
       {props.pathName && <div className='col-12'> <Footer/> </div>}
+      </div>
       </div>
       </div>
     );

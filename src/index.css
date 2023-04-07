@@ -28,12 +28,12 @@ a {
 #main div:first-child {
   opacity: 0;
   transform: scale(0.8);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
 #main div:last-child {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(80px);
   transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
@@ -45,15 +45,25 @@ a {
 }
 
 .single-slide-in {
-  transition:1.5s;
-  transform: translateY(0) !important;
-  transform: scale(1) !important;
+  transform: translate(0) scale(1) !important;
   opacity: 1.0 !important;
+  transition: opacity .7s ease-in-out, transform .7s ease-in-out !important;
 }
-.single-slide-in-scale {
+.slide-first {
   opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: scale(0.5) translate(0, 70px);
+}
+.slide-second {
+  opacity: 0;
+  transform: scale(0.9) translate(-70px, 0);
+}
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.lets-chat-anime {
+  animation: contact-title-anim 1s infinite;
 }
 
 .lds-ripple div {
@@ -79,6 +89,31 @@ a {
     opacity: 1;
   }
 }
+
+@keyframes contact-title-anim {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+    color: rgb(4,82,161);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(5px, 5px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 @keyframes lds-ripple {
   0% {
     top: 72px;

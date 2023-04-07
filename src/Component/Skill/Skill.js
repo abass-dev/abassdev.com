@@ -1,8 +1,12 @@
-import React from "react";
-import "./Skill.css";
 import Item from "./Item";
+import { useRef } from 'react'
+import { SingleSlideAnim } from '../Util/Util'
+import "./Skill.css";
 
 export default function Skill() {
+  const skillRef = useRef(null)
+  SingleSlideAnim(skillRef, '.skillRefID')
+  
   return (
     <div className="container">
       <div className="row">
@@ -17,9 +21,9 @@ export default function Skill() {
           <div className="row">
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Front-end knowledge</h4>
-              <div className="card border-gray">
-                <div className="card-body md-title">
-                  <div className="row card-text">
+              <div className="card pborder-gray">
+                <div className="card-body pb-0 md-title">
+                  <div className="row">
                     <Item
                       title="HTML"
                       target="html"
@@ -58,6 +62,7 @@ export default function Skill() {
                       icon="devicon-react-plain"
                       desk="React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies."
                       link="https://en.m.wikipedia.org/wiki/React_(JavaScript_library)"
+                      lastChild={true}
                     />
                   </div>
                 </div>
@@ -67,7 +72,7 @@ export default function Skill() {
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Back-end knowledge</h4>
               <div className="card border-gray">
-                <div className="card-body md-title">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
                     <Item
                       title="PHP"
@@ -99,6 +104,7 @@ export default function Skill() {
                       icon="devicon-symfony-original"
                       desk="Symfony is a PHP web application framework and a set of reusable PHP components/libraries. It was published as free software on October 18, 2005, and released under the MIT license."
                       link="https://en.m.wikipedia.org/wiki/Symfony"
+                      lastChild={true}
                     />
                   </div>
                 </div>
@@ -107,7 +113,7 @@ export default function Skill() {
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Databases</h4>
               <div className="card border-gray">
-                <div className="card-body md-title">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
                     <Item
                       title="MySQL"
@@ -131,6 +137,7 @@ export default function Skill() {
                       icon="devicon-postgresql-plain"
                       desk=""
                       link=""
+                      lastChild={true}
                     />
                   </div>
                 </div>
@@ -139,24 +146,48 @@ export default function Skill() {
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Tools</h4>
               <div className="card border-gray">
-                <div className="card-body md-title">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                    <div className="col-12 skill-card-text card-text">
-                      <i class="devicon-git-plain"></i>
-                      <span> Git</span>
-                    </div>
-                    <div className="col-12 skill-card-text card-text">
-                      <i class="devicon-docker-plain"></i>
-                      <span> Docker</span>
-                    </div>
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-heroku-plain"></i>
-                      <span> Heroku</span>
-                    </div>
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-github-original"></i>
-                      <span> Github</span>
-                    </div>
+                  <Item
+                      title="Git"
+                      target="git"
+                      icon="devicon-git-plain"
+                      desk="Git is a distributed version control system that is widely used in software development to manage and track changes to source code. It was created by Linus Torvalds in 2005 and is now maintained by the open-source community."
+                      link="https://git-scm.com/"
+                    />
+                    
+                  <Item
+                      title="Docker"
+                      target="docker"
+                      icon="devicon-docker-plain"
+                      desk="Docker is a software platform that allows developers to easily package and deploy applications as self-contained containers. It was first released in 2013 and has since become a popular tool for building, shipping, and running software applications."
+                      link="https://www.docker.com/"
+                    />
+                    
+                  <Item
+                      title="Heroku"
+                      target="heroku"
+                      icon="devicon-heroku-plain"
+                      desk="Heroku is a cloud-based platform as a service (PaaS) that allows developers to easily build, deploy, and manage web applications. It was founded in 2007 and acquired by Salesforce in 2010."
+                      link="https://www.heroku.com/"
+                    />
+                    
+                  <Item
+                      title="Firefox"
+                      target="firefox"
+                      icon="devicon-firefox-plain"
+                      desk=""
+                      link=""
+                    />
+                    
+                  <Item
+                      title="Github"
+                      target="github"
+                      icon="devicon-github-original"
+                      desk="GitHub is a web-based platform for version control and collaborative software development. It was founded in 2008 and is now owned by Microsoft."
+                      link="https://github.com/"
+                      lastChild={true}
+                    />
                   </div>
                 </div>
               </div>
@@ -167,16 +198,25 @@ export default function Skill() {
                 Application Android & IOS
               </h4>
               <div className="card border-gray">
-                <div className="card-body md-title">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                    <div className="col-12 skill-card-text card-text">
-                      <i class="devicon-java-plain"></i>
-                      <span> Java</span>
-                    </div>
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-react-plain"></i>
-                      <span> React Native</span>
-                    </div>
+                  
+                  <Item
+                      title="Java"
+                      target="java"
+                      icon="devicon-java-plain"
+                      desk=""
+                      link=""
+                    />
+                    
+                  <Item
+                      title="React Native"
+                      target="reactnative"
+                      icon="devicon-react-plain"
+                      desk=""
+                      link=""
+                      lastChild={true}
+                     /> 
                   </div>
                 </div>
               </div>
@@ -185,16 +225,24 @@ export default function Skill() {
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Software development</h4>
               <div className="card border-gray">
-                <div className="card-body md-title">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-python-plain"></i>
-                      <span> Python</span>
-                    </div>
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-java-plain"></i>
-                      <span> Java</span>
-                    </div>
+                  <Item
+                      title="Python"
+                      target="python"
+                      icon="devicon-python-plain"
+                      desk=""
+                      link=""
+                    />
+                    
+                  <Item
+                      title="Java"
+                      target="java-soft"
+                      icon="devicon-java-plain"
+                      desk=""
+                      link=""
+                      lastChild={true}
+                    />
                   </div>
                 </div>
               </div>
@@ -202,31 +250,36 @@ export default function Skill() {
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Editors</h4>
               <div className="card border-gray">
-                <div className="card-body md-title">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-vscode-plain"></i>
-                      <span> VsCode</span>
-                    </div>
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-androidstudio-plain"></i>
-                      <span> Android Studio</span>
-                    </div>
-                    <div className="col-12 skill-card-text">
-                      <i class="devicon-firefox-plain"></i>
-                      <span> Firefox</span>
-                    </div>
+                  
+                  <Item
+                      title="VsCode"
+                      target="vscode"
+                      icon="devicon-vscode-plain"
+                      desk=""
+                      link=""
+                    />
+                    
+                  <Item
+                      title="Android Studio"
+                      target="androidstudio"
+                      icon="devicon-androidstudio-plain"
+                      desk=""
+                      link=""
+                      lastChild={true}
+                    />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 mb-4">
+            <div ref={skillRef} className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Spoken languages</h4>
-              <div className="card border-gray">
-                <div className="card-body md-title">
+              <div className="card skillRefID zoom-in border-gray">
+                <div className="card-body pb-0  md-title">
                   <div className="row card-text">
                     <div className="col-12 skill-card-text">
-                      <div className="progress w-100">
+                      <div  className="progress w-100">
                         <span className="bg-secondary text-white">
                           {" "}
                           French{" "}
@@ -269,11 +322,11 @@ export default function Skill() {
                         <div
                           class="progress-bar english"
                           role="progressbar"
-                          aria-valuenow="45"
+                          aria-valuenow="38"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         >
-                          45%
+                          38%
                         </div>
                       </div>
                     </div>

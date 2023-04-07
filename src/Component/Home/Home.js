@@ -1,9 +1,4 @@
-import React from "react";
-import Profile from "../Profile/Profile";
-import Skill from "../Skill/Skill";
-import Project from "../Project/Project";
-import Work from "../Work/Work";
-import Footer from "../Footer/Footer";
+import { Profile, Skill, Project, Work, Footer } from '../'
 import "./Home.css";
 
 const Home = () => {

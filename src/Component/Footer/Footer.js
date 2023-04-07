@@ -40,7 +40,7 @@ const appVersion = packageJson.version;
       </div>
       </div>
       <div className="col-md-6 mb-4 text-center">
-       <ContactForm />
+       <ContactForm animation={true}/>
       </div>
       <p className="copyright bg-secondary">
         Copyright © 2021 - {new Date().getFullYear()} by Abass Dev, All rights reserved. <br />{" "}

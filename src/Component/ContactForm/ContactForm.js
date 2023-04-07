@@ -1,11 +1,11 @@
 import './ContactForm.css'
-import { useState, useEffect } from 'react'
-import { Notification, validateEmail, validateUsername, validateTextarea } from '../Helpers'
+import { useState } from 'react'
+import { Notification, validateEmail, validateTextarea } from '../Helpers'
 import emailjs from '@emailjs/browser';
 
 const notyf = new Notification(3000)
 
-export default function ContactForm() {
+export default function ContactForm({animation}) {
   const [userInput, setUserInputs] = useState({
     name: "",
     email: "",
@@ -28,10 +28,10 @@ export default function ContactForm() {
     event.preventDefault()
     const valideEmail = validateEmail(userInput.email)
     
-    if(userInput.name == '' || userInput.name == ' ') {
+    if(userInput.name === '' || userInput.name === ' ') {
       return notyf.error("Username can't be blank")
     }
-    if(userInput.email == '' || userInput.email == ' ') {
+    if(userInput.email === '' || userInput.email === ' ') {
       return notyf.error("Message can't be blank")
     }
     if(!valideEmail.valid) {
@@ -66,7 +66,7 @@ setLoading(true)
   return (
     <div className='my-container'>
       <form onSubmit={onSubmitEmailHandler}  className='contact-form' id='contactForm'>
-       <h2 className='primary-font'>Let's Chat</h2>
+       <h2 className={`primary-font ${animation && 'lets-chat-anime'}`}>Let's Chat</h2>
         <div className='contact-form-input'>
           <label className='primary-font' for='name'>Name:</label>
           <input value={userInput.name} onChange={inputHander} placeholder="What's your name?" id='name' name='name'/>
