@@ -5,14 +5,18 @@
 .large-title {
   font-family: "Ubuntu", Sans-Serif;
 }
+.ff-ubuntu {
+  font-family: "Ubuntu", Sans-Serif;
+}
 
 .home-container {
   background-color: "#F3F3F3" !;
 }
 .after-title {
-  width: 36vw;
-  height: 1px;
-  background: red;
+  width: 35vw;
+  height: 5px;
+  margin: 15px 0;
+  background: #00000015;
 }
 
 .showcookie {

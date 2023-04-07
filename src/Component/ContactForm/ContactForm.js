@@ -64,7 +64,7 @@ setLoading(true)
   }
   
   return (
-    <div className='my-container'>
+    <div className='my-container ff-ubuntu'>
       <form onSubmit={onSubmitEmailHandler}  className='contact-form' id='contactForm'>
        <h2 className={`primary-font ${animation && 'lets-chat-anime'}`}>Let's Chat</h2>
         <div className='contact-form-input'>

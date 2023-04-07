@@ -1,15 +1,17 @@
 import React from "react";
-import "./Nav.css";
 import TagManager from 'react-gtm-module'
+import {ListUnorderedIcon} from '@primer/octicons-react'
 import ProfilePicture from "../../assets/images/logo.png";
+import "./Nav.css";
 
 export default function Nav() {
   return (
-    <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <nav className="navbar sticky-top navbar-expand-md nav-bar-opacity navbar-light bg-white shadow-sm">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          <img alt='Abass Dev Logo' style={{borderRadius: '100%', border: '1px solid red'}} width='35px' height='35px' src={ProfilePicture}/>
+        <a aria-label='Logo' className="navbar-brand" href="/">
+          <img alt='Abass Dev Logo' style={{borderRadius: '100%', border: '4px solid #00000025'}} width='37px' height='37px' src={ProfilePicture}/>
         </a>
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -19,7 +21,7 @@ export default function Nav() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+         <ListUnorderedIcon size={25} />
         </button>
         <div className="collapse navbar-collapse primary-font" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -54,7 +56,7 @@ export default function Nav() {
               </a>
             </li>
           </ul>
-          <ul style={{backgroundColor: window.screen.width < 500 ?  '#373737' : 'transparent'}} className="navbar-nav flex-row d-flex justify-content-around align-items-center">
+          <ul className="navbar-nav flex-row d-flex justify-content-around align-items-center">
             <li className="nav-item">
               <a
               onClick={() => TagManager.dataLayer({"blogLink": "Click on the blog link"})}
@@ -65,17 +67,17 @@ export default function Nav() {
               </a>
             </li>
             <li className="nav-item">
-                  <a className='nav-link' href="https://m.facebook.com/abassthedev">
+                  <a aria-label='my facebook' className='nav-link' href="https://m.facebook.com/abassthedev">
                     <i style={{fontSize: 24}} className="fa fa-facebook"></i>
                   </a> 
             </li>
             <li className="nav-item">
-                  <a className='nav-link' href="https://github.com/abass-dev">
+                  <a aria-label='my github' className='nav-link' href="https://github.com/abass-dev">
                     <i style={{fontSize: 24}} className="fa fa-github"></i>
                   </a> 
             </li>
             <li className="nav-item">
-                  <a className='nav-link' href="/contact">
+                  <a aria-label='contact me' className='nav-link' href="/contact">
                     <i style={{fontSize: 24}} className="fa fa-envelope"></i>
                   </a> 
             </li>

@@ -4,6 +4,7 @@ logs
 yarn.lock
 build
 build.zip
+public/eruda
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

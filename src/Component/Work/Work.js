@@ -19,12 +19,12 @@ export default function Work() {
       <div className="row">
         <div className="col-12">
           <h1 id="work" className="primary-font primary-text fw-bold">
-            MY WORKS
+            My works
           </h1>
           <p className="after-title"></p>
         </div>
         <div ref={webRef} className="col-md-6 mb-4">
-          <div className="card workRefID slide-first text-secondary shadow border-0">
+          <div className="card workRefID slide-first text-secondary shadow-sm border-0">
             <div className="card-body">
               <p className="card-title text-center">
                 <span className="work-icon fa fa-globe"></span>{" "}
@@ -37,7 +37,7 @@ export default function Work() {
           </div>
         </div>
         <div ref={SEORef} className="col-md-6 mb-4">
-          <div className="card workRefID slide-second text-secondary border-0 shadow border-0">
+          <div className="card workRefID slide-second text-secondary border-0 shadow-sm border-0">
             <div className="card-body">
               <p className="card-title text-center">
                 <span className="work-icon fa fa-line-chart"></span>{" "}
@@ -49,7 +49,7 @@ export default function Work() {
           </div>
         </div>
         <div ref={designRef} className="col-md-6 mb-4">
-          <div className="card workRefID slide-first text-secondary border-0 shadow border-0">
+          <div className="card workRefID slide-first text-secondary border-0 shadow-sm border-0">
             <div className="card-body">
               <p className="card-title text-center">
                 <span className="work-icon fa fa-paint-brush"></span>{" "}

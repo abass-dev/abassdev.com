@@ -4,15 +4,18 @@ import Typical from "react-typical";
 import "font-awesome/css/font-awesome.min.css";
 import { MyStory } from "../";
 import ProfilePicture from "../../assets/images/profile-pic2.jpg";
-import { SlideAnim } from '../Util/Util'
+import { SingleSlideAnim } from '../Util/Util'
 export default function Profile() {
-  const profileRef = useRef(null)
-  SlideAnim(profileRef, "#profileRefId")
+  const profileImageRef = useRef(null)
+  const profileContentRef = useRef(null)
+  
+  SingleSlideAnim(profileImageRef, ".profileImageRefId")
+  SingleSlideAnim(profileContentRef, ".profileContentRefId")
   
   return (
     <div className="my-4">
       <div className="row">
-       <div className="col-12">
+       <div className="col-12 mt-4">
           <h1 id="apropos" className="profile-title mt-4 pt-4 primary-font fw-bold">
             <span className="primary-text">Hi there, 👋 </span>
             It's Abass Dev!
@@ -32,8 +35,8 @@ export default function Profile() {
               loop={Infinity}
             />
           </h2>
-          <div id='main' ref={profileRef} className="row py-4 m-1 bg-white align-items-center rounded shadow">
-            <div id='profileRefId' className="col-md-4 my-4 py-4">
+          <div ref={profileImageRef} className="row py-4 m-1 bg-white align-items-center rounded shadow-sm">
+            <div className="profileImageRefId slide-second col-md-4 my-4 py-4">
               <img
                 width="100%"
                 height="auto"
@@ -42,42 +45,43 @@ export default function Profile() {
                 src={ProfilePicture}
               />
             </div>
-            <div id='profileRefId' className="col-md-8 text-dark">
-              <h1 className="mt-4 primary-font primary-text">About me</h1>
+            <div ref={profileContentRef} className="col-md-8 text-center text-dark ff-ubuntu">
+            <div className="profileContentRefId slide-first">
+              <h1 className="mt-4 primary-font fw-bold text-start primary-text">About me</h1>
               <p className="after-title"></p>
               <p className="lead text-start">A passionate web and mobile app developer with over 6 years of experience in programming and the internet. In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.</p>
               <div className="col-12 mt-2 text-center profile-socieal-links">
-                  <a href="https://m.facebook.com/abassthedev">
-                    <i className="fa fa-facebook"></i>
+                  <a aria-label='my facebook' href="https://m.facebook.com/abassthedev">
+                    <i className="text-secondary fa fa-facebook"></i>
                   </a>
-                  <a href="https://twitter.com/abass_dev">
-                    <i className="fa fa-twitter"></i>
+                  <a aria-label='my Twitter' href="https://twitter.com/abass_dev">
+                    <i className="text-secondary fa fa-twitter"></i>
                   </a>
-                  <a href="https://github.com/abass-dev">
-                    <i className="fa fa-github"></i>
+                  <a aria-label='my github' href="https://github.com/abass-dev">
+                    <i className="text-secondary fa fa-github"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/abassdev">
-                    <i className="fa fa-linkedin"></i>
+                  <a aria-label='my linkedin' href="https://www.linkedin.com/in/abassdev">
+                    <i className="text-secondary fa fa-linkedin"></i>
                   </a>
-                  <a href="https://www.instagram.com/abassdev">
-                    <i className="fa fa-instagram"></i>
+                  <a aria-label='instagram' href="https://www.instagram.com/abassdev">
+                    <i className="text-secondary fa fa-instagram"></i>
                   </a>
-                  <a href="https://www.pinterest.com/abassdev">
-                    <i className="fa fa-pinterest"></i>
+                  <a aria-label='my pinterest' href="https://www.pinterest.com/abassdev">
+                    <i className="text-secondary fa fa-pinterest"></i>
                   </a>
-                  <a href="/contact">
-                    <i className="fa fa-envelope"></i>
+                  <a aria-label='contact me' href="/contact">
+                    <i className="text-secondary fa fa-envelope"></i>
                   </a>
                 </div>
-                <div className="text-center mt-2 col-12 col-md-5">
+                <br />
                   <a
                     href="../../assets/pdf/abass_cv_en.pdf"
                     download
-                    className="btn btn-success"
+                    className="btn btn-secondary text-white"
                   >
-                    RESUME <span className="fa fa-download"></span>
+                    RESUME <span className=" fa fa-download"></span>
                   </a>
-                </div>
+              </div>
               </div>
             </div>
           <MyStory />

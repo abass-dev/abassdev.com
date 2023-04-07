@@ -29,19 +29,19 @@ export default function Project() {
         <div className="row">
           <div className="col-md-12">
             <h1 id="projects" className="mt-4 primary-text primary-font text-start fw-bold">
-              NOTABLE PROJECTS
+              Notable projects 
             </h1>
             <p className="after-title"></p>
           </div>
           <div ref={nigaPHPRef} className="col-md-6 mb-4">
-            <h2 className="md-title h4 text-secondary">NigaPHP FRAMEWORK</h2>
-            <div className="projetRefId card border-0 shadow slide-first">
+            <div className="projetRefId card border-0 shadow-sm slide-first">
               <img
                 alt="Php code"
                 className="card-img-top"
                 src={projectPHPCode}
               />
               <div className="card-body text-secondary">
+               <h2 className="md-title h4 text-secondary">NigaPHP Framework</h2>
                 <i className="fw-bold fa fa-code"></i>{" "}
                 <span className="fw-lighter">
                   PHP, JavaScript, Sass, Shell, Twig
@@ -59,7 +59,7 @@ export default function Project() {
                     title="version"
                   >
                     <img
-                      alt="Nigatedev Framework"
+                      alt="NigaPHP Framework"
                       src="https://img.shields.io/packagist/v/nigatedev/nigatedev.svg?style=flat-square"
                     />
                   </a>{" "}
@@ -86,16 +86,16 @@ export default function Project() {
             </div>
           </div>
           <div ref={portfolioRef} className="col-md-6 mb-4">
-            <h2 className="md-title h4 text-secondary">
-              MY PORTFOLIO (Website)
-            </h2>
-            <div  className="projetRefId card border-0 shadow slide-second">
+            <div  className="projetRefId card border-0 shadow-sm slide-second">
               <img
                 alt="Abass Dev portfolio code source (Gitbub)"
                 className="card-img-top"
                 src={projectPortfolio}
               />
               <div className="card-body text-secondary">
+                <h2 className="md-title h4 text-secondary">
+                  My portfolio (Website)
+                </h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> React, NodeJs, Express</span>
@@ -135,14 +135,14 @@ export default function Project() {
           </div>
 
           <div ref={formBuilderRef} className="col-md-6 mb-4">
-            <h2 className="md-title h4 text-secondary">FORM BUILDER</h2>
-            <div className="projetRefId slide-first card border-0 shadow">
+            <div className="projetRefId slide-first card border-0 shadow-sm">
               <img
                 alt="BOSP FormBuilder"
                 className="card-img-top"
                 src={projectCode}
               />
               <div className="card-body text-secondary">
+                <h2 className="md-title h4 text-secondary">Form builder</h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> PHP, HTML, Bootstrap</span>
@@ -194,12 +194,12 @@ export default function Project() {
           </div>
 
           <div ref={dinacardRef} className="col-md-6 mb-4">
-            <h2 className="md-title h4 text-secondary">
-              DYNACARD
-            </h2>
-            <div className="projetRefId slide-second card border-0 shadow">
+            <div className="projetRefId slide-second card border-0 shadow-sm">
               <img alt="" className="card-img-top" src={projectCode} />
               <div className="card-body text-secondary">
+                <h2 className="md-title h4 text-secondary">
+                  Dynacard
+                </h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> JavaScript</span>
@@ -242,14 +242,14 @@ export default function Project() {
           </div>
 
           <div ref={socialAppRef} className="col-md-6 mb-4">
-            <h2 className="md-title h4 text-secondary">SOCIAL CONTRIBUTION APP</h2>
-            <div className="card projetRefId slide-first border-0 shadow">
+            <div className="card projetRefId slide-first border-0 shadow-sm">
               <img
                 alt="Social contribution app"
                 className="card-img-top"
                 src={projectSocialContributionApp}
               />
               <div className="card-body text-secondary">
+                <h2 className="md-title h4 text-secondary">Social contribution app</h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> React Native</span>
@@ -264,12 +264,12 @@ export default function Project() {
           </div>
           
           <div ref={portfolioApkRef} className="col-md-6 mb-1">
-            <h2 className="md-title h4 text-secondary">
-              Android Application
-            </h2>
-            <div className="card projetRefId slide-second border-0 shadow">
+            <div className="card projetRefId slide-second border-0 shadow-sm">
               <img alt="" className="card-img-top" src={projectReactNative1} />
               <div className="card-body text-secondary">
+                <h2 className="md-title h4 text-secondary">
+                  Android Application
+                </h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> ReactNative</span>
