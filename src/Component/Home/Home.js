@@ -4,7 +4,7 @@ import "./Home.css";
 
 const Home = () => {
   return (
-     <div className="bg-light">
+     <div className="container-lg bg-light">
        <Profile />
         <Project />
         <Skill />
