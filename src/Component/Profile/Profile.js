@@ -13,9 +13,9 @@ export default function Profile() {
   SingleSlideAnim(profileContentRef, ".profileContentRefId")
   
   return (
-    <div className="my-4">
+    <div className="container-lg mb-4">
       <div className="row">
-       <div className="col-12 mt-4">
+       <div className="col-12">
           <h1 id="apropos" className="profile-title mt-4 pt-4 primary-font fw-bold">
             <span className="primary-text">Hi there, 👋 </span>
             It's Abass Dev!

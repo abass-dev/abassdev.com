@@ -25,7 +25,7 @@ export default function Project() {
   
   return (
     <div className="home-container">
-      <div className="container">
+      <div className="container-lg">
         <div className="row">
           <div className="col-md-12">
             <h1 id="projects" className="mt-4 primary-text primary-font text-start fw-bold">

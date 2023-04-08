@@ -15,7 +15,7 @@ export default function Work() {
   SingleSlideAnim(SEORef, '.workRefID')
   
   return (
-    <div className="container text-white mb-4 md-title">
+    <div className="container-lg text-white mb-4 md-title">
       <div className="row">
         <div className="col-12">
           <h1 id="work" className="primary-font primary-text fw-bold">
