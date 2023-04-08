@@ -13,7 +13,7 @@ export default function Profile() {
   SingleSlideAnim(profileContentRef, ".profileContentRefId")
   
   return (
-    <div className="container-lg mb-4">
+    <div className="mb-4">
       <div className="row">
        <div className="col-12">
           <h1 id="apropos" className="profile-title mt-4 pt-4 primary-font fw-bold">

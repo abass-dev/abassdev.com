@@ -26,7 +26,7 @@ function MyStory(props) {
 }
 
  return (
-      <div itemscope itemtype="http://schema.org/Person" id='myStory' className={props.pathName? 'pt-4 mt-4 container-lg' : 'container'}>
+      <div itemscope itemtype="http://schema.org/Person" id='myStory' className={props.pathName? 'pt-4 mt-4 container-lg' : 'container-md'}>
         <Title title="Abass Dev - My story"/>
         <div className="row ff-ubuntu">
         <div className="col-md-12">
@@ -36,7 +36,7 @@ function MyStory(props) {
             <p className="after-title"></p>
          
         <div ref={storyRef} about="Who is Abass Dev">
-        <div className="shadow storyRefId slide-first">
+        <div className="shadow-sm storyRefId slide-first">
          <div className='image-bg'>
           <img src={aboutImage} className="img-fluid story-img" alt="Who is Abass Dev?" />
          </div>
