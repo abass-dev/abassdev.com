@@ -1,7 +1,6 @@
 .my-container {
   display: flex;;
   width: 100%;
-  min-height: 200px;
   justify-content:center;
 }
 .form-bg {

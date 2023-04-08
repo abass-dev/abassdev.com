@@ -1,4 +1,4 @@
-import React, { Suspense} from "react";
+import React, { Suspense, useContext, useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,10 +10,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { CookiesProvider } from "react-cookie";
-import MyStory from "../src/Component/Story/MyStory";
-import Contact from "../src/Component/Contact";
-import NotFound from "../src/Component/NotFound/NotFound";
-import Nav from "./Component/Nav/Nav";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
+import MyStory from "./Component/Story/MyStory";
+import Contact from "./Component/Contact";
+import { FaCloudMoon, FaSun } from "react-icons/fa";
+
+import NotFound from "./Component/NotFound/NotFound";
+import { CookieAlertBox } from './Component/Cookies'
 import reportWebVitals from "./reportWebVitals";
 import TagManager from "react-gtm-module";
 import ThemeProvider, { ThemeContext }from './Context/ThemeProvider'
@@ -38,12 +41,13 @@ ReactDOM.render(
           </div>
         }
       >
-      <Nav />
+       <CookieAlertBox />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/mystory" element={<MyStory pathName={pathName} />} />
             <Route path="/contact" element={<Contact pathName={pathName} />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy pathName={pathName} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

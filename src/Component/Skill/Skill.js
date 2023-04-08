@@ -278,14 +278,14 @@ export default function Skill() {
               <div className="card skillRefID zoom-in border-gray">
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                    <div className="col-12 skill-card-text">
+                    <div className="col-12 mb-2">
                       <div  className="progress w-100">
                         <span className="bg-secondary text-white">
                           {" "}
                           French{" "}
                         </span>
                         <div
-                          class="progress-bar french"
+                          className="progress-bar bg-secondary french"
                           role="progressbar"
                           aria-valuenow="95"
                           aria-valuemin="0"
@@ -296,14 +296,14 @@ export default function Skill() {
                       </div>
                     </div>
 
-                    <div className="col-12 skill-card-text">
+                    <div className="col-12 mb-2">
                       <div className="progress w-100">
                         <span className="bg-secondary text-white">
                           {" "}
                           Haussa{" "}
                         </span>
                         <div
-                          class="progress-bar haussa"
+                          className="progress-bar bg-secondary haussa"
                           role="progressbar"
                           aria-valuenow="50"
                           aria-valuemin="0"
@@ -313,14 +313,14 @@ export default function Skill() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-12 skill-card-text">
+                    <div className="col-12 mb-2">
                       <div className="progress w-100">
                         <span className="bg-secondary text-white">
                           {" "}
                           English{" "}
                         </span>
                         <div
-                          class="progress-bar english"
+                          className="progress-bar bg-secondary english"
                           role="progressbar"
                           aria-valuenow="38"
                           aria-valuemin="0"

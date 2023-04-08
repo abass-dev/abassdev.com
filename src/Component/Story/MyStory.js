@@ -1,14 +1,31 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext, useState , useEffect } from "react";
 import { Footer } from '../'
-import Helmet from 'react-helmet'
+import Nav from '../Nav/Nav'
+import { ThemeContext } from '../../Context/ThemeProvider'
+
 import  Title from '../SEO/Title'
 import { SingleSlideAnim } from '../Util/Util'
 import aboutImage from "../../assets/images/abassdev-about.png";
 import "./MyStory.css";
 
-function MyStory(props) {
+function MyStory({pathName}) {
   const storyRef = useRef(null)
   SingleSlideAnim(storyRef, '.storyRefId')
+  
+  const {theme, toggleTheme} = useContext(ThemeContext)
+  const [storedTheme, setStoredTheme] = useState('light')
+  const localStorage = window.localStorage
+  
+  useEffect(() => {
+    let sthm = localStorage.getItem('theme')
+    if (sthm) {
+      setStoredTheme(sthm)
+    }
+  }, [theme])
+  
+  function handlerToggle(e) {
+      toggleTheme()
+  }
   
   function birthday(date2Str) {
   const date1 = new Date();
@@ -26,10 +43,15 @@ function MyStory(props) {
   return formattedDiff;
 }
 
+  const metaData = {
+    title: 'My story'
+  }
  return (
-      <div itemscope itemtype="http://schema.org/Person" className={props.pathName? 'mt-4 mt-4 container-lg' : 'container-md mt-4'}>
-       {props.pathName && <Helmet><title>Abass Dev - My story</title></Helmet>}
-        <div className="row ff-ubuntu">
+   <>
+    {pathName &&  <Nav metaData={metaData}/> }
+      <div id={pathName? storedTheme : ''} itemscope itemtype="http://schema.org/Person" className={`${pathName && 'container-lg'} pt-4`}>
+      <div className='container'>
+       <div className="row ff-ubuntu">
         <div className="col-md-12">
             <h1 className="text-start primary-font primary-text fw-bold">
               My Story
@@ -38,9 +60,11 @@ function MyStory(props) {
          
         <div id='myStory' ref={storyRef} about="Who is Abass Dev">
         <div className="shadow-sm storyRefId slide-first">
-         <div className='image-bg'>
-          <img src={aboutImage} className="img-fluid story-img" alt="Who is Abass Dev?" />
-         </div>
+         {pathName && 
+           <div className='image-bg'>
+            <img src={aboutImage} className="img-fluid story-img" alt="Who is Abass Dev?" />
+           </div>
+         }
           <div id='storyRefId' className="p-3">
             <h1 itemProp="description" id="whoisabassdev">Who is Abass Dev?</h1>
             <p itemProp="description">
@@ -49,7 +73,7 @@ function MyStory(props) {
             <p itemProp="description">
             At a young age of 14 in 2009, Abass Dev became fascinated with the world of web development. However, he had no idea where to start. It wasn't until he met a friend on Skyrock, a social networking site, in 2011, that he was introduced to the world of blogging and tasked with administering a Wix-created blog. It was this experience that sparked his curiosity and ignited his passion for web development.
             </p>
-            {props.pathName ? 
+            {pathName ? 
               <>
             <p itemProp='description'>
              In 2012, Abass Dev created his own blog on the Blogspot platform, but soon discovered its limitations. Determined to expand his knowledge and capabilities, he began to explore the depths of web development using languages such as HTML, CSS, JavaScript, PHP, SQL, and others.
@@ -69,10 +93,12 @@ function MyStory(props) {
           </div>
         </div>
       </div>
-      {props.pathName && <div className='col-12'> <Footer/> </div>}
+      {pathName && <div className='col-12'> <Footer/> </div>}
       </div>
       </div>
       </div>
+      </div>
+     </>
     );
   }
 

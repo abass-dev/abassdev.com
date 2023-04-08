@@ -40,8 +40,8 @@ export default function Project() {
                 className="card-img-top"
                 src={projectPHPCode}
               />
-              <div className="card-body text-secondary">
-               <h2 className="md-title h4 text-secondary">NigaPHP Framework</h2>
+              <div className="card-body">
+               <h2 className="md-title h4 ">NigaPHP Framework</h2>
                 <i className="fw-bold fa fa-code"></i>{" "}
                 <span className="fw-lighter">
                   PHP, JavaScript, Sass, Shell, Twig
@@ -92,8 +92,8 @@ export default function Project() {
                 className="card-img-top"
                 src={projectPortfolio}
               />
-              <div className="card-body text-secondary">
-                <h2 className="md-title h4 text-secondary">
+              <div className="card-body ">
+                <h2 className="md-title h4 ">
                   My portfolio (Website)
                 </h2>
                 <p>
@@ -141,8 +141,8 @@ export default function Project() {
                 className="card-img-top"
                 src={projectCode}
               />
-              <div className="card-body text-secondary">
-                <h2 className="md-title h4 text-secondary">Form builder</h2>
+              <div className="card-body ">
+                <h2 className="md-title h4 ">Form builder</h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> PHP, HTML, Bootstrap</span>
@@ -196,8 +196,8 @@ export default function Project() {
           <div ref={dinacardRef} className="col-md-6 mb-4">
             <div className="projetRefId slide-second card border-0 shadow-sm">
               <img alt="" className="card-img-top" src={projectCode} />
-              <div className="card-body text-secondary">
-                <h2 className="md-title h4 text-secondary">
+              <div className="card-body ">
+                <h2 className="md-title h4 ">
                   Dynacard
                 </h2>
                 <p>
@@ -248,8 +248,8 @@ export default function Project() {
                 className="card-img-top"
                 src={projectSocialContributionApp}
               />
-              <div className="card-body text-secondary">
-                <h2 className="md-title h4 text-secondary">Social contribution app</h2>
+              <div className="card-body ">
+                <h2 className="md-title h4 ">Social contribution app</h2>
                 <p>
                   <i className="fw-bold fa fa-code"></i>
                   <span className="fw-lighter"> React Native</span>
@@ -266,8 +266,8 @@ export default function Project() {
           <div ref={portfolioApkRef} className="col-md-6 mb-1">
             <div className="card projetRefId slide-second border-0 shadow-sm">
               <img alt="" className="card-img-top" src={projectReactNative1} />
-              <div className="card-body text-secondary">
-                <h2 className="md-title h4 text-secondary">
+              <div className="card-body ">
+                <h2 className="md-title h4 ">
                   Android Application
                 </h2>
                 <p>

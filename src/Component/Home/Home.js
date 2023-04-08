@@ -1,15 +1,16 @@
 import { Profile, Skill, Project, Work, Footer } from '../'
 import { LatestPosts } from '../Blog'
+import { CookieAlertBox } from '../Cookies'
 import Toggle from 'react-toggle'
 import { FaCloudMoon, FaSun } from "react-icons/fa";
-
+import Nav from '../Nav/Nav'
 import { SunIcon } from '@primer/octicons-react'
 import { useContext, useState, useEffect } from 'react'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import "./Home.css";
 
 const Home = () => {
-  const { theme,  toggleTheme} = useContext(ThemeContext)
+  const {theme, toggleTheme} = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
   
@@ -22,8 +23,9 @@ const Home = () => {
   function handlerToggle(e) {
       toggleTheme()
   }
-  
   return (
+    <>
+    <Nav />
      <div id={storedTheme} className="container-lg">
        <div style={{
          position: 'fixed',
@@ -31,7 +33,6 @@ const Home = () => {
          right: '10px',
          zIndex: 1000
        }}> 
-        <Toggle aria-label='Toggle dark mode' icons={{checked: <FaSun color='white' size={10} />, unchecked: <FaCloudMoon color='white' size={10} />}} checked={storedTheme === 'light'? false : true} onChange={handlerToggle} />
         </div>
         <Profile />
         <Project />
@@ -40,6 +41,7 @@ const Home = () => {
         <LatestPosts />
         <Footer />
       </div>
+      </>
   );
 };
 

@@ -3,11 +3,13 @@ import TagManager from 'react-gtm-module'
 import {ListUnorderedIcon} from '@primer/octicons-react'
 import ProfilePicture from "../../assets/images/logo.png";
 import Toggle from 'react-toggle'
+import { FaCloudMoon, FaSun } from "react-icons/fa";
+import Helmet from 'react-helmet'
 import { ThemeContext } from '../../Context/ThemeProvider'
 
 import "./Nav.css";
 
-export default function Nav() {
+export default function Nav({metaData}) {
   const {theme, toggleTheme} = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
@@ -22,6 +24,8 @@ export default function Nav() {
       toggleTheme()
   }
   return (
+    <>
+    {metaData && <Helmet><title>Abass Dev - {metaData.title}</title></Helmet>}
     <nav className={`navbar sticky-top navbar-expand-md nav-bar-opacity navbar-${storedTheme} ${storedTheme} shadow-sm`}>
       <div className="container-fluid">
         <a aria-label='Logo' className="navbar-brand" href="/">
@@ -71,6 +75,12 @@ export default function Nav() {
                 Contact
               </a>
             </li>
+            
+            <li className="nav-item">
+                  <a aria-label='contact me' className='nav-link'>
+            <Toggle aria-label='Toggle dark mode' icons={{checked: <FaSun color='white' size={10} />, unchecked: <FaCloudMoon color='white' size={10} />}} checked={storedTheme === 'light'? false : true} onChange={handlerToggle} />
+                  </a> 
+            </li>
           </ul>
           <ul className="navbar-nav flex-row d-flex justify-content-around align-items-center">
             <li className="nav-item">
@@ -101,5 +111,6 @@ export default function Nav() {
         </div>
       </div>
     </nav>
+    </>
   );
 }
