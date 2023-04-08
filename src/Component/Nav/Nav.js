@@ -1,12 +1,28 @@
-import React from "react";
+import { useContext, useEffect, useState} from "react";
 import TagManager from 'react-gtm-module'
 import {ListUnorderedIcon} from '@primer/octicons-react'
 import ProfilePicture from "../../assets/images/logo.png";
+import Toggle from 'react-toggle'
+import { ThemeContext } from '../../Context/ThemeProvider'
+
 import "./Nav.css";
 
 export default function Nav() {
+  const {theme, toggleTheme} = useContext(ThemeContext)
+  const [storedTheme, setStoredTheme] = useState('light')
+  const localStorage = window.localStorage
+  
+  useEffect(() => {
+    let sthm = localStorage.getItem('theme')
+    if (sthm) {
+      setStoredTheme(sthm)
+    }
+  }, [theme])
+  function handlerToggle(e) {
+      toggleTheme()
+  }
   return (
-    <nav className="navbar sticky-top navbar-expand-md nav-bar-opacity navbar-light bg-white shadow-sm">
+    <nav className={`navbar sticky-top navbar-expand-md nav-bar-opacity navbar-${storedTheme} ${storedTheme} shadow-sm`}>
       <div className="container-fluid">
         <a aria-label='Logo' className="navbar-brand" href="/">
           <img alt='Abass Dev Logo' style={{borderRadius: '100%', border: '4px solid #00000025'}} width='37px' height='37px' src={ProfilePicture}/>

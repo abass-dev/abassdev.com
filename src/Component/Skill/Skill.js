@@ -8,20 +8,20 @@ export default function Skill() {
   SingleSlideAnim(skillRef, '.skillRefID')
   
   return (
-    <div className="container-lg">
+    <div id='skills-tools' className="container-lg">
       <div className="row">
         <div className="col-12">
-          <h1 id="skills-tools" className="text-start primary-font primary-text mt-4 fw-bold">
+          <h1 className="text-start primary-font primary-text mt-4">
             Skills and tools
           </h1>
           <p className="after-title"></p>
         </div>
 
-        <div className="col-12 mb-4 text-white">
+        <div className="col-12 mb-4">
           <div className="row">
             <div className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Front-end knowledge</h4>
-              <div className="card pborder-gray">
+              <div className="card border-gray">
                 <div className="card-body pb-0 md-title">
                   <div className="row">
                     <Item

@@ -1,5 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap");
 
+.dark {
+  background: #020113 !important;
+}
+.light {
+  background: #fff !important;
+}
+#dark {
+  background: #020113 !important;
+  color: #ffffff;
+}
+
+#dark .card{
+  background: #181532 !important;
+  color: #ffffff !important;
+}
+#dark #myStory, #dark #about, #dark #latestPosts{
+  background: #181532 !important;
+  color: #ffffff !important;
+}
+#light {
+  background: #1c1c1c05 !important;
+  color: black;
+}
+#light .card{
+  background: white !important;
+  color: black;
+}
+#light #myStory, #light #about, #light #latestPosts{
+  background: white !important;
+  color: black;
+}
+
+
 .primary-font{
   font-family: "Edu NSW ACT Foundation", cursive;;
 } 

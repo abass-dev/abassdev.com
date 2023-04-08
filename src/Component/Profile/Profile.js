@@ -13,10 +13,10 @@ export default function Profile() {
   SingleSlideAnim(profileContentRef, ".profileContentRefId")
   
   return (
-    <div className="mb-4">
+    <div id="apropos" className="mb-4 pt-4">
       <div className="row">
        <div className="col-12">
-          <h1 id="apropos" className="profile-title mt-4 pt-4 primary-font fw-bold">
+          <h1 className="profile-title primary-font fw-bold">
             <span className="primary-text">Hi there, 👋 </span>
             It's Abass Dev!
           </h1>
@@ -35,7 +35,7 @@ export default function Profile() {
               loop={Infinity}
             />
           </h2>
-          <div ref={profileImageRef} className="row py-4 m-1 bg-white align-items-center rounded shadow-sm">
+          <div id='about' ref={profileImageRef} className="row py-4 m-1 align-items-center rounded shadow-sm">
             <div className="profileImageRefId slide-second col-md-4 my-4 py-4">
               <img
                 width="100%"
@@ -45,7 +45,7 @@ export default function Profile() {
                 src={ProfilePicture}
               />
             </div>
-            <div ref={profileContentRef} className="col-md-8 text-center text-dark ff-ubuntu">
+            <div ref={profileContentRef} className="col-md-8 text-center ff-ubuntu">
             <div className="profileContentRefId slide-first">
               <h1 className="mt-4 primary-font fw-bold text-start primary-text">About me</h1>
               <p className="after-title"></p>

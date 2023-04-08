@@ -11,7 +11,7 @@ export default function LatestPosts() {
         setLatestPosts(response.data);
       })
       .catch(error => {
-        console.log(error);
+       // console.log(error);
       });
   }, []);
  return (
@@ -24,9 +24,8 @@ export default function LatestPosts() {
       <div className="list-group">
       {latestPosts?
         latestPosts.map((post) => {
-        console.log(post);
-         return (
-          <a href={post.link} className="list-group-item list-group-item-action flex-column align-items-start">
+        return (
+          <a id='latestPosts' href={post.link} className="list-group-item list-group-item-action flex-column align-items-start">
             <div className="ff-ubuntu w-100">
               <h2 className="h4 mb-1">{post.title.rendered}</h2>
               <small className="text-muted">Created on: {dateToReadable(post.date)}</small>
@@ -38,7 +37,7 @@ export default function LatestPosts() {
          )
         })
        :
-       <p>Something went wrong, can't fetch latest posts!</p>
+       <p>Something went wrong! can't fetch data from the blog api.</p>
       }
       </div>
     </div>

@@ -38,20 +38,20 @@ function Item(props) {
   }
 
   return (
-    <div ref={skillRef} onClick={action} className={`col-12 skill-card-focus ${props.lastChild? '' : 'border-bottom'} skill-card-text`}>
+    <div ref={skillRef} onClick={action} className={`col-12 skill-card-focus skill-card-text`}>
       <div className="row skillRefID zoom-in">
 
-        <div className="col-9 p-1">
+        <div className="col-9 p-1 skill-card-title-focus">
           <i class={icon}></i>
           {" "}
           <span>{title}</span>
         </div>
 
-        <div className="col text-end">
-          <i className={props.target + "-chevron fa fa-angle-double-down text-success"}></i>
+        <div className="col-3 skill-card-title-focus text-end">
+          <i className={props.target + "-chevron fa fa-angle-double-down"}></i>
         </div>
 
-        <div className={props.target + "-desk toggle-it col-12 bg-white skill-card-desk"}>
+        <div className={props.target + "-desk toggle-it col-12 skill-card-desk"}>
           <p>
             {description}
           </p>

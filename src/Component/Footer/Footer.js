@@ -6,7 +6,7 @@ const packageJson = require('../../../package.json');
 const appVersion = packageJson.version;
 
  return (
-    <div id='contact' className="row bg-white py-4 ">
+    <div id='contact' className="row py-4 ">
       <div className="ff-ubuntu col-md-6 d-flex flex-column align-items-center text-center justify-content-center">
         <h4 id="contact" className="primary-text primary-font">
           What's Next?
@@ -16,25 +16,25 @@ const appVersion = packageJson.version;
         If you're interested in working on a project or have any questions, please feel free to leave me an email, and I'll get back to you as soon as possible.
         </p>
         <div className='profile-socieal-links mb-4'>
-        <a aria-label='my facebook' href="https://m.facebook.com/abassthedev">
-          <i className="fa fa-facebook"></i>
+        <a className='text-secondary'  aria-label='my facebook' href="https://m.facebook.com/abassthedev">
+          <i className='fa fa-facebook'></i>
         </a>
-        <a aria-label='my Twitter' href="https://twitter.com/abass_dev">
+        <a className='text-secondary'  aria-label='my Twitter' href="https://twitter.com/abass_dev">
           <i className="fa fa-twitter"></i>
         </a>
-        <a aria-label='my github' href="https://github.com/abass-dev">
+        <a className='text-secondary'  aria-label='my github' href="https://github.com/abass-dev">
           <i className="fa fa-github"></i>
         </a>
-        <a aria-label='my linkedin' href="https://www.linkedin.com/in/abassdev">
+        <a className='text-secondary'  aria-label='my linkedin' href="https://www.linkedin.com/in/abassdev">
           <i className="fa fa-linkedin"></i>
         </a>
-        <a aria-label='my instagram' href="https://www.instagram.com/abassdev">
+        <a className='text-secondary'  aria-label='my instagram' href="https://www.instagram.com/abassdev">
           <i className="fa fa-instagram"></i>
         </a>
-        <a aria-label='my pinterest' href="https://www.pinterest.com/abassdev">
+        <a className='text-secondary'  aria-label='my pinterest' href="https://www.pinterest.com/abassdev">
           <i className="fa fa-pinterest"></i>
         </a>
-        <a aria-label='contact me' href="/contact">
+        <a className='text-secondary'  aria-label='contact me' href="/contact">
           <i className="fa fa-envelope"></i>
         </a>
       </div>

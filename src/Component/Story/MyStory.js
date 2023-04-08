@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Footer } from '../'
+import Helmet from 'react-helmet'
 import  Title from '../SEO/Title'
 import { SingleSlideAnim } from '../Util/Util'
 import aboutImage from "../../assets/images/abassdev-about.png";
@@ -26,21 +27,21 @@ function MyStory(props) {
 }
 
  return (
-      <div itemscope itemtype="http://schema.org/Person" id='myStory' className={props.pathName? 'pt-4 mt-4 container-lg' : 'container-md'}>
-        <Title title="Abass Dev - My story"/>
+      <div itemscope itemtype="http://schema.org/Person" className={props.pathName? 'mt-4 mt-4 container-lg' : 'container-md mt-4'}>
+       {props.pathName && <Helmet><title>Abass Dev - My story</title></Helmet>}
         <div className="row ff-ubuntu">
         <div className="col-md-12">
-            <h1 className="mt-4 text-start primary-font primary-text fw-bold">
+            <h1 className="text-start primary-font primary-text fw-bold">
               My Story
             </h1>
             <p className="after-title"></p>
          
-        <div ref={storyRef} about="Who is Abass Dev">
+        <div id='myStory' ref={storyRef} about="Who is Abass Dev">
         <div className="shadow-sm storyRefId slide-first">
          <div className='image-bg'>
           <img src={aboutImage} className="img-fluid story-img" alt="Who is Abass Dev?" />
          </div>
-          <div id='storyRefId' className="text-dark bg-white px-4 py-3">
+          <div id='storyRefId' className="p-3">
             <h1 itemProp="description" id="whoisabassdev">Who is Abass Dev?</h1>
             <p itemProp="description">
             Abass Ben Cheik, who goes by the name Abass Dev, is a talented full-stack developer with a passion for building exceptional web applications. He was born in <span birthPlace='Niamey, Niger'> Niamey, Niger</span>, on <span birthDate='02-02-1995'> February 2, 1995</span>. He is currently {birthday('02-02-1995')}

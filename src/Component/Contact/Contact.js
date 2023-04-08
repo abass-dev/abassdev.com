@@ -1,6 +1,7 @@
 import ContactForm from '../ContactForm'
+import Helmet from 'react-helmet'
 
-const Contact = () => {
+const Contact = ({pathName}) => {
   return (
     <div style={{
         paddingTop: '60px', 
@@ -12,6 +13,7 @@ const Contact = () => {
         textAlign: 'center',
         backgroundColor: '#fff'
      }}>
+      {pathName && <Helmet><title>Abass Dev - Contact me</title></Helmet>}
       <ContactForm />
     </div>
   );
