@@ -3,8 +3,6 @@
   width: 100%;
   justify-content:center;
 }
-.form-bg {
-}
 .contact-form {
   display: flex;
   margin: 5px;
@@ -19,14 +17,20 @@
   flex-direction: column;
   margin-bottom: 15px;
 }
-input, textarea {
-  background-color: transparent !important;
+
+#dark #contactFormContainer {
+  background-color: rgb(226, 226, 226);
+  color: #020113;
+}
+
+#contactFormContainer input, #contactFormContainer textarea {
   border: none;
-  border-bottom: 1px solid #00000080;
+  border-bottom: 1px solid #45454580;
   min-width: 300px;
   outline: none !important;
   min-height: 40px;
   opacity: 0.8;
+  padding: 5px;
   font-weight: 400;
   font-size: 18px !important;
 }

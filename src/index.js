@@ -19,7 +19,7 @@ import NotFound from "./Component/NotFound/NotFound";
 import { CookieAlertBox } from './Component/Cookies'
 import reportWebVitals from "./reportWebVitals";
 import TagManager from "react-gtm-module";
-import ThemeProvider, { ThemeContext }from './Context/ThemeProvider'
+import ThemeProvider, { ThemeContext } from './Context/ThemeProvider'
 import "./index.css";
 
 const tagManagerArgs = {
@@ -27,32 +27,32 @@ const tagManagerArgs = {
 };
 TagManager.initialize(tagManagerArgs);
 
-const pathName = window.location.pathname 
+const pathName = window.location.pathname
 
 ReactDOM.render(
   <React.StrictMode>
-   <ThemeProvider>
-    <CookiesProvider>
-      <Suspense
-        fallback={
-          <div className="lds-ripple">
-            <div></div>
-            <div></div>
-          </div>
-        }
-      >
-       <CookieAlertBox />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/mystory" element={<MyStory pathName={pathName} />} />
-            <Route path="/contact" element={<Contact pathName={pathName} />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy pathName={pathName} />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </Suspense>
-    </CookiesProvider>
+    <ThemeProvider>
+      <CookiesProvider>
+        <Suspense
+          fallback={
+            <div className="lds-ripple">
+              <div></div>
+              <div></div>
+            </div>
+          }
+        >
+          <CookieAlertBox />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<App />} />
+              <Route path="/mystory" element={<MyStory pathName={pathName} />} />
+              <Route path="/contact" element={<Contact pathName={pathName} />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy pathName={pathName} />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </Suspense>
+      </CookiesProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

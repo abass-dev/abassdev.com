@@ -10,10 +10,10 @@ import { ThemeContext } from '../../Context/ThemeProvider'
 import "./Home.css";
 
 const Home = () => {
-  const {theme, toggleTheme} = useContext(ThemeContext)
+  const { theme, toggleTheme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
-  
+
   useEffect(() => {
     let sthm = localStorage.getItem('theme')
     if (sthm) {
@@ -21,19 +21,12 @@ const Home = () => {
     }
   }, [theme])
   function handlerToggle(e) {
-      toggleTheme()
+    toggleTheme()
   }
   return (
-    <>
-    <Nav />
-     <div id={storedTheme} className="container-lg">
-       <div style={{
-         position: 'fixed',
-         bottom: '10px',
-         right: '10px',
-         zIndex: 1000
-       }}> 
-        </div>
+    <div id={storedTheme} >
+      <Nav />
+      <div className="container-lg">
         <Profile />
         <Project />
         <Skill />
@@ -41,7 +34,7 @@ const Home = () => {
         <LatestPosts />
         <Footer />
       </div>
-      </>
+    </div>
   );
 };
 

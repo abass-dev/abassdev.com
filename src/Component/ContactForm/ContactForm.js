@@ -64,9 +64,10 @@ setLoading(true)
   }
   
   return (
-    <div className='my-container ff-ubuntu'>
+    <div id="contactFormContainer" className='my-container ff-ubuntu'>
       <form onSubmit={onSubmitEmailHandler}  className='contact-form' id='contactForm'>
-       <h2 className={`primary-font text-center ${animation && 'lets-chat-anime'}`}>Let's Chat</h2>
+       <h2 className='primary-font text-center'>Let's Chat</h2>
+       <p className='after-title'></p>
         <div className='contact-form-input'>
           <label className='primary-font' for='name'>Name:</label>
           <input value={userInput.name} onChange={inputHander} placeholder="What's your name?" id='name' name='name'/>

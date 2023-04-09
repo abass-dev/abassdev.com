@@ -5,9 +5,9 @@ import { ThemeContext } from './Context/ThemeProvider'
 
 export default function App() {
   const Home = React.lazy(() =>
-  new Promise((resolve) =>
-    resolve(import("./Component/Home/Home"))
-  )
-);
+    new Promise((resolve) =>
+      resolve(import("./Component/Home/Home"))
+    )
+  );
   return <Home />;
 }

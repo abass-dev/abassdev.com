@@ -3,55 +3,71 @@
 .dark {
   background: #020113 !important;
 }
+
 .light {
   background: #fff !important;
 }
+
 #dark {
   background: #020113 !important;
   color: #ffffff;
 }
 
-#dark .card{
+#dark .card {
   background: #181532 !important;
   color: #ffffff !important;
 }
-#dark #myStory, #dark #about, #dark #latestPosts{
+
+#dark #myStory,
+#dark #about,
+#dark #latestPosts {
   background: #181532 !important;
   color: #ffffff !important;
 }
+
 #light {
   background: #1c1c1c05 !important;
   color: black;
 }
-#light .card{
+
+#light .card {
   background: white !important;
   color: black;
 }
-#light #myStory, #light #about, #light #latestPosts{
+
+#light #myStory,
+#light #about,
+#light #latestPosts {
   background: white !important;
   color: black;
 }
 
 
-.primary-font{
-  font-family: "Edu NSW ACT Foundation", cursive;;
-} 
+.primary-font {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  ;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
+
 a {
   text-decoration: none !important;
 }
+
 .profile-title {
-    animation: profile-title-anim  1s;
+  animation: profile-title-anim 1s;
 }
 
 .primary-text {
-  color: rgb(4,82,161);
+  color: rgb(4, 82, 161);
 }
+
 .nav-bar-opacity {
   opacity: .98;
 }
+
 .lds-ripple {
   width: 100%;
   display: flex;
@@ -65,7 +81,7 @@ a {
   transform: translateY(0) !important;
   transform: scale(1) !important;
   opacity: 1.0 !important;
-  transition:1.5s;
+  transition: 1.5s;
 }
 
 .single-slide-in {
@@ -73,18 +89,22 @@ a {
   opacity: 1.0 !important;
   transition: opacity .7s ease-in-out, transform .7s ease-in-out !important;
 }
+
 .anim-title {
   opacity: 0;
   transform: translate(0, 70px);
 }
+
 .slide-first {
   opacity: 0;
   transform: scale(0.5) translate(0, 70px);
 }
+
 .slide-second {
   opacity: 0;
   transform: scale(0.9) translate(-70px, 0);
 }
+
 .zoom-in {
   opacity: 0;
   transform: scale(0.8);
@@ -123,18 +143,22 @@ a {
     transform: translate(0, 0);
     opacity: 1;
   }
+
   25% {
     transform: translate(-3px, 3px);
     opacity: 0.5;
   }
+
   50% {
     transform: translate(0, 0);
     opacity: 0.5;
   }
+
   75% {
     transform: translate(3px, 3px);
     opacity: 0.7;
   }
+
   100% {
     transform: translate(0, 0);
     opacity: 1;
