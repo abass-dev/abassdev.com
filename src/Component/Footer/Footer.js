@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       <p className="copyright ff-ubuntu">
-        Copyright © 2021 - {new Date().getFullYear()} by Abass Dev, All rights
+        Copyright © 2021 - {new Date().getFullYear()} Abass Dev | All rights
         reserved. <br /> Version: {appVersion}
       </p>
     </div>
