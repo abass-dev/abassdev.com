@@ -1,33 +1,33 @@
-import ContactForm from '../ContactForm'
-import Nav from '../Nav/Nav'
-import { ThemeContext } from '../../Context/ThemeProvider'
+import ContactForm from "../ContactForm";
+import Nav from "../Nav/Nav";
+import { ThemeContext } from "../../Context/ThemeProvider";
 
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect, useContext } from "react";
 
 const Contact = ({ pathName }) => {
-  const { theme, toggleTheme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
-  const localStorage = window.localStorage
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [storedTheme, setStoredTheme] = useState("light");
+  const localStorage = window.localStorage;
 
   useEffect(() => {
-    let sthm = localStorage.getItem('theme')
+    let sthm = localStorage.getItem("theme");
     if (sthm) {
-      setStoredTheme(sthm)
+      setStoredTheme(sthm);
     }
-  }, [theme])
+  }, [theme]);
 
   function handlerToggle(e) {
-    toggleTheme()
+    toggleTheme();
   }
   const metaData = {
-    title: 'Contact me'
-  }
+    title: "Contact me",
+  };
   return (
-    <div style={{minHeight:'100vh'}} id={storedTheme && storedTheme} >
-      {pathName && <Nav metaData={metaData} />}
-      <div className='container-lg'>
-        <div className='row'>
-          <div className='col-md-12'>
+    <div style={{ minHeight: "100vh" }} id={storedTheme && storedTheme}>
+      {pathName && <Nav metaData={metaData} active={"contact"} />}
+      <div className="container-lg">
+        <div className="row">
+          <div className="col-md-12">
             <h1 className="pt-4 primary-font primary-text fw-bold">
               Contact me
             </h1>

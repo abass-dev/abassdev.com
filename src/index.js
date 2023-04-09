@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "react-toggle/style.css" // for ES6 modules
-import Toggle from 'react-toggle'
+import "react-toggle/style.css"; // for ES6 modules
+import Toggle from "react-toggle";
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
@@ -16,10 +16,10 @@ import Contact from "./Component/Contact";
 import { FaCloudMoon, FaSun } from "react-icons/fa";
 
 import NotFound from "./Component/NotFound/NotFound";
-import { CookieAlertBox } from './Component/Cookies'
+import { CookieAlertBox } from "./Component/Cookies";
 import reportWebVitals from "./reportWebVitals";
 import TagManager from "react-gtm-module";
-import ThemeProvider, { ThemeContext } from './Context/ThemeProvider'
+import ThemeProvider, { ThemeContext } from "./Context/ThemeProvider";
 import "./index.css";
 
 const tagManagerArgs = {
@@ -27,7 +27,7 @@ const tagManagerArgs = {
 };
 TagManager.initialize(tagManagerArgs);
 
-const pathName = window.location.pathname
+const pathName = window.location.pathname;
 
 ReactDOM.render(
   <React.StrictMode>
@@ -45,9 +45,18 @@ ReactDOM.render(
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<App />} />
-              <Route path="/mystory" element={<MyStory pathName={pathName} />} />
-              <Route path="/contact" element={<Contact pathName={pathName} />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy pathName={pathName} />} />
+              <Route
+                path="/my-story"
+                element={<MyStory pathName={pathName} />}
+              />
+              <Route
+                path="/contact"
+                element={<Contact pathName={pathName} />}
+              />
+              <Route
+                path="/privacy-policy"
+                element={<PrivacyPolicy pathName={pathName} />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

@@ -1,17 +1,17 @@
-
 export default function validateEmail(email) {
-  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   if (!email) {
-    return {valid: false, message: "Email is required."};
+    return { valid: false, message: "Email is required." };
   }
 
   if (email.length > 254) {
-    return {valid: false, message: "Email is too long."};
+    return { valid: false, message: "Email is too long." };
   }
 
   if (!emailRegex.test(email)) {
-    return {valid: false, message: "Email is invalid."};
+    return { valid: false, message: "Email is invalid." };
   }
 
   const parts = email.split("@");
@@ -19,27 +19,30 @@ export default function validateEmail(email) {
   const domain = parts[1];
 
   if (username.length > 64) {
-    return {valid: false, message: "Username is too long."};
+    return { valid: false, message: "Username is too long." };
   }
 
   if (domain.length > 255) {
-    return {valid: false, message: "Domain name is too long."};
+    return { valid: false, message: "Domain name is too long." };
   }
 
   if (domain.startsWith(".") || domain.endsWith(".")) {
-    return {valid: false, message: "Domain name is invalid."};
+    return { valid: false, message: "Domain name is invalid." };
   }
 
   const domainParts = domain.split(".");
   for (let i = 0; i < domainParts.length; i++) {
     const part = domainParts[i];
     if (part.length > 63) {
-      return {valid: false, message: "Domain name is too long."};
+      return { valid: false, message: "Domain name is too long." };
     }
     if (!/^[a-zA-Z0-9-]+$/.test(part)) {
-      return {valid: false, message: "Domain name contains invalid characters."};
+      return {
+        valid: false,
+        message: "Domain name contains invalid characters.",
+      };
     }
   }
 
-  return {valid: true, message: "Email is valid."};
+  return { valid: true, message: "Email is valid." };
 }

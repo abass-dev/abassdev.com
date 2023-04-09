@@ -48,7 +48,7 @@ function MyStory({ pathName }) {
   }
   return (
     <div id={pathName ? storedTheme : ''}>
-      {pathName && <Nav metaData={metaData} />}
+      {pathName && <Nav metaData={metaData} active={'my-story'}/>}
       <div itemscope itemtype="http://schema.org/Person" className={`${pathName && 'container-lg'} pt-4`}>
         <div className='container'>
           <div className="row ff-ubuntu">
