@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import TagManager from "react-gtm-module";
 import { ListUnorderedIcon } from "@primer/octicons-react";
 import ProfilePicture from "../../assets/images/logo.png";
 import Toggle from "react-toggle";

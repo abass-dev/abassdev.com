@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 const notyf = new Notification(3000);
 
-export default function ContactForm({ animation }) {
+export default function ContactForm() {
   const [userInput, setUserInputs] = useState({
     name: "",
     email: "",
@@ -85,11 +85,10 @@ export default function ContactForm({ animation }) {
     <div id="contactFormContainer" className="my-container ff-ubuntu">
       <form
         onSubmit={onSubmitEmailHandler}
-        className="contact-form"
+        className="contact-form shadow-sm"
         id="contactForm"
       >
         <h2 className="primary-font text-center">Let's Chat</h2>
-        <p className="after-title"></p>
         <div className="contact-form-input">
           <label className="primary-font" for="name">
             Name:
@@ -128,7 +127,7 @@ export default function ContactForm({ animation }) {
         </div>
         <button
           disabled={isLoading ? true : false}
-          className="btn btn-secondary form-submit-button"
+          className="btn btn-outline-primary form-submit-button"
         >
           {isLoading ? "Sending..." : "Send"}
         </button>

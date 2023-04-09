@@ -5,7 +5,7 @@ import { ThemeContext } from "../../Context/ThemeProvider";
 import { useState, useEffect, useContext } from "react";
 
 const Contact = ({ pathName }) => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [storedTheme, setStoredTheme] = useState("light");
   const localStorage = window.localStorage;
 
@@ -16,9 +16,6 @@ const Contact = ({ pathName }) => {
     }
   }, [theme]);
 
-  function handlerToggle(e) {
-    toggleTheme();
-  }
   const metaData = {
     title: "Contact me",
   };
@@ -27,7 +24,7 @@ const Contact = ({ pathName }) => {
       {pathName && <Nav metaData={metaData} active={"contact"} />}
       <div className="container-lg">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col">
             <h1 className="pt-4 primary-font primary-text fw-bold">
               Contact me
             </h1>
