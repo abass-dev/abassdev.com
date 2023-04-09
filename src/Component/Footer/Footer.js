@@ -7,6 +7,9 @@ export default function Footer() {
 
   return (
     <div id="contact" className="row py-4 ">
+      <div className="col-md-6 mb-4 mt-4 text-center">
+        <ContactForm animation={true} />
+      </div>
       <div className="ff-ubuntu col-md-6 d-flex flex-column align-items-center text-center justify-content-center">
         <h3 id="contact" className="primary-text primary-font">
           What's Next?
@@ -81,9 +84,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="col-md-6 mb-4 mt-4 text-center">
-        <ContactForm animation={true} />
-      </div>
+
       <p className="copyright ff-ubuntu">
         Copyright © 2021 - {new Date().getFullYear()} by Abass Dev, All rights
         reserved. <br /> Version: {appVersion}
