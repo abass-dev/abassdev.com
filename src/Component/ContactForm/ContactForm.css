@@ -20,7 +20,7 @@
   margin-bottom: 15px;
 }
 input, textarea {
-  background-color: #fff;
+  background-color: transparent !important;
   border: none;
   border-bottom: 1px solid #00000080;
   min-width: 300px;

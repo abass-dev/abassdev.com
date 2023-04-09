@@ -11,8 +11,8 @@ const appVersion = packageJson.version;
         <h3 id="contact" className="primary-text primary-font">
           What's Next?
         </h3>
-        <h4>Let's Connect</h4>
-        <p className='lead'>
+        <h4>Let's Connect.</h4>
+        <p>
         If you're interested in working on a project or have any questions, please feel free to leave me an email, and I'll get back to you as soon as possible.
         </p>
         <div className='profile-socieal-links mb-4'>
@@ -39,9 +39,15 @@ const appVersion = packageJson.version;
         </a>
       </div>
       <h3 className='h4 primary-font primary-text'>Others</h3>
-       <div className='m-1 text-secondary shadow-sm rounded p-1'>
+       <div className='m-2 text-secondary rounded border p-1'>
          <a href='/privacy-policy'>Privacy Policy</a>
         </div>
+       <div className='m-2 text-secondary rounded border p-1'>
+         <a href='/contact'>Contact me</a>
+        </div>
+     <div className='m-2 text-secondary rounded border p-1'>
+       <a href='/mystory'>My story</a>
+      </div>
       </div>
       <div className="col-md-6 mb-4 mt-4 text-center">
        <ContactForm animation={true}/>
