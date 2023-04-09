@@ -14,7 +14,7 @@ export default function CookieAlertBox() {
     >
       <small>
         We use Google cookies to improve your browsing experience and analyze
-        site traffic. By clicking 'Accept,' you consent to our use of cookies.
+        site traffic.
         See our <a href="/privacy-policy"> privacy policy</a> for details.
       </small>
     </CookieConsent>
