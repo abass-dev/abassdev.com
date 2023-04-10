@@ -21,8 +21,7 @@ export default function LatestPosts() {
     <div className="container">
       <div className="row mb-4">
         <div className="col-12 mb-4">
-          <h1 className="primary-font primary-text">Latest blog posts</h1>
-          <p className="after-title"></p>
+          <h1 className="primary-font text-center mb-4 primary-text">Latest blog posts</h1>
           <div className="list-group">
             {latestPosts ? (
               latestPosts.map((post) => {
@@ -35,7 +34,7 @@ export default function LatestPosts() {
                     <div className="ff-ubuntu w-100">
                       <h2 className="h4 mb-1">{post.title.rendered}</h2>
                       <small className="text-muted">
-                        Created on: {dateToReadable(post.date)}
+                        Published on: {dateToReadable(post.date)}
                       </small>
                       <br />
                       <small className="text-info">

@@ -1,20 +1,19 @@
 import Item from "./Item";
 import { useRef } from 'react'
-import { SingleSlideAnim } from '../Util/Util'
+import { AnimInfinity } from '../Util/Util'
 import "./Skill.css";
 
 export default function Skill() {
   const skillRef = useRef(null)
-  SingleSlideAnim(skillRef, '.skillRefID')
+  AnimInfinity(skillRef, '.skillRefID')
   
   return (
     <div id='skills-tools' className="container-lg">
       <div className="row">
         <div className="col-12">
-          <h1 className="text-start primary-font primary-text mt-4">
+          <h1 className="text-center primary-font primary-text mb-4">
             Skills and tools
           </h1>
-          <p className="after-title"></p>
         </div>
 
         <div className="col-12 mb-4">
@@ -275,7 +274,7 @@ export default function Skill() {
             </div>
             <div ref={skillRef} className="col-md-6 mb-4">
               <h4 className="md-title text-secondary">Spoken languages</h4>
-              <div className="card skillRefID zoom-in border-gray">
+              <div className="card skillRefID slide-first border-gray">
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
                     <div className="col-12 mb-2">

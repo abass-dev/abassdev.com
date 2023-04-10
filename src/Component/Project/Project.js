@@ -24,14 +24,13 @@ export default function Project() {
   SingleSlideAnim(portfolioApkRef , '.projetRefId')
   
   return (
-    <div className="home-container">
+    <div className="home-container mb-4">
       <div className="container-lg">
         <div className="row">
           <div className="col-md-12">
-            <h1 id="projects" className="mt-4 primary-text primary-font text-start fw-bold">
+            <h1 id="projects" className="mb-4 primary-text primary-font text-center">
               Notable projects 
             </h1>
-            <p className="after-title"></p>
           </div>
           <div ref={nigaPHPRef} className="col-md-6 mb-4">
             <div className="projetRefId card border-0 shadow-sm slide-first">
@@ -82,54 +81,7 @@ export default function Project() {
                 <p className="md-title">
                 NigaPHP is a lightweight PHP web application framework designed to simplify and speed up the development process for PHP developers. It was initially created by Abass Dev and has since been maintained and contributed to by a community of developers. With its user-friendly interface and powerful features, NigaPHP has become a popular choice for building scalable and secure web applications. 
                 </p>
-              </div>
-            </div>
-          </div>
-          <div ref={portfolioRef} className="col-md-6 mb-4">
-            <div  className="projetRefId card border-0 shadow-sm slide-second">
-              <img
-                alt="Abass Dev portfolio code source (Gitbub)"
-                className="card-img-top"
-                src={projectPortfolio}
-              />
-              <div className="card-body ">
-                <h2 className="md-title h4 ">
-                  My portfolio (Website)
-                </h2>
-                <p>
-                  <i className="fw-bold fa fa-code"></i>
-                  <span className="fw-lighter"> React, NodeJs, Express</span>
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/abass-dev/portfolio"
-                    class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "
-                  >
-                    <i className="fa fa-github"></i> Code
-                  </a>{" "}
-                  <a
-                    href="https://github.com/abass-dev/portfolio/blob/master/LICENSE"
-                    title="license"
-                  >
-                    <img
-                      alt=""
-                      src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"
-                    />
-                  </a>{" "}
-                  <a href="https://github.com/abass-dev/portfolio/issues">
-                    <img
-                      alt="Issues"
-                      src="https://img.shields.io/github/issues/abass-dev/portfolio?color=0088ff"
-                    />
-                  </a>
-                </p>
-                <p className="md-title">
-                  This portfolio was build using ReactJs.
-                </p>
-                 <p>
-                  By using ReactJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. ReactJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques.
-                 </p>
-                 <a href='https://react.dev/'>Learn more about ReactJs...</a>
+                Let's discover <a href='https://docs.nigaphp.abassdev.com/'><strong>NigaPHP Framework in 5 minutes.</strong></a>
               </div>
             </div>
           </div>
@@ -192,7 +144,56 @@ export default function Project() {
               </div>
             </div>
           </div>
-
+          
+           <div ref={portfolioRef} className="col-md-6 mb-4">
+            <div  className="projetRefId card border-0 shadow-sm slide-second">
+              <img
+                alt="Abass Dev portfolio code source (Gitbub)"
+                className="card-img-top"
+                src={projectPortfolio}
+              />
+              <div className="card-body ">
+                <h2 className="md-title h4 ">
+                  My portfolio (Website)
+                </h2>
+                <p>
+                  <i className="fw-bold fa fa-code"></i>
+                  <span className="fw-lighter"> React, NodeJs, Express</span>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/abass-dev/portfolio"
+                    class="btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark "
+                  >
+                    <i className="fa fa-github"></i> Code
+                  </a>{" "}
+                  <a
+                    href="https://github.com/abass-dev/portfolio/blob/master/LICENSE"
+                    title="license"
+                  >
+                    <img
+                      alt=""
+                      src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square"
+                    />
+                  </a>{" "}
+                  <a href="https://github.com/abass-dev/portfolio/issues">
+                    <img
+                      alt="Issues"
+                      src="https://img.shields.io/github/issues/abass-dev/portfolio?color=0088ff"
+                    />
+                  </a>
+                </p>
+                <p className="md-title">
+                  This portfolio was build using ReactJs.
+                </p>
+                 <p>
+                  By using ReactJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. ReactJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques.
+                 </p>
+                 <a href='https://react.dev/'>Learn more about ReactJs...</a>
+              </div>
+            </div>
+          </div>
+          
           <div ref={dinacardRef} className="col-md-6 mb-4">
             <div className="projetRefId slide-second card border-0 shadow-sm">
               <img alt="" className="card-img-top" src={projectCode} />

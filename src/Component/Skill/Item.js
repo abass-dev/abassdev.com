@@ -1,11 +1,11 @@
-import { SingleSlideAnim } from '../Util/Util'
+import { AnimInfinity } from '../Util/Util'
 import { useRef } from "react";
 
 
 function Item(props) {
   
   const skillRef = useRef(null)
-  SingleSlideAnim(skillRef, '.skillRefID')
+  AnimInfinity(skillRef, '.skillRefID')
   
   
   let title = props.title
