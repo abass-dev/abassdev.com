@@ -12,7 +12,7 @@ export default function Skill() {
       <div className="row">
         <div className="col-12">
           <h1 className="text-center primary-font primary-text mb-4">
-            Skills and tools
+            Skills, Tools and Tech 
           </h1>
         </div>
 

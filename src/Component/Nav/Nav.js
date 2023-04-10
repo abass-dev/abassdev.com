@@ -5,6 +5,7 @@ import Toggle from "react-toggle";
 import { FaCloudMoon, FaSun } from "react-icons/fa";
 import Helmet from "react-helmet";
 import { ThemeContext } from "../../Context/ThemeProvider";
+import { ScrollUpButton } from '../UI/Button'
 
 import "./Nav.css";
 
@@ -80,7 +81,7 @@ export default function Nav({ metaData, active }) {
                   aria-current="page"
                   href="/"
                 >
-                  About
+                 <i className='fa fa-user'></i > About
                 </a>
               </li>
               <li className="nav-item">
@@ -91,6 +92,7 @@ export default function Nav({ metaData, active }) {
                   aria-current="page"
                   href="/my-story"
                 >
+                 <i className='fa fa-history'></i > {' '}
                   My Story
                 </a>
               </li>
@@ -101,7 +103,7 @@ export default function Nav({ metaData, active }) {
                     activeLink === "projects" ? "active" : ""
                   }`}
                   href="/#projects"
-                >
+                ><i className='fa fa-folder-open'></i > {' '}
                   Projects
                 </a>
               </li>
@@ -112,7 +114,7 @@ export default function Nav({ metaData, active }) {
                     activeLink === "skills-tools" ? "active" : ""
                   }`}
                   href="/#skills-tools"
-                >
+                ><i className='fa fa-wrench'></i > {' '}
                   Skills & Tools
                 </a>
               </li>
@@ -123,7 +125,7 @@ export default function Nav({ metaData, active }) {
                     activeLink === "work" ? "active" : ""
                   }`}
                   href="/#work"
-                >
+                ><i className='fa fa-briefcase'></i> {' '}
                   Works
                 </a>
               </li>
@@ -131,17 +133,24 @@ export default function Nav({ metaData, active }) {
                 <a
                   className={`nav-link ${active === "contact" ? "active" : ""}`}
                   href="/contact"
-                >
+                ><i className='fa fa-envelope'></i > {' '}
                   Contact
                 </a>
               </li>
               <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i className='fa fa-bug'></i > {' '}
             Others
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="/copyright">Legal</a></li>
-            <li><a class="dropdown-item" href="/privacy-policy">Privacy policy</a></li>
+            <li><a class="dropdown-item" href="/copyright">
+            <i className='fa fa-gavel'></i > {' '}
+            Legal
+            </a></li>
+            <li><a class="dropdown-item" href="/privacy-policy">
+            <i className='fa fa-shield'></i > {' '}
+            Privacy policy
+            </a></li>
           </ul>
         </li>
               <li className="nav-item">
@@ -194,6 +203,7 @@ export default function Nav({ metaData, active }) {
           </div>
         </div>
       </nav>
+      <ScrollUpButton />
     </>
   );
 }

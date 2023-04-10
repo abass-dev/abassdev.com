@@ -1,0 +1,30 @@
+#scrollUpButton {
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+  z-index: 99;
+  transition: 1s;
+}
+
+#scrollUpButton div {
+  display: flex;
+  width: 40px;
+  opacity: 1;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #00835a99;
+  border-radius:100%;
+}
+#scrollUpButton div:hover {
+  background-color: #00835a;
+}
+#scrollUpButton i {
+  color: #ffffff;
+  font-size: 20px;
+}
+.hide-upbtn {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: 1s;
+}
