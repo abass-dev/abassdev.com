@@ -16,9 +16,6 @@ export default function PrivacyPolicy({ pathName }) {
     }
   }, [theme])
 
-  function handlerToggle(e) {
-    toggleTheme()
-  }
 
   const metaData = {
     title: 'Privacy policy'

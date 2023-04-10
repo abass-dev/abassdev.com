@@ -135,7 +135,15 @@ export default function Nav({ metaData, active }) {
                   Contact
                 </a>
               </li>
-
+              <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Others
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/copyright">Legal</a></li>
+            <li><a class="dropdown-item" href="/privacy-policy">Privacy policy</a></li>
+          </ul>
+        </li>
               <li className="nav-item">
                 <a aria-label="contact me" className="nav-link">
                   <Toggle

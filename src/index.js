@@ -14,7 +14,7 @@ import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
 import MyStory from "./Component/Story/MyStory";
 import Contact from "./Component/Contact";
 import { FaCloudMoon, FaSun } from "react-icons/fa";
-
+import Copyright from "./Component/Copyright";
 import NotFound from "./Component/NotFound/NotFound";
 import { CookieAlertBox } from "./Component/Cookies";
 import reportWebVitals from "./reportWebVitals";
@@ -52,6 +52,10 @@ ReactDOM.render(
               <Route
                 path="/contact"
                 element={<Contact pathName={pathName} />}
+              />
+              <Route
+                path="/copyright"
+                element={<Copyright pathName={pathName} />}
               />
               <Route
                 path="/privacy-policy"

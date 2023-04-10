@@ -6,12 +6,12 @@ export default function Footer() {
   const appVersion = packageJson.version;
 
   return (
-    <div id="contact" className="row py-4 ">
+    <div id="contact" className="row py ">
       <div className="col-md-6 mb-4 mt-4 text-center">
         <ContactForm animation={true} />
       </div>
       <div className="ff-ubuntu col-md-6 d-flex flex-column align-items-center text-center justify-content-center">
-        <h3 id="contact" className="primary-text primary-font">
+        <h3 id="contact" className="primary-text mb-4 mt-4 primary-font">
           What's Next?
         </h3>
         <h4>Let's Connect.</h4>
@@ -83,11 +83,16 @@ export default function Footer() {
             My story
           </a>
         </div>
+        <div className="m-2 rounded border p-1">
+          <a className="link-secondary" href="/copyright">
+            Legal
+          </a>
+        </div>
       </div>
 
       <p className="copyright ff-ubuntu">
-        Copyright © 2021 - {new Date().getFullYear()} Abass Dev | All rights
-        reserved. <br /> Version: {appVersion}
+        <a href='/copyright'>Copyright</a> © 2021 - {new Date().getFullYear()} Abass Dev. All rights
+        reserved. <br /> Current version: {appVersion}
       </p>
     </div>
   );
