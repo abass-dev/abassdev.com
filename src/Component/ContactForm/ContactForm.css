@@ -4,10 +4,9 @@
   justify-content: center;
 }
 .contact-form {
-  display: flex;
-  margin: 5px;
-  padding: 5px;
   flex-direction: column;
+  display: flex;
+  padding: 1rem;
 }
 
 .contact-form-input {
@@ -21,7 +20,6 @@
 }
 #contactForm {
   background-color: white;
-  padding: 24px;
   border-radius: 5px;
 }
 
@@ -34,7 +32,7 @@
   background-color: white !important;
   padding: 5px;
   font-weight: 400;
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
   margin-bottom: 15px;
 }
 
