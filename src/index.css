@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap");
 
+/* This will work on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00835a #ffffff;
+}
+
+/* Targtes on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00835a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
 .dark {
   background: #020113 !important;
 }
@@ -42,10 +61,8 @@
   color: black;
 }
 
-
 .primary-font {
   font-family: "Edu NSW ACT Foundation", cursive;
-  ;
 }
 
 html {
@@ -65,7 +82,7 @@ a {
 }
 
 .nav-bar-opacity {
-  opacity: .99;
+  opacity: 0.99;
 }
 
 .lds-ripple {
@@ -80,14 +97,14 @@ a {
 .slide-in {
   transform: translateY(0) !important;
   transform: scale(1) !important;
-  opacity: 1.0 !important;
+  opacity: 1 !important;
   transition: 1.5s;
 }
 
 .single-slide-in {
   transform: translate(0) scale(1) !important;
-  opacity: 1.0 !important;
-  transition: opacity .7s ease-in-out, transform .7s ease-in-out !important;
+  opacity: 1 !important;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out !important;
 }
 
 .anim-title {

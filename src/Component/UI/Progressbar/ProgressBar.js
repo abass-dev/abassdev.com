@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const ProgressBar = () => {
+const ProgressBar = ({ color }) => {
   const [scrollWidth, setScrollWidth] = useState(0);
 
   // Update scroll width based on scrolling position
@@ -29,7 +29,7 @@ const ProgressBar = () => {
       style={{
         width: `${scrollWidth}%`,
         height: "5px",
-        backgroundColor: "#00835a99", // Example color, you can customize it
+        backgroundColor: color === "light" ? "#00835a" : "#3c9c00", // Example color, you can customize it
         position: "fixed", // Example positioning, you can adjust it
         top: 0,
         left: 0,

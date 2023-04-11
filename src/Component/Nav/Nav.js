@@ -38,7 +38,9 @@ export default function Nav({ metaData, active }) {
   }
   return (
     <>
-      <ProgressBar />
+      <ProgressBar color={storedTheme} />
+      <ScrollUpButton />
+
       {metaData && (
         <Helmet>
           <title>Abass Dev - {metaData.title}</title>
@@ -215,7 +217,6 @@ export default function Nav({ metaData, active }) {
           </div>
         </div>
       </nav>
-      <ScrollUpButton />
     </>
   );
 }
