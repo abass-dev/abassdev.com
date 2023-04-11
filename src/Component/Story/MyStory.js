@@ -66,7 +66,7 @@ function MyStory({ pathName }) {
                       talented full-stack developer with a passion for building
                       exceptional web applications. He was born in{" "}
                       <span birthPlace="Niamey, Niger"> Niamey, Niger</span>, on{" "}
-                      <span birthDate="02-02-1995"> February 2, 1995</span>. He
+                      <span birthDate="02-02-1994"> February 2, 1994</span>. He
                       is currently {birthday("02-02-1994")}
                     </p>
                     <p itemProp="description">
