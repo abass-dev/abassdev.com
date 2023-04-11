@@ -43,6 +43,10 @@ export default function Nav({ metaData, active }) {
 
       {metaData && (
         <Helmet>
+          <meta
+            name="theme-color"
+            content={`${storedTheme === "light" ? "#ffffff" : "#020113"}`}
+          />
           <title>Abass Dev - {metaData.title}</title>
         </Helmet>
       )}
