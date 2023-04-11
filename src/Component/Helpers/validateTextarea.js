@@ -1,9 +1,10 @@
-import  Notification from '../Notification'
+import Notification from "../Notification";
 
 export default function validateTextarea(textareaId, minLength, maxLength) {
   const notyf = new Notification(3000);
   const textarea = document.getElementById(textareaId);
-  const textareaLength = textarea.value.length;
+  const textareaValue = textarea.value.trim();
+  const textareaLength = textareaValue.length;
   if (textareaLength < minLength) {
     notyf.error(`Your message should be more than ${minLength} characters`);
     return false;
