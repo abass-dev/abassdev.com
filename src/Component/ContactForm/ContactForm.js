@@ -7,10 +7,10 @@ import {
   FaSun
 } from "react-icons/fa";
 import {
-  Notification,
   validateEmail,
   validateTextarea
 } from "../Helpers";
+import Notification from '../Notification'
 import emailjs from "@emailjs/browser";
 
 const notyf = new Notification(3000);
@@ -145,10 +145,10 @@ export default function ContactForm() {
         disabled={isLoading ? true: false}
         className="btn btn-outline-primary form-submit-button"
         >
-          {isLoading ? (<span>SENDING... <div class="spinner-border text-white" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-        </span>): (<span>SEND <i className="fa fa-paper-plane"></i></span>) }
+          {isLoading ?
+          (<span>SENDING... <i className="fa fa-spinner"></i></span>)
+          :
+          (<span>SEND <i className="fa fa-paper-plane"></i></span>)}
         </button>
     </form>
     </div>

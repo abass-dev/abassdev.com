@@ -2,7 +2,7 @@ import React, { useRef, useContext, useState, useEffect } from "react";
 import { Footer } from "../";
 import Nav from "../Nav/Nav";
 import { ThemeContext } from "../../Context/ThemeProvider";
-
+import { birthday } from '../Helpers'
 import Title from "../SEO/Title";
 import { SingleSlideAnim } from "../Util/Util";
 import aboutImage from "../../assets/images/abassdev-about.png";
@@ -25,22 +25,6 @@ function MyStory({ pathName }) {
 
   function handlerToggle(e) {
     toggleTheme();
-  }
-
-  function birthday(date2Str) {
-    const date1 = new Date();
-    const date2 = new Date(date2Str);
-
-    const diffTime = Math.abs(date2 - date1);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    const diffYears = Math.floor(diffDays / 365);
-    const diffMonths = Math.floor((diffDays - diffYears * 365) / 30);
-    const diffDaysRemaining = diffDays - diffYears * 365 - diffMonths * 30;
-
-    const formattedDiff = `${diffYears} years, ${diffMonths} months, and ${diffDaysRemaining} days old today.`;
-
-    return formattedDiff;
   }
 
   const metaData = {
@@ -83,7 +67,7 @@ function MyStory({ pathName }) {
                       exceptional web applications. He was born in{" "}
                       <span birthPlace="Niamey, Niger"> Niamey, Niger</span>, on{" "}
                       <span birthDate="02-02-1995"> February 2, 1995</span>. He
-                      is currently {birthday("02-02-1995")}
+                      is currently {birthday("02-02-1994")}
                     </p>
                     <p itemProp="description">
                       At a young age of 14 in 2009, Abass Dev became fascinated
