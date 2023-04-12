@@ -87,7 +87,7 @@ export default function Project() {
           </div>
 
           <div ref={formBuilderRef} className="col-md-6 mb-4">
-            <div className="projetRefId slide-first card border-0 shadow-sm">
+            <div className="projetRefId slide-second card border-0 shadow-sm">
               <img
                 alt="BOSP FormBuilder"
                 className="card-img-top"
@@ -146,7 +146,7 @@ export default function Project() {
           </div>
           
            <div ref={portfolioRef} className="col-md-6 mb-4">
-            <div  className="projetRefId card border-0 shadow-sm slide-second">
+            <div  className="projetRefId card border-0 shadow-sm slide-first">
               <img
                 alt="Abass Dev portfolio code source (Gitbub)"
                 className="card-img-top"

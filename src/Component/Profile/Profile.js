@@ -40,7 +40,7 @@ export default function Profile() {
             ref={profileImageRef}
             className="row py-4 m-1 align-items-center rounded shadow-sm"
           >
-            <div className="profileImageRefId slide-second col-md-4 my-4 py-4">
+            <div className="profileImageRefId zoom-in col-md-4 my-4 py-4">
               <img
                 width="100%"
                 height="auto"

@@ -4,10 +4,13 @@ import { FaCloudMoon, FaSun } from "react-icons/fa";
 import { validateEmail, validateTextarea } from "../Helpers";
 import Notification from "../Notification";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 const notyf = new Notification(3000);
 
 export default function ContactForm() {
+  const [captchaResponse, setCaptchaResponse] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
     name: null,
     email: null,
@@ -32,8 +35,27 @@ export default function ContactForm() {
     });
   }
 
-  function onSubmitEmailHandler(event) {
+  async function onSubmitEmailHandler(event) {
     event.preventDefault();
+    // Verify reCAPTCHA response
+    try {
+      const response = await axios.post("https://www.google.com/recaptcha/api/siteverify", {
+        secret: '6LfbwYAlAAAAADnm3YgAYuQufxBQXqfQMjdRmVuO',
+        response: captchaResponse
+      });
+      if (response.data.success) {
+        alert(response.data.success)
+        // The reCAPTCHA response was valid, process the form submission
+        // ...
+      } else {
+        // The reCAPTCHA response was invalid, handle the error
+        // ...
+      }
+    } catch (error) {
+        alert(error)
+      // Handle the error
+      // ...
+    }
     const valideEmail = validateEmail(userInput.email);
     if (userInput.name.trim() === "" || userInput.name.trim() === " ") {
       setInvalidInput((prev) => {
@@ -96,6 +118,7 @@ export default function ContactForm() {
     const templateParams = {
       user_name: name,
       user_email: email,
+      reply_to: email,
       message,
     };
     setLoading(true);
@@ -120,7 +143,9 @@ export default function ContactForm() {
         }
       );
   }
-
+  const handleCaptchaChange = (value) => {
+    setCaptchaResponse(value);
+  }; 
   return (
     <div id="contactFormContainer" className="my-container ff-ubuntu">
       <form
@@ -128,6 +153,7 @@ export default function ContactForm() {
         className="contact-form shadow-sm"
         id="contactForm"
       >
+      <ReCAPTCHA sitekey={'6LfbwYAlAAAAADnm3YgAYuQufxBQXqfQMjdRmVuO'} onChange={handleCaptchaChange}/>
         <h2 className="primary-font text-center">Let's Chat</h2>
         <div className="contact-form-input">
           <label
@@ -138,6 +164,7 @@ export default function ContactForm() {
             Name:
           </label>
           <input
+          type='text'
             style={{ borderColor: invalidInput.name && "red" }}
             value={userInput.name}
             onChange={inputHander}
@@ -155,6 +182,7 @@ export default function ContactForm() {
             Email:
           </label>
           <input
+            type='email'
             style={{ borderColor: invalidInput.email && "red" }}
             onChange={inputHander}
             value={userInput.email}
@@ -181,6 +209,7 @@ export default function ContactForm() {
           />
         </div>
         <button
+        type='submit'
           disabled={isLoading ? true : false}
           className="btn btn-outline-primary form-submit-button"
         >
