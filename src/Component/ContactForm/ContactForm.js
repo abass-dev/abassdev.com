@@ -10,9 +10,8 @@ import axios from "axios";
 const notyf = new Notification(3000);
 
 export default function ContactForm() {
-  const RECAPTCHA_SECRET_KEY = "6LfS9IUlAAAAAAAxhNW4w5G7N__VDhZtQ3IPlXj4";
-  const RECAPTCHA_SITE_KEY = "6LfS9IUlAAAAAEDxIMkqUMYPDKvfxPEaIgpzQZKu";
-
+  const RECAPTCHA_SECRET_KEY = "6Le4aYElAAAAAGvJRaAi_sMKZY8vhqG-9P9GMlEP";
+  const RECAPTCHA_SITE_KEY = "6Le4aYElAAAAAMwu4zGc9c8WKtP-E-f6zy5zJqlh";
   const [captchaResponse, setCaptchaResponse] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
     name: null,
@@ -45,10 +44,6 @@ export default function ContactForm() {
       const response = await axios.post(
         "https://www.google.com/recaptcha/api/siteverify",
         {
-          headers: {
-            "Cache-Control": "no-cache", // Set the Cache-Control header to 'no-cache'
-          },
-
           secret: RECAPTCHA_SECRET_KEY,
           response: captchaResponse,
         }
