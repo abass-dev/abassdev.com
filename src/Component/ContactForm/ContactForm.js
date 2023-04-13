@@ -12,6 +12,7 @@ const notyf = new Notification(3000);
 export default function ContactForm() {
   const RECAPTCHA_SECRET_KEY = "6LfS9IUlAAAAAAAxhNW4w5G7N__VDhZtQ3IPlXj4";
   const RECAPTCHA_SITE_KEY = "6LfS9IUlAAAAAEDxIMkqUMYPDKvfxPEaIgpzQZKu";
+
   const [captchaResponse, setCaptchaResponse] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
     name: null,
@@ -47,6 +48,7 @@ export default function ContactForm() {
           headers: {
             "Cache-Control": "no-cache", // Set the Cache-Control header to 'no-cache'
           },
+
           secret: RECAPTCHA_SECRET_KEY,
           response: captchaResponse,
         }
