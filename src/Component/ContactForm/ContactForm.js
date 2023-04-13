@@ -10,6 +10,8 @@ import axios from "axios";
 const notyf = new Notification(3000);
 
 export default function ContactForm() {
+  const RECAPTCHA_SECRET_KEY = "6Le4aYElAAAAAGvJRaAi_sMKZY8vhqG-9P9GMlEP";
+  const RECAPTCHA_SITE_KEY = "6Le4aYElAAAAAMwu4zGc9c8WKtP-E-f6zy5zJqlh";
   const [captchaResponse, setCaptchaResponse] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
     name: null,
@@ -39,12 +41,16 @@ export default function ContactForm() {
     event.preventDefault();
     // Verify reCAPTCHA response
     try {
-      const response = await axios.post("https://www.google.com/recaptcha/api/siteverify", {
-        secret: '6LfbwYAlAAAAADnm3YgAYuQufxBQXqfQMjdRmVuO',
-        response: captchaResponse
-      });
+      const response = await axios.post(
+        "https://www.google.com/recaptcha/api/siteverify",
+        {
+          secret: RECAPTCHA_SECRET_KEY,
+          response: captchaResponse,
+        }
+      );
+      console.log(response);
       if (response.data.success) {
-        alert(response.data.success)
+        console.log(response.data.success);
         // The reCAPTCHA response was valid, process the form submission
         // ...
       } else {
@@ -52,7 +58,7 @@ export default function ContactForm() {
         // ...
       }
     } catch (error) {
-        alert(error)
+      console.log(error);
       // Handle the error
       // ...
     }
@@ -145,7 +151,7 @@ export default function ContactForm() {
   }
   const handleCaptchaChange = (value) => {
     setCaptchaResponse(value);
-  }; 
+  };
   return (
     <div id="contactFormContainer" className="my-container ff-ubuntu">
       <form
@@ -153,7 +159,10 @@ export default function ContactForm() {
         className="contact-form shadow-sm"
         id="contactForm"
       >
-      <ReCAPTCHA sitekey={'6LfbwYAlAAAAADnm3YgAYuQufxBQXqfQMjdRmVuO'} onChange={handleCaptchaChange}/>
+        <ReCAPTCHA
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={handleCaptchaChange}
+        />
         <h2 className="primary-font text-center">Let's Chat</h2>
         <div className="contact-form-input">
           <label
@@ -164,7 +173,7 @@ export default function ContactForm() {
             Name:
           </label>
           <input
-          type='text'
+            type="text"
             style={{ borderColor: invalidInput.name && "red" }}
             value={userInput.name}
             onChange={inputHander}
@@ -182,7 +191,7 @@ export default function ContactForm() {
             Email:
           </label>
           <input
-            type='email'
+            type="email"
             style={{ borderColor: invalidInput.email && "red" }}
             onChange={inputHander}
             value={userInput.email}
@@ -209,7 +218,7 @@ export default function ContactForm() {
           />
         </div>
         <button
-        type='submit'
+          type="submit"
           disabled={isLoading ? true : false}
           className="btn btn-outline-primary form-submit-button"
         >
