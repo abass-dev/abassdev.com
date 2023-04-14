@@ -68,55 +68,66 @@ export default function Profile() {
                   community. I am also the creator of the{" "}
                   <a href="https://github.com/nigaphp">NigaPHP</a> framework.
                 </p>
-                <a className="mb-4" href="/my-story">
-                   Read more about me...
-                  </a>
-                <div className="col-12 mt-2 mt-4 text-center profile-socieal-links">
-                  <a
-                    aria-label="my facebook"
-                    href="https://m.facebook.com/abassthedev"
-                  >
-                    <i className="text-secondary fa fa-facebook"></i>
-                  </a>
-                  <a
-                    aria-label="my Twitter"
-                    href="https://twitter.com/abass_dev"
-                  >
-                    <i className="text-secondary fa fa-twitter"></i>
-                  </a>
-                  <a aria-label="my github" href="https://github.com/abass-dev">
-                    <i className="text-secondary fa fa-github"></i>
-                  </a>
-                  <a
-                    aria-label="my linkedin"
-                    href="https://www.linkedin.com/in/abassdev"
-                  >
-                    <i className="text-secondary fa fa-linkedin"></i>
-                  </a>
-                  <a
-                    aria-label="instagram"
-                    href="https://www.instagram.com/abassdev"
-                  >
-                    <i className="text-secondary fa fa-instagram"></i>
-                  </a>
-                  <a
-                    aria-label="my pinterest"
-                    href="https://www.pinterest.com/abassdev"
-                  >
-                    <i className="text-secondary fa fa-pinterest"></i>
-                  </a>
-                  <a aria-label="contact me" href="/contact">
-                    <i className="text-secondary fa fa-envelope"></i>
-                  </a>
+
+                <div className="col-12 mt-4 text-center profile-socieal-links">
+                  <div className="row align-items-center">
+                    <div className="col-md-8">
+                      <a
+                        aria-label="my facebook"
+                        href="https://m.facebook.com/abassthedev"
+                      >
+                        <i className="text-secondary fa fa-facebook"></i>
+                      </a>
+                      <a
+                        aria-label="my Twitter"
+                        href="https://twitter.com/abass_dev"
+                      >
+                        <i className="text-secondary fa fa-twitter"></i>
+                      </a>
+                      <a
+                        aria-label="my github"
+                        href="https://github.com/abass-dev"
+                      >
+                        <i className="text-secondary fa fa-github"></i>
+                      </a>
+                      <a
+                        aria-label="my linkedin"
+                        href="https://www.linkedin.com/in/abassdev"
+                      >
+                        <i className="text-secondary fa fa-linkedin"></i>
+                      </a>
+                      <a
+                        aria-label="instagram"
+                        href="https://www.instagram.com/abassdev"
+                      >
+                        <i className="text-secondary fa fa-instagram"></i>
+                      </a>
+                      <a
+                        aria-label="my pinterest"
+                        href="https://www.pinterest.com/abassdev"
+                      >
+                        <i className="text-secondary fa fa-pinterest"></i>
+                      </a>
+                      <a aria-label="contact me" href="/contact">
+                        <i className="text-secondary fa fa-envelope"></i>
+                      </a>
+                    </div>
+                    <div className="col-md-4 mt-4 mt-md-0">
+                      <a
+                        href="../../assets/pdf/abass_cv_en.pdf"
+                        download
+                        className="btn btn-sm btn-secondary text-white"
+                      >
+                        Download CV <span className=" fa fa-download"></span>
+                      </a>
+                    </div>
+                    <div className="col-12 mt-4">
+                      <a className="mb-4" href="/my-story">
+                        Read more about me...
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <br />
-                <a
-                  href="../../assets/pdf/abass_cv_en.pdf"
-                  download
-                  className="btn btn-secondary text-white"
-                >
-                  Download CV <span className=" fa fa-download"></span>
-                </a>
               </div>
             </div>
           </div>
