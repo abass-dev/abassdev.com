@@ -18,8 +18,9 @@ export default function Copyright() {
   const metaData = { title: 'Copyright' }
   
   return (
-    <div style={{minHeight: '100vh'}} id={storedTheme && storedTheme}>
+    <>
     <Nav metaData={metaData} action='copyright'/>
+    <div id={storedTheme && storedTheme}>
       <div className='container'>
        <div className='row'>
         <div className='col'>
@@ -38,10 +39,11 @@ export default function Copyright() {
                    </div>
                  </div>
                </div>
-         <Footer />
          </div>
        </div>
       </div>
+     <Footer />
     </div>
+    </>
   )
 }

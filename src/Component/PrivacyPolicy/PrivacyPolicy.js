@@ -58,9 +58,9 @@ export default function PrivacyPolicy({ pathName }) {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </div>
+          <Footer />
     </div>
   )
 }
