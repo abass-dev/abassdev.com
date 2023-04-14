@@ -57,7 +57,7 @@ function MyStory({ pathName }) {
                     </div>
                   )}
                   <div id="storyRefId" className="p-3">
-                    <h1 itemProp="description" id="whoisabassdev">
+                    <h1 itemProp="name" id="whoisabassdev">
                       Who is Abass Dev?
                     </h1>
                     <p itemProp="description">

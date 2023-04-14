@@ -51,6 +51,8 @@ export default function Profile() {
               />
             </div>
             <div
+              itemscope=""
+              itemtype="http://schema.org/Person"
               ref={profileContentRef}
               className="col-md-8 text-center ff-ubuntu"
             >

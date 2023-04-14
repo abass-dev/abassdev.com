@@ -211,7 +211,10 @@ export default function ContactForm() {
             Message:
           </label>
           <textarea
-            style={{ borderColor: invalidInput.message && "red" }}
+            style={{
+              minHeight: "50px",
+              borderColor: invalidInput.message && "red",
+            }}
             value={userInput.eamil}
             onChange={inputHander}
             placeholder="Hi, What's up?"
