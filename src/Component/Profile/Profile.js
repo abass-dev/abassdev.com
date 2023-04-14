@@ -33,6 +33,7 @@ export default function Profile() {
                 2000,
               ]}
               loop={Infinity}
+              wrapper="p"
             />
           </h2>
           <div
@@ -67,7 +68,10 @@ export default function Profile() {
                   community. I am also the creator of the{" "}
                   <a href="https://github.com/nigaphp">NigaPHP</a> framework.
                 </p>
-                <div className="col-12 mt-2 text-center profile-socieal-links">
+                <a className="mb-4" href="/my-story">
+                   Read more about me...
+                  </a>
+                <div className="col-12 mt-2 mt-4 text-center profile-socieal-links">
                   <a
                     aria-label="my facebook"
                     href="https://m.facebook.com/abassthedev"
@@ -111,12 +115,11 @@ export default function Profile() {
                   download
                   className="btn btn-secondary text-white"
                 >
-                  RESUME <span className=" fa fa-download"></span>
+                  Download CV <span className=" fa fa-download"></span>
                 </a>
               </div>
             </div>
           </div>
-          <MyStory />
         </div>
       </div>
     </div>

@@ -109,7 +109,7 @@ export default function Nav({ metaData, active }) {
                   className={`nav-link ${
                     activeLink === "projects" ? "active" : ""
                   }`}
-                  href="/#projects"
+                  href="/projects"
                 >
                   <i className="fa fa-folder-open"></i> Projects
                 </a>

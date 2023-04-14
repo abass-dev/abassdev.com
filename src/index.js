@@ -12,6 +12,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { CookiesProvider } from "react-cookie";
 import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
 import MyStory from "./Component/Story/MyStory";
+import Project from "./Component/Project/Project";
 import Contact from "./Component/Contact";
 import { FaCloudMoon, FaSun } from "react-icons/fa";
 import Copyright from "./Component/Copyright";
@@ -61,6 +62,10 @@ ReactDOM.render(
                 path="/privacy-policy"
                 element={<PrivacyPolicy pathName={pathName} />}
               />
+            <Route
+              path="/projects"
+              element={<Project pathName={pathName} />}
+            />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

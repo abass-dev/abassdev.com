@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext, useState, useEffect} from "react";
 import "font-awesome/css/font-awesome.min.css";
 import projectCode from "../../assets/images/project-nigatedev.jpg";
 import projectPortfolio from "../../assets/images/project-portfolio.png";
@@ -6,9 +6,11 @@ import projectSocialContributionApp from "../../assets/images/social_contributio
 import projectPHPCode from "../../assets/images/php_code.jpg";
 import projectReactNative1 from "../../assets/images/screenshot.jpg";
 import { SingleSlideAnim } from '../Util/Util'
+import { Footer, Nav } from '../'
+import { ThemeContext } from "../../Context/ThemeProvider";
 import "./Project.css";
 
-export default function Project() {
+export default function Project({pathName}) {
   const nigaPHPRef = useRef(null)
   const portfolioRef = useRef(null)
   const formBuilderRef = useRef(null)
@@ -20,17 +22,34 @@ export default function Project() {
   SingleSlideAnim(portfolioRef, '.projetRefId')
   SingleSlideAnim(formBuilderRef, '.projetRefId')
   SingleSlideAnim(dinacardRef, '.projetRefId')
-  SingleSlideAnim(socialAppRef, '.projetRefId')
-  SingleSlideAnim(portfolioApkRef , '.projetRefId')
+  
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [storedTheme, setStoredTheme] = useState("light");
+  const localStorage = window.localStorage;
+
+  useEffect(() => {
+    let sthm = localStorage.getItem("theme");
+    if (sthm) {
+      setStoredTheme(sthm);
+    }
+  }, [theme]);
+
+  const metaData = {
+    title: 'Projects'
+  }
   
   return (
-    <div className="home-container mb-4">
+    <div id={pathName ? storedTheme : ""}>
+     {pathName && <Nav metaData={metaData} active={'projects'} />}
+     
+    <div className="home-container mt-4">
       <div className="container-lg">
         <div className="row">
           <div className="col-md-12">
-            <h1 id="projects" className="mb-4 primary-text primary-font text-center">
+            <h1 id="projects" className={`mb-4 primary-text primary-font ${!pathName && 'text-center'}`}>
               Notable projects 
             </h1>
+           {pathName && <p className='text-center after-title'></p> }
           </div>
           <div ref={nigaPHPRef} className="col-md-6 mb-4">
             <div className="projetRefId card border-0 shadow-sm slide-first">
@@ -194,7 +213,7 @@ export default function Project() {
             </div>
           </div>
           
-          <div ref={dinacardRef} className="col-md-6 mb-4">
+          <div ref={dinacardRef} className="col-md-6">
             <div className="projetRefId slide-second card border-0 shadow-sm">
               <img alt="" className="card-img-top" src={projectCode} />
               <div className="card-body ">
@@ -241,7 +260,11 @@ export default function Project() {
               </div>
             </div>
           </div>
-
+          
+          {pathName &&
+          <>
+         {SingleSlideAnim(portfolioApkRef , '.projetRefId')}
+         {SingleSlideAnim(socialAppRef, '.projetRefId')} 
           <div ref={socialAppRef} className="col-md-6 mb-4">
             <div className="card projetRefId slide-first border-0 shadow-sm">
               <img
@@ -302,8 +325,13 @@ export default function Project() {
               </div>
             </div>
           </div>
+          </>
+          }
+         {!pathName && <a className='mb-4 mt-1' href='/projects' >See more projects...</a> }
         </div>
       </div>
+    </div>
+    {pathName && <Footer /> }
     </div>
   );
 }

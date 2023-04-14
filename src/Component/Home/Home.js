@@ -1,4 +1,4 @@
-import { Profile, Skill, Project, Work, Footer } from "../";
+import { Profile, Skill, Project, Work, Footer, MyStory } from "../";
 import { LatestPosts } from "../Blog";
 import { CookieAlertBox } from "../Cookies";
 import Toggle from "react-toggle";
@@ -28,6 +28,7 @@ const Home = () => {
       <Nav active={"home"} />
       <div className="container-lg">
         <Profile />
+        <MyStory />
         <Project />
         <Skill />
         <Work />

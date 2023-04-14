@@ -23,9 +23,6 @@ function MyStory({ pathName }) {
     }
   }, [theme]);
 
-  function handlerToggle(e) {
-    toggleTheme();
-  }
 
   const metaData = {
     title: "My story",
@@ -41,11 +38,10 @@ function MyStory({ pathName }) {
         <div className="container">
           <div className="row ff-ubuntu">
             <div className="col-md-12">
-              <h1 className="text-start primary-font primary-text fw-bold">
-                My story
-              </h1>
-              <p className="after-title"></p>
-
+             <h1 className={`mb-4 primary-text primary-font ${!pathName && 'text-center'}`}>
+              My story
+            </h1>
+           {pathName && <p className='text-center after-title'></p> }
               <div id="myStory" ref={storyRef} about="Who is Abass Dev">
                 <div className="shadow-sm storyRefId slide-first">
                   {pathName && (
@@ -57,7 +53,7 @@ function MyStory({ pathName }) {
                       />
                     </div>
                   )}
-                  <div id="storyRefId" className="p-3 lead">
+                  <div id="storyRefId" className="p-3">
                     <h1 itemProp="description" id="whoisabassdev">
                       Who is Abass Dev?
                     </h1>
@@ -117,23 +113,18 @@ function MyStory({ pathName }) {
                         </p>
                       </>
                     ) : (
-                      <a className="link" href="/my-story">
+                      <a className='mb-2' href="/my-story">
                         Read more about me...
                       </a>
                     )}
                   </div>
                 </div>
               </div>
-              {pathName && (
-                <div className="col-12">
-                  {" "}
-                  <Footer />{" "}
-                </div>
-              )}
             </div>
           </div>
         </div>
       </div>
+     {pathName && <Footer />}
     </div>
   );
 }
