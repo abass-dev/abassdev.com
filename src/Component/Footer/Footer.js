@@ -6,7 +6,8 @@ export default function Footer({ desableContacForm }) {
   const appVersion = packageJson.version;
 
   return (
-    <div id="contact" className="row mt-5">
+    <div id="contact" className="container-lg">
+    <div className="row">
       {desableContacForm ? (
         ""
       ) : (
@@ -110,6 +111,7 @@ export default function Footer({ desableContacForm }) {
         <a href="/copyright">Copyright</a> © 2021 - {new Date().getFullYear()}{" "}
         Abass Dev. All rights reserved. <br /> Current version: {appVersion}
       </p>
+    </div>
     </div>
   );
 }
