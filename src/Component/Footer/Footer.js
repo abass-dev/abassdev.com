@@ -1,19 +1,25 @@
 import React from "react";
 import ContactForm from "../ContactForm";
 import "./Footer.css";
-export default function Footer() {
+export default function Footer({ desableContacForm }) {
   const packageJson = require("../../../package.json");
   const appVersion = packageJson.version;
 
   return (
-    <div id="contact" className="row py ">
-      <div className="col-md-6 mb-4 mt-4 text-center">
-        <ContactForm animation={true} />
-      </div>
-      <div className="ff-ubuntu col-md-6 d-flex flex-column align-items-center text-center justify-content-center">
-        <h3 id="contact" className="primary-text mb-4 mt-4 primary-font">
-          What's Next?
-        </h3>
+    <div id="contact" className="row">
+      {desableContacForm ? (
+        ""
+      ) : (
+        <div className="col-md-6 mb-4 mt-4 text-center">
+          <ContactForm />
+        </div>
+      )}
+      <div
+        className={`f-ubuntu text-white ${
+          desableContacForm ? "col-12" : "col-md-6"
+        } d-flex flex-column align-items-center text-center justify-content-center`}
+      >
+        <h3 className="primary-text mb-4 mt-4 primary-font">What's Next?</h3>
         <h4>Let's Connect.</h4>
         <p>
           If you're interested in working on a project or have any questions,
@@ -22,77 +28,87 @@ export default function Footer() {
         </p>
         <div className="profile-socieal-links mb-4">
           <a
-            className="text-secondary"
+            className="text-light"
             aria-label="my facebook"
             href="https://m.facebook.com/abassthedev"
           >
             <i className="fa fa-facebook"></i>
           </a>
           <a
-            className="text-secondary"
+            className="text-light"
             aria-label="my Twitter"
             href="https://twitter.com/abass_dev"
           >
             <i className="fa fa-twitter"></i>
           </a>
           <a
-            className="text-secondary"
+            className="text-light"
             aria-label="my github"
             href="https://github.com/abass-dev"
           >
             <i className="fa fa-github"></i>
           </a>
           <a
-            className="text-secondary"
+            className="text-light"
             aria-label="my linkedin"
             href="https://www.linkedin.com/in/abassdev"
           >
             <i className="fa fa-linkedin"></i>
           </a>
           <a
-            className="text-secondary"
+            className="text-light"
             aria-label="my instagram"
             href="https://www.instagram.com/abassdev"
           >
             <i className="fa fa-instagram"></i>
           </a>
           <a
-            className="text-secondary"
+            className="text-light"
             aria-label="my pinterest"
             href="https://www.pinterest.com/abassdev"
           >
             <i className="fa fa-pinterest"></i>
           </a>
-          <a className="text-secondary" aria-label="contact me" href="/contact">
+          <a className="text-light" aria-label="contact me" href="/contact">
             <i className="fa fa-envelope"></i>
           </a>
         </div>
         <h3 className="h4 primary-font primary-text">Others</h3>
-        <div className="m-2 rounded border p-1">
-          <a className="link-secondary" href="/privacy-policy">
-            Privacy Policy
-          </a>
-        </div>
-        <div className="m-2 rounded border p-1">
-          <a className="link-secondary" href="/contact">
-            Contact me
-          </a>
-        </div>
-        <div className="m-2 rounded border p-1">
-          <a className="link-secondary" href="/my-story">
-            My story
-          </a>
-        </div>
-        <div className="m-2 rounded border p-1">
-          <a className="link-secondary" href="/copyright">
-            Legal
-          </a>
+        <div className="row">
+          <div className="col-6">
+            <div className="p-1">
+              <a className="link-secondary" href="/privacy-policy">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="">
+              <a className="link-secondary" href="/contact">
+                Contact me
+              </a>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="">
+              <a className="link-secondary" href="/copyright">
+                Legal
+              </a>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="">
+              <a className="link-secondary" href="/my-story">
+                My story
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <p className="copyright ff-ubuntu">
-        <a href='/copyright'>Copyright</a> © 2021 - {new Date().getFullYear()} Abass Dev. All rights
-        reserved. <br /> Current version: {appVersion}
+      <p className="copyright ff-ubuntu p-5 text-white">
+        <a href="/copyright">Copyright</a> © 2021 - {new Date().getFullYear()}{" "}
+        Abass Dev. All rights reserved. <br /> Current version: {appVersion}
       </p>
     </div>
   );

@@ -42,23 +42,29 @@ export default function ReactInOne() {
     );
   };
 
-  const code = `
-  function greet() {
-    console.log("Hello, world!");
-  }
-  greet();
+  const code = `const Button = ({ label, onClick }) => (
+    <button onClick={onClick}>{label}</button>
+  );
+  
 `;
 
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-12">
           <h1>React in one</h1>
+        </div>
+
+        <div className="col-md-6">
           <CodeSnippet code={code} />
         </div>
         <div className="col-md-6">
-          <h1>React in one</h1>
-          <CodeSnippet code={code} />
+          Description: This is a functional component in React that represents a
+          button element. It takes in two props, label and onClick, and renders
+          a button element with the label prop as its text content. When the
+          button is clicked, the function passed as the onClick prop will be
+          executed. This can be used as a reusable and customizable button
+          component in a React application.
         </div>
       </div>
     </div>

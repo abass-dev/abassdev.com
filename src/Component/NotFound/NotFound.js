@@ -1,6 +1,6 @@
 import "./NotFound.css";
 
-const NotFound = () => {
+const NotFound = ({ pathName }) => {
   return (
     <div class="d-flex align-items-center justify-content-center vh-100">
       <div class="text-center row">
@@ -16,6 +16,7 @@ const NotFound = () => {
             {" "}
             <span class="text-danger">Opps!</span> Page not found.
           </p>
+          <code>{pathName}</code>
           <p class="lead">The page you’re looking for doesn’t exist.</p>
           <a href="/" class="btn btn-primary">
             Go Home

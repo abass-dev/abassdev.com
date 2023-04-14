@@ -39,7 +39,7 @@ export default function Profile() {
           <div
             id="about"
             ref={profileImageRef}
-            className="row py-4 m-1 align-items-center rounded shadow-sm"
+            className="row py-4 m-1 align-items-center shadow-sm"
           >
             <div className="profileImageRefId zoom-in col-md-4 my-4 py-4">
               <img

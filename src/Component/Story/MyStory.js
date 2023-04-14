@@ -2,7 +2,7 @@ import React, { useRef, useContext, useState, useEffect } from "react";
 import { Footer } from "../";
 import Nav from "../Nav/Nav";
 import { ThemeContext } from "../../Context/ThemeProvider";
-import { birthday } from '../Helpers'
+import { birthday } from "../Helpers";
 import Title from "../SEO/Title";
 import { SingleSlideAnim } from "../Util/Util";
 import aboutImage from "../../assets/images/abassdev-about.png";
@@ -12,7 +12,7 @@ function MyStory({ pathName }) {
   const storyRef = useRef(null);
   SingleSlideAnim(storyRef, ".storyRefId");
 
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [storedTheme, setStoredTheme] = useState("light");
   const localStorage = window.localStorage;
 
@@ -22,7 +22,6 @@ function MyStory({ pathName }) {
       setStoredTheme(sthm);
     }
   }, [theme]);
-
 
   const metaData = {
     title: "My story",
@@ -38,10 +37,14 @@ function MyStory({ pathName }) {
         <div className="container">
           <div className="row ff-ubuntu">
             <div className="col-md-12">
-             <h1 className={`mb-4 primary-text primary-font ${!pathName && 'text-center'}`}>
-              My story
-            </h1>
-           {pathName && <p className='text-center after-title'></p> }
+              <h1
+                className={`mb-4 primary-text primary-font ${
+                  !pathName && "text-center"
+                }`}
+              >
+                My story
+              </h1>
+              {pathName && <p className="text-center after-title"></p>}
               <div id="myStory" ref={storyRef} about="Who is Abass Dev">
                 <div className="shadow-sm storyRefId slide-first">
                   {pathName && (
@@ -113,7 +116,7 @@ function MyStory({ pathName }) {
                         </p>
                       </>
                     ) : (
-                      <a className='mb-2' href="/my-story">
+                      <a className="mb-2" href="/my-story">
                         Read more about me...
                       </a>
                     )}
@@ -124,7 +127,7 @@ function MyStory({ pathName }) {
           </div>
         </div>
       </div>
-     {pathName && <Footer />}
+      {pathName && <Footer />}
     </div>
   );
 }

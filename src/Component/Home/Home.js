@@ -33,8 +33,8 @@ const Home = () => {
         <Skill />
         <Work />
         <LatestPosts />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

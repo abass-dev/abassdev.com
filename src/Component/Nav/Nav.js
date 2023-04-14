@@ -107,7 +107,7 @@ export default function Nav({ metaData, active }) {
                 <a
                   onClick={handleClick}
                   className={`nav-link ${
-                    activeLink === "projects" ? "active" : ""
+                    active === "projects" ? "active" : ""
                   }`}
                   href="/projects"
                 >

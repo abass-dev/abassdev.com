@@ -1,7 +1,11 @@
 .copyright {
-    text-align: center;
-    padding-top: 4rem;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-family: Monospace;
+  text-align: center;
+  padding-top: 4rem;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: Monospace;
+}
+
+#light #contact {
+  background: #111023 !important;
 }

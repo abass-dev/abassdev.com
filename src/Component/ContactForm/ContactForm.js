@@ -159,10 +159,12 @@ export default function ContactForm() {
         className="contact-form shadow-sm"
         id="contactForm"
       >
-        <ReCAPTCHA
-          sitekey={RECAPTCHA_SITE_KEY}
-          onChange={handleCaptchaChange}
-        />
+        {
+          // <ReCAPTCHA
+          //   sitekey={RECAPTCHA_SITE_KEY}
+          //  onChange={handleCaptchaChange}
+          //  />
+        }
         <h2 className="primary-font text-center">Let's Chat</h2>
         <div className="contact-form-input">
           <label

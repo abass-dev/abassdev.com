@@ -65,11 +65,7 @@ ReactDOM.render(
                 path="/projects"
                 element={<Project pathName={pathName} />}
               />
-              <Route
-                path="/all-in-one/react-in-one"
-                element={<ReactInOne pathName={pathName} />}
-              />
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<NotFound pathName={pathName} />} />
             </Routes>
           </BrowserRouter>
         </Suspense>
