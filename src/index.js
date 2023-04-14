@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "react-toggle/style.css"; // for ES6 modules
-import Toggle from "react-toggle";
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
@@ -14,14 +13,14 @@ import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
 import MyStory from "./Component/Story/MyStory";
 import Project from "./Component/Project/Project";
 import Contact from "./Component/Contact";
-import { FaCloudMoon, FaSun } from "react-icons/fa";
 import Copyright from "./Component/Copyright";
 import NotFound from "./Component/NotFound/NotFound";
 import { CookieAlertBox } from "./Component/Cookies";
 import reportWebVitals from "./reportWebVitals";
 import TagManager from "react-gtm-module";
-import ThemeProvider, { ThemeContext } from "./Context/ThemeProvider";
+import ThemeProvider from "./Context/ThemeProvider";
 import "./index.css";
+import { ReactInOne } from "./Component/AllInOne";
 
 const tagManagerArgs = {
   gtmId: "G-N8ZTB9NPSP",
@@ -62,10 +61,17 @@ ReactDOM.render(
                 path="/privacy-policy"
                 element={<PrivacyPolicy pathName={pathName} />}
               />
+<<<<<<< HEAD
             <Route
               path="/projects"
               element={<Project pathName={pathName} />}
             />
+=======
+              <Route
+                path="/all-in-one/react-in-one"
+                element={<ReactInOne pathName={pathName} />}
+              />
+>>>>>>> 7b40b87 (feat: loading...)
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

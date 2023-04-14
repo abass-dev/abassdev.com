@@ -1,8 +1,6 @@
-import ContactForm from "../ContactForm";
 import Nav from "../Nav/Nav";
-import { Footer }  from "../";
+import { Footer } from "../";
 import { ThemeContext } from "../../Context/ThemeProvider";
-
 import { useState, useEffect, useContext } from "react";
 
 const Contact = ({ pathName }) => {
@@ -20,17 +18,19 @@ const Contact = ({ pathName }) => {
   const metaData = {
     title: "Contact me",
   };
+
   return (
-    <div style={{minHeight: '100vh'}} id={storedTheme && storedTheme}>
+    <div style={{ minHeight: "100vh" }} id={storedTheme && storedTheme}>
       {pathName && <Nav metaData={metaData} active={"contact"} />}
       <div className="container-lg">
         <div className="row">
-          <div className="col">
+          <div className="col-6"></div>
+          <div className="col-12">
             <h1 className="pt-4 primary-font primary-text fw-bold">
               Contact me
             </h1>
             <p className="after-title"></p>
-            <Footer/>
+            <Footer />
           </div>
         </div>
       </div>
