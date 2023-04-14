@@ -6,7 +6,7 @@ export default function Footer({ desableContacForm }) {
   const appVersion = packageJson.version;
 
   return (
-    <div id="contact" className="container-lg">
+    <div id="contact" className="container-lg mt-5">
     <div className="row">
       {desableContacForm ? (
         ""

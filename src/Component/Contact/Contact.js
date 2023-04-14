@@ -31,7 +31,10 @@ const Contact = ({ pathName }) => {
             </h1>
             <p className="after-title mb-5"></p>
           </div>
-          <div className="col-md-6 ff-ubuntu">
+          <div className="col-md-6">
+            <ContactForm />
+          </div>
+             <div className="col-md-6 ff-ubuntu mt-5">
             <div itemscope itemtype="http://schema.org/Person">
               <h1 itemprop="name">Abass Dev</h1>
               <p>
@@ -59,9 +62,6 @@ const Contact = ({ pathName }) => {
                 Phone: <span itemprop="telephone">+233 59 820 8469</span>
               </p>
             </div>
-          </div>
-          <div className="col-md-6">
-            <ContactForm />
           </div>
         </div>
       </div>
