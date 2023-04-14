@@ -61,17 +61,14 @@ ReactDOM.render(
                 path="/privacy-policy"
                 element={<PrivacyPolicy pathName={pathName} />}
               />
-<<<<<<< HEAD
-            <Route
-              path="/projects"
-              element={<Project pathName={pathName} />}
-            />
-=======
+              <Route
+                path="/projects"
+                element={<Project pathName={pathName} />}
+              />
               <Route
                 path="/all-in-one/react-in-one"
                 element={<ReactInOne pathName={pathName} />}
               />
->>>>>>> 7b40b87 (feat: loading...)
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
