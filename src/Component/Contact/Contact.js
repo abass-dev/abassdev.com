@@ -23,15 +23,16 @@ const Contact = ({ pathName }) => {
   return (
     <div id={storedTheme && storedTheme}>
       {pathName && <Nav metaData={metaData} active={"contact"} />}
-      <div className="container-lg">
+      <div style={{minHeight: '75vh'}} className="container">
         <div className="row d-flex align-items-center">
           <div className="col-12">
             <h1 className="pt-4 primary-font primary-text fw-bold">
-              Contact me
+              Contact me!
             </h1>
-            <p className="after-title mb-5"></p>
+            <p className="after-title mb-4"></p>
+            <p className='text-center ff-ubuntu'><span className='h1 primary-text'>I</span>f you have a suggestion, feedback, opportunity, or are interested in collaborating on a project, we would love to hear from you! Please feel free to reach out to us using the contact details provided below. If you are expecting a reply, kindly mention your contact details in your message.</p>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 mt-2">
             <ContactForm />
           </div>
              <div className="col-md-6 ff-ubuntu mt-5">

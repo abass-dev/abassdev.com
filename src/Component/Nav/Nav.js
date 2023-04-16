@@ -90,7 +90,7 @@ export default function Nav({ metaData, active }) {
                   aria-current="page"
                   href="/"
                 >
-                  <i className="fa fa-user"></i> About
+                  <i className="fa fa-address-card"></i> About
                 </a>
               </li>
               <li className="nav-item">

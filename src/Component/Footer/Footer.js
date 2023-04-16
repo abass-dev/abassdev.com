@@ -23,9 +23,7 @@ export default function Footer({ desableContacForm }) {
           <h3 className="primary-text mb-4 mt-4 primary-font">What's Next?</h3>
           <h4>Let's Connect.</h4>
           <p>
-            If you're interested in working on a project or have any questions,
-            please feel free to leave me an email, and I'll get back to you as
-            soon as possible.
+          <span className='h1 primary-text'>I</span>f you have a suggestion, feedback, opportunity, or are interested in collaborating on a project, we would love to hear from you! Please feel free to reach out to us using the contact details provided below. If you are expecting a reply, kindly mention your contact details in your message.
           </p>
           <div className="profile-socieal-links mb-4">
             <a
@@ -107,7 +105,7 @@ export default function Footer({ desableContacForm }) {
           </div>
         </div>
 
-        <p className="copyright ff-ubuntu p-5 text-white">
+        <p className="copyright ff-ubuntu p-4 text-white">
           <a href="/copyright">Copyright</a> © 2021 - {new Date().getFullYear()}{" "}
           Abass Dev. All rights reserved. <br /> Current version: {appVersion}
         </p>
