@@ -6,7 +6,7 @@ import "react-toggle/style.css"; // for ES6 modules
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import { CookiesProvider } from "react-cookie";
 import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
@@ -64,6 +64,10 @@ ReactDOM.render(
               <Route
                 path="/projects"
                 element={<Project pathName={pathName} />}
+              />
+              <Route
+                path="/blog/reactjs-in-one"
+                element={<ReactInOne pathName={pathName} />}
               />
               <Route path="*" element={<NotFound pathName={pathName} />} />
             </Routes>

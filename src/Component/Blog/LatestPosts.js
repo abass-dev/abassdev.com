@@ -1,27 +1,36 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { turncateText, dateToReadable } from "../Util";
+import { getItemWithExpiration, setItemWithExpiration } from "../Cache";
 
 export default function LatestPosts() {
   const [latestPosts, setLatestPosts] = useState(null);
+  const latestPostsFormCache = getItemWithExpiration("latest_posts");
 
   useEffect(() => {
-    axios
-      .get(
-        "https://blog.abassdev.com/index.php/wp-json/wp/v2/posts?_embed&per_page=3"
-      )
-      .then((response) => {
-        setLatestPosts(response.data);
-      })
-      .catch((error) => {
-        // console.log(error);
-      });
+    if (latestPostsFormCache) {
+      setLatestPosts(latestPostsFormCache);
+    } else {
+      axios
+        .get(
+          "https://blog.abassdev.com/index.php/wp-json/wp/v2/posts?_embed&per_page=3"
+        )
+        .then((response) => {
+          setLatestPosts(response.data);
+          setItemWithExpiration("latest_posts", response.data, 30);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }, []);
   return (
     <div className="container">
       <div className="row mb-4">
         <div className="col-12 mb-4">
-          <h1 className="primary-font text-center mb-4 primary-text">Recent posts</h1>
+          <h1 className="primary-font text-center mb-4 primary-text">
+            Recent posts
+          </h1>
           <div className="list-group">
             {latestPosts ? (
               latestPosts.map((post) => {

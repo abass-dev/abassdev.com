@@ -2,14 +2,14 @@ import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
 
 class Notification {
-  constructor(duration = 3000) {
+  constructor(duration = 3000, x = "right", y = "top") {
     this.duration = duration;
     if (typeof window !== "undefined") {
       this.notif = new Notyf({
         duration: this.duration,
         position: {
-          x: "right",
-          y: "top",
+          x: x,
+          y: y,
         },
       });
     }
@@ -30,4 +30,4 @@ class Notification {
   }
 }
 
-export default Notification
+export default Notification;

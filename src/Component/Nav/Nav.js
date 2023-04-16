@@ -9,6 +9,7 @@ import { ScrollUpButton } from "../UI/Button";
 import { ProgressBar } from "../UI/Progressbar";
 
 import "./Nav.css";
+import { AllInOnDropdownNav, DropdownNav } from "./DropdownNav";
 
 export default function Nav({ metaData, active }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -144,33 +145,8 @@ export default function Nav({ metaData, active }) {
                   <i className="fa fa-envelope"></i> Contact
                 </a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDarkDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i className="fa fa-bug"></i> Others
-                </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-dark"
-                  aria-labelledby="navbarDarkDropdownMenuLink"
-                >
-                  <li>
-                    <a class="dropdown-item" href="/copyright">
-                      <i className="fa fa-gavel"></i> Legal
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/privacy-policy">
-                      <i className="fa fa-shield"></i> Privacy policy
-                    </a>
-                  </li>
-                </ul>
-              </li>
+              <AllInOnDropdownNav />
+              <DropdownNav />
               <li className="nav-item">
                 <a aria-label="contact me" className="nav-link">
                   <Toggle

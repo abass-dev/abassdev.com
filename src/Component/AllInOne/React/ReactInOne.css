@@ -1,0 +1,4 @@
+button:hover .copy-code-button {
+  color: rgb(18, 153, 0);
+  transform: scale(1.1);
+}

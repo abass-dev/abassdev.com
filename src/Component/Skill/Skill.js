@@ -1,18 +1,18 @@
 import Item from "./Item";
-import { useRef } from 'react'
-import { AnimInfinity } from '../Util/Util'
+import { useRef } from "react";
+import { AnimInfinity } from "../Util/Util";
 import "./Skill.css";
 
 export default function Skill() {
-  const skillRef = useRef(null)
-  AnimInfinity(skillRef, '.skillRefID')
-  
+  const skillRef = useRef(null);
+  AnimInfinity(skillRef, ".skillRefID");
+
   return (
-    <div id='skills-tools' className="container-lg">
+    <div id="skills-tools" className="container-lg">
       <div className="row">
         <div className="col-12">
           <h1 className="text-center primary-font primary-text mb-4">
-            Skills, Tools and Tech 
+            Skills, Tools and Tech
           </h1>
         </div>
 
@@ -147,39 +147,39 @@ export default function Skill() {
               <div className="card border-gray">
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                  <Item
+                    <Item
                       title="Git"
                       target="git"
                       icon="devicon-git-plain"
                       desk="Git is a distributed version control system that is widely used in software development to manage and track changes to source code. It was created by Linus Torvalds in 2005 and is now maintained by the open-source community."
                       link="https://git-scm.com/"
                     />
-                    
-                  <Item
+
+                    <Item
                       title="Docker"
                       target="docker"
                       icon="devicon-docker-plain"
                       desk="Docker is a software platform that allows developers to easily package and deploy applications as self-contained containers. It was first released in 2013 and has since become a popular tool for building, shipping, and running software applications."
                       link="https://www.docker.com/"
                     />
-                    
-                  <Item
+
+                    <Item
                       title="Heroku"
                       target="heroku"
                       icon="devicon-heroku-plain"
                       desk="Heroku is a cloud-based platform as a service (PaaS) that allows developers to easily build, deploy, and manage web applications. It was founded in 2007 and acquired by Salesforce in 2010."
                       link="https://www.heroku.com/"
                     />
-                    
-                  <Item
+
+                    <Item
                       title="Firefox"
                       target="firefox"
                       icon="devicon-firefox-plain"
                       desk=""
                       link=""
                     />
-                    
-                  <Item
+
+                    <Item
                       title="Github"
                       target="github"
                       icon="devicon-github-original"
@@ -199,23 +199,22 @@ export default function Skill() {
               <div className="card border-gray">
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                  
-                  <Item
+                    <Item
                       title="Java"
                       target="java"
                       icon="devicon-java-plain"
                       desk=""
                       link=""
                     />
-                    
-                  <Item
+
+                    <Item
                       title="React Native"
                       target="reactnative"
                       icon="devicon-react-plain"
                       desk=""
                       link=""
                       lastChild={true}
-                     /> 
+                    />
                   </div>
                 </div>
               </div>
@@ -226,15 +225,15 @@ export default function Skill() {
               <div className="card border-gray">
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                  <Item
+                    <Item
                       title="Python"
                       target="python"
                       icon="devicon-python-plain"
                       desk=""
                       link=""
                     />
-                    
-                  <Item
+
+                    <Item
                       title="Java"
                       target="java-soft"
                       icon="devicon-java-plain"
@@ -251,16 +250,15 @@ export default function Skill() {
               <div className="card border-gray">
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
-                  
-                  <Item
+                    <Item
                       title="VsCode"
                       target="vscode"
                       icon="devicon-vscode-plain"
                       desk=""
                       link=""
                     />
-                    
-                  <Item
+
+                    <Item
                       title="Android Studio"
                       target="androidstudio"
                       icon="devicon-androidstudio-plain"
@@ -278,7 +276,7 @@ export default function Skill() {
                 <div className="card-body pb-0  md-title">
                   <div className="row card-text">
                     <div className="col-12 mb-2">
-                      <div  className="progress w-100">
+                      <div className="progress w-100">
                         <span className="bg-secondary text-white">
                           {" "}
                           French{" "}
