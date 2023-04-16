@@ -8,8 +8,8 @@ import { ThemeContext } from "../../Context/ThemeProvider";
 import { ScrollUpButton } from "../UI/Button";
 import { ProgressBar } from "../UI/Progressbar";
 
+import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from "./DropdownNav";
 import "./Nav.css";
-import { AllInOnDropdownNav, DropdownNav } from "./DropdownNav";
 
 export default function Nav({ metaData, active }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -104,39 +104,7 @@ export default function Nav({ metaData, active }) {
                   <i className="fa fa-history"></i> My Story
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  onClick={handleClick}
-                  className={`nav-link ${
-                    active === "projects" ? "active" : ""
-                  }`}
-                  href="/projects"
-                >
-                  <i className="fa fa-folder-open"></i> Projects
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  onClick={handleClick}
-                  className={`nav-link ${
-                    activeLink === "skills-tools" ? "active" : ""
-                  }`}
-                  href="/#skills-tools"
-                >
-                  <i className="fa fa-wrench"></i> Skills & Tools
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  onClick={handleClick}
-                  className={`nav-link ${
-                    activeLink === "work" ? "active" : ""
-                  }`}
-                  href="/#work"
-                >
-                  <i className="fa fa-briefcase"></i> Works
-                </a>
-              </li>
+            
               <li className="nav-item">
                 <a
                   className={`nav-link ${active === "contact" ? "active" : ""}`}
@@ -145,7 +113,8 @@ export default function Nav({ metaData, active }) {
                   <i className="fa fa-envelope"></i> Contact
                 </a>
               </li>
-              <AllInOnDropdownNav />
+              <PortfolioDropdownNav active={active} activeLink={activeLink} handleClick={handleClick} />
+              <AllInOneDropdownNav />
               <DropdownNav />
               <li className="nav-item">
                 <a aria-label="contact me" className="nav-link">
@@ -186,11 +155,6 @@ export default function Nav({ metaData, active }) {
                   href="https://github.com/abass-dev"
                 >
                   <i style={{ fontSize: 24 }} className="fa fa-github"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a aria-label="contact me" className="nav-link" href="/contact">
-                  <i style={{ fontSize: 24 }} className="fa fa-envelope"></i>
                 </a>
               </li>
             </ul>

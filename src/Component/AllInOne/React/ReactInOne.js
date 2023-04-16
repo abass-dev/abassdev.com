@@ -20,7 +20,7 @@ export default function ReactInOne() {
     } else {
       // Value has expired or does not exist
       axios
-        .get("http://localhost:5000/")
+        .get("https://api.abassdev.com")
         .then((response) => {
           if (response) {
             // console.log(response);
@@ -32,7 +32,7 @@ export default function ReactInOne() {
           console.log(error);
         });
     }
-  }, [posts]);
+  }, []);
 
   const CodeSnippet = ({ code }) => {
     const codeRef = useRef(null);
