@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ContactForm from "../ContactForm";
 import "./Footer.css";
+import { ThemeContext } from "../../Context/ThemeProvider";
 export default function Footer({ desableContacForm }) {
   const packageJson = require("../../../package.json");
   const appVersion = packageJson.version;
+  const { theme } = useContext(ThemeContext);
+  const [storedTheme, setStoredTheme] = useState("light");
+  const localStorage = window.localStorage;
+
+  useEffect(() => {
+    let sthm = localStorage.getItem("theme");
+    if (sthm) {
+      setStoredTheme(sthm);
+    }
+  }, [theme]);
+
+  const metaData = {
+    title: "Contact me",
+  };
 
   return (
-    <div id="contact" className="container-lg mt-5">
+    <footer id={storedTheme && storedTheme} className="container-lg mt-5">
       <div className="row">
         {desableContacForm ? (
           ""
@@ -110,6 +125,6 @@ export default function Footer({ desableContacForm }) {
           Abass Dev. All rights reserved. <br /> Current version: {appVersion}
         </p>
       </div>
-    </div>
+    </footer>
   );
 }

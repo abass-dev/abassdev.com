@@ -6,6 +6,7 @@
   font-family: Monospace;
 }
 
-#light #contact {
+#light footer {
   background: #111023 !important;
+  color: black !important;
 }

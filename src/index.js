@@ -21,6 +21,7 @@ import TagManager from "react-gtm-module";
 import ThemeProvider from "./Context/ThemeProvider";
 import "./index.css";
 import { ReactInOne } from "./Component/AllInOne";
+import Login from "./Component/Auth/Login";
 
 const tagManagerArgs = {
   gtmId: "G-N8ZTB9NPSP",
@@ -69,6 +70,7 @@ ReactDOM.render(
                 path="/blog/reactjs-in-one"
                 element={<ReactInOne pathName={pathName} />}
               />
+              <Route path="/login" element={<Login pathName={pathName} />} />
               <Route path="*" element={<NotFound pathName={pathName} />} />
             </Routes>
           </BrowserRouter>

@@ -229,11 +229,11 @@ export default function ContactForm() {
         >
           {isLoading ? (
             <span>
-              SENDING... <i className="fa fa-spinner"></i>
+              Sending... <i className="fa fa-spinner"></i>
             </span>
           ) : (
             <span>
-              SEND <i className="fa fa-paper-plane"></i>
+              Send <i className="fa fa-paper-plane"></i>
             </span>
           )}
         </button>
