@@ -157,6 +157,15 @@ export default function Nav({ metaData, active }) {
                   <i style={{ fontSize: 24 }} className="fa fa-github"></i>
                 </a>
               </li>
+              <li className="nav-item">
+                <a
+                  aria-label="Login"
+                  className="nav-link"
+                  href="/login"
+                >
+                  <i style={{ fontSize: 24 }} className="fa fa-lock"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

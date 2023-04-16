@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext, useRef } from "react";
-import { Nav } from "../../";
+import { Nav, Footer } from "../../";
+import { ThemeContext } from "../../../Context/ThemeProvider";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./ReactInOne.css";
@@ -10,7 +11,6 @@ import { setItemWithExpiration, getItemWithExpiration } from "../../Cache";
 
 export default function ReactInOne() {
   const [posts, setPosts] = useState();
-
   useEffect(() => {
     // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration("posts");
@@ -76,14 +76,30 @@ export default function ReactInOne() {
       </div>
     );
   };
+  
+  const { theme } = useContext(ThemeContext);
+  const [storedTheme, setStoredTheme] = useState("light");
+  const localStorage = window.localStorage;
+
+  useEffect(() => {
+    let sthm = localStorage.getItem("theme");
+    if (sthm) {
+      setStoredTheme(sthm);
+    }
+  }, [theme]);
+
+  const metaData = {
+    title: "Learn ReactJs in one page",
+  };
 
   return (
-    <>
-      <Nav metaData={{ title: "Ract in one" }} active={"react-in-one"} />
+    <div id={storedTheme && storedTheme}>
+     <Nav metaData={metaData} active={"reactjs-in-one"} />
       <div className="container">
         <div className="row">
-          <div className="col-12 mb-5 mt-4">
-            <h1>ReactJs in one</h1>
+          <div className="col-12 mb-3 mt-4">
+            <h1 className='primary-text primary-font'>ReactJs in one</h1>
+            <p className='after-title'></p>
           </div>
           {posts &&
             posts.map((value, index) => {
@@ -98,9 +114,9 @@ export default function ReactInOne() {
                     </div>
                     <div className="col-md-6 mt-4 mt-lg-0">
                       <h1 className="h3">
-                        {value.id}. {value.title}
+                        <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>{value.id}#. {value.title}</a>
                       </h1>
-                      <p className="card-text">
+                      <p id={`${value.title.replaceAll(' ', '-')}-${value.id}`} className="card-text">
                         <strong>Description: </strong>
                         {value.description}
                       </p>
@@ -114,6 +130,7 @@ export default function ReactInOne() {
             })}
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

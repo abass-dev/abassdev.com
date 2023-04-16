@@ -29,7 +29,7 @@ export function DropdownNav() {
     </li>
   );
 }
-export function PortfolioDropdownNav(active, activeLink, handleClick) {
+export function PortfolioDropdownNav({active, activeLink, handleClick}) {
   return (
     <li className="nav-item dropdown">
       <a
@@ -61,7 +61,7 @@ export function PortfolioDropdownNav(active, activeLink, handleClick) {
                 <a
                   onClick={handleClick}
                   className={`dropdown-item ${
-                    activeLink === "skills-tools" ? "active" : ""
+                    activeLink === "skills-tools" ? "text-primary" : ""
                   }`}
                   href="/#skills-tools"
                 >
@@ -101,8 +101,8 @@ export function AllInOneDropdownNav() {
         aria-labelledby="navbarDarkDropdownMenuLink"
       >
         <li>
-          <a class="dropdown-item" href="/blog/reactjs-in-one">
-            <i class="fa fa-react"></i> ReactJs in one
+          <a className="dropdown-item" href="/blog/reactjs-in-one">
+            <i className="devicon-react-original"></i> ReactJs in one
           </a>
         </li>
       </ul>
