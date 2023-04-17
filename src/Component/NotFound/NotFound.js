@@ -2,7 +2,7 @@ import "./NotFound.css";
 
 const NotFound = ({ pathName }) => {
   return (
-    <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="container-lg bg-white d-flex align-items-center justify-content-center vh-100">
       <div class="text-center row">
         <div class="col-md-6">
           <img

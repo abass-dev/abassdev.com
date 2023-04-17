@@ -119,6 +119,7 @@ export default function Nav({ metaData, active }) {
               <li className="nav-item">
                 <a aria-label="contact me" className="nav-link">
                   <Toggle
+                   defaultChecked={false}
                     aria-label="Toggle dark mode"
                     icons={{
                       checked: <FaSun color="white" size={10} />,
@@ -163,7 +164,7 @@ export default function Nav({ metaData, active }) {
                   className="nav-link"
                   href="/login"
                 >
-                  <i style={{ fontSize: 24 }} className="fa fa-lock"></i>
+                  <i style={{ fontSize: 24 }} className="fa fa-user"></i>
                 </a>
               </li>
             </ul>

@@ -39,29 +39,7 @@ export default function ContactForm() {
 
   async function onSubmitEmailHandler(event) {
     event.preventDefault();
-    // Verify reCAPTCHA response
-    try {
-      const response = await axios.post(
-        "https://www.google.com/recaptcha/api/siteverify",
-        {
-          secret: RECAPTCHA_SECRET_KEY,
-          response: captchaResponse,
-        }
-      );
-      console.log(response);
-      if (response.data.success) {
-        console.log(response.data.success);
-        // The reCAPTCHA response was valid, process the form submission
-        // ...
-      } else {
-        // The reCAPTCHA response was invalid, handle the error
-        // ...
-      }
-    } catch (error) {
-      console.log(error);
-      // Handle the error
-      // ...
-    }
+    
     const valideEmail = validateEmail(userInput.email);
     if (userInput.name.trim() === "" || userInput.name.trim() === " ") {
       setInvalidInput((prev) => {
@@ -179,7 +157,7 @@ export default function ContactForm() {
             style={{ borderColor: invalidInput.name && "red" }}
             value={userInput.name}
             onChange={inputHander}
-            placeholder="What's your name?"
+            placeholder="e.g: John Doe"
             id="name"
             name="name"
           />
@@ -217,7 +195,7 @@ export default function ContactForm() {
             }}
             value={userInput.eamil}
             onChange={inputHander}
-            placeholder="Hi, What's up?"
+            placeholder="e.g: Hi, I have a suggestion, feedback, opportunity..."
             id="message"
             name="message"
           />

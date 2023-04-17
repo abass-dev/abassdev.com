@@ -101,8 +101,8 @@ export default function ReactInOne() {
             <h1 className='primary-text primary-font'>ReactJs in one</h1>
             <p className='after-title'></p>
           </div>
-          {posts &&
-            posts.map((value, index) => {
+          {posts ?
+            (posts.map((value, index) => {
               return (
                 <div
                   key={value.id}
@@ -127,7 +127,9 @@ export default function ReactInOne() {
                   </div>
                 </div>
               );
-            })}
+            }))
+            : (<p className='text-danger'>The blog posts are not available yet due to some technical issues.</p>)
+          }
         </div>
       </div>
       <Footer />

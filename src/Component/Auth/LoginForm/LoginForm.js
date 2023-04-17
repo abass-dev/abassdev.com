@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { getItemWithExpiration, setItemWithExpiration } from "../../Cache";
 import axios from "axios";
+import { URL, validateEmail, validateTextarea } from "../../Helpers";
+import Notification from "../../Notification";
 
+import '../index.css'
+const notyf = new Notification(2000)
 export default function LoginForm() {
   const [userInput, setUserInputs] = useState({
     email: "",
@@ -13,9 +17,11 @@ export default function LoginForm() {
     password: null,
   });
   const [isLoading, setLoading] = useState(false);
-
+  const [errCredentials, setErrCredentials] = useState()
+  const [message, setMessage] = useState()
+  
   function inputHander(e) {
-    const inputValue = e.target.value;
+    const inputValue = e.target.value.trim();
     const inputName = e.target.name;
     setInvalidInput({});
     setUserInputs((prev) => {
@@ -25,20 +31,47 @@ export default function LoginForm() {
       };
     });
   }
-  async function onSubmitEmailHandler(event) {
+   function onSubmitEmailHandler(event) {
     event.preventDefault();
-    const fetchAdmin = getItemWithExpiration("admin");
-    setItemWithExpiration("admin", fetchAdmin, 0);
-    if (fetchAdmin) {
-      console.log(fetchAdmin);
-      setAdmin(fetchAdmin);
-    } else {
-      axios.get("http://localhost:5000/api/admin").then((response) => {
-        setItemWithExpiration("admin", response.data, 1);
-        setAdmin(response.data);
-        console.log(response.data);
+     const valideEmail = validateEmail(userInput.email);
+       if (!valideEmail.valid) {
+      setInvalidInput((prev) => {
+        return {
+          ...prev,
+          email: true,
+        };
       });
+      return notyf.error(valideEmail.message);
     }
+   
+    if (userInput.password.trim() === "" || userInput.password.trim() === " ") {
+      setInvalidInput((prev) => {
+        return {
+          ...prev,
+          password: true,
+        };
+      });
+      return notyf.error("Password is required");
+    }
+    setLoading(true)
+   axios.post(URL.admin, userInput).then((response) => {
+         const data = response.data
+         if(data.status === 'failed') {
+           setErrCredentials('ERROR: Invalid credentials')
+           setMessage(null)
+           setLoading(false)
+         } else {
+           setAdmin(data.response);
+           setMessage('SUCCESS: Login successfully')
+           setErrCredentials(null)
+           setLoading(false)
+         }
+      }).catch((error) => {
+        console.log(error)
+        setLoading(false)
+      }) .catch(() => {
+        setLoading(false)
+      })
   }
 
   return (
@@ -48,24 +81,56 @@ export default function LoginForm() {
         className="bg-white shadow-sm p-4 card border-0"
         id="loginForm"
       >
-        <h2 className="primary-font text-center">
-          <i style={{ fontSize: "35px" }} className="fa fa-user"></i>
-        </h2>
-
+    {errCredentials && 
+      <div style={{
+      borderLeft: '5px solid red',
+      borderTop: '1px solid #00000030',
+      borderBottom: '1px solid #00000030',
+      borderRight: '1px solid #00000030',
+      borderRadius: '3px',
+      marginBottom: '15px'
+      }}>
+        <p style={{color: '#ff5000',padding: '5px', margin: 0, fontSize: '14px'}}>{errCredentials}</p>
+      </div>
+    }
+    {message && 
+      <div style={{
+      borderLeft: '5px solid green', 
+      borderTop: '1px solid #00000030',
+      borderBottom: '1px solid #00000030',
+      borderRight: '1px solid #00000030',
+      borderRadius: '3px',
+      marginBottom: '15px'
+      }}>
+      <p style={{
+        color: 'green',
+        padding: '5px', 
+        margin: 0,
+        fontSize: '14px'
+        }}>{message}</p>
+      </div>
+    }
+        <i style={{
+        color: '#00000080',
+        fontSize: "50px",
+        padding: '24px'
+        }} className="text-center fa fa-user"></i>
+        
         <div className="contact-form-input">
-          <label style={{}} className="primary-font" for="email">
-            Email:
+          <label
+          style={{ color: invalidInput.email && "red" }}
+           className="primary-font" for="email">
+           Email Address:
           </label>
           <input
             className="mb-4"
-            type="email"
+            type="text"
             style={{
               outline: "none",
-              border: "1px solid #00000050",
+              border: "1px solid #00000030",
               fontSize: "20px",
               borderRadius: "5px",
               padding: "5px",
-              color: invalidInput.email && "red",
               borderColor: invalidInput.email && "red",
             }}
             onChange={inputHander}
@@ -78,7 +143,7 @@ export default function LoginForm() {
 
         <div className="contact-form-input">
           <label
-            style={{ color: invalidInput.email && "red" }}
+            style={{ color: invalidInput.password && "red" }}
             className="primary-font"
             for="password"
           >
@@ -89,7 +154,7 @@ export default function LoginForm() {
             type="password"
             style={{
               outline: "none",
-              border: "1px solid #00000050",
+              border: "1px solid #00000030",
               fontSize: "20px",
               borderRadius: "5px",
               padding: "5px",
@@ -107,7 +172,7 @@ export default function LoginForm() {
           disabled={isLoading ? true : false}
           className="btn btn-outline-primary form-submit-button"
         >
-          Login
+          {isLoading? 'Wait...': 'Login'}
         </button>
       </form>
     </div>

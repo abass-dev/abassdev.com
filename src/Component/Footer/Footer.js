@@ -22,6 +22,7 @@ export default function Footer({ desableContacForm }) {
 
   return (
     <footer id={storedTheme && storedTheme} className="container-lg mt-5">
+     <div className='container'>
       <div className="row">
         {desableContacForm ? (
           ""
@@ -117,6 +118,13 @@ export default function Footer({ desableContacForm }) {
                 </a>
               </div>
             </div>
+            <div className="col-12">
+              <div className="">
+                <a className="link-secondary" href="/login">
+                  Login
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -124,6 +132,7 @@ export default function Footer({ desableContacForm }) {
           <a href="/copyright">Copyright</a> © 2021 - {new Date().getFullYear()}{" "}
           Abass Dev. All rights reserved. <br /> Current version: {appVersion}
         </p>
+      </div>
       </div>
     </footer>
   );

@@ -26,7 +26,7 @@ export default function Login() {
     <>
       <div id={storedTheme && storedTheme}>
         <Nav metaData={metaData} active={"login"} />
-        <div className="container-lg mt-4">
+        <div className="container mt-4">
           <div className="row">
             <div className="col-2 pb-4">
               <h1 className="primary-text primary-font">Login</h1>
@@ -36,8 +36,8 @@ export default function Login() {
               <LoginForm />
             </div>
           </div>
-          <Footer desableContacForm={true} />
         </div>
+          <Footer desableContacForm={true} />
       </div>
     </>
   );

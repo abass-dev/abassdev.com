@@ -60,7 +60,7 @@ export default function LatestPosts() {
                 );
               })
             ) : (
-              <p>Something went wrong! can't fetch data from the blog api.</p>
+              <p className='text-danger'>The blog posts are not available yet due to some technical issues.</p>
             )}
           </div>
         </div>
