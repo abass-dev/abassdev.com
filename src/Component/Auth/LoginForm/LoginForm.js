@@ -8,22 +8,10 @@ import {
   validateEmail,
 } from "../../Helpers";
 import Notification from "../../Notification";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import "../index.css";
 
 const notyf = new Notification(2000);
-=======
-import { TextInput } from '../UI'
-import '../index.css'
 
-const notyf = new Notification(2000)
->>>>>>> 85b62f7 (refactor(auth): add  custom textInput)
-=======
-import "../index.css";
-
-const notyf = new Notification(2000);
->>>>>>> 0866230 (feat: login feature in progress)
 export default function LoginForm() {
   const [userInput, setUserInputs] = useState({
     email: "",
@@ -71,10 +59,6 @@ export default function LoginForm() {
       });
       return notyf.error("Password is required");
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0866230 (feat: login feature in progress)
     setLoading(true);
     axios
       .post(URL.admin, userInput)
@@ -90,29 +74,6 @@ export default function LoginForm() {
           setErrCredentials(null);
           setLoading(false);
         }
-<<<<<<< HEAD
-=======
-    setLoading(true)
-   axios.post(URL.admin, userInput).then((response) => {
-         const data = response.data
-         if(data.status === 'failed') {
-           setErrCredentials('ERROR: Invalid credentials')
-           setMessage(null)
-           setLoading(false)
-         } else {
-           setAdmin(data.response);
-           setMessage('SUCCESS: Login successfully')
-           setErrCredentials(null)
-           setLoading(false)
-         }
-      }).catch((error) => {
-        console.log('err in catch',error)
-        setLoading(false)
-      }) .finally(() => {
-        setLoading(false)
->>>>>>> 85b62f7 (refactor(auth): add  custom textInput)
-=======
->>>>>>> 0866230 (feat: login feature in progress)
       })
       .catch((error) => {
         console.log(error);
@@ -120,12 +81,6 @@ export default function LoginForm() {
       })
       .catch(() => {
         setLoading(false);
-<<<<<<< HEAD
-=======
-      })
-      .catch(() => {
-        setLoading(false);
->>>>>>> 0866230 (feat: login feature in progress)
       });
   }
 
@@ -136,10 +91,6 @@ export default function LoginForm() {
         className="ui-form bg-white shadow-sm p-4 card border-0"
         id="loginForm"
       >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0866230 (feat: login feature in progress)
         {errCredentials && <ErrorMessage message={errCredentials} />}
         {message && <SuccessMessage message={message} />}
         <i
@@ -204,54 +155,6 @@ export default function LoginForm() {
             name="password"
           />
         </div>
-<<<<<<< HEAD
-=======
-    {errCredentials && 
-      <div style={{
-      borderLeft: '5px solid red',
-      borderTop: '1px solid #00000030',
-      borderBottom: '1px solid #00000030',
-      borderRight: '1px solid #00000030',
-      borderRadius: '3px',
-      marginBottom: '15px'
-      }}>
-        <p style={{color: '#ff5000',padding: '5px', margin: 0, fontSize: '14px'}}>{errCredentials}</p>
-      </div>
-    }
-    {message && 
-      <div style={{
-      borderLeft: '5px solid green', 
-      borderTop: '1px solid #00000030',
-      borderBottom: '1px solid #00000030',
-      borderRight: '1px solid #00000030',
-      borderRadius: '3px',
-      marginBottom: '15px'
-      }}>
-      <p style={{
-        color: 'green',
-        padding: '5px', 
-        margin: 0,
-        fontSize: '14px'
-        }}>{message}</p>
-      </div>
-    }
-        <i style={{color: '#00000080',fontSize: "50px",margin: '10px 0 50px 0'}} className="text-center fa fa-user"></i>
-        <TextInput {...{
-           inpuType: 'email',
-           isInvalid: invalidInput.email,
-           onChange: inputHander,
-           value: userInput.email
-        }}/>
-        <TextInput {...{
-           inpuType: 'password',
-           isInvalid: invalidInput.password,
-           onChange: inputHander,
-           value: userInput.password 
-        }}/>
-       
->>>>>>> 85b62f7 (refactor(auth): add  custom textInput)
-=======
->>>>>>> 0866230 (feat: login feature in progress)
         <button
           type="submit"
           disabled={isLoading ? true : false}
