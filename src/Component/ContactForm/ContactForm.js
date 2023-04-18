@@ -10,8 +10,6 @@ import axios from "axios";
 const notyf = new Notification(3000);
 
 export default function ContactForm() {
-  const RECAPTCHA_SECRET_KEY = "6Le4aYElAAAAAGvJRaAi_sMKZY8vhqG-9P9GMlEP";
-  const RECAPTCHA_SITE_KEY = "6Le4aYElAAAAAMwu4zGc9c8WKtP-E-f6zy5zJqlh";
   const [captchaResponse, setCaptchaResponse] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
     name: null,
@@ -39,7 +37,7 @@ export default function ContactForm() {
 
   async function onSubmitEmailHandler(event) {
     event.preventDefault();
-    
+
     const valideEmail = validateEmail(userInput.email);
     if (userInput.name.trim() === "" || userInput.name.trim() === " ") {
       setInvalidInput((prev) => {
@@ -137,12 +135,6 @@ export default function ContactForm() {
         className="contact-form shadow-sm"
         id="contactForm"
       >
-        {
-          // <ReCAPTCHA
-          //   sitekey={RECAPTCHA_SITE_KEY}
-          //  onChange={handleCaptchaChange}
-          //  />
-        }
         <h2 className="primary-font text-center">Let's Chat</h2>
         <div className="contact-form-input">
           <label

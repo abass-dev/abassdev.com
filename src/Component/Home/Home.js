@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div id={storedTheme}>
       <Nav active={"home"} />
-      <div className="container-lg">
+      <div className="container">
         <Profile />
         <MyStory />
         <Project />
@@ -34,7 +34,7 @@ const Home = () => {
         <Work />
         <LatestPosts />
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 };

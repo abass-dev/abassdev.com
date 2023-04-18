@@ -28,16 +28,20 @@ export default function Login() {
         <Nav metaData={metaData} active={"login"} />
         <div className="container mt-4">
           <div className="row">
-            <div className="col-2 pb-4">
+            <div className="col-md-8 pb-4">
               <h1 className="primary-text primary-font">Login</h1>
               <p className="after-title"></p>
+              <p className="text-center ff-ubuntu">
+                <span className="h1 primary-text">T</span>his page is
+                exclusively for administrative use.
+              </p>
             </div>
             <div className="col-12">
               <LoginForm />
             </div>
           </div>
         </div>
-          <Footer desableContacForm={true} />
+        <Footer desableContacForm={true} />
       </div>
     </>
   );
