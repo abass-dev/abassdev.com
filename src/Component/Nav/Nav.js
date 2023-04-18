@@ -8,7 +8,11 @@ import { ThemeContext } from "../../Context/ThemeProvider";
 import { ScrollUpButton } from "../UI/Button";
 import { ProgressBar } from "../UI/Progressbar";
 
-import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from "./DropdownNav";
+import {
+  AllInOneDropdownNav,
+  DropdownNav,
+  PortfolioDropdownNav,
+} from "./DropdownNav";
 import "./Nav.css";
 
 export default function Nav({ metaData, active }) {
@@ -104,7 +108,7 @@ export default function Nav({ metaData, active }) {
                   <i className="fa fa-history"></i> My Story
                 </a>
               </li>
-            
+
               <li className="nav-item">
                 <a
                   className={`nav-link ${active === "contact" ? "active" : ""}`}
@@ -113,13 +117,17 @@ export default function Nav({ metaData, active }) {
                   <i className="fa fa-envelope"></i> Contact
                 </a>
               </li>
-              <PortfolioDropdownNav active={active} activeLink={activeLink} handleClick={handleClick} />
+              <PortfolioDropdownNav
+                active={active}
+                activeLink={activeLink}
+                handleClick={handleClick}
+              />
               <AllInOneDropdownNav />
               <DropdownNav />
               <li className="nav-item">
                 <a aria-label="contact me" className="nav-link">
                   <Toggle
-                   defaultChecked={false}
+                    defaultChecked={false}
                     aria-label="Toggle dark mode"
                     icons={{
                       checked: <FaSun color="white" size={10} />,
@@ -159,11 +167,7 @@ export default function Nav({ metaData, active }) {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  aria-label="Login"
-                  className="nav-link"
-                  href="/login"
-                >
+                <a aria-label="Login" className="nav-link" href="/login">
                   <i style={{ fontSize: 24 }} className="fa fa-user"></i>
                 </a>
               </li>
