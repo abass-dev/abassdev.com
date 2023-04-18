@@ -9,6 +9,7 @@ import {
 } from "../../Helpers";
 import Notification from "../../Notification";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "../index.css";
 
 const notyf = new Notification(2000);
@@ -18,6 +19,11 @@ import '../index.css'
 
 const notyf = new Notification(2000)
 >>>>>>> 85b62f7 (refactor(auth): add  custom textInput)
+=======
+import "../index.css";
+
+const notyf = new Notification(2000);
+>>>>>>> 0866230 (feat: login feature in progress)
 export default function LoginForm() {
   const [userInput, setUserInputs] = useState({
     email: "",
@@ -66,6 +72,9 @@ export default function LoginForm() {
       return notyf.error("Password is required");
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0866230 (feat: login feature in progress)
     setLoading(true);
     axios
       .post(URL.admin, userInput)
@@ -81,6 +90,7 @@ export default function LoginForm() {
           setErrCredentials(null);
           setLoading(false);
         }
+<<<<<<< HEAD
 =======
     setLoading(true)
    axios.post(URL.admin, userInput).then((response) => {
@@ -101,6 +111,8 @@ export default function LoginForm() {
       }) .finally(() => {
         setLoading(false)
 >>>>>>> 85b62f7 (refactor(auth): add  custom textInput)
+=======
+>>>>>>> 0866230 (feat: login feature in progress)
       })
       .catch((error) => {
         console.log(error);
@@ -108,18 +120,26 @@ export default function LoginForm() {
       })
       .catch(() => {
         setLoading(false);
+<<<<<<< HEAD
+=======
+      })
+      .catch(() => {
+        setLoading(false);
+>>>>>>> 0866230 (feat: login feature in progress)
       });
   }
 
   return (
     <div id="loginFormContainer" className="my-container ff-ubuntu">
-       
       <form
         onSubmit={onSubmitEmailHandler}
         className="ui-form bg-white shadow-sm p-4 card border-0"
         id="loginForm"
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0866230 (feat: login feature in progress)
         {errCredentials && <ErrorMessage message={errCredentials} />}
         {message && <SuccessMessage message={message} />}
         <i
@@ -184,6 +204,7 @@ export default function LoginForm() {
             name="password"
           />
         </div>
+<<<<<<< HEAD
 =======
     {errCredentials && 
       <div style={{
@@ -229,6 +250,8 @@ export default function LoginForm() {
         }}/>
        
 >>>>>>> 85b62f7 (refactor(auth): add  custom textInput)
+=======
+>>>>>>> 0866230 (feat: login feature in progress)
         <button
           type="submit"
           disabled={isLoading ? true : false}
