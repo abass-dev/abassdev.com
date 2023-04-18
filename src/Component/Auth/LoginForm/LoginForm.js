@@ -3,8 +3,9 @@ import { getItemWithExpiration, setItemWithExpiration } from "../../Cache";
 import axios from "axios";
 import { URL, validateEmail, validateTextarea } from "../../Helpers";
 import Notification from "../../Notification";
-
+import { TextInput } from '../UI'
 import '../index.css'
+
 const notyf = new Notification(2000)
 export default function LoginForm() {
   const [userInput, setUserInputs] = useState({
@@ -13,8 +14,8 @@ export default function LoginForm() {
   });
   const [admin, setAdmin] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
-    email: null,
-    password: null,
+    email: false,
+    password: false,
   });
   const [isLoading, setLoading] = useState(false);
   const [errCredentials, setErrCredentials] = useState()
@@ -67,18 +68,19 @@ export default function LoginForm() {
            setLoading(false)
          }
       }).catch((error) => {
-        console.log(error)
+        console.log('err in catch',error)
         setLoading(false)
-      }) .catch(() => {
+      }) .finally(() => {
         setLoading(false)
       })
   }
 
   return (
     <div id="loginFormContainer" className="my-container ff-ubuntu">
+       
       <form
         onSubmit={onSubmitEmailHandler}
-        className="bg-white shadow-sm p-4 card border-0"
+        className="ui-form bg-white shadow-sm p-4 card border-0"
         id="loginForm"
       >
     {errCredentials && 
@@ -110,63 +112,20 @@ export default function LoginForm() {
         }}>{message}</p>
       </div>
     }
-        <i style={{
-        color: '#00000080',
-        fontSize: "50px",
-        padding: '24px'
-        }} className="text-center fa fa-user"></i>
-        
-        <div className="contact-form-input">
-          <label
-          style={{ color: invalidInput.email && "red" }}
-           className="primary-font" for="email">
-           Email Address:
-          </label>
-          <input
-            className="mb-4"
-            type="text"
-            style={{
-              outline: "none",
-              border: "1px solid #00000030",
-              fontSize: "20px",
-              borderRadius: "5px",
-              padding: "5px",
-              borderColor: invalidInput.email && "red",
-            }}
-            onChange={inputHander}
-            value={userInput.email}
-            placeholder="e.g: john@gmail.com"
-            id="email"
-            name="email"
-          />
-        </div>
-
-        <div className="contact-form-input">
-          <label
-            style={{ color: invalidInput.password && "red" }}
-            className="primary-font"
-            for="password"
-          >
-            Password:
-          </label>
-          <input
-            className="mb-4"
-            type="password"
-            style={{
-              outline: "none",
-              border: "1px solid #00000030",
-              fontSize: "20px",
-              borderRadius: "5px",
-              padding: "5px",
-              borderColor: invalidInput.password && "red",
-            }}
-            onChange={inputHander}
-            value={userInput.password}
-            placeholder="e.g: Your password"
-            id="password"
-            name="password"
-          />
-        </div>
+        <i style={{color: '#00000080',fontSize: "50px",margin: '10px 0 50px 0'}} className="text-center fa fa-user"></i>
+        <TextInput {...{
+           inpuType: 'email',
+           isInvalid: invalidInput.email,
+           onChange: inputHander,
+           value: userInput.email
+        }}/>
+        <TextInput {...{
+           inpuType: 'password',
+           isInvalid: invalidInput.password,
+           onChange: inputHander,
+           value: userInput.password 
+        }}/>
+       
         <button
           type="submit"
           disabled={isLoading ? true : false}
