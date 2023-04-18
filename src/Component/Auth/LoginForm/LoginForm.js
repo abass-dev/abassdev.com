@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { getItemWithExpiration, setItemWithExpiration } from "../../Cache";
 import axios from "axios";
-import {
-  ErrorMessage,
-  SuccessMessage,
-  URL,
-  validateEmail,
-} from "../../Helpers";
+import { AlertMessage, URL, validateEmail } from "../../Helpers";
 import Notification from "../../Notification";
-import "../index.css";
+import "../UI//ui.css";
+import TextInput from "../UI/TextInput";
+import Button from "../UI/Button";
 
 const notyf = new Notification(2000);
 
@@ -23,8 +20,7 @@ export default function LoginForm() {
     password: false,
   });
   const [isLoading, setLoading] = useState(false);
-  const [errCredentials, setErrCredentials] = useState();
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState({ success: null, error: null });
 
   function inputHander(e) {
     const inputValue = e.target.value.trim();
@@ -65,17 +61,19 @@ export default function LoginForm() {
       .then((response) => {
         const data = response.data;
         if (data.status === "failed") {
-          setErrCredentials("ERROR: Invalid credentials");
-          setMessage(null);
+          setMessage({ success: null, error: "Invalid credentials" });
           setLoading(false);
         } else {
           setAdmin(data.response);
-          setMessage("SUCCESS: Login successfully");
-          setErrCredentials(null);
+          setMessage({ success: "Login successfuly", error: null });
           setLoading(false);
         }
       })
       .catch((error) => {
+        setMessage({
+          success: null,
+          error: "Internal server error, technical issues!",
+        });
         console.log(error);
         setLoading(false);
       })
@@ -91,77 +89,39 @@ export default function LoginForm() {
         className="ui-form bg-white shadow-sm p-4 card border-0"
         id="loginForm"
       >
-        {errCredentials && <ErrorMessage message={errCredentials} />}
-        {message && <SuccessMessage message={message} />}
-        <i
-          style={{
-            color: "#00000080",
-            fontSize: "50px",
-            padding: "24px",
+        {message.success && (
+          <AlertMessage type="success" message={message.success} />
+        )}
+        {message.error && <AlertMessage type="error" message={message.error} />}
+        <i className="ui-form-icon fa fa-user"></i>
+
+        <TextInput
+          {...{
+            inpuType: "email",
+            labelClassName: "primary-font",
+            desableType: "yes",
+            isInvalid: invalidInput.email,
+            onChange: inputHander,
+            value: userInput.email,
           }}
-          className="text-center fa fa-user"
-        ></i>
-
-        <div className="contact-form-input">
-          <label
-            style={{ color: invalidInput.email && "red" }}
-            className="primary-font"
-            for="email"
-          >
-            Email Address:
-          </label>
-          <input
-            className="mb-4"
-            type="text"
-            style={{
-              outline: "none",
-              border: "1px solid #00000030",
-              fontSize: "20px",
-              borderRadius: "5px",
-              padding: "5px",
-              borderColor: invalidInput.email && "red",
-            }}
-            onChange={inputHander}
-            value={userInput.email}
-            placeholder="e.g: john@gmail.com"
-            id="email"
-            name="email"
-          />
-        </div>
-
-        <div className="contact-form-input">
-          <label
-            style={{ color: invalidInput.password && "red" }}
-            className="primary-font"
-            for="password"
-          >
-            Password:
-          </label>
-          <input
-            className="mb-4"
-            type="password"
-            style={{
-              outline: "none",
-              border: "1px solid #00000030",
-              fontSize: "20px",
-              borderRadius: "5px",
-              padding: "5px",
-              borderColor: invalidInput.password && "red",
-            }}
-            onChange={inputHander}
-            value={userInput.password}
-            placeholder="e.g: Your password"
-            id="password"
-            name="password"
-          />
-        </div>
-        <button
-          type="submit"
-          disabled={isLoading ? true : false}
-          className="btn btn-outline-primary form-submit-button"
-        >
-          {isLoading ? "Wait..." : "Login"}
-        </button>
+        />
+        <TextInput
+          {...{
+            inpuType: "password",
+            labelClassName: "primary-font",
+            isInvalid: invalidInput.password,
+            onChange: inputHander,
+            value: userInput.password,
+          }}
+        />
+        <Button
+          {...{
+            text: "Login",
+            className: "primary-font",
+            isLoading: isLoading,
+            isLoadingText: "Wait...",
+          }}
+        />
       </form>
     </div>
   );

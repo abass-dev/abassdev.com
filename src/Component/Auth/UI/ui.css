@@ -1,0 +1,22 @@
+.ui-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.ui-input:hover {
+  border: 1px solid rgb(4, 82, 161) !important;
+}
+.ui-input {
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.ui-form-icon {
+  text-align: center;
+  font-size: 3rem;
+  color: #00000090;
+  padding: 10px 0 50px 0;
+}

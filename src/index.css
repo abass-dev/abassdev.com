@@ -62,7 +62,8 @@
 }
 
 .primary-font {
-  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: "Edu NSW ACT Foundation", "Franklin Gothic Medium",
+    "Arial Narrow", Arial, sans-serif;
 }
 
 html {

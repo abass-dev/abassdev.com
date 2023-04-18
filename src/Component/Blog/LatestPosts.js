@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { turncateText, dateToReadable } from "../Util";
 import { getItemWithExpiration, setItemWithExpiration } from "../Cache";
+import { AlertMessage } from "../Helpers";
 
 export default function LatestPosts() {
   const [latestPosts, setLatestPosts] = useState(null);
@@ -60,7 +61,12 @@ export default function LatestPosts() {
                 );
               })
             ) : (
-              <p className='text-danger'>The blog posts are not available yet due to some technical issues.</p>
+              <AlertMessage
+                type={"error"}
+                message={
+                  "Recent posts are not available yet due to some technical issues."
+                }
+              />
             )}
           </div>
         </div>

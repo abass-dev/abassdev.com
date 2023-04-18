@@ -125,9 +125,7 @@ export default function ContactForm() {
         }
       );
   }
-  const handleCaptchaChange = (value) => {
-    setCaptchaResponse(value);
-  };
+
   return (
     <div id="contactFormContainer" className="my-container ff-ubuntu">
       <form

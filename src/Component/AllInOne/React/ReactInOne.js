@@ -8,17 +8,24 @@ import Notification from "../../Notification";
 import axios from "axios";
 import dateToReadable from "../../Util/dateToReadable";
 import { setItemWithExpiration, getItemWithExpiration } from "../../Cache";
+import { AlertMessage } from "../../Helpers";
 
 export default function ReactInOne() {
   const [posts, setPosts] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration("posts");
     if (postsFromCache) {
       // Use the retrieved value
       setPosts(postsFromCache);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
     } else {
       // Value has expired or does not exist
+      setIsLoading(true);
       axios
         .get("https://api.abassdev.com")
         .then((response) => {
@@ -26,10 +33,15 @@ export default function ReactInOne() {
             // console.log(response);
             setPosts(response.data);
             setItemWithExpiration("posts", response.data, 30);
+            setIsLoading(false);
           }
         })
         .catch((error) => {
+          setIsLoading(false);
           console.log(error);
+        })
+        .finally(() => {
+          setIsLoading(false);
         });
     }
   }, []);
@@ -76,7 +88,7 @@ export default function ReactInOne() {
       </div>
     );
   };
-  
+
   const { theme } = useContext(ThemeContext);
   const [storedTheme, setStoredTheme] = useState("light");
   const localStorage = window.localStorage;
@@ -92,17 +104,21 @@ export default function ReactInOne() {
     title: "Learn ReactJs in one page",
   };
 
+  if (isLoading) {
+    return null;
+  }
+
   return (
     <div id={storedTheme && storedTheme}>
-     <Nav metaData={metaData} active={"reactjs-in-one"} />
+      <Nav metaData={metaData} active={"reactjs-in-one"} />
       <div className="container">
         <div className="row">
           <div className="col-12 mb-3 mt-4">
-            <h1 className='primary-text primary-font'>ReactJs in one</h1>
-            <p className='after-title'></p>
+            <h1 className="primary-text primary-font">ReactJs in one</h1>
+            <p className="after-title"></p>
           </div>
-          {posts ?
-            (posts.map((value, index) => {
+          {posts ? (
+            posts.map((value, index) => {
               return (
                 <div
                   key={value.id}
@@ -114,9 +130,18 @@ export default function ReactInOne() {
                     </div>
                     <div className="col-md-6 mt-4 mt-lg-0">
                       <h1 className="h3">
-                        <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>{value.id}#. {value.title}</a>
+                        <a
+                          href={`#${value.title.replaceAll(" ", "-")}-${
+                            value.id
+                          }`}
+                        >
+                          {value.id}#. {value.title}
+                        </a>
                       </h1>
-                      <p id={`${value.title.replaceAll(' ', '-')}-${value.id}`} className="card-text">
+                      <p
+                        id={`${value.title.replaceAll(" ", "-")}-${value.id}`}
+                        className="card-text"
+                      >
                         <strong>Description: </strong>
                         {value.description}
                       </p>
@@ -127,9 +152,15 @@ export default function ReactInOne() {
                   </div>
                 </div>
               );
-            }))
-            : (<p className='text-danger'>The blog posts are not available yet due to some technical issues.</p>)
-          }
+            })
+          ) : (
+            <AlertMessage
+              type={"error"}
+              message={
+                "Blog posts are not available yet due to some technical issues."
+              }
+            />
+          )}
         </div>
       </div>
       <Footer />

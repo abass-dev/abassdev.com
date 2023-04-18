@@ -2,8 +2,7 @@ import birthday from "./birthday";
 import validateEmail from "./validateEmail";
 import validateUsername from "./validateUsername";
 import validateTextarea from "./validateTextarea";
-import SuccessMessage from "./SuccessMessage";
-import ErrorMessage from "./ErrorMessage";
+import AlertMessage from "./AlertMessage";
 import URL from "./URL";
 
 export {
@@ -11,7 +10,6 @@ export {
   validateEmail,
   validateUsername,
   validateTextarea,
-  SuccessMessage,
-  ErrorMessage,
+  AlertMessage,
   URL,
 };
