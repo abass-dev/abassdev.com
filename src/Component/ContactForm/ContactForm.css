@@ -23,7 +23,7 @@
   border-radius: 5px;
 }
 
-#contactForm input,
+
 #contactForm textarea {
   border: none;
   border-radius: 5px;
@@ -31,6 +31,7 @@
   outline: none !important;
   background-color: white !important;
   padding: 5px;
+  min-height: 175px !important;
   font-weight: 400;
   font-size: 1.2rem !important;
   margin-bottom: 15px;

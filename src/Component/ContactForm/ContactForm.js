@@ -6,7 +6,7 @@ import Notification from "../Notification";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-
+import { TextInput, Button } from '../Auth/UI'
 const notyf = new Notification(3000);
 
 export default function ContactForm() {
@@ -134,42 +134,23 @@ export default function ContactForm() {
         id="contactForm"
       >
         <h2 className="primary-font text-center">Let's Chat</h2>
-        <div className="contact-form-input">
-          <label
-            style={{ color: invalidInput.name && "red" }}
-            className="primary-font"
-            for="name"
-          >
-            Name:
-          </label>
-          <input
-            type="text"
-            style={{ borderColor: invalidInput.name && "red" }}
-            value={userInput.name}
-            onChange={inputHander}
-            placeholder="e.g: John Doe"
-            id="name"
-            name="name"
-          />
-        </div>
-        <div className="contact-form-input">
-          <label
-            style={{ color: invalidInput.email && "red" }}
-            className="primary-font"
-            for="email"
-          >
-            Email:
-          </label>
-          <input
-            type="email"
-            style={{ borderColor: invalidInput.email && "red" }}
-            onChange={inputHander}
-            value={userInput.email}
-            placeholder="e.g: john@gmail.com"
-            id="email"
-            name="email"
-          />
-        </div>
+                <TextInput {...{
+          inpuType: 'name',
+          value: userInput.name,
+          labelClassName: 'primary-font',
+          onChange: inputHander,
+          isInvalid: invalidInput.name
+        }}
+        />
+        <TextInput {...{
+          inpuType: 'email',
+          value: userInput.email,
+          desableType: 'yes',
+          labelClassName: 'primary-font',
+          onChange: inputHander,
+          isInvalid: invalidInput.email
+        }}
+        /> 
         <div className="contact-form-input">
           <label
             style={{ color: invalidInput.message && "red" }}
@@ -190,21 +171,15 @@ export default function ContactForm() {
             name="message"
           />
         </div>
-        <button
-          type="submit"
-          disabled={isLoading ? true : false}
-          className="btn btn-outline-primary form-submit-button"
-        >
-          {isLoading ? (
-            <span>
-              Sending... <i className="fa fa-spinner"></i>
-            </span>
-          ) : (
-            <span>
-              Send <i className="fa fa-paper-plane"></i>
-            </span>
-          )}
-        </button>
+        <Button 
+        {...{
+          text: 'Send',
+          iconName: 'fa fa-paper-plane',
+          isLoadingIconName: 'fa fa-spinner',
+          isLoading: isLoading,
+          isLoadingText: 'Sending...'
+        }}
+        />
       </form>
     </div>
   );

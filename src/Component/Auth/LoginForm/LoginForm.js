@@ -46,7 +46,7 @@ export default function LoginForm() {
       return notyf.error(valideEmail.message);
     }
 
-    if (userInput.password.trim() === "" || userInput.password.trim() === " ") {
+    if (!userInput.password) {
       setInvalidInput((prev) => {
         return {
           ...prev,
@@ -93,7 +93,7 @@ export default function LoginForm() {
           <AlertMessage type="success" message={message.success} />
         )}
         {message.error && <AlertMessage type="error" message={message.error} />}
-        <i className="ui-form-icon fa fa-user"></i>
+        <i aria-label='Login logo' className="ui-form-icon fa fa-user"></i>
 
         <TextInput
           {...{

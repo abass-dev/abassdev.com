@@ -48,6 +48,15 @@ function TextInput({
           placeholder: "e.g: Your password",
         });
         break;
+      case "name":
+        setInputTypeDetails({
+          id: "name",
+          name: "name",
+          type: "name",
+          label: "Name:",
+          placeholder: "e.g: John Doe",
+        });
+        break;
 
       default:
       // code
