@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import InputConst from "./InputConst";
 import "./input.css";
+import PropTypes from 'prop-types';
 
-function TextInput({
+const TextInput = ({
   className,
   labelClassName,
   isInvalid,
@@ -19,7 +20,7 @@ function TextInput({
   inpuType,
   desableType,
   inputStyle,
-}) {
+}) => {
   const [inputTypeDetails, setInputTypeDetails] = useState({
     id: null,
     name: null,
@@ -73,7 +74,7 @@ function TextInput({
           color: isInvalid ? "red" : InputConst.secondary,
           ...labelStyle,
         }}
-        htmlFor={name}
+        htmlFor={name? name : inputTypeDetails.name}
       >
         {inputTypeDetails.label
           ? label
@@ -124,5 +125,6 @@ function TextInput({
     </div>
   );
 }
+
 
 export default TextInput;

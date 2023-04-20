@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 export default function SEO({title, description, name, type}) {
 return (
 <Helmet>

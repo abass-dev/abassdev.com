@@ -36,7 +36,8 @@ export default function LatestPosts() {
             {latestPosts ? (
               latestPosts.map((post) => {
                 return (
-                  <a
+                  <a 
+                    key={Math.random()}
                     id="latestPosts"
                     href={post.link}
                     className="list-group-item list-group-item-action flex-column align-items-start"

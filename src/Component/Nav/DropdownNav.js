@@ -16,7 +16,7 @@ export function DropdownNav() {
         aria-labelledby="navbarDarkDropdownMenuLink"
       >
         <li>
-          <a class="dropdown-item" href="/copyright">
+          <a className="dropdown-item" href="/copyright">
             <i className="fa fa-gavel"></i> Legal
           </a>
         </li>

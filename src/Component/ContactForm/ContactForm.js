@@ -24,7 +24,7 @@ export default function ContactForm() {
   const [isLoading, setLoading] = useState(false);
 
   function inputHander(e) {
-    const inputValue = e.target.value;
+    const inputValue = e.target.value.trim();
     const inputName = e.target.name;
     setInvalidInput({});
     setUserInputs((prev) => {
@@ -39,15 +39,7 @@ export default function ContactForm() {
     event.preventDefault();
 
     const valideEmail = validateEmail(userInput.email);
-    if (userInput.name.trim() === "" || userInput.name.trim() === " ") {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          name: true,
-        };
-      });
-      return notyf.error("Name can't be blank");
-    }
+    
     if (userInput.name.length <= 2) {
       setInvalidInput((prev) => {
         return {
@@ -57,15 +49,6 @@ export default function ContactForm() {
       });
       return notyf.error("Your name should be more then 2 characters");
     }
-    if (userInput.email === "" || userInput.email === " ") {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          email: true,
-        };
-      });
-      return notyf.error("Email can't be blank");
-    }
     if (!valideEmail.valid) {
       setInvalidInput((prev) => {
         return {
@@ -74,15 +57,6 @@ export default function ContactForm() {
         };
       });
       return notyf.error(valideEmail.message);
-    }
-    if (userInput.message === "" || userInput.message === " ") {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          message: true,
-        };
-      });
-      return notyf.error("Message can't be blank");
     }
 
     if (!validateTextarea("message", 5, 1000)) {
@@ -155,15 +129,12 @@ export default function ContactForm() {
           <label
             style={{ color: invalidInput.message && "red" }}
             className="primary-font"
-            for="message"
+            htmlFor="message"
           >
             Message:
           </label>
           <textarea
-            style={{
-              minHeight: "50px",
-              borderColor: invalidInput.message && "red",
-            }}
+            style={{borderColor: invalidInput.message && "red"}}
             value={userInput.eamil}
             onChange={inputHander}
             placeholder="e.g: Hi, I have a suggestion, feedback, opportunity..."

@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "react-toggle/style.css"; // for ES6 modules
 // Bootstrap CSS
@@ -33,6 +34,7 @@ const pathName = window.location.pathname;
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
+    <HelmetProvider>
       <CookiesProvider>
         <Suspense
           fallback={
@@ -76,6 +78,7 @@ ReactDOM.render(
           </BrowserRouter>
         </Suspense>
       </CookiesProvider>
+      </HelmetProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

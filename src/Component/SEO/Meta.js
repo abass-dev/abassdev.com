@@ -1,5 +1,4 @@
-import { Helmet } from 'react-helmet';
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 function Meta({name, content}) {
   return (
     <Helmet>

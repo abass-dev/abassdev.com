@@ -3,7 +3,7 @@ import { ListUnorderedIcon } from "@primer/octicons-react";
 import ProfilePicture from "../../assets/images/logo.png";
 import Toggle from "react-toggle";
 import { FaCloudMoon, FaSun } from "react-icons/fa";
-import Helmet from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ThemeContext } from "../../Context/ThemeProvider";
 import { ScrollUpButton } from "../UI/Button";
 import { ProgressBar } from "../UI/Progressbar";
@@ -127,7 +127,6 @@ export default function Nav({ metaData, active }) {
               <li className="nav-item">
                 <a aria-label="contact me" className="nav-link">
                   <Toggle
-                    defaultChecked={false}
                     aria-label="Toggle dark mode"
                     icons={{
                       checked: <FaSun color="white" size={10} />,

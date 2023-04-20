@@ -17,6 +17,6 @@
 .ui-form-icon {
   text-align: center;
   font-size: 3rem;
-  color: #00000090;
+  opacity: 0.5;
   padding: 10px 0 50px 0;
 }

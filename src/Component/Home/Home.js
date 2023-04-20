@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div id={storedTheme}>
       <Nav active={"home"} />
-      <div className="container">
+      <div className="container-lg">
         <Profile />
         <MyStory />
         <Project />
