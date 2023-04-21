@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import InputConst from "./InputConst";
-import "./input.css";
+import { useState, useEffect } from 'react';
+import InputConst from './InputConst';
+import './input.css';
 import PropTypes from 'prop-types';
 
 const TextInput = ({
@@ -31,31 +31,31 @@ const TextInput = ({
 
   useEffect(() => {
     switch (inpuType) {
-      case "email":
+      case 'email':
         setInputTypeDetails({
-          id: "email",
-          name: "email",
-          type: "email",
-          label: "Email address:",
-          placeholder: "e.g: john@gmail.com",
+          id: 'email',
+          name: 'email',
+          type: 'email',
+          label: 'Email address:',
+          placeholder: 'e.g: john@gmail.com',
         });
         break;
-      case "password":
+      case 'password':
         setInputTypeDetails({
-          id: "password",
-          name: "password",
-          type: "password",
-          label: "Password:",
-          placeholder: "e.g: Your password",
+          id: 'password',
+          name: 'password',
+          type: 'password',
+          label: 'Password:',
+          placeholder: 'e.g: Your password',
         });
         break;
-      case "name":
+      case 'name':
         setInputTypeDetails({
-          id: "name",
-          name: "name",
-          type: "name",
-          label: "Name:",
-          placeholder: "e.g: John Doe",
+          id: 'name',
+          name: 'name',
+          type: 'name',
+          label: 'Name:',
+          placeholder: 'e.g: John Doe',
         });
         break;
 
@@ -63,32 +63,22 @@ const TextInput = ({
       // code
     }
   }, []);
-  const borderStyle = isInvalid
-    ? InputConst.border.error
-    : InputConst.border.default;
+  const borderStyle = isInvalid ? InputConst.border.error : InputConst.border.default;
   return (
-    <div className="ui-input-container">
+    <div className='ui-input-container'>
       <label
         className={labelClassName}
         style={{
-          color: isInvalid ? "red" : InputConst.secondary,
+          color: isInvalid ? 'red' : InputConst.secondary,
           ...labelStyle,
         }}
-        htmlFor={name? name : inputTypeDetails.name}
+        htmlFor={name ? name : inputTypeDetails.name}
       >
-        {inputTypeDetails.label
-          ? label
-            ? label
-            : inputTypeDetails.label
-          : label
-          ? label
-          : ""}
+        {inputTypeDetails.label ? (label ? label : inputTypeDetails.label) : label ? label : ''}
       </label>
       <input
         style={{ ...inputStyle, border: borderStyle }}
-        id={
-          inputTypeDetails.id ? (id ? id : inputTypeDetails.id) : id ? id : ""
-        }
+        id={inputTypeDetails.id ? (id ? id : inputTypeDetails.id) : id ? id : ''}
         placeholder={
           inputTypeDetails.placeholder
             ? placeholder
@@ -96,35 +86,18 @@ const TextInput = ({
               : inputTypeDetails.placeholder
             : placeholder
             ? placeholder
-            : ""
+            : ''
         }
-        name={
-          inputTypeDetails.name
-            ? name
-              ? name
-              : inputTypeDetails.name
-            : name
-            ? name
-            : ""
-        }
+        name={inputTypeDetails.name ? (name ? name : inputTypeDetails.name) : name ? name : ''}
         className={`${className} ui-input`}
         onChange={onChange}
-        type={
-          desableType !== "yes" && inputTypeDetails.type
-            ? type
-              ? type
-              : inputTypeDetails.type
-            : type
-            ? type
-            : ""
-        }
+        type={desableType !== 'yes' && inputTypeDetails.type ? (type ? type : inputTypeDetails.type) : type ? type : ''}
         value={value}
         autoFocus={autoFocus}
         required={required}
       />
     </div>
   );
-}
-
+};
 
 export default TextInput;

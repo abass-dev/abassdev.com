@@ -1,3 +1,3 @@
-import ReactInOne from "./React/ReactInOne";
+import ReactInOne from './React/ReactInOne'
 
-export { ReactInOne };
+export { ReactInOne }

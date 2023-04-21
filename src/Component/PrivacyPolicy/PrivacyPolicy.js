@@ -3,7 +3,6 @@ import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 import { ThemeContext } from '../../Context/ThemeProvider'
 
-
 export default function PrivacyPolicy({ pathName }) {
   const { theme, toggleTheme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
@@ -16,9 +15,8 @@ export default function PrivacyPolicy({ pathName }) {
     }
   }, [theme])
 
-
   const metaData = {
-    title: 'Privacy policy'
+    title: 'Privacy policy',
   }
 
   return (
@@ -34,25 +32,56 @@ export default function PrivacyPolicy({ pathName }) {
                 <div className='card-body'>
                   <div>
                     <h2 className='h3'>Privacy policy for abassdev.com</h2>
-                    <p>At abassdev.com, the privacy of our visitors is of utmost importance to us. This privacy policy outlines the types of personal information that is received and collected by abassdev.com and how it is used.</p>
+                    <p>
+                      At abassdev.com, the privacy of our visitors is of utmost importance to us. This privacy policy
+                      outlines the types of personal information that is received and collected by abassdev.com and how
+                      it is used.
+                    </p>
                     <h2 className='h3'>Information We Collect</h2>
                     <p>
-                      We may collect personal information such as your name, email address, and other contact details when you fill out the contact form on our website. This information is collected solely for the purpose of communicating with you regarding your inquiry or request.</p>
-                    <p>We may also collect non-personal information such as your IP address, browser type, operating system, and the date and time of your visit. This information is used to analyze trends, administer the site, track user's movement around the site, and gather demographic information.</p>
+                      We may collect personal information such as your name, email address, and other contact details
+                      when you fill out the contact form on our website. This information is collected solely for the
+                      purpose of communicating with you regarding your inquiry or request.
+                    </p>
+                    <p>
+                      We may also collect non-personal information such as your IP address, browser type, operating
+                      system, and the date and time of your visit. This information is used to analyze trends,
+                      administer the site, track user's movement around the site, and gather demographic information.
+                    </p>
                     <h2 className='h3'>Google Services</h2>
                     <p>
-                      We use Google Analytics to collect information about how visitors use our website. Google Analytics collects information such as how often users visit our website, what pages they visit when they do so, and what other sites they used prior to coming to our website. We use the information we get from Google Analytics to improve our website and services.</p>
-                    <p>We also use Google Search Console to monitor and optimize the performance of our website in Google search results. Google Search Console collects information such as search queries, click-through rates, and website errors.</p>
-                    <p>Google may use cookies to collect information about your use of our website. You can learn more about how Google uses cookies by visiting Google's <a href='https://policies.google.com/privacy?hl=en-US'>Privacy & Terms</a> page.</p>
+                      We use Google Analytics to collect information about how visitors use our website. Google
+                      Analytics collects information such as how often users visit our website, what pages they visit
+                      when they do so, and what other sites they used prior to coming to our website. We use the
+                      information we get from Google Analytics to improve our website and services.
+                    </p>
+                    <p>
+                      We also use Google Search Console to monitor and optimize the performance of our website in Google
+                      search results. Google Search Console collects information such as search queries, click-through
+                      rates, and website errors.
+                    </p>
+                    <p>
+                      Google may use cookies to collect information about your use of our website. You can learn more
+                      about how Google uses cookies by visiting Google's{' '}
+                      <a href='https://policies.google.com/privacy?hl=en-US'>Privacy & Terms</a> page.
+                    </p>
                     <h2 className='h3'>Security</h2>
                     <p>
-                      We take reasonable steps to protect the personal information we collect from unauthorized access, disclosure, alteration, or destruction. However, no website can be completely secure, so we cannot guarantee the security of your personal information.</p>
+                      We take reasonable steps to protect the personal information we collect from unauthorized access,
+                      disclosure, alteration, or destruction. However, no website can be completely secure, so we cannot
+                      guarantee the security of your personal information.
+                    </p>
                     <h2 className='h3'>Changes to this Privacy Policy</h2>
                     <p>
-                      We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page. You are advised to review this privacy policy periodically for any changes.</p>
+                      We may update this privacy policy from time to time. We will notify you of any changes by posting
+                      the new privacy policy on this page. You are advised to review this privacy policy periodically
+                      for any changes.
+                    </p>
                     <h2 className='h3'>Contact Us</h2>
                     <p>
-                      If you have any questions about this privacy policy, please contact us <a href='/contact'>here</a>.</p>
+                      If you have any questions about this privacy policy, please contact us <a href='/contact'>here</a>
+                      .
+                    </p>
                   </div>
                 </div>
               </div>
@@ -60,7 +89,7 @@ export default function PrivacyPolicy({ pathName }) {
           </div>
         </div>
       </div>
-          <Footer />
+      <Footer />
     </div>
   )
 }

@@ -1,16 +1,16 @@
 .rotate {
   transform: rotate(-90deg);
-  transition: .5s;
+  transition: 0.5s;
 }
 .chevron {
-  transition: .5s;
+  transition: 0.5s;
 }
 .showbtn {
   z-index: 10;
   position: relative;
 }
 .mystory {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .image-bg {

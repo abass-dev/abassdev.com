@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { getItemWithExpiration, setItemWithExpiration } from "../../Cache";
-import axios from "axios";
-import { AlertMessage, URL, validateEmail } from "../../Helpers";
-import Notification from "../../Notification";
-import "../UI//ui.css";
-import TextInput from "../UI/TextInput";
-import Button from "../UI/Button";
+import { useState } from 'react';
+import { getItemWithExpiration, setItemWithExpiration } from '../../Cache';
+import axios from 'axios';
+import { AlertMessage, URL, validateEmail } from '../../Helpers';
+import Notification from '../../Notification';
+import '../UI//ui.css';
+import TextInput from '../UI/TextInput';
+import Button from '../UI/Button';
 
 const notyf = new Notification(2000);
 
 export default function LoginForm() {
   const [userInput, setUserInputs] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
   const [admin, setAdmin] = useState(null);
   const [invalidInput, setInvalidInput] = useState({
@@ -53,26 +53,26 @@ export default function LoginForm() {
           password: true,
         };
       });
-      return notyf.error("Password is required");
+      return notyf.error('Password is required');
     }
     setLoading(true);
     axios
       .post(URL.admin, userInput)
       .then((response) => {
         const data = response.data;
-        if (data.status === "failed") {
-          setMessage({ success: null, error: "Invalid credentials" });
+        if (data.status === 'failed') {
+          setMessage({ success: null, error: 'Invalid credentials' });
           setLoading(false);
         } else {
           setAdmin(data.response);
-          setMessage({ success: "Login successfuly", error: null });
+          setMessage({ success: 'Login successfuly', error: null });
           setLoading(false);
         }
       })
       .catch((error) => {
         setMessage({
           success: null,
-          error: "Internal server error, technical issues!",
+          error: 'Internal server error, technical issues!',
         });
         console.log(error);
         setLoading(false);
@@ -83,23 +83,17 @@ export default function LoginForm() {
   }
 
   return (
-    <div id="loginFormContainer" className="my-container ff-ubuntu">
-      <form
-        onSubmit={onSubmitEmailHandler}
-        className="ui-form bg-white shadow-sm p-4 card border-0"
-        id="loginForm"
-      >
-        {message.success && (
-          <AlertMessage type="success" message={message.success} />
-        )}
-        {message.error && <AlertMessage type="error" message={message.error} />}
-        <i aria-label='Login logo' className="ui-form-icon fa fa-user"></i>
+    <div id='loginFormContainer' className='my-container ff-ubuntu'>
+      <form onSubmit={onSubmitEmailHandler} className='ui-form bg-white shadow-sm p-4 card border-0' id='loginForm'>
+        {message.success && <AlertMessage type='success' message={message.success} />}
+        {message.error && <AlertMessage type='error' message={message.error} />}
+        <i aria-label='Login logo' className='ui-form-icon fa fa-user'></i>
 
         <TextInput
           {...{
-            inpuType: "email",
-            labelClassName: "primary-font",
-            desableType: "yes",
+            inpuType: 'email',
+            labelClassName: 'primary-font',
+            desableType: 'yes',
             isInvalid: invalidInput.email,
             onChange: inputHander,
             value: userInput.email,
@@ -107,8 +101,8 @@ export default function LoginForm() {
         />
         <TextInput
           {...{
-            inpuType: "password",
-            labelClassName: "primary-font",
+            inpuType: 'password',
+            labelClassName: 'primary-font',
             isInvalid: invalidInput.password,
             onChange: inputHander,
             value: userInput.password,
@@ -116,10 +110,10 @@ export default function LoginForm() {
         />
         <Button
           {...{
-            text: "Login",
-            className: "primary-font",
+            text: 'Login',
+            className: 'primary-font',
             isLoading: isLoading,
-            isLoadingText: "Wait...",
+            isLoadingText: 'Wait...',
           }}
         />
       </form>

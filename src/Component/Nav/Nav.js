@@ -1,27 +1,23 @@
-import { useContext, useEffect, useState } from "react";
-import { ListUnorderedIcon } from "@primer/octicons-react";
-import ProfilePicture from "../../assets/images/logo.png";
-import Toggle from "react-toggle";
-import { FaCloudMoon, FaSun } from "react-icons/fa";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { ThemeContext } from "../../Context/ThemeProvider";
-import { ScrollUpButton } from "../UI/Button";
-import { ProgressBar } from "../UI/Progressbar";
+import { useContext, useEffect, useState } from 'react'
+import { ListUnorderedIcon } from '@primer/octicons-react'
+import Toggle from 'react-toggle'
+import { NavLink } from 'react-router-dom'
+import { FaCloudMoon, FaSun } from 'react-icons/fa'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { ThemeContext } from '../../Context/ThemeProvider'
+import { ScrollUpButton } from '../UI/Button'
+import { ProgressBar } from '../UI/Progressbar'
 
-import {
-  AllInOneDropdownNav,
-  DropdownNav,
-  PortfolioDropdownNav,
-} from "./DropdownNav";
-import "./Nav.css";
+import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from './DropdownNav'
+import './Nav.css'
 
 export default function Nav({ metaData, active }) {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  const [storedTheme, setStoredTheme] = useState("light");
-  const localStorage = window.localStorage;
+  const { theme, toggleTheme } = useContext(ThemeContext)
+  const [storedTheme, setStoredTheme] = useState('light')
+  const localStorage = window.localStorage
 
   // Define state to keep track of the active link
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState('home')
 
   // Define a click event handler for the navigation links
   function handleClick(event) {
@@ -29,17 +25,17 @@ export default function Nav({ metaData, active }) {
     // event.preventDefault();
 
     // Set the active link based on the link that was clicked
-    setActiveLink(event.target.hash.slice(1));
+    setActiveLink(event.target.hash.slice(1))
   }
 
   useEffect(() => {
-    let sthm = localStorage.getItem("theme");
+    let sthm = localStorage.getItem('theme')
     if (sthm) {
-      setStoredTheme(sthm);
+      setStoredTheme(sthm)
     }
-  }, [theme]);
+  }, [theme])
   function handlerToggle(e) {
-    toggleTheme();
+    toggleTheme()
   }
   return (
     <>
@@ -48,132 +44,100 @@ export default function Nav({ metaData, active }) {
 
       {metaData && (
         <Helmet>
-          <meta
-            name="theme-color"
-            content={`${storedTheme === "light" ? "#ffffff" : "#020113"}`}
-          />
+          <meta name='theme-color' content={`${storedTheme === 'light' ? '#ffffff' : '#020113'}`} />
           <title>Abass Dev - {metaData.title}</title>
         </Helmet>
       )}
       <nav
         className={`navbar sticky-top navbar-expand-md nav-bar-opacity navbar-${storedTheme} ${storedTheme} shadow-sm`}
       >
-        <div className="container-fluid">
-          <a aria-label="Logo" className="navbar-brand" href="/">
+        <div className='container-fluid'>
+          <NavLink aria-label='Logo' className='navbar-brand' to='/'>
             <img
-              alt="Abass Dev Logo"
-              style={{ borderRadius: "100%", border: "4px solid #00000025" }}
-              width="37px"
-              height="37px"
-              src={ProfilePicture}
+              alt='Abass Dev Logo'
+              style={{ borderRadius: '100%', border: '4px solid #00000025' }}
+              width='37px'
+              height='37px'
+              src={'https://firebasestorage.googleapis.com/v0/b/abassdev-com.appspot.com/o/logo.webp?alt=media&token=3af98e3a-57ca-4e65-9694-86b1de7262de'}
             />
-          </a>
+          </NavLink>
 
           <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            className='navbar-toggler'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#navbarText'
+            aria-controls='navbarText'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
           >
             <ListUnorderedIcon size={25} />
           </button>
-          <div
-            className="collapse navbar-collapse primary-font"
-            id="navbarText"
-          >
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a
+          <div className='collapse navbar-collapse primary-font' id='navbarText'>
+            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+              <li className='nav-item'>
+                <NavLink
                   onClick={handleClick}
-                  className={`nav-link ${
-                    activeLink === "home" && active === "home" ? "active" : ""
-                  }`}
-                  aria-current="page"
-                  href="/"
+                  className={`nav-link`}
+                  aria-current='page'
+                  to='/'
                 >
-                  <i className="fa fa-address-card"></i> About
-                </a>
+                  <i className='fa fa-address-card'></i> About
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <a
-                  className={`nav-link ${
-                    active === "my-story" ? "active" : ""
-                  }`}
-                  aria-current="page"
-                  href="/my-story"
-                >
-                  <i className="fa fa-history"></i> My Story
-                </a>
+              <li className='nav-item'>
+                <NavLink className={`nav-link`} aria-current='page' to='/my-story'>
+                  <i className='fa fa-history'></i> My Story
+                </NavLink>
               </li>
 
-              <li className="nav-item">
-                <a
-                  className={`nav-link ${active === "contact" ? "active" : ""}`}
-                  href="/contact"
-                >
-                  <i className="fa fa-envelope"></i> Contact
-                </a>
+              <li className='nav-item'>
+                <NavLink className={`nav-link`} to='/contact'>
+                  <i className='fa fa-envelope'></i> Contact
+                </NavLink>
               </li>
-              <PortfolioDropdownNav
-                active={active}
-                activeLink={activeLink}
-                handleClick={handleClick}
-              />
+              <PortfolioDropdownNav active={active} activeLink={activeLink} handleClick={handleClick} />
               <AllInOneDropdownNav />
               <DropdownNav />
-              <li className="nav-item">
-                <a aria-label="contact me" className="nav-link">
+              <li className='nav-item'>
+                <NavLink aria-label='contact me' className='nav-link'>
                   <Toggle
-                    aria-label="Toggle dark mode"
+                    aria-label='Toggle dark mode'
                     icons={{
-                      checked: <FaSun color="white" size={10} />,
-                      unchecked: <FaCloudMoon color="white" size={10} />,
+                      checked: <FaSun color='white' size={10} />,
+                      unchecked: <FaCloudMoon color='white' size={10} />,
                     }}
-                    checked={storedTheme === "light" ? false : true}
+                    checked={storedTheme === 'light' ? false : true}
                     onChange={handlerToggle}
                   />
-                </a>
+                </NavLink>
               </li>
             </ul>
-            <ul className="navbar-nav flex-row d-flex justify-content-around align-items-center">
-              <li className="nav-item">
-                <a
-                  className="btn btn-outline-success btn-sm"
-                  href="https://blog.abassdev.com"
-                >
+            <ul className='navbar-nav flex-row d-flex justify-content-around align-items-center'>
+              <li className='nav-item'>
+                <NavLink className='btn btn-outline-success btn-sm' to='https://blog.abassdev.com'>
                   BLOG
-                </a>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <a
-                  aria-label="my facebook"
-                  className="nav-link"
-                  href="https://m.facebook.com/abassthedev"
-                >
-                  <i style={{ fontSize: 24 }} className="fa fa-facebook"></i>
-                </a>
+              <li className='nav-item'>
+                <NavLink aria-label='my facebook' className='nav-link' to='https://m.facebook.com/abassthedev'>
+                  <i style={{ fontSize: 24 }} className='fa fa-facebook'></i>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <a
-                  aria-label="my github"
-                  className="nav-link"
-                  href="https://github.com/abass-dev"
-                >
-                  <i style={{ fontSize: 24 }} className="fa fa-github"></i>
-                </a>
+              <li className='nav-item'>
+                <NavLink aria-label='my github' className='nav-link' to='https://github.com/abass-dev'>
+                  <i style={{ fontSize: 24 }} className='fa fa-github'></i>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <a aria-label="Login" className="nav-link" href="/login">
-                  <i style={{ fontSize: 24 }} className="fa fa-user"></i>
-                </a>
+              <li className='nav-item'>
+                <NavLink aria-label='Login' className='nav-link' to='/login'>
+                  <i style={{ fontSize: 24 }} className='fa fa-user'></i>
+                </NavLink>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </>
-  );
+  )
 }

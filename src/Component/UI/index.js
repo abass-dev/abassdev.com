@@ -1,4 +1,4 @@
-import ProgressBar from "./ProgressBar/ProgressBar";
-import ScrollUpButton from "./ScrollUpButton/ScrollUpButton";
+import ScrollUpButton from './Button/ScrollUpButton'
+import Loading from './Loading'
 
-export { ProgressBar, ScrollUpButton };
+export { ScrollUpButton, Loading }
