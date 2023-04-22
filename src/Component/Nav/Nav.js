@@ -8,7 +8,7 @@ import { ThemeContext } from '../../Context/ThemeProvider'
 import { ScrollUpButton } from '../UI/Button'
 import { ProgressBar } from '../UI/Progressbar'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import logo from '../../assets/images/logo.webp'
 import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from './DropdownNav'
 import './Nav.css'
 
@@ -59,7 +59,7 @@ export default function Nav({ metaData, active }) {
               alt='Logo'
               width='37px'
               height='37px'
-              src={'https://firebasestorage.googleapis.com/v0/b/abassdev-com.appspot.com/o/logo.webp?alt=media&token=3af98e3a-57ca-4e65-9694-86b1de7262de'}
+              src={logo}
             />
           </NavLink>
 
