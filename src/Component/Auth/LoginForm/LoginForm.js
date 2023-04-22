@@ -1,49 +1,49 @@
-import { useState } from 'react';
-import { getItemWithExpiration, setItemWithExpiration } from '../../Cache';
-import axios from 'axios';
-import { AlertMessage, URL, validateEmail } from '../../Helpers';
-import Notification from '../../Notification';
-import '../UI//ui.css';
-import TextInput from '../UI/TextInput';
-import Button from '../UI/Button';
+import { useState } from 'react'
+import { getItemWithExpiration, setItemWithExpiration } from '../../Cache'
+import axios from 'axios'
+import { AlertMessage, URL, validateEmail } from '../../Helpers'
+import Notification from '../../Notification'
+import '../UI//ui.css'
+import TextInput from '../UI/TextInput'
+import Button from '../UI/Button'
 
-const notyf = new Notification(2000);
+const notyf = new Notification(2000)
 
 export default function LoginForm() {
   const [userInput, setUserInputs] = useState({
     email: '',
     password: '',
-  });
-  const [admin, setAdmin] = useState(null);
+  })
+  const [admin, setAdmin] = useState(null)
   const [invalidInput, setInvalidInput] = useState({
     email: false,
     password: false,
-  });
-  const [isLoading, setLoading] = useState(false);
-  const [message, setMessage] = useState({ success: null, error: null });
+  })
+  const [isLoading, setLoading] = useState(false)
+  const [message, setMessage] = useState({ success: null, error: null })
 
   function inputHander(e) {
-    const inputValue = e.target.value.trim();
-    const inputName = e.target.name;
-    setInvalidInput({});
+    const inputValue = e.target.value.trim()
+    const inputName = e.target.name
+    setInvalidInput({})
     setUserInputs((prev) => {
       return {
         ...prev,
         [inputName]: inputValue,
-      };
-    });
+      }
+    })
   }
   function onSubmitEmailHandler(event) {
-    event.preventDefault();
-    const valideEmail = validateEmail(userInput.email);
+    event.preventDefault()
+    const valideEmail = validateEmail(userInput.email)
     if (!valideEmail.valid) {
       setInvalidInput((prev) => {
         return {
           ...prev,
           email: true,
-        };
-      });
-      return notyf.error(valideEmail.message);
+        }
+      })
+      return notyf.error(valideEmail.message)
     }
 
     if (!userInput.password) {
@@ -51,35 +51,35 @@ export default function LoginForm() {
         return {
           ...prev,
           password: true,
-        };
-      });
-      return notyf.error('Password is required');
+        }
+      })
+      return notyf.error('Password is required')
     }
-    setLoading(true);
+    setLoading(true)
     axios
       .post(URL.admin, userInput)
       .then((response) => {
-        const data = response.data;
+        const data = response.data
         if (data.status === 'failed') {
-          setMessage({ success: null, error: 'Invalid credentials' });
-          setLoading(false);
+          setMessage({ success: null, error: 'Invalid credentials' })
+          setLoading(false)
         } else {
-          setAdmin(data.response);
-          setMessage({ success: 'Login successfuly', error: null });
-          setLoading(false);
+          setAdmin(data.response)
+          setMessage({ success: 'Login successfuly', error: null })
+          setLoading(false)
         }
       })
       .catch((error) => {
         setMessage({
           success: null,
           error: 'Internal server error, technical issues!',
-        });
-        console.log(error);
-        setLoading(false);
+        })
+        console.log(error)
+        setLoading(false)
       })
       .catch(() => {
-        setLoading(false);
-      });
+        setLoading(false)
+      })
   }
 
   return (
@@ -118,5 +118,5 @@ export default function LoginForm() {
         />
       </form>
     </div>
-  );
+  )
 }

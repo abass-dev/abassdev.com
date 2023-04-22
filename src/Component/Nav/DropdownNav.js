@@ -43,29 +43,17 @@ export function PortfolioDropdownNav({ active, activeLink, handleClick }) {
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
-          <NavLink
-            onClick={handleClick}
-            className={`dropdown-item`}
-            to='/projects'
-          >
+          <NavLink onClick={handleClick} className={`dropdown-item`} to='/projects'>
             <i className='fa fa-folder-open'></i> Projects
           </NavLink>
         </li>
         <li>
-          <a
-            onClick={handleClick}
-            className={`dropdown-item`}
-            href='/#skills-tools'
-          >
+          <a onClick={handleClick} className={`dropdown-item`} href='/#skills-tools'>
             <i className='fa fa-wrench'></i> Skills & Tools
           </a>
         </li>
         <li>
-          <a
-            onClick={handleClick}
-            className={`dropdown-item`}
-            href='/#work'
-          >
+          <a onClick={handleClick} className={`dropdown-item`} href='/#work'>
             <i className='fa fa-briefcase'></i> Works
           </a>
         </li>

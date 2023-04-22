@@ -7,7 +7,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { ScrollUpButton } from '../UI/Button'
 import { ProgressBar } from '../UI/Progressbar'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import logo from '../../assets/images/logo.webp'
 import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from './DropdownNav'
 import './Nav.css'
@@ -54,13 +54,7 @@ export default function Nav({ metaData, active }) {
       >
         <div className='container-fluid'>
           <NavLink aria-label='Logo' className='navbar-brand' to='/'>
-            <LazyLoadImage
-             style={{borderRadius: '100%'}}
-              alt='Logo'
-              width='37px'
-              height='37px'
-              src={logo}
-            />
+            <LazyLoadImage style={{ borderRadius: '100%' }} alt='Logo' width='37px' height='37px' src={logo} />
           </NavLink>
 
           <button
@@ -77,12 +71,7 @@ export default function Nav({ metaData, active }) {
           <div className='collapse navbar-collapse primary-font' id='navbarText'>
             <ul className='navbar-nav me-auto justify-content-center'>
               <li className='nav-item'>
-                <NavLink
-                  onClick={handleClick}
-                  className={`nav-link`}
-                  aria-current='page'
-                  to='/'
-                >
+                <NavLink onClick={handleClick} className={`nav-link`} aria-current='page' to='/'>
                   <i className='fa fa-address-card'></i> About
                 </NavLink>
               </li>

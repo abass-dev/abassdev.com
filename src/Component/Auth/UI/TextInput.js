@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import InputConst from './InputConst';
-import './input.css';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react'
+import InputConst from './InputConst'
+import './input.css'
+import PropTypes from 'prop-types'
 
 const TextInput = ({
   className,
@@ -27,7 +27,7 @@ const TextInput = ({
     type: null,
     label: null,
     placeholder: null,
-  });
+  })
 
   useEffect(() => {
     switch (inpuType) {
@@ -38,8 +38,8 @@ const TextInput = ({
           type: 'email',
           label: 'Email address:',
           placeholder: 'e.g: john@gmail.com',
-        });
-        break;
+        })
+        break
       case 'password':
         setInputTypeDetails({
           id: 'password',
@@ -47,8 +47,8 @@ const TextInput = ({
           type: 'password',
           label: 'Password:',
           placeholder: 'e.g: Your password',
-        });
-        break;
+        })
+        break
       case 'name':
         setInputTypeDetails({
           id: 'name',
@@ -56,14 +56,14 @@ const TextInput = ({
           type: 'name',
           label: 'Name:',
           placeholder: 'e.g: John Doe',
-        });
-        break;
+        })
+        break
 
       default:
       // code
     }
-  }, []);
-  const borderStyle = isInvalid ? InputConst.border.error : InputConst.border.default;
+  }, [])
+  const borderStyle = isInvalid ? InputConst.border.error : InputConst.border.default
   return (
     <div className='ui-input-container'>
       <label
@@ -97,7 +97,7 @@ const TextInput = ({
         required={required}
       />
     </div>
-  );
-};
+  )
+}
 
-export default TextInput;
+export default TextInput

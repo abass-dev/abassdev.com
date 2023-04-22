@@ -11,7 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 import { CookiesProvider } from 'react-cookie'
 import PrivacyPolicy from './Component/PrivacyPolicy/PrivacyPolicy'
-import MyStory from './Component/Story/MyStory'
+import MyStory from './Component/MyStory/MyStory'
 import Project from './Component/Project/Project'
 import Contact from './Component/Contact'
 import Copyright from './Component/Copyright'
@@ -37,9 +37,7 @@ ReactDOM.render(
     <ThemeProvider>
       <HelmetProvider>
         <CookiesProvider>
-          <Suspense
-            fallback={<Loading />}
-          >
+          <Suspense fallback={<Loading />}>
             <CookieAlertBox />
             <BrowserRouter>
               <Routes>

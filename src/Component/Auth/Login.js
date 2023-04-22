@@ -1,26 +1,26 @@
-import { useContext, useEffect, useState } from 'react';
-import Nav from '../Nav';
-import { ThemeContext } from '../../Context/ThemeProvider';
-import Footer from '../Footer';
-import LoginForm from './LoginForm/LoginForm';
-import { getItemWithExpiration, setItemWithExpiration } from '../Cache';
-import axios from 'axios';
+import { useContext, useEffect, useState } from 'react'
+import Nav from '../Nav'
+import { ThemeContext } from '../../Context/ThemeProvider'
+import Footer from '../Footer'
+import LoginForm from './LoginForm/LoginForm'
+import { getItemWithExpiration, setItemWithExpiration } from '../Cache'
+import axios from 'axios'
 
 export default function Login() {
-  const { theme } = useContext(ThemeContext);
-  const [storedTheme, setStoredTheme] = useState('light');
-  const localStorage = window.localStorage;
+  const { theme } = useContext(ThemeContext)
+  const [storedTheme, setStoredTheme] = useState('light')
+  const localStorage = window.localStorage
 
   useEffect(() => {
-    let sthm = localStorage.getItem('theme');
+    let sthm = localStorage.getItem('theme')
     if (sthm) {
-      setStoredTheme(sthm);
+      setStoredTheme(sthm)
     }
-  }, [theme]);
+  }, [theme])
 
   const metaData = {
     title: 'Login',
-  };
+  }
 
   return (
     <>
@@ -43,5 +43,5 @@ export default function Login() {
         <Footer desableContacForm={true} />
       </div>
     </>
-  );
+  )
 }

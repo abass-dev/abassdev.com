@@ -1,17 +1,19 @@
 import React, { useRef } from 'react'
-import './Profile.css'
 import Typical from 'react-typical'
 import 'font-awesome/css/font-awesome.min.css'
 import { MyStory } from '../'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import pdfLink from '../../assets/pdf/abass_cv_en.pdf'
 import ProfilePicture from '../../assets/images/profile-pic2.webp'
 import { SingleSlideAnim } from '../Util/Util'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+import './Profile.css'
+
 export default function Profile() {
   const profileImageRef = useRef(null)
   const profileContentRef = useRef(null)
 
-  SingleSlideAnim(profileImageRef, '.profileImageRefId')
+  //SingleSlideAnim(profileImageRef, '.profileImageRefId')
   SingleSlideAnim(profileContentRef, '.profileContentRefId')
 
   return (
@@ -39,15 +41,15 @@ export default function Profile() {
             />
           </h2>
           <div id='about' ref={profileImageRef} className='row py-3 m-1 rounded align-items-center shadow-sm'>
-            <div className='d-flex zoom-in pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
-           <LazyLoadImage
-            alt={'Abass Dev'}
-            height={300}
-            delayTime={90000}
-            effect="blur"
-            className='fluid text-center rounded'
-            src={ProfilePicture} // use normal <img> attributes as props
-            width={300} />
+            <div className='d-flex  pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
+              <LazyLoadImage
+                alt={'Abass Dev'}
+                width={300}
+                height={300}
+                effect='black-and-white'
+                className='fluid text-center rounded'
+                src={ProfilePicture} // use normal <img> attributes as props
+              />
             </div>
             <div
               itemscope=''
@@ -92,11 +94,7 @@ export default function Profile() {
                       </a>
                     </div>
                     <div className='col-md-4 mt-4 mt-md-0'>
-                      <a
-                        href={pdfLink}
-                        download
-                        className='btn btn-sm btn-secondary text-white'
-                      >
+                      <a href={pdfLink} download className='btn btn-sm btn-secondary text-white'>
                         Download CV <span className=' fa fa-download'></span>
                       </a>
                     </div>

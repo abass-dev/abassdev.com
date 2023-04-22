@@ -12,7 +12,7 @@ import { AlertMessage } from '../../Helpers'
 import { Loading } from '../../UI'
 
 export default function ReactInOne(props) {
-  console.log(props);
+  console.log(props)
   const [posts, setPosts] = useState()
   const [isLoading, setIsLoading] = useState(false)
   useEffect(() => {

@@ -1,5 +1,4 @@
 import React, { useRef, useContext, useState, useEffect } from 'react'
-import 'font-awesome/css/font-awesome.min.css'
 import projectCode from '../../assets/images/project-nigatedev.webp'
 import projectPortfolio from '../../assets/images/project-portfolio.webp'
 import projectSocialContributionApp from '../../assets/images/social_contribution_app.webp'
@@ -8,7 +7,7 @@ import projectReactNative1 from '../../assets/images/screenshot.webp'
 import { SingleSlideAnim } from '../Util/Util'
 import { Footer, Nav } from '../'
 import { ThemeContext } from '../../Context/ThemeProvider'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import './Project.css'
 
 export default function Project({ pathName }) {
@@ -55,15 +54,14 @@ export default function Project({ pathName }) {
             <div ref={nigaPHPRef} className='col-md-6 mb-4'>
               <div className='projetRefId card border-0 shadow-sm slide-first'>
                 <div className='card-body'>
-              <LazyLoadImage
-              width={'100%'} 
-      height={'auto'}
-       
-      alt={'NigaPHP framework'}
-      effect="blur"
-      className='rounded'
-      src={projectPHPCode} // use normal <img> attributes as props
-       /> 
+                  <LazyLoadImage
+                    width={'100%'}
+                    height={'auto'}
+                    alt={'NigaPHP framework'}
+                    effect='blur'
+                    className='rounded'
+                    src={projectPHPCode} // use normal <img> attributes as props
+                  />
                   <h2 className='md-title mt-3 h4 '>NigaPHP Framework</h2>
                   <i className='fw-bold fa fa-code'></i>{' '}
                   <span className='fw-lighter'>PHP, JavaScript, Sass, Shell, Twig</span>
@@ -115,14 +113,14 @@ export default function Project({ pathName }) {
             <div ref={formBuilderRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
                 <div className='card-body '>
-     <LazyLoadImage
-      alt={'BOSP FormBuilder'}
-      width={'100%'} 
-      height={'auto'}
-      effect="blur"
-      className='rounded'
-      src={projectCode} // use normal <img> attributes as props
-      /> 
+                  <LazyLoadImage
+                    alt={'BOSP FormBuilder'}
+                    width={'100%'}
+                    height={'auto'}
+                    effect='blur'
+                    className='rounded'
+                    src={projectCode} // use normal <img> attributes as props
+                  />
                   <h2 className='md-title mt-3'>Form builder</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
@@ -165,9 +163,15 @@ export default function Project({ pathName }) {
 
             <div ref={portfolioRef} className='col-md-6 mb-4'>
               <div className='projetRefId card border-0 shadow-sm slide-first'>
-                
                 <div className='card-body'>
-                <img alt='Abass Dev portfolio code source (Gitbub)' className='card-img-top rounded' src={projectPortfolio} />
+                  <LazyLoadImage
+                    width={'100%'}
+                    height={'auto'}
+                    alt={'Abass Dev portfolio'}
+                    effect='blur'
+                    className='rounded'
+                    src={projectPortfolio} // use normal <img> attributes as props
+                  />
                   <h2 className='md-title h4 mt-3'>My portfolio (abassdev.com)</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
@@ -184,7 +188,10 @@ export default function Project({ pathName }) {
                       <img alt='' src='https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square' />
                     </a>{' '}
                     <a href='https://github.com/abass-dev/abassdev.com/issues'>
-                      <img alt='Issues' src='https://img.shields.io/github/issues/abass-dev/abassdev.com?color=0088ff' />
+                      <img
+                        alt='Issues'
+                        src='https://img.shields.io/github/issues/abass-dev/abassdev.com?color=0088ff'
+                      />
                     </a>
                   </p>
                   <p className='md-title'>This portfolio was build using ReactJs.</p>
@@ -202,7 +209,14 @@ export default function Project({ pathName }) {
             <div ref={dinacardRef} className='col-md-6'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
                 <div className='card-body '>
-                <img alt='' className='card-img-top rounded' src={projectCode} />
+                  <LazyLoadImage
+                    width={'100%'}
+                    height={'auto'}
+                    alt={'Dynacard'}
+                    effect='blur'
+                    className='rounded'
+                    src={projectCode} // use normal <img> attributes as props
+                  />
                   <h2 className='md-title mt-3 h4 '>Dynacard</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
@@ -242,7 +256,14 @@ export default function Project({ pathName }) {
                 <div ref={socialAppRef} className='col-md-6 mb-4'>
                   <div className='card projetRefId slide-first border-0 shadow-sm'>
                     <div className='card-body '>
-                    <img alt='Social contribution app' className='rounded card-img-top' src={projectSocialContributionApp} />
+                      <LazyLoadImage
+                        width={'100%'}
+                        height={'auto'}
+                        alt={'Social contribution'}
+                        effect='blur'
+                        className='rounded'
+                        src={projectSocialContributionApp} // use normal <img> attributes as props
+                      />
                       <h2 className='md-title mt-3 h4 '>Social contribution app</h2>
                       <p>
                         <i className='fw-bold fa fa-code'></i>
@@ -257,7 +278,14 @@ export default function Project({ pathName }) {
                 <div ref={portfolioApkRef} className='col-md-6 mb-1'>
                   <div className='card projetRefId slide-second border-0 shadow-sm'>
                     <div className='card-body '>
-                    <img alt='' className='card-img-top rounded' src={projectReactNative1} />
+                      <LazyLoadImage
+                        width={'100%'}
+                        height={'auto'}
+                        alt={'React Native app'}
+                        effect='blur'
+                        className='rounded'
+                        src={projectReactNative1} // use normal <img> attributes as props
+                      />
                       <h2 className='md-title mt-3 h4 '>Android Application</h2>
                       <p>
                         <i className='fw-bold fa fa-code'></i>

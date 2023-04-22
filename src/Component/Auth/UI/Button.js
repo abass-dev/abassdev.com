@@ -21,5 +21,5 @@ export default function Button({ text, isLoadingText, iconName, isLoadingIconNam
         text
       )}
     </button>
-  );
+  )
 }
