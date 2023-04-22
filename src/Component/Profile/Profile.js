@@ -4,6 +4,7 @@ import Typical from 'react-typical'
 import 'font-awesome/css/font-awesome.min.css'
 import { MyStory } from '../'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import pdfLink from '../../assets/pdf/abass_cv_en.pdf'
 import ProfilePicture from '../../assets/images/profile-pic2.webp'
 import { SingleSlideAnim } from '../Util/Util'
 export default function Profile() {
@@ -92,7 +93,7 @@ export default function Profile() {
                     </div>
                     <div className='col-md-4 mt-4 mt-md-0'>
                       <a
-                        href='../../assets/pdf/abass_cv_en.pdf'
+                        href={pdfLink}
                         download
                         className='btn btn-sm btn-secondary text-white'
                       >
