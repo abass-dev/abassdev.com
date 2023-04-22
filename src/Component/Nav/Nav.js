@@ -7,6 +7,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { ScrollUpButton } from '../UI/Button'
 import { ProgressBar } from '../UI/Progressbar'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from './DropdownNav'
 import './Nav.css'
@@ -53,9 +54,9 @@ export default function Nav({ metaData, active }) {
       >
         <div className='container-fluid'>
           <NavLink aria-label='Logo' className='navbar-brand' to='/'>
-            <img
-              alt='Abass Dev Logo'
-              style={{ borderRadius: '100%', border: '4px solid #00000025' }}
+            <LazyLoadImage
+             style={{borderRadius: '100%'}}
+              alt='Logo'
               width='37px'
               height='37px'
               src={'https://firebasestorage.googleapis.com/v0/b/abassdev-com.appspot.com/o/logo.webp?alt=media&token=3af98e3a-57ca-4e65-9694-86b1de7262de'}
@@ -74,7 +75,7 @@ export default function Nav({ metaData, active }) {
             <ListUnorderedIcon size={25} />
           </button>
           <div className='collapse navbar-collapse primary-font' id='navbarText'>
-            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+            <ul className='navbar-nav me-auto justify-content-center'>
               <li className='nav-item'>
                 <NavLink
                   onClick={handleClick}

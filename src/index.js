@@ -52,6 +52,8 @@ ReactDOM.render(
                 <Route exact path='/dev-blog/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                 <Route exact path='/login' element={<Login pathName={pathName} />} />
                 <Route exact path='*' element={<NotFound pathName={pathName} />} />
+                <Route exact path='*/*' element={<NotFound pathName={pathName} />} />
+                <Route exact path='*/*/*' element={<NotFound pathName={pathName} />} />
               </Routes>
             </BrowserRouter>
           </Suspense>

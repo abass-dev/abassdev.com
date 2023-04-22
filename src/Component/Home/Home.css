@@ -1,22 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
-
-.profile-header,
-.md-title,
-.large-title {
-  font-family: 'Ubuntu', Sans-Serif;
-}
-.ff-ubuntu {
-  font-family: 'Ubuntu', Sans-Serif;
-}
 
 .home-container {
   background-color: '#F3F3F3' !;
-}
-.after-title {
-  width: 30vw;
-  height: 5px;
-  margin: 15px 0;
-  background: #00000015;
 }
 
 .showcookie {

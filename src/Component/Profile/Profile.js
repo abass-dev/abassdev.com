@@ -3,6 +3,7 @@ import './Profile.css'
 import Typical from 'react-typical'
 import 'font-awesome/css/font-awesome.min.css'
 import { MyStory } from '../'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ProfilePicture from '../../assets/images/profile-pic2.webp'
 import { SingleSlideAnim } from '../Util/Util'
 export default function Profile() {
@@ -13,7 +14,7 @@ export default function Profile() {
   SingleSlideAnim(profileContentRef, '.profileContentRefId')
 
   return (
-    <div id='apropos' className='mb-4 pt-4'>
+    <div id='apropos' className='my-4'>
       <div className='row'>
         <div className='col-12'>
           <h1 className='profile-title primary-font fw-bold'>
@@ -33,12 +34,19 @@ export default function Profile() {
                 2000,
               ]}
               loop={Infinity}
-              wrapper='p'
+              wrapper='span'
             />
           </h2>
-          <div id='about' ref={profileImageRef} className='row py-4 m-1 align-items-center shadow-sm'>
-            <div className='profileImageRefId zoom-in col-md-4 my-4 py-4'>
-              <img width='100%' height='auto' className='img-fluid  profpic' alt='Abass Dev' src={ProfilePicture} />
+          <div id='about' ref={profileImageRef} className='row py-3 m-1 rounded align-items-center shadow-sm'>
+            <div className='d-flex zoom-in pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
+           <LazyLoadImage
+            alt={'Abass Dev'}
+            height={300}
+            delayTime={90000}
+            effect="blur"
+            className='fluid text-center rounded'
+            src={ProfilePicture} // use normal <img> attributes as props
+            width={300} />
             </div>
             <div
               itemscope=''
@@ -47,7 +55,7 @@ export default function Profile() {
               className='col-md-8 text-center ff-ubuntu'
             >
               <div className='profileContentRefId slide-first'>
-                <h1 className='mt-4 primary-font fw-bold text-start primary-text'>About me</h1>
+                <h1 className='primary-font fw-bold text-start primary-text'>About me</h1>
                 <p className='after-title'></p>
                 <p className='lead text-start'>
                   A passionate web and mobile app developer with over 6 years of experience in programming and the
@@ -92,7 +100,7 @@ export default function Profile() {
                       </a>
                     </div>
                     <div className='col-12 mt-4'>
-                      <a className='mb-4' href='/my-story'>
+                      <a className='mb-4 link' href='/my-story'>
                         Read more about me...
                       </a>
                     </div>

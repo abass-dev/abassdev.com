@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 
 /* This will work on Firefox */
 * {
@@ -19,6 +20,29 @@
   background-color: #00835a;
   border-radius: 20px;
 }
+
+.profile-header,
+.md-title,
+.large-title {
+  font-family: 'Ubuntu', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ff-ubuntu {
+  font-family: 'Ubuntu' 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.after-title {
+  width: 30vw;
+  height: 5px;
+  margin: 10px 0;
+  background: #00000015;
+}
+
+#dark .after-title {
+  width: 30vw;
+  height: 5px;
+  margin: 10px 0;
+  background: #ffffff15;
+}
+
 .dark {
   background: #020113 !important;
 }

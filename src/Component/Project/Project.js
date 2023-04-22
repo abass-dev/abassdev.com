@@ -8,6 +8,7 @@ import projectReactNative1 from '../../assets/images/screenshot.webp'
 import { SingleSlideAnim } from '../Util/Util'
 import { Footer, Nav } from '../'
 import { ThemeContext } from '../../Context/ThemeProvider'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './Project.css'
 
 export default function Project({ pathName }) {
@@ -53,9 +54,17 @@ export default function Project({ pathName }) {
             </div>
             <div ref={nigaPHPRef} className='col-md-6 mb-4'>
               <div className='projetRefId card border-0 shadow-sm slide-first'>
-                <img alt='Php code' className='card-img-top' src={projectPHPCode} />
                 <div className='card-body'>
-                  <h2 className='md-title h4 '>NigaPHP Framework</h2>
+              <LazyLoadImage
+              width={'100%'} 
+      height={'auto'}
+       
+      alt={'NigaPHP framework'}
+      effect="blur"
+      className='rounded'
+      src={projectPHPCode} // use normal <img> attributes as props
+       /> 
+                  <h2 className='md-title mt-3 h4 '>NigaPHP Framework</h2>
                   <i className='fw-bold fa fa-code'></i>{' '}
                   <span className='fw-lighter'>PHP, JavaScript, Sass, Shell, Twig</span>
                   <p>
@@ -105,9 +114,16 @@ export default function Project({ pathName }) {
 
             <div ref={formBuilderRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
-                <img alt='BOSP FormBuilder' className='card-img-top' src={projectCode} />
                 <div className='card-body '>
-                  <h2 className='md-title h4 '>Form builder</h2>
+     <LazyLoadImage
+      alt={'BOSP FormBuilder'}
+      width={'100%'} 
+      height={'auto'}
+      effect="blur"
+      className='rounded'
+      src={projectCode} // use normal <img> attributes as props
+      /> 
+                  <h2 className='md-title mt-3'>Form builder</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
                     <span className='fw-lighter'> PHP, HTML, Bootstrap</span>
@@ -149,25 +165,26 @@ export default function Project({ pathName }) {
 
             <div ref={portfolioRef} className='col-md-6 mb-4'>
               <div className='projetRefId card border-0 shadow-sm slide-first'>
-                <img alt='Abass Dev portfolio code source (Gitbub)' className='card-img-top' src={projectPortfolio} />
-                <div className='card-body '>
-                  <h2 className='md-title h4 '>My portfolio (Website)</h2>
+                
+                <div className='card-body'>
+                <img alt='Abass Dev portfolio code source (Gitbub)' className='card-img-top rounded' src={projectPortfolio} />
+                  <h2 className='md-title h4 mt-3'>My portfolio (abassdev.com)</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
                     <span className='fw-lighter'> React, NodeJs, Express</span>
                   </p>
                   <p>
                     <a
-                      href='https://github.com/abass-dev/portfolio'
+                      href='https://github.com/abass-dev/abassdev.com'
                       class='btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark '
                     >
                       <i className='fa fa-github'></i> Code
                     </a>{' '}
-                    <a href='https://github.com/abass-dev/portfolio/blob/master/LICENSE' title='license'>
+                    <a href='https://github.com/abass-dev/abassdev.com/blob/master/LICENSE' title='license'>
                       <img alt='' src='https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square' />
                     </a>{' '}
-                    <a href='https://github.com/abass-dev/portfolio/issues'>
-                      <img alt='Issues' src='https://img.shields.io/github/issues/abass-dev/portfolio?color=0088ff' />
+                    <a href='https://github.com/abass-dev/abassdev.com/issues'>
+                      <img alt='Issues' src='https://img.shields.io/github/issues/abass-dev/abassdev.com?color=0088ff' />
                     </a>
                   </p>
                   <p className='md-title'>This portfolio was build using ReactJs.</p>
@@ -177,16 +194,16 @@ export default function Project({ pathName }) {
                     Object Model) that allows for faster updates to the user interface compared to traditional web
                     development techniques.
                   </p>
-                  <a href='https://react.dev/'>Learn more about ReactJs...</a>
+                  <a href='https://abassdev.com/'>Go live...</a>
                 </div>
               </div>
             </div>
 
             <div ref={dinacardRef} className='col-md-6'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
-                <img alt='' className='card-img-top' src={projectCode} />
                 <div className='card-body '>
-                  <h2 className='md-title h4 '>Dynacard</h2>
+                <img alt='' className='card-img-top rounded' src={projectCode} />
+                  <h2 className='md-title mt-3 h4 '>Dynacard</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
                     <span className='fw-lighter'> JavaScript</span>
@@ -224,9 +241,9 @@ export default function Project({ pathName }) {
                 {SingleSlideAnim(socialAppRef, '.projetRefId')}
                 <div ref={socialAppRef} className='col-md-6 mb-4'>
                   <div className='card projetRefId slide-first border-0 shadow-sm'>
-                    <img alt='Social contribution app' className='card-img-top' src={projectSocialContributionApp} />
                     <div className='card-body '>
-                      <h2 className='md-title h4 '>Social contribution app</h2>
+                    <img alt='Social contribution app' className='rounded card-img-top' src={projectSocialContributionApp} />
+                      <h2 className='md-title mt-3 h4 '>Social contribution app</h2>
                       <p>
                         <i className='fw-bold fa fa-code'></i>
                         <span className='fw-lighter'> React Native</span>
@@ -239,9 +256,9 @@ export default function Project({ pathName }) {
 
                 <div ref={portfolioApkRef} className='col-md-6 mb-1'>
                   <div className='card projetRefId slide-second border-0 shadow-sm'>
-                    <img alt='' className='card-img-top' src={projectReactNative1} />
                     <div className='card-body '>
-                      <h2 className='md-title h4 '>Android Application</h2>
+                    <img alt='' className='card-img-top rounded' src={projectReactNative1} />
+                      <h2 className='md-title mt-3 h4 '>Android Application</h2>
                       <p>
                         <i className='fw-bold fa fa-code'></i>
                         <span className='fw-lighter'> ReactNative</span>
