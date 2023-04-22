@@ -50,7 +50,7 @@ const Contact = ({ pathName }) => {
               </p>
               <p>
                 Email:{' '}
-                <a href='mailto:abass@abassdev.com.com' itemProp='email'>
+                <a href='mailto:abass@abassdev.com' itemProp='email'>
                   abass@abassdev.com
                 </a>
                 <br />
@@ -63,7 +63,7 @@ const Contact = ({ pathName }) => {
           </div>
         </div>
       </div>
-      <Footer desableContacForm={true} />
+      <Footer report='Contact/Contact.js' desableContacForm={true} />
     </div>
   )
 }

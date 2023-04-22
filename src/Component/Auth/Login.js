@@ -40,7 +40,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <Footer desableContacForm={true} />
+        <Footer report='Auth/Login.js' desableContacForm={true} />
       </div>
     </>
   )

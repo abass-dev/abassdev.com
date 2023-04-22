@@ -96,7 +96,7 @@ function MyStory({ pathName }) {
           </div>
         </div>
       </div>
-      {pathName && <Footer />}
+      {pathName && <Footer report='MyStory/MyStory.js' />}
     </div>
   )
 }

@@ -89,7 +89,7 @@ export default function PrivacyPolicy({ pathName }) {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer report='PrivacyPolicy/PrivacyPolicy.js' />
     </div>
   )
 }

@@ -1,0 +1,6 @@
+#reportIssue a {
+  color: rgb(15, 155, 232);
+}
+#reportIssue a:hover {
+  color: #00000090;
+}

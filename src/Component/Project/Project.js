@@ -325,7 +325,7 @@ export default function Project({ pathName }) {
           </div>
         </div>
       </div>
-      {pathName && <Footer />}
+      {pathName && <Footer report='Project/Project.js' />}
     </div>
   )
 }

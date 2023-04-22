@@ -146,7 +146,7 @@ export default function ReactInOne(props) {
           )}
         </div>
       </div>
-      <Footer />
+      <Footer report='AllInOne/React/ReactInOne.js' />
     </div>
   )
 }

@@ -29,18 +29,17 @@
 .ff-ubuntu {
   font-family: 'Ubuntu' 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .after-title {
   width: 30vw;
   height: 5px;
   margin: 10px 0;
-  background: #00000015;
 }
-
+#light .after-title {
+  background: #18153250;
+}
 #dark .after-title {
-  width: 30vw;
-  height: 5px;
-  margin: 10px 0;
-  background: #ffffff15;
+  background: #ffffff50;
 }
 
 .dark {

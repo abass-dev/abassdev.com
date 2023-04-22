@@ -25,8 +25,8 @@ export default function LatestPosts() {
   }, [])
   return (
     <div className='container'>
-      <div className='row mb-4'>
-        <div className='col-12 mb-4'>
+      <div className='row'>
+        <div className='col-12 mb-5'>
           <h1 className='primary-font text-center mb-4 primary-text'>Recent posts</h1>
           <div className='list-group'>
             {latestPosts ? (
