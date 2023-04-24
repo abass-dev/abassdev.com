@@ -18,9 +18,8 @@ export default function Skill() {
           <div className='row'>
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Front-end knowledge</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0 md-title'>
-                  <div className='row'>
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body p-0 md-title'>
                     <Item
                       title='HTML'
                       target='html'
@@ -68,16 +67,14 @@ export default function Skill() {
                       link='https://en.m.wikipedia.org/wiki/React_(JavaScript_library)'
                       lastChild={true}
                     />
-                  </div>
                 </div>
               </div>
             </div>
 
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Back-end knowledge</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0  md-title'>
-                  <div className='row card-text'>
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body p-0  md-title'>
                     <Item
                       title='PHP'
                       target='php'
@@ -110,16 +107,14 @@ export default function Skill() {
                       link='https://en.m.wikipedia.org/wiki/Symfony'
                       lastChild={true}
                     />
-                  </div>
                 </div>
               </div>
             </div>
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Databases</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0  md-title'>
-                  <div className='row card-text'>
-                    <Item title='MySQL' target='mysql' icon='devicon-mysql-plain' desk='' link='' />
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body p-0  md-title'>
+                   <Item title='MySQL' target='mysql' icon='devicon-mysql-plain' desk='' link='' />
 
                     <Item title='MangoDb' target='mangodb' icon='devicon-mongodb-plain' desk='' link='' />
 
@@ -131,15 +126,13 @@ export default function Skill() {
                       link=''
                       lastChild={true}
                     />
-                  </div>
                 </div>
               </div>
             </div>
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Tools</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0  md-title'>
-                  <div className='row card-text'>
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body p-0  md-title'>
                     <Item
                       title='Git'
                       target='git'
@@ -174,16 +167,14 @@ export default function Skill() {
                       link='https://github.com/'
                       lastChild={true}
                     />
-                  </div>
                 </div>
               </div>
             </div>
 
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Application Android & IOS</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0  md-title'>
-                  <div className='row card-text'>
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body p-0  md-title'>
                     <Item title='Java' target='java' icon='devicon-java-plain' desk='' link='' />
 
                     <Item
@@ -194,28 +185,24 @@ export default function Skill() {
                       link=''
                       lastChild={true}
                     />
-                  </div>
                 </div>
               </div>
             </div>
 
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Software development</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0  md-title'>
-                  <div className='row card-text'>
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body p-0  md-title'>
                     <Item title='Python' target='python' icon='devicon-python-plain' desk='' link='' />
 
                     <Item title='Java' target='java-soft' icon='devicon-java-plain' desk='' link='' lastChild={true} />
                   </div>
                 </div>
               </div>
-            </div>
             <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>Editors</h4>
-              <div className='card border-gray'>
-                <div className='card-body pb-0  md-title'>
-                  <div className='row card-text'>
+              <div className='card border-0 shadow-sm '>
+                <div className='card-body p-0  md-title'>
                     <Item title='VsCode' target='vscode' icon='devicon-vscode-plain' desk='' link='' />
 
                     <Item
@@ -226,18 +213,17 @@ export default function Skill() {
                       link=''
                       lastChild={true}
                     />
-                  </div>
                 </div>
               </div>
             </div>
             <div ref={skillRef} className='col-md-6 mb-4'>
-              <h4 className='md-title text-secondary'>Spoken languages</h4>
-              <div className='card skillRefID slide-first border-gray'>
-                <div className='card-body pb-0  md-title'>
+              <h4 className='md-title text-secondary'>International</h4>
+              <div className='card skillRefID slide-first border-0 shadow-sm'>
+                <div className='card-body pb-2  md-title'>
                   <div className='row card-text'>
                     <div className='col-12 mb-2'>
                       <div className='progress w-100'>
-                        <span className='bg-secondary text-white'> French </span>
+                        <span className='bg-success px-1 text-white'> French </span>
                         <div
                           className='progress-bar bg-secondary french'
                           role='progressbar'
@@ -252,21 +238,21 @@ export default function Skill() {
 
                     <div className='col-12 mb-2'>
                       <div className='progress w-100'>
-                        <span className='bg-secondary text-white'> Haussa </span>
+                        <span className='bg-success px-1 text-white'> Haussa </span>
                         <div
                           className='progress-bar bg-secondary haussa'
                           role='progressbar'
-                          aria-valuenow='50'
+                          aria-valuenow='47'
                           aria-valuemin='0'
                           aria-valuemax='100'
                         >
-                          50%
+                          47%
                         </div>
                       </div>
                     </div>
                     <div className='col-12 mb-2'>
                       <div className='progress w-100'>
-                        <span className='bg-secondary text-white'> English </span>
+                        <span className='bg-success px-1 text-white'> English </span>
                         <div
                           className='progress-bar bg-secondary english'
                           role='progressbar'

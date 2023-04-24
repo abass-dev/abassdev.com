@@ -9,11 +9,13 @@ export default function Work() {
   const designRef = useRef(null)
   const SEORef = useRef(null)
   const mobileAppRef = useRef(null)
+  const problemSolvingRef = useRef(null)
 
   SingleSlideAnim(webRef, '.workRefID')
   SingleSlideAnim(designRef, '.workRefID')
   SingleSlideAnim(SEORef, '.workRefID')
   SingleSlideAnim(mobileAppRef, '.workRefID')
+  SingleSlideAnim(problemSolvingRef, '.workRefID')
 
   return (
     <div className='text-white mb-4 md-title'>
@@ -75,6 +77,19 @@ export default function Work() {
               <p>
                 I create beautiful and functional apps for iOS and Android using React Native. With my expertise in this
                 framework, I can bring your app idea to life and deliver top-notch results.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div ref={problemSolvingRef} className='col-md-6 mb-4'>
+          <div className='card workRefID slide-first border-0 shadow-sm border-0'>
+            <div className='card-body'>
+              <p className='card-title text-secondary text-center'>
+                <span className='work-icon fa fa-question'></span>{' '}
+              </p>
+              <h2 className='text-center text-secondary'>Problem solving</h2>
+              <p>
+              I possess a solid understanding of the problem-solving process and techniques to address issues. My approach is to always strive for the optimal solution to a problem, and I remain receptive to new ideas that could lead to better outcomes.
               </p>
             </div>
           </div>

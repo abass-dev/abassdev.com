@@ -3,7 +3,7 @@ import './report.css'
 export default function Report({ report = 'Home/Home.js' }) {
   return (
     <div id='reportIssue' className='container mt-5'>
-      <div className='card border-0'>
+      <div className='card border-0 shadow-sm'>
         <div className='card-body'>
           <h5 className='h6 primary-fon'>Found a problem with this page?</h5>
           <div className='card-text'>
