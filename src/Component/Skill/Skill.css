@@ -17,8 +17,11 @@
   display: block;
 }
 
-.skill-card-title-focus:hover {
-  background-color: #00000015;
+.skill-card-title-focus:hover  {
+  background-color: green;
+}
+.skill-card-title-focus:hover p, .skill-card-title-focus:hover i  {
+  color:white;
 }
 
 .progress {
