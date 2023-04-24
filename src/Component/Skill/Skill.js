@@ -30,6 +30,13 @@ export default function Skill() {
                     />
 
                     <Item
+                      title='CSS'
+                      target='css'
+                      icon='devicon-css-original'
+                      link='https://en.m.wikipedia.org/wiki/css_(stylesheet_language)'
+                    />
+
+                    <Item
                       title='Sass'
                       target='sass'
                       icon='devicon-sass-original'

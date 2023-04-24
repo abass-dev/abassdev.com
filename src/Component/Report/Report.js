@@ -12,17 +12,20 @@ export default function Report({ report = 'Home/Home.js' }) {
                 <a href='https://github.com/abass-dev/abassdev.com/issues/new?'>Report issue on github</a>
               </li>
               <li>
+              <a href={`mailto:abass@abassdev.com?subject=Report issues https://github.com/abass-dev/abassdev.com/blob/master/src/Component/${report}&body=Hi Abass Dev, I found some issues with this component... [${report}]`}>Report issue by email</a>
+              </li>
+              <li>
                 <a href={`https://github.com/abass-dev/abassdev.com/edit/master/src/Component/${report}`}>
                   Edit this page on github
                 </a>
               </li>
               <li>
+              <a href='https://github.com/abass-dev/abassdev.com/fork'>Fork the repository</a>
+              </li>
+              <li>
                 <a href={`https://github.com/abass-dev/abassdev.com/blob/master/src/Component/${report}`}>
                   Code source
                 </a>
-              </li>
-              <li>
-                <a href='mailto:abass@abassdev.com'>Send an email to the owner</a>
               </li>
             </ul>
           </div>

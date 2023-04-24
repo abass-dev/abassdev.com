@@ -86,7 +86,7 @@ function MyStory({ pathName }) {
                       </>
                     ) : (
                       <a className='mb-2' href='/my-story'>
-                        Read more about me...
+                        Read more...
                       </a>
                     )}
                   </div>
