@@ -18,7 +18,7 @@ export default function Work() {
   SingleSlideAnim(problemSolvingRef, '.workRefID')
 
   return (
-    <div className='text-white mb-4 md-title'>
+    <div className='text-white mb-4 md-title container-lg'>
       <div className='row'>
         <div className='col-12'>
           <h1 id='work' className='mb-4 primary-font primary-text text-center'>

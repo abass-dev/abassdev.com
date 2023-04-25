@@ -17,7 +17,7 @@ export default function Profile() {
   SingleSlideAnim(profileContentRef, '.profileContentRefId')
 
   return (
-    <div id='apropos' className='my-4'>
+    <div id='apropos' className='my-4 container-lg'>
       <div className='row'>
         <div className='col-12'>
           <h1 className='profile-title primary-font fw-bold'>
@@ -40,7 +40,7 @@ export default function Profile() {
               wrapper='span'
             />
           </h2>
-          <div id='about' ref={profileImageRef} className='row py-3 m-1 rounded align-items-center shadow-sm'>
+          <div id='about' ref={profileImageRef} className='row py-3 mt-4 rounded align-items-center shadow-sm'>
             <div className='d-flex  pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
               <LazyLoadImage
                 alt={'Abass Dev'}
@@ -55,14 +55,15 @@ export default function Profile() {
               itemscope=''
               itemtype='http://schema.org/Person'
               ref={profileContentRef}
-              className='col-md-8 text-center ff-ubuntu'
+              className='col-md-8 text-center'
             >
-              <div className='profileContentRefId slide-first'>
+              <div className='profileContentRefId ff-ubuntu slide-first'>
                 <h1 className='primary-font fw-bold text-start primary-text'>About me</h1>
                 <p className='after-title'></p>
                 <p className='lead text-start'>
                   A passionate web and mobile app developer with over 6 years of experience in programming and the
-                  internet. <br /> In my free time, I enjoy writing articles on my{' '}
+                  internet. </p>
+                  <p className='lead text-start'>In my free time, I enjoy writing articles on my{' '}
                   <a href='https://blog.abassdev.com'>blog</a> and contributing to the{' '}
                   <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the{' '}
                   <a href='https://github.com/nigaphp'>NigaPHP</a> framework.

@@ -13,6 +13,7 @@ import { CookiesProvider } from 'react-cookie'
 import PrivacyPolicy from './Component/PrivacyPolicy/PrivacyPolicy'
 import MyStory from './Component/MyStory/MyStory'
 import Project from './Component/Project/Project'
+import Calculator from './Component/Others/Calculator'
 import Contact from './Component/Contact'
 import Copyright from './Component/Copyright'
 import NotFound from './Component/NotFound/NotFound'
@@ -47,6 +48,7 @@ ReactDOM.render(
                 <Route exact path='/copyright' element={<Copyright pathName={pathName} />} />
                 <Route exact path='/privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
                 <Route exact path='/projects' element={<Project pathName={pathName} />} />
+                <Route exact path='/calculator' element={<Calculator pathName={pathName} />} />
                 <Route exact path='/dev-blog/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                 <Route exact path='/login' element={<Login pathName={pathName} />} />
                 <Route exact path='*' element={<NotFound pathName={pathName} />} />

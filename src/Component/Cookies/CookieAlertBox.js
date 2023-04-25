@@ -10,9 +10,16 @@ export default function CookieAlertBox() {
       buttonText='Okay'
       cookieName='abassdev.com-cookies'
       expires={365}
+      buttonStyle={{
+        backgroundColor: '#4984e1',
+        color: '#ffffff',
+        display: 'flex',
+        alignSelf: 'right',
+        borderRadius: '25px'
+      }}
     >
       <small>
-        We use Google cookies to improve your browsing experience and analyze site traffic. See our{' '}
+        This website use cookies to improve your browsing experience and analyze site traffic. See our{' '}
         <a href='/privacy-policy'> privacy policy</a> for details.
       </small>
     </CookieConsent>
