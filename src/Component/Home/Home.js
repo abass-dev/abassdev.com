@@ -44,10 +44,10 @@ const Home = () => {
           <Project />
         </Suspense>
         <Suspense fallback={<Loading />}>
-          <Skill />
+          <Work />
         </Suspense>
         <Suspense fallback={<Loading />}>
-          <Work />
+          <Skill />
         </Suspense>
         <Suspense fallback={<Loading />}>
           <LatestPosts />

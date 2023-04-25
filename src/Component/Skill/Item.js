@@ -42,7 +42,7 @@ function Item(props) {
         </div>
 
         <div className='col-3 pt-3 skill-card-title-focus text-end'>
-          <i className={props.target + '-chevron fa fa-angle-double-down'}></i>
+          <i className={props.target + '-chevron fa fa-chevron-down rotate-icon'}></i>
         </div>
 
         <div className={props.target + '-desk toggle-it col-12 skill-card-desk'}>

@@ -1,11 +1,15 @@
 
 .skill-card-desk {
   font-size: 14px;
-  padding: 8px
+  padding: 8px;
+  transition:0.5s;
 }
 
 .rotate-chevron {
   transform: rotate(180deg);
+  transition: 0.5s;
+}
+.rotate-icon {
   transition: 0.5s;
 }
 
@@ -34,9 +38,9 @@
 }
 
 .progress .haussa {
-  width: 45%;
+  width: 35%;
 }
 
 .progress .english {
-  width: 35%;
+  width: 30%;
 }
