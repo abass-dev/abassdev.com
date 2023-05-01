@@ -16,7 +16,7 @@ export default function LatestPosts() {
         .get('https://blog.abassdev.com/index.php/wp-json/wp/v2/posts?_embed&per_page=3')
         .then((response) => {
           setLatestPosts(response.data)
-          setItemWithExpiration('latest_posts', response.data, 30)
+          setItemWithExpiration('latest_posts', response.data, 1440)
         })
         .catch((error) => {
           console.log(error)

@@ -2,6 +2,7 @@ import React, { useRef, useContext, useState, useEffect } from 'react'
 import projectCode from '../../assets/images/project-nigatedev.webp'
 import projectPortfolio from '../../assets/images/project-portfolio.webp'
 import projectSocialContributionApp from '../../assets/images/social_contribution_app.webp'
+import projectFakaray from '../../assets/images/fakaray.webp'
 import projectPHPCode from '../../assets/images/php_code.webp'
 import projectReactNative1 from '../../assets/images/screenshot.webp'
 import { SingleSlideAnim } from '../Util/Util'
@@ -14,6 +15,7 @@ export default function Project({ pathName }) {
   const nigaPHPRef = useRef(null)
   const portfolioRef = useRef(null)
   const formBuilderRef = useRef(null)
+  const fakarayRef = useRef(null)
   const dinacardRef = useRef(null)
   const socialAppRef = useRef(null)
   const portfolioApkRef = useRef(null)
@@ -22,6 +24,7 @@ export default function Project({ pathName }) {
   SingleSlideAnim(portfolioRef, '.projetRefId')
   SingleSlideAnim(formBuilderRef, '.projetRefId')
   SingleSlideAnim(dinacardRef, '.projetRefId')
+  SingleSlideAnim(fakarayRef, '.projetRefId')
 
   const { theme, toggleTheme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
@@ -160,6 +163,29 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
+            
+            <div ref={fakarayRef} className='col-md-6 mb-4'>
+              <div className='projetRefId slide-second card border-0 shadow-sm'>
+                <div className='card-body '>
+                  <LazyLoadImage
+                    alt={'Fakaray'}
+                    width={'100%'}
+                    height={'auto'}
+                    effect='blur'
+                    className='rounded'
+                    src={projectFakaray} // use normal <img> attributes as props
+                  />
+                  <h2 className='md-title mt-3'>Fakaray</h2>
+                  <p>
+                    <i className='fw-bold fa fa-code'></i>
+                    <span className='fw-lighter'> React, Firebase, SASS</span>
+                  </p>
+                  <p className='md-title'>
+                  Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market. 
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <div ref={portfolioRef} className='col-md-6 mb-4'>
               <div className='projetRefId card border-0 shadow-sm slide-first'>
@@ -175,7 +201,7 @@ export default function Project({ pathName }) {
                   <h2 className='md-title h4 mt-3'>My portfolio (abassdev.com)</h2>
                   <p>
                     <i className='fw-bold fa fa-code'></i>
-                    <span className='fw-lighter'> React, NodeJs, Express</span>
+                    <span className='fw-lighter'> React, NodeJs, Express & Firebase</span>
                   </p>
                   <p>
                     <a

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
@@ -10,20 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 import { CookiesProvider } from 'react-cookie'
-import PrivacyPolicy from './Component/PrivacyPolicy/PrivacyPolicy'
-import MyStory from './Component/MyStory/MyStory'
-import Project from './Component/Project/Project'
-import Calculator from './Component/Others/Calculator'
-import Contact from './Component/Contact'
-import Copyright from './Component/Copyright'
-import NotFound from './Component/NotFound/NotFound'
 import { CookieAlertBox } from './Component/Cookies'
 import reportWebVitals from './reportWebVitals'
 import TagManager from 'react-gtm-module'
 import ThemeProvider from './Context/ThemeProvider'
 import { Loading } from './Component/UI'
-import { ReactInOne } from './Component/AllInOne'
-import Login from './Component/Auth/Login'
 import './index.css'
 
 const tagManagerArgs = {
@@ -32,7 +23,20 @@ const tagManagerArgs = {
 TagManager.initialize(tagManagerArgs)
 
 const pathName = window.location.pathname
-
+  
+  const Profile = lazy(() => import('./Component/Profile/Profile'))
+  const MyStory = lazy(() => import('./Component/MyStory/MyStory'))
+  const Project = lazy(() => import('./Component/Project/Project'))
+  const Skill = lazy(() => import('./Component/Skill/Skill'))
+  const Work = lazy(() => import('./Component/Work/Work'))
+  const Contact = lazy(() => import('./Component/Contact/Contact'))
+  const Calculator = lazy(() => import('./Component/Others/Calculator/Calculator'))
+  const ReactInOne = lazy(() => import('./Component/AllInOne/React/ReactInOne'))
+  const Copyright = lazy(() => import('./Component/Copyright/Copyright'))
+  const Login = lazy(() => import('./Component/Auth/Login'))
+  const PrivacyPolicy = lazy(() => import('./Component/PrivacyPolicy/PrivacyPolicy'))
+  const NotFound = lazy(() => import('./Component/NotFound/NotFound'))
+  
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
@@ -42,18 +46,18 @@ ReactDOM.render(
             <CookieAlertBox />
             <BrowserRouter>
               <Routes>
-                <Route exact path='/' element={<App />} />
-                <Route exact path='/my-story' element={<MyStory pathName={pathName} />} />
-                <Route exact path='/contact' element={<Contact pathName={pathName} />} />
-                <Route exact path='/copyright' element={<Copyright pathName={pathName} />} />
-                <Route exact path='/privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
-                <Route exact path='/projects' element={<Project pathName={pathName} />} />
-                <Route exact path='/calculator' element={<Calculator pathName={pathName} />} />
-                <Route exact path='/dev-blog/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
-                <Route exact path='/login' element={<Login pathName={pathName} />} />
-                <Route exact path='*' element={<NotFound pathName={pathName} />} />
-                <Route exact path='*/*' element={<NotFound pathName={pathName} />} />
-                <Route exact path='*/*/*' element={<NotFound pathName={pathName} />} />
+                <Route path='/'>
+                <Route index element={<App />} />
+                <Route  path='my-story' element={<MyStory pathName={pathName} />} />
+                <Route  path='contact' element={<Contact pathName={pathName} />} />
+                <Route  path='copyright' element={<Copyright pathName={pathName} />} />
+                <Route  path='privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
+                <Route  path='projects' element={<Project pathName={pathName} />} />
+                <Route  path='calculator' element={<Calculator pathName={pathName} />} />
+                <Route  path='dev-blog/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
+                <Route  path='login' element={<Login pathName={pathName} />} />
+                <Route  path='*' element={<NotFound pathName={pathName} />} />
+              </Route>
               </Routes>
             </BrowserRouter>
           </Suspense>

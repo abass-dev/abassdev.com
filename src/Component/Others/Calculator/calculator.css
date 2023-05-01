@@ -21,13 +21,13 @@
   background-color: #020113;
   width: 90%;
   border-radius: 15px;
-  box-shadow: 0 20px 0;
+  box-shadow: 0 20px 0 red;
 }
 
 
 
 .calculator-container input {
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
   width: 100%;
   height: 100px;
   outline: none;

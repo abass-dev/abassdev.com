@@ -34,7 +34,7 @@ export default function ReactInOne(props) {
           if (response) {
             // console.log(response);
             setPosts(response.data)
-            setItemWithExpiration('posts', response.data, 30)
+            setItemWithExpiration('posts', response.data, 1440)
             setIsLoading(false)
           }
         })

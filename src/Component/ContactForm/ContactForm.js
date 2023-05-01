@@ -1,4 +1,3 @@
-import './ContactForm.css'
 import { useState } from 'react'
 import { FaCloudMoon, FaSun } from 'react-icons/fa'
 import { validateEmail, validateTextarea } from '../Helpers'
@@ -8,6 +7,9 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import axios from 'axios'
 import AlertMessage from '../Helpers/AlertMessage'
 import { TextInput, Button } from '../Auth/UI'
+import './ContactForm.css'
+import '../Auth/UI/ui.css'
+
 const notyf = new Notification(3000)
 
 export default function ContactForm() {
@@ -18,11 +20,13 @@ export default function ContactForm() {
   })
   const [invalidInput, setInvalidInput] = useState({
     name: null,
+    subject: null,
     email: null,
     message: null,
   })
   const [userInput, setUserInputs] = useState({
     name: '',
+    subject: '',
     email: '',
     message: '',
   })
@@ -54,6 +58,17 @@ export default function ContactForm() {
       })
       return notyf.error("Your name shouldn't be less than 2 characters")
     }
+    
+    if (userInput.subject.length <= 2) {
+      setInvalidInput((prev) => {
+        return {
+          ...prev,
+          subject: true,
+        }
+      })
+      return notyf.error("Subject shouldn't be less than 2 characters")
+    }
+    
     if (!valideEmail.valid) {
       setInvalidInput((prev) => {
         return {
@@ -74,21 +89,24 @@ export default function ContactForm() {
       return
     }
 
-    const { name, email, message } = userInput
+    const { name, subject, email, message } = userInput
 
     const templateParams = {
       user_name: name,
+      to_name: 'Abass Dev',
+      from_name: name,
+      from_subject: subject,
       user_email: email,
       reply_to: email,
-      message,
+      message: message
     }
     setLoading(true)
-    emailjs.send('service_jebasxm', 'template_us13arq', templateParams, '9QHGoEPmDaBELUbZn').then(
+    emailjs.send('service_jebasxm', 'template_mduuz2e', templateParams, '9QHGoEPmDaBELUbZn').then(
       (response) => {
         notyf.success('Message sent!')
         userInput.name = ''
+        userInput.subject = ''
         userInput.email = ''
-        userInput.message = ''
         setLoading(false)
       },
       (err) => {
@@ -113,6 +131,19 @@ export default function ContactForm() {
             isInvalid: invalidInput.name,
           }}
         />
+        
+        <TextInput
+          {...{
+            type: 'text',
+            name: 'subject',
+            label: 'Subject:',
+            placeholder: 'E.g: Opportunity',
+            value: userInput.subject,
+            labelClassName: 'primary-font',
+            onChange: inputHander,
+            isInvalid: invalidInput.subject,
+          }}
+        />
         <TextInput
           {...{
             inpuType: 'email',
@@ -131,7 +162,7 @@ export default function ContactForm() {
             style={{ borderColor: invalidInput.message && 'red' }}
             value={userInput.eamil}
             onChange={inputHander}
-            placeholder='e.g: Hi, I have a suggestion, feedback, opportunity...'
+            placeholder='E.g: Hi, I have a suggestion, feedback, opportunity...'
             id='message'
             name='message'
           />

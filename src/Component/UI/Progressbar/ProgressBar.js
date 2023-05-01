@@ -26,7 +26,7 @@ const ProgressBar = ({ color }) => {
       style={{
         width: `${scrollWidth}%`,
         height: '5px',
-        backgroundColor: color === 'light' ? '#00835a' : '#3c9c00', // Example color, you can customize it
+        backgroundColor: color === 'light' ? '#00835a' : '#b52f00', // Example color, you can customize it
         position: 'fixed', // Example positioning, you can adjust it
         top: 0,
         left: 0,

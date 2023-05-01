@@ -37,7 +37,7 @@ const TextInput = ({
           name: 'email',
           type: 'email',
           label: 'Email address:',
-          placeholder: 'e.g: john@gmail.com',
+          placeholder: 'E.g: john@gmail.com',
         })
         break
       case 'password':
@@ -46,7 +46,7 @@ const TextInput = ({
           name: 'password',
           type: 'password',
           label: 'Password:',
-          placeholder: 'e.g: Your password',
+          placeholder: 'E.g: Your password',
         })
         break
       case 'name':
@@ -55,7 +55,7 @@ const TextInput = ({
           name: 'name',
           type: 'name',
           label: 'Name:',
-          placeholder: 'e.g: John Doe',
+          placeholder: 'E.g: John Doe',
         })
         break
 

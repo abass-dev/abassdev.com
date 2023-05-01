@@ -4,6 +4,7 @@ import Toggle from 'react-toggle'
 import { Loading } from '../UI'
 import { FaCloudMoon, FaSun } from 'react-icons/fa'
 import Nav from '../Nav/Nav'
+import { Profile, Work, Project, MyStory, Skill, LatestPosts, Footer} from '../'
 import { SunIcon } from '@primer/octicons-react'
 import { useContext, useState, useEffect } from 'react'
 import { ThemeContext } from '../../Context/ThemeProvider'
@@ -23,39 +24,19 @@ const Home = () => {
   function handlerToggle(e) {
     toggleTheme()
   }
-  const Profile = lazy(() => import('../Profile/Profile'))
-  const MyStory = lazy(() => import('../MyStory/MyStory'))
-  const Project = lazy(() => import('../Project/Project'))
-  const Skill = lazy(() => import('../Skill/Skill'))
-  const Work = lazy(() => import('../Work/Work'))
-  const LatestPosts = lazy(() => import('../Blog/LatestPosts'))
-  const Footer = lazy(() => import('../Footer/Footer'))
+ 
   return (
     <div id={storedTheme}>
       <Nav active={'home'} />
       <div className='container-lg'>
-        <Suspense fallback={<Loading />}>
           <Profile />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
           <MyStory />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
           <Project />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
           <Work />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
           <Skill />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
           <LatestPosts />
-        </Suspense>
       </div>
-      <Suspense fallback={<Loading />}>
         <Footer />
-      </Suspense>
     </div>
   )
 }
