@@ -163,7 +163,7 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-            
+
             <div ref={fakarayRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
                 <div className='card-body '>
@@ -181,7 +181,9 @@ export default function Project({ pathName }) {
                     <span className='fw-lighter'> React, Firebase, SASS</span>
                   </p>
                   <p className='md-title'>
-                  Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market. 
+                    Fakaray is a user-friendly chat application that enables seamless communication between friends and
+                    family. With its intuitive interface and robust features, Fakaray offers a chat experience that is
+                    comparable to that of other popular chat apps on the market.
                   </p>
                 </div>
               </div>

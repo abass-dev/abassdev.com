@@ -62,11 +62,12 @@ export default function Profile() {
                 <p className='after-title'></p>
                 <p className='lead text-start'>
                   A passionate web and mobile app developer with over 6 years of experience in programming and the
-                  internet. </p>
-                  <p className='lead text-start'>In my free time, I enjoy writing articles on my{' '}
-                  <a href='https://blog.abassdev.com'>blog</a> and contributing to the{' '}
-                  <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the{' '}
-                  <a href='https://github.com/nigaphp'>NigaPHP</a> framework.
+                  internet.{' '}
+                </p>
+                <p className='lead text-start'>
+                  In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and
+                  contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the
+                  creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.
                 </p>
 
                 <div className='col-12 mt-4 text-center profile-socieal-links'>

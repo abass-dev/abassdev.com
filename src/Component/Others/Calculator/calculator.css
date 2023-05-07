@@ -1,12 +1,12 @@
 :root {
-    --black: #000000;
-    --calculator-backround-color:  #22252D;
-    --body-bacground-color: #efeff2;
-    --white: #ffffff;
-    --blue: #00ccff;
-    --gray: rgba(224, 224, 224);
-    --warn: #ff6400;
-    --green: rgb(3, 167, 66);
+  --black: #000000;
+  --calculator-backround-color: #22252d;
+  --body-bacground-color: #efeff2;
+  --white: #ffffff;
+  --blue: #00ccff;
+  --gray: rgba(224, 224, 224);
+  --warn: #ff6400;
+  --green: rgb(3, 167, 66);
 }
 
 .calculator-root {
@@ -24,8 +24,6 @@
   box-shadow: 0 20px 0 red;
 }
 
-
-
 .calculator-container input {
   border-radius: 15px 15px 0 0;
   width: 100%;
@@ -35,20 +33,22 @@
   font-size: 2rem;
   padding: 1rem;
   pointer-events: none;
-  color :#fff;
+  color: #fff;
   text-align: right;
   background-color: #181532;
 }
 .buttons {
-display: flex;
-flex-wrap: wrap ;
-padding: 20px;
-pointer-events: auto;
-justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  pointer-events: auto;
+  justify-content: space-between;
 }
-.button, .clear-btn, .equal-btn {
-  border: none;    
-pointer-events: auto;
+.button,
+.clear-btn,
+.equal-btn {
+  border: none;
+  pointer-events: auto;
   flex: 0 0 22%;
   margin: 5px 0;
   width: 60px;

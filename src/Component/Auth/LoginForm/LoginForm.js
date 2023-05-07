@@ -23,7 +23,7 @@ export default function LoginForm() {
   const [message, setMessage] = useState({ success: null, error: null })
 
   function inputHander(e) {
-    const inputValue = e.target.value.trim()
+    const inputValue = e.target.value
     const inputName = e.target.name
     setInvalidInput({})
     setUserInputs((prev) => {
@@ -56,8 +56,9 @@ export default function LoginForm() {
       return notyf.error('Password is required')
     }
     setLoading(true)
+    const { email, password } = userInput
     axios
-      .post(URL.admin, userInput)
+      .post(URL.admin, { email: email.trim(), password: password.trim() })
       .then((response) => {
         const data = response.data
         if (data.status === 'failed') {

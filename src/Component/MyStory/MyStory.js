@@ -11,7 +11,6 @@ import './MyStory.css'
 function MyStory({ pathName }) {
   const storyRef = useRef(null)
   SingleSlideAnim(storyRef, '.storyRefId')
-
   const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage

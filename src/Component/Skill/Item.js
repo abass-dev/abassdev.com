@@ -35,10 +35,10 @@ function Item(props) {
   }
 
   return (
-    <div ref={skillRef} onClick={action} className={`skill-card-focus ${!props.lastChild && 'border-bottom' }`}>
+    <div ref={skillRef} onClick={action} className={`skill-card-focus ${!props.lastChild && 'borderBottom'}`}>
       <div className='row px-3 skillRefID zoom-in'>
         <div className='col-9 pt-3 skill-card-title-focus'>
-        <p>{title}</p>
+          <p>{title}</p>
         </div>
 
         <div className='col-3 pt-3 skill-card-title-focus text-end'>

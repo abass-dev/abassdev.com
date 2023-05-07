@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { ListUnorderedIcon } from '@primer/octicons-react'
 import Toggle from 'react-toggle'
-import { NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { FaCloudMoon, FaSun } from 'react-icons/fa'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { ThemeContext } from '../../Context/ThemeProvider'

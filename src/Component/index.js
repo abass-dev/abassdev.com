@@ -6,5 +6,6 @@ import Work from './Work/Work'
 import Footer from './Footer/Footer'
 import LatestPosts from './Blog/LatestPosts'
 import MyStory from './MyStory/MyStory'
+import Home from './Home/Home'
 
-export { MyStory, LatestPosts, Nav, Profile, Skill, Project, Work, Footer }
+export { Home, MyStory, LatestPosts, Nav, Profile, Skill, Project, Work, Footer }

@@ -15,7 +15,7 @@ export default function CookieAlertBox() {
         color: '#ffffff',
         display: 'flex',
         alignSelf: 'right',
-        borderRadius: '25px'
+        borderRadius: '25px',
       }}
     >
       <small>

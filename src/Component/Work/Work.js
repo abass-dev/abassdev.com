@@ -89,7 +89,9 @@ export default function Work() {
               </p>
               <h2 className='text-center text-secondary'>Problem solving</h2>
               <p>
-              I possess a solid understanding of the problem-solving process and techniques to address issues. My approach is to always strive for the optimal solution to a problem, and I remain receptive to new ideas that could lead to better outcomes.
+                I possess a solid understanding of the problem-solving process and techniques to address issues. My
+                approach is to always strive for the optimal solution to a problem, and I remain receptive to new ideas
+                that could lead to better outcomes.
               </p>
             </div>
           </div>

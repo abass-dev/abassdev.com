@@ -33,7 +33,7 @@ export default function ContactForm() {
   const [isLoading, setLoading] = useState(false)
 
   function inputHander(e) {
-    const inputValue = e.target.value.trim()
+    const inputValue = e.target.value
     const inputName = e.target.name
     setInvalidInput({})
     setUserInputs((prev) => {
@@ -58,7 +58,7 @@ export default function ContactForm() {
       })
       return notyf.error("Your name shouldn't be less than 2 characters")
     }
-    
+
     if (userInput.subject.length <= 2) {
       setInvalidInput((prev) => {
         return {
@@ -68,7 +68,7 @@ export default function ContactForm() {
       })
       return notyf.error("Subject shouldn't be less than 2 characters")
     }
-    
+
     if (!valideEmail.valid) {
       setInvalidInput((prev) => {
         return {
@@ -92,13 +92,13 @@ export default function ContactForm() {
     const { name, subject, email, message } = userInput
 
     const templateParams = {
-      user_name: name,
+      user_name: name.trim(),
       to_name: 'Abass Dev',
-      from_name: name,
-      from_subject: subject,
-      user_email: email,
-      reply_to: email,
-      message: message
+      from_name: name.trim(),
+      from_subject: subject.trim(),
+      from_email: email.trim(),
+      reply_to: email.trim(),
+      message: message.trim(),
     }
     setLoading(true)
     emailjs.send('service_jebasxm', 'template_mduuz2e', templateParams, '9QHGoEPmDaBELUbZn').then(
@@ -131,7 +131,7 @@ export default function ContactForm() {
             isInvalid: invalidInput.name,
           }}
         />
-        
+
         <TextInput
           {...{
             type: 'text',
