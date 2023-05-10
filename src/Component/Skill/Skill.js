@@ -227,18 +227,18 @@ export default function Skill() {
                         <div
                           className='progress-bar bg-secondary french'
                           role='progressbar'
-                          aria-valuenow='95'
+                          aria-valuenow='88'
                           aria-valuemin='0'
                           aria-valuemax='100'
                         >
-                          95%
+                          88%
                         </div>
                       </div>
                     </div>
 
                     <div className='col-12 mb-2'>
                       <div className='progress w-100'>
-                        <span className='bg-success px-1 text-white'> Haussa </span>
+                        <span className='bg-success px-1 text-white'> Hausa </span>
                         <div
                           className='progress-bar bg-secondary haussa'
                           role='progressbar'
