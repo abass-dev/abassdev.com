@@ -24,7 +24,7 @@ export default function Report({ report = 'Home/Home.js' }) {
                 </a>
               </li>
               <li>
-                <a href='https://github.com/abass-dev/abassdev.com/fork'>Fork the repository</a>
+                <a href='https://github.com/abass-dev/abassdev.com/fork'>Fork this repository</a>
               </li>
               <li>
                 <a href={`https://github.com/abass-dev/abassdev.com/blob/master/src/Component/${report}`}>

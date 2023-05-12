@@ -23,18 +23,8 @@ const Contact = ({ pathName }) => {
   return (
     <div id={storedTheme && storedTheme}>
       {pathName && <Nav metaData={metaData} active={'contact'} />}
-      <div style={{ minHeight: '75vh' }} className='container'>
+      <div style={{ minHeight: '75vh'}} className='container'>
         <div className='row d-flex align-items-center'>
-          <div className='col-md-6 mt-4'>
-            <h1 className='pt-4 primary-font primary-text fw-bold'>Contact me</h1>
-            <p className='after-title mb-4'></p>
-            <p className='text-center ff-ubuntu'>
-              <span className='h1 primary-text'>I</span>f you have a suggestion, feedback, opportunity, or are
-              interested in collaborating on a project, we would love to hear from you! Please feel free to reach out to
-              us using the contact details provided below. If you are expecting a reply, kindly mention your contact
-              details in your message.
-            </p>
-          </div>
 
           <div className='col-md-6 ff-ubuntu mt-4'>
             <div itemScope itemType='http://schema.org/Person'>
@@ -44,9 +34,9 @@ const Contact = ({ pathName }) => {
                 <span itemProp='affiliation'>self-employed</span>
               </p>
               <p itemProp='address' itemScope itemType='http://schema.org/PostalAddress'>
-                <span itemProp='streetAddress'>19 Patrice Lumumba Road</span>,
-                <span itemProp='addressLocality'>Accra</span>,<span itemProp='addressRegion'>GH</span>,
-                <span itemProp='postalCode'>GA-254-4987</span>,<span itemProp='addressCountry'>Ghana</span>
+                <span itemProp='streetAddress'>19 Patrice Lumumba Road</span>,{' '}
+                <span itemProp='addressLocality'>Accra</span>,{' '}<span itemProp='addressRegion'>GH</span>,{' '}
+                <span itemProp='postalCode'>GA-254-4987</span>, {' '}<span itemProp='addressCountry'>Ghana</span>
               </p>
               <p>
                 Email:{' '}
@@ -58,7 +48,7 @@ const Contact = ({ pathName }) => {
               </p>
             </div>
           </div>
-          <div className='col-md-12 mt-4'>
+          <div className='col-md-6 mt-4'>
             <ContactForm />
           </div>
         </div>

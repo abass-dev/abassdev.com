@@ -17,14 +17,14 @@ export default function Profile() {
   SingleSlideAnim(profileContentRef, '.profileContentRefId')
 
   return (
-    <div id='apropos' className='my-4 container-lg'>
+    <div id='apropos' className='my-5 container-lg'>
       <div className='row'>
         <div className='col-12'>
           <h1 className='profile-title primary-font fw-bold'>
             <span className='primary-text'>Hi there, 👋 </span>
             It's Abass Dev!
           </h1>
-          <h2 className='profile-title primary-text primary-font'>
+          <h2 className='profile-title primary-text mb-5 primary-font'>
             <Typical
               steps={[
                 'Freelancer 🌠',
