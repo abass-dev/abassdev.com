@@ -53,8 +53,8 @@ export function PortfolioDropdownNav({ active, activeLink, handleClick }) {
           </a>
         </li>
         <li>
-          <a onClick={handleClick} className={`dropdown-item`} href='/#work'>
-            <i className='fa fa-briefcase'></i> Works
+          <a onClick={handleClick} className={`dropdown-item`} href='/#services'>
+            <i className='fa fa-briefcase'></i> Services
           </a>
         </li>
       </ul>
@@ -76,7 +76,7 @@ export function AllInOneDropdownNav() {
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
-          <NavLink className='dropdown-item' to='/dev-blog/reactjs-in-one'>
+          <NavLink className='dropdown-item' to='/reactjs-in-one'>
             <i className='devicon-react-original'></i> ReactJs in one
           </NavLink>
         </li>

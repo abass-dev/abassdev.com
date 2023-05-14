@@ -2,9 +2,9 @@ import React, { useRef } from 'react'
 import { SingleSlideAnim } from '../Util/Util'
 
 import 'font-awesome/css/font-awesome.min.css'
-import './Work.css'
+import './Services.css'
 
-export default function Work() {
+export default function Services() {
   const webRef = useRef(null)
   const designRef = useRef(null)
   const SEORef = useRef(null)
@@ -21,8 +21,8 @@ export default function Work() {
     <div className='text-white mb-4 md-title container-lg'>
       <div className='row'>
         <div className='col-12'>
-          <h1 id='work' className='mb-4 primary-font primary-text text-center'>
-            My works
+          <h1 id='services' className='mb-4 primary-font primary-text text-center'>
+            Services
           </h1>
         </div>
         <div ref={webRef} className='col-md-6 mb-4'>

@@ -28,7 +28,7 @@ const Profile = lazy(() => import('./Component/Profile/Profile'))
 const MyStory = lazy(() => import('./Component/MyStory/MyStory'))
 const Project = lazy(() => import('./Component/Project/Project'))
 const Skill = lazy(() => import('./Component/Skill/Skill'))
-const Work = lazy(() => import('./Component/Work/Work'))
+const Services = lazy(() => import('./Component/Services/Services'))
 const Contact = lazy(() => import('./Component/Contact/Contact'))
 const Calculator = lazy(() => import('./Component/Others/Calculator/Calculator'))
 const ReactInOne = lazy(() => import('./Component/AllInOne/React/ReactInOne'))
@@ -54,7 +54,7 @@ ReactDOM.render(
                   <Route path='privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
                   <Route path='projects' element={<Project pathName={pathName} />} />
                   <Route path='calculator' element={<Calculator pathName={pathName} />} />
-                  <Route path='dev-blog/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
+                  <Route path='reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                   <Route path='login' element={<Login pathName={pathName} />} />
                   <Route path='*' element={<NotFound pathName={pathName} />} />
                 </Route>

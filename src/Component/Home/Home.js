@@ -1,5 +1,5 @@
 import Nav from '../Nav/Nav'
-import { Profile, Work, Project, MyStory, Skill, LatestPosts, Footer } from '../'
+import { Profile, Services, Project, MyStory, Skill, LatestPosts, Footer } from '../'
 import { useContext, useState, useEffect } from 'react'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import './Home.css'
@@ -23,7 +23,7 @@ const Home = () => {
         <Profile />
         <MyStory />
         <Project />
-        <Work />
+        <Services />
         <Skill />
         <LatestPosts />
       </div>

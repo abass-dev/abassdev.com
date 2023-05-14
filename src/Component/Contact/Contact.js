@@ -23,9 +23,8 @@ const Contact = ({ pathName }) => {
   return (
     <div id={storedTheme && storedTheme}>
       {pathName && <Nav metaData={metaData} active={'contact'} />}
-      <div style={{ minHeight: '75vh'}} className='container'>
+      <div style={{ minHeight: '75vh' }} className='container'>
         <div className='row d-flex align-items-center'>
-
           <div className='col-md-6 ff-ubuntu mt-4'>
             <div itemScope itemType='http://schema.org/Person'>
               <h1 itemProp='name'>Abass Dev</h1>
@@ -35,8 +34,8 @@ const Contact = ({ pathName }) => {
               </p>
               <p itemProp='address' itemScope itemType='http://schema.org/PostalAddress'>
                 <span itemProp='streetAddress'>19 Patrice Lumumba Road</span>,{' '}
-                <span itemProp='addressLocality'>Accra</span>,{' '}<span itemProp='addressRegion'>GH</span>,{' '}
-                <span itemProp='postalCode'>GA-254-4987</span>, {' '}<span itemProp='addressCountry'>Ghana</span>
+                <span itemProp='addressLocality'>Accra</span>, <span itemProp='addressRegion'>GH</span>,{' '}
+                <span itemProp='postalCode'>GA-254-4987</span>, <span itemProp='addressCountry'>Ghana</span>
               </p>
               <p>
                 Email:{' '}
