@@ -6,7 +6,6 @@ function Item(props) {
   AnimInfinity(skillRef, '.skillRefID')
 
   let title = props.title
-  let icon = props.icon
   let description = props.desk
   let link = props.link
 

@@ -35,7 +35,7 @@ export default function Project({ pathName }) {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   const metaData = {
     title: 'Projects',

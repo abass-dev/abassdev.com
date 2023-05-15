@@ -20,7 +20,7 @@ function MyStory({ pathName }) {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   const metaData = {
     title: 'My story',

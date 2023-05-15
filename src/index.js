@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './App'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'react-toggle/style.css' // for ES6 modules
 // Bootstrap CSS
@@ -24,11 +24,8 @@ TagManager.initialize(tagManagerArgs)
 
 const pathName = window.location.pathname
 
-const Profile = lazy(() => import('./Component/Profile/Profile'))
 const MyStory = lazy(() => import('./Component/MyStory/MyStory'))
 const Project = lazy(() => import('./Component/Project/Project'))
-const Skill = lazy(() => import('./Component/Skill/Skill'))
-const Services = lazy(() => import('./Component/Services/Services'))
 const Contact = lazy(() => import('./Component/Contact/Contact'))
 const Calculator = lazy(() => import('./Component/Others/Calculator/Calculator'))
 const ReactInOne = lazy(() => import('./Component/AllInOne/React/ReactInOne'))

@@ -1,5 +1,5 @@
 import './Button.css'
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function ScrollUpButton() {
   const btnUpRef = useRef(null)

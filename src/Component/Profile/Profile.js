@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import Typical from 'react-typical'
 import 'font-awesome/css/font-awesome.min.css'
-import { MyStory } from '../'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import pdfLink from '../../assets/pdf/abass_cv_en.pdf'
 import ProfilePicture from '../../assets/images/profile-pic2.webp'

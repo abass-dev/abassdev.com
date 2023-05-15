@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Nav } from '../../'
 import './calculator.css'
 
 export default function Calculator() {

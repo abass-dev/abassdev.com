@@ -13,7 +13,7 @@ export default function PrivacyPolicy({ pathName }) {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   const metaData = {
     title: 'Privacy policy',

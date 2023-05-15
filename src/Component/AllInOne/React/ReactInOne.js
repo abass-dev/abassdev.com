@@ -1,6 +1,6 @@
-import { useState, useEffect, useContext, useRef } from 'react'
+import { useContext, useState, useEffect, useRef } from 'react'
 import { Nav, Footer } from '../../'
-import { ThemeContext } from '../../../Context/ThemeProvider'
+import { ThemeContext } from '../../../Context'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import './ReactInOne.css'
@@ -12,22 +12,17 @@ import { AlertMessage } from '../../Helpers'
 import { Loading } from '../../UI'
 
 export default function ReactInOne(props) {
-  console.log(props)
   const [posts, setPosts] = useState()
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
-    setIsLoading(true)
     // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration('posts')
     if (postsFromCache) {
       // Use the retrieved value
       setPosts(postsFromCache)
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 1000)
+      setIsLoading(false)
     } else {
       // Value has expired or does not exist
-      setIsLoading(true)
       axios
         .get('https://api.abassdev.com')
         .then((response) => {
@@ -87,16 +82,16 @@ export default function ReactInOne(props) {
     )
   }
 
-  const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
-
+  const { theme } = useContext(ThemeContext)
+  
   useEffect(() => {
     let sthm = localStorage.getItem('theme')
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [localStorage, theme])
 
   const metaData = {
     title: 'Learn ReactJs in one page',

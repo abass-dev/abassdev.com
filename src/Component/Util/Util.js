@@ -20,7 +20,7 @@ export function SingleSlideAnim(targetRef, targetId) {
       })
     }
     return () => observer.disconnect()
-  }, [isIntersecting])
+  }, [isIntersecting, targetId, targetRef])
 }
 
 export function AnimInfinity(targetRef, targetId) {
@@ -47,5 +47,5 @@ export function AnimInfinity(targetRef, targetId) {
       })
     }
     return () => observer.disconnect()
-  }, [isIntersecting])
+  }, [isIntersecting, targetId, targetRef])
 }

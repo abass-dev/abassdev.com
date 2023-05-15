@@ -2,11 +2,14 @@ import React, { useContext, useEffect, useState } from 'react'
 import ContactForm from '../ContactForm'
 import { NavLink, Link } from 'react-router-dom'
 import { ThemeContext } from '../../Context/ThemeProvider'
-import './Footer.css'
 import Report from '../Report'
 
+import './Footer.css'
+
 export default function Footer({ desableContacForm, report }) {
+  const buildInfo = require('../../build-info.json')
   const packageJson = require('../../../package.json')
+
   const appVersion = packageJson.version
   const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
@@ -17,7 +20,7 @@ export default function Footer({ desableContacForm, report }) {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   return (
     <>
@@ -116,8 +119,9 @@ export default function Footer({ desableContacForm, report }) {
             </div>
 
             <p className='copyright ff-ubuntu p-4 text-white'>
-              <Link to='/copyright'>Copyright</Link> © 2021 - {new Date().getFullYear()} Abass Dev. All rights reserved.{' '}
-              <br /> Current version: {appVersion}
+              <p> <Link to='/copyright'>Copyright</Link> © 2021 - {new Date().getFullYear()} Abass Dev. All rights reserved.{' '} </p>
+              <p> Current version: {appVersion}</p>
+              <p> Last update: {new Date(buildInfo.lastUpdate).toString()}</p>
             </p>
           </div>
         </div>

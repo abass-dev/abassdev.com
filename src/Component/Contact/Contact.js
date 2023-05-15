@@ -1,6 +1,6 @@
 import Nav from '../Nav/Nav'
 import { Footer } from '../'
-import { ThemeContext } from '../../Context/ThemeProvider'
+import { ThemeContext } from '../../Context'
 import { useState, useEffect, useContext } from 'react'
 import ContactForm from '../ContactForm'
 
