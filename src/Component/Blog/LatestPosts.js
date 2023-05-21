@@ -13,7 +13,7 @@ export default function LatestPosts() {
       setLatestPosts(latestPostsFormCache)
     } else {
       axios
-        .get('https://blog.abassdev.com/index.php/wp-json/wp/v2/posts?_embed&per_page=3')
+        .get('https://byteteachers.com/index.php/wp-json/wp/v2/posts?_embed&per_page=3')
         .then((response) => {
           setLatestPosts(response.data)
           setItemWithExpiration('latest_posts', response.data, 1440)

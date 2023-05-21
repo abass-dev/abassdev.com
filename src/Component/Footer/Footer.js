@@ -90,7 +90,7 @@ export default function Footer({ desableContacForm, report }) {
                 <div className='col-6'>
                   <div className=''>
                     <Link className='link-secondary' to='/copyright'>
-                      Legal
+                      Copyright
                     </Link>
                   </div>
                 </div>
@@ -110,6 +110,13 @@ export default function Footer({ desableContacForm, report }) {
                 </div>
                 <div className='col-6'>
                   <div className=''>
+                    <Link className='link-secondary' to='https://byteteachers.com'>
+                      Blog
+                    </Link>
+                  </div>
+                </div>
+                <div className='col-12'>
+                  <div className=''>
                     <Link className='link-secondary' to='/calculator'>
                       Calculator
                     </Link>
@@ -119,7 +126,11 @@ export default function Footer({ desableContacForm, report }) {
             </div>
 
             <p className='copyright ff-ubuntu p-4 text-white'>
-              <p> <Link to='/copyright'>Copyright</Link> © 2021 - {new Date().getFullYear()} Abass Dev. All rights reserved.{' '} </p>
+              <p>
+                {' '}
+                <Link to='/copyright'>Copyright</Link> © 2021 - {new Date().getFullYear()} Abass Dev. All rights
+                reserved.{' '}
+              </p>
               <p> Current version: {appVersion}</p>
               <p> Last update: {new Date(buildInfo.lastUpdate).toString()}</p>
             </p>

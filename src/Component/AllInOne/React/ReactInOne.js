@@ -85,7 +85,7 @@ export default function ReactInOne(props) {
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
   const { theme } = useContext(ThemeContext)
-  
+
   useEffect(() => {
     let sthm = localStorage.getItem('theme')
     if (sthm) {

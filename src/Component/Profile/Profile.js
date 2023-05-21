@@ -64,9 +64,10 @@ export default function Profile() {
                   internet.{' '}
                 </p>
                 <p className='lead text-start'>
-                  In my free time, I enjoy writing articles on my <a href='https://blog.abassdev.com'>blog</a> and
-                  contributing to the <a href='https://github.com/abass-dev'>open-source</a> community. I am also the
-                  creator of the <a href='https://github.com/nigaphp'>NigaPHP</a> framework.
+                  In my free time, I enjoy writing articles on my blog{' '}
+                  <a href='https://byteteachers.com'>byteteachers.com</a> and contributing to the{' '}
+                  <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the{' '}
+                  <a href='https://github.com/nigaphp'>NigaPHP</a> framework.
                 </p>
 
                 <div className='col-12 mt-4 text-center profile-socieal-links'>

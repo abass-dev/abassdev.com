@@ -104,7 +104,7 @@ export default function Nav({ metaData, active }) {
             </ul>
             <ul className='navbar-nav flex-row d-flex justify-content-around align-items-center'>
               <li className='nav-item'>
-                <NavLink className='btn btn-outline-success btn-sm' to='https://blog.abassdev.com'>
+                <NavLink className='btn btn-outline-success btn-sm' to='https://byteteachers.com'>
                   BLOG
                 </NavLink>
               </li>
