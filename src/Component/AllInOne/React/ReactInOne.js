@@ -6,6 +6,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import './ReactInOne.css'
 import Notification from '../../Notification'
 import axios from 'axios'
+import GoogleADS from '../../ADS/GoogleADS'
 import dateToReadable from '../../Util/dateToReadable'
 import { setItemWithExpiration, getItemWithExpiration } from '../../Cache'
 import { AlertMessage } from '../../Helpers'
@@ -139,6 +140,10 @@ export default function ReactInOne(props) {
               <AlertMessage type='error' message='Blog posts are not available yet due to some technical issues.' />
             </div>
           )}
+          
+            <div className='col-12 mb-4'>
+              <GoogleADS dataAdSlot='2747123581'/>
+            </div>
         </div>
       </div>
       <Footer report='AllInOne/React/ReactInOne.js' />

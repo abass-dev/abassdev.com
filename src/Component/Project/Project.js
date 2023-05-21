@@ -7,6 +7,7 @@ import projectPHPCode from '../../assets/images/php_code.webp'
 import projectReactNative1 from '../../assets/images/screenshot.webp'
 import blogImg from '../../assets/images/blogimg.webp'
 import { SingleSlideAnim } from '../Util/Util'
+import GoogleADS from '../ADS/GoogleADS'
 import { Footer, Nav } from '../'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
@@ -115,7 +116,6 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-
             <div ref={formBuilderRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
                 <div className='card-body '>
@@ -166,7 +166,9 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-
+            <div className='col-12 mb-4'>
+              <GoogleADS dataAdSlot='2747123581'/>
+            </div>
             <div ref={fakarayRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
                 <div className='card-body '>
@@ -306,8 +308,7 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-
-            {pathName && (
+          {pathName && (
               <>
                 {SingleSlideAnim(portfolioApkRef, '.projetRefId')}
                 {SingleSlideAnim(socialAppRef, '.projetRefId')}
@@ -332,7 +333,9 @@ export default function Project({ pathName }) {
                     </div>
                   </div>
                 </div>
-
+            <div className='col-12 mb-4'>
+              <GoogleADS dataAdSlot='2747123581'/>
+            </div>
                 <div ref={portfolioApkRef} className='col-md-6 mb-1'>
                   <div className='card projetRefId slide-second border-0 shadow-sm'>
                     <div className='card-body '>

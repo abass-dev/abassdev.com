@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { SingleSlideAnim } from '../Util/Util'
-
+import GoogleADS from '../ADS/GoogleADS'
 import 'font-awesome/css/font-awesome.min.css'
 import './Services.css'
 
@@ -96,6 +96,9 @@ export default function Services() {
             </div>
           </div>
         </div>
+        <div className='col-12 mb-4'>
+           <GoogleADS dataAdSlot='2747123581'/>
+         </div>
       </div>
     </div>
   )
