@@ -5,6 +5,7 @@ import projectSocialContributionApp from '../../assets/images/social_contributio
 import projectFakaray from '../../assets/images/fakaray.webp'
 import projectPHPCode from '../../assets/images/php_code.webp'
 import projectReactNative1 from '../../assets/images/screenshot.webp'
+import blogImg from '../../assets/images/blogimg.webp'
 import { SingleSlideAnim } from '../Util/Util'
 import { Footer, Nav } from '../'
 import { ThemeContext } from '../../Context/ThemeProvider'
@@ -19,12 +20,14 @@ export default function Project({ pathName }) {
   const dinacardRef = useRef(null)
   const socialAppRef = useRef(null)
   const portfolioApkRef = useRef(null)
+  const blogRef = useRef(null)
 
   SingleSlideAnim(nigaPHPRef, '.projetRefId')
   SingleSlideAnim(portfolioRef, '.projetRefId')
   SingleSlideAnim(formBuilderRef, '.projetRefId')
   SingleSlideAnim(dinacardRef, '.projetRefId')
   SingleSlideAnim(fakarayRef, '.projetRefId')
+  SingleSlideAnim(blogRef, '.projetRefId')
 
   const { theme, toggleTheme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
@@ -272,6 +275,33 @@ export default function Project({ pathName }) {
                   <p>
                     Live demo
                     <a href='https://abassdev.com/abassdev.apk'> abassdev.apk ( Install the app here )</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div ref={blogRef} className='col-md-6 pt-4'>
+              <div className='projetRefId slide-first card border-0 shadow-sm'>
+                <div className='card-body '>
+                  <LazyLoadImage
+                    width={'100%'}
+                    height={'auto'}
+                    alt={'Dynacard'}
+                    effect='blur'
+                    className='rounded'
+                    src={blogImg} // use normal <img> attributes as props
+                  />
+                  <h2 className='md-title mt-3 h4 '>Byte Teachers (Blog)</h2>
+                  <p>
+                    <i className='fw-bold fa fa-code'></i>
+                    <span className='fw-lighter'> PHP & WordPress</span>
+                  </p>
+                  <p className='md-title'>
+                   My blog <a href='https://byteteachers.com'>ByteTeachers.com</a>, where I passionately share my knowledge with the world during my free time. This website is powered by WordPress (CMS) for a reason. WordPress allows us to streamline blog posting, saving us valuable time.
+                  </p>
+                  <p>
+                    Live demo {' '}
+                    <a href='https://byteteachers.com'>byteteachers.com</a>
                   </p>
                 </div>
               </div>
