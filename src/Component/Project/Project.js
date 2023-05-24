@@ -299,10 +299,10 @@ export default function Project({ pathName }) {
                     <span className='fw-lighter'> PHP & WordPress</span>
                   </p>
                   <p className='md-title'>
-                   My blog <a href='https://byteteachers.com'>ByteTeachers.com</a>, where I passionately share my knowledge with the world during my free time. This website is powered by WordPress (CMS) for a reason. WordPress allows us to streamline blog posting, saving us valuable time.
+                   <a href='https://byteteachers.com'>ByteTeachers.com</a> is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time.
                   </p>
                   <p>
-                    Live demo {' '}
+                    Go live: {' '}
                     <a href='https://byteteachers.com'>byteteachers.com</a>
                   </p>
                 </div>

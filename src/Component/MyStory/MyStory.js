@@ -61,13 +61,16 @@ function MyStory({ pathName }) {
                     {pathName ? (
                       <>
                         <p itemProp='description'>
-                          In 2012, Abass Dev created his own blog on the Blogspot platform, but soon discovered its
+                          In 2012, Abass Dev created his first blog on the Blogspot platform, but soon discovered its
                           limitations. Determined to expand his knowledge and capabilities, he began to explore the
                           depths of web development using languages such as HTML, CSS, JavaScript, PHP, SQL, and others.
                         </p>
                         <p>
                           With his dedication and hard work, Abass Dev honed his skills and became a self-taught{' '}
-                          <span jobTitle='full-stack developer'>full-stack developer</span>. Today, he has an impressive
+                          <span jobTitle='full-stack developer'>full-stack developer</span>.
+                        </p>
+                          <p>
+                          Today, he has an impressive
                           portfolio of work that showcases his expertise in building dynamic, responsive, and visually
                           appealing web applications.
                         </p>
