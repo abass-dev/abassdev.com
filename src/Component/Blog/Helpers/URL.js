@@ -1,5 +1,5 @@
 const URL = {
-  prefix: 'http://localhost:5000',
+  prefix: 'https://api.abassdev.com',
 }
 
 export default URL
