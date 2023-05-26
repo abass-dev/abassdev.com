@@ -69,10 +69,9 @@ function MyStory({ pathName }) {
                           With his dedication and hard work, Abass Dev honed his skills and became a self-taught{' '}
                           <span jobTitle='full-stack developer'>full-stack developer</span>.
                         </p>
-                          <p>
-                          Today, he has an impressive
-                          portfolio of work that showcases his expertise in building dynamic, responsive, and visually
-                          appealing web applications.
+                        <p>
+                          Today, he has an impressive portfolio of work that showcases his expertise in building
+                          dynamic, responsive, and visually appealing web applications.
                         </p>
                         <p>
                           In addition to his technical abilities, Abass Dev has a keen eye for design and aesthetics,

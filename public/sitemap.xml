@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.abassdev.com/</loc>
+      <loc>https://abassdev.com</loc>
       <lastmod>2023-04-24</lastmod>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://www.abassdev.com/projects</loc>
+      <loc>https://abassdev.com/projects</loc>
       <lastmod>2023-04-24</lastmod>
       <changefreq>monthly</changefreq>
    </url>
    <url>
-      <loc>https://www.abassdev.com/contact</loc>
+      <loc>https://abassdev.com/contact</loc>
       <lastmod>2023-04-24</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.abassdev.com/my-story</loc>
+      <loc>https://abassdev.com/my-story</loc>
       <lastmod>2023-04-24</lastmod>
       <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://abassdev.com/reactjs-in-one</loc>
+      <lastmod>2023-05-26</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://abassdev.com/react-native-in-one</loc>
+      <lastmod>2023-05-26</lastmod>
+      <changefreq>monthly</changefreq>
    </url>
 </urlset>

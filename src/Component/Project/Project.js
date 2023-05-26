@@ -167,7 +167,7 @@ export default function Project({ pathName }) {
               </div>
             </div>
             <div className='col-12 mb-4'>
-              <GoogleADS dataAdSlot='2747123581'/>
+              <GoogleADS dataAdSlot='2747123581' />
             </div>
             <div ref={fakarayRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
@@ -281,7 +281,7 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-            
+
             <div ref={blogRef} className='col-md-6 pt-4'>
               <div className='projetRefId slide-first card border-0 shadow-sm'>
                 <div className='card-body '>
@@ -299,16 +299,17 @@ export default function Project({ pathName }) {
                     <span className='fw-lighter'> PHP & WordPress</span>
                   </p>
                   <p className='md-title'>
-                   <a href='https://byteteachers.com'>ByteTeachers.com</a> is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time.
+                    <a href='https://byteteachers.com'>ByteTeachers.com</a> is where I passionately share my knowledge
+                    with the world during my free time. This website is using WordPress (CMS). WordPress allows us to
+                    streamline blog posting, saving us valuable time.
                   </p>
                   <p>
-                    Go live: {' '}
-                    <a href='https://byteteachers.com'>byteteachers.com</a>
+                    Go live: <a href='https://byteteachers.com'>byteteachers.com</a>
                   </p>
                 </div>
               </div>
             </div>
-          {pathName && (
+            {pathName && (
               <>
                 {SingleSlideAnim(portfolioApkRef, '.projetRefId')}
                 {SingleSlideAnim(socialAppRef, '.projetRefId')}
@@ -333,9 +334,9 @@ export default function Project({ pathName }) {
                     </div>
                   </div>
                 </div>
-            <div className='col-12 mb-4'>
-              <GoogleADS dataAdSlot='2747123581'/>
-            </div>
+                <div className='col-12 mb-4'>
+                  <GoogleADS dataAdSlot='2747123581' />
+                </div>
                 <div ref={portfolioApkRef} className='col-md-6 mb-1'>
                   <div className='card projetRefId slide-second border-0 shadow-sm'>
                     <div className='card-body '>

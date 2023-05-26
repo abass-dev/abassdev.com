@@ -45,7 +45,8 @@ export default function Nav({ metaData, active }) {
 
       {metaData && (
         <Helmet>
-          <title>Abass Dev - {metaData.title}</title>
+          {metaData.title && <title>Abass Dev - {metaData.title}</title>}
+          {metaData.description && <meta name='description' content={metaData.description} />}
         </Helmet>
       )}
       <nav
@@ -53,7 +54,9 @@ export default function Nav({ metaData, active }) {
       >
         <div className='container-fluid'>
           <NavLink aria-label='Logo' className='navbar-brand' to='/'>
+            <span>{'{ '}</span>
             <LazyLoadImage style={{ borderRadius: '100%' }} alt='Logo' width='37px' height='37px' src={logo} />
+            <span>{' }'}</span>
           </NavLink>
 
           <button

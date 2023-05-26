@@ -116,18 +116,21 @@ export default function Skill() {
               <h4 className='md-title text-secondary'>Databases</h4>
               <div className='card border-0 shadow-sm'>
                 <div className='card-body p-0  md-title'>
-                  <Item title='MySQL' 
-                  target='mysql'
-                  icon='devicon-mysql-plain'
-                  desk='MySQL is an open-source relational database management system (RDBMS) that has gained widespread popularity for its robustness, scalability, and ease of use. It is widely used in web development and other applications that require efficient storage and retrieval of large amounts of data. MySQL allows users to create and manage databases, define data structures, perform complex queries, and ensure data integrity through transactions and relational constraints.'
-                  link='https://en.m.wikipedia.org/wiki/MySQL' />
+                  <Item
+                    title='MySQL'
+                    target='mysql'
+                    icon='devicon-mysql-plain'
+                    desk='MySQL is an open-source relational database management system (RDBMS) that has gained widespread popularity for its robustness, scalability, and ease of use. It is widely used in web development and other applications that require efficient storage and retrieval of large amounts of data. MySQL allows users to create and manage databases, define data structures, perform complex queries, and ensure data integrity through transactions and relational constraints.'
+                    link='https://en.m.wikipedia.org/wiki/MySQL'
+                  />
 
                   <Item
-                  title='MangoDb'
-                  target='mangodb'
-                  icon='devicon-mongodb-plain'
-                  desk='MongoDB is a popular and widely used NoSQL (non-relational) database management system. It is designed to handle large volumes of data and provide high scalability, flexibility, and performance. MongoDB uses a document-oriented model, where data is stored in flexible, JSON-like documents, making it easy to represent and store complex data structures.'
-                  link='https://en.m.wikipedia.org/wiki/MongoDB' />
+                    title='MangoDb'
+                    target='mangodb'
+                    icon='devicon-mongodb-plain'
+                    desk='MongoDB is a popular and widely used NoSQL (non-relational) database management system. It is designed to handle large volumes of data and provide high scalability, flexibility, and performance. MongoDB uses a document-oriented model, where data is stored in flexible, JSON-like documents, making it easy to represent and store complex data structures.'
+                    link='https://en.m.wikipedia.org/wiki/MongoDB'
+                  />
 
                   <Item
                     title='PostgreSQL'
@@ -169,11 +172,12 @@ export default function Skill() {
                   />
 
                   <Item
-                  title='Firefox' 
-                  target='firefox' 
-                  icon='devicon-firefox-plain'
-                  desk='Firefox is a popular web browser that provides users with a fast, secure, and customizable online experience. Developed by Mozilla, Firefox has been a key player in the browser market for many years. It is known for its commitment to privacy and open-source principles.'
-                  link='https://en.m.wikipedia.org/wiki/Firefox' />
+                    title='Firefox'
+                    target='firefox'
+                    icon='devicon-firefox-plain'
+                    desk='Firefox is a popular web browser that provides users with a fast, secure, and customizable online experience. Developed by Mozilla, Firefox has been a key player in the browser market for many years. It is known for its commitment to privacy and open-source principles.'
+                    link='https://en.m.wikipedia.org/wiki/Firefox'
+                  />
 
                   <Item
                     title='Github'
@@ -191,13 +195,13 @@ export default function Skill() {
               <h4 className='md-title text-secondary'>Application Android & IOS</h4>
               <div className='card border-0 shadow-sm'>
                 <div className='card-body p-0  md-title'>
-                  <Item 
-                  title='Java' 
-                  target='java'
-                  icon='devicon-java-plain'
-                  desk='Java is a high-level, object-oriented programming language that was first released in 1995 by Sun Microsystems, which is now owned by Oracle Corporation. It was designed to be platform-independent, allowing developers to write code once and run it on any operating system or device that has a Java Virtual Machine (JVM) installed.' 
-                  link='https://en.m.wikipedia.org/wiki/Java_(programming_language)'
-                 />
+                  <Item
+                    title='Java'
+                    target='java'
+                    icon='devicon-java-plain'
+                    desk='Java is a high-level, object-oriented programming language that was first released in 1995 by Sun Microsystems, which is now owned by Oracle Corporation. It was designed to be platform-independent, allowing developers to write code once and run it on any operating system or device that has a Java Virtual Machine (JVM) installed.'
+                    link='https://en.m.wikipedia.org/wiki/Java_(programming_language)'
+                  />
 
                   <Item
                     title='React Native'
@@ -216,19 +220,21 @@ export default function Skill() {
               <div className='card border-0 shadow-sm'>
                 <div className='card-body p-0  md-title'>
                   <Item
-                  title='Python'
-                  target='python'
-                  icon='devicon-python-plain'
-                  desk='Python is a versatile and powerful programming language known for its simplicity and readability. Created by Guido van Rossum in the late 1980s, Python has since gained immense popularity and has become one of the most widely used programming languages in the world. Its design philosophy emphasizes code readability and a clean syntax, making it an excellent choice for beginners and experienced developers alike.'
-                  link='https://en.m.wikipedia.org/wiki/Python_(programming_language)' />
+                    title='Python'
+                    target='python'
+                    icon='devicon-python-plain'
+                    desk='Python is a versatile and powerful programming language known for its simplicity and readability. Created by Guido van Rossum in the late 1980s, Python has since gained immense popularity and has become one of the most widely used programming languages in the world. Its design philosophy emphasizes code readability and a clean syntax, making it an excellent choice for beginners and experienced developers alike.'
+                    link='https://en.m.wikipedia.org/wiki/Python_(programming_language)'
+                  />
 
                   <Item
-                  title='Java'
-                  target='java-soft'
-                  icon='devicon-java-plain'
-                  desk='Java is a high-level, object-oriented programming language that was first released in 1995 by Sun Microsystems, which is now owned by Oracle Corporation. It was designed to be platform-independent, allowing developers to write code once and run it on any operating system or device that has a Java Virtual Machine (JVM) installed.' 
-                  link='https://en.m.wikipedia.org/wiki/Java_(programming_language)'
-                  lastChild={true} />
+                    title='Java'
+                    target='java-soft'
+                    icon='devicon-java-plain'
+                    desk='Java is a high-level, object-oriented programming language that was first released in 1995 by Sun Microsystems, which is now owned by Oracle Corporation. It was designed to be platform-independent, allowing developers to write code once and run it on any operating system or device that has a Java Virtual Machine (JVM) installed.'
+                    link='https://en.m.wikipedia.org/wiki/Java_(programming_language)'
+                    lastChild={true}
+                  />
                 </div>
               </div>
             </div>
@@ -237,16 +243,18 @@ export default function Skill() {
               <div className='card border-0 shadow-sm '>
                 <div className='card-body p-0  md-title'>
                   <Item
-                  title='VsCode' 
-                  target='vscode'
-                  icon='devicon-vscode-plain'
-                  desk='VSCode, short for Visual Studio Code, is a highly popular and versatile source code editor developed by Microsoft. Designed to be lightweight yet powerful, VSCode offers a wide range of features and functionalities to enhance the coding experience for developers of various programming languages.'
-                  link='https://en.m.wikipedia.org/wiki/Visual_Studio_Code' />
+                    title='VsCode'
+                    target='vscode'
+                    icon='devicon-vscode-plain'
+                    desk='VSCode, short for Visual Studio Code, is a highly popular and versatile source code editor developed by Microsoft. Designed to be lightweight yet powerful, VSCode offers a wide range of features and functionalities to enhance the coding experience for developers of various programming languages.'
+                    link='https://en.m.wikipedia.org/wiki/Visual_Studio_Code'
+                  />
                   <Item
-                  title='Sublime Text' 
-                  target='sublimetext'
-                  desk='Sublime Text is a popular and highly versatile code editor loved by developers worldwide. It offers a sleek and minimalist interface coupled with powerful features that enhance coding productivity.'
-                  link='https://en.m.wikipedia.org/wiki/Sublime_Text' />
+                    title='Sublime Text'
+                    target='sublimetext'
+                    desk='Sublime Text is a popular and highly versatile code editor loved by developers worldwide. It offers a sleek and minimalist interface coupled with powerful features that enhance coding productivity.'
+                    link='https://en.m.wikipedia.org/wiki/Sublime_Text'
+                  />
 
                   <Item
                     title='Android Studio'
@@ -312,7 +320,7 @@ export default function Skill() {
               </div>
             </div>
             <div className='col-12 mb-4'>
-              <GoogleADS dataAdSlot='2747123581'/>
+              <GoogleADS dataAdSlot='2747123581' />
             </div>
           </div>
         </div>

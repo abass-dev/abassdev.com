@@ -15,6 +15,11 @@ export function DropdownNav() {
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
+          <a className='dropdown-item' href='/#faq'>
+            <i className='fa fa-question'></i> FAQs
+          </a>
+        </li>
+        <li>
           <NavLink className='dropdown-item' to='/copyright'>
             <i className='fa fa-gavel'></i> Legal
           </NavLink>
@@ -72,12 +77,17 @@ export function AllInOneDropdownNav() {
         data-bs-toggle='dropdown'
         aria-expanded='false'
       >
-        <i className='fa fa-code'></i> All In One
+        <i className='fa fa-code'></i> Shortcodes
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
           <NavLink className='dropdown-item' to='/reactjs-in-one'>
-            <i className='devicon-react-original'></i> ReactJs in one
+            <i className='devicon-react-original'></i> ReactJs In One
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='dropdown-item' to='/react-native-in-one'>
+            <i className='devicon-react-original'></i> React Native In One
           </NavLink>
         </li>
       </ul>

@@ -97,8 +97,8 @@ export default function Services() {
           </div>
         </div>
         <div className='col-12 mb-4'>
-           <GoogleADS dataAdSlot='2747123581'/>
-         </div>
+          <GoogleADS dataAdSlot='2747123581' />
+        </div>
       </div>
     </div>
   )

@@ -1,34 +1,32 @@
 import { useContext, useState, useEffect, useRef } from 'react'
-import { Nav, Footer } from '../../'
-import { ThemeContext } from '../../../Context'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import './ReactInOne.css'
-import Notification from '../../Notification'
+import { Nav, Footer } from '../../../'
+import { ThemeContext } from '../../../../Context'
+import Notification from '../../../Notification'
 import axios from 'axios'
-import GoogleADS from '../../ADS/GoogleADS'
-import dateToReadable from '../../Util/dateToReadable'
-import { setItemWithExpiration, getItemWithExpiration } from '../../Cache'
-import { AlertMessage } from '../../Helpers'
-import { Loading } from '../../UI'
+import GoogleADS from '../../../ADS/GoogleADS'
+import dateToReadable from '../../../Util/dateToReadable'
+import { setItemWithExpiration, getItemWithExpiration } from '../../../Cache'
+import { AlertMessage } from '../../../Helpers'
+import { Loading } from '../../../UI'
+import URL from '../../Helpers/URL'
+import CodeSnippet from '../../Helpers/CodeSnippet'
 
-export default function ReactInOne(props) {
+export default function ReactNativeInOne(props) {
   const [posts, setPosts] = useState()
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration('posts')
     if (postsFromCache) {
-      // Use the retrieved value
+      // Use the retrieved value if exist
       setPosts(postsFromCache)
       setIsLoading(false)
     } else {
       // Value has expired or does not exist
       axios
-        .get('https://api.abassdev.com')
+        .get(`${URL.prefix}/tech?tech=ReactNative`)
         .then((response) => {
           if (response) {
-            // console.log(response);
             setPosts(response.data)
             setItemWithExpiration('posts', response.data, 1440)
             setIsLoading(false)
@@ -44,45 +42,6 @@ export default function ReactInOne(props) {
     }
   }, [])
 
-  const CodeSnippet = ({ code }) => {
-    const codeRef = useRef(null)
-    const notyf = new Notification(2000, 'center', 'center')
-
-    const handleCopy = () => {
-      const textArea = document.createElement('textarea')
-      textArea.value = code
-      document.body.appendChild(textArea)
-      textArea.select()
-      document.execCommand('copy')
-      document.body.removeChild(textArea)
-      notyf.success('Copy!')
-    }
-
-    return (
-      <div style={{ position: 'relative' }}>
-        <SyntaxHighlighter language='javascript' style={vscDarkPlus} ref={codeRef}>
-          {code}
-        </SyntaxHighlighter>
-        <button
-          type='button'
-          data-bs-toggle='tooltip'
-          data-bs-placement='right'
-          title='Copy'
-          className='btn btn-secondary'
-          onClick={handleCopy}
-          style={{
-            position: 'absolute',
-            top: '8px', // adjust the top position as needed
-            right: '8px', // adjust the right position as needed
-            border: 'none',
-          }}
-        >
-          <i className='copy-code-button fa fa-copy'></i>
-        </button>
-      </div>
-    )
-  }
-
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
   const { theme } = useContext(ThemeContext)
@@ -95,7 +54,8 @@ export default function ReactInOne(props) {
   }, [localStorage, theme])
 
   const metaData = {
-    title: 'Learn ReactJs in one page',
+    title: 'Learn React Native in one page | Useful and short codes',
+    description: 'Learn React Native from shortcodes | short and useful React Native posts',
   }
 
   if (isLoading) {
@@ -108,7 +68,7 @@ export default function ReactInOne(props) {
       <div className='container'>
         <div className='row'>
           <div className='col-12 mb-3 mt-4'>
-            <h1 className='primary-text primary-font'>ReactJs in one</h1>
+            <h1 className='primary-text primary-font'>React Native in one</h1>
             <p className='after-title'></p>
           </div>
           {posts ? (
@@ -140,13 +100,13 @@ export default function ReactInOne(props) {
               <AlertMessage type='error' message='Blog posts are not available yet due to some technical issues.' />
             </div>
           )}
-          
-            <div className='col-12 mb-4'>
-              <GoogleADS dataAdSlot='2747123581'/>
-            </div>
+
+          <div className='col-12 mb-4'>
+            <GoogleADS dataAdSlot='2747123581' />
+          </div>
         </div>
       </div>
-      <Footer report='AllInOne/React/ReactInOne.js' />
+      <Footer report='AllInOne/ReactNativeInOne/ReactNativeInOne.js' />
     </div>
   )
 }

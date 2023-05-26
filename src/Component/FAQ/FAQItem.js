@@ -1,12 +1,10 @@
 function FAQItem(props) {
-
   let title = props.title
   let description = props.desk
   let link = props.link
   let moreDesk = props.moreDesk
-  
 
-const action = () => {
+  const action = () => {
     document.querySelector('.' + props.target + '-chevron').classList.toggle('rotate-chevron')
     document.querySelector('.' + props.target + '-desk').classList.toggle('toggle-it')
   }
@@ -23,13 +21,15 @@ const action = () => {
         </div>
 
         <div className={props.target + '-desk toggle-it col-12 faq-card-desk pt-3'}>
-          {description && <p style={{fontSize: 16}}>{description}</p>}
-          {moreDesk && moreDesk.map((v,i) => {
-            return (
-            <p style={{fontSize: 16}} key={i}>{v}</p>
-            )
-          })
-          }
+          {description && <p style={{ fontSize: 16 }}>{description}</p>}
+          {moreDesk &&
+            moreDesk.map((v, i) => {
+              return (
+                <p style={{ fontSize: 16 }} key={i}>
+                  {v}
+                </p>
+              )
+            })}
         </div>
       </div>
     </div>

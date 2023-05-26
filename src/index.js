@@ -20,7 +20,10 @@ import './index.css'
 const tagManagerArgs = {
   gtmId: 'G-N8ZTB9NPSP',
 }
-TagManager.initialize(tagManagerArgs)
+
+if (process.env.NODE_ENV !== 'development') {
+  TagManager.initialize(tagManagerArgs)
+}
 
 const pathName = window.location.pathname
 
@@ -28,7 +31,8 @@ const MyStory = lazy(() => import('./Component/MyStory/MyStory'))
 const Project = lazy(() => import('./Component/Project/Project'))
 const Contact = lazy(() => import('./Component/Contact/Contact'))
 const Calculator = lazy(() => import('./Component/Others/Calculator/Calculator'))
-const ReactInOne = lazy(() => import('./Component/AllInOne/React/ReactInOne'))
+const ReactInOne = lazy(() => import('./Component/Blog/AllInOne/ReactInOne/ReactInOne'))
+const ReactNativeInOne = lazy(() => import('./Component/Blog/AllInOne/ReactNativeInOne/ReactNativeInOne'))
 const Copyright = lazy(() => import('./Component/Copyright/Copyright'))
 const Login = lazy(() => import('./Component/Auth/Login'))
 const PrivacyPolicy = lazy(() => import('./Component/PrivacyPolicy/PrivacyPolicy'))
@@ -52,6 +56,7 @@ ReactDOM.render(
                   <Route path='projects' element={<Project pathName={pathName} />} />
                   <Route path='calculator' element={<Calculator pathName={pathName} />} />
                   <Route path='reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
+                  <Route path='react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
                   <Route path='login' element={<Login pathName={pathName} />} />
                   <Route path='*' element={<NotFound pathName={pathName} />} />
                 </Route>
