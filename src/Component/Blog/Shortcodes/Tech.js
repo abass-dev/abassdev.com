@@ -57,7 +57,7 @@ export default function Tech({ title, tech }) {
                     <h1 className='h3'>
                       {value.id}# {value.title}
                     </h1>
-                    <p id={`${value.title.replaceAll(' ', '-')}-${value.id}`} className='card-text'>
+                    <p className='card-text'>
                       <strong>Description: </strong>
                       {value.description}
                     </p>

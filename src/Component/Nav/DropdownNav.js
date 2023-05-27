@@ -81,6 +81,11 @@ export function AllInOneDropdownNav() {
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
+          <NavLink className='dropdown-item' to='/php-in-one'>
+            <i className='devicon-react-original'></i> PHP In One
+          </NavLink>
+        </li>
+        <li>
           <NavLink className='dropdown-item' to='/reactjs-in-one'>
             <i className='devicon-react-original'></i> ReactJs In One
           </NavLink>

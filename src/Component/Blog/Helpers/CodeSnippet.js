@@ -15,7 +15,7 @@ const CodeSnippet = ({ code }) => {
     textArea.select()
     document.execCommand('copy')
     document.body.removeChild(textArea)
-    notyf.success('Copy!')
+    notyf.success('Copied!')
   }
 
   return (

@@ -31,6 +31,7 @@ const MyStory = lazy(() => import('./Component/MyStory/MyStory'))
 const Project = lazy(() => import('./Component/Project/Project'))
 const Contact = lazy(() => import('./Component/Contact/Contact'))
 const Calculator = lazy(() => import('./Component/Others/Calculator/Calculator'))
+const PHPInOne = lazy(() => import('./Component/Blog/AllInOne/PHPInOne/PHPInOne'))
 const ReactInOne = lazy(() => import('./Component/Blog/AllInOne/ReactInOne/ReactInOne'))
 const ReactNativeInOne = lazy(() => import('./Component/Blog/AllInOne/ReactNativeInOne/ReactNativeInOne'))
 const Copyright = lazy(() => import('./Component/Copyright/Copyright'))
@@ -55,6 +56,7 @@ ReactDOM.render(
                   <Route path='privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
                   <Route path='projects' element={<Project pathName={pathName} />} />
                   <Route path='calculator' element={<Calculator pathName={pathName} />} />
+                  <Route path='php-in-one' element={<PHPInOne pathName={pathName} />} />
                   <Route path='reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                   <Route path='react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
                   <Route path='login' element={<Login pathName={pathName} />} />

@@ -7,7 +7,6 @@ import projectPHPCode from '../../assets/images/php_code.webp'
 import projectReactNative1 from '../../assets/images/screenshot.webp'
 import blogImg from '../../assets/images/blogimg.webp'
 import { SingleSlideAnim } from '../Util/Util'
-import GoogleADS from '../ADS/GoogleADS'
 import { Footer, Nav } from '../'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
@@ -72,7 +71,7 @@ export default function Project({ pathName }) {
                   <h2 className='md-title mt-3 h4 '>NigaPHP Framework</h2>
                   <i className='fw-bold fa fa-code'></i>{' '}
                   <span className='fw-lighter'>PHP, JavaScript, Sass, Shell, Twig</span>
-                  <p>
+                  <p className='border-bottom pb-2'>
                     <a
                       href='http://github.com/nigatedev/nigatedev'
                       class='btn mt-2 bg-light text-dark  text-primary btn-primary-outline btn-sm'
@@ -132,7 +131,7 @@ export default function Project({ pathName }) {
                     <i className='fw-bold fa fa-code'></i>
                     <span className='fw-lighter'> PHP, HTML, Bootstrap</span>
                   </p>
-                  <p>
+                  <p className='border-bottom pb-2'>
                     <a
                       href='https://github.com/abass-dev/BenOSP-FormBuilder'
                       class='btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark '
@@ -157,7 +156,7 @@ export default function Project({ pathName }) {
                   </p>
                   <p className='md-title'>
                     Looking for a user-friendly solution for building HTML forms? Check out Form Builder, an open-source
-                    project created by Abass Dev. The project is built with PHP and styled using Bootstrap CSS, making
+                    project created by Abass Dev. The project is coded with PHP and styled using Bootstrap CSS, making
                     it simple to create custom forms with ease.
                   </p>
                   <p>
@@ -165,9 +164,6 @@ export default function Project({ pathName }) {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className='col-12 mb-4'>
-              <GoogleADS dataAdSlot='2747123581' />
             </div>
             <div ref={fakarayRef} className='col-md-6 mb-4'>
               <div className='projetRefId slide-second card border-0 shadow-sm'>
@@ -333,9 +329,6 @@ export default function Project({ pathName }) {
                       <p className='md-title'>Source: private repository</p>
                     </div>
                   </div>
-                </div>
-                <div className='col-12 mb-4'>
-                  <GoogleADS dataAdSlot='2747123581' />
                 </div>
                 <div ref={portfolioApkRef} className='col-md-6 mb-1'>
                   <div className='card projetRefId slide-second border-0 shadow-sm'>

@@ -1,5 +1,4 @@
 import Item from './Item'
-import GoogleADS from '../ADS/GoogleADS'
 import { useRef } from 'react'
 import { AnimInfinity } from '../Util/Util'
 import './Skill.css'
@@ -318,9 +317,6 @@ export default function Skill() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className='col-12 mb-4'>
-              <GoogleADS dataAdSlot='2747123581' />
             </div>
           </div>
         </div>

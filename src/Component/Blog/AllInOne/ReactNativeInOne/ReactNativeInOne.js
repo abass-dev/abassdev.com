@@ -16,7 +16,7 @@ export default function ReactNativeInOne(props) {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     // Get an item from localStorage and check for expiration
-    const postsFromCache = getItemWithExpiration('posts')
+    const postsFromCache = getItemWithExpiration('ReactNativeInOne')
     if (postsFromCache) {
       // Use the retrieved value if exist
       setPosts(postsFromCache)
@@ -28,7 +28,7 @@ export default function ReactNativeInOne(props) {
         .then((response) => {
           if (response) {
             setPosts(response.data)
-            setItemWithExpiration('posts', response.data, 1440)
+            setItemWithExpiration('ReactNativeInOne', response.data, 1440)
             setIsLoading(false)
           }
         })

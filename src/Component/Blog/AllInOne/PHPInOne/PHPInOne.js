@@ -11,12 +11,12 @@ import { Loading } from '../../../UI'
 import URL from '../../Helpers/URL'
 import CodeSnippet from '../../Helpers/CodeSnippet'
 
-export default function ReactInOne(props) {
+export default function PHPInOne(props) {
   const [posts, setPosts] = useState()
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     // Get an item from localStorage and check for expiration
-    const postsFromCache = getItemWithExpiration('ReactInOne')
+    const postsFromCache = getItemWithExpiration('PHPInOne')
     if (postsFromCache) {
       // Use the retrieved value if exist
       setPosts(postsFromCache)
@@ -24,11 +24,11 @@ export default function ReactInOne(props) {
     } else {
       // Value has expired or does not exist
       axios
-        .get(`${URL.prefix}/tech?tech=ReactJs`)
+        .get(`${URL.prefix}/tech?tech=PHP`)
         .then((response) => {
           if (response) {
             setPosts(response.data)
-            setItemWithExpiration('ReactInOne', response.data, 1440)
+            setItemWithExpiration('PHPInOne', response.data, 1440)
             setIsLoading(false)
           }
         })
@@ -54,7 +54,7 @@ export default function ReactInOne(props) {
   }, [localStorage, theme])
 
   const metaData = {
-    title: 'Learn React Js in one page | Useful and short codes',
+    title: 'Learn PHP in one page | Simple, useful and reusable!',
   }
 
   if (isLoading) {
@@ -67,7 +67,7 @@ export default function ReactInOne(props) {
       <div className='container'>
         <div className='row'>
           <div className='col-12 mb-3 mt-4'>
-            <h1 className='primary-text primary-font'>ReactJs in one</h1>
+            <h1 className='primary-text primary-font'>PHP in one</h1>
             <p className='after-title'></p>
           </div>
           {posts ? (
@@ -105,7 +105,7 @@ export default function ReactInOne(props) {
           </div>
         </div>
       </div>
-      <Footer report='AllInOne/React/ReactInOne.js' />
+      <Footer report='AllInOne/PHPInOne/PHPInOne.js' />
     </div>
   )
 }

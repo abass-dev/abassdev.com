@@ -28,7 +28,7 @@ export default function LatestPosts() {
   return (
     <div className='container'>
       <div className='row'>
-        <h1 className='primary-font text-center mb-4 primary-text'>Recent posts</h1>
+        <h1 className='primary-font text-center mb-4 primary-text'>Recent blog posts</h1>
         {latestPosts ? (
           latestPosts.map((post) => {
             //console.log(post);
