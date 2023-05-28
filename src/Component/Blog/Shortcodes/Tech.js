@@ -25,7 +25,7 @@ export default function Tech({ title, tech }) {
         .then((response) => {
           if (response) {
             setPosts(response.data)
-            setItemWithExpiration('posts', response.data, 1440)
+            setItemWithExpiration(tech, response.data, 1440)
             setIsLoading(false)
           }
         })
