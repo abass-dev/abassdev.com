@@ -115,10 +115,13 @@ export default function Footer({ desableContacForm, report }) {
                     </Link>
                   </div>
                 </div>
-                <div className='col-12'>
-                  <div className=''>
-                    <Link className='link-secondary' to='/calculator'>
-                      Calculator
+                <div className='col-6'>
+                  <Link className='link-secondary' to='/calculator'>
+                    Calculator
+                  </Link>
+                  <div className='col-12'>
+                    <Link className='link-secondary' to='/repo-inspector'>
+                      Repo Inspector
                     </Link>
                   </div>
                 </div>

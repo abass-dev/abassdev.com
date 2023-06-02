@@ -15,6 +15,16 @@ export function DropdownNav() {
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
+          <a className='dropdown-item' href='/repo-inspector'>
+            <i className='fa fa-bomb'></i> Repo Inspector
+          </a>
+        </li>
+        <li>
+          <a className='dropdown-item' href='/calculator'>
+            <i className='fa fa-calculator'></i> Calculator
+          </a>
+        </li>
+        <li>
           <a className='dropdown-item' href='/#faq'>
             <i className='fa fa-question'></i> FAQs
           </a>

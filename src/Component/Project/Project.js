@@ -1,6 +1,7 @@
 import React, { useRef, useContext, useState, useEffect } from 'react'
 import projectCode from '../../assets/images/project-nigatedev.webp'
 import projectPortfolio from '../../assets/images/project-portfolio.webp'
+import projectRepoInspectorImg from '../../assets/images/repo-inspector.jpg'
 import projectSocialContributionApp from '../../assets/images/social_contribution_app.webp'
 import projectFakaray from '../../assets/images/fakaray.webp'
 import projectPHPCode from '../../assets/images/php_code.webp'
@@ -189,7 +190,38 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-
+            <div className='col-md-6 mb-4'>
+              <div className='card border-0 shadow-sm'>
+                <div className='card-body '>
+                  <LazyLoadImage
+                    width={'100%'}
+                    height={'auto'}
+                    alt={'Repo Inspector'}
+                    effect='blur'
+                    className='rounded'
+                    src={projectRepoInspectorImg} // use normal <img> attributes as props
+                  />
+                  <h2 className='md-title mt-3 h4 '>Repo Inspector</h2>
+                  <p>
+                    <i className='fw-bold fa fa-code'></i>
+                    <span className='fw-lighter'> React</span>
+                  </p>
+                  <p>
+                    <a
+                      href='https://github.com/abass-dev/abassdev.com'
+                      class='btn mt-2 text-primary btn-primary-outline btn-sm bg-light text-dark '
+                    >
+                      <i className='fa fa-github'></i> Code
+                    </a>{' '}
+                  </p>
+                  <p className='md-title'>
+                    Repo Inspector is an innovative project designed to empower users with in-depth insights into their
+                    GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the
+                    surface level, allowing you to unlock a wealth of information about your codebase.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div ref={portfolioRef} className='col-md-6 mb-4'>
               <div className='projetRefId card border-0 shadow-sm slide-first'>
                 <div className='card-body'>

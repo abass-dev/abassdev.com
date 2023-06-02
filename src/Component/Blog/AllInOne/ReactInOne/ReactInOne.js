@@ -73,22 +73,26 @@ export default function ReactInOne(props) {
           {posts ? (
             posts.map((value, index) => {
               return (
-                <div key={value.id} className='col-12 card border-0 shadow-sm rounded-0 mb-5'>
+                <div
+                  id={`${value.title.replaceAll(' ', '-')}-${value.id}`}
+                  key={value.id}
+                  className='col-12 card border-0 shadow-sm rounded-0 mb-5'
+                >
                   <div className='row card-body'>
                     <div className='col-md-6'>
-                      <CodeSnippet code={value.codesniper} />
-                    </div>
-                    <div className='col-md-6 mt-4 mt-lg-0'>
                       <h1 className='h3'>
                         <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>
                           {value.id}#. {value.title}
                         </a>
                       </h1>
-                      <p id={`${value.title.replaceAll(' ', '-')}-${value.id}`} className='card-text'>
+                      <p className='text-secondary mb-3'>Published on: {dateToReadable(value.created_at)}</p>
+                      <CodeSnippet code={value.codesniper} />
+                    </div>
+                    <div className='col-md-6 mt-4 mt-lg-0'>
+                      <p className='card-text'>
                         <strong>Description: </strong>
                         {value.description}
                       </p>
-                      <p className='text-secondary'>Published on: {dateToReadable(value.created_at)}</p>
                     </div>
                   </div>
                 </div>
@@ -105,7 +109,7 @@ export default function ReactInOne(props) {
           </div>
         </div>
       </div>
-      <Footer report='AllInOne/React/ReactInOne.js' />
+      <Footer report='Blog/AllInOne/ReactInOne/ReactInOne.js' />
     </div>
   )
 }

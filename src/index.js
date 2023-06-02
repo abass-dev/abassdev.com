@@ -37,6 +37,7 @@ const ReactNativeInOne = lazy(() => import('./Component/Blog/AllInOne/ReactNativ
 const Copyright = lazy(() => import('./Component/Copyright/Copyright'))
 const Login = lazy(() => import('./Component/Auth/Login'))
 const PrivacyPolicy = lazy(() => import('./Component/PrivacyPolicy/PrivacyPolicy'))
+const Inspector = lazy(() => import('./Component/RepoInspector/Inspector'))
 const NotFound = lazy(() => import('./Component/NotFound/NotFound'))
 
 ReactDOM.render(
@@ -56,6 +57,7 @@ ReactDOM.render(
                   <Route path='privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
                   <Route path='projects' element={<Project pathName={pathName} />} />
                   <Route path='calculator' element={<Calculator pathName={pathName} />} />
+                  <Route path='repo-inspector' element={<Inspector />} />
                   <Route path='php-in-one' element={<PHPInOne pathName={pathName} />} />
                   <Route path='reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                   <Route path='react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
