@@ -50,13 +50,13 @@ export default function Tech({ title, tech }) {
             return (
               <div key={value.id} className='col-12 card border-0 shadow-sm rounded-0 mb-4'>
                 <div className='row card-body'>
+                  <h1 className='h3'>
+                    {value.id}# {value.title}
+                  </h1>
                   <div className='col-md-6'>
                     <CodeSnippet code={value.codesniper} />
                   </div>
                   <div className='col-md-6 mt-4 mt-lg-0'>
-                    <h1 className='h3'>
-                      {value.id}# {value.title}
-                    </h1>
                     <p className='card-text'>
                       <strong>Description: </strong>
                       {value.description}
