@@ -31,13 +31,10 @@ export default function LatestPosts() {
         <h1 className='primary-font text-center mb-4 primary-text'>Recent blog posts</h1>
         {latestPosts ? (
           latestPosts.map((post) => {
-            //console.log(post);
-            const postImg = post.yoast_head_json.og_image[0].url
             return (
               <div className='col-md-6 mb-4' key={post.id}>
                 <div className='card border-0 shadow-sm'>
                   <div className={`card-body border-bottom`}>
-                    <img className='img rounded mb-4' height='150px' width='100%' src={postImg} />
                     <a className='h4 mb-1' href={post.link}>
                       {post.title.rendered}
                     </a>

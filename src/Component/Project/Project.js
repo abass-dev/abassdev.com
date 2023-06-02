@@ -219,6 +219,7 @@ export default function Project({ pathName }) {
                     GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the
                     surface level, allowing you to unlock a wealth of information about your codebase.
                   </p>
+                  <a href='https://abassdev.com/repo-inspector'>Give it a try now ...</a>
                 </div>
               </div>
             </div>
@@ -262,7 +263,7 @@ export default function Project({ pathName }) {
                     Object Model) that allows for faster updates to the user interface compared to traditional web
                     development techniques.
                   </p>
-                  <a href='https://abassdev.com/'>Go live...</a>
+                  <a href='https://abassdev.com/'>Go live ...</a>
                 </div>
               </div>
             </div>
@@ -316,7 +317,7 @@ export default function Project({ pathName }) {
                   <LazyLoadImage
                     width={'100%'}
                     height={'auto'}
-                    alt={'Dynacard'}
+                    alt={'Byte Teachers'}
                     effect='blur'
                     className='rounded'
                     src={blogImg} // use normal <img> attributes as props
