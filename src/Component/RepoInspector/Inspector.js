@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
+import { ThemeContext } from '../../Context/ThemeProvider'
 import Notification from '../Notification'
 import { Loading } from '../UI'
 import inspectorLogo from '../../assets/images/inspector-logo.png'
 import { AlertMessage } from '../Helpers'
-import { Nav } from '../'
+import { Nav, Footer } from '../'
 import './inspector.css'
 
 const Inspector = () => {
@@ -15,7 +16,17 @@ const Inspector = () => {
   const [owner, setOwner] = useState('')
   const [repo, setRepo] = useState('')
   const [error, setError] = useState()
-
+  const { theme } = useContext(ThemeContext)
+  const [storedTheme, setStoredTheme] = useState('light')
+  
+  useEffect(() => {
+    let sthm = localStorage.getItem('theme')
+    if (sthm) {
+      setStoredTheme(sthm)
+    }
+  }, [theme, localStorage])
+ 
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     setRepoData(null)
@@ -43,8 +54,8 @@ const Inspector = () => {
             'Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub orGitLab repositories.',
         }}
       />
-      <div className='inspector'>
-        <div className='header bg-secondary p-3'>
+      <div id={storedTheme && storedTheme} className='inspector'>
+        <div className='header bg-secondary container'>
           <img width='60px' height='60px' src={inspectorLogo} />
           <h1 className='text-light ff-ubuntu'>
             <span style={{ color: '#d87803' }}>R</span>epo <span style={{ color: '#d87803' }}>I</span>nspector
@@ -109,6 +120,7 @@ const Inspector = () => {
         )}
 
         <Description />
+      <Footer report='RepoInspector/Inspector.js' />
       </div>
     </>
   )
@@ -116,7 +128,9 @@ const Inspector = () => {
 
 const Description = () => {
   return (
-    <div className='container mt-5 ff-ubuntu'>
+    <div className='container pt-5 ff-ubuntu'>
+    <div className='card border-0 shadow-sm'>
+    <div className='card-body'>
       <h2>Introduction</h2>
       <p>
         Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or
@@ -153,6 +167,8 @@ const Description = () => {
         improvement, and harness the true potential of your codebase. Elevate your development process, enhance
         productivity, and ensure the success of your projects with this invaluable inspection tool.
       </p>
+    </div>
+    </div>
     </div>
   )
 }

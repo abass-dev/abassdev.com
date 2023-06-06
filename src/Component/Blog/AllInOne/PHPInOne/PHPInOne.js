@@ -54,7 +54,8 @@ export default function PHPInOne(props) {
   }, [localStorage, theme])
 
   const metaData = {
-    title: 'Learn PHP in one page | Simple, useful and reusable!',
+    title: 'Learn PHP in one page',
+    description: 'Useful php shortcodes'
   }
 
   if (isLoading) {

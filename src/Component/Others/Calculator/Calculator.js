@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import './calculator.css'
+import { Nav } from '../../'
 
 export default function Calculator() {
   let screenRef = useRef(null)
@@ -22,6 +23,12 @@ export default function Calculator() {
 
   return (
     <>
+    <Nav 
+        metaData={{
+          title: 'Calculator',
+          description:
+            'A simple calculator made with ReactJs',
+        }} />
       <div className='calculator-root'>
         <div className='calculator-container'>
           <form>

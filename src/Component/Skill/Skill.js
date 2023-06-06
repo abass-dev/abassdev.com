@@ -191,7 +191,7 @@ export default function Skill() {
             </div>
 
             <div className='col-md-6 mb-4'>
-              <h4 className='md-title text-secondary'>Application Android & IOS</h4>
+              <h4 className='md-title text-secondary'>Android & IOS</h4>
               <div className='card border-0 shadow-sm'>
                 <div className='card-body p-0  md-title'>
                   <Item
@@ -215,7 +215,7 @@ export default function Skill() {
             </div>
 
             <div className='col-md-6 mb-4'>
-              <h4 className='md-title text-secondary'>Software development</h4>
+              <h4 className='md-title text-secondary'>Software</h4>
               <div className='card border-0 shadow-sm'>
                 <div className='card-body p-0  md-title'>
                   <Item

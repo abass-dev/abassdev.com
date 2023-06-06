@@ -24,6 +24,7 @@ function MyStory({ pathName }) {
 
   const metaData = {
     title: 'My story',
+    description: 'About Abass Dev and his story'
   }
   return (
     <div id={pathName ? storedTheme : ''}>
@@ -52,7 +53,7 @@ function MyStory({ pathName }) {
                       <span birthDate='02-02-1994'> February 2, 1994</span>. He is currently {birthday('02-02-1994')}
                     </p>
                     <p itemProp='description'>
-                      At a young age of 14 in 2009, Abass Dev became fascinated with the world of web development.
+                      At a young age of 15 in 2009, Abass Dev became fascinated with the world of web development.
                       However, he had no idea where to start. It wasn't until he met a friend on Skyrock, a social
                       networking site, in 2011, that he was introduced to the world of blogging and tasked with
                       administering a Wix-created blog. It was this experience that sparked his curiosity and ignited

@@ -54,7 +54,8 @@ export default function ReactInOne(props) {
   }, [localStorage, theme])
 
   const metaData = {
-    title: 'Learn React Js in one page | Useful and short codes',
+    title: 'Learn React Js in one page',
+    description: 'Useful ReactJs shortcodes' 
   }
 
   if (isLoading) {

@@ -218,8 +218,8 @@ export default function Project({ pathName }) {
                     Repo Inspector is an innovative project designed to empower users with in-depth insights into their
                     GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the
                     surface level, allowing you to unlock a wealth of information about your codebase.
-                  </p>
-                  <a href='https://abassdev.com/repo-inspector'>Give it a try now ...</a>
+                  </p>  
+                  <a href='/repo-inspector'>Give it a try now ...</a>
                 </div>
               </div>
             </div>
