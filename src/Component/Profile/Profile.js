@@ -64,7 +64,7 @@ export default function Profile() {
                   internet.{' '}
                 </p>
                 <p className='lead text-start'>
-                  In my free time, I enjoy writing articles on my blog{' '}
+                  In my free time, I enjoy sharing my experiences through my blog.{' '}
                   <a href='https://byteteachers.com'>byteteachers.com</a> and contributing to the{' '}
                   <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the{' '}
                   <a href='https://github.com/nigaphp'>NigaPHP</a> framework.
