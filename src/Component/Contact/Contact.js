@@ -14,7 +14,7 @@ const Contact = ({ pathName }) => {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   const metaData = {
     title: 'Contact me',

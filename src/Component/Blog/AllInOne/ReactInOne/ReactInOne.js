@@ -55,7 +55,7 @@ export default function ReactInOne(props) {
 
   const metaData = {
     title: 'Learn React Js in one page',
-    description: 'Useful ReactJs shortcodes' 
+    description: 'Useful ReactJs shortcodes',
   }
 
   if (isLoading) {
@@ -87,7 +87,7 @@ export default function ReactInOne(props) {
                         </a>
                       </h1>
                       <p className='text-secondary mb-3'>Published on: {dateToReadable(value.created_at)}</p>
-                      <CodeSnippet code={value.codesniper} />
+                      <CodeSnippet snippetType={value.snippet_type} code={value.codesniper} />
                     </div>
                     <div className='col-md-6 mt-4 mt-lg-0'>
                       <p className='card-text'>

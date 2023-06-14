@@ -7,7 +7,6 @@ export default function birthday(date) {
 
   const diffYears = Math.floor(diffDays / 365)
   const diffMonths = Math.floor((diffDays % 365) / 30)
-  const diffDaysRemaining = diffDays - diffYears * 365 - diffMonths * 30
 
   const formattedDiff = `${diffYears} years and ${diffMonths} months old today.`
   return formattedDiff

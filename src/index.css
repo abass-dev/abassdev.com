@@ -62,7 +62,7 @@
 
 #dark #myStory,
 #dark #about,
-#dark #latestPosts {
+#dark #latestPosts, #dark .search {
   background: #181532 !important;
   color: #ffffff !important;
 }
@@ -79,7 +79,7 @@
 
 #light #myStory,
 #light #about,
-#light #latestPosts {
+#light #latestPosts, #light .search {
   background: white !important;
   color: black;
 }

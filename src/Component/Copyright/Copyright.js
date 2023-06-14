@@ -4,7 +4,7 @@ import { ThemeContext } from '../../Context/ThemeProvider'
 import Footer from '../Footer'
 
 export default function Copyright() {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
 
@@ -13,7 +13,7 @@ export default function Copyright() {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   const metaData = { title: 'Copyright' }
 

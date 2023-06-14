@@ -1,23 +1,22 @@
-import { useContext, useState, useEffect, useRef } from 'react'
-import Notification from '../../Notification'
+import { useState, useEffect } from 'react'
+// import Notification from '../../Notification'
 import axios from 'axios'
 import dateToReadable from '../../Util/dateToReadable'
 import { setItemWithExpiration, getItemWithExpiration } from '../../Cache'
 import { AlertMessage } from '../../Helpers'
-import { Loading } from '../../UI'
+// import { Loading } from '../../UI'
 import URL from '../Helpers/URL'
 import CodeSnippet from '../Helpers/CodeSnippet'
 
 export default function Tech({ title, tech }) {
   const [posts, setPosts] = useState()
-  const [isLoading, setIsLoading] = useState(true)
+  // const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration('posts')
     if (postsFromCache) {
       // Use the retrieved value if exist
       setPosts(postsFromCache)
-      setIsLoading(false)
     } else {
       // Value has expired or does not exist
       axios
@@ -26,18 +25,14 @@ export default function Tech({ title, tech }) {
           if (response) {
             setPosts(response.data)
             setItemWithExpiration(tech, response.data, 1440)
-            setIsLoading(false)
           }
         })
         .catch((error) => {
-          setIsLoading(false)
           console.log(error)
         })
-        .finally(() => {
-          setIsLoading(false)
-        })
+        .finally(() => {})
     }
-  }, [])
+  }, [tech])
 
   return (
     <div className='container'>
@@ -54,7 +49,7 @@ export default function Tech({ title, tech }) {
                     {value.id}# {value.title}
                   </h1>
                   <div className='col-md-6'>
-                    <CodeSnippet code={value.codesniper} />
+                    <CodeSnippet snippetType={value.snippet_type} code={value.codesniper} />
                   </div>
                   <div className='col-md-6 mt-4 mt-lg-0'>
                     <p className='card-text'>

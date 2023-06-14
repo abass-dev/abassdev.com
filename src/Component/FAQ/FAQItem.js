@@ -1,7 +1,6 @@
 function FAQItem(props) {
   let title = props.title
   let description = props.desk
-  let link = props.link
   let moreDesk = props.moreDesk
 
   const action = () => {

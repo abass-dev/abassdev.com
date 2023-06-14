@@ -77,7 +77,7 @@ export default function ReactNativeInOne(props) {
                 <div key={value.id} className='col-12 card border-0 shadow-sm rounded-0 mb-5'>
                   <div className='row card-body'>
                     <div className='col-md-6'>
-                      <CodeSnippet code={value.codesniper} />
+                      <CodeSnippet snippetType={value.snippet_type} code={value.codesniper} />
                     </div>
                     <div className='col-md-6 mt-4 mt-lg-0'>
                       <h1 className='h3'>

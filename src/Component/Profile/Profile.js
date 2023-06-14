@@ -1,20 +1,11 @@
-import React, { useRef } from 'react'
 import Typical from 'react-typical'
 import 'font-awesome/css/font-awesome.min.css'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import pdfLink from '../../assets/pdf/abass_cv_en.pdf'
 import ProfilePicture from '../../assets/images/profile-pic2.webp'
-import { SingleSlideAnim } from '../Util/Util'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import './Profile.css'
 
 export default function Profile() {
-  const profileImageRef = useRef(null)
-  const profileContentRef = useRef(null)
-
-  //SingleSlideAnim(profileImageRef, '.profileImageRefId')
-  SingleSlideAnim(profileContentRef, '.profileContentRefId')
-
   return (
     <div id='apropos' className='my-5 container-lg'>
       <div className='row'>
@@ -39,24 +30,18 @@ export default function Profile() {
               wrapper='span'
             />
           </h2>
-          <div id='about' ref={profileImageRef} className='row py-3 mt-4 rounded align-items-center shadow-sm'>
+          <div id='about' className='row py-3 mt-4 rounded align-items-center shadow-sm'>
             <div className='d-flex  pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
-              <LazyLoadImage
+              <img
                 alt={'Abass Dev'}
                 width={300}
                 height={300}
-                effect='black-and-white'
                 className='fluid text-center rounded'
-                src={ProfilePicture} // use normal <img> attributes as props
+                src={ProfilePicture}
               />
             </div>
-            <div
-              itemscope=''
-              itemtype='http://schema.org/Person'
-              ref={profileContentRef}
-              className='col-md-8 text-center'
-            >
-              <div className='profileContentRefId ff-ubuntu slide-first'>
+            <div itemscope='' itemtype='http://schema.org/Person' className='col-md-8 text-center'>
+              <div className='ff-ubuntu'>
                 <h1 className='primary-font fw-bold text-start primary-text'>About me</h1>
                 <p className='after-title'></p>
                 <p className='lead text-start'>
@@ -64,7 +49,7 @@ export default function Profile() {
                   internet.{' '}
                 </p>
                 <p className='lead text-start'>
-                  In my free time, I enjoy sharing my experiences through my blog.{' '}
+                  In my free time, I enjoy sharing my experiences through my blog{' '}
                   <a href='https://byteteachers.com'>byteteachers.com</a> and contributing to the{' '}
                   <a href='https://github.com/abass-dev'>open-source</a> community. I am also the creator of the{' '}
                   <a href='https://github.com/nigaphp'>NigaPHP</a> framework.

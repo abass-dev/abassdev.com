@@ -15,7 +15,7 @@ const Home = () => {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   return (
     <div id={storedTheme}>

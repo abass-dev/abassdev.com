@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { ThemeContext } from '../../Context/'
-import { turncateText, dateToReadable } from '../Util'
+import { dateToReadable } from '../Util'
 import { getItemWithExpiration, setItemWithExpiration } from '../Cache'
 import { AlertMessage } from '../Helpers'
 
 export default function LatestPosts() {
   const [latestPosts, setLatestPosts] = useState(null)
   const latestPostsFormCache = getItemWithExpiration('latest_posts')
-  const { theme } = useContext(ThemeContext)
+  // const { theme } = useContext(ThemeContext)
 
   useEffect(() => {
     if (latestPostsFormCache) {

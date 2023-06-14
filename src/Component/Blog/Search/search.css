@@ -1,0 +1,14 @@
+.search-shortcodes {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  align-content: center;
+}
+.search-shortcodes input {
+  border: 1px solid lightgray;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+  border-radius: 5px;
+  color: #00000090;
+}

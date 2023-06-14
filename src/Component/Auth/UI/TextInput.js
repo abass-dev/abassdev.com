@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import InputConst from './InputConst'
 import './input.css'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const TextInput = ({
   className,
@@ -62,7 +62,7 @@ const TextInput = ({
       default:
       // code
     }
-  }, [])
+  }, [inpuType])
   const borderStyle = isInvalid ? InputConst.border.error : InputConst.border.default
   return (
     <div className='ui-input-container'>

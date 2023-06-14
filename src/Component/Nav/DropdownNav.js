@@ -1,4 +1,8 @@
 import { NavLink, Link } from 'react-router-dom'
+import SearchShortcodes from '../Blog/Search/SearchShortcodes'
+import { Navigate } from "react-router-dom";
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom';
 
 export function DropdownNav() {
   return (
@@ -11,7 +15,7 @@ export function DropdownNav() {
         data-bs-toggle='dropdown'
         aria-expanded='false'
       >
-        <i className='fa fa-bug'></i> Others
+        <i className='fa fa-bug'></i> Apps & Others
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
@@ -77,6 +81,15 @@ export function PortfolioDropdownNav({ active, activeLink, handleClick }) {
   )
 }
 export function AllInOneDropdownNav() {
+  const [query, setQuery] = useState()
+  const [searchQuery, setSearchQuery] = useState()
+  const location = useLocation()
+ // console.log(location.pathname);
+  const handleSearchSubmit = () => {
+    if(query) {
+      setSearchQuery(query)
+    }
+  }
   return (
     <li className='nav-item dropdown'>
       <Link
@@ -87,24 +100,35 @@ export function AllInOneDropdownNav() {
         data-bs-toggle='dropdown'
         aria-expanded='false'
       >
-        <i className='fa fa-code'></i> Shortcodes
+        <i className='fa fa-code'></i> Short Codes
       </Link>
       <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
         <li>
+          <NavLink className='dropdown-item' to='/all-in-one'>
+             All
+          </NavLink>
+        </li>
+        <li>
           <NavLink className='dropdown-item' to='/php-in-one'>
-            <i className='devicon-react-original'></i> PHP In One
+             PHP In One
           </NavLink>
         </li>
         <li>
           <NavLink className='dropdown-item' to='/reactjs-in-one'>
-            <i className='devicon-react-original'></i> ReactJs In One
+             ReactJs In One
           </NavLink>
         </li>
         <li>
           <NavLink className='dropdown-item' to='/react-native-in-one'>
-            <i className='devicon-react-original'></i> React Native In One
+             React Native In One
           </NavLink>
         </li>
+        {location.pathname == '/all-in-one' ? '' : 
+        <div className='nav-search-shortcodes'>
+        <input onChange={e => setQuery(e.target.value)} placeholder='Find ShortCodes...' /> 
+        <button onClick={handleSearchSubmit}>Go</button>
+         {searchQuery && <Navigate to='/all-in-one' state={{searchQuery}}/> }
+        </div>}
       </ul>
     </li>
   )

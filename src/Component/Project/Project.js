@@ -30,7 +30,7 @@ export default function Project({ pathName }) {
   SingleSlideAnim(fakarayRef, '.projetRefId')
   SingleSlideAnim(blogRef, '.projetRefId')
 
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
 
@@ -218,7 +218,7 @@ export default function Project({ pathName }) {
                     Repo Inspector is an innovative project designed to empower users with in-depth insights into their
                     GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the
                     surface level, allowing you to unlock a wealth of information about your codebase.
-                  </p>  
+                  </p>
                   <a href='/repo-inspector'>Give it a try now ...</a>
                 </div>
               </div>
@@ -399,14 +399,13 @@ export default function Project({ pathName }) {
                       <p className='md-title'>
                         Transform my portfolio into an interactive Android app with the power of React Native.
                       </p>
-                      <a href='https://abassdev.com/abassdev.apk'> Download the Apk</a>
                     </div>
                   </div>
                 </div>
               </>
             )}
             {!pathName && (
-              <a className='mb-4 mt-1' href='/projects'>
+              <a className='my-4' href='/projects'>
                 See more projects...
               </a>
             )}

@@ -55,7 +55,7 @@ export default function PHPInOne(props) {
 
   const metaData = {
     title: 'Learn PHP in one page',
-    description: 'Useful php shortcodes'
+    description: 'Useful php shortcodes',
   }
 
   if (isLoading) {
@@ -74,18 +74,22 @@ export default function PHPInOne(props) {
           {posts ? (
             posts.map((value, index) => {
               return (
-                <div key={value.id} className='col-12 card border-0 shadow-sm rounded-0 mb-5'>
+                <div
+                  id={`${value.title.replaceAll(' ', '-')}-${value.id}`}
+                  key={value.id}
+                  className='col-12 card border-0 shadow-sm rounded-0 mb-5'
+                >
                   <div className='row card-body'>
+                    <h1 className='h3'>
+                      <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>
+                        {value.id}#. {value.title}
+                      </a>
+                    </h1>
                     <div className='col-md-6'>
-                      <CodeSnippet code={value.codesniper} />
+                      <CodeSnippet snippetType={value.snippet_type} code={value.codesniper} />
                     </div>
                     <div className='col-md-6 mt-4 mt-lg-0'>
-                      <h1 className='h3'>
-                        <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>
-                          {value.id}#. {value.title}
-                        </a>
-                      </h1>
-                      <p id={`${value.title.replaceAll(' ', '-')}-${value.id}`} className='card-text'>
+                      <p className='card-text'>
                         <strong>Description: </strong>
                         {value.description}
                       </p>

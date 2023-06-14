@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { FaCloudMoon, FaSun } from 'react-icons/fa'
+// import { FaCloudMoon, FaSun } from 'react-icons/fa'
 import { validateEmail, validateTextarea } from '../Helpers'
 import Notification from '../Notification'
 import emailjs from '@emailjs/browser'
-import ReCAPTCHA from 'react-google-recaptcha'
-import axios from 'axios'
+// import ReCAPTCHA from 'react-google-recaptcha'
+// import axios from 'axios'
 import AlertMessage from '../Helpers/AlertMessage'
 import { TextInput, Button } from '../Auth/UI'
 import './ContactForm.css'
@@ -13,7 +13,7 @@ import '../Auth/UI/ui.css'
 const notyf = new Notification(3000)
 
 export default function ContactForm() {
-  const [captchaResponse, setCaptchaResponse] = useState(null)
+  // const [captchaResponse, setCaptchaResponse] = useState(null)
   const [message, setMessage] = useState({
     success: null,
     error: null,

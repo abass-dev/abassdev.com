@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ContactForm from '../ContactForm'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import Report from '../Report'
 
@@ -72,55 +72,55 @@ export default function Footer({ desableContacForm, report }) {
                 </Link>
               </div>
               <h3 className='h4 primary-font primary-text'>Others</h3>
-              <div className='row'>
+              <div className='row '>
                 <div className='col-6'>
                   <div className='p-1'>
-                    <Link className='link-secondary' to='/privacy-policy'>
+                    <Link className='text-white' to='/privacy-policy'>
                       Privacy Policy
                     </Link>
                   </div>
                 </div>
                 <div className='col-6'>
                   <div className=''>
-                    <Link className='link-secondary' to='/contact'>
+                    <Link className='text-white' to='/contact'>
                       Contact me
                     </Link>
                   </div>
                 </div>
                 <div className='col-6'>
                   <div className=''>
-                    <Link className='link-secondary' to='/copyright'>
+                    <Link className='text-white' to='/copyright'>
                       Copyright
                     </Link>
                   </div>
                 </div>
                 <div className='col-6'>
                   <div className=''>
-                    <Link className='link-secondary' to='/my-story'>
+                    <Link className='text-white' to='/my-story'>
                       My story
                     </Link>
                   </div>
                 </div>
                 <div className='col-12'>
                   <div className=''>
-                    <Link className='link-secondary' to='/login'>
+                    <Link className='text-white' to='/login'>
                       Login
                     </Link>
                   </div>
                 </div>
                 <div className='col-6'>
                   <div className=''>
-                    <Link className='link-secondary' to='https://byteteachers.com'>
+                    <Link className='text-white' to='https://byteteachers.com'>
                       Blog
                     </Link>
                   </div>
                 </div>
                 <div className='col-6'>
-                  <Link className='link-secondary' to='/calculator'>
+                  <Link className='text-white' to='/calculator'>
                     Calculator
                   </Link>
                   <div className='col-12'>
-                    <Link className='link-secondary' to='/repo-inspector'>
+                    <Link className='text-white' to='/repo-inspector'>
                       Repo Inspector
                     </Link>
                   </div>
@@ -135,7 +135,7 @@ export default function Footer({ desableContacForm, report }) {
                 reserved.{' '}
               </p>
               <p> Current version: {appVersion}</p>
-              <p> Last update: {new Date(buildInfo.lastUpdate).toString()}</p>
+              <p> Last updated: {new Date(buildInfo.lastUpdate).toString()}</p>
             </p>
           </div>
         </div>

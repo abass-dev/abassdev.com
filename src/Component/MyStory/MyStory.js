@@ -3,7 +3,6 @@ import { Footer } from '../'
 import Nav from '../Nav/Nav'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { birthday } from '../Helpers'
-import Title from '../SEO/Title'
 import { SingleSlideAnim } from '../Util/Util'
 import aboutImage from '../../assets/images/abassdev-about.webp'
 import './MyStory.css'
@@ -24,7 +23,7 @@ function MyStory({ pathName }) {
 
   const metaData = {
     title: 'My story',
-    description: 'About Abass Dev and his story'
+    description: 'About Abass Dev and his story',
   }
   return (
     <div id={pathName ? storedTheme : ''}>

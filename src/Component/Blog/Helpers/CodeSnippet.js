@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-const CodeSnippet = ({ code }) => {
+const CodeSnippet = ({ code, snippetType }) => {
   const codeRef = useRef(null)
   const notyf = new Notification(2000, 'center', 'center')
 
@@ -20,7 +20,7 @@ const CodeSnippet = ({ code }) => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <SyntaxHighlighter language='jsx' showLineNumbers style={vscDarkPlus} ref={codeRef}>
+      <SyntaxHighlighter language={snippetType} showLineNumbers style={vscDarkPlus} ref={codeRef}>
         {code}
       </SyntaxHighlighter>
       <button

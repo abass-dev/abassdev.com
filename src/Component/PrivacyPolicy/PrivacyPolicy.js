@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer'
 import { ThemeContext } from '../../Context/ThemeProvider'
 
 export default function PrivacyPolicy({ pathName }) {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('light')
   const localStorage = window.localStorage
 

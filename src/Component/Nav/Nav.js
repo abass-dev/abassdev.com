@@ -3,13 +3,14 @@ import { ListUnorderedIcon } from '@primer/octicons-react'
 import Toggle from 'react-toggle'
 import { NavLink } from 'react-router-dom'
 import { FaCloudMoon, FaSun } from 'react-icons/fa'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { ScrollUpButton } from '../UI/Button'
 import { ProgressBar } from '../UI/Progressbar'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import logo from '../../assets/images/logo.webp'
 import { AllInOneDropdownNav, DropdownNav, PortfolioDropdownNav } from './DropdownNav'
+
 import './Nav.css'
 
 export default function Nav({ metaData, active }) {
@@ -34,7 +35,7 @@ export default function Nav({ metaData, active }) {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
   function handlerToggle(e) {
     toggleTheme()
   }

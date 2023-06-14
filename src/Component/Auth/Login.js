@@ -3,8 +3,7 @@ import Nav from '../Nav'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import Footer from '../Footer'
 import LoginForm from './LoginForm/LoginForm'
-import { getItemWithExpiration, setItemWithExpiration } from '../Cache'
-import axios from 'axios'
+// import axios from 'axios'
 
 export default function Login() {
   const { theme } = useContext(ThemeContext)
@@ -16,10 +15,11 @@ export default function Login() {
     if (sthm) {
       setStoredTheme(sthm)
     }
-  }, [theme])
+  }, [theme, localStorage])
 
   const metaData = {
     title: 'Login',
+    description: 'Login page',
   }
 
   return (

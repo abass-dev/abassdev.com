@@ -23,12 +23,12 @@ export default function Calculator() {
 
   return (
     <>
-    <Nav 
+      <Nav
         metaData={{
           title: 'Calculator',
-          description:
-            'A simple calculator made with ReactJs',
-        }} />
+          description: 'A simple calculator made with ReactJs',
+        }}
+      />
       <div className='calculator-root'>
         <div className='calculator-container'>
           <form>

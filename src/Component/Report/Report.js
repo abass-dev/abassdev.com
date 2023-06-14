@@ -1,17 +1,6 @@
-import { useState, useEffect, useContext } from 'react'
-import { ThemeContext } from '../../Context/ThemeProvider'
 import './report.css'
 
 export default function Report({ report = 'Home/Home.js' }) {
-  const { theme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
-    useEffect(() => {
-    let sthm = localStorage.getItem('theme')
-    if (sthm) {
-      setStoredTheme(sthm)
-    }
-  }, [theme, localStorage])
-
   return (
     <div id='reportIssue' className='container pt-4'>
       <div className='card border-0 shadow-sm'>

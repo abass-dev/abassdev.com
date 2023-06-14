@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { getItemWithExpiration, setItemWithExpiration } from '../../Cache'
+// import { getItemWithExpiration, setItemWithExpiration } from '../../Cache'
 import axios from 'axios'
 import { AlertMessage, URL, validateEmail } from '../../Helpers'
 import Notification from '../../Notification'
@@ -14,7 +14,7 @@ export default function LoginForm() {
     email: '',
     password: '',
   })
-  const [admin, setAdmin] = useState(null)
+  // const [admin, setAdmin] = useState(null)
   const [invalidInput, setInvalidInput] = useState({
     email: false,
     password: false,
@@ -65,7 +65,7 @@ export default function LoginForm() {
           setMessage({ success: null, error: 'Invalid credentials' })
           setLoading(false)
         } else {
-          setAdmin(data.response)
+          //  setAdmin(data.response)
           setMessage({ success: 'Login successfuly', error: null })
           setLoading(false)
         }
