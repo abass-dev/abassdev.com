@@ -1,8 +1,8 @@
 import { NavLink, Link } from 'react-router-dom'
 import SearchShortcodes from '../Blog/Search/SearchShortcodes'
-import { Navigate } from "react-router-dom";
+import { Navigate } from 'react-router-dom'
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 
 export function DropdownNav() {
   return (
@@ -10,14 +10,14 @@ export function DropdownNav() {
       <Link
         className='nav-link dropdown-toggle'
         to='#'
-        id='navbarDarkDropdownMenuLink'
+        id='navbarDarkDropdownMenuLink2'
         role='button'
         data-bs-toggle='dropdown'
         aria-expanded='false'
       >
         <i className='fa fa-bug'></i> Apps & Others
       </Link>
-      <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
+      <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink2'>
         <li>
           <a className='dropdown-item' href='/repo-inspector'>
             <i className='fa fa-bomb'></i> Repo Inspector
@@ -53,14 +53,14 @@ export function PortfolioDropdownNav({ active, activeLink, handleClick }) {
       <Link
         className='nav-link dropdown-toggle'
         to='#'
-        id='navbarDarkDropdownMenuLink'
+        id='navbarDarkDropdownMenuLink3'
         role='button'
         data-bs-toggle='dropdown'
         aria-expanded='false'
       >
         <i className='fa fa-folder'></i> Portfolio
       </Link>
-      <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
+      <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink3'>
         <li>
           <NavLink onClick={handleClick} className={`dropdown-item`} to='/projects'>
             <i className='fa fa-folder-open'></i> Projects
@@ -84,9 +84,9 @@ export function AllInOneDropdownNav() {
   const [query, setQuery] = useState()
   const [searchQuery, setSearchQuery] = useState()
   const location = useLocation()
- // console.log(location.pathname);
+  // console.log(location.pathname);
   const handleSearchSubmit = () => {
-    if(query) {
+    if (query) {
       setSearchQuery(query)
     }
   }
@@ -95,40 +95,43 @@ export function AllInOneDropdownNav() {
       <Link
         className='nav-link dropdown-toggle'
         to='#'
-        id='navbarDarkDropdownMenuLink'
+        id='navbarDarkDropdownMenuLink1'
         role='button'
         data-bs-toggle='dropdown'
         aria-expanded='false'
       >
         <i className='fa fa-code'></i> Short Codes
       </Link>
-      <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>
+      <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink1'>
         <li>
           <NavLink className='dropdown-item' to='/all-in-one'>
-             All
+            All
           </NavLink>
         </li>
         <li>
           <NavLink className='dropdown-item' to='/php-in-one'>
-             PHP In One
+            PHP In One
           </NavLink>
         </li>
         <li>
           <NavLink className='dropdown-item' to='/reactjs-in-one'>
-             ReactJs In One
+            ReactJs In One
           </NavLink>
         </li>
         <li>
           <NavLink className='dropdown-item' to='/react-native-in-one'>
-             React Native In One
+            React Native In One
           </NavLink>
         </li>
-        {location.pathname == '/all-in-one' ? '' : 
-        <div className='nav-search-shortcodes'>
-        <input onChange={e => setQuery(e.target.value)} placeholder='Find ShortCodes...' /> 
-        <button onClick={handleSearchSubmit}>Go</button>
-         {searchQuery && <Navigate to='/all-in-one' state={{searchQuery}}/> }
-        </div>}
+        {location.pathname == '/all-in-one' ? (
+          ''
+        ) : (
+          <div className='nav-search-shortcodes'>
+            <input onChange={(e) => setQuery(e.target.value)} placeholder='Find ShortCodes...' />
+            <button onClick={handleSearchSubmit}>Go</button>
+            {searchQuery && <Navigate to='/all-in-one' state={{ searchQuery }} />}
+          </div>
+        )}
       </ul>
     </li>
   )

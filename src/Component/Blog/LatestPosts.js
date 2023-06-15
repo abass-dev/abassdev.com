@@ -4,6 +4,7 @@ import { ThemeContext } from '../../Context/'
 import { dateToReadable } from '../Util'
 import { getItemWithExpiration, setItemWithExpiration } from '../Cache'
 import { AlertMessage } from '../Helpers'
+import GoogleADS from '../ADS/GoogleADS'
 
 export default function LatestPosts() {
   const [latestPosts, setLatestPosts] = useState(null)
@@ -59,6 +60,10 @@ export default function LatestPosts() {
         ) : (
           <AlertMessage type='error' message={'Recent posts are not available yet due to some technical issues.'} />
         )}
+
+        <div className='col-12 mb-4'>
+          <GoogleADS dataAdSlot='2747123581' />
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import { Nav, Footer } from '../../'
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 
 import { useContext, useState, useEffect, useRef } from 'react'
 import { ThemeContext } from '../../../Context'
@@ -17,18 +17,16 @@ import SearchShortcodes from '../Search/SearchShortcodes'
 import '../blog.css'
 
 export default function AllInOne() {
-  
   const [posts, setPosts] = useState()
   const [isLoading, setIsLoading] = useState(true)
   const [query, setQuery] = useState('')
-  const location = useLocation();
-  
-  
-  useEffect(() => { 
-   if(location.state?.searchQuery) {
-     setQuery(location.state.searchQuery)
-   }
-   // Get an item from localStorage and check for expiration
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.state?.searchQuery) {
+      setQuery(location.state.searchQuery)
+    }
+    // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration('AllInOne')
     if (postsFromCache) {
       // Use the retrieved value if exist
@@ -43,7 +41,7 @@ export default function AllInOne() {
             setPosts(response.data)
             setItemWithExpiration('AllInOne', response.data, 1440)
             setIsLoading(false)
-         //   console.log(response.data);
+            //   console.log(response.data);
           }
         })
         .catch((error) => {
@@ -71,12 +69,12 @@ export default function AllInOne() {
     title: 'Learn All in one page',
     description: 'Useful shortcodes',
   }
-  
+
   return (
     <>
       <Nav metaData={metaData} active={'all-in-one'} />
       <div className='saerch-box'>
-        <SearchShortcodes value={query} onChange={setQuery}/>
+        <SearchShortcodes value={query} onChange={setQuery} />
       </div>
       <div id={storedTheme && storedTheme}>
         <div className='container'>
@@ -86,39 +84,46 @@ export default function AllInOne() {
               <p className='after-title'></p>
             </div>
             {posts ? (
-             posts.filter(post => post.title.toLowerCase().includes(query.toLowerCase())).map((value, index) => {
-              return (
-                <div
-                  id={`${value.title.replaceAll(' ', '-')}-${value.id}`}
-                  key={value.id}
-                  className='col-12 card border-0 shadow-sm rounded-0 mb-5'
-                >
-                  <div className='row card-body'>
-                    <h1 className='h3'>
-                      <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>
-                        {value.id}#. {value.title}
-                      </a>
-                    </h1>
-                    <div className='col-md-6'>
-                      <CodeSnippet snippetType={value.snippet_type} code={value.codesniper} />
+              posts
+                .filter((post) => post.title.toLowerCase().includes(query.toLowerCase()))
+                .map((value, index) => {
+                  return (
+                    <div
+                      id={`${value.title.replaceAll(' ', '-')}-${value.id}`}
+                      key={value.id}
+                      className='col-12 card border-0 shadow-sm rounded-0 mb-5'
+                    >
+                      <div className='row card-body'>
+                        <h1 className='h3'>
+                          <a href={`#${value.title.replaceAll(' ', '-')}-${value.id}`}>
+                            {value.id}#. {value.title}
+                          </a>
+                        </h1>
+                        <div className='col-md-6'>
+                          <CodeSnippet snippetType={value.snippet_type} code={value.codesniper} />
+                        </div>
+                        <div className='col-md-6 mt-4 mt-lg-0'>
+                          <p className='card-text'>
+                            <strong>Description: </strong>
+                            {value.description}
+                          </p>
+                          <p className='text-secondary'>Published on: {dateToReadable(value.created_at)}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className='col-md-6 mt-4 mt-lg-0'>
-                      <p className='card-text'>
-                        <strong>Description: </strong>
-                        {value.description}
-                      </p>
-                      <p className='text-secondary'>Published on: {dateToReadable(value.created_at)}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })
-          ) : (!isLoading ?
-            <div className='col'>
-              <AlertMessage type='error' message='Blog posts are not available yet due to some technical issues.' />
+                  )
+                })
+            ) : !isLoading ? (
+              <div className='col'>
+                <AlertMessage type='error' message='Blog posts are not available yet due to some technical issues.' />
+              </div>
+            ) : (
+              ''
+            )}
+
+            <div className='col-12'>
+              <GoogleADS dataAdSlot='2747123581' />
             </div>
-          : '')}
-            
           </div>
         </div>
         <Footer report='Blog/AllInOne/index.js' />

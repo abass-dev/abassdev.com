@@ -83,14 +83,13 @@ export default function Nav({ metaData, active }) {
                   <i className='fa fa-history'></i> My Story
                 </NavLink>
               </li>
-
+              <PortfolioDropdownNav active={active} activeLink={activeLink} handleClick={handleClick} />
+              <AllInOneDropdownNav />
               <li className='nav-item'>
                 <NavLink className={`nav-link`} to='/contact'>
                   <i className='fa fa-envelope'></i> Contact
                 </NavLink>
               </li>
-              <PortfolioDropdownNav active={active} activeLink={activeLink} handleClick={handleClick} />
-              <AllInOneDropdownNav />
               <DropdownNav />
               <li className='nav-item'>
                 <NavLink aria-label='contact me' className='nav-link'>

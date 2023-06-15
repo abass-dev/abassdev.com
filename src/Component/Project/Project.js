@@ -9,6 +9,7 @@ import projectReactNative1 from '../../assets/images/screenshot.webp'
 import blogImg from '../../assets/images/blogimg.webp'
 import { SingleSlideAnim } from '../Util/Util'
 import { Footer, Nav } from '../'
+import GoogleADS from '../ADS/GoogleADS'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import './Project.css'
@@ -363,7 +364,7 @@ export default function Project({ pathName }) {
                     </div>
                   </div>
                 </div>
-                <div ref={portfolioApkRef} className='col-md-6 mb-1'>
+                <div ref={portfolioApkRef} className='col-md-6 mt-4'>
                   <div className='card projetRefId slide-second border-0 shadow-sm'>
                     <div className='card-body '>
                       <LazyLoadImage
@@ -410,6 +411,9 @@ export default function Project({ pathName }) {
               </a>
             )}
           </div>
+        </div>
+        <div className='col-12'>
+          <GoogleADS dataAdSlot='2747123581' />
         </div>
       </div>
       {pathName && <Footer report='Project/Project.js' />}

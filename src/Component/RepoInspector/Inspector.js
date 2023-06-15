@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
+import GoogleADS from '../ADS/GoogleADS'
 import { ThemeContext } from '../../Context/ThemeProvider'
 //import Notification from '../Notification'
 import { Loading } from '../UI'
@@ -166,6 +167,11 @@ const Description = () => {
             improvement, and harness the true potential of your codebase. Elevate your development process, enhance
             productivity, and ensure the success of your projects with this invaluable inspection tool.
           </p>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-12'>
+          <GoogleADS dataAdSlot='2747123581' />
         </div>
       </div>
     </div>

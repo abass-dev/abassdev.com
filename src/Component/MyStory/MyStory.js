@@ -1,6 +1,7 @@
 import React, { useRef, useContext, useState, useEffect } from 'react'
 import { Footer } from '../'
 import Nav from '../Nav/Nav'
+import GoogleADS from '../ADS/GoogleADS'
 import { ThemeContext } from '../../Context/ThemeProvider'
 import { birthday } from '../Helpers'
 import { SingleSlideAnim } from '../Util/Util'
@@ -84,6 +85,10 @@ function MyStory({ pathName }) {
                           commitment to his craft have led him to become a respected figure in the web development
                           community, and a source of inspiration for aspiring developers around the world.
                         </p>
+
+                        <div className='col-12'>
+                          <GoogleADS dataAdSlot='2747123581' />
+                        </div>
                       </>
                     ) : (
                       <a className='mb-2' href='/my-story'>
