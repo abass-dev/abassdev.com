@@ -5,14 +5,15 @@ const GoogleADS = (props) => {
 
   useEffect(() => {
     try {
-  if (process.env.NODE_ENV === 'development') {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
-  }
+      if (process.env.NODE_ENV !== 'development') {
+        ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+      } else {
+        return null
+      }
     } catch (e) {
       console.log(e)
     }
   }, [])
-
 
   return (
     <ins

@@ -22,7 +22,7 @@ const Home = () => {
       <Nav active={'home'} />
       <div className='container-lg'>
         <Profile />
-        <MyStory />
+       {/** <MyStory /> **/}
         <Project />
         <Services />
         <Skill />

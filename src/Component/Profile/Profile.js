@@ -10,7 +10,7 @@ export default function Profile() {
     <div id='apropos' className='my-5 container-lg'>
       <div className='row'>
         <div className='col-12'>
-         {/**
+          {/**
           <h1 className='profile-title primary-font fw-bold'>
             <span className='primary-text'>Hi there, 👋 </span>
             It's Abass Dev!
@@ -31,7 +31,7 @@ export default function Profile() {
               wrapper='span'
             />
           </h2>
-        **/ }
+        **/}
           <div id='about' className='row py-3 mt-4 rounded align-items-center shadow-sm'>
             <div className='d-flex  pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
               <img
