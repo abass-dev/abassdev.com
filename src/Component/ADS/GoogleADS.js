@@ -9,7 +9,12 @@ const GoogleADS = (props) => {
     } catch (e) {
       console.log(e)
     }
-  }, [])
+  }, []) 
+  
+  if (process.env.NODE_ENV === 'development') {
+  return null
+  }
+  
   return (
     <ins
       class='adsbygoogle'

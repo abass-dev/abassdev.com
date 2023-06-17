@@ -47,27 +47,25 @@ ReactDOM.render(
       <HelmetProvider>
         <CookiesProvider>
           <Suspense fallback={<Loading />}>
-            <CookieAlertBox />
-            <BrowserRouter>
-              <Routes>
-                <Route path='/'>
-                  <Route index element={<App />} />
-                  <Route path='my-story' element={<MyStory pathName={pathName} />} />
-                  <Route path='contact' element={<Contact pathName={pathName} />} />
-                  <Route path='copyright' element={<Copyright pathName={pathName} />} />
-                  <Route path='privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
-                  <Route path='projects' element={<Project pathName={pathName} />} />
-                  <Route path='calculator' element={<Calculator pathName={pathName} />} />
-                  <Route path='repo-inspector' element={<Inspector />} />
-                  <Route path='all-in-one' element={<AllInOne pathName={pathName} />} />
-                  <Route path='php-in-one' element={<PHPInOne pathName={pathName} />} />
-                  <Route path='reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
-                  <Route path='react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
-                  <Route path='login' element={<Login pathName={pathName} />} />
-                  <Route path='*' element={<NotFound pathName={pathName} />} />
-                </Route>
-              </Routes>
-            </BrowserRouter>
+            <CookieAlertBox /><BrowserRouter>
+  <Routes>
+    <Route path='/' element={<App />} />
+    <Route path='/my-story' element={<MyStory pathName={pathName} />} />
+    <Route path='/contact' element={<Contact pathName={pathName} />} />
+    <Route path='/copyright' element={<Copyright pathName={pathName} />} />
+    <Route path='/privacy-policy' element={<PrivacyPolicy pathName={pathName} />} />
+    <Route path='/projects' element={<Project pathName={pathName} />} />
+    <Route path='/calculator' element={<Calculator pathName={pathName} />} />
+    <Route path='/repo-inspector' element={<Inspector />} />
+    <Route path='/all-in-one' element={<AllInOne pathName={pathName} />} />
+    <Route path='/php-in-one' element={<PHPInOne pathName={pathName} />} />
+    <Route path='/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
+    <Route path='/react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
+    <Route path='/login' element={<Login pathName={pathName} />} />
+    <Route path='*' element={<NotFound pathName={pathName} />} />
+  </Routes>
+</BrowserRouter>
+          
           </Suspense>
         </CookiesProvider>
       </HelmetProvider>
