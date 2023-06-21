@@ -7,7 +7,7 @@ import './Profile.css'
 
 export default function Profile() {
   return (
-    <div id='apropos' className='my-5 container-lg'>
+    <div id='apropos' className='mb-5 container-lg'>
       <div className='row'>
         <div className='col-12'>
           {/**
