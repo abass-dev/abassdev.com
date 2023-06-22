@@ -54,7 +54,7 @@ export default function AllInOne() {
     }
   }, [])
 
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
   const { theme } = useContext(ThemeContext)
 

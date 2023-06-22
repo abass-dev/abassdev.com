@@ -5,7 +5,7 @@ import { ThemeContext } from '../../Context/ThemeProvider'
 
 export default function PrivacyPolicy({ pathName }) {
   const { theme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
 
   useEffect(() => {

@@ -6,7 +6,7 @@ import ContactForm from '../ContactForm'
 
 const Contact = ({ pathName }) => {
   const { theme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
 
   useEffect(() => {

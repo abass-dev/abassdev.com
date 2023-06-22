@@ -42,7 +42,7 @@ export default function ReactNativeInOne(props) {
     }
   }, [])
 
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
   const { theme } = useContext(ThemeContext)
 

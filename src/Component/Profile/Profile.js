@@ -1,4 +1,5 @@
 // import Typical from 'react-typical'
+import Typewriter from 'typewriter-effect'
 import 'font-awesome/css/font-awesome.min.css'
 import pdfLink from '../../assets/pdf/abass_cv_en.pdf'
 import ProfilePicture from '../../assets/images/profile-pic2.webp'
@@ -10,28 +11,26 @@ export default function Profile() {
     <div id='apropos' className='mb-5 container-lg'>
       <div className='row'>
         <div className='col-12'>
-          {/**
-          <h1 className='profile-title primary-font fw-bold'>
-            <span className='primary-text'>Hi there, 👋 </span>
+          <h1 className='profile-title primary-font pt-4 fw-bold'>
+            <span className='primary-text'>Hi there! 👋 </span>
             It's Abass Dev!
           </h1>
           <h2 className='profile-title primary-text mb-5 primary-font'>
-            <Typical
-              steps={[
+            <Typewriter
+              options={{
+                strings: [
                 'Freelancer 🌠',
-                2000,
                 'Full-Stack Developer 💻',
-                2000,
                 '6+ years of experience 📆',
-                2000,
-                'Open-source 💗',
-                2000,
-              ]}
-              loop={Infinity}
-              wrapper='span'
+                'Open-source 💗'
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50
+              }}
             />
           </h2>
-        **/}
+
           <div id='about' className='row py-3 mt-4 rounded align-items-center shadow-sm'>
             <div className='d-flex  pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
               <img

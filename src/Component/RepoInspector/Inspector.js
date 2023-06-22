@@ -18,7 +18,7 @@ const Inspector = () => {
   const [repo, setRepo] = useState('')
   const [error, setError] = useState()
   const { theme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
 
   useEffect(() => {
     let sthm = localStorage.getItem('theme')

@@ -15,7 +15,7 @@ import './Nav.css'
 
 export default function Nav({ metaData, active }) {
   const { theme, toggleTheme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
 
   // Define state to keep track of the active link
@@ -75,7 +75,7 @@ export default function Nav({ metaData, active }) {
             <ul className='navbar-nav me-auto justify-content-center'>
               <li className='nav-item'>
                 <NavLink onClick={handleClick} className={`nav-link`} aria-current='page' to='/'>
-                  <i className='fa fa-address-card'></i> About
+                  <i className='fa fa-address-card'></i> Home
                 </NavLink>
               </li>
               <li className='nav-item'>

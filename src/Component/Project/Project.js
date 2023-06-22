@@ -32,7 +32,7 @@ export default function Project({ pathName }) {
   SingleSlideAnim(blogRef, '.projetRefId')
 
   const { theme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
 
   useEffect(() => {

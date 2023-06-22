@@ -7,7 +7,7 @@ import './Home.css'
 
 const Home = () => {
   const { theme } = useContext(ThemeContext)
-  const [storedTheme, setStoredTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useState('dark')
   const localStorage = window.localStorage
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Home = () => {
       <Nav active={'home'} />
       <div className='container-lg'>
         <Profile />
-       {/** <MyStory /> **/}
+        {/** <MyStory /> **/}
         <Project />
         <Services />
         <Skill />
