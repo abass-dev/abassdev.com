@@ -33,6 +33,11 @@ const FAQ = () => {
                     target='whichtech'
                     desk='I used reactJs and the code is open source on github'
                   />
+                  <FAQItem
+                    title='What area in tech do you focus on?'
+                    target='mytecharea'
+                    desk='Of course, React.js! I received a message from a friend of mine saying, "If you learn JavaScript, you will never go hungry." 😊'
+                  />
 
                   <FAQItem
                     title='Do I used to code on Mobile?'
