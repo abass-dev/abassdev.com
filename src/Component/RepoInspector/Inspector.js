@@ -133,7 +133,7 @@ const Description = () => {
         <div className='card-body'>
           <h2>Introduction</h2>
           <p>
-            Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub
+            Repo Inspector (Developed by Absss Dev) is an innovative project designed to empower users with in-depth insights into their GitHub
             or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level,
             allowing you to unlock a wealth of information about your codebase.
           </p>
