@@ -32,7 +32,7 @@ export default function Profile() {
             />
           </h2>
         **/}
-          <div id='about' className='row py-3 mt-4 rounded align-items-center shadow-sm'>
+          <div id='about' className='row py-3 mt-4 rounded align-items-center'>
             <div className='d-flex  pb-4 justify-content-center align-items-center profileImageRefId  col-md-4'>
               <img
                 alt={'Abass Dev'}

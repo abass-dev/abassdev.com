@@ -40,7 +40,7 @@ const Login = lazy(() => import('./Component/Auth/Login'))
 const PrivacyPolicy = lazy(() => import('./Component/PrivacyPolicy/PrivacyPolicy'))
 const Inspector = lazy(() => import('./Component/RepoInspector/Inspector'))
 const NotFound = lazy(() => import('./Component/NotFound/NotFound'))
-
+const Nigaphp = lazy(() => import('./Component/Project/Single/NigaPHP'))
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
@@ -63,6 +63,7 @@ ReactDOM.render(
                 <Route path='/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                 <Route path='/react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
                 <Route path='/login' element={<Login pathName={pathName} />} />
+                <Route path='/nigaphp' element={<Nigaphp pathName={pathName} />} />
                 <Route path='*' element={<NotFound pathName={pathName} />} />
               </Routes>
             </BrowserRouter>
