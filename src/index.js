@@ -40,7 +40,7 @@ const Login = lazy(() => import('./Component/Auth/Login'))
 const PrivacyPolicy = lazy(() => import('./Component/PrivacyPolicy/PrivacyPolicy'))
 const Inspector = lazy(() => import('./Component/RepoInspector/Inspector'))
 const NotFound = lazy(() => import('./Component/NotFound/NotFound'))
-const Nigaphp = lazy(() => import('./Component/Project/Single/NigaPHP'))
+const Nigaphp = lazy(() => import('./Component/Project/Single/Nigaphp'))
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
