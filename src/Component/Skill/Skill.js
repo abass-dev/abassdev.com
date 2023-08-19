@@ -1,12 +1,8 @@
 import Item from './Item'
-import { useRef } from 'react'
 import GoogleADS from '../ADS/GoogleADS'
-import { AnimInfinity } from '../Util/Util'
 import './Skill.css'
 
 export default function Skill() {
-  const skillRef = useRef(null)
-  AnimInfinity(skillRef, '.skillRefID')
 
   return (
     <div id='skills-tools' className='container-lg'>
@@ -267,7 +263,7 @@ export default function Skill() {
                 </div>
               </div>
             </div>
-            <div ref={skillRef} className='col-md-6 mb-4'>
+            <div className='col-md-6 mb-4'>
               <h4 className='md-title text-secondary'>International</h4>
               <div className='card skillRefID slide-first border-0 shadow-sm'>
                 <div className='card-body pb-2  md-title'>

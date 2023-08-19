@@ -1,9 +1,5 @@
-import { AnimInfinity } from '../Util/Util'
-import { useRef } from 'react'
 
 function Item(props) {
-  const skillRef = useRef(null)
-  AnimInfinity(skillRef, '.skillRefID')
 
   let title = props.title
   let description = props.desk
@@ -34,8 +30,8 @@ function Item(props) {
   }
 
   return (
-    <div ref={skillRef} onClick={action} className={`skill-card-focus ${!props.lastChild && 'borderBottom'}`}>
-      <div className='row px-3 skillRefID zoom-in'>
+    <div onClick={action} className={`skill-card-focus ${!props.lastChild && 'borderBottom'}`}>
+      <div className='row px-3  '>
         <div className='col-9 pt-3 skill-card-title-focus'>
           <p>{title}</p>
         </div>

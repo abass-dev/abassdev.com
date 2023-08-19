@@ -1,20 +1,7 @@
-import React, { useRef } from 'react'
-import { SingleSlideAnim } from '../Util/Util'
 import 'font-awesome/css/font-awesome.min.css'
 import './Services.css'
 
 export default function Services() {
-  const webRef = useRef(null)
-  const designRef = useRef(null)
-  const SEORef = useRef(null)
-  const mobileAppRef = useRef(null)
-  const problemSolvingRef = useRef(null)
-
-  SingleSlideAnim(webRef, '.workRefID')
-  SingleSlideAnim(designRef, '.workRefID')
-  SingleSlideAnim(SEORef, '.workRefID')
-  SingleSlideAnim(mobileAppRef, '.workRefID')
-  SingleSlideAnim(problemSolvingRef, '.workRefID')
 
   return (
     <div className='text-white mb-4 md-title container-lg'>
@@ -24,8 +11,8 @@ export default function Services() {
             Services
           </h1>
         </div>
-        <div ref={webRef} className='col-md-6 mb-4'>
-          <div className='card workRefID slide-first shadow-sm border-0'>
+        <div className='col-md-6 mb-4'>
+          <div className='card   shadow-sm border-0'>
             <div className='card-body'>
               <p className='card-title text-secondary text-center'>
                 <span className='work-icon fa fa-globe'></span>{' '}
@@ -38,8 +25,8 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div ref={SEORef} className='col-md-6 mb-4'>
-          <div className='card workRefID slide-second border-0 shadow-sm border-0'>
+        <div  className='col-md-6 mb-4'>
+          <div className='card border-0 shadow-sm border-0'>
             <div className='card-body'>
               <p className='card-title text-secondary text-center'>
                 <span className='work-icon fa fa-line-chart'></span>{' '}
@@ -52,8 +39,8 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div ref={designRef} className='col-md-6 mb-4'>
-          <div className='card workRefID slide-first border-0 shadow-sm border-0'>
+        <div className='col-md-6 mb-4'>
+          <div className='card   border-0 shadow-sm border-0'>
             <div className='card-body'>
               <p className='card-title text-secondary text-center'>
                 <span className='work-icon fa fa-paint-brush'></span>{' '}
@@ -66,8 +53,8 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div ref={mobileAppRef} className='col-md-6 mb-4'>
-          <div className='card workRefID slide-second border-0 shadow-sm border-0'>
+        <div className='col-md-6 mb-4'>
+          <div className='card border-0 shadow-sm border-0'>
             <div className='card-body'>
               <p className='card-title text-secondary text-center'>
                 <span className='work-icon fa fa-android'></span>{' '}
@@ -80,8 +67,8 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div ref={problemSolvingRef} className='col-md-6 mb-4'>
-          <div className='card workRefID slide-first border-0 shadow-sm border-0'>
+        <div className='col-md-6 mb-4'>
+          <div className='card   border-0 shadow-sm border-0'>
             <div className='card-body'>
               <p className='card-title text-secondary text-center'>
                 <span className='work-icon fa fa-question'></span>{' '}

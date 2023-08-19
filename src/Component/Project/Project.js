@@ -7,7 +7,6 @@ import projectFakaray from '../../assets/images/fakaray.webp'
 import projectPHPCode from '../../assets/images/php_code.webp'
 import projectReactNative1 from '../../assets/images/screenshot.webp'
 import blogImg from '../../assets/images/blogimg.webp'
-import { SingleSlideAnim } from '../Util/Util'
 import { Footer, Nav } from '../'
 import GoogleADS from '../ADS/GoogleADS'
 import { ThemeContext } from '../../Context/ThemeProvider'
@@ -15,21 +14,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import './Project.css'
 
 export default function Project({ pathName }) {
-  const nigaPHPRef = useRef(null)
-  const portfolioRef = useRef(null)
-  const formBuilderRef = useRef(null)
-  const fakarayRef = useRef(null)
-  const dinacardRef = useRef(null)
-  const socialAppRef = useRef(null)
-  const portfolioApkRef = useRef(null)
-  const blogRef = useRef(null)
-
-  SingleSlideAnim(nigaPHPRef, '.projetRefId')
-  SingleSlideAnim(portfolioRef, '.projetRefId')
-  SingleSlideAnim(formBuilderRef, '.projetRefId')
-  SingleSlideAnim(dinacardRef, '.projetRefId')
-  SingleSlideAnim(fakarayRef, '.projetRefId')
-  SingleSlideAnim(blogRef, '.projetRefId')
 
   const { theme } = useContext(ThemeContext)
   const [storedTheme, setStoredTheme] = useState('dark')
@@ -59,8 +43,8 @@ export default function Project({ pathName }) {
               </h1>
               {pathName && <p className='text-center after-title'></p>}
             </div>
-            <div ref={nigaPHPRef} className='col-md-6 mb-4'>
-              <div className='projetRefId card border-0 shadow-sm slide-first'>
+            <div className='col-md-6 mb-4'>
+              <div className=' card border-0 shadow-sm '>
                 <div className='card-body'>
                   <LazyLoadImage
                     width={'100%'}
@@ -117,8 +101,8 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-            <div ref={formBuilderRef} className='col-md-6 mb-4'>
-              <div className='projetRefId slide-second card border-0 shadow-sm'>
+            <div  className='col-md-6 mb-4'>
+              <div className=' card border-0 shadow-sm'>
                 <div className='card-body '>
                   <LazyLoadImage
                     alt={'BOSP FormBuilder'}
@@ -167,8 +151,8 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-            <div ref={fakarayRef} className='col-md-6 mb-4'>
-              <div className='projetRefId slide-second card border-0 shadow-sm'>
+            <div className='col-md-6 mb-4'>
+              <div className=' card border-0 shadow-sm'>
                 <div className='card-body '>
                   <LazyLoadImage
                     alt={'Fakaray'}
@@ -224,8 +208,8 @@ export default function Project({ pathName }) {
                 </div>
               </div>
             </div>
-            <div ref={portfolioRef} className='col-md-6 mb-4'>
-              <div className='projetRefId card border-0 shadow-sm slide-first'>
+            <div className='col-md-6 mb-4'>
+              <div className=' card border-0 shadow-sm '>
                 <div className='card-body'>
                   <LazyLoadImage
                     width={'100%'}
@@ -269,8 +253,8 @@ export default function Project({ pathName }) {
               </div>
             </div>
 
-            <div ref={dinacardRef} className='col-md-6'>
-              <div className='projetRefId slide-second card border-0 shadow-sm'>
+            <div className='col-md-6'>
+              <div className=' card border-0 shadow-sm'>
                 <div className='card-body '>
                   <LazyLoadImage
                     width={'100%'}
@@ -312,8 +296,8 @@ export default function Project({ pathName }) {
               </div>
             </div>
 
-            <div ref={blogRef} className='col-md-6 pt-4'>
-              <div className='projetRefId slide-first card border-0 shadow-sm'>
+            <div className='col-md-6 pt-4'>
+              <div className='  card border-0 shadow-sm'>
                 <div className='card-body '>
                   <LazyLoadImage
                     width={'100%'}
@@ -341,10 +325,8 @@ export default function Project({ pathName }) {
             </div>
             {pathName && (
               <>
-                {SingleSlideAnim(portfolioApkRef, '.projetRefId')}
-                {SingleSlideAnim(socialAppRef, '.projetRefId')}
-                <div ref={socialAppRef} className='col-md-6 mb-4'>
-                  <div className='card projetRefId slide-first border-0 shadow-sm'>
+                <div className='col-md-6 mb-4'>
+                  <div className='card   border-0 shadow-sm'>
                     <div className='card-body '>
                       <LazyLoadImage
                         width={'100%'}
@@ -364,8 +346,8 @@ export default function Project({ pathName }) {
                     </div>
                   </div>
                 </div>
-                <div ref={portfolioApkRef} className='col-md-6 mt-4'>
-                  <div className='card projetRefId slide-second border-0 shadow-sm'>
+                <div className='col-md-6 mt-4'>
+                  <div className='card  border-0 shadow-sm'>
                     <div className='card-body '>
                       <LazyLoadImage
                         width={'100%'}
