@@ -75,9 +75,9 @@ const Inspector = () => {
             </select>
           </div>
           <div className='repo-inputs'>
-            <input onChange={(e) => setOwner(e.target.value.trim())} type='text' placeholder='Owner' />
+            <input onChange={(e) => setOwner(e.target.value.trim())} type='text' placeholder='Owner...' />
             <span>/</span>
-            <input onChange={(e) => setRepo(e.target.value.trim())} type='text' placeholder='Repo' />
+            <input onChange={(e) => setRepo(e.target.value.trim())} type='text' placeholder='Repo name...' />
           </div>
           <div className='submit-btn-container my-4'>
             <button className='btn btn-secondary' type='submit'>
