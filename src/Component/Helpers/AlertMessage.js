@@ -37,7 +37,7 @@ function AlertMessage({ message, type }) {
                 : ''
             }`}
           ></i>{' '}
-          {type === 'error' ? 'Warning' : type === 'success' ? 'Info' : ''}
+          {type === 'error' ? 'Error' : type === 'success' ? 'Info' : ''}
         </span>
       </div>
       <p

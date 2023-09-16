@@ -35,6 +35,7 @@ const AllInOne = lazy(() => import('./Component/Blog/AllInOne'))
 const PHPInOne = lazy(() => import('./Component/Blog/AllInOne/PHPInOne/PHPInOne'))
 const ReactInOne = lazy(() => import('./Component/Blog/AllInOne/ReactInOne/ReactInOne'))
 const ReactNativeInOne = lazy(() => import('./Component/Blog/AllInOne/ReactNativeInOne/ReactNativeInOne'))
+const Proverbs = lazy(() => import('./Component/Blog/Proverbs/Proverbs'))
 const Copyright = lazy(() => import('./Component/Copyright/Copyright'))
 const Login = lazy(() => import('./Component/Auth/Login'))
 const PrivacyPolicy = lazy(() => import('./Component/PrivacyPolicy/PrivacyPolicy'))
@@ -62,6 +63,7 @@ ReactDOM.render(
                 <Route path='/php-in-one' element={<PHPInOne pathName={pathName} />} />
                 <Route path='/reactjs-in-one' element={<ReactInOne pathName={pathName} />} />
                 <Route path='/react-native-in-one' element={<ReactNativeInOne pathName={pathName} />} />
+                <Route path='/proverbs' element={<Proverbs pathName={pathName} />} />
                 <Route path='/login' element={<Login pathName={pathName} />} />
                 <Route path='/nigaphp' element={<Nigaphp pathName={pathName} />} />
                 <Route path='*' element={<NotFound pathName={pathName} />} />

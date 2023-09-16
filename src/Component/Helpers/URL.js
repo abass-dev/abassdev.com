@@ -1,4 +1,5 @@
-const prefix = 'https://api.abassdev.com/api'
+const prefix = 'http://localhost:5000/api'
 export default {
   admin: `${prefix}/admin`,
+  proverbs: `${prefix}/proverbs`
 }

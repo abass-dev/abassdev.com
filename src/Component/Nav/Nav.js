@@ -74,11 +74,6 @@ export default function Nav({ metaData, active }) {
           <div className='collapse navbar-collapse primary-font' id='navbarText'>
             <ul className='navbar-nav me-auto justify-content-center'>
               <li className='nav-item'>
-                <NavLink onClick={handleClick} className={`nav-link`} aria-current='page' to='/'>
-                  <i className='fa fa-address-card'></i> About
-                </NavLink>
-              </li>
-              <li className='nav-item'>
                 <NavLink className={`nav-link`} aria-current='page' to='/my-story'>
                   <i className='fa fa-history'></i> My Story
                 </NavLink>

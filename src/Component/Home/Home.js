@@ -26,7 +26,7 @@ const Home = () => {
         <Project />
         <Services />
         <Skill />
-       {/** <LatestPosts /> **/}
+        <LatestPosts /> 
        {/** <Shortcodes /> **/}
         <FAQ />
       </div>

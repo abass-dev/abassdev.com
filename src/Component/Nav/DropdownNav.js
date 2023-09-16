@@ -24,6 +24,11 @@ export function DropdownNav() {
           </a>
         </li>
         <li>
+          <a className='dropdown-item' href='/proverbs'>
+            <i className='fa fa-book'></i> Life & Proverbs
+          </a>
+        </li>
+        <li>
           <a className='dropdown-item' href='/calculator'>
             <i className='fa fa-calculator'></i> Calculator
           </a>
