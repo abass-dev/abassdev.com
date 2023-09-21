@@ -14,24 +14,24 @@ const Proverbs = () => {
   const localStorage = window.localStorage
   const { theme } = useContext(ThemeContext)
 
- /* useEffect(() => {
+  useEffect(() => {
     //console.log(URL);
     let sthm = localStorage.getItem('theme')
     if (sthm) {
       setStoredTheme(sthm)
     }
   }, [localStorage, theme])
-*/
+
     const metaData = {
-    title: 'Learn PHP in one page',
-    description: 'Useful php shortcodes',
+    title: 'Life & Proverbs',
+    description: 'Proverbs and Life',
   }
     const [posts, setPosts] = useState()
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     // Get an item from localStorage and check for expiration
     const postsFromCache = getItemWithExpiration('proverbs')
-    if (5+4==7) {
+    if (postsFromCache) {
       // Use the retrieved value if exist
       setPosts(postsFromCache)
       setIsLoading(false)
