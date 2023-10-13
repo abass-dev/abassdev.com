@@ -1,5 +1,5 @@
 import Nav from '../Nav/Nav'
-import { Profile, Services, Project, MyStory, Skill, LatestPosts, Footer, FAQ } from '../'
+import { Profile, Services, Project, Skill, Friends, LatestPosts, Footer, FAQ } from '../'
 import Shortcodes from '../Blog/Shortcodes/Shortcodes'
 import { useContext, useState, useEffect } from 'react'
 import { ThemeContext } from '../../Context/ThemeProvider'
@@ -22,12 +22,13 @@ const Home = () => {
       <Nav active={'home'} />
       <div className='container-lg'>
         <Profile />
-       {/** <MyStory /> **/}
+        {/** <MyStory /> **/}
         <Project />
         <Services />
         <Skill />
-        <LatestPosts /> 
-       {/** <Shortcodes /> **/}
+        <Friends />
+        <LatestPosts />
+        <Shortcodes />
         <FAQ />
       </div>
       <Footer />

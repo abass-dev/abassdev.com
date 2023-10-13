@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function AlertMessage({ message, type }) {
+function AlertMessage({ message, type, link, linkDesk }) {
   return (
     <div
       style={{
@@ -57,6 +57,7 @@ function AlertMessage({ message, type }) {
         }}
       >
         {message}
+        {link && <a href={link}>{linkDesk}</a>}
       </p>
     </div>
   )

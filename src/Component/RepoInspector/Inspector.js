@@ -40,7 +40,7 @@ const Inspector = () => {
       })
       .catch((e) => {
         console.log(e)
-        setError('Something went wrong! please make sure you repo exist.')
+        setError('Something went wrong! please make sure your repo exist.')
         setLoading(false)
       })
   }

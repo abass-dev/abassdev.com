@@ -22,11 +22,7 @@ const Proverbs = () => {
     }
   }, [localStorage, theme])
 
-    const metaData = {
-    title: 'Life & Proverbs',
-    description: 'Proverbs and Life',
-  }
-    const [posts, setPosts] = useState()
+  const [posts, setPosts] = useState()
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     // Get an item from localStorage and check for expiration
@@ -59,8 +55,13 @@ const Proverbs = () => {
   if (isLoading) {
     return <Loading />
   }
+
+  const metaData = {
+    title: 'Life & Proverbs',
+    description: 'Proverbs and Life',
+  }
   return (
-      <div id={storedTheme && storedTheme}>
+    <div id={storedTheme && storedTheme}>
       <Nav metaData={metaData} active={'proverbs'} />
       <div className='container'>
         <div className='row'>
@@ -68,37 +69,37 @@ const Proverbs = () => {
             <h1 className='primary-text primary-font'>Life & Proverbs</h1>
             <p className='after-title'></p>
           </div>
-          {posts ? (posts.map((value, index) => {
-            return(
-               <div
-                  key={value.id}
-                  className='col-12 p-3 card border-0 shadow-sm rounded-0 mb-5'
-                >
+          {posts ? (
+            posts.map((value, index) => {
+              return (
+                <div key={value.id} className='col-12 p-3 card border-0 shadow-sm rounded-0 mb-5'>
                   <div className='card-body'>
                     <div className='col-md-6 mt-lg-0'>
                       <p className='card-text'>
                         <strong>
-                       <span style={{fontSize: 30}} className='primary-text primary-font'>{`${value.id}. `}</span> {value.description}
+                          <span style={{ fontSize: 30 }} className='primary-text primary-font'>{`${value.id}. `}</span>{' '}
+                          {value.description}
                         </strong>
                       </p>
-                      <p className=''>
-                      By Abass Dev
-                      </p>
+                      <p className=''>By Abass Dev</p>
                     </div>
                   </div>
                 </div>
-            )
-          })) : (<div className='col'>
+              )
+            })
+          ) : (
+            <div className='col'>
               <AlertMessage type='error' message='Proverbs are not available yet due to some technical issues.' />
-            </div>)}
+            </div>
+          )}
           <div className='col-12 mb-4'>
             <GoogleADS dataAdSlot='2747123581' />
-          </div> 
           </div>
-          </div>
-           <Footer report='Blog/Proverbs/Proverbs.js' />
+        </div>
       </div>
-      )
-};
+      <Footer report='Blog/Proverbs/Proverbs.js' />
+    </div>
+  )
+}
 
-export default Proverbs;
+export default Proverbs
