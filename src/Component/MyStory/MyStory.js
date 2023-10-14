@@ -30,7 +30,7 @@ function MyStory({ pathName }) {
     <div id={pathName ? storedTheme : ''}>
       {pathName && <Nav metaData={metaData} active={'my-story'} />}
       <div itemscope itemtype='http://schema.org/Person' className={`${pathName && 'container-lg'} pt-4`}>
-        <div className='container'>
+        <div className=''>
           <div className='row ff-ubuntu'>
             <div className='col-md-12'>
               <h1 className={`mb-4 primary-text primary-font ${!pathName && 'text-center'}`}>My story</h1>

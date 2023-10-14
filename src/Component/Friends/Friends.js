@@ -16,7 +16,7 @@ const Friends = () => {
               xUrl: 'https://x.com/benaiah_al',
             },
           ]}
-          about="is a Self-taught Software Enigineer with a passion for thoughtful UI design, collaboration, and building."
+          about='is a Self-taught Software Enigineer with a passion for thoughtful UI design, collaboration, and building.'
         />
         <FriendsProfile
           img='https://avatars.githubusercontent.com/u/62317165?v=4'
@@ -28,7 +28,7 @@ const Friends = () => {
               xUrl: 'https://x.com/mrepol742',
             },
           ]}
-          about="is a self-taught Freelance Software Engineer with experience in web development, seo, computer hardware & software and currently pursuing arduino programming. Committed to make the world a better place to live."
+          about='is a self-taught Freelance Software Engineer with experience in web development, seo, computer hardware & software and currently pursuing arduino programming. Committed to make the world a better place to live.'
         />
         <FriendsProfile
           img='https://avatars.githubusercontent.com/u/9353811?v=4'
@@ -40,7 +40,7 @@ const Friends = () => {
               xUrl: 'https://twitter.com/papacdev',
             },
           ]}
-          about="is a code Learning Club Animator and Creator of Bow Framework, DevOps Lover ❤️"
+          about='is a code Learning Club Animator and Creator of Bow Framework, DevOps Lover ❤️'
         />
         <FriendsProfile
           img='https://avatars.githubusercontent.com/u/64565584?v=4'
@@ -51,7 +51,7 @@ const Friends = () => {
               website: 'https://thecodeblog.net/',
             },
           ]}
-          about="is a teenage full-stack web developer and a UI designer with a vision of creativity"
+          about='is a teenage full-stack web developer and a UI designer with a vision of creativity'
         />
         <FriendsProfile
           img='https://avatars.githubusercontent.com/u/57678715?v=4'
@@ -59,10 +59,10 @@ const Friends = () => {
           links={[
             {
               githubUrl: 'https://github.com/emicheldev',
-              xUrl: 'https://x.com/emichel_dev'
+              xUrl: 'https://x.com/emichel_dev',
             },
           ]}
-          about="est un Développeur web freelance"
+          about='est un Développeur web freelance'
         />
       </div>
     </div>

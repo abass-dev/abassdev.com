@@ -27,43 +27,41 @@ export default function LatestPosts() {
     }
   }, [])
   return (
-    <div className='container'>
-      <div className='row'>
-        <h1 className='primary-font text-center mb-4 primary-text'>Recent blog posts</h1>
-        {latestPosts ? (
-          latestPosts.map((post) => {
-            return (
-              <div className='col-md-6 mb-4' key={post.id}>
-                <div className='card border-0 shadow-sm'>
-                  <div className={`card-body border-bottom`}>
-                    <a className='h4 mb-1' href={post.link}>
-                      {post.title.rendered}
-                    </a>
-                    <br />
-                    <br />
-                    <small className='text-muted'>Author: Abass Dev</small>
-                    <br />
-                    <small className='text-muted'>Published on: {dateToReadable(post.date)}</small>
-                  </div>
-                  <div className='card-body'>
-                    <p
-                      className='mt-3'
-                      dangerouslySetInnerHTML={{
-                        __html: post.excerpt.rendered,
-                      }}
-                    ></p>
-                  </div>
+    <div className='row'>
+      <h1 className='primary-font text-center mb-4 primary-text'>Recent blog posts</h1>
+      {latestPosts ? (
+        latestPosts.map((post) => {
+          return (
+            <div className='col-md-6 mb-4' key={post.id}>
+              <div className='card border-0 shadow-sm'>
+                <div className={`card-body border-bottom`}>
+                  <a className='h4 mb-1' href={post.link}>
+                    {post.title.rendered}
+                  </a>
+                  <br />
+                  <br />
+                  <small className='text-muted'>Author: Abass Dev</small>
+                  <br />
+                  <small className='text-muted'>Published on: {dateToReadable(post.date)}</small>
+                </div>
+                <div className='card-body'>
+                  <p
+                    className='mt-3'
+                    dangerouslySetInnerHTML={{
+                      __html: post.excerpt.rendered,
+                    }}
+                  ></p>
                 </div>
               </div>
-            )
-          })
-        ) : (
-          <AlertMessage type='error' message={'Recent posts are not available yet due to some technical issues.'} />
-        )}
+            </div>
+          )
+        })
+      ) : (
+        <AlertMessage type='error' message={'Recent posts are not available yet due to some technical issues.'} />
+      )}
 
-        <div className='col-12 mb-4'>
-          <GoogleADS dataAdSlot='2747123581' />
-        </div>
+      <div className='col-12 mb-4'>
+        <GoogleADS dataAdSlot='2747123581' />
       </div>
     </div>
   )

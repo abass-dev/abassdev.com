@@ -35,7 +35,7 @@ export default function Tech({ title, tech }) {
   }, [tech])
 
   return (
-    <div className='container'>
+    <div className=''>
       <div className='row'>
         <div className='col-12'>
           <h2 className='md-title mt-3 h4 '>{title}</h2>

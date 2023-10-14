@@ -2,7 +2,7 @@ import Tech from './Tech'
 import GoogleADS from '../../ADS/GoogleADS'
 export default function Shortcodes() {
   return (
-    <div className='container mt-4'>
+    <div className='mt-4'>
       <h1 className='primary-text primary-font'>Shortcodes blog posts</h1>
       <p className='after-title'></p>
       <Tech title='ReactJS shortcodes' tech='ReactJs' />

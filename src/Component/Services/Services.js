@@ -17,7 +17,7 @@ export default function Services() {
   SingleSlideAnim(problemSolvingRef, '.workRefID')
 
   return (
-    <div className='text-white mb-4 md-title container-lg'>
+    <div className='text-white mb-4 md-title'>
       <div className='row'>
         <div className='col-12'>
           <h1 id='services' className='mb-4 primary-font primary-text text-center'>
