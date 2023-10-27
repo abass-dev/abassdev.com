@@ -1,36 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Hi, I'm Abass Dev (Abass Ben Cheik)
 
-## Getting Started
+A passionate web and mobile app developer with over 6 years of experience in programming and the internet.
+In my free time, I enjoy sharing my experiences through my blog [byteteachers.com](https://byteteachers.com) and contributing to the open-source community. I am also the creator of the NigaPHP framework.
 
-First, run the development server:
+Here is my personal website [abassdev.com](https://abassdev.com) for more information about me.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![wakatime](https://wakatime.com/badge/user/072e7dc4-793a-4d70-86fe-15b01af3a38b/project/c9ca7924-4c3d-4ce8-b244-9591bfa93f03.svg)](https://wakatime.com/badge/user/072e7dc4-793a-4d70-86fe-15b01af3a38b/project/c9ca7924-4c3d-4ce8-b244-9591bfa93f03)
