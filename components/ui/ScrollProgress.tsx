@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-const ProgressBar = ({ color }) => {
+const ProgressBar = () => {
   const [scrollWidth, setScrollWidth] = useState(0);
 
   const updateScrollWidth = () => {

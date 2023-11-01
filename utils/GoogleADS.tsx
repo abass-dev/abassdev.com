@@ -1,10 +1,15 @@
+// @ts-ignore
+// @ts-nocheck
+
 "use client";
 
 import React, { useEffect } from "react";
 
-const GoogleADS = (props) => {
-  const { dataAdSlot } = props;
+interface ItemProps {
+  dataAdSlot: string;
+}
 
+const GoogleADS = ({ dataAdSlot }: ItemProps) => {
   useEffect(() => {
     try {
       if (process.env.NODE_ENV !== "development") {

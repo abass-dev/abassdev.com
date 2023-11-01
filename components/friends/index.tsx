@@ -6,11 +6,24 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 
+import Item from "./Item";
+
 const Friends = () => {
   return (
     <div className="px-5 md:px-20">
       <h2 className="text-3xl text-center">Friends</h2>
       <div className="grid md:grid-cols-3 py-8">
+        <Item
+          name="Abass Dev"
+          avatar="https://avatars.githubusercontent.com/u/65370456?v=4"
+          about="is a Self-taught Software Enigineer with a passion for thoughtful UI design, collaboration, and building."
+          links={{
+            website: "https://abassdev.com",
+            x: "x.com/abass_dev",
+            github: "https://github.com/abass-dev",
+            facebook: "m.facebook.com/abassthedev",
+          }}
+        />
         <div className="shadow-lg flex flex-col p-5 items-center justify-center">
           <Image
             src="https://avatars.githubusercontent.com/u/65370456?v=4"

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import Portfolio from "./Portfolio";
-import Others from './Others'
+import Others from "./Others";
 import ScrollProgress from "../ui/ScrollProgress";
 
 const Exo = localFont({

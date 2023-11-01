@@ -9,8 +9,8 @@ const Exo = localFont({
 
 const Others = () => {
   const [isOpen, setisOpen] = useState(false);
-  const pathName = usePathname()
- 
+  const pathName = usePathname();
+
   const openNavHandler = () => {
     setisOpen(!isOpen);
   };

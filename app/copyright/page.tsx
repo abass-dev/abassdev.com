@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "Copyright | Abass Dev",
 };
 
-import { Copyright } from '../../components'
+import { Copyright } from "../../components";
 
 const Page = () => {
   return <Copyright />;
-}
+};
 
-export default Page
+export default Page;

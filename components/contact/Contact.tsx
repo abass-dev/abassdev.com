@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Form from "./Form";
-import { Report } from '../'
+import { Report } from "../";
 
 const Contact = () => {
   const pathName = usePathname();

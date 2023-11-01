@@ -35,6 +35,14 @@ const Footer = () => {
               <MdEmail size={25} />
             </a>
           </div>
+          <div className="py-3">
+            <h3 className="text-3xl py-3">Important Links</h3>
+            <ul>
+              <li>
+                <a href="">My story</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="text-center col-span-4">

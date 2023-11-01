@@ -4,37 +4,30 @@ import { useEffect, useRef } from "react";
 import { BsChevronDoubleUp } from "react-icons/bs";
 
 const ScrollUp = () => {
-  const btnUpRef = useRef(null);
+  const btnUpRef = useRef<HTMLDivElement | null>(null); // Specify the HTMLDivElement type
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-      // Get the current vertical scroll position
 
-      // Check if the scroll position is greater than or equal to 100 pixels
-      if (scrollY < 712) {
-        if (btnUpRef.current && btnUpRef.current.classList) {
-          btnUpRef.current.classList.add("hidden");
-        }
-      } else {
-        if (btnUpRef.current && btnUpRef.current.classList) {
-          btnUpRef.current.classList.remove("hidden");
-        }
+      if (scrollY < 712 && btnUpRef.current && btnUpRef.current.classList) {
+        btnUpRef.current.classList.add("hidden");
+      } else if (btnUpRef.current && btnUpRef.current.classList) {
+        btnUpRef.current.classList.remove("hidden");
       }
     };
 
-    // Add a scroll event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the scroll event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [btnUpRef]); // Empty dependency array ensures the effect only runs on mount and unmountl
+  }, []); // Empty dependency array ensures the effect only runs on mount and unmount
 
   const handleOnGoUp = () => {
     window.scrollTo({ top: 0 });
   };
+
   return (
     <div
       style={{

@@ -6,7 +6,7 @@ import Script from "next/script";
 import Navbar from "../components/navigation";
 import localFont from "next/font/local";
 import ScrollUp from "../components/ui/ScrollUp";
-import { Footer } from '../components'
+import { Footer } from "../components";
 
 const Orbitron = localFont({
   src: "../fonts/Orbitron/Orbitron-VariableFont_wght.ttf",

@@ -2,8 +2,8 @@ const Report = ({ report = "app/Page.tsx" }) => {
   return (
     <div className="container mx-auto xpt">
       <div className="shadow-lg p-5">
-    <h2 className='text-3xl pb-5'>Found a problem with this page?</h2>
-        <ul className='list-disc'>
+        <h2 className="text-3xl pb-5">Found a problem with this page?</h2>
+        <ul className="list-disc">
           <li>
             <a
               className="text-blue-700"

@@ -1,1 +1,1 @@
-eruda.init()
+eruda.init();
