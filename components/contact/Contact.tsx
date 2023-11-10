@@ -7,6 +7,7 @@ import { Report } from "../";
 const Contact = () => {
   const pathName = usePathname();
   return (
+   <>
     <div className={`${pathName === "/contact/" ? "xpt" : "pt-8"} px-5 pb-8`}>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="">
@@ -33,8 +34,9 @@ const Contact = () => {
         </div>
         <Form />
       </div>
-      <Report />
     </div>
+    <Report report="contact/page" />
+   </>
   );
 };
 export default Contact;

@@ -19,6 +19,27 @@
 .xpt {
   padding-top: 130px;
 }
+.xpb {
+  padding-top: 130px;
+}
+.xpt-100 {
+  padding-top: 100px;
+}
+.xpt-xl {
+  padding-top: 110px;
+}
+.xpt-90 {
+  padding-top: 90px;
+}
+.xpt-80 {
+  padding-top: 80px;
+}
+.xpt-60 {
+  padding-top: 60px;
+}
+.xpt-20 {
+  padding-top: 20px;
+}
 
 .box-shadow {
   box-shadow: 0 0 9px #00000025;
@@ -26,4 +47,8 @@
 
 html {
   scroll-behavior: smooth !important;
+}
+
+.divide-bottom {
+  border-bottom: 1px solid #00000030;
 }

@@ -75,7 +75,7 @@ const MyStory = () => {
           </div>
         </div>
       </div>
-      <Report />
+      <Report report='my-story/page'/>
     </>
   );
 };

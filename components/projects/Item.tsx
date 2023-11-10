@@ -18,9 +18,9 @@ interface ItemProps {
   name: string;
   description: string;
   headerImg: string;
-  seeMore: SeeMore;
+  seeMore?: SeeMore;
   techs: string[];
-  headerLinks: {
+  headerLinks?: {
     github: HeaderLink;
   };
 }
@@ -34,7 +34,7 @@ const Item = ({
   headerLinks,
 }: ItemProps) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm mb-8 rounded overflow-hidden shadow-lg">
       <Image
         quality={75}
         className="w-full"
@@ -43,14 +43,11 @@ const Item = ({
         height={360}
         alt={name}
       />
-      <div className="px-6 py-4">
+      <div className="p-4">
         <h2 className="font-bold text-xl mb-2">{name}</h2>
         {headerLinks && (
           <div
-            style={{
-              borderBottom: "1px solid #00000030",
-            }}
-            className="py-3 flex gap-2 mb-3"
+            className="divide-bottom py-3 flex gap-2 mb-3"
           >
             {headerLinks.github && (
               <a

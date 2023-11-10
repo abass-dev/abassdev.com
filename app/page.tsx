@@ -1,8 +1,4 @@
-import Image from "next/image";
-
-import Services from "../components/services";
-import Profile from "../components/profile";
-import { Report, Friends, Projects } from "../components";
+import { Profile, Report, Friends, Projects, Services } from "../components";
 
 export default function Home() {
   return (
@@ -11,6 +7,7 @@ export default function Home() {
       <Projects />
       <Services />
       <Friends />
+      <Report />
     </>
   );
 }

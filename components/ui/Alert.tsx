@@ -76,7 +76,8 @@ function Alert({ message, type, link, linkDesk }: AlertProps) {
         }}
       >
         {message}
-        {link && <a href={link}>{linkDesk}</a>}
+        <br />
+        {link && <a className='text-blue-700' href={link}>{link}</a>}
       </p>
     </div>
   );

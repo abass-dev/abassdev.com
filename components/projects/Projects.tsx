@@ -39,7 +39,7 @@ const Projects = () => {
 
           <Item
             name="Repo Inspector"
-            headerImg="/assets/images/repo-inspector.jpg"
+            headerImg="/assets/images/repo-inspector.webp"
             description="Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase."
             seeMore={{ url: "/repo-inspector", text: "Give it a try..." }}
             techs={["react", "bootstrap"]}
@@ -61,7 +61,7 @@ const Projects = () => {
               before: "Checkout",
               after: "on NPM (Nodejs Package Manager)",
             }}
-            techs={["javascript", "react native"]}
+            techs={["javascript", "react-native"]}
             headerLinks={{
               github: {
                 url: "https://github.com/abass-dev/dynacard",
@@ -69,6 +69,7 @@ const Projects = () => {
               },
             }}
           />
+
           <Item
             name="Form builder"
             headerImg="/assets/images/php_code.webp"
@@ -89,7 +90,7 @@ const Projects = () => {
           />
 
           <Item
-            name="Abassdev.com (personal website)"
+            name="Portfolio (personal website)"
             headerImg="/assets/images/project-portfolio.webp"
             description="This portfolio was build using ReactJs (Typescript). By using ReactJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. ReactJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques."
             seeMore={{
@@ -114,6 +115,48 @@ const Projects = () => {
               },
             }}
           />
+          
+          <Item
+            name="Fakaray"
+            headerImg="/assets/images/fakaray.webp"
+            description="Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market."
+            techs={[
+              "react",
+              "sass",
+              "firebase"
+            ]}
+          />
+          
+        {pathName === '/projects/'  ? 
+        (<Item
+            name="Byte Teachers (Blog)"
+            headerImg="/assets/images/blogimg.webp"
+            description="ByteTeachers.com is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
+            seeMore={{
+              url: "https://byteteachers.com",
+              text: "Byte Teachers",
+              before: "Visit",
+              after: "now.",
+            }}
+            techs={[
+              "php",
+              "wordpress"
+            ]}
+            headerLinks={{
+              github: {
+                url: "https://github.com/abass-dev/nextjs-abassdev",
+                icon: <BsGithub />,
+              },
+            }}
+          />) : (
+          
+           <div className="max-w-sm mb-8 rounded overflow-hidden shadow-lg">
+            <a className='text-blue-700' href='/projects'>See more projects</a>
+           </div>
+          ) }
+          
+          
+          
         </div>
       </div>
     </section>
