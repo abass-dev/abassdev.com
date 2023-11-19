@@ -34,7 +34,7 @@ const Item = ({
   headerLinks,
 }: ItemProps) => {
   return (
-    <div className="max-w-sm mb-8 rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm dark:text-gray-100 dark:bg-gray-800 mb-8 rounded overflow-hidden shadow-lg">
       <Image
         quality={75}
         className="w-full"
@@ -46,9 +46,7 @@ const Item = ({
       <div className="p-4">
         <h2 className="font-bold text-xl mb-2">{name}</h2>
         {headerLinks && (
-          <div
-            className="divide-bottom py-3 flex gap-2 mb-3"
-          >
+          <div className="divide-bottom py-3 flex gap-2 mb-3">
             {headerLinks.github && (
               <a
                 className="flex gap-2 bg-gray-200 px-1 rounded text-gray-700 items-center button text-sm"
@@ -59,7 +57,7 @@ const Item = ({
             )}
           </div>
         )}
-        <p className="text-gray-700 text-base">{description}</p>
+        <p className="text-gray-700 dark:text-gray-100 text-base">{description}</p>
         <br />
         {seeMore && (
           <p>

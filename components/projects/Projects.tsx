@@ -1,7 +1,7 @@
 "use client";
 
 import { BsGithub } from "react-icons/bs";
-
+import { SeeMoreButton } from "../ui";
 import { usePathname } from "next/navigation";
 import Item from "./Item";
 
@@ -13,10 +13,10 @@ const Projects = () => {
       id="projects"
       className={`${
         pathName === "/projects/" ? "xpt" : "py-8"
-      } px-5 flex items-center justify-center`}
+      } px-5 dark:bg-gray-900 flex items-center justify-center`}
     >
       <div>
-        <h1 className="text-3xl pb-8 text-center">Notable projects</h1>
+        <h1 className="dark:text-gray-100 text-3xl pb-8 text-center">Notable projects</h1>
         <div className="grid mx-auto gap-8 md:grid-cols-2">
           <Item
             name="NigaPHP framework"
@@ -92,7 +92,7 @@ const Projects = () => {
           <Item
             name="Portfolio (personal website)"
             headerImg="/assets/images/project-portfolio.webp"
-            description="This portfolio was build using ReactJs (Typescript). By using ReactJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. ReactJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques."
+            description="This portfolio was developed with NextJs (Typescript). By using NextJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. NextJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques."
             seeMore={{
               url: "https://github.com/nextjs-abassdev",
               text: "code source",
@@ -115,48 +115,38 @@ const Projects = () => {
               },
             }}
           />
-          
+
           <Item
             name="Fakaray"
             headerImg="/assets/images/fakaray.webp"
             description="Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market."
-            techs={[
-              "react",
-              "sass",
-              "firebase"
-            ]}
+            techs={["react", "sass", "firebase"]}
           />
-          
-        {pathName === '/projects/'  ? 
-        (<Item
-            name="Byte Teachers (Blog)"
-            headerImg="/assets/images/blogimg.webp"
-            description="ByteTeachers.com is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
-            seeMore={{
-              url: "https://byteteachers.com",
-              text: "Byte Teachers",
-              before: "Visit",
-              after: "now.",
-            }}
-            techs={[
-              "php",
-              "wordpress"
-            ]}
-            headerLinks={{
-              github: {
-                url: "https://github.com/abass-dev/nextjs-abassdev",
-                icon: <BsGithub />,
-              },
-            }}
-          />) : (
-          
-           <div className="max-w-sm mb-8 rounded overflow-hidden shadow-lg">
-            <a className='text-blue-700' href='/projects'>See more projects</a>
-           </div>
-          ) }
-          
-          
-          
+
+          {pathName === "/projects/" ? (
+            <Item
+              name="Byte Teachers (Blog)"
+              headerImg="/assets/images/blogimg.webp"
+              description="ByteTeachers.com is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
+              seeMore={{
+                url: "https://byteteachers.com",
+                text: "Byte Teachers",
+                before: "Visit",
+                after: "now.",
+              }}
+              techs={["php", "wordpress"]}
+              headerLinks={{
+                github: {
+                  url: "https://github.com/abass-dev/nextjs-abassdev",
+                  icon: <BsGithub />,
+                },
+              }}
+            />
+          ) : (
+            <div className="max-w-sm mb-8">
+              <SeeMoreButton text="See more projects..." goTo="/projects" />
+            </div>
+          )}
         </div>
       </div>
     </section>

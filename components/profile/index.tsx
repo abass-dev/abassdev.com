@@ -11,7 +11,7 @@ const Orbitron = localFont({
 
 const Profile = () => {
   return (
-    <section className="grid md:grid-cols-3 gap-4 px-5 py-5 xpt md:px-20 md:items-center md:text-left">
+    <section className="dark:text-gray-100 grid md:grid-cols-3 gap-4 px-5 py-5 xpt md:px-20 md:items-center md:text-left">
       <div className="">
         <Image
           src="/assets/images/profile-pic2.webp"
@@ -22,7 +22,7 @@ const Profile = () => {
         />
       </div>
       <div className="md:col-span-2">
-        <h1 className={`${Orbitron.className} text-3xl my-4 text-blue-950 `}>
+        <h1 className={`${Orbitron.className} text-3xl my-4 text-blue-950 dark:text-gray-100`}>
           Abass Dev
         </h1>
         <div>
@@ -46,7 +46,7 @@ const Profile = () => {
             .
           </p>
         </div>
-        <div className="flex text-gray-600 justify-center w-full gap-3 py-4">
+        <div className="flex text-gray-600 dark:text-gray-100 justify-center w-full gap-3 py-4">
           <a href="https://github.com/abass-dev">
             <BsGithub size={25} />
           </a>

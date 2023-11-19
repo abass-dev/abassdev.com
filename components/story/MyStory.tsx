@@ -12,7 +12,7 @@ const MyStory = () => {
       <div
         className={`${
           pathName === "/my-story/" ? "xpt" : "py-8"
-        } px-5 flex items-center justify-center`}
+        } px-5 flex items-center dark:text-gray-100 dark:bg-gray-900 justify-center`}
       >
         <div className="max-w-3xl mx-auto rounded overflow-hidden shadow-lg">
           <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
@@ -26,14 +26,14 @@ const MyStory = () => {
           </div>
           <div className="px-6 grid grid-cols-1 gap-4 py-4">
             <h1 className="font-bold text-xl mb-2">Who is Abass Dev?</h1>
-            <p className="text-gray-700 text-base">
+            <p className="dark:text-gray-100 text-gray-700 text-base">
               Abass Ben Cheik, who goes by the name Abass Dev, is a talented
               full-stack developer with a passion for building exceptional Web
               and Mobile applications. He was born in Niamey, Niger, on February
               2, 1994. He is currently {birthday(new Date("02-02-1994"))}
             </p>
 
-            <p className="text-base text-gray-700">
+            <p className="text-base dark:text-gray-100 text-gray-700">
               At a young age of 15 in 2009, Abass Dev became fascinated with the
               world of web development. However, he had no idea where to start.
               It wasn't until he met a friend on Skyrock, a social networking
@@ -43,30 +43,30 @@ const MyStory = () => {
               web development.
             </p>
 
-            <p className="text-base text-gray-700">
+            <p className="text-base dark:text-gray-100 text-gray-700">
               In 2012, Abass Dev created his first blog on the Blogspot
               platform, but soon discovered its limitations. Determined to
               expand his knowledge and capabilities, he began to explore the
               depths of web development using languages such as HTML, CSS,
               JavaScript, PHP, SQL, and others.
             </p>
-            <p className="text-base text-gray-700">
+            <p className="text-base dark:text-gray-100 text-gray-700">
               With his dedication and hard work, Abass Dev honed his skills and
               became a self-taught full-stack developer.
             </p>
-            <p className="text-base text-gray-700">
+            <p className="text-base dark:text-gray-100 text-gray-700">
               Today, he has an impressive portfolio of work that showcases his
               expertise in building dynamic, responsive, and visually appealing
               web applications.
             </p>
-            <p className="text-base text-gray-700">
+            <p className="text-base dark:text-gray-100 text-gray-700">
               In addition to his technical abilities, Abass Dev has a keen eye
               for design and aesthetics, which allows him to create stunning and
               functional user interfaces. He is always learning and staying
               up-to-date with the latest trends and technologies in the
               ever-evolving field of web development.
             </p>
-            <p className="text-base text-gray-700">
+            <p className="text-base dark:text-gray-100 text-gray-700">
               Abass Dev is a true testament to the power of self-education and
               perseverance. His passion and commitment to his craft have led him
               to become a respected figure in the web development community, and
@@ -75,7 +75,7 @@ const MyStory = () => {
           </div>
         </div>
       </div>
-      <Report report='my-story/page'/>
+      <Report report="my-story/page" />
     </>
   );
 };

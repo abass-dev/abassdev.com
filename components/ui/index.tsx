@@ -1,5 +1,5 @@
-import Alert from './Alert'
-import ProgressBar from './ProgressBar'
+import Alert from "./Alert";
+import ProgressBar from "./ProgressBar";
+import SeeMoreButton from "./SeeMoreButton";
 
-
-export { Alert, ProgressBar }
+export { Alert, ProgressBar, SeeMoreButton };

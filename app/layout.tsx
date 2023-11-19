@@ -38,6 +38,8 @@ export default function RootLayout({
         {children}
         <ScrollUp />
         <Footer />
+        <Script src="/eruda/eruda.js" strategy="beforeInteractive" />
+        <Script src="/init-eruda.js" strategy="beforeInteractive" />
       </body>
     </html>
   );

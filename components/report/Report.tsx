@@ -10,10 +10,12 @@ const Report = ({
   ext = ".tsx",
 }: ReportProps) => {
   return (
-    <div className="container mx-auto xpt">
-      <div className="shadow-lg m-5 p-5">
-        <h2 className="text-xl bold pb-5">Notice anything wrong with this page?</h2>
-        <ul className="list-disc p-4">
+    <div className="container mx-auto dark:text-gray-100 dark:bg-gray-900 xpt">
+      <div className="shadow-lg p-5">
+        <h2 className="text-xl bold pb-5">
+          Notice anything wrong with this page?
+        </h2>
+        <ul className="list-disc m-4">
           <li>
             <a
               className="text-blue-700"

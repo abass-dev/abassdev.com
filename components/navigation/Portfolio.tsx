@@ -48,7 +48,6 @@ const Portfolio = () => {
           className="py-2 text-sm text-gray-700 dark:text-gray-400"
           aria-labelledby="portfolioDropdown"
         >
-
           <li>
             <a
               href="/repo-inspector"

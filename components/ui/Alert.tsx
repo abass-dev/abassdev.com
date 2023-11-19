@@ -36,7 +36,7 @@ function Alert({ message, type, link, linkDesk }: AlertProps) {
           }`,
         }}
       >
-        <span
+        <p
           className={`${
             type === "success"
               ? "text-info"
@@ -45,19 +45,8 @@ function Alert({ message, type, link, linkDesk }: AlertProps) {
               : ""
           }`}
         >
-          <i
-            className={`fa fa-${
-              type === "warning"
-                ? "exclamation"
-                : type === "success"
-                ? "info-circle"
-                : type === "error"
-                ? "exclamation"
-                : ""
-            }`}
-          ></i>{" "}
           {type === "error" ? "Error" : type === "success" ? "Info" : ""}
-        </span>
+        </p>
       </div>
       <p
         style={{
@@ -77,7 +66,11 @@ function Alert({ message, type, link, linkDesk }: AlertProps) {
       >
         {message}
         <br />
-        {link && <a className='text-blue-700' href={link}>{link}</a>}
+        {link && (
+          <a className="text-blue-700" href={link}>
+            {link}
+          </a>
+        )}
       </p>
     </div>
   );

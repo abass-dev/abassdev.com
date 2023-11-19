@@ -1,4 +1,3 @@
-
 interface API {
   REPO_INSPECTOR: string;
 }
