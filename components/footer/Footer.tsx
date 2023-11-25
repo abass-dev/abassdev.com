@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="text-white bg-gray-900 dark:bg-gray-500 py-8">
+    <div className="text-white bg-gray-900 py-8">
       <div className="grid grid-cols-4 gap-20 px-5 md:px-8 md:px-20">
         <div className="col-span-4 md:col-span-2">
           <ContactForm />
@@ -39,7 +39,7 @@ const Footer = () => {
             <h3 className="text-3xl py-3">Important Links</h3>
             <ul>
               <li>
-                <a href="">My story</a>
+                <a href="/my-story">My story</a>
               </li>
             </ul>
           </div>

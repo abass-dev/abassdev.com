@@ -1,0 +1,4 @@
+Allow: /
+Disallow: /api/
+Disallow: /_next/*
+Disallow: /static/*

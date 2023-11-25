@@ -22,7 +22,7 @@ interface ItemProps {
 
 const Item = ({ name, avatar, about, links }: ItemProps) => {
   return (
-    <div className="shadow-lg flex flex-col p-5 items-center justify-center">
+    <div className="bg-white dark:bg-gray-800  dark:text-gray-100 shadow-lg flex flex-col p-5 gap-3 items-center justify-center">
       <Image
         src={avatar}
         alt={name}
@@ -34,7 +34,7 @@ const Item = ({ name, avatar, about, links }: ItemProps) => {
         <span className="text-blue-700">{name}</span> {about}
       </p>
 
-      <div className="flex text-gray-600 justify-center w-full gap-3 py-4">
+      <div className="flex text-gray-600 dark:text-gray-400 justify-center w-full gap-3 py-4">
         {links && (
           <>
             {links.website && (

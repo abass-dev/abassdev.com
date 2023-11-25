@@ -11,7 +11,7 @@ const Orbitron = localFont({
 
 const Profile = () => {
   return (
-    <section className="dark:text-gray-100 grid md:grid-cols-3 gap-4 px-5 py-5 xpt md:px-20 md:items-center md:text-left">
+    <section className="bg-white dark:bg-gray-900 dark:text-gray-100  grid md:grid-cols-3 gap-4 px-5 py-5 xpt md:px-20 md:items-center md:text-left">
       <div className="">
         <Image
           src="/assets/images/profile-pic2.webp"

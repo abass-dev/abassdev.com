@@ -1,7 +1,3 @@
-import Image from "next/image";
-import { BsGithub } from "react-icons/bs";
-import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
 import Projects from "../../components/projects/Projects";
 import { Metadata } from "next";
 

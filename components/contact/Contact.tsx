@@ -8,7 +8,7 @@ const Contact = () => {
   const pathName = usePathname();
   return (
     <>
-      <div className={`${pathName === "/contact/" ? "xpt" : "pt-8"} px-5 pb-8`}>
+      <div className={`${pathName === "/contact/" ? "xpt" : "pt-8"} dark:text-gray-100 dark:bg-gray-900 px-5 pb-8`}>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="">
             <h1 className="text-3xl">Abass Dev</h1>

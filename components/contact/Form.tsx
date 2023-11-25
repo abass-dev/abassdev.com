@@ -131,8 +131,8 @@ const Form = () => {
   }
 
   return (
-    <div className="shadow-lg bg-white p-5">
-      <h2 className="text-2xl text-gray-700 text-center pb-5">Contact us</h2>
+    <div className="shadow-lg bg-white dark:bg-gray-800 p-5">
+      <h2 className="text-2xl text-gray-700 dark:text-gray-100 text-center pb-5">Contact us</h2>
       {isLoading && <ProgressBar />}
       {message.success && <Alert message={message.success} type="success" />}
       {message.error && <Alert message={message.error} type="error" />}
@@ -140,7 +140,7 @@ const Form = () => {
       <form onSubmit={onSubmitEmailHandler}>
         <div>
           <label
-            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="username"
           >
             Name:{" "}
@@ -160,7 +160,7 @@ const Form = () => {
 
         <div>
           <label
-            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="username"
           >
             Subject:{" "}
@@ -180,7 +180,7 @@ const Form = () => {
 
         <div>
           <label
-            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="username"
           >
             Email:{" "}
@@ -200,7 +200,7 @@ const Form = () => {
 
         <div>
           <label
-            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="username"
           >
             Message:{" "}

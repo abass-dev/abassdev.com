@@ -4,11 +4,13 @@ import { BsGithub } from "react-icons/bs";
 import { SeeMoreButton } from "../ui";
 import { usePathname } from "next/navigation";
 import Item from "./Item";
+import { Report } from '../'
 
 const Projects = () => {
   const pathName = usePathname();
 
   return (
+    <>
     <section
       id="projects"
       className={`${
@@ -18,6 +20,20 @@ const Projects = () => {
       <div>
         <h1 className="dark:text-gray-100 text-3xl pb-8 text-center">Notable projects</h1>
         <div className="grid mx-auto gap-8 md:grid-cols-2">
+
+          <Item
+            name="Repo Inspector"
+            headerImg="/assets/images/repo-inspector.webp"
+            description="Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase."
+            seeMore={{ url: "/repo-inspector", text: "Give it a try..." }}
+            techs={["react", "bootstrap"]}
+            headerLinks={{
+              github: {
+                url: "https://github.com/abass-dev/abassdev.com",
+                icon: <BsGithub />,
+              },
+            }}
+          />
           <Item
             name="NigaPHP framework"
             headerImg="/assets/images/project-nigaphp.webp"
@@ -32,20 +48,6 @@ const Projects = () => {
             headerLinks={{
               github: {
                 url: "https://nigaphp.abassdev.com",
-                icon: <BsGithub />,
-              },
-            }}
-          />
-
-          <Item
-            name="Repo Inspector"
-            headerImg="/assets/images/repo-inspector.webp"
-            description="Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase."
-            seeMore={{ url: "/repo-inspector", text: "Give it a try..." }}
-            techs={["react", "bootstrap"]}
-            headerLinks={{
-              github: {
-                url: "https://github.com/abass-dev/abassdev.com",
                 icon: <BsGithub />,
               },
             }}
@@ -150,6 +152,8 @@ const Projects = () => {
         </div>
       </div>
     </section>
+    <Report report="projects/page" />
+    </>
   );
 };
 

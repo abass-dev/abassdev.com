@@ -10,12 +10,19 @@ const Report = ({
   ext = ".tsx",
 }: ReportProps) => {
   return (
-    <div className="container mx-auto dark:text-gray-100 dark:bg-gray-900 xpt">
-      <div className="shadow-lg p-5">
-        <h2 className="text-xl bold pb-5">
-          Notice anything wrong with this page?
+    <div className="bg-white p-5 grid  md:px-20 py-8 dark:text-gray-100 dark:bg-gray-800 pt-8">
+        <h2 className="text-3xl bold pb-5">
+          Anything wrong with this page?
         </h2>
-        <ul className="list-disc m-4">
+        <ul className="list-disc m-4 gap-2 grid">
+          <li>
+            <a
+              className="text-blue-700"
+              href={`https://github.com/abass-dev/nextjs-abassdev.com/blob/master/${dir}/${report}${ext}`}
+            >
+              Code source of this page
+            </a>
+          </li>
           <li>
             <a
               className="text-blue-700"
@@ -48,17 +55,8 @@ const Report = ({
               Fork this repository
             </a>
           </li>
-          <li>
-            <a
-              className="text-blue-700"
-              href={`https://github.com/abass-dev/nextjs-abassdev.com/blob/master/${dir}/${report}${ext}`}
-            >
-              Code source of this page
-            </a>
-          </li>
         </ul>
       </div>
-    </div>
   );
 };
 export default Report;

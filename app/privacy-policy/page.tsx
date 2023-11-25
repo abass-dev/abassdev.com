@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 
 const PrivacyPolicy = () => {
   return (
-    <div className="grid grid-cols-1 px-5 md:px-20 xpt">
+    <div className="dark:text-gray-100 dark:bg-gray-900 grid grid-cols-1 px-5 md:px-20 xpt">
       <h1 className="text-3xl py-8 text-center">Privacy Policy</h1>
 
-      <div className="shadow-lg p-5">
+      <div className="shadow p-5">
         <h2 className="text-2xl mb-4">Privacy policy for abassdev.com</h2>
         <p>
           At abassdev.com, the privacy of our visitors is of utmost importance
@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
         </p>
       </div>
 
-      <div className="shadow-lg p-5">
+      <div className="shadow p-5">
         <h2 className="text-2xl mb-4">Information We Collect</h2>
         <p className="mb-3">
           We may collect personal information such as your name, email address,
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
         </p>
       </div>
 
-      <div className="shadow-lg p-5">
+      <div className="shadow p-5">
         <h2 className="text-2xl mb-4">Google Services</h2>
         <p className="mb-3">
           We use Google Analytics to collect information about how visitors use
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
         </p>
       </div>
 
-      <div className="shadow-lg p-5">
+      <div className="shadow p-5">
         <h2 className="text-2xl mb-4">Security</h2>
         <p className="mb-3">
           We take reasonable steps to protect the personal information we
@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
         </p>
       </div>
 
-      <div className="shadow-lg p-5">
+      <div className="shadow p-5">
         <h2 className="text-2xl mb-4">Contact us</h2>
         <p className="mb-3">
           If you have any questions about this privacy policy, please{" "}

@@ -7,6 +7,7 @@ import Navbar from "../components/navigation";
 import localFont from "next/font/local";
 import ScrollUp from "../components/ui/ScrollUp";
 import { Footer } from "../components";
+import Theme from '../context/theme-provider'
 
 const Orbitron = localFont({
   src: "../fonts/Orbitron/Orbitron-VariableFont_wght.ttf",
@@ -32,14 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${Inter.className}`}>
-        <Nav />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${Inter.className} bg-gray-100`}>
+      <Theme>
+       <Nav />
         {children}
         <ScrollUp />
         <Footer />
-        <Script src="/eruda/eruda.js" strategy="beforeInteractive" />
-        <Script src="/init-eruda.js" strategy="beforeInteractive" />
+      </Theme>
       </body>
     </html>
   );

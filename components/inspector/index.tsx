@@ -8,10 +8,11 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { BsFillSendFill, BsBug } from "react-icons/bs";
 import API from "../api";
-import { validateUsername } from "../../helpers";
+import { validateUsername, dateToReadable } from "../../helpers";
 import { Alert, ProgressBar } from "../ui";
 import Notification from "../../utils/Notification";
 import isValideURL from "../../helpers/isValideURL";
+import { Report } from '../'
 
 const notyf = new Notification(3000);
 
@@ -19,9 +20,10 @@ const Inspector = () => {
   const [loading, setLoading] = useState(false);
   const [repoData, setRepoData] = useState();
   const [service, setService] = useState("github");
-  const [owner, setOwner] = useState("");
-  const [repo, setRepo] = useState("");
+  const [owner, setOwner] = useState();
+  const [repo, setRepo] = useState();
   const [error, setError] = useState();
+  const [reportedDate, setReportedDate] = useState()
   const [invalidInput, setInvalidInput] = useState({
     fullUrl: false,
     owner: false,
@@ -35,12 +37,12 @@ const Inspector = () => {
     setRepoData(null);
     setLoading(true);
     setError(null);
-    if (fullUrlState === false) {
-      if (owner === "") {
+    if (!fullUrlState) {
+      if (!owner) {
         setInvalidInput({ owner: true });
         setLoading(false);
         return notyf.error("Owner username is required!");
-      } else if (repo === "") {
+      } else if (!repo) {
         setInvalidInput({ repo: true });
         setLoading(false);
         return notyf.error("Repository name is required!");
@@ -50,6 +52,7 @@ const Inspector = () => {
           .get(`${API.REPO_INSPECTOR}${service}=${owner}/${repo}`)
           .then((response) => {
             setRepoData(response.data);
+            setReportedDate((new Date()))
             setLoading(false);
           })
           .catch((e) => {
@@ -61,7 +64,7 @@ const Inspector = () => {
           });
       }
     } else {
-      if (fullUrl === "") {
+      if (!fullUrl) {
         setInvalidInput({ fullUrl: true });
         setLoading(false);
         return notyf.error("Full url is required!");
@@ -83,7 +86,7 @@ const Inspector = () => {
 
         if (!isGitHubOrGitLab(fullUrlHost)) {
           setError(
-            "Oops domain is not supported. Note: Only [github and gitlab] are now supported.",
+            `Oops: The domain "${fullUrlHost}" is not supported. Please note that only [github and gitlab] are now supported.`,
           );
           setInvalidInput({ fullUrl: true });
           setLoading(false);
@@ -96,6 +99,7 @@ const Inspector = () => {
           .get(finalFullUrl)
           .then((response) => {
             setRepoData(response.data);
+            setReportedDate((new Date()))
             setLoading(false);
           })
           .catch((e) => {
@@ -110,7 +114,8 @@ const Inspector = () => {
   };
 
   return (
-    <div className="container mx-auto dark:text-gray-100 dark:bg-gray-900 xpt">
+    <>
+    <div className="md:px-20 lg:40 dark:text-gray-100 dark:bg-gray-900 xpt">
       <div className="flex justify-center gap-6 py-3 items-center bg-gray-400">
         <Image
           className="rounded-2xl"
@@ -244,7 +249,7 @@ const Inspector = () => {
               name="name"
               className={`${
                 invalidInput.owner ? "border-red-300" : ""
-              } appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              } appearance-none block w-full dark:bg-gray-100 bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
               id="username"
               type="text"
               placeholder="Owner..."
@@ -268,7 +273,7 @@ const Inspector = () => {
               name="name"
               className={`${
                 invalidInput.repo ? "border-red-300" : ""
-              } appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              } appearance-none block w-full bg-white dark:bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
               id="username"
               type="text"
               placeholder="Repo name..."
@@ -278,7 +283,7 @@ const Inspector = () => {
           <div className={`${fullUrlState ? "mt-8" : ""} col-span-2`}>
             <button
               onClick={handleSubmit}
-              className="flex items-center justify-center gap-2 bg-transparent w-full hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              className="bg-blue-800 text-white flex items-center justify-center gap-2 bg-transparent w-full hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             >
               <span>Inspect now</span>
               <BsBug size={20} />
@@ -289,9 +294,9 @@ const Inspector = () => {
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                   <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                    Result:
+                    Report from {dateToReadable(reportedDate)}
                     <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-                      Have a nice look at your inspection results
+                    Here is what your {service} repository contains.
                     </p>
                   </caption>
                   <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -306,7 +311,7 @@ const Inspector = () => {
                         Files
                       </th>
                       <th scope="col" className="px-6 py-3">
-                        Code of lines
+                        Lines of code
                       </th>
                     </tr>
                   </thead>
@@ -336,8 +341,8 @@ const Inspector = () => {
             </div>
           )}
           <div className="divide-bottom col-span-2"></div>
-          <div className="col-span-2">
-            <h2 className="text-xl mb-6">About Repo Inspector:</h2>
+          <div className="col-span-2 bg-white dark:bg-gray-800 dark:text-gray-100 shadow p-4">
+            <h2 className="text-3xl mb-6">What's Repo Inspector</h2>
             <div className="grid grid-cols-1 gap-6">
               <p>
                 Repo Inspector is an innovative project designed to empower
@@ -390,19 +395,19 @@ const Inspector = () => {
                 process, enhance productivity, and ensure the success of your
                 projects with this invaluable inspection tool.
               </p>
-            </div>
-          </div>
-          <div className="col-span-2">
             <p>
-              Credit: Thanks to{" "}
+              CREDIT: Thanks to{" "}
               <a className="text-blue-700" href="https://codetabs.com">
                 Code tabs
               </a>
             </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  <Report report="contact/page" /> 
+ </>
   );
 };
 

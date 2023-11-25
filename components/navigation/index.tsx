@@ -9,7 +9,7 @@ import Portfolio from "./Portfolio";
 import Others from "./Others";
 import { RiMenu3Fill } from "react-icons/ri";
 import ScrollProgress from "../ui/ScrollProgress";
-
+import ThemeToggle from '../ui/theme-toggle'
 const Exo = localFont({
   src: "../../fonts/Exo_2/Exo2-VariableFont_wght.ttf",
 });
@@ -37,7 +37,9 @@ const Navigation = () => {
           <span className="text-2xl">{`}`}</span>
         </Link>
         <div className="flex md:order-2">
-          <div className="relative hidden md:block">{/*TODO*/}</div>
+          <div className="relative">
+          <ThemeToggle />
+          </div>
 
           <button
             onClick={openNavHandler}

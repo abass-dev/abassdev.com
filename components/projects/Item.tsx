@@ -34,7 +34,7 @@ const Item = ({
   headerLinks,
 }: ItemProps) => {
   return (
-    <div className="max-w-sm dark:text-gray-100 dark:bg-gray-800 mb-8 rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm bg-white dark:text-gray-100 dark:bg-gray-800 mb-8 rounded overflow-hidden shadow">
       <Image
         quality={75}
         className="w-full"

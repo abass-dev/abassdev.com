@@ -24,7 +24,7 @@ const MyStory = () => {
               alt="Who is Abass Dev?"
             />
           </div>
-          <div className="px-6 grid grid-cols-1 gap-4 py-4">
+          <div className="px-6 bg-white dark:bg-gray-800 grid grid-cols-1 gap-4 py-4">
             <h1 className="font-bold text-xl mb-2">Who is Abass Dev?</h1>
             <p className="dark:text-gray-100 text-gray-700 text-base">
               Abass Ben Cheik, who goes by the name Abass Dev, is a talented

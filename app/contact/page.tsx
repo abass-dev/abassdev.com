@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Report, Contact } from "../../components";
+import { Contact } from "../../components";
 
 export const metadata: Metadata = {
   title: "Abass Dev - Contact us",
