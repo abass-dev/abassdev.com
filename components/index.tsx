@@ -7,6 +7,7 @@ import Report from "./report/Report";
 import Copyright from "./copyright/Copyright";
 import Contact from "./contact/Contact";
 import Inspector from "./inspector";
+import CookieConsent from './ui/CookieConsent'
 import FAQ from './faq'
 export {
   Services,
@@ -18,5 +19,6 @@ export {
   Copyright,
   Contact,
   Inspector,
-  FAQ
+  FAQ,
+  CookieConsent
 };

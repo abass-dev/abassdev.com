@@ -52,7 +52,7 @@ const Item = ({
                 className="flex gap-2 bg-gray-200 px-1 rounded text-gray-700 items-center button text-sm"
                 href={headerLinks.github.url}
               >
-                <span>Source</span> {headerLinks.github.icon}
+                <span>Code source</span> {headerLinks.github.icon}
               </a>
             )}
           </div>

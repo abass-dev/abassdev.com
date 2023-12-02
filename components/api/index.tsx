@@ -3,7 +3,7 @@ interface API {
 }
 
 const API = {
-  REPO_INSPECTOR: "https://api.codetabs.com/v1/loc/?",
+  REPO_INSPECTOR: process.env.REACT_APP_REPO_INSPECTOR,
 };
 
 export default API;

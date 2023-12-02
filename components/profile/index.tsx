@@ -13,13 +13,13 @@ const Profile = () => {
   return (
     <section className="bg-white dark:bg-gray-900 dark:text-gray-100  grid md:grid-cols-3 gap-4 px-5 py-5 xpt md:px-20 md:items-center md:text-left">
       <div className="">
-        <Image
+        { /** <Image
           src="/assets/images/profile-pic2.webp"
           width={300}
           height={300}
           alt="Picture of Abass Dev"
           className="rounded-xl w-full"
-        />
+        /> **/ }
       </div>
       <div className="md:col-span-2">
         <h1 className={`${Orbitron.className} text-3xl my-4 text-blue-950 dark:text-gray-100`}>
@@ -47,16 +47,16 @@ const Profile = () => {
           </p>
         </div>
         <div className="flex text-gray-600 dark:text-gray-100 justify-center w-full gap-3 py-4">
-          <a href="https://github.com/abass-dev">
+          <a  aria-label={`Abass Dev github account`} href="https://github.com/abass-dev">
             <BsGithub size={25} />
           </a>
-          <a href="https://twitter.com/abass_dev">
+          <a aria-label={`Abass Dev twitter account`} href="https://twitter.com/abass_dev">
             <BsTwitter size={25} />
           </a>
           <a href="https://m.facebook.com/abassthedev">
             <BsFacebook size={25} />
           </a>
-          <a href="/contact">
+          <a aria-label={`Abass Dev email address`} href="/contact">
             <MdEmail size={25} />
           </a>
         </div>

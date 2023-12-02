@@ -82,7 +82,7 @@ const Projects = () => {
               before: "Checkout",
               after: "on packagist",
             }}
-            techs={["php", "css", "bootstrap"]}
+            techs={["php", "javascript", "css", "bootstrap"]}
             headerLinks={{
               github: {
                 url: "https://github.com/abass-dev/BenOSP-FormBuilder",
@@ -96,14 +96,15 @@ const Projects = () => {
             headerImg="/assets/images/project-portfolio.webp"
             description="This portfolio was developed with NextJs (Typescript). By using NextJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. NextJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques."
             seeMore={{
-              url: "https://github.com/nextjs-abassdev",
+              url: "https://github.com/abass-dev/abassdev.com/",
               text: "code source",
               before: "Checkout the",
               after: "of this website.",
             }}
             techs={[
-              "react",
+              "next.js",
               "typescript",
+              "tailwind",
               "nodejs",
               "php",
               "express",
@@ -112,7 +113,7 @@ const Projects = () => {
             ]}
             headerLinks={{
               github: {
-                url: "https://github.com/abass-dev/nextjs-abassdev",
+                url: "https://github.com/abass-dev/abassdev.com",
                 icon: <BsGithub />,
               },
             }}
@@ -126,6 +127,7 @@ const Projects = () => {
           />
 
           {pathName === "/projects/" ? (
+            <>
             <Item
               name="Byte Teachers (Blog)"
               headerImg="/assets/images/blogimg.webp"
@@ -139,11 +141,27 @@ const Projects = () => {
               techs={["php", "wordpress"]}
               headerLinks={{
                 github: {
-                  url: "https://github.com/abass-dev/nextjs-abassdev",
+                  url: "https://github.com/abass-dev/abassdev.com",
                   icon: <BsGithub />,
                 },
               }}
             />
+            
+            <Item
+              name="Mobile app portfolio"
+              headerImg="/assets/images/mobile-app-portfolio.webp"
+              description="My personal portfolio using React Native (Mobile app)"
+              techs={["React Native"]}
+            />
+            
+            <Item
+              name="Social contribution app"
+              headerImg="/assets/images/social_contribution_app.webp"
+              description="No description for this project."
+              techs={["React Native"]}
+            />
+            
+            </>
           ) : (
             <div className="max-w-sm mb-8">
               <SeeMoreButton text="See more projects..." goTo="/projects" />
@@ -152,7 +170,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-    <Report report="projects/page" />
+   {pathName === "/projects/" && <Report report="projects/page" /> }
     </>
   );
 };

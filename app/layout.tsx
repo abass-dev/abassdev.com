@@ -6,7 +6,7 @@ import Script from "next/script";
 import Navbar from "../components/navigation";
 import localFont from "next/font/local";
 import ScrollUp from "../components/ui/ScrollUp";
-import { Footer } from "../components";
+import { Footer, CookieConsent } from "../components";
 import Theme from '../context/theme-provider'
 
 const Orbitron = localFont({
@@ -40,6 +40,7 @@ export default function RootLayout({
         {children}
         <ScrollUp />
         <Footer />
+        <CookieConsent />
       </Theme>
       </body>
     </html>

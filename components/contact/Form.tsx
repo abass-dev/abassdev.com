@@ -140,7 +140,7 @@ const Form = () => {
       <form onSubmit={onSubmitEmailHandler}>
         <div>
           <label
-            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className={`${invalidInput.name ? 'text-red-800 dark:text-red-800' : 'text-gray-700'} dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
             htmlFor="username"
           >
             Name:{" "}
@@ -160,8 +160,8 @@ const Form = () => {
 
         <div>
           <label
-            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            htmlFor="username"
+            className={`${invalidInput.subject ? 'text-red-800 dark:text-red-800' : 'text-gray-700'} dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
+            htmlFor="subject"
           >
             Subject:{" "}
           </label>
@@ -180,8 +180,8 @@ const Form = () => {
 
         <div>
           <label
-            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            htmlFor="username"
+            className={`${invalidInput.email ? 'text-red-800 dark:text-red-800' : 'text-gray-700'} dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
+            htmlFor="email"
           >
             Email:{" "}
           </label>
@@ -200,8 +200,8 @@ const Form = () => {
 
         <div>
           <label
-            className="dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            htmlFor="username"
+            className={`${invalidInput.message ? 'text-red-800 dark:text-red-800' : 'text-gray-100'} dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
+            htmlFor="message"
           >
             Message:{" "}
           </label>

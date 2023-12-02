@@ -283,7 +283,7 @@ const Inspector = () => {
           <div className={`${fullUrlState ? "mt-8" : ""} col-span-2`}>
             <button
               onClick={handleSubmit}
-              className="bg-blue-800 text-white flex items-center justify-center gap-2 bg-transparent w-full hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              className="bg-blue-800 text-blue-700 flex items-center justify-center gap-2 bg-transparent w-full hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             >
               <span>Inspect now</span>
               <BsBug size={20} />

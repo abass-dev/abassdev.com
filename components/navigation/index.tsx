@@ -127,6 +127,15 @@ const Navigation = () => {
                 Contact
               </Link>
             </li>
+            <li>
+              <a
+                href="https://byteteachers.com"
+                className={`block py-2 pl-3 pr-4 rounded font-bold md:bg-transparent  md:p-0`}
+              >
+                Blog
+              </a>
+            </li>
+            
           </ul>
         </div>
       </div>

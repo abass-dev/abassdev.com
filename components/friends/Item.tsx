@@ -22,7 +22,7 @@ interface ItemProps {
 
 const Item = ({ name, avatar, about, links }: ItemProps) => {
   return (
-    <div className="bg-white dark:bg-gray-800  dark:text-gray-100 shadow-lg flex flex-col p-5 gap-3 items-center justify-center">
+    <div className="bg-white dark:bg-gray-800  dark:text-gray-100 shadow flex flex-col p-5 gap-3 items-center justify-center">
       <Image
         src={avatar}
         alt={name}
@@ -38,23 +38,23 @@ const Item = ({ name, avatar, about, links }: ItemProps) => {
         {links && (
           <>
             {links.website && (
-              <a href={links.website}>
+              <a aria-label={`${name} website`} href={links.website}>
                 <BsGlobeCentralSouthAsia size={25} />
               </a>
             )}
 
             {links.github && (
-              <a href={links.github}>
+              <a aria-label={`${name} github account`} href={links.github}>
                 <BsGithub size={25} />
               </a>
             )}
             {links.x && (
-              <a href={links.x}>
+              <a aria-label={`${name} x account`} href={links.x}>
                 <BsTwitter size={25} />
               </a>
             )}
             {links.facebook && (
-              <a href={links.facebook}>
+              <a aria-label={`${name} facebook account`}  href={links.facebook}>
                 <BsFacebook size={25} />
               </a>
             )}

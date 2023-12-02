@@ -22,16 +22,16 @@ const Footer = () => {
             contact details in your message.
           </p>
           <div className="flex gap-3 pt-8 justify-center items-center">
-            <a href="https://github.com/abass-dev">
+            <a aria-label='Github account' href="https://github.com/abass-dev">
               <BsGithub size={25} />
             </a>
-            <a href="https://twitter.com/abass_dev">
+            <a aria-label='Twitter account' href="https://twitter.com/abass_dev">
               <BsTwitter size={25} />
             </a>
-            <a href="https://m.facebook.com/abassthedev">
+            <a aria-label='Facebook account' href="https://m.facebook.com/abassthedev">
               <BsFacebook size={25} />
             </a>
-            <a href="/contact">
+            <a aria-label='Email address' href="/contact">
               <MdEmail size={25} />
             </a>
           </div>
