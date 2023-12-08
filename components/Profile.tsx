@@ -6,20 +6,20 @@ import Link from "next/link";
 import localFont from "next/font/local";
 
 const Orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
+  src: "../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
 const Profile = () => {
   return (
     <section className="bg-white dark:bg-gray-900 dark:text-gray-100  grid md:grid-cols-3 gap-4 px-5 py-5 xpt md:px-20 md:items-center md:text-left">
       <div className="">
-        { /** <Image
+        <Image
           src="/assets/images/profile-pic2.webp"
           width={300}
           height={300}
           alt="Picture of Abass Dev"
           className="rounded-xl w-full"
-        /> **/ }
+        /> 
       </div>
       <div className="md:col-span-2">
         <h1 className={`${Orbitron.className} text-3xl my-4 text-blue-950 dark:text-gray-100`}>

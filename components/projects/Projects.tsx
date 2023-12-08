@@ -15,7 +15,7 @@ const Projects = () => {
       id="projects"
       className={`${
         pathName === "/projects/" ? "xpt" : "py-8"
-      } px-5 dark:bg-gray-900 flex items-center justify-center`}
+      } dark:bg-gray-900 flex items-center justify-center`}
     >
       <div>
         <h1 className="dark:text-gray-100 text-3xl pb-8 text-center">Notable projects</h1>

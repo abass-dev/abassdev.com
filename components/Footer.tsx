@@ -1,5 +1,5 @@
 "use client";
-import ContactForm from "../contact/Form";
+import ContactForm from "./contact/Form";
 import { BsGithub, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 

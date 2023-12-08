@@ -6,7 +6,7 @@ import Item from "./Item";
 
 const Services = () => {
   return (
-    <div className="flex px-5 py-8 flex-col md:px-20 justify-center">
+    <div id="services" className="flex px-5 py-8 flex-col justify-center">
       <h1 className="text-3xl pb-8 text-center">Services</h1>
       <div className="grid w-full md:grid-cols-2 gap-8">
         <Item

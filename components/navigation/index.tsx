@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
-import Portfolio from "./Portfolio";
 import Others from "./Others";
 import { RiMenu3Fill } from "react-icons/ri";
 import ScrollProgress from "../ui/ScrollProgress";
@@ -70,9 +69,9 @@ const Navigation = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
@@ -87,6 +86,7 @@ const Navigation = () => {
           <ul
             className={`${Exo.className} uppercase backdrop-blur bg-white/10 flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700`}
           >
+
             <li>
               <Link
                 onClick={() => setIsOpen(!isOpen)}
@@ -100,6 +100,7 @@ const Navigation = () => {
                 Projects
               </Link>
             </li>
+      
             <li>
               <Link
                 onClick={() => setIsOpen(!isOpen)}
@@ -111,6 +112,32 @@ const Navigation = () => {
                 } block py-2 pl-3 pr-4 font-bold rounded md:bg-transparent  md:p-0`}
               >
                 My story
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setIsOpen(!isOpen)}
+                href="/#services"
+                className={`${
+                  pathName === "/services/"
+                    ? "md:text-blue-700 bg-blue-700 text-white md:dark:text-blue-500"
+                    : ""
+                } block py-2 pl-3 pr-4 font-bold rounded md:bg-transparent  md:p-0`}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setIsOpen(!isOpen)}
+                href="/snippets"
+                className={`${
+                  pathName === "/snippets/"
+                    ? "md:text-blue-700 bg-blue-700 text-white md:dark:text-blue-500"
+                    : ""
+                } block py-2 pl-3 pr-4 font-bold rounded md:bg-transparent  md:p-0`}
+              >
+               Snippets
               </Link>
             </li>
             <Others />

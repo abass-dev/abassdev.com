@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { hasCookie, setCookie } from "cookies-next";
 import Link  from 'next/link'
 
-const CookieConsent = (props) => {
+const CookieConsent = () => {
   const [showConsent, setShowConsent] = useState(true);
 
   useEffect(() => {
