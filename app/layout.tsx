@@ -19,12 +19,12 @@ const Inter = localFont({
 export const metadata: Metadata = {
   title: "Abass Dev | Full-stack developer | Personal portfolio",
   description: "Abass Dev personal portfolio",
-  /*  icons: {
+    icons: {
     icon: '/favicon.ico',
     shortcut: '/android-chrome-512x512.png',
     apple: '/apple-touch-icon.png'
 }
-*/
+
 };
 
 export default function RootLayout({

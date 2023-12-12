@@ -1,7 +1,5 @@
 const FAQ = () => {
-  return (
-      <div className='text-3xl'>FAQ</div>
-    )
-}
+  return <div></div>;
+};
 
-export default FAQ
+export default FAQ;
