@@ -4,23 +4,27 @@ import { BsGithub } from "react-icons/bs";
 import { SeeMoreButton } from "../ui";
 import { usePathname } from "next/navigation";
 import Item from "./Item";
-import { Report } from '../'
+import { Report } from "../";
+import localFont from "next/font/local";
+const Orbitron = localFont({
+  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
+});
 
 const Projects = () => {
   const pathName = usePathname();
 
   return (
-    <>
-    <section
-      id="projects"
-      className={`${
-        pathName === "/projects/" ? "xpt" : "py-8"
-      } dark:bg-gray-900 flex items-center justify-center`}
-    >
-      <div>
-        <h1 className="dark:text-gray-100 text-3xl pb-8 text-center">Notable projects</h1>
-        <div className="grid mx-auto gap-8 md:grid-cols-2">
-
+    <div className=" dark:bg-gray-900">
+      <section
+        id="projects"
+        className={`container mx-auto pt-40 flex items-center flex-col`}
+      >
+        <h1
+          className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-20 my-4 text-blue-950`}
+        >
+          Notable Projects
+        </h1>
+        <div className="grid gap-20 md:grid-cols-2">
           <Item
             name="Repo Inspector"
             headerImg="/assets/images/repo-inspector.webp"
@@ -128,50 +132,48 @@ const Projects = () => {
 
           {pathName === "/projects/" ? (
             <>
-            <Item
-              name="Byte Teachers (Blog)"
-              headerImg="/assets/images/blogimg.webp"
-              description="ByteTeachers.com is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
-              seeMore={{
-                url: "https://byteteachers.com",
-                text: "Byte Teachers",
-                before: "Visit",
-                after: "now.",
-              }}
-              techs={["php", "wordpress"]}
-              headerLinks={{
-                github: {
-                  url: "https://github.com/abass-dev/abassdev.com",
-                  icon: <BsGithub />,
-                },
-              }}
-            />
-            
-            <Item
-              name="Mobile app portfolio"
-              headerImg="/assets/images/mobile-app-portfolio.webp"
-              description="My personal portfolio using React Native (Mobile app)"
-              techs={["React Native"]}
-            />
-            
-            <Item
-              name="Social contribution app"
-              headerImg="/assets/images/social_contribution_app.webp"
-              description="No description for this project."
-              techs={["React Native"]}
-            />
-            
+              <Item
+                name="Byte Teachers (Blog)"
+                headerImg="/assets/images/blogimg.webp"
+                description="ByteTeachers.com is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
+                seeMore={{
+                  url: "https://byteteachers.com",
+                  text: "Byte Teachers",
+                  before: "Visit",
+                  after: "now.",
+                }}
+                techs={["php", "wordpress"]}
+                headerLinks={{
+                  github: {
+                    url: "https://github.com/abass-dev/abassdev.com",
+                    icon: <BsGithub />,
+                  },
+                }}
+              />
+
+              <Item
+                name="Mobile app portfolio"
+                headerImg="/assets/images/mobile-app-portfolio.webp"
+                description="My personal portfolio using React Native (Mobile app)"
+                techs={["React Native"]}
+              />
+
+              <Item
+                name="Social contribution app"
+                headerImg="/assets/images/social_contribution_app.webp"
+                description="No description for this project."
+                techs={["React Native"]}
+              />
             </>
           ) : (
-            <div className="max-w-sm mb-8">
+            <div className="w-full flex justify-center items-center">
               <SeeMoreButton text="See more projects..." goTo="/projects" />
             </div>
           )}
         </div>
-      </div>
-    </section>
-   {pathName === "/projects/" && <Report report="projects/page" /> }
-    </>
+      </section>
+      {pathName === "/projects/" && <Report report="projects/page" />}
+    </div>
   );
 };
 

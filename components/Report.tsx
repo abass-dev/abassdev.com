@@ -10,11 +10,12 @@ const Report = ({
   ext = ".tsx",
 }: ReportProps) => {
   return (
-    <div className="bg-white p-5 grid  md:px-20 py-8 dark:text-gray-100 dark:bg-gray-800 pt-8">
-        <h2 className="text-3xl bold pb-5">
+    <div className="dark:bg-gray-800  px-10 md:px-30  text-black dark:text-white pt-8 flex items-start flex-col justify-start">
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl bold pb-5">
           Anything wrong with this page?
         </h2>
-        <ul className="list-disc m-4 gap-2 grid">
+        <ul className="list-disc m-4 gap-2 grid text-xl">
           <li>
             <a
               className="text-blue-700"
@@ -57,6 +58,7 @@ const Report = ({
           </li>
         </ul>
       </div>
+    </div>
   );
 };
 export default Report;

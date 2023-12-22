@@ -3,8 +3,10 @@
 const Copyright = () => {
   return (
     <div className="bg-gray-200 dark:bg-gray-900 xpt py-8 md:px-20">
-      <div className="shadow bg-gray-200 dark:bg-gray-800 grid grid-cols-1 gap-8 m-5 p-5">
-      <h1 className="text-center text-3xl mb-8">Copyright</h1>
+      <div className="shadow-lg container mx-auto dark:shadow-slate-900  bg-white dark:bg-gray-800 grid grid-cols-1 gap-8 m-5 p-5">
+        <h1 className="dark:text-white text-3xl md:text-5xl pb-8 text-center">
+          Copyright
+        </h1>
         <h2 className="text-xl">© 2023 Abass Dev. All rights reserved.</h2>
         <p>
           The materials and content displayed on this website, including but not

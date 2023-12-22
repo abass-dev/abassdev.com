@@ -1,13 +1,13 @@
 import "./globals.css";
 import Head from "next/head";
-import Nav from "../components/navigation";
+import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
 import Script from "next/script";
-import Navbar from "../components/navigation";
+import Navbar from "../components/navigation/Navigation";
 import localFont from "next/font/local";
 import ScrollUp from "../components/ui/ScrollUp";
 import { Footer, CookieConsent } from "../components";
-import Theme from '../context/theme-provider'
+import Theme from "../context/theme-provider";
 
 const Orbitron = localFont({
   src: "../fonts/Orbitron/Orbitron-VariableFont_wght.ttf",
@@ -19,12 +19,11 @@ const Inter = localFont({
 export const metadata: Metadata = {
   title: "Abass Dev | Full-stack developer | Personal portfolio",
   description: "Abass Dev personal portfolio",
-    icons: {
-    icon: '/favicon.ico',
-    shortcut: '/android-chrome-512x512.png',
-    apple: '/apple-touch-icon.png'
-}
-
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/android-chrome-512x512.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -35,13 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${Inter.className} bg-gray-100`}>
-      <Theme>
-       <Nav />
-        {children}
-        <ScrollUp />
-        <Footer />
-        <CookieConsent />
-      </Theme>
+        <Theme>
+          <Nav />
+          {children}
+          <ScrollUp />
+          <Footer />
+          <CookieConsent />
+        </Theme>
       </body>
     </html>
   );

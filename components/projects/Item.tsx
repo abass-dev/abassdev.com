@@ -34,10 +34,10 @@ const Item = ({
   headerLinks,
 }: ItemProps) => {
   return (
-    <div className="max-w-md bg-white dark:text-gray-100 dark:bg-gray-800 mb-8 rounded overflow-hidden shadow">
+    <div className="max-w-lg bg-white dark:text-gray-100 dark:bg-gray-800 mb-8 overflow-hidden rounded-xl shadow-lg dark:shadow-slate-900">
       <Image
         quality={75}
-        className="w-full"
+        className="w-full hover:scale-110"
         src={headerImg}
         width={640}
         height={360}
@@ -57,7 +57,7 @@ const Item = ({
             )}
           </div>
         )}
-        <p className="text-gray-700 dark:text-gray-100 text-base">{description}</p>
+        <p className="text-black dark:text-gray-100 text-lg">{description}</p>
         <br />
         {seeMore && (
           <p>

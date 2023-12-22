@@ -1174,7 +1174,7 @@
           f = function () {},
           s = [],
           p = c("Reflect", "construct"),
-          v = /^\s*(?:class|function)\b/,
+          v = /^\s*(?:className|function)\b/,
           l = e(v.exec),
           h = !v.exec(f),
           d = function (t) {
@@ -2002,7 +2002,7 @@
             }
             return !n && (f || s) && !y;
           });
-        t.exports = { CONSTRUCTOR: g, REJECTION_EVENT: y, SUBCLASSING: d };
+        t.exports = { CONSTRUCTOR: g, REJECTION_EVENT: y, SUBclassNameING: d };
       },
       2492: function (t, n, r) {
         var e = r(7854);
@@ -2702,7 +2702,7 @@
           k = "Promise",
           R = P.CONSTRUCTOR,
           I = P.REJECTION_EVENT,
-          L = P.SUBCLASSING,
+          L = P.SUBclassNameING,
           C = E.getterFor(k),
           M = E.set,
           _ = T && T.prototype,

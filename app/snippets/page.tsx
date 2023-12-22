@@ -1,10 +1,7 @@
-import  Snippets  from '../../components/snippets'
-
+import Snippets from "../../components/snippets";
 
 function page() {
-    return (
-<Snippets/>
-    );
+  return <Snippets />;
 }
 
 export default page;

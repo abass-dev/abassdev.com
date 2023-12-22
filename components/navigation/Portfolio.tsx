@@ -7,10 +7,10 @@ const Exo = localFont({
 });
 
 const Portfolio = () => {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openNavHandler = () => {
-    setisOpen(!isOpen);
+    setIsOpen(!isOpen);
   };
 
   return (

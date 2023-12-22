@@ -10,9 +10,7 @@ const MyStory = () => {
   return (
     <>
       <div
-        className={`${
-          pathName === "/my-story/" ? "xpt" : "py-8"
-        } px-5 flex items-center dark:text-gray-100 dark:bg-gray-900 justify-center`}
+        className={`pt-40 px-5 flex items-center dark:text-gray-100 dark:bg-gray-900 justify-center`}
       >
         <div className="max-w-3xl mx-auto rounded overflow-hidden shadow-lg">
           <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
