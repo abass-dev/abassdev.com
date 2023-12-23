@@ -1,42 +1,90 @@
 "use client";
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { MdOutlineDashboard } from "react-icons/md";
-import { RiSettings4Line } from "react-icons/ri";
-import { TbReportAnalytics } from "react-icons/tb";
-import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
-import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { MdFolder } from "react-icons/md";
+import { FiMessageSquare } from "react-icons/fi";
 import Link from "next/link";
+import ThemeToggle from "../ui/theme-toggle";
+import Image from "next/image";
+import {
+  BsBugFill,
+  BsCodeSlash,
+  BsGlobeEuropeAfrica,
+  BsQuestionCircleFill,
+} from "react-icons/bs";
+import { useTheme } from "next-themes";
 
 const SideBar = () => {
+  const { theme, setTheme } = useTheme();
+  const [ThemeText, setThemeText] = useState("Light");
+
+  useEffect(() => {
+    setThemeText(theme === "dark" ? "Light" : "Dark");
+  }, [theme]);
+
   const menus = [
-    { name: "dashboard", link: "/", icon: MdOutlineDashboard },
-    { name: "user", link: "/", icon: AiOutlineUser },
-    { name: "messages", link: "/", icon: FiMessageSquare },
-    { name: "analytics", link: "/", icon: TbReportAnalytics, margin: true },
-    { name: "File Manager", link: "/", icon: FiFolder },
-    { name: "Cart", link: "/", icon: FiShoppingCart },
-    { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
-    { name: "Setting", link: "/", icon: RiSettings4Line },
+    { name: "Projects", link: "/projects", icon: MdFolder },
+    { name: "Repo Inspector", link: "/repo-inspector", icon: BsBugFill },
+    { name: "Snippets", link: "/snippets", icon: BsCodeSlash },
+    {
+      name: "My Story",
+      link: "/my-story",
+      icon: BsQuestionCircleFill,
+      margin: true,
+    },
+    {
+      name: "Blog",
+      link: "https:byteteachers.com",
+      icon: BsGlobeEuropeAfrica,
+    },
+    {
+      name: "Contact Me",
+      link: "/contact",
+      icon: FiMessageSquare,
+    },
+    {
+      name: ThemeText,
+      link: "javasript:void(0)",
+      icon: ThemeToggle,
+      margin: true,
+    },
   ];
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
-    <section className="flex fixed gap-6">
+    <section className="flex fixed z-50 gap-6 min-h-screen">
       <div
-        className={`bg-[#0e0e0e]  min-h-screen ${
+        className={`bg-gray-950 dark:bg-transparent backdrop-blur ${
           open ? "w-72" : "w-16"
-        } duration-500 text-gray-100 px-4`}
+        } duration-500  text-gray-100 px-4`}
       >
-        <div className="py-3 flex justify-end">
-          <HiMenuAlt3
-            size={26}
-            className="cursor-pointer"
-            onClick={() => setOpen(!open)}
-          />
+        <div className="flex min-w-full justify-between">
+          <div className={`${open ? "block py-3" : "w-0"} duration-500`}>
+            <Link href="/" className="flex items-center">
+              {open && <span className="text-2xl">{`{`}</span>}
+              <Image
+                className="rounded-xl"
+                width={25}
+                height={25}
+                src="/assets/images/logo.webp"
+                alt="Abass Dev Logo"
+              />
+              {open && <span className="text-2xl">{`}`}</span>}
+            </Link>
+          </div>
+
+          <div className="py-3">
+            <HiMenuAlt3
+              size={26}
+              className="cursor-pointer"
+              onClick={() => setOpen(!open)}
+            />
+          </div>
         </div>
         <div className="mt-4 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => (
             <Link
+              onClick={() => open && setOpen(false)}
               href={menu?.link}
               key={i}
               className={` ${

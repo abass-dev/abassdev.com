@@ -10,7 +10,7 @@ const Report = ({
   ext = ".tsx",
 }: ReportProps) => {
   return (
-    <div className="dark:bg-gray-800  px-10 md:px-30  text-black dark:text-white pt-8 flex items-start flex-col justify-start">
+    <div className="dark:bg-gray-800  px-10 md:px-40  text-black dark:text-white pt-8 flex items-start flex-col justify-start">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl bold pb-5">
           Anything wrong with this page?

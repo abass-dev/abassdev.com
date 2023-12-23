@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="dark:bg-gray-900 text-black dark:text-white pt-32 flex items-center flex-col justify-center"
+      className="dark:bg-gray-900 text-black px-10 dark:text-white pt-32 flex items-center flex-col justify-center"
     >
       <div className="container mx-auto">
         <h1

@@ -11,8 +11,8 @@ const Orbitron = localFont({
 
 const Profile = () => {
   return (
-    <div className=" bg-white flex justify-center items-center min-h-screen  shadow-lg dark:bg-gray-800">
-      <section className="container mx-auto text-xl pt-32  grid md:grid-cols-3 gap-8 py-10 px-10 md:px-20 md:items-center md:text-left">
+    <div className=" bg-white flex justify-center items-center min-h-screen  shadow-lg dark:bg-gray-900">
+      <section className="container mx-auto text-xl pt-32 lg:pt-10  grid md:grid-cols-3 gap-8 py-10 px-10 md:px-20 md:items-center md:text-left">
         <div className="flex justify-center">
           <Image
             src="/assets/images/profile-picture.webp"

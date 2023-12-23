@@ -50,7 +50,7 @@ const MainNav = () => {
   return (
     <nav
       className={`${
-        isOpen && "h-64 md:h-auto overflow-auto link-anime"
+        isOpen && "overflow-auto link-anime"
       } backdrop-blur md:bg-white/10 z-50 bg-white/30 shadow-md border-gray-200 fixed w-full dark:bg-gray-900`}
     >
       <div className="xl:container xl:my-auto transition-all ease-in-out duration-300 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -156,8 +156,20 @@ const MainNav = () => {
                 Repo Inspector
               </Link>
             </li>
-            <Snippets />
-            <Others />
+            <li>
+              <Link
+                onClick={() => setIsOpen(!isOpen)}
+                href="/snippets"
+                className={`${
+                  pathName === "/snippet/"
+                    ? "md:text-blue-700 bg-blue-700 text-white md:dark:text-blue-500"
+                    : ""
+                } md:hover:text-blue-500 a-link block py-2 pl-3 pr-4 font-bold rounded md:bg-transparent  md:p-0`}
+              >
+                Snippets
+              </Link>
+            </li>
+
             <li>
               <Link
                 onClick={() => setIsOpen(!isOpen)}

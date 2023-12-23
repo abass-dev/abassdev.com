@@ -6,7 +6,7 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex flex-col justify-center ml-3">
+    <div className="flex flex-col justify-center">
       <button
         onClick={() => {
           if (theme === "dark") {
@@ -14,7 +14,7 @@ export default function ThemeToggle() {
           }
           return setTheme("dark");
         }}
-        className="relative cursor-pointer p-2"
+        className="relative cursor-pointer pt-3 pr-3 lg:pt-0 lg:pr-0 pl-1"
       >
         <svg
           className="dark:hidden"
