@@ -11,6 +11,7 @@ import {
   BsBugFill,
   BsCodeSlash,
   BsGlobeEuropeAfrica,
+  BsPass,
   BsQuestionCircleFill,
 } from "react-icons/bs";
 import { useTheme } from "next-themes";
@@ -30,7 +31,7 @@ const SideBar = () => {
     {
       name: "My Story",
       link: "/my-story",
-      icon: BsQuestionCircleFill,
+      icon: BsPass,
       margin: true,
     },
     {
@@ -54,9 +55,9 @@ const SideBar = () => {
   return (
     <section className="flex fixed z-50 gap-6 min-h-screen">
       <div
-        className={`bg-gray-950 dark:bg-transparent backdrop-blur ${
+        className={`bg-transparent backdrop-blur ${
           open ? "w-72" : "w-16"
-        } duration-500  text-gray-100 px-4`}
+        } duration-500 text-gray-800 dark:text-gray-100 px-4`}
       >
         <div className="flex min-w-full justify-between">
           <div className={`${open ? "block py-3" : "w-0"} duration-500`}>
@@ -89,7 +90,7 @@ const SideBar = () => {
               key={i}
               className={` ${
                 menu?.margin && "mt-5"
-              } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
+              } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:text-gray-100 hover:bg-gray-800 rounded-md`}
             >
               <div>{React.createElement(menu?.icon, { size: "20" })}</div>
               <h2

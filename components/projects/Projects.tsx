@@ -17,7 +17,7 @@ const Projects = () => {
     <div className=" dark:bg-gray-900">
       <section
         id="projects"
-        className={`container mx-auto p-10  pt-40 flex items-center flex-col`}
+        className={`container mx-auto p-10  pt-40 lg:pt-20 flex items-center flex-col`}
       >
         <h1
           className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-20 my-4 text-blue-950`}

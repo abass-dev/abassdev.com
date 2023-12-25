@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Script from "next/script";
 import { BsGithub, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
@@ -11,8 +10,8 @@ const Orbitron = localFont({
 
 const Profile = () => {
   return (
-    <div className=" bg-white flex justify-center items-center min-h-screen  shadow-lg dark:bg-gray-900">
-      <section className="container mx-auto text-xl pt-32 lg:pt-10  grid md:grid-cols-3 gap-8 py-10 px-10 md:px-20 md:items-center md:text-left">
+    <div className=" bg-white min-h-screen max-h-screen pt-32 lg:pt-0 flex justify-center shadow-lg dark:bg-gray-900">
+      <section className="container mx-auto text-xl grid md:grid-cols-3 gap-8 px-10  md:items-center md:text-left">
         <div className="flex justify-center">
           <Image
             src="/assets/images/profile-picture.webp"
