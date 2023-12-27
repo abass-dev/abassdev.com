@@ -3,13 +3,14 @@
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
 
   return (
     <div className="flex flex-col justify-center">
       <button
         onClick={() => {
-          if (theme === "dark") {
+          const currentTheme = theme === "system" ? systemTheme : theme;
+          if (currentTheme === "dark") {
             return setTheme("light");
           }
           return setTheme("dark");

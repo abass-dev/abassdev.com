@@ -20,11 +20,11 @@ const Projects = () => {
         className={`container mx-auto p-10  pt-40 lg:pt-20 flex items-center flex-col`}
       >
         <h1
-          className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-20 my-4 text-blue-950`}
+          className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
         >
           Notable Projects
         </h1>
-        <div className="grid gap-20 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           <Item
             name="Repo Inspector"
             headerImg="/assets/images/repo-inspector.webp"
@@ -166,7 +166,7 @@ const Projects = () => {
               />
             </>
           ) : (
-            <div className="w-full flex justify-center items-center">
+            <div className="w-full flex justify-start">
               <SeeMoreButton text="See more projects..." goTo="/projects" />
             </div>
           )}

@@ -14,13 +14,13 @@ const Orbitron = localFont({
 
 const Friends = () => {
   return (
-    <div className="`dark:bg-gray-900  py-20 flex items-center flex-col justify-center">
+    <div className="`dark:bg-gray-900 w-5/6 mx-auto pt-20">
       <h1
-        className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-20 my-4 text-blue-950`}
+        className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
       >
         Friends
       </h1>
-      <div className="grid mx-auto px-10 md:px-36 md:grid-cols-3">
+      <div className="grid px-10 md:grid-cols-3">
         <Item
           name="Benaiah Alumona"
           avatar="https://avatars.githubusercontent.com/u/65370456?v=4"

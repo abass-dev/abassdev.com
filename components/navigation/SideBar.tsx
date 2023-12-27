@@ -64,6 +64,9 @@ const SideBar = () => {
             <Link href="/" className="flex items-center">
               {open && <span className="text-2xl">{`{`}</span>}
               <Image
+                onClick={() => {
+                  open && setOpen(false);
+                }}
                 className="rounded-xl"
                 width={25}
                 height={25}

@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Contact } from "../../components";
 
 export const metadata: Metadata = {
-  title: "Abass Dev - Contact us",
-  description: "Contact us | Abass Dev",
+  title: "Contact us - Abass Dev",
+  description: "Web and mobile app developer at self-employed. | Abass Dev",
 };
 
 const Page = () => {

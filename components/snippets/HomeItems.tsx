@@ -1,4 +1,8 @@
 import Link from "next/link";
+import localFont from "next/font/local";
+const EduNSWACTFoundation = localFont({
+  src: "../../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
+});
 
 interface HomeItemsProps {
   title: string;
@@ -16,7 +20,9 @@ const HomeItems = ({ title, bgImg, desk, learnMore }: HomeItemsProps) => {
       className={`hover:scale-110 ${bgImg} block max-w-lg rounded-lg bg-white bg-cover  shadow-lg dark:bg-neutral-700`}
     >
       <div className="backdrop-blur flex justify-center items-start flex-col rounded-lg m-6 p-6">
-        <h5 className="mb-2 text-4xl font-medium leading-tight text-gray-100">
+        <h5
+          className={`${EduNSWACTFoundation.className} mb-2 text-4xl font-medium leading-tight text-gray-100`}
+        >
           {title}
         </h5>
         <p className="mb-4 text-base text-neutral-200">{desk}</p>

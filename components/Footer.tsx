@@ -5,7 +5,10 @@ import { MdEmail } from "react-icons/md";
 import buildInfo from "../build-info.json";
 import packageJson from "../package.json";
 import { usePathname } from "next/navigation";
-
+import localFont from "next/font/local";
+const EduNSWACTFoundation = localFont({
+  src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
+});
 const appVersion = packageJson.version;
 
 const Footer = () => {
@@ -21,11 +24,13 @@ const Footer = () => {
         )}
 
         <div
-          className={`col-span-4 text-center ${
+          className={`col-span-4 text-center text-gray-300 ${
             pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
           }`}
         >
-          <h2 className="font-bold mb-3 text-3xl">What's next?</h2>
+          <h2 className={`${EduNSWACTFoundation.className} mb-3 text-3xl`}>
+            What's next?
+          </h2>
           <h3 className="text-2xl mb-3">Let's connect</h3>
           <p className="first-letter:text-5xl">
             If you have any suggestion, feedback, opportunity, or are interested
@@ -50,21 +55,39 @@ const Footer = () => {
             >
               <BsFacebook size={25} />
             </a>
-            <a aria-label="Email address" href="/contact">
+            <a aria-label="Email address" href="/contact/">
               <MdEmail size={25} />
             </a>
           </div>
-          <div className="py-3 text-blue-700">
-            <h3 className="py-3">Important Links</h3>
-            <ul>
-              <li>
-                <a href="/my-story">My story</a>
+          <div className="py-3 mt-5">
+            <h3 className="py-3 text-3xl">Other Links</h3>
+            <ul className="list-disc inline-block">
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/privacy-policy/">Privacy Policy</a>
+              </li>
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/copyright/">Copyright</a>
+              </li>
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/snippets/">Snippets</a>
+              </li>
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/repo-inspector/">Repo Inspector</a>
+              </li>
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/proverbs/">Proverbs</a>
+              </li>
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/my-story/">About us</a>
+              </li>
+              <li className="mb-2 hover:text-gray-500">
+                <a href="/contact/">Contact us</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="text-center col-span-4">
+        <div className="text-center text-gray-300 col-span-4">
           <p className="mb-2">
             Copyright © 2021 - 2023 Abass Dev. All rights reserved.
           </p>

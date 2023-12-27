@@ -4,15 +4,25 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { birthday } from "../../helpers";
 import { Report } from "../";
+import localFont from "next/font/local";
+
+const Orbitron = localFont({
+  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
+});
 
 const MyStory = () => {
   const pathName = usePathname();
   return (
-    <>
+    <div className=" dark:text-gray-100 dark:bg-gray-900">
       <div
-        className={`pt-40 px-5 flex items-center dark:text-gray-100 dark:bg-gray-900 justify-center`}
+        className={`pt-40 lg:pt-20 mb-10 px-5 flex items-center justify-center`}
       >
-        <div className="max-w-3xl mx-auto rounded overflow-hidden shadow-lg">
+        <div className="w-4/6 rounded overflow-hidden shadow-lg">
+          <h1
+            className={`${Orbitron.className} dark:text-white text-3xl md:text-5xl pb-10 my-4 text-blue-950`}
+          >
+            About Me
+          </h1>
           <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
             <Image
               className="w-full"
@@ -74,7 +84,7 @@ const MyStory = () => {
         </div>
       </div>
       <Report report="my-story/page" />
-    </>
+    </div>
   );
 };
 

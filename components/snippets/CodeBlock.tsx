@@ -23,7 +23,7 @@ const CodeBlock = ({ code, snippetType }) => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <SyntaxHighlighter
         language={snippetType}
         showLineNumbers
@@ -41,8 +41,8 @@ const CodeBlock = ({ code, snippetType }) => {
         onClick={handleCopy}
         style={{
           position: "absolute",
-          top: "8px", // adjust the top position as needed
-          right: "8px", // adjust the right position as needed
+          top: "0", // adjust the top position as needed
+          right: "0", // adjust the right position as needed
           border: "none",
         }}
       >

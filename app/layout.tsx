@@ -1,17 +1,11 @@
 import "./globals.css";
-import Head from "next/head";
 import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
-import Script from "next/script";
-import Navbar from "../components/navigation/Navigation";
 import localFont from "next/font/local";
 import ScrollUp from "../components/ui/ScrollUp";
 import { Footer, CookieConsent } from "../components";
 import Theme from "../context/theme-provider";
 
-const Orbitron = localFont({
-  src: "../fonts/Orbitron/Orbitron-VariableFont_wght.ttf",
-});
 const Inter = localFont({
   src: "../fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
 });

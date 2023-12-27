@@ -1,22 +1,13 @@
 "use client";
 import BlogSection from "@/components/blog/BlogSection";
-import {
-  Profile,
-  Report,
-  Friends,
-  Projects,
-  Services,
-  FAQ,
-} from "../components";
-import { useEffect, useState } from "react";
+import { Profile, Skills, Report, Friends, Projects, FAQ } from "../components";
 
-export default function Home() {
-  useEffect(() => {}, []);
+export default function page() {
   return (
     <div className=" dark:bg-gray-900 dark:text-black text-lg">
       <Profile />
       <Projects />
-      <Services />
+      <Skills />
       <BlogSection />
       <Friends />
       <FAQ />

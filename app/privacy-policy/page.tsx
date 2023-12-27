@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Abass Dev - Privacy policy",
+  title: "Privacy policy - Abass Dev",
   description: "Privacy policy | Abass Dev",
 };
 
 const PrivacyPolicy = () => {
   return (
     <div className="dark:text-white dark:bg-gray-900">
-      <div className="container mx-auto grid grid-cols-1 px-5 md:px-20 xpt">
+      <div className="container mx-auto grid grid-cols-1 px-5 md:px-20 pt-32 lg:pt-20">
         <h1 className="dark:text-white text-3xl md:text-5xl pb-8 text-center">
           Privacy Policy
         </h1>

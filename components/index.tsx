@@ -1,5 +1,5 @@
 import Profile from "./Profile";
-import Services from "./services/Services";
+import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
 import Friends from "./friends/Friends";
 import Footer from "./Footer";
@@ -10,7 +10,7 @@ import Inspector from "./inspector/RepoInspector";
 import CookieConsent from "./ui/CookieConsent";
 import FAQ from "./faq";
 export {
-  Services,
+  Skills,
   Profile,
   Projects,
   Friends,

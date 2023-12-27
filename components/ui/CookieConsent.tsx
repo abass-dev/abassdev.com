@@ -21,22 +21,21 @@ const CookieConsent = () => {
   }
 
   return (
-    <div className="fixed inset-0 bg-slate-700 bg-opacity-70">
-      <div className="fixed bottom-0 left-0 right-0 flex col-row items-center justify-between px-4 py-8 bg-gray-100">
-        <span className="text-base dark:text-gray-900 mr-16">
+    <div className="fixed z-50 text-gray-800 bg-gray-300 bottom-0 left-0 right-0">
+      <div className="flex justify-between items-center p-5">
+        <p className="text-base">
           This website use cookies to improve your browsing experience and
-          analyze site traffic. See our{" "}
-          <Link className="text-blue-700" href="/privacy-policy">
-            {" "}
-            privacy policy
+          analyze site traffic.{" "}
+          <Link href="/privacy-policy" className="text-blue-600">
+            See our privacy policy
           </Link>{" "}
-          for more details.
-        </span>
+          for details.
+        </p>
         <button
-          className="bg-green-500 py-2 px-8 rounded text-white"
-          onClick={() => acceptCookie()}
+          onClick={acceptCookie}
+          className="bg-blue-400 hover:bg-blue-300 p-1 text-gray-200 rounded-lg"
         >
-          Accept
+          Okay
         </button>
       </div>
     </div>

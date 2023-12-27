@@ -1,3 +1,7 @@
+import localFont from "next/font/local";
+const EduNSWACTFoundation = localFont({
+  src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
+});
 interface ReportProps {
   report?: string;
   dir?: string;
@@ -10,12 +14,14 @@ const Report = ({
   ext = ".tsx",
 }: ReportProps) => {
   return (
-    <div className="dark:bg-gray-800  px-10 md:px-40  text-black dark:text-white pt-8 flex items-start flex-col justify-start">
-      <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl bold pb-5">
+    <div className="flex justify-center">
+      <div className="bg-white  shadow-lg dark:bg-gray-800 w-5/6 p-10 mb-10 text-black dark:text-white pt-8 flex items-start flex-col justify-start">
+        <h2
+          className={`${EduNSWACTFoundation.className} text-gray-700  dark:text-gray-300 text-3xl md:text-4xl pb-10`}
+        >
           Anything wrong with this page?
         </h2>
-        <ul className="list-disc m-4 gap-2 grid text-xl">
+        <ul className="list-disc mt-4 gap-2 grid text-xl">
           <li>
             <a
               className="text-blue-700"

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Abass Dev - Projects",
-  description: "Projects | Abass Dev",
+  description: "Notable projects | Abass Dev",
 };
 
 const Page = () => {
