@@ -1,4 +1,3 @@
-"use client";
 import BlogSection from "@/components/blog/BlogSection";
 import { Profile, Skills, Report, Friends, Projects, FAQ } from "../components";
 

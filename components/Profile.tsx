@@ -13,7 +13,7 @@ const EduNSWACTFoundation = localFont({
 
 const Profile = () => {
   return (
-    <div className=" bg-white min-h-screen flex justify-center pt-32 lg:pt-0 shadow-lg dark:bg-gray-900">
+    <div className=" bg-white min-h-screen flex justify-center pt-32 lg:pt-0 dark:bg-gray-900">
       <section className="container mx-auto text-xl grid md:grid-cols-3 gap-8 px-10  md:items-center md:text-left">
         <div className="flex justify-center">
           <Image

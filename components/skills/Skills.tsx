@@ -13,12 +13,7 @@ import {
 } from "react-icons/fa";
 import { IoAnalyticsOutline } from "react-icons/io5";
 import { GiPadlock } from "react-icons/gi";
-import {
-  BsDatabaseAdd,
-  BsQuestionDiamondFill,
-  BsServer,
-  BsWordpress,
-} from "react-icons/bs";
+import { BsDatabaseAdd, BsWordpress } from "react-icons/bs";
 import Item from "./Item";
 import localFont from "next/font/local";
 import { FcLinux, FcSmartphoneTablet } from "react-icons/fc";
@@ -26,6 +21,7 @@ import {
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiAndroidstudio,
+  SiTorbrowser,
 } from "react-icons/si";
 
 import { TbBrandReactNative, TbBrandVscode, TbSql } from "react-icons/tb";
@@ -50,7 +46,7 @@ const Skills = () => {
             title="Web Development"
             desc="I specialize in providing functional web services that include custom website development, WordPress development, e-commerce solutions, and more."
             icon={{
-              source: <FaInternetExplorer size={100} />,
+              source: <FaInternetExplorer size={60} />,
               color: "text-sky-600",
               bg: "bg-sky-200",
             }}
@@ -82,7 +78,7 @@ const Skills = () => {
             title="SEO and security"
             desc="I offer top-notch solutions in both software security and SEO practices that can help boost the quantity and quality of traffic to your website."
             icon={{
-              source: <GiPadlock size={100} />,
+              source: <GiPadlock size={60} />,
               color: "text-red-600",
               bg: "bg-red-200",
             }}
@@ -105,15 +101,15 @@ const Skills = () => {
                 color: "text-gray-700",
               },
               {
-                source: <BsServer className={"text-3xl"} />,
-                color: "text-green-700",
+                source: <SiTorbrowser className={"text-3xl"} />,
+                color: "text-pink-800",
               },
             ]}
           />
 
           <Item
             icon={{
-              source: <FaPaintBrush size={100} />,
+              source: <FaPaintBrush size={60} />,
               color: "text-gray-600",
               bg: "bg-gray-200",
             }}
@@ -142,7 +138,7 @@ const Skills = () => {
 
           <Item
             icon={{
-              source: <FcSmartphoneTablet size={100} />,
+              source: <FcSmartphoneTablet size={60} />,
               color: "text-green-600",
               bg: "bg-green-200",
             }}
