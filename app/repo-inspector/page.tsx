@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Inspector } from "../../components";
 
 export const metadata: Metadata = {
-  title: "Abass Dev - Repo Inspector",
-  description: "Inspector of Github and GitLab repositories | Abass Dev",
+  title: "Repo Inspector | Abass Dev",
+  description: "Inspect your Github and GitLab repositories | Abass Dev",
 };
 
 const Page = () => {

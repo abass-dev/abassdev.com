@@ -29,10 +29,7 @@ const ProgressBar = () => {
         width: `${scrollWidth}%`,
         height: "3px",
         backgroundColor: "#00835a",
-        position: "relative",
-        bottom: 0,
-        left: 0,
-        zIndex: 9999,
+
         transition: "width 0.3s ease",
       }}
     />

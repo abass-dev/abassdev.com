@@ -37,7 +37,7 @@ const ScrollUp = () => {
         right: 10,
         bottom: 10,
         borderRadius: 100,
-        zIndex: 100,
+        zIndex: 49,
         backgroundColor: "#00835a99",
         margin: "auto",
       }}

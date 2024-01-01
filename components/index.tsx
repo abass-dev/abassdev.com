@@ -1,16 +1,16 @@
-import Profile from "./profile";
-import Services from "./services";
+import Profile from "./Profile";
+import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
-import Friends from "./friends";
-import Footer from "./footer/Footer";
-import Report from "./report/Report";
-import Copyright from "./copyright/Copyright";
+import Friends from "./friends/Friends";
+import Footer from "./Footer";
+import Report from "./Report";
+import Copyright from "./Copyright";
 import Contact from "./contact/Contact";
-import Inspector from "./inspector";
-import CookieConsent from './ui/CookieConsent'
-import FAQ from './faq'
+import Inspector from "./inspector/RepoInspector";
+import CookieConsent from "./ui/CookieConsent";
+import FAQ from "./faq";
 export {
-  Services,
+  Skills,
   Profile,
   Projects,
   Friends,
@@ -20,5 +20,5 @@ export {
   Contact,
   Inspector,
   FAQ,
-  CookieConsent
+  CookieConsent,
 };

@@ -1,4 +1,15 @@
+# This robots.txt file controls crawling of URLs under abassdev.com
+
+
+User-agent: *
 Allow: /
+
+Disallow: /admin/
+Disallow: /*.json
 Disallow: /api/
 Disallow: /_next/*
 Disallow: /static/*
+
+Crawl-delay: 60
+
+Sitemap: https://abassdev.com/sitemap.xml

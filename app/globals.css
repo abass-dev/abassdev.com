@@ -15,6 +15,66 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* This will work on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00835a #ffffff;
+}
+
+/* Targets on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00835a;
+  border-radius: 20px;
+}
+
+/*::-webkit-scrollbar-button:single-button {
+  background-color: #bbbbbb;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}*/
+
+  .a-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+  
+  .a-link:after {
+    display:block;
+    content: '';
+    width: inherit;
+    border-bottom: solid 3px rgb(7, 163, 7);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .a-link:hover:after { transform: scaleX(1); }
+  
+  .sidebar-link-anime {
+  display: block;
+    text-decoration: none;
+  }
+  
+  .sidebar-link-anime:after {
+  display:flex;
+    content: '';
+    border-bottom: solid 3px rgb(7, 163, 7);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .sidebar-link-anime:hover:after { transform: scaleX(1); }
+  
 
 .xpt {
   padding-top: 130px;

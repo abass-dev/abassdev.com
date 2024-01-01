@@ -1,11 +1,13 @@
-import { Profile, Report, Friends, Projects, Services, FAQ } from "../components";
+import BlogSection from "@/components/blog/BlogSection";
+import { Profile, Skills, Report, Friends, Projects, FAQ } from "../components";
 
-export default function Home() {
+export default function page() {
   return (
-    <div className='dark:bg-gray-900 dark:text-gray-100'>
+    <div className=" dark:bg-gray-900 dark:text-black text-lg">
       <Profile />
       <Projects />
-      <Services />
+      <Skills />
+      <BlogSection />
       <Friends />
       <FAQ />
       <Report />

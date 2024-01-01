@@ -1,11 +1,12 @@
 {
   "name": "next-abassdev.com",
-  "version": "4.0.5",
+  "version": "5.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node prebuild.js",
     "build": "next build",
-    "start": "next start",
+    "start": "next dev",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,7 +18,8 @@
     "notyf": "^3.10.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",

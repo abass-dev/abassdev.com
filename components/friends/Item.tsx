@@ -22,7 +22,7 @@ interface ItemProps {
 
 const Item = ({ name, avatar, about, links }: ItemProps) => {
   return (
-    <div className="bg-white dark:bg-gray-800  dark:text-gray-100 shadow flex flex-col p-5 gap-3 items-center justify-center">
+    <div className="text-black dark:text-white flex flex-col gap-8 justify-center items-center shadow-lg dark:shadow-slate-900 bg-white dark:bg-gray-800 p-5 mb-8 overflow-hidden">
       <Image
         src={avatar}
         alt={name}
@@ -54,7 +54,7 @@ const Item = ({ name, avatar, about, links }: ItemProps) => {
               </a>
             )}
             {links.facebook && (
-              <a aria-label={`${name} facebook account`}  href={links.facebook}>
+              <a aria-label={`${name} facebook account`} href={links.facebook}>
                 <BsFacebook size={25} />
               </a>
             )}

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import localFont from "next/font/local";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Exo = localFont({
@@ -8,15 +7,15 @@ const Exo = localFont({
 });
 
 const Others = () => {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
 
   const openNavHandler = () => {
-    setisOpen(!isOpen);
+    setIsOpen(!isOpen);
   };
 
   return (
-    <li>
+    <li className=" a-link">
       <button
         onClick={openNavHandler}
         id="dropdownNavbarLink"
@@ -33,9 +32,9 @@ const Others = () => {
         >
           <path
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="m1 1 4 4 4-4"
           />
         </svg>
@@ -44,7 +43,7 @@ const Others = () => {
         id="dropdownNavbar"
         className={`${
           isOpen ? "" : "hidden"
-        } z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}
+        } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}
       >
         <ul
           className="py-2 text-sm text-gray-700 dark:text-gray-400"
@@ -52,16 +51,8 @@ const Others = () => {
         >
           <li>
             <a
-              href="/repo-inspector"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >
-              Repo Inspector
-            </a>
-          </li>
-          <li>
-            <a
               href="/copyright"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="a-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
             >
               Copyright
             </a>
@@ -69,7 +60,7 @@ const Others = () => {
           <li>
             <a
               href="/privacy-policy"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="a-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
             >
               Privacy policy
             </a>
