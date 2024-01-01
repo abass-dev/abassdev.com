@@ -23,7 +23,7 @@ const List = ({ title, desk, open }: listProps) => {
     if (open) {
       setDisplay(true);
     }
-  }, []);
+  }, [open]);
 
   return (
     <div
@@ -44,7 +44,7 @@ const List = ({ title, desk, open }: listProps) => {
           <IoMdArrowDroprightCircle size={25} className="text-sky-600" />
         )}
 
-        <p className="text-xl">{title}</p>
+        <p className="lg:text-xl">{title}</p>
         <div className="h-10"></div>
       </div>
       {display && (
@@ -58,11 +58,11 @@ const List = ({ title, desk, open }: listProps) => {
 
 const FAQ = () => {
   return (
-    <div className="flex justify-center mt-10 mb-20">
-      <div className="w-5/6 bg-white shadow dark:bg-gray-800">
-        <div className="p-10">
+    <div className="container mx-auto px-8 md:px-10 lg:px-20 xl:px-32 my-20">
+      <div className="bg-white shadow dark:bg-gray-800">
+        <div className="pb-10">
           <h2
-            className={`${EduNSWACTFoundation.className} text-gray-700  dark:text-gray-300 text-3xl md:text-4xl pb-10`}
+            className={`${EduNSWACTFoundation.className} px-5 py-10 text-gray-700  dark:text-gray-300 text-3xl md:text-4xl`}
           >
             FAQ's (Frequently Asked Questions)
           </h2>

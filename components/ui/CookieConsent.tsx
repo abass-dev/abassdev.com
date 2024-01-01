@@ -21,19 +21,19 @@ const CookieConsent = () => {
   }
 
   return (
-    <div className="fixed z-50 text-gray-800 bg-gray-300 bottom-0 left-0 right-0">
+    <div className="fixed z-50 bg-black text-white bottom-0 left-0 right-0">
       <div className="flex justify-between items-center p-5">
         <p className="text-base">
           This website use cookies to improve your browsing experience and
           analyze site traffic.{" "}
-          <Link href="/privacy-policy" className="text-blue-600">
+          <Link href="/privacy-policy" className="text-blue-800">
             See our privacy policy
           </Link>{" "}
           for details.
         </p>
         <button
           onClick={acceptCookie}
-          className="bg-blue-400 hover:bg-blue-300 p-1 text-gray-200 rounded-lg"
+          className="bg-white text-black hover:bg-blue-800 hover:text-white p-1 rounded-lg"
         >
           Okay
         </button>

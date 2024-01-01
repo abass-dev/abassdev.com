@@ -7,8 +7,8 @@ const Orbitron = localFont({
 
 const Snippet = () => {
   return (
-    <div className="dark:text-gray-100  dark:bg-gray-900 pb-20">
-      <div className="container mx-auto pt-40 lg:pt-20">
+    <div className="flex justify-center dark:text-gray-100 dark:bg-gray-900 pb-10">
+      <div className="w-4/5 container mx-auto pt-32 lg:pt-10">
         <div className="grid pb-20 place-items-center">
           <h1
             className={`${Orbitron.className}  font-bold  dark:text-white text-3xl md:text-5xl pb-8 my-4 text-blue-950`}
@@ -16,51 +16,41 @@ const Snippet = () => {
             Short Code Snippets
           </h1>
           <p className="font-normal dark:text-white text-gray-700">
-            Learn from experts
+            Easily improve your skills with code snippets
           </p>
         </div>
 
-        <div className="grid grid-cols-2  gap-20">
-          <div className="col-span-2 md:col-span-1 bg-white dark:bg-gray-800 flex justify-center shadow-xl py-6">
-            <HomeItems
-              learnMore={{ text: "Learn More...", href: "/snippets/react" }}
-              title="React code snippet"
-              bgImg={`bg-[url("/assets/images/react-snippet.svg")]`}
-              desk="Some quick example text to build on the card title and make up the bulk of the card's content."
-            />
-          </div>
-          <div className="col-span-2 md:col-span-1 bg-white dark:bg-gray-800 flex justify-center shadow-xl py-6">
-            <HomeItems
-              learnMore={{ text: "Learn More...", href: "/snippets/react" }}
-              title="React code snippet"
-              bgImg={`bg-[url("/assets/images/php_code.webp")]`}
-              desk="Some quick example text to build on the card title and make up the bulk of the card's content."
-            />
-          </div>
-          <div className="col-span-2 md:col-span-1 bg-white dark:bg-gray-800 flex justify-center shadow-xl py-6">
-            <HomeItems
-              learnMore={{ text: "Learn More...", href: "/snippets/react" }}
-              title="React code snippet"
-              bgImg="php_code.webp"
-              desk="Some quick example text to build on the card title and make up the bulk of the card's content."
-            />
-          </div>
-          <div className="col-span-2 md:col-span-1 bg-white dark:bg-gray-800 flex justify-center shadow-xl py-6">
-            <HomeItems
-              learnMore={{ text: "Learn More...", href: "/snippets/react" }}
-              title="React code snippet"
-              bgImg="php_code.webp"
-              desk="Some quick example text to build on the card title and make up the bulk of the card's content."
-            />
-          </div>
-          <div className="col-span-2 md:col-span-1 bg-white dark:bg-gray-800 flex justify-center shadow-xl py-6">
-            <HomeItems
-              learnMore={{ text: "Learn More...", href: "/snippets/react" }}
-              title="React code snippet"
-              bgImg="php_code.webp"
-              desk="Some quick example text to build on the card title and make up the bulk of the card's content."
-            />
-          </div>
+        <div className="grid grid-cols-2  gap-10">
+          <HomeItems
+            learnMore={{ text: "Learn React.js...", href: "/snippets/react" }}
+            title="React code snippet"
+            bgImg={`bg-[url("/assets/images/react-snippet.svg")]`}
+            desk="Master React.js with Ease: Dive into Simple, Hands-on Learning with Code Snippets"
+          />
+          <HomeItems
+            learnMore={{
+              text: "Learn from Byte Teachers",
+              href: "https://byteteachers.com/",
+            }}
+            title="The Byte Teachers"
+            bgImg={`bg-[url("/assets/images/php_code.webp")]`}
+            desk="ByteTeachers.com is where I passionately share my knowledge with the world during my free time."
+          />
+          <HomeItems
+            learnMore={{ text: "Learn PHP...", href: "/snippets/php" }}
+            title="PHP code snippet"
+            bgImg={`bg-[url("/assets/images/php-code2.webp")]`}
+            desk="Master PHP with Ease: Dive into Simple, Hands-on Learning with Code Snippets"
+          />
+          <HomeItems
+            learnMore={{
+              text: "Learn React Native...",
+              href: "/snippets/react-native",
+            }}
+            title="React Native code snippet"
+            bgImg={`bg-[url("/assets/images/react-code.webp")]`}
+            desk="Master React Native with Ease: Dive into Simple, Hands-on Learning with Code Snippets"
+          />
         </div>
       </div>
     </div>

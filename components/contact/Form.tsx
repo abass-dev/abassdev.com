@@ -10,7 +10,7 @@ import {
 } from "../../helpers";
 import emailjs from "@emailjs/browser";
 import Alert from "../ui/Alert";
-import ProgressBar from "../ui/ProgressBar";
+import ProgressBar from "../ui/LoadingBar";
 import { BsFillSendFill } from "react-icons/bs";
 
 const notyf = new Notification(3000);

@@ -1,11 +1,3 @@
-import Image from "next/image";
-import {
-  BsGlobeCentralSouthAsia,
-  BsGithub,
-  BsFacebook,
-  BsTwitter,
-} from "react-icons/bs";
-
 import Item from "./Item";
 import localFont from "next/font/local";
 const Orbitron = localFont({
@@ -14,13 +6,13 @@ const Orbitron = localFont({
 
 const Friends = () => {
   return (
-    <div className="`dark:bg-gray-900 w-5/6 mx-auto pt-20">
+    <div className="container mx-auto px-8 md:px-10 mt-20 lg:px-20 xl:px-32 dark:bg-gray-900">
       <h1
         className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
       >
         Friends
       </h1>
-      <div className="grid px-10 md:grid-cols-3">
+      <div className="grid md:grid-cols-3">
         <Item
           name="Benaiah Alumona"
           avatar="https://avatars.githubusercontent.com/u/65370456?v=4"

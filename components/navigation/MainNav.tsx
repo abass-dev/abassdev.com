@@ -41,7 +41,7 @@ const MainNav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [prevScrollPos, handleScroll]);
 
   const openNavHandler = () => {
     setIsOpen(!isOpen);

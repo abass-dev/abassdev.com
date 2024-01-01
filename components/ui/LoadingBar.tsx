@@ -1,6 +1,6 @@
-const ProgressBar = () => {
+const LoadingBar = () => {
   return (
-    <div className="flex z-0 items-center text-center justify-center rounded-lg dark:bg-gray-800 dark:border-gray-700">
+    <div className="flex z-0 items-center text-center justify-center rounded-lg bg-transparent dark:border-gray-700">
       <div role="status">
         <svg
           aria-hidden="true"
@@ -24,4 +24,4 @@ const ProgressBar = () => {
   );
 };
 
-export default ProgressBar;
+export default LoadingBar;

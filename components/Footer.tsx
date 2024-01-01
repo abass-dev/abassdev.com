@@ -1,15 +1,35 @@
+// @ts-ignore
+// @ts-nocheck
+
 "use client";
 import ContactForm from "./contact/Form";
-import { BsGithub, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
+import {
+  BsGithub,
+  BsFacebook,
+  BsTwitter,
+  BsLinkedin,
+  BsArrowBarRight,
+} from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import buildInfo from "../build-info.json";
 import packageJson from "../package.json";
 import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 const EduNSWACTFoundation = localFont({
   src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
 });
 const appVersion = packageJson.version;
+
+const ImportantLinks = ({ href, text }) => {
+  return (
+    <li className="mb-2 hover:text-gray-500">
+      <a className="flex text-lg gap-2 items-center" href={href}>
+        <FaArrowAltCircleRight /> {text}
+      </a>
+    </li>
+  );
+};
 
 const Footer = () => {
   const pathname = usePathname();
@@ -60,36 +80,22 @@ const Footer = () => {
             </a>
           </div>
           <div className="py-3 mt-5">
-            <h3 className="py-3 text-3xl">Other Links</h3>
-            <ul className="list-disc inline-block">
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/privacy-policy/">Privacy Policy</a>
-              </li>
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/copyright/">Copyright</a>
-              </li>
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/snippets/">Snippets</a>
-              </li>
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/repo-inspector/">Repo Inspector</a>
-              </li>
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/proverbs/">Proverbs</a>
-              </li>
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/my-story/">About us</a>
-              </li>
-              <li className="mb-2 hover:text-gray-500">
-                <a href="/contact/">Contact us</a>
-              </li>
+            <h3 className="py-5 text-3xl">Other Links</h3>
+            <ul className="grid grid-cols-2 place-items-center">
+              <ImportantLinks href="/privacy-policy" text="Privacy Policy" />
+              <ImportantLinks href="/copyright/" text="Copyright" />
+              <ImportantLinks href="/snippets/" text="Snippets" />
+              <ImportantLinks href="/repo-inspector/" text="Repo Inspector" />
+              <ImportantLinks href="/my-story/" text="About Me" />
+              <ImportantLinks href="/contact/" text="Contact Me" />
             </ul>
           </div>
         </div>
 
-        <div className="text-center text-gray-300 col-span-4">
+        <div className="text-center text-lg text-gray-300 col-span-4">
           <p className="mb-2">
-            Copyright © 2021 - 2023 Abass Dev. All rights reserved.
+            Copyright © 2021 - {new Date().getFullYear()} Abass Dev. All rights
+            reserved.
           </p>
           <p> Current version: {appVersion}</p>
           <p> Last updated: {new Date(buildInfo.lastUpdate).toString()}</p>

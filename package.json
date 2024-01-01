@@ -1,12 +1,12 @@
 {
   "name": "next-abassdev.com",
-  "version": "4.0.5",
+  "version": "5.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "prebuild": "node prebuild.js",
     "build": "next build",
-    "start": "next start",
+    "start": "next dev",
     "lint": "next lint"
   },
   "dependencies": {

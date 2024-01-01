@@ -1,34 +1,56 @@
+// @ts-ignore
+// @ts-nocheck
+
 "use client";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
 import API from "../api";
-import { log } from "console";
-import CodeBlock from "./CodeBlock";
 
 import localFont from "next/font/local";
+import { LoadingBar } from "../../components/ui";
+import {
+  getCacheWithExpirationDate,
+  setCacheWithExpirationDate,
+} from "../helpers/getCacheWithExpirationDate";
+import PostItem from "./helpers/PostItem";
 
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
-type Item = {
-  id: string;
-  tech: string;
-};
-
 function ReactSnippets() {
-  const [data, setData] = useState<Item[]>([]);
+  const [data, setData] = useState<PostItem[] | undefined>(undefined);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [message, setMessage] = useState<string | undefined>();
+
+  const cacheData = getCacheWithExpirationDate("snippets-react");
+
+  console.log(API.REACT_SNIPPET);
   useEffect(() => {
-    axios
-      .get("http://localhost:5001/api/react")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [data]);
+    const fetchData = async () => {
+      try {
+        if (cacheData) {
+          setData(cacheData);
+          setLoading(false);
+        } else {
+          const response = await axios.get(API.REACT_SNIPPET);
+          setData(response.data);
+          setLoading(false);
+          setCacheWithExpirationDate("snippets-react", response.data, 1440);
+        }
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+        setMessage(
+          "OOPS! Something went wrong. Please refresh this page to try again."
+        );
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="flex justify-center dark:text-gray-100 dark:bg-gray-900 pb-10">
       <div className="w-4/5 container mx-auto pt-32 lg:pt-10">
@@ -39,43 +61,25 @@ function ReactSnippets() {
             React Code Snippets
           </h1>
           <p className="font-normal dark:text-white text-gray-700">
-            Learn React Js from experts
+            Easily improve your skills with React.js code snippets
           </p>
         </div>
         <div className="grid gap-8">
-          <div
-            style={{ maxHeight: 360 }}
-            className=" grid grid-cols-2 overflow-auto backdrop-blur-sm dark:shadow-gray-950 bg-white shadow-2xl dark:bg-gray-800"
-          >
-            <div className="col-span-2 lg:col-span-1">
-              <div className="p-5">
-                <h2 className="text-4xl mb-10">Useful react js component</h2>
-                <p className="text-base text-gray-400 mb-3">
-                  Publish date: <span>Mon Dec 25 2023</span>
-                </p>
-                <p>
-                  Let's break down this useful react component into pieces.
-                  first of all we imported useState from react library.
-                </p>
-              </div>
+          {loading && (
+            <div className="text-center">
+              <LoadingBar />
+              <p>Please wait..</p>
             </div>
+          )}
+          {loading === false && message && (
+            <div className="text-center text-red-500">{message}</div>
+          )}
 
-            <div className="col-span-2 p-5 lg:col-span-1">
-              <CodeBlock
-                snippetType={"html"}
-                code={`
-                <html>
-                <p>Hello what is up</p>Hello what llo what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is up</p>Hello what is
-                 up</p>Hello what is up</p>Hello what is up</p></html>`}
-              />
-            </div>
-          </div>
+          {loading === false && message === undefined && data && (
+            <>
+              <PostItem data={data} />
+            </>
+          )}
         </div>
       </div>
     </div>

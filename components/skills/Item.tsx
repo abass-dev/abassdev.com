@@ -33,7 +33,7 @@ const Icons = ({ key, toolIcons }) => {
 
 const Item = ({ icon, title, desc, toolIcons }) => {
   return (
-    <div className="max-w-lg hover:shadow-md mb-8 p-8 bg-white dark:bg-gray-800 shadow-lg dark:shadow-slate-900 flex items-center flex-col justify-center">
+    <div className="hover:shadow-md mb-8 p-5 bg-white dark:bg-gray-800 shadow-lg dark:shadow-slate-900 flex  gap-2 items-center flex-col justify-center">
       <MainIcons
         icon={{ source: icon.source, color: icon.color, bg: icon.bg }}
       />
@@ -41,7 +41,7 @@ const Item = ({ icon, title, desc, toolIcons }) => {
       <h1 className={`${EduNSWACTFoundation.className} text-3xl py-4`}>
         {title}
       </h1>
-      <div className="flex py-4">
+      <div className="flex">
         {toolIcons &&
           toolIcons.map((item, index) => {
             return <Icons key={index} toolIcons={item} />;
