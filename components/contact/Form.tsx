@@ -51,52 +51,37 @@ const Form = () => {
     });
   }
 
+  /**
+   * Submits the email form and sends an email using the provided input.
+   *
+   * @param {React.FormEvent} event - The form submit event.
+   * @return {Promise<void>} - A promise that resolves when the email is sent successfully.
+   */
   async function onSubmitEmailHandler(event: React.FormEvent) {
     event.preventDefault();
 
     const valideEmail = validateEmail(userInput.email);
+    const { name, subject, email, message } = userInput;
 
-    if (userInput.name.length <= 2) {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          name: true,
-        };
-      });
+    if (name.length <= 2) {
+      setInvalidInput((prev) => ({ ...prev, name: true }));
       return notyf.error("Your name shouldn't be less than 2 characters");
     }
 
-    if (userInput.subject.length <= 2) {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          subject: true,
-        };
-      });
+    if (subject.length <= 2) {
+      setInvalidInput((prev) => ({ ...prev, subject: true }));
       return notyf.error("Subject shouldn't be less than 2 characters");
     }
 
     if (!valideEmail.valid) {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          email: true,
-        };
-      });
+      setInvalidInput((prev) => ({ ...prev, email: true }));
       return notyf.error(valideEmail.message);
     }
 
     if (!validateTextarea("message", 5, 1000)) {
-      setInvalidInput((prev) => {
-        return {
-          ...prev,
-          message: true,
-        };
-      });
+      setInvalidInput((prev) => ({ ...prev, message: true }));
       return;
     }
-
-    const { name, subject, email, message } = userInput;
 
     const templateParams = {
       user_name: name.trim(),
@@ -107,30 +92,28 @@ const Form = () => {
       reply_to: email.trim(),
       message: message.trim(),
     };
+
     setLoading(true);
-    emailjs
-      .send(
+
+    try {
+      await emailjs.send(
         "service_jebasxm",
         "template_mduuz2e",
         templateParams,
         "9QHGoEPmDaBELUbZn"
-      )
-      .then(
-        (response) => {
-          notyf.success("Message sent!");
-          userInput.name = "";
-          userInput.subject = "";
-          userInput.email = "";
-          setLoading(false);
-        },
-        (err) => {
-          setMessage({
-            success: "",
-            error: "Internal server error, technical issues!",
-          });
-          setLoading(false);
-        }
       );
+      notyf.success("Message sent!");
+      userInput.name = "";
+      userInput.subject = "";
+      userInput.email = "";
+      setLoading(false);
+    } catch (err) {
+      setMessage({
+        success: "",
+        error: "Internal server error, technical issues!",
+      });
+      setLoading(false);
+    }
   }
 
   return (

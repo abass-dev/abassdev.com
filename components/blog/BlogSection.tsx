@@ -18,7 +18,7 @@ const BlogSection = () => {
           <HomeItems
             learnMore={{ text: "Learn More...", href: "/snippets" }}
             title="Internal blog"
-            bgImg={`bg-[url("/assets/images/react-snippet.svg")]`}
+            bgImg={`bg-[url("/assets/images/react-code.webp")]`}
             desk="Easily improve your skills with code snippets."
           />
 

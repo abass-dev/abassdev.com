@@ -18,6 +18,7 @@
     "notyf": "^3.10.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-gtm-module": "^2.0.11",
     "react-icons": "^4.11.0",
     "react-syntax-highlighter": "^15.5.0"
   },
@@ -25,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-gtm-module": "^2.0.3",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",

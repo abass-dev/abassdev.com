@@ -27,15 +27,7 @@ const Snippet = () => {
             bgImg={`bg-[url("/assets/images/react-snippet.svg")]`}
             desk="Master React.js with Ease: Dive into Simple, Hands-on Learning with Code Snippets"
           />
-          <HomeItems
-            learnMore={{
-              text: "Learn from Byte Teachers",
-              href: "https://byteteachers.com/",
-            }}
-            title="The Byte Teachers"
-            bgImg={`bg-[url("/assets/images/php_code.webp")]`}
-            desk="ByteTeachers.com is where I passionately share my knowledge with the world during my free time."
-          />
+
           <HomeItems
             learnMore={{ text: "Learn PHP...", href: "/snippets/php" }}
             title="PHP code snippet"
