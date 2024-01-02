@@ -52,18 +52,18 @@ function ReactSnippets() {
   }, []);
 
   return (
-    <div className="flex justify-center dark:text-gray-100 dark:bg-gray-900 pb-10">
-      <div className="w-4/5 container mx-auto pt-32 lg:pt-10">
-        <div className="grid pb-20 place-items-center">
-          <h1
-            className={`${Orbitron.className}  font-bold  dark:text-white text-3xl md:text-5xl pb-8 my-4 text-blue-950`}
-          >
-            React Code Snippets
-          </h1>
-          <p className="font-normal dark:text-white text-gray-700">
-            Easily improve your skills with React.js code snippets
-          </p>
-        </div>
+    <div className=" dark:text-gray-100 dark:bg-gray-900 pb-10">
+      <div className="min-h-[50vh] flex flex-col justify-center bg-white dark:text-gray-100 dark:bg-gray-900 pb-20 text-center  pt-32 lg:pt-10">
+        <h1
+          className={`${Orbitron.className}  font-bold  dark:text-white text-3xl md:text-5xl pb-8 my-4 text-blue-950`}
+        >
+          React Code Snippets
+        </h1>
+        <p className="font-normal dark:text-white text-gray-700">
+          Easily improve your skills with React.js code snippets
+        </p>
+      </div>
+      <div className="mx-4 md:mx-10 lg:mx-32">
         <div className="grid gap-8">
           {loading && (
             <div className="text-center">
