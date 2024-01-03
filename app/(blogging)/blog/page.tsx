@@ -1,9 +1,14 @@
 import BlogNav from "@/components/blog/BlogNav";
 import GoToButton from "@/components/blog/GoToButton";
+import { dateToReadable } from "@/helpers";
+import axios from "axios";
 import localFont from "next/font/local";
+import { comment } from "postcss";
 import {
   FaClock,
   FaFacebook,
+  FaRegComment,
+  FaTags,
   FaTwitter,
   FaUser,
   FaWhatsappSquare,
@@ -14,17 +19,16 @@ const Orbitron = localFont({
 });
 
 const getPosts = async () => {
-  const res = await fetch(
-    "https://dummyjson.com/posts?limit=10&skip=10&select=title,reactions,userId"
-  );
-  const data = await res.json();
+  const res = await axios.get("http://localhost:5001/api/posts");
+  const data = res.data;
+  // console.log(data);
 
-  return data.posts;
+  return data;
 };
 
 const Blog = async () => {
   const posts = await getPosts();
-  //  console.log(posts);
+  //console.log(posts);
 
   return (
     <>
@@ -41,30 +45,40 @@ const Blog = async () => {
           </h1>
         </div>
 
-        {posts.length > 0 &&
+        {posts &&
           posts.map((post: any) => {
             return (
               <div
                 className="bg-white shadow rounded-sm p-4 mb-5 md:mx-56 "
                 key={post.id}
               >
-                <GoToButton id={post.id}>
+                <GoToButton slug={post.slug}>
                   <h1 className="text-2xl  font-semibold">{post.title}</h1>
                 </GoToButton>
-                <p className="text-lg mt-5">
-                  In this tutorial we are going to show you how to build a
-                  responsive website using Next.js So make sure that your
-                  ready...
-                </p>
+                <p className="text-lg mt-5">{post.short_description}...</p>
                 <div className="flex flex-col md:flex-row gap-10 justify-between mt-5">
                   <div className="md:flex text-sky-700 gap-5">
                     <div className="flex items-center gap-2">
                       <FaUser />
-                      <p>abassdev</p>
+                      <p>{post.author_username}</p>
                     </div>
+
                     <div className="flex items-center gap-2">
                       <FaClock />
-                      <p>Tue Mar 13, 2023</p>
+                      <p>{dateToReadable(post.created_at)}</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaTags />
+                      {post.tags_names &&
+                        post.tags_names
+                          .split(",")
+                          .map((tag: any, index: number) => {
+                            return <div key={index}>#{tag}</div>;
+                          })}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaRegComment />
+                      {post.comments && post.comments.length}
                     </div>
                   </div>
 
