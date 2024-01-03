@@ -36,7 +36,7 @@ const SideBar = () => {
     },
     {
       name: "Blog",
-      link: "https:byteteachers.com",
+      link: "/blog",
       icon: BsGlobeEuropeAfrica,
     },
     {

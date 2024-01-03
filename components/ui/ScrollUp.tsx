@@ -46,7 +46,7 @@ const ScrollUp = () => {
       ref={btnUpRef}
       id="scrollUpButton"
     >
-      <div style={{ display: "flex", justifyContent: "center", paddingTop: 6 }}>
+      <div className="flex justify-center pt-6">
         <BsChevronDoubleUp color="white" size={25} />
       </div>
     </div>

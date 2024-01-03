@@ -1,9 +1,6 @@
 import "./globals.css";
-import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import ScrollUp from "../components/ui/ScrollUp";
-import { Footer, CookieConsent } from "../components";
 import Theme from "../context/theme-provider";
 import Script from "next/script";
 const Inter = localFont({
@@ -44,13 +41,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${Inter.className} bg-gray-100`}>
-        <Theme>
-          <Nav />
-          {children}
-          <ScrollUp />
-          <Footer />
-          <CookieConsent />
-        </Theme>
+        <Theme>{children}</Theme>
       </body>
     </html>
   );
