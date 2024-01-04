@@ -2,16 +2,18 @@
 import { useRouter } from "next/navigation";
 
 const GoToButton = ({
+  category,
   slug,
   children,
 }: {
+  category: any;
   slug: any;
   children: React.ReactNode;
 }) => {
   const router = useRouter();
 
   const clickHandler = () => {
-    router.push(`/blog/${slug}`);
+    router.push(`/blog/${category}/${slug}`);
   };
   return (
     <div

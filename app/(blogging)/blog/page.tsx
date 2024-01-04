@@ -3,7 +3,6 @@ import GoToButton from "@/components/blog/GoToButton";
 import { dateToReadable } from "@/helpers";
 import axios from "axios";
 import localFont from "next/font/local";
-import { comment } from "postcss";
 import {
   FaClock,
   FaFacebook,
@@ -19,16 +18,14 @@ const Orbitron = localFont({
 });
 
 const getPosts = async () => {
-  const res = await axios.get("http://localhost:5001/api/posts");
-  const data = res.data;
-  // console.log(data);
+  const res = await fetch("http://localhost:5001/api/posts");
+  const data = await res.json();
 
   return data;
 };
 
 const Blog = async () => {
   const posts = await getPosts();
-  //console.log(posts);
 
   return (
     <>
@@ -52,7 +49,7 @@ const Blog = async () => {
                 className="bg-white shadow rounded-sm p-4 mb-5 md:mx-56 "
                 key={post.id}
               >
-                <GoToButton slug={post.slug}>
+                <GoToButton category={post.category} slug={post.slug}>
                   <h1 className="text-2xl  font-semibold">{post.title}</h1>
                 </GoToButton>
                 <p className="text-lg mt-5">{post.short_description}...</p>
