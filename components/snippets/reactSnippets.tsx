@@ -26,7 +26,6 @@ function ReactSnippets() {
 
   const cacheData = getCacheWithExpirationDate("snippets-react");
 
-  console.log(API.REACT_SNIPPET);
   useEffect(() => {
     const fetchData = async () => {
       try {

@@ -19,25 +19,20 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
         >
           {/* Your Sidebar Content */}
           <div className="p-4">
-            <h1 className="text-2xl font-semibold">Sidebar</h1>
+            <h1
+              className={`${Orbitron.className} text-xl font-semibold inline-block bg-gradient-to-r bg-clip-text text-transparent to-pink-600 from-green-600`}
+            >
+              Devs Blog
+            </h1>
             <ul className="mt-4">
               <li className="mb-2">
-                <a href="#" className="block hover:text-indigo-400">
+                <a href="/blog" className="block hover:text-indigo-400">
                   Home
                 </a>
               </li>
+
               <li className="mb-2">
-                <a href="#" className="block hover:text-indigo-400">
-                  About
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="block hover:text-indigo-400">
-                  Services
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="block hover:text-indigo-400">
+                <a href="/contact" className="block hover:text-indigo-400">
                   Contact
                 </a>
               </li>
@@ -58,9 +53,25 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
                   Devs Blog
                 </Link>
                 <div className="hidden md:flex gap-5">
-                  <FaFacebook className={"text-blue-600"} size={20} />
-                  <FaTwitter className={"text-blue-400"} size={20} />
-                  <FaInstagram className={"text-orange-700"} size={20} />
+                  <a
+                    aria-label="Devs blog Facebook account"
+                    href="https://m.facebook.com/abassthedev"
+                  >
+                    <FaFacebook className={"text-blue-600"} size={20} />
+                  </a>
+                  <a
+                    aria-label="Devs blog Twitter account"
+                    href="https://twitter.com/abass_dev"
+                  >
+                    {" "}
+                    <FaTwitter className={"text-blue-400"} size={20} />
+                  </a>
+                  <a
+                    aria-label="Devs Instagram account"
+                    href="https://www.instagram.com/abassdev/"
+                  >
+                    <FaInstagram className={"text-orange-700"} size={20} />
+                  </a>
                 </div>
                 <div className="flex gap-5">
                   <ThemeToggle />

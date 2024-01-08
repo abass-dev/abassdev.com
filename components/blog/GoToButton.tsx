@@ -4,10 +4,12 @@ import { useRouter } from "next/navigation";
 const GoToButton = ({
   category,
   slug,
+  className,
   children,
 }: {
-  category: any;
-  slug: any;
+  category?: any;
+  slug?: any;
+  className: string;
   children: React.ReactNode;
 }) => {
   const router = useRouter();
@@ -16,10 +18,7 @@ const GoToButton = ({
     router.push(`/blog/${category}/${slug}`);
   };
   return (
-    <div
-      className="text-gray-700 underline cursor-pointer hover:text-gray-900"
-      onClick={clickHandler}
-    >
+    <div className={`${className}`} onClick={clickHandler}>
       {children}
     </div>
   );
