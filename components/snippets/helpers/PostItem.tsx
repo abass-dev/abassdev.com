@@ -16,7 +16,11 @@ type PostItem = {
 const PostItem = ({ data }: { data: PostItem[] }) => {
   return data.map((item) => {
     return (
-      <div key={item.id} id={`${item.tech}-${item.id}`}>
+      <div
+        className="overflow-auto"
+        key={item.id}
+        id={`${item.tech}-${item.id}`}
+      >
         <Link aria-label={item.title} href={`#${item.tech}-${item.id}`}>
           <h2 className="text-2xl mb-5 mt-10 lg:text-4xl">{item.title}</h2>
         </Link>

@@ -6,13 +6,13 @@
 import axios from "axios";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { BsFillSendFill, BsBug } from "react-icons/bs";
 import API from "../api";
-import { validateUsername, dateToReadable } from "../../helpers";
+import { dateToReadable } from "../../helpers";
 import { Alert, LoadingBar } from "../ui";
 import Notification from "../../utils/Notification";
 import isValideURL from "../../helpers/isValideURL";
 import { Report } from "..";
+import { BsBug } from "react-icons/bs";
 
 const notyf = new Notification(3000);
 
@@ -425,7 +425,7 @@ const Inspector = () => {
           </div>
         </div>
       </div>
-      <Report report="contact/page" />
+      <Report report="inspector/page" />
     </>
   );
 };
