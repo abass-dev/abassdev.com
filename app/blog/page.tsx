@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import MainPostAction from "@/components/blog/MainPostAction";
 
 const Orbitron = localFont({
-  src: "../../../fonts/Orbitron/static/Orbitron-Black.ttf",
+  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
 const getPosts = async () => {

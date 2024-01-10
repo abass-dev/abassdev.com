@@ -2,16 +2,16 @@
 
 import { useRouter } from "next/navigation";
 
-const CategoryButton = ({ category }: any) => {
+const CategoryButton = ({ category, children, className }: any) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/blog/${category}`);
+    router.push(`/blog/category/${category}`);
   };
 
   return (
-    <div onClick={handleClick} className="cursor-pointer">
-      See all {category} posts
+    <div className={`${className}`} onClick={handleClick}>
+      {children}
     </div>
   );
 };

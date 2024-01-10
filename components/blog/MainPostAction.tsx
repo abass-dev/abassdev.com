@@ -10,6 +10,8 @@ import {
 import GoToButton from "./GoToButton";
 import { dateToReadable } from "@/helpers";
 import { SlDislike, SlLike } from "react-icons/sl";
+import CategoryButton from "./CategoryButton";
+import AuthorPostsButton from "./AuthorPostsButton";
 
 const MainPostAction = ({ posts }: any) => {
   return (
@@ -30,23 +32,26 @@ const MainPostAction = ({ posts }: any) => {
           <p className="text-lg mt-5">{post.short_description}...</p>
           <div className="flex flex-col md:flex-row gap-10 justify-between mt-5">
             <div className="md:flex text-sky-700 gap-5">
-              <GoToButton
-                className="flex items-center cursor-pointer gap-2"
-                category={post.category}
-                slug={""}
+              <AuthorPostsButton
+                authorName={post.author_username}
+                className="flex items-center gap-2"
               >
                 <FaUser />
                 <p>{post.author_username}</p>
-              </GoToButton>
+              </AuthorPostsButton>
 
               <div className="flex items-center gap-2">
                 <FaClock />
                 <p>{dateToReadable(post.created_at)}</p>
               </div>
-              <div className="flex items-center gap-2">
+              <CategoryButton
+                className="flex items-center cursor-pointer gap-2"
+                category={post.category}
+                slug={post.slug}
+              >
                 <FaFolderOpen />
                 <p>{post.category}</p>
-              </div>
+              </CategoryButton>
 
               {/*
                 //Tags... 

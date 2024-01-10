@@ -25,20 +25,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6427962014782182"
-          strategy="lazyOnload"
-        />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-N8ZTB9NPSP" />
-        <Script id="google-analytics">
-          {`
+        {process.env.NODE_ENV !== "development" && (
+          <>
+            <Script
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6427962014782182"
+              strategy="lazyOnload"
+            />
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-N8ZTB9NPSP" />
+            <Script id="google-analytics">
+              {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
- 
+          
           gtag('config', 'G-N8ZTB9NPSP');
-        `}
-        </Script>
+          `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={`${Inter.className} bg-gray-100`}>
         <Theme>{children}</Theme>
