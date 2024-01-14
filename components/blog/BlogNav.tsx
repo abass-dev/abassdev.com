@@ -48,7 +48,7 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
               <div className="flex justify-between items-center py-4 px-2">
                 <Link
                   href={"/blog"}
-                  className={`${Orbitron.className} text-xl font-semibold inline-block bg-gradient-to-r bg-clip-text text-transparent to-black from-green-600`}
+                  className={`${Orbitron.className} text-xl font-semibold inline-block bg-gradient-to-r bg-clip-text text-transparent to-pink-600 from-green-600`}
                 >
                   Devs Blog
                 </Link>

@@ -15,7 +15,7 @@ const AuthorPostsButton = ({
 
   return (
     <div
-      onClick={() => router.push(`/blog/posts/author?name=${authorName}`)}
+      onClick={() => router.push(`/blog/posts/author/${authorName}`)}
       className={`cursor-pointer ${className}`}
     >
       {children}

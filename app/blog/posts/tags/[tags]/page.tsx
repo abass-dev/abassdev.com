@@ -1,17 +1,34 @@
-import BlogNav from "@/components/blog/BlogNav";
-import localFont from "next/font/local";
-import MainPostAction from "@/components/blog/MainPostAction";
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
+import BlogNav from "@/components/blog/BlogNav";
+import MainPostAction from "@/components/blog/MainPostAction";
 import getTags from "@/components/blog/utils/getTags";
-import getPosts from "@/components/blog/utils/getPosts";
+import localFont from "next/font/local";
 
 const Orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
+  src: "../../../../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
-const Blog = async () => {
-  const posts = await getPosts();
+export const generateStaticParams = async () => {
+  const res = await fetch("http://localhost:5001/api/posts/tags");
+  const tags = await res.json();
+  return tags.map((tag: any) => {
+    return {
+      tags: tag.tag_name,
+    };
+  });
+};
+
+const getPost = async (tag: string) => {
+  const res = await fetch(`http://localhost:5001/api/posts/tag/${tag}`);
+
+  const data = await res.json();
+
+  return data;
+};
+
+const page = async ({ params }: any) => {
   const tags = await getTags();
+  const postByTags = await getPost(params.tags);
 
   return (
     <>
@@ -21,7 +38,11 @@ const Blog = async () => {
             <h1
               className={`${Orbitron.className} text-2xl text-gray-600 md:text-5xl font-bold text-center`}
             >
-              Devs Blog
+              {`{"Welcome To `}{" "}
+              <span className="inline-block bg-gradient-to-r bg-clip-text text-transparent to-gray-600 from-green-600">
+                Devs Blog!
+              </span>
+              {`"}`}
             </h1>
           </div>
           <div className="flex sm:space-x-24">
@@ -34,7 +55,7 @@ const Blog = async () => {
               <AllTagsLayout tags={tags} />
             </div>
             <div>
-              <MainPostAction posts={posts} />
+              <MainPostAction posts={postByTags} />
             </div>
           </div>
         </div>
@@ -43,4 +64,4 @@ const Blog = async () => {
   );
 };
 
-export default Blog;
+export default page;

@@ -40,13 +40,16 @@ const ScrollUp = () => {
         zIndex: 49,
         backgroundColor: "#00835a99",
         margin: "auto",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
       onClick={handleOnGoUp}
       className={`scroll-up hidden`}
       ref={btnUpRef}
       id="scrollUpButton"
     >
-      <div className="flex justify-center pt-6">
+      <div className="">
         <BsChevronDoubleUp color="white" size={25} />
       </div>
     </div>

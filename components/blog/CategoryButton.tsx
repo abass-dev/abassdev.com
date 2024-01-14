@@ -6,7 +6,7 @@ const CategoryButton = ({ category, children, className }: any) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/blog/category/${category}`);
+    router.push(`/blog/posts/category/${category}`);
   };
 
   return (

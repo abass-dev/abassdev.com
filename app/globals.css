@@ -23,7 +23,7 @@
 
 /* Targets on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 *::-webkit-scrollbar-track {
@@ -32,7 +32,7 @@
 
 *::-webkit-scrollbar-thumb {
   background-color: #00835a;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /*::-webkit-scrollbar-button:single-button {

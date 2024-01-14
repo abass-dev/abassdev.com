@@ -17,11 +17,20 @@
     "next-themes": "^0.2.1",
     "notyf": "^3.10.0",
     "react": "^18",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18",
     "react-gtm-module": "^2.0.11",
     "react-icons": "^4.11.0",
     "react-markdown": "^9.0.1",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-pretty-code": "^0.12.3",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "to-vfile": "^8.0.0",
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

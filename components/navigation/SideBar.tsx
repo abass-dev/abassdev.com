@@ -53,7 +53,7 @@ const SideBar = () => {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <section className="flex fixed z-50 gap-6 min-h-screen">
+    <section className="flex fixed overflow-x-hidden z-50 gap-6 max-h-screen">
       <div
         className={`bg-transparent backdrop-blur ${
           open ? "w-72" : "w-16"
