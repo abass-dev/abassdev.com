@@ -1,18 +1,12 @@
-import {
-  FaFacebook,
-  FaFolderOpen,
-  FaTwitter,
-  FaUser,
-  FaWhatsappSquare,
-} from "react-icons/fa";
+import { FaFolderOpen, FaUser } from "react-icons/fa";
 import GoToButton from "./GoToButton";
 import { dateToReadable } from "@/helpers";
 import { SlDislike, SlLike } from "react-icons/sl";
 import CategoryButton from "./CategoryButton";
 import AuthorPostsButton from "./AuthorPostsButton";
 import TagsButton from "./TagsButton";
-import { BsArrowBarRight } from "react-icons/bs";
 import { FiArrowRight } from "react-icons/fi";
+import ShareLinks from "./ShareLinks";
 
 const MainPostAction = ({ posts }: any) => {
   return (
@@ -79,35 +73,7 @@ const MainPostAction = ({ posts }: any) => {
                       <p>{post.dislike_count}</p>
                       <SlDislike className="text-red-400" size={20} />
                     </div>
-
-                    <div className="flex gap-2 border p-1">
-                      <a
-                        aria-label="Share on Whatsapp"
-                        href={`whatsapp://send?text=Check out this blog post: ${post.title} https://abassdev.com/blog/${post.category}/${post.slug}`}
-                        data-action="share/whatsapp/share"
-                      >
-                        <FaWhatsappSquare
-                          className="text-green-600"
-                          size={20}
-                        />
-                      </a>
-                      <a
-                        aria-label="Share on Facebook"
-                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                          `https://abassdev.com/blog/${post.category}/${post.slug}`
-                        )}`}
-                      >
-                        <FaFacebook className="text-blue-600" size={20} />
-                      </a>
-                      <a
-                        aria-label="Share on Facebook"
-                        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                          `https://abassdev.com/blog/${post.category}/${post.slug}?text= Check out this blog post: ${post.title}`
-                        )}`}
-                      >
-                        <FaTwitter className="text-blue-400" size={20} />
-                      </a>
-                    </div>
+                    <ShareLinks post={post} />
                   </div>
                 </div>
               </div>

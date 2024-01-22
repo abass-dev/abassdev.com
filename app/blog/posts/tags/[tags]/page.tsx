@@ -3,6 +3,7 @@ import BlogNav from "@/components/blog/BlogNav";
 import MainPostAction from "@/components/blog/MainPostAction";
 import getTags from "@/components/blog/utils/getTags";
 import localFont from "next/font/local";
+import { notFound } from "next/navigation";
 
 const Orbitron = localFont({
   src: "../../../../../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -10,6 +11,9 @@ const Orbitron = localFont({
 
 export const generateStaticParams = async () => {
   const res = await fetch("http://localhost:5001/api/posts/tags");
+  if (!res.ok) {
+    notFound();
+  }
   const tags = await res.json();
   return tags.map((tag: any) => {
     return {
@@ -20,7 +24,9 @@ export const generateStaticParams = async () => {
 
 const getPost = async (tag: string) => {
   const res = await fetch(`http://localhost:5001/api/posts/tag/${tag}`);
-
+  if (!res.ok) {
+    notFound();
+  }
   const data = await res.json();
 
   return data;
@@ -38,11 +44,8 @@ const page = async ({ params }: any) => {
             <h1
               className={`${Orbitron.className} text-2xl text-gray-600 md:text-5xl font-bold text-center`}
             >
-              {`{"Welcome To `}{" "}
-              <span className="inline-block bg-gradient-to-r bg-clip-text text-transparent to-gray-600 from-green-600">
-                Devs Blog!
-              </span>
-              {`"}`}
+              Tag:
+              <span className="text-sky-600 uppercase"> {params.tags}</span>
             </h1>
           </div>
           <div className="flex sm:space-x-24">
