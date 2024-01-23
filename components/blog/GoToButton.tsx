@@ -1,5 +1,4 @@
-"use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const GoToButton = ({
   slug,
@@ -10,15 +9,10 @@ const GoToButton = ({
   className: string;
   children: React.ReactNode;
 }) => {
-  const router = useRouter();
-
-  const clickHandler = () => {
-    router.push(`/blog/posts/${slug}`);
-  };
   return (
-    <div className={`${className}`} onClick={clickHandler}>
+    <a className={className} href={`/blog/posts/${slug}`}>
       {children}
-    </div>
+    </a>
   );
 };
 

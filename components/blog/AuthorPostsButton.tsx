@@ -1,7 +1,3 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-
 const AuthorPostsButton = ({
   authorName,
   className,
@@ -11,15 +7,13 @@ const AuthorPostsButton = ({
   className: string;
   children: React.ReactNode;
 }) => {
-  const router = useRouter();
-
   return (
-    <div
-      onClick={() => router.push(`/blog/posts/author/${authorName}`)}
+    <a
+      href={`/blog/posts/author/${authorName}`}
       className={`cursor-pointer ${className}`}
     >
       {children}
-    </div>
+    </a>
   );
 };
 

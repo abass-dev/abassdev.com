@@ -74,7 +74,7 @@ const Item = ({
         {techs.map((value, index) => {
           return (
             <span
-              key={index}
+              key={value}
               className="inline-block bg-gray-200 hover:bg-blue-500 hover:text-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
             >
               #{value}

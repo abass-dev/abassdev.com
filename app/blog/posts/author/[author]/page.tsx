@@ -1,26 +1,31 @@
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
 import BlogNav from "@/components/blog/BlogNav";
 import MainPostAction from "@/components/blog/MainPostAction";
+import getAllPosts from "@/components/blog/utils/getAllPosts";
 import getPostsByAuthor from "@/components/blog/utils/getPostsByAuthor";
-import getTags from "@/components/blog/utils/getTags";
 import localFont from "next/font/local";
+import getAllTags from "@/components/blog/utils/getAllTags";
 const Orbitron = localFont({
   src: "../../../../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
 export const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:5001/api/posts");
-  const posts = await res.json();
-  console.log(posts);
-
+  const posts = await getAllPosts();
   return posts.map((post: any) => ({
     author: post.author_username,
   }));
 };
 
+export async function generateMetadata({ params }: any) {
+  return {
+    title: `Posts by ${params.author}'s | Developer's Blog`,
+    description: `Discover articles written by ${params.author} on Developer's Blog.`,
+  };
+}
+
 const page = async ({ params }: any) => {
   const posts = await getPostsByAuthor(params.author);
-  const tags = await getTags();
+  const tags = await getAllTags();
   return (
     <>
       <BlogNav>
@@ -29,7 +34,8 @@ const page = async ({ params }: any) => {
             <h1
               className={`${Orbitron.className} text-2xl text-gray-600 md:text-5xl font-bold text-center`}
             >
-              Posted by {params.author}
+              Posts by:
+              <span className="text-sky-600 uppercase"> {params.author}</span>
             </h1>
           </div>
           <div className="flex sm:space-x-24">

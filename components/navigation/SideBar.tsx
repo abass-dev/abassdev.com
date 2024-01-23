@@ -90,7 +90,7 @@ const SideBar = () => {
             <Link
               onClick={() => open && setOpen(false)}
               href={menu?.link}
-              key={i}
+              key={menu?.name}
               className={` ${
                 menu?.margin && "mt-5"
               } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:text-gray-100 hover:bg-gray-800 rounded-md`}

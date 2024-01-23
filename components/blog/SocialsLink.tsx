@@ -7,20 +7,14 @@ const SocialsLinks = () => {
         aria-label="Devs blog Facebook account"
         href="https://m.facebook.com/abassthedev"
       >
-        <FaFacebook
-          className={"text-blue-600 hover:text-orange-700"}
-          size={26}
-        />
+        <FaFacebook className={"text-blue-600 hover:text-blue-800"} size={26} />
       </a>
       <a
         aria-label="Devs blog Twitter account"
         href="https://twitter.com/abass_dev"
       >
         {" "}
-        <FaTwitter
-          className={"text-blue-400 hover:text-orange-700"}
-          size={26}
-        />
+        <FaTwitter className={"text-blue-400 hover:text-blue-800"} size={26} />
       </a>
       <a
         aria-label="Devs Instagram account"
@@ -35,7 +29,7 @@ const SocialsLinks = () => {
         aria-label="Devs Github account"
         href="https://github.com/abass-dev/abassdev.com"
       >
-        <FaGithub className={"text-gray-700 hover:text-orange-700"} size={26} />
+        <FaGithub className={"text-gray-700 hover:text-gray-900"} size={26} />
       </a>
     </>
   );

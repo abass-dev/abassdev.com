@@ -1,8 +1,8 @@
 import API from "@/components/api";
 import { notFound } from "next/navigation";
 
-const getPostsByAuthor = async (authorName: string) => {
-  const res = await fetch(`${API.BLOG_ALL_POSTS}/author/${authorName}`);
+const getAllTags = async () => {
+  const res = await fetch(`${API.BLOG_ALL_POSTS}/tags`);
   if (!res.ok) {
     notFound();
   }
@@ -11,4 +11,4 @@ const getPostsByAuthor = async (authorName: string) => {
   return data;
 };
 
-export default getPostsByAuthor;
+export default getAllTags;

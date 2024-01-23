@@ -14,8 +14,8 @@ const MainPostAction = ({ posts }: any) => {
       {posts &&
         posts.map((post: any) => {
           return (
-            <div
-              className="bg-gray-100 shadow-md rounded p-4 mb-5"
+            <article
+              className="bg-gray-100 dark:bg-gray-900/70 shadow-md rounded p-4 mb-5"
               key={post.id}
             >
               <div className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -25,10 +25,10 @@ const MainPostAction = ({ posts }: any) => {
               </div>
               <div>
                 <GoToButton
-                  className="text-2xl inline-block font-bold leading-8 tracking-tight underline hover:text-gray-900 cursor-pointer"
+                  className="text-2xl inline-block font-bold leading-8 tracking-tight dark:hover:text-gray-500 hover:text-gray-900 cursor-pointer"
                   slug={post.slug}
                 >
-                  <h1 className="">{post.title}</h1>
+                  <h1>{post.title}</h1>
                 </GoToButton>
                 <div className="flex items-center mt-2 gap-2">
                   <TagsButton
@@ -36,13 +36,13 @@ const MainPostAction = ({ posts }: any) => {
                     tags={post.tags_names}
                   />
                 </div>
-                <div className="text-lg mt-5">
+                <div className="text-lg text-gray-700 dark:text-gray-400 mt-5">
                   {post.short_description}
                   <GoToButton
-                    className="text-pink-700 mt-3  cursor-pointer"
+                    className="text-pink-700 hover:text-pink-400 mt-3  cursor-pointer"
                     slug={post.slug}
                   >
-                    <div className="flex items-center  gap-2">
+                    <div className="flex items-center gap-2">
                       Read more <FiArrowRight />
                     </div>
                   </GoToButton>
@@ -51,33 +51,39 @@ const MainPostAction = ({ posts }: any) => {
                   <div className="md:flex text-sky-700 gap-5">
                     <AuthorPostsButton
                       authorName={post.author_username}
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2  hover:text-sky-400"
                     >
                       <FaUser />
-                      <p>{post.author_username}</p>
+                      <p className="capitalize ">{post.author_username}</p>
                     </AuthorPostsButton>
 
                     <CategoryButton
-                      className="flex items-center cursor-pointer gap-2"
+                      className="flex items-center cursor-pointer gap-2  hover:text-sky-400"
                       category={post.category}
                     >
                       <FaFolderOpen />
-                      <p>{post.category}</p>
+                      <p className="capitalize">{post.category}</p>
                     </CategoryButton>
                   </div>
 
-                  <div className="flex gap-5 justify-between border-t-2 md:border-0 pt-2">
+                  <div className="flex gap-5 justify-between dark:border-gray-600 border-t-2 md:border-0 pt-2">
                     <div className="flex gap-2 p-1">
                       <p>{post.like_count}</p>
-                      <SlLike className="text-blue-400" size={20} />
+                      <SlLike
+                        className="text-blue-400 cursor-not-allowed"
+                        size={20}
+                      />
                       <p>{post.dislike_count}</p>
-                      <SlDislike className="text-red-400" size={20} />
+                      <SlDislike
+                        className="text-red-400 cursor-not-allowed"
+                        size={20}
+                      />
                     </div>
                     <ShareLinks post={post} />
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           );
         })}
     </div>

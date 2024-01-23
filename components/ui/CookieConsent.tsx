@@ -12,8 +12,11 @@ const CookieConsent = () => {
   }, []);
 
   const acceptCookie = () => {
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 30); // 30 days from now
+
     setShowConsent(true);
-    setCookie("privacyPolicy", "true", {});
+    setCookie("privacyPolicy", "true", { expires: expirationDate });
   };
 
   if (showConsent) {
@@ -21,7 +24,7 @@ const CookieConsent = () => {
   }
 
   return (
-    <div className="fixed z-50 bg-black text-white bottom-0 left-0 right-0">
+    <div className="fixed z-50 backdrop-blur bg-gray-200/50  bottom-0 left-0 right-0">
       <div className="flex justify-between items-center p-5">
         <p className="text-base">
           This website use cookies to improve your browsing experience and
@@ -33,7 +36,7 @@ const CookieConsent = () => {
         </p>
         <button
           onClick={acceptCookie}
-          className="bg-white text-black hover:bg-blue-800 hover:text-white p-1 rounded-lg"
+          className="bg-pink-500  hover:bg-green-800 text-white p-1 rounded-lg"
         >
           Okay
         </button>

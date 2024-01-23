@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Script from "next/script";
 import { ReactNode } from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import ThemeToggle from "../ui/theme-toggle";
 import localFont from "next/font/local";
+import BlogFooter from "./BlogFooter";
+import SocialsLinks from "./SocialsLink";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
@@ -41,9 +43,9 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
         </div>
 
         {/* Content */}
-        <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 flex flex-col  overflow-hidden">
           {/* Navbar */}
-          <div className="bg-white shadow">
+          <div className="bg-white dark:bg-gray-900 shadow">
             <div className="container mx-auto">
               <div className="flex justify-between items-center py-4 px-2">
                 <Link
@@ -53,25 +55,7 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
                   Devs Blog
                 </Link>
                 <div className="hidden md:flex gap-5">
-                  <a
-                    aria-label="Devs blog Facebook account"
-                    href="https://m.facebook.com/abassthedev"
-                  >
-                    <FaFacebook className={"text-blue-600"} size={20} />
-                  </a>
-                  <a
-                    aria-label="Devs blog Twitter account"
-                    href="https://twitter.com/abass_dev"
-                  >
-                    {" "}
-                    <FaTwitter className={"text-blue-400"} size={20} />
-                  </a>
-                  <a
-                    aria-label="Devs Instagram account"
-                    href="https://www.instagram.com/abassdev/"
-                  >
-                    <FaInstagram className={"text-orange-700"} size={20} />
-                  </a>
+                  <SocialsLinks />
                 </div>
                 <div className="flex gap-5">
                   <ThemeToggle />
@@ -88,9 +72,9 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M4 6h16M4 12h16M4 18h16"
                       ></path>
                     </svg>
@@ -100,7 +84,10 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
             </div>
           </div>
           {/* Content Body */}
-          <div className="flex-1 overflow-auto p-4">{children}</div>
+          <div className="flex-1 overflow-auto dark:bg-gray-800">
+            {children}
+            <BlogFooter />
+          </div>
         </div>
       </div>
 

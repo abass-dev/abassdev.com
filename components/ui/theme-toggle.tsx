@@ -6,7 +6,7 @@ export default function ThemeToggle() {
   const { theme, setTheme, systemTheme } = useTheme();
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col mb-4 md:mb-0 justify-center">
       <button
         onClick={() => {
           const currentTheme = theme === "system" ? systemTheme : theme;

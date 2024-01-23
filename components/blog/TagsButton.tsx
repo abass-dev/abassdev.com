@@ -1,15 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import { FaTags } from "react-icons/fa";
 
 const TagsButton = ({ tags, className }: any) => {
-  const router = useRouter();
-
-  const handleClick = (tag: any) => {
-    router.push(`/blog/posts/tags/${tag}`);
-  };
-
   return (
     tags && (
       <div className={`cursor-pointer ${className}`}>
@@ -17,13 +8,13 @@ const TagsButton = ({ tags, className }: any) => {
         {tags &&
           tags.split(",").map((tag: any, index: number) => {
             return (
-              <div
-                onClick={() => handleClick(tag)}
-                className="text-pink-700 uppercase"
-                key={index}
+              <a
+                href={`/blog/posts/tags/${tag}`}
+                className="text-pink-700 hover:text-pink-400 uppercase"
+                key={tag.id}
               >
-                #{tag}
-              </div>
+                {tag}
+              </a>
             );
           })}
       </div>

@@ -8,6 +8,7 @@ const API = {
   REACT_SNIPPET: process.env.NEXT_PUBLIC_API_REACT,
   REACT_NATIVE_SNIPPET: process.env.NEXT_PUBLIC_API_REACT_NATIVE,
   PHP_SNIPPET: process.env.NEXT_PUBLIC_API_PHP,
+  BLOG_ALL_POSTS: process.env.NEXT_PUBLIC_BLOG_ALL_POSTS,
 };
 
 export default API;

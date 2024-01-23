@@ -332,7 +332,7 @@ const Inspector = () => {
                         {repoData.map((v, i) => {
                           return (
                             <tr
-                              key={i}
+                              key={v}
                               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                             >
                               <th

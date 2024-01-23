@@ -1,28 +1,20 @@
-"use client";
-import { useRouter } from "next/navigation";
-
 const AllTagsButton = ({ tags }: any) => {
-  const router = useRouter();
-  const handleClick = (tag: any) => {
-    router.push(`/blog/posts/tags/${tag}`);
-  };
-
   return (
     tags && (
-      <div>
+      <section>
         {tags &&
           tags.split(",").map((tag: any, index: number) => {
             return (
-              <p
-                onClick={() => handleClick(tag)}
-                className="cursor-pointer font-bold ml-4 text-gray-500 uppercase"
-                key={index}
+              <a
+                href={`/blog/posts/tags/${tag}`}
+                className="cursor-pointer font-bold ml-4 hover:text-sky-500 text-sky-700 uppercase"
+                key={tag.id}
               >
                 {tag}
-              </p>
+              </a>
             );
           })}
-      </div>
+      </section>
     )
   );
 };
@@ -33,7 +25,7 @@ const AllTagsLayout = ({ tags }: any) => {
         return (
           <AllTagsButton
             tags={tag.tag_name}
-            className="font-bold ml-4 text-gray-500 uppercase"
+            className="font-bold ml-4 text-gray-500  uppercase"
             key={tag.id}
           >
             {tag.tag_name}

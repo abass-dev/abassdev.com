@@ -1,20 +1,16 @@
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
 import BlogNav from "@/components/blog/BlogNav";
 import MainPostAction from "@/components/blog/MainPostAction";
-import getTags from "@/components/blog/utils/getTags";
+import getAllTags from "@/components/blog/utils/getAllTags";
+import getSingleTag from "@/components/blog/utils/getSingleTag";
 import localFont from "next/font/local";
-import { notFound } from "next/navigation";
 
 const Orbitron = localFont({
   src: "../../../../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
 export const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:5001/api/posts/tags");
-  if (!res.ok) {
-    notFound();
-  }
-  const tags = await res.json();
+  const tags = await getAllTags();
   return tags.map((tag: any) => {
     return {
       tags: tag.tag_name,
@@ -22,19 +18,16 @@ export const generateStaticParams = async () => {
   });
 };
 
-const getPost = async (tag: string) => {
-  const res = await fetch(`http://localhost:5001/api/posts/tag/${tag}`);
-  if (!res.ok) {
-    notFound();
-  }
-  const data = await res.json();
-
-  return data;
-};
+export async function generateMetadata({ params }: any) {
+  return {
+    title: `Tag ${params.tags} | Developer's Blog`,
+    description: `Explore articles tagged with ${params.tags} on Developer's Blog.`,
+  };
+}
 
 const page = async ({ params }: any) => {
-  const tags = await getTags();
-  const postByTags = await getPost(params.tags);
+  const tags = await getAllTags();
+  const postByTags = await getSingleTag(params.tags);
 
   return (
     <>
