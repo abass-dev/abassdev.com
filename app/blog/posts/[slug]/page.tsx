@@ -1,6 +1,7 @@
 import AuthorPostsButton from "@/components/blog/AuthorPostsButton";
 import BlogNav from "@/components/blog/BlogNav";
 import ShareLinks from "@/components/blog/ShareLinks";
+import SinglePostFooter from "@/components/blog/SinglePostFooter";
 import TagsButton from "@/components/blog/TagsButton";
 import getAllPosts from "@/components/blog/utils/getAllPosts";
 import getPostBySlug from "@/components/blog/utils/getPostBySlug";
@@ -82,6 +83,7 @@ const page = async ({ params }: any) => {
                   </div>
                 </div>
               </div>
+              <SinglePostFooter currentPostId={post.id} />
             </div>
           </article>
         );

@@ -6,7 +6,7 @@ const GoToButton = ({
   children,
 }: {
   slug?: any;
-  className: string;
+  className?: string;
   children: React.ReactNode;
 }) => {
   return (
