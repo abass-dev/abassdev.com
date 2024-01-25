@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const AuthorPostsButton = ({
   authorName,
   className,
@@ -8,12 +10,12 @@ const AuthorPostsButton = ({
   children: React.ReactNode;
 }) => {
   return (
-    <a
+    <Link
       href={`/blog/posts/author/${authorName}`}
       className={`cursor-pointer ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 

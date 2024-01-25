@@ -1,13 +1,11 @@
 // @ts-ignore
 // @ts-nocheck
 
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Notification from "../../utils/Notification";
-import {
-  validateEmail,
-  validateTextarea,
-  validateUsername,
-} from "../../helpers";
+import { validateEmail, validateTextarea } from "../../helpers";
 import emailjs from "@emailjs/browser";
 import Alert from "../ui/Alert";
 import ProgressBar from "../ui/LoadingBar";

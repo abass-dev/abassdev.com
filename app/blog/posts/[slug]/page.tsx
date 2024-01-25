@@ -1,4 +1,3 @@
-import API from "@/components/api";
 import AuthorPostsButton from "@/components/blog/AuthorPostsButton";
 import BlogNav from "@/components/blog/BlogNav";
 import ShareLinks from "@/components/blog/ShareLinks";

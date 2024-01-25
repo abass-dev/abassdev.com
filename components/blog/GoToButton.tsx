@@ -10,9 +10,9 @@ const GoToButton = ({
   children: React.ReactNode;
 }) => {
   return (
-    <a className={className} href={`/blog/posts/${slug}`}>
+    <Link className={className} href={`/blog/posts/${slug}`}>
       {children}
-    </a>
+    </Link>
   );
 };
 

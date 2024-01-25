@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Theme from "../context/theme-provider";
 import Script from "next/script";
+import { CookieConsent } from "@/components";
 const Inter = localFont({
   src: "../fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
 });
@@ -10,9 +11,10 @@ const Inter = localFont({
 export const metadata: Metadata = {
   title: "Abass Dev | Full-stack developer | Personal portfolio",
   description: "Abass Dev personal portfolio",
+  manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/android-chrome-512x512.png",
+    shortcut: "/icon512_rounded.png",
     apple: "/apple-touch-icon.png",
   },
 };
@@ -25,6 +27,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="#fff"
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="#000"
+        />
+
         {process.env.NODE_ENV !== "development" && (
           <>
             <Script
@@ -45,7 +58,10 @@ export default function RootLayout({
         )}
       </head>
       <body className={`${Inter.className} bg-gray-100`}>
-        <Theme>{children}</Theme>
+        <Theme>
+          <main>{children}</main>
+        </Theme>
+        <CookieConsent />
       </body>
     </html>
   );

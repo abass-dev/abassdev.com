@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const AllTagsButton = ({ tags }: any) => {
   return (
     tags && (
@@ -5,13 +7,13 @@ const AllTagsButton = ({ tags }: any) => {
         {tags &&
           tags.split(",").map((tag: any, index: number) => {
             return (
-              <a
+              <Link
                 href={`/blog/posts/tags/${tag}`}
                 className="cursor-pointer font-bold ml-4 hover:text-sky-500 text-sky-700 uppercase"
                 key={tag.id}
               >
                 {tag}
-              </a>
+              </Link>
             );
           })}
       </section>

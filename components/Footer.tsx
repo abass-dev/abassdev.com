@@ -1,27 +1,17 @@
-// @ts-ignore
-// @ts-nocheck
-
-"use client";
 import ContactForm from "./contact/Form";
-import {
-  BsGithub,
-  BsFacebook,
-  BsTwitter,
-  BsLinkedin,
-  BsArrowBarRight,
-} from "react-icons/bs";
+import { BsGithub, BsFacebook, BsTwitter } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import buildInfo from "../build-info.json";
 import packageJson from "../package.json";
-import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import { FaArrowAltCircleRight } from "react-icons/fa";
+
 const EduNSWACTFoundation = localFont({
   src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
 });
 const appVersion = packageJson.version;
 
-const ImportantLinks = ({ href, text }) => {
+const FooterLink = ({ href, text }: { href: string; text: string }) => {
   return (
     <li className="mb-2 hover:text-gray-500">
       <a className="flex text-lg gap-2 items-center" href={href}>
@@ -31,13 +21,11 @@ const ImportantLinks = ({ href, text }) => {
   );
 };
 
-const Footer = () => {
-  const pathname = usePathname();
-
+const Footer = ({ disableContactForm }: any) => {
   return (
     <div className=" text-white text-xl bg-gray-900 py-8">
       <div className="container mx-auto grid grid-cols-4 gap-10 px-8 md:px-20">
-        {pathname !== "/contact/" && (
+        {!disableContactForm && (
           <div className="col-span-4 md:col-span-2">
             <ContactForm />
           </div>
@@ -45,7 +33,7 @@ const Footer = () => {
 
         <div
           className={`col-span-4 text-center text-gray-300 ${
-            pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
+            disableContactForm ? "md:-col-span-4" : "md:col-span-2"
           }`}
         >
           <h2 className={`${EduNSWACTFoundation.className} mb-3 text-3xl`}>
@@ -82,12 +70,12 @@ const Footer = () => {
           <div className="py-3 mt-5">
             <h3 className="py-5 text-3xl">Other Links</h3>
             <ul className="grid grid-cols-2 place-items-center">
-              <ImportantLinks href="/privacy-policy" text="Privacy Policy" />
-              <ImportantLinks href="/copyright/" text="Copyright" />
-              <ImportantLinks href="/snippets/" text="Snippets" />
-              <ImportantLinks href="/repo-inspector/" text="Repo Inspector" />
-              <ImportantLinks href="/my-story/" text="About Me" />
-              <ImportantLinks href="/contact/" text="Contact Me" />
+              <FooterLink href="/privacy-policy" text="Privacy Policy" />
+              <FooterLink href="/copyright/" text="Copyright" />
+              <FooterLink href="/snippets/" text="Snippets" />
+              <FooterLink href="/repo-inspector/" text="Repo Inspector" />
+              <FooterLink href="/my-story/" text="About Me" />
+              <FooterLink href="/contact/" text="Contact Me" />
             </ul>
           </div>
         </div>

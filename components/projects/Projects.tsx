@@ -1,20 +1,17 @@
-"use client";
-
 import { BsGithub } from "react-icons/bs";
 import { SeeMoreButton } from "../ui";
-import { usePathname } from "next/navigation";
 import Item from "./Item";
-import { Report } from "../";
+import { Footer, Report } from "../";
 import localFont from "next/font/local";
+import Navigation from "../navigation/Navigation";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
-const Projects = () => {
-  const pathName = usePathname();
-
+const Projects = ({ page }: { page?: boolean }) => {
   return (
     <>
+      {page && <Navigation />}
       <section id="projects" className="pt-20 dark:bg-gray-900">
         <div className={`container mx-auto px-8 md:px-10 lg:px-20 xl:px-32`}>
           <h1
@@ -128,7 +125,7 @@ const Projects = () => {
               techs={["react", "sass", "firebase"]}
             />
 
-            {pathName === "/projects/" ? (
+            {page ? (
               <>
                 <Item
                   name="Byte Teachers (Blog)"
@@ -171,7 +168,12 @@ const Projects = () => {
           </div>
         </div>
       </section>
-      {pathName === "/projects/" && <Report report="projects/page" />}
+      {page && (
+        <>
+          <Report report="projects/page" />
+          <Footer />
+        </>
+      )}
     </>
   );
 };

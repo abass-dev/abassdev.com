@@ -25,10 +25,12 @@ const MainPostAction = ({ posts }: any) => {
               </div>
               <div>
                 <GoToButton
-                  className="text-2xl inline-block font-bold leading-8 tracking-tight dark:hover:text-gray-500 hover:text-gray-900 cursor-pointer"
+                  className="text-2xl inline-block font-bold leading-8 tracking-tight  cursor-pointer"
                   slug={post.slug}
                 >
-                  <h1>{post.title}</h1>
+                  <h1 className="text-blue-600 hover:text-blue-800">
+                    {post.title}
+                  </h1>
                 </GoToButton>
                 <div className="flex items-center mt-2 gap-2">
                   <TagsButton

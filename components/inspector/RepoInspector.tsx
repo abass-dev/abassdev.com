@@ -12,7 +12,8 @@ import { validateUsername, dateToReadable } from "../../helpers";
 import { Alert, LoadingBar } from "../ui";
 import Notification from "../../utils/Notification";
 import isValideURL from "../../helpers/isValideURL";
-import { Report } from "..";
+import { Footer, Report } from "..";
+import Navigation from "../navigation/Navigation";
 
 const notyf = new Notification(3000);
 
@@ -47,8 +48,6 @@ const Inspector = () => {
         setLoading(false);
         return notyf.error("Repository name is required!");
       } else {
-        console.log(`${API.REPO_INSPECTOR}${service}=${owner}/${repo}`);
-
         await axios
           .get(`${API.REPO_INSPECTOR}${service}=${owner}/${repo}`)
           .then((response) => {
@@ -57,7 +56,6 @@ const Inspector = () => {
             setLoading(false);
           })
           .catch((e) => {
-            console.log(e);
             setError(
               "Something went wrong! please make sure your repository exist."
             );
@@ -104,7 +102,6 @@ const Inspector = () => {
             setLoading(false);
           })
           .catch((e) => {
-            console.log(e);
             setError(
               "Something went wrong! please make sure your repository exist."
             );
@@ -116,6 +113,7 @@ const Inspector = () => {
 
   return (
     <>
+      <Navigation />
       <div className=" dark:text-gray-100 dark:bg-gray-900 pt-20">
         <div className="container mx-auto px-8 md:px-10 lg:px-20 xl:px-32">
           <div className="flex justify-center gap-6 p-3 items-center bg-gray-400">
@@ -425,7 +423,8 @@ const Inspector = () => {
           </div>
         </div>
       </div>
-      <Report report="contact/page" />
+      <Report report="repo-inspector/page" />
+      <Footer />
     </>
   );
 };

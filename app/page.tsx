@@ -25,7 +25,6 @@ export default function page() {
       <Report />
       <ScrollUp />
       <Footer />
-      <CookieConsent />
     </div>
   );
 }

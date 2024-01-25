@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const CategoryButton = ({ category, children, className }: any) => {
   return (
-    <a className={`${className}`} href={`/blog/posts/category/${category}`}>
+    <Link className={`${className}`} href={`/blog/posts/category/${category}`}>
       {children}
-    </a>
+    </Link>
   );
 };
 

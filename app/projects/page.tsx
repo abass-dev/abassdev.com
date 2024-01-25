@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return <Projects />;
+  return <Projects page={true} />;
 };
 
 export default Page;

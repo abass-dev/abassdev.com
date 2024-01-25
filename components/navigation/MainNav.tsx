@@ -51,7 +51,7 @@ const MainNav = () => {
     <nav
       className={`${
         isOpen && "overflow-auto link-anime"
-      } backdrop-blur md:bg-white/10 z-50 bg-white/30 shadow-md border-gray-200 fixed w-full dark:bg-gray-900`}
+      } backdrop-blur dark:text-white md:bg-white/10 z-50 bg-white/30 shadow-md border-gray-200 fixed w-full dark:bg-gray-900`}
     >
       <div className="xl:container xl:my-auto transition-all ease-in-out duration-300 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center">
@@ -185,7 +185,7 @@ const MainNav = () => {
             </li>
             <li>
               <a
-                href="https://byteteachers.com"
+                href="/blog"
                 className={`md:hover:text-blue-500 block a-link py-2 pl-3 pr-4 rounded font-bold md:bg-transparent  md:p-0`}
               >
                 Blog

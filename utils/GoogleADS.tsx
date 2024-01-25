@@ -17,9 +17,7 @@ const GoogleADS = ({ dataAdSlot }: ItemProps) => {
       } else {
         return null;
       }
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   }, []);
 
   return (
