@@ -33,10 +33,10 @@ const Blog = async () => {
             </p>
             <div className="mt-3 mb-20 p-4">
               <Link
-                className="flex font-semibold line-clamp-1 text-blue-600 text-xl justify-center hover:text-blue-800 items-center gap-2"
+                className="font-semibold line-clamp-1 text-blue-600 text-xl text-center hover:text-blue-800"
                 href={`/blog/posts/${lastPost[0].slug}`}
               >
-                {lastPost[0].title} <RiArrowRightDoubleFill />
+                {lastPost[0].title} ...
               </Link>
             </div>
           </div>
