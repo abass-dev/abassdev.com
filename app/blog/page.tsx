@@ -7,6 +7,7 @@ import getAllPosts from "@/components/blog/utils/getAllPosts";
 import { getLastPost } from "@/components/blog/getLastPost";
 import Link from "next/link";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
+import API from "@/components/api";
 
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -16,6 +17,7 @@ const Blog = async () => {
   const posts = await getAllPosts();
   const tags = await getTags();
   const lastPost = await getLastPost();
+
   return (
     <>
       <BlogNav>

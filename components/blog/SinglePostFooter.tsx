@@ -8,8 +8,17 @@ type Props = {
   currentPostId: number;
 };
 
+const secretKey = API.AUTHORIZATION_KEY || "";
+
 const getNextPostById = async (id: number) => {
-  const res = await fetch(`${API.BLOG_ALL_POSTS}/id/${id}`);
+  const res = await fetch(`${API.BLOG_ALL_POSTS}/id/${id}`, {
+    method: "GET",
+    cache: "no-cache",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: secretKey,
+    },
+  });
   const data = await res.json();
 
   return data;

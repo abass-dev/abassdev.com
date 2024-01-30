@@ -1,7 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import Script from "next/script";
-import { ReactNode } from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { ReactNode, useEffect, useState } from "react";
 import ThemeToggle from "../ui/theme-toggle";
 import localFont from "next/font/local";
 import BlogFooter from "./BlogFooter";
@@ -11,12 +11,67 @@ const Orbitron = localFont({
 });
 
 const BlogNav = ({ children }: { children: ReactNode }) => {
+  const [open, setOpen] = useState(false);
+
+  const links = [
+    {
+      id: 1,
+      name: "Home",
+      href: "/blog",
+    },
+    {
+      id: 2,
+      name: "Portfolio",
+      href: "/",
+    },
+    {
+      id: 3,
+      name: "About",
+      href: "/my-story",
+    },
+    {
+      id: 4,
+      name: "Contact",
+      href: "/contact",
+    },
+    {
+      id: 5,
+      name: "Privacy Policy",
+      href: "/privacy-policy",
+    },
+  ];
+  const openNav = () => {
+    setOpen(!open);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (e: any) => {
+      const sidebar = document.getElementById("sidebar");
+      const openSidebarButton = document.getElementById("open-sidebar");
+
+      if (
+        !sidebar?.contains(e.target) &&
+        !openSidebarButton?.contains(e.target)
+      ) {
+        sidebar?.classList.add("-translate-x-full");
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
   return (
     <div className="bg-gray-100">
       <div className="h-screen flex overflow-hidden bg-gray-200">
         {/* Sidebar */}
         <div
-          className="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+          className={`${
+            open ? "" : "-translate-x-full"
+          } absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform ease-in-out duration-300`}
           id="sidebar"
         >
           {/* Your Sidebar Content */}
@@ -27,17 +82,16 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
               Devs Blog
             </h1>
             <ul className="mt-4">
-              <li className="mb-2">
-                <a href="/blog" className="block hover:text-indigo-400">
-                  Home
-                </a>
-              </li>
-
-              <li className="mb-2">
-                <a href="/contact" className="block hover:text-indigo-400">
-                  Contact
-                </a>
-              </li>
+              {links.map((link) => (
+                <li key={link.id} className="mb-2">
+                  <Link
+                    href={link.href}
+                    className="block hover:text-indigo-400"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -60,6 +114,7 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
                 <div className="flex gap-5">
                   <ThemeToggle />
                   <button
+                    onClick={openNav}
                     aria-label="Side Bar"
                     className="text-gray-500 hover:text-gray-600"
                     id="open-sidebar"
@@ -90,23 +145,6 @@ const BlogNav = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       </div>
-
-      <Script id="openSideBar">
-        {` const sidebar = document.getElementById('sidebar');
-    const openSidebarButton = document.getElementById('open-sidebar');
-    
-    openSidebarButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        sidebar.classList.toggle('-translate-x-full');
-    });
-
-    // Close the sidebar when clicking outside of it
-    document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
-            sidebar.classList.add('-translate-x-full');
-        }
-    });`}
-      </Script>
     </div>
   );
 };
