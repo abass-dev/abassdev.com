@@ -5,16 +5,13 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { MdFolder } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import Link from "next/link";
+import { IoMdSchool } from "react-icons/io";
+
 import ThemeToggle from "../ui/theme-toggle";
 import Image from "next/image";
-import {
-  BsBugFill,
-  BsCodeSlash,
-  BsGlobeEuropeAfrica,
-  BsPass,
-  BsQuestionCircleFill,
-} from "react-icons/bs";
+import { BsBugFill, BsGlobeEuropeAfrica, BsPass } from "react-icons/bs";
 import { useTheme } from "next-themes";
+import { GiSkills } from "react-icons/gi";
 
 const SideBar = () => {
   const { theme, setTheme } = useTheme();
@@ -26,14 +23,14 @@ const SideBar = () => {
 
   const menus = [
     { name: "Projects", link: "/projects", icon: MdFolder },
-    { name: "Repo Inspector", link: "/repo-inspector", icon: BsBugFill },
-    { name: "Snippets", link: "/snippets", icon: BsCodeSlash },
+    { name: "Skills", link: "/#skills", icon: IoMdSchool },
     {
       name: "My Story",
       link: "/my-story",
       icon: BsPass,
       margin: true,
     },
+    { name: "Repo Inspector", link: "/repo-inspector", icon: BsBugFill },
     {
       name: "Blog",
       link: "/blog",
@@ -53,7 +50,7 @@ const SideBar = () => {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <section className="flex fixed overflow-x-hidden z-50 gap-6 max-h-screen">
+    <section className="flex fixed z-50 gap-6 max-h-screen">
       <div
         className={`bg-transparent backdrop-blur ${
           open ? "w-72" : "w-16"

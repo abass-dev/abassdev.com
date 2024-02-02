@@ -3,7 +3,7 @@ import Link from "next/link";
 const AllTagsButton = ({ tags }: any) => {
   return (
     tags && (
-      <section>
+      <section key={tags.id}>
         {tags &&
           tags.split(",").map((tag: any, index: number) => {
             return (

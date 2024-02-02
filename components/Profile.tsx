@@ -100,7 +100,7 @@ const Profile = () => {
           </div>
           <div className="w-full text-center">
             <Link className="text-blue-700" href="/my-story">
-              Read more about me...
+              Read more about me ...
             </Link>
           </div>
         </div>

@@ -2,13 +2,10 @@ import API from "@/components/api";
 import { notFound } from "next/navigation";
 
 const secretKey = API.AUTHORIZATION_KEY || "";
-
-const getPostBySlug = async (slug: string) => {
-  const res = await fetch(`${API.BLOG_ALL_POSTS!}/slug/${slug}`, {
+const getAllTags = async () => {
+  const res = await fetch(`${API.BLOG_POSTS}/tags`, {
     method: "GET",
-    cache: "no-cache",
     headers: {
-      "Content-Type": "application/json",
       Authorization: secretKey,
     },
   });
@@ -16,7 +13,8 @@ const getPostBySlug = async (slug: string) => {
     notFound();
   }
   const data = await res.json();
+
   return data;
 };
 
-export default getPostBySlug;
+export default getAllTags;

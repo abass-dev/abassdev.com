@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 
 const secretKey = API.AUTHORIZATION_KEY || "";
 
-const getCategory = async (category: string) => {
-  const res = await fetch(`${API.BLOG_ALL_POSTS}/category/${category}`, {
+export const revalidate = 10;
+const getSingleTag = async (tag: string) => {
+  const res = await fetch(`${API.BLOG_POSTS}/tag/${tag}`, {
     method: "GET",
-    cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
       Authorization: secretKey,
@@ -19,4 +19,5 @@ const getCategory = async (category: string) => {
 
   return data;
 };
-export default getCategory;
+
+export default getSingleTag;

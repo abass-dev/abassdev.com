@@ -2,12 +2,11 @@ import BlogNav from "@/components/blog/BlogNav";
 import localFont from "next/font/local";
 import MainPostAction from "@/components/blog/MainPostAction";
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
-import getTags from "@/components/blog/utils/getAllTags";
-import getAllPosts from "@/components/blog/utils/getAllPosts";
-import { getLastPost } from "@/components/blog/getLastPost";
+import getTags from "@/components/blog/lib/getAllTags";
+import getAllPosts from "@/components/blog/lib/getAllPosts";
+import { getLastPost } from "@/components/blog/lib/getLastPost";
 import Link from "next/link";
-import { RiArrowRightDoubleFill } from "react-icons/ri";
-import API from "@/components/api";
+import { FiArrowRight } from "react-icons/fi";
 
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -15,6 +14,7 @@ const Orbitron = localFont({
 
 const Blog = async () => {
   const posts = await getAllPosts();
+
   const tags = await getTags();
   const lastPost = await getLastPost();
 
@@ -33,12 +33,13 @@ const Blog = async () => {
             <p className="text-gray-600 dark:text-gray-400 text-3xl">
               Latest Post
             </p>
-            <div className="mt-3 mb-20 p-4">
+            <div className="mt-3 mb-20 p-4 w-[200px] md:w-[600px] text-blue-600  hover:text-blue-800">
               <Link
-                className="font-semibold line-clamp-1 text-blue-600 text-xl text-center hover:text-blue-800"
+                className="font-semibold line-clamp-1 lg:line-clamp-none text-xl text-center"
                 href={`/blog/posts/${lastPost[0].slug}`}
               >
-                {lastPost[0].title} ...
+                {lastPost[0].title}{" "}
+                <FiArrowRight className="hidden md:inline-block text-pink-700"></FiArrowRight>
               </Link>
             </div>
           </div>

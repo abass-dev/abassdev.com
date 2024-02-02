@@ -1,10 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { birthday } from "../../helpers";
-import { Report } from "../";
+import { Footer, Report } from "../";
 import localFont from "next/font/local";
+import Navigation from "../navigation/Navigation";
 
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -13,6 +13,7 @@ const Orbitron = localFont({
 const MyStory = () => {
   return (
     <>
+      <Navigation />
       <div className=" dark:text-gray-100 dark:bg-gray-900">
         <div
           className={`pt-20 pb-10 container mx-auto px-8 md:px-10 lg:px-20 xl:px-32`}
@@ -87,6 +88,7 @@ const MyStory = () => {
         </div>
       </div>
       <Report report="my-story/page" />
+      <Footer />
     </>
   );
 };

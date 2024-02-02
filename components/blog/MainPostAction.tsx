@@ -7,6 +7,7 @@ import AuthorPostsButton from "./AuthorPostsButton";
 import TagsButton from "./TagsButton";
 import { FiArrowRight } from "react-icons/fi";
 import ShareLinks from "./ShareLinks";
+import PostLectureDuration from "./PostLectureDuration";
 
 const MainPostAction = ({ posts }: any) => {
   return (
@@ -35,11 +36,11 @@ const MainPostAction = ({ posts }: any) => {
                 <div className="flex items-center mt-2 gap-2">
                   <TagsButton
                     className="flex gap-2 justify-center items-center"
-                    tags={post.tags_names}
+                    tags={post.tag_names}
                   />
                 </div>
                 <div className="text-lg text-gray-700 dark:text-gray-400 mt-5">
-                  {post.short_description}
+                  {post.description}
                   <GoToButton
                     className="text-pink-700 hover:text-pink-400 mt-3  cursor-pointer"
                     slug={post.slug}
@@ -66,8 +67,8 @@ const MainPostAction = ({ posts }: any) => {
                       <FaFolderOpen />
                       <p className="capitalize">{post.category}</p>
                     </CategoryButton>
+                    <PostLectureDuration content={post.body} />
                   </div>
-
                   <div className="flex gap-5 justify-between dark:border-gray-600 border-t-2 md:border-0 pt-2">
                     <div className="flex gap-2 p-1">
                       <p>{post.like_count}</p>

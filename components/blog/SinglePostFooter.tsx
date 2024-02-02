@@ -1,8 +1,8 @@
 import Link from "next/link";
 import API from "../api";
 import { RiArrowLeftDoubleFill, RiArrowRightDoubleFill } from "react-icons/ri";
-import getAllPosts from "./utils/getAllPosts";
-import { getLastPost } from "./getLastPost";
+import getAllPosts from "./lib/getAllPosts";
+import { getLastPost } from "./lib/getLastPost";
 
 type Props = {
   currentPostId: number;
@@ -11,9 +11,8 @@ type Props = {
 const secretKey = API.AUTHORIZATION_KEY || "";
 
 const getNextPostById = async (id: number) => {
-  const res = await fetch(`${API.BLOG_ALL_POSTS}/id/${id}`, {
+  const res = await fetch(`${API.BLOG_POSTS}/id/${id}`, {
     method: "GET",
-    cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
       Authorization: secretKey,

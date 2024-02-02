@@ -5,11 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
-import Others from "./Others";
 import { RiMenu3Fill } from "react-icons/ri";
 import ScrollProgress from "../ui/ScrollProgress";
 import ThemeToggle from "../ui/theme-toggle";
-import Snippets from "./Snippets";
 const Exo = localFont({
   src: "../../fonts/Exo_2/Exo2-VariableFont_wght.ttf",
 });
@@ -41,7 +39,7 @@ const MainNav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos, handleScroll]);
+  }, [prevScrollPos]);
 
   const openNavHandler = () => {
     setIsOpen(!isOpen);
@@ -129,6 +127,19 @@ const MainNav = () => {
                 Projects
               </Link>
             </li>
+            <li>
+              <Link
+                onClick={() => setIsOpen(!isOpen)}
+                href="/#skills"
+                className={`${
+                  pathName === "/#skills/"
+                    ? "md:text-blue-700 bg-blue-700 text-white md:dark:text-blue-500"
+                    : ""
+                }  md:hover:text-blue-500 a-link block py-2 pl-3 pr-4 font-bold rounded md:bg-transparent  md:p-0`}
+              >
+                Skills
+              </Link>
+            </li>
 
             <li>
               <Link
@@ -156,20 +167,6 @@ const MainNav = () => {
                 Repo Inspector
               </Link>
             </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(!isOpen)}
-                href="/snippets"
-                className={`${
-                  pathName === "/snippet/"
-                    ? "md:text-blue-700 bg-blue-700 text-white md:dark:text-blue-500"
-                    : ""
-                } md:hover:text-blue-500 a-link block py-2 pl-3 pr-4 font-bold rounded md:bg-transparent  md:p-0`}
-              >
-                Snippets
-              </Link>
-            </li>
-
             <li>
               <Link
                 onClick={() => setIsOpen(!isOpen)}

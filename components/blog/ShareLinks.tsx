@@ -5,7 +5,7 @@ const ShareLinks = ({ post }: any) => {
     <div className="flex gap-2 p-1">
       <a
         aria-label="Share on Whatsapp"
-        href={`whatsapp://send?text=Check out this blog post: ${post.title} https://abassdev.com/blog/${post.category}/${post.slug}`}
+        href={`whatsapp://send?text=${post.title} http://localhost:3000/blog/posts/${post.slug}`}
         data-action="share/whatsapp/share"
       >
         <FaWhatsappSquare
@@ -15,8 +15,8 @@ const ShareLinks = ({ post }: any) => {
       </a>
       <a
         aria-label="Share on Facebook"
-        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          `https://abassdev.com/blog/${post.category}/${post.slug}`
+        href={`https://m.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          `https://abassdev.com/blog/posts/${post.slug}`
         )}`}
       >
         <FaFacebook className="text-blue-600 hover:text-blue-800" size={20} />

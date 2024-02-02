@@ -6,6 +6,11 @@
       <changefreq>weekly</changefreq>
    </url>
    <url>
+      <loc>https://abassdev.com/blog</loc>
+      <lastmod>2024-01-30</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
       <loc>https://abassdev.com/projects</loc>
       <lastmod>2024-01-01</lastmod>
       <changefreq>monthly</changefreq>
@@ -19,21 +24,6 @@
       <loc>https://abassdev.com/my-story</loc>
       <lastmod>2024-01-01</lastmod>
       <changefreq>yearly</changefreq>
-   </url>
-   <url>
-      <loc>https://abassdev.com/snippets/react</loc>
-      <lastmod>2024-01-01</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-   <url>
-      <loc>https://abassdev.com/snippets/react-native</loc>
-      <lastmod>2024-01-01</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-   <url>
-      <loc>https://abassdev.com/snippets/php</loc>
-      <lastmod>2024-01-01</lastmod>
-      <changefreq>monthly</changefreq>
    </url>
    <url>
       <loc>https://abassdev.com/repo-inspector</loc>

@@ -1,8 +1,8 @@
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
 import BlogNav from "@/components/blog/BlogNav";
 import MainPostAction from "@/components/blog/MainPostAction";
-import getAllTags from "@/components/blog/utils/getAllTags";
-import getSingleTag from "@/components/blog/utils/getSingleTag";
+import getAllTags from "@/components/blog/lib/getAllTags";
+import getSingleTag from "@/components/blog/lib/getSingleTag";
 import localFont from "next/font/local";
 
 const Orbitron = localFont({

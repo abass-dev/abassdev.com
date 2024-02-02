@@ -72,7 +72,6 @@ const Footer = ({ disableContactForm }: any) => {
             <ul className="grid grid-cols-2 place-items-center">
               <FooterLink href="/privacy-policy" text="Privacy Policy" />
               <FooterLink href="/copyright/" text="Copyright" />
-              <FooterLink href="/snippets/" text="Snippets" />
               <FooterLink href="/repo-inspector/" text="Repo Inspector" />
               <FooterLink href="/my-story/" text="About Me" />
               <FooterLink href="/contact/" text="Contact Me" />

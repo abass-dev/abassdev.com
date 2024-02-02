@@ -1,7 +1,7 @@
 import Link from "next/link";
 import localFont from "next/font/local";
 const EduNSWACTFoundation = localFont({
-  src: "../../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
+  src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
 });
 
 interface HomeItemsProps {

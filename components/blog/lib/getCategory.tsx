@@ -3,15 +3,14 @@ import { notFound } from "next/navigation";
 
 const secretKey = API.AUTHORIZATION_KEY || "";
 
-const getAllPosts = async () => {
-  const res = await fetch("http://localhost:5000/api/posts", {
+const getCategory = async (category: string) => {
+  const res = await fetch(`${API.BLOG_POSTS}/category/${category}`, {
     method: "GET",
-    cache: "no-cache",
     headers: {
+      "Content-Type": "application/json",
       Authorization: secretKey,
     },
   });
-
   if (!res.ok) {
     notFound();
   }
@@ -19,5 +18,4 @@ const getAllPosts = async () => {
 
   return data;
 };
-
-export default getAllPosts;
+export default getCategory;

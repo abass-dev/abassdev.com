@@ -1,5 +1,5 @@
-import HomeItems from "../snippets/HomeItems";
 import localFont from "next/font/local";
+import HomeItems from "../HomeBlogSectionItems";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
@@ -16,10 +16,10 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-2  gap-10">
           <HomeItems
-            learnMore={{ text: "Learn More...", href: "/snippets" }}
-            title="Internal blog"
+            learnMore={{ text: "Browse blog posts now...", href: "/blog" }}
+            title="Developers blog"
             bgImg={`bg-[url("/assets/images/react-code.webp")]`}
-            desk="Easily improve your skills with code snippets."
+            desk="Where I passionately share my knowledge with the world during my free time."
           />
 
           <HomeItems
