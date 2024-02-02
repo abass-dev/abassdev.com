@@ -13,8 +13,8 @@ const EduNSWACTFoundation = localFont({
 
 const Profile = () => {
   return (
-    <div className=" bg-white min-h-screen flex justify-center pb-10 pt-32 lg:p-0 dark:bg-gray-900">
-      <section className="container mx-auto text-xl grid md:grid-cols-3 gap-8 px-10  md:items-center md:text-left">
+    <section className=" bg-white min-h-screen flex justify-center pb-10 pt-32 lg:p-0 dark:bg-gray-900">
+      <div className="container mx-auto text-xl grid md:grid-cols-3 gap-8 px-10  md:items-center md:text-left">
         <div className="flex justify-center">
           <Image
             src="/assets/images/profile-picture.webp"
@@ -104,8 +104,8 @@ const Profile = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 export default Profile;

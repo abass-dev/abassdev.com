@@ -8,7 +8,7 @@ const ScrollUp = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollY < 712 && btnUpRef.current && btnUpRef.current.classList) {
         btnUpRef.current.classList.add("hidden");
@@ -24,7 +24,7 @@ const ScrollUp = () => {
     };
   }, []); // Empty dependency array ensures the effect only runs on mount and unmount
 
-  const handleOnGoUp = () => {
+  const handleUpButton = () => {
     window.scrollTo({ top: 0 });
   };
 
@@ -44,12 +44,12 @@ const ScrollUp = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      onClick={handleOnGoUp}
+      onClick={handleUpButton}
       className={`scroll-up hidden`}
       ref={btnUpRef}
       id="scrollUpButton"
     >
-      <div className="">
+      <div className="cursor-pointer">
         <BsChevronDoubleUp color="white" size={25} />
       </div>
     </div>

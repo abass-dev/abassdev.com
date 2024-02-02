@@ -24,7 +24,11 @@ const Projects = ({ page }: { page?: boolean }) => {
               name="Repo Inspector"
               headerImg="/assets/images/repo-inspector.webp"
               description="Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase."
-              seeMore={{ url: "/repo-inspector", text: "Give it a try..." }}
+              seeMore={{
+                url: "/repo-inspector",
+                text: "Give it a try",
+                after: "now.",
+              }}
               techs={["react", "bootstrap"]}
               headerLinks={{
                 github: {
@@ -38,7 +42,7 @@ const Projects = ({ page }: { page?: boolean }) => {
               headerImg="/assets/images/project-nigaphp.webp"
               description="NigaPHP is a lightweight PHP web application framework designed to simplify and speed up the development process for PHP developers. It was initially created by Abass Dev and has since been maintained and contributed to by a community of developers. With its user-friendly interface and powerful features, NigaPHP has become a popular choice for building scalable and secure web applications."
               seeMore={{
-                url: "https://docs.nigaphp.abassdev.com",
+                url: "/blog/posts/NigaPHP-Framework-in-5-minutes/",
                 before: "Let's discover",
                 text: "NigaPHP Framework",
                 after: "in 5 minutes.",
@@ -57,10 +61,10 @@ const Projects = ({ page }: { page?: boolean }) => {
               headerImg="/assets/images/javascript-code.webp"
               description="Dynacard is a React Native library that enables developers to effortlessly design visually stunning cards for their applications. This open-source library provides a flexible and customizable platform for creating beautiful cards within your React Native project."
               seeMore={{
-                url: "https://www.npmjs.com/package/dynacard",
-                text: "Dynacard",
-                before: "Checkout",
-                after: "on NPM (Nodejs Package Manager)",
+                url: "/blog/posts/Use-Dynacard-in-your-react-native-app/",
+                text: "Dynacard in React Native form this tutorial.",
+                before: "Learn how to use",
+                after: "",
               }}
               techs={["javascript", "react-native"]}
               headerLinks={{

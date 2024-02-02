@@ -211,7 +211,7 @@ const Inspector = () => {
                   name="full-url"
                   className={`${
                     invalidInput.fullUrl ? "border-red-300" : ""
-                  } appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+                  } appearance-none block w-full dark:bg-gray-200 bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
                   id="fullUrl"
                   type="utl"
                   placeholder="E.g: https://github.com/abass-dev/abassdev.com"
@@ -330,7 +330,7 @@ const Inspector = () => {
                         {repoData.map((v, i) => {
                           return (
                             <tr
-                              key={v}
+                              key={i}
                               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                             >
                               <th

@@ -5,7 +5,6 @@ const secretKey = API.AUTHORIZATION_KEY || "";
 
 const getAllPosts = async () => {
   const res = await fetch(API.BLOG_POSTS!, {
-    cache: "no-cache",
     method: "GET",
     headers: {
       Authorization: secretKey,

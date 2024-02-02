@@ -38,7 +38,7 @@ const page = async ({ params }: any) => {
               className={`${Orbitron.className} text-2xl text-gray-600 md:text-5xl font-bold text-center`}
             >
               Tag:
-              <span className="text-sky-600 uppercase"> {params.tags}</span>
+              <span className="text-sky-600"> {params.tags}</span>
             </h1>
           </div>
           <div className="flex sm:space-x-24">

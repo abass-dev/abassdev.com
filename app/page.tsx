@@ -6,11 +6,9 @@ import {
   Friends,
   Projects,
   FAQ,
-  CookieConsent,
   Footer,
 } from "../components";
 import Navigation from "@/components/navigation/Navigation";
-import ScrollUp from "@/components/ui/ScrollUp";
 
 export default function page() {
   return (
@@ -23,7 +21,6 @@ export default function page() {
       <Friends />
       <FAQ />
       <Report />
-      <ScrollUp />
       <Footer />
     </div>
   );

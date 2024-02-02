@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Theme from "../context/theme-provider";
 import Script from "next/script";
 import { CookieConsent } from "@/components";
+import ScrollUp from "@/components/ui/ScrollUp";
 const Inter = localFont({
   src: "../fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
 });
@@ -60,8 +61,9 @@ export default function RootLayout({
       <body className={`${Inter.className} bg-gray-100`}>
         <Theme>
           <main>{children}</main>
+          <ScrollUp />
+          <CookieConsent />
         </Theme>
-        <CookieConsent />
       </body>
     </html>
   );

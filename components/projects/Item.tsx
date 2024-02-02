@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -10,8 +11,8 @@ interface HeaderLink {
 interface SeeMore {
   before?: string;
   after?: string;
-  url?: string;
-  text?: string;
+  url: string;
+  text: string;
 }
 
 interface ItemProps {
@@ -62,10 +63,10 @@ const Item = ({
         {seeMore && (
           <p>
             {seeMore.before}
-            <a className="text-blue-700" href={seeMore.url}>
+            <Link className="text-blue-700" href={seeMore.url}>
               {" "}
               {seeMore.text}
-            </a>{" "}
+            </Link>{" "}
             {seeMore.after}
           </p>
         )}

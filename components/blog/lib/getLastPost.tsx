@@ -5,7 +5,6 @@ const secretKey = API.AUTHORIZATION_KEY || "";
 export const getLastPost = async () => {
   const res = await fetch(`${API.BLOG_POSTS}/last-post`, {
     method: "GET",
-    cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
       Authorization: secretKey,

@@ -46,7 +46,7 @@ const MainNav = () => {
   };
 
   return (
-    <nav
+    <div
       className={`${
         isOpen && "overflow-auto link-anime"
       } backdrop-blur dark:text-white md:bg-white/10 z-50 bg-white/30 shadow-md border-gray-200 fixed w-full dark:bg-gray-900`}
@@ -192,7 +192,7 @@ const MainNav = () => {
         </div>
       </div>
       <ScrollProgress />
-    </nav>
+    </div>
   );
 };
 

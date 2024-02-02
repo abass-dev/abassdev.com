@@ -8,6 +8,7 @@ import TagsButton from "./TagsButton";
 import { FiArrowRight } from "react-icons/fi";
 import ShareLinks from "./ShareLinks";
 import PostLectureDuration from "./PostLectureDuration";
+import PostLevel from "./lib/utils/postLevel";
 
 const MainPostAction = ({ posts }: any) => {
   return (
@@ -33,11 +34,13 @@ const MainPostAction = ({ posts }: any) => {
                     {post.title}
                   </h1>
                 </GoToButton>
-                <div className="flex items-center mt-2 gap-2">
+                <div className="flex items-center mt-2 gap-3">
                   <TagsButton
                     className="flex gap-2 justify-center items-center"
                     tags={post.tag_names}
                   />
+                  {" | "}
+                  <PostLevel level={post.level} />
                 </div>
                 <div className="text-lg text-gray-700 dark:text-gray-400 mt-5">
                   {post.description}

@@ -20,10 +20,9 @@ const MainIcons = ({ icon }) => {
     </span>
   );
 };
-const Icons = ({ key, toolIcons }) => {
+const Icons = ({ toolIcons }) => {
   return (
     <div
-      key={key}
       className={`${toolIcons.color} rounded-full hover:scale-125 border-2 p-3`}
     >
       {toolIcons.source}
@@ -44,7 +43,11 @@ const Item = ({ icon, title, desc, toolIcons }) => {
       <div className="flex">
         {toolIcons &&
           toolIcons.map((item, index) => {
-            return <Icons key={index} toolIcons={item} />;
+            return (
+              <div key={index}>
+                <Icons toolIcons={item} />
+              </div>
+            );
           })}
       </div>
       <p>{desc}</p>
