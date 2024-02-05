@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaClock } from "react-icons/fa";
+import { FaBookOpen, FaClock } from "react-icons/fa";
 
 function countWords(text: string) {
   return text.split(/\s+/).filter(function (word) {
@@ -30,7 +30,7 @@ const PostLectureDuration = ({ content }: { content: string }) => {
 
   return (
     <p className="flex items-center gap-2 justify-start md:justify-center">
-      <FaClock /> {duration} {duration > 1 ? "minutes" : "minute"}
+      <FaBookOpen /> {duration} min read
     </p>
   );
 };

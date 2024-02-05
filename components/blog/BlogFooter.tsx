@@ -9,9 +9,9 @@ const BlogFooter = () => {
           <SocialsLinks />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>Abass Dev</div>
-          <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
+          <div>{` • `}</div>
+          <div>Abass Dev</div>
           <div>{` • `}</div>
           <Link href="/">Devs Blog</Link>
         </div>

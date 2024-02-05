@@ -9,10 +9,10 @@ const PostLevel = ({ level }: { level: string }) => {
     <div
       className={`flex justify-center rounded-sm items-center gap-1 px-1 ${
         level === "easy"
-          ? "bg-green-200 text-green-700"
+          ? "bg-green-200 text-green-950"
           : level === "medium"
-          ? "bg-yellow-200 text-yellow-700"
-          : "bg-red-200 text-red-700"
+          ? "bg-yellow-200 text-yellow-950"
+          : "bg-red-200 text-red-950"
       }`}
     >
       <GiLevelFourAdvanced />

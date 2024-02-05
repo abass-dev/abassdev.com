@@ -10,7 +10,7 @@ import ShareLinks from "./ShareLinks";
 import PostLectureDuration from "./PostLectureDuration";
 import PostLevel from "./lib/utils/postLevel";
 
-const MainPostAction = ({ posts }: any) => {
+const MainPostCard = ({ posts }: any) => {
   return (
     <div className="flex flex-col">
       {posts &&
@@ -37,7 +37,7 @@ const MainPostAction = ({ posts }: any) => {
                 <div className="flex items-center mt-2 gap-3">
                   <TagsButton
                     className="flex gap-2 justify-center items-center"
-                    tags={post.tag_names}
+                    tag={post.tag_names}
                   />
                   {" | "}
                   <PostLevel level={post.level} />
@@ -96,4 +96,4 @@ const MainPostAction = ({ posts }: any) => {
   );
 };
 
-export default MainPostAction;
+export default MainPostCard;

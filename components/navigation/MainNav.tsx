@@ -15,32 +15,6 @@ const Exo = localFont({
 const MainNav = () => {
   const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-
-    // Check if the user is scrolling down and the navbar is open
-    if (prevScrollPos < currentScrollPos && isOpen) {
-      setIsOpen(false);
-    }
-
-    // Check if the user is scrolling up
-    if (prevScrollPos > currentScrollPos && isOpen) {
-      setIsOpen(false);
-    }
-
-    setPrevScrollPos(currentScrollPos);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
-
   const openNavHandler = () => {
     setIsOpen(!isOpen);
   };

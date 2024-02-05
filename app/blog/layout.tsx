@@ -3,7 +3,8 @@ import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "The Web Developer's Blog",
-  description: "The Web Developer's Blog (WDB)",
+  description:
+    "Stay ahead with valuable resources, offering industry insights, best practices, and more to keep you well-informed | Devs Blog",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/android-chrome-512x512.png",

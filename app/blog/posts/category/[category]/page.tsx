@@ -1,6 +1,6 @@
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
 import BlogNav from "@/components/blog/BlogNav";
-import MainPostAction from "@/components/blog/MainPostAction";
+import MainPostAction from "@/components/blog/MainPostCard";
 import getAllPosts from "@/components/blog/lib/getAllPosts";
 import getTags from "@/components/blog/lib/getAllTags";
 import getCategory from "@/components/blog/lib/getCategory";

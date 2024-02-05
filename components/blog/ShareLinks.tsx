@@ -5,7 +5,7 @@ const ShareLinks = ({ post }: any) => {
     <div className="flex gap-2 p-1">
       <a
         aria-label="Share on Whatsapp"
-        href={`whatsapp://send?text=${post.title} http://localhost:3000/blog/posts/${post.slug}`}
+        href={`whatsapp://send?text=${post.title} https://abassdev.com/blog/posts/${post.slug}`}
         data-action="share/whatsapp/share"
       >
         <FaWhatsappSquare

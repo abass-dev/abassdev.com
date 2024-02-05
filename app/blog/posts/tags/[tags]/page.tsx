@@ -1,6 +1,6 @@
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
 import BlogNav from "@/components/blog/BlogNav";
-import MainPostAction from "@/components/blog/MainPostAction";
+import MainPostAction from "@/components/blog/MainPostCard";
 import getAllTags from "@/components/blog/lib/getAllTags";
 import getSingleTag from "@/components/blog/lib/getSingleTag";
 import localFont from "next/font/local";

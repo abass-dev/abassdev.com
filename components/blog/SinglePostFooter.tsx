@@ -76,18 +76,22 @@ const SinglePostFooter = async ({ currentPostId }: Props) => {
           : "md:justify-end"
       } flex flex-col md:flex-row items-center gap-5  md:gap-0  pt-12`}
     >
-      {currentPostId > previousPost[0].id && (
-        <GotoPreviousPostButton
-          slug={previousPostData[0].slug}
-          text={previousPostData[0].title}
-        />
-      )}
-      {lastPostData[0].id > currentPostId && (
-        <GotoNextPostButton
-          slug={nextPostData[0].slug}
-          text={nextPostData[0].title}
-        />
-      )}
+      {previousPostData[0]
+        ? currentPostId > previousPostData[0].id && (
+            <GotoPreviousPostButton
+              slug={previousPostData[0].slug}
+              text={previousPostData[0].title}
+            />
+          )
+        : null}
+      {nextPostData[0]
+        ? currentPostId < lastPostData[0].id && (
+            <GotoNextPostButton
+              slug={nextPostData[0].slug}
+              text={nextPostData[0].title}
+            />
+          )
+        : null}
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import AuthorPostsButton from "@/components/blog/AuthorPostsButton";
 import BlogNav from "@/components/blog/BlogNav";
+import CategoryButton from "@/components/blog/CategoryButton";
 import PostLectureDuration from "@/components/blog/PostLectureDuration";
 import ShareLinks from "@/components/blog/ShareLinks";
+import SingleCategoryButton from "@/components/blog/SingleCategoryButton";
 import SinglePostFooter from "@/components/blog/SinglePostFooter";
 import TagsButton from "@/components/blog/TagsButton";
 import getAllPosts from "@/components/blog/lib/getAllPosts";
@@ -43,7 +45,7 @@ const page = async ({ params }: any) => {
                 </p>
                 <div className="mb-4 gap-2 flex justify-center text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                   <PostLectureDuration content={post.body} />
-                  {" | "}
+                  {" • "}
                   <PostLevel level={post.level} />
                 </div>
                 <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-5xl md:leading-14">
@@ -66,11 +68,20 @@ const page = async ({ params }: any) => {
                   </div>
                   <div className="border-b-2 py-8 border-gray-300 dark:border-gray-600 px-5">
                     <p className="uppercase text-base mb-3 text-gray-700 dark:text-gray-400">
-                      Tags
+                      Tag
                     </p>
                     <TagsButton
                       className=" flex items-center gap-2"
-                      tags={post.tag_names}
+                      tag={post.tag_names}
+                    />
+                  </div>
+                  <div className="border-b-2 py-8 border-gray-300 dark:border-gray-600 px-5">
+                    <p className="uppercase text-base mb-3 text-gray-700 dark:text-gray-400">
+                      Category
+                    </p>
+                    <SingleCategoryButton
+                      className=" flex items-center gap-2"
+                      category={post.category}
                     />
                   </div>
                   <div className="border-b-2 py-8 border-gray-300 dark:border-gray-600 px-5">
@@ -81,7 +92,7 @@ const page = async ({ params }: any) => {
                   </div>
                 </div>
                 <div>
-                  <div className="prose prose-a:text-blue-500 text-black dark:hover:prose-a:text-blue-700 prose-code:max-w-xs md:prose-code:max-w-lg prose-code:overflow-x-auto prose-strong:dark:text-pink-700 prose-code:whitespace-pre-wrap prose-headings:text-lg md:prose-headings:text-3xl prose-headings:font-bold prose-headings:dark:text-gray-300 prose-pre:dark:bg-gray-900 prose-code:dark:text-pink-400 dark:text-gray-50">
+                  <div className="prose prose-p:text-lg prose-code:text-base prose-a:text-blue-500 text-black dark:hover:prose-a:text-blue-700 prose-code:max-w-xs prose-pre:max-w-xs md:prose-code:max-w-lg md:prose-pre:max-w-3xl :prose-pre:max-w-md prose-code:overflow-x-auto prose-strong:dark:text-pink-700 prose-code:whitespace-pre-wrap prose-headings:text-lg md:prose-headings:text-3xl prose-headings:font-bold prose-headings:dark:text-gray-300 prose-pre:dark:bg-gray-900 prose-code:dark:text-pink-400 dark:text-gray-50">
                     <Markdown>{post.body}</Markdown>
                   </div>
                 </div>
