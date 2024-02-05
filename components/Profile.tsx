@@ -42,12 +42,8 @@ const Profile = () => {
             </p>
             <p className="text-lg">
               In my free time, I enjoy sharing my experiences through my blog{" "}
-              <Link
-                target="_blank"
-                className="text-blue-700"
-                href="https:/byteteachers.com"
-              >
-                byteteachers.com{" "}
+              <Link target="_blank" className="text-blue-700" href="/blog">
+                blog{" "}
               </Link>{" "}
               and contributing to the{" "}
               <Link

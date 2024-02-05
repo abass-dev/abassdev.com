@@ -3,14 +3,11 @@ import localFont from "next/font/local";
 import AllTagsLayout from "@/components/blog/AllTagsLayout";
 import getTags from "@/components/blog/lib/getAllTags";
 import getAllPosts from "@/components/blog/lib/getAllPosts";
-import { getLastPost } from "@/components/blog/lib/getLastPost";
-import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
 import MainPostCard from "@/components/blog/MainPostCard";
 import AllCategoriesLayout from "@/components/blog/AllCategoriesLayout";
 import getAllTCategories from "@/components/blog/lib/getAllCategories";
 import BlogSearch from "@/components/blog/lib/BlogSearch";
-import searchData from "@/components/blog/lib/data/search-data";
+
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });

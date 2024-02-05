@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import GoToButton from "../GoToButton";
+import { dateToReadable } from "@/helpers";
 
 const BlogSearch = ({ posts }: { posts: any }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -72,9 +73,17 @@ const BlogSearch = ({ posts }: { posts: any }) => {
               className="text-2xl inline-block font-bold leading-8 tracking-tight  cursor-pointer"
               slug={result.slug}
             >
-              <h2 className="text-blue-600 hover:text-blue-800">
-                {result.title}
-              </h2>
+              <div className="flex gap-2 items-center">
+                <h2 className="text-blue-600 hover:text-blue-800">
+                  {result.title}
+                </h2>
+                <span className="text-gray-700 dark:text-gray-500">
+                  {" -  "}
+                </span>
+                <span className="text-sm text-gray-700 dark:text-gray-500">
+                  {dateToReadable(result.created_at)}
+                </span>
+              </div>
             </GoToButton>
             <p>{result.description}</p>
           </div>

@@ -1,6 +1,5 @@
 import AuthorPostsButton from "@/components/blog/AuthorPostsButton";
 import BlogNav from "@/components/blog/BlogNav";
-import CategoryButton from "@/components/blog/CategoryButton";
 import PostLectureDuration from "@/components/blog/PostLectureDuration";
 import ShareLinks from "@/components/blog/ShareLinks";
 import SingleCategoryButton from "@/components/blog/SingleCategoryButton";
@@ -11,7 +10,6 @@ import getPostBySlug from "@/components/blog/lib/getPostBySlug";
 import PostLevel from "@/components/blog/lib/utils/postLevel";
 import { dateToReadable } from "@/helpers";
 import { FaUser } from "react-icons/fa";
-import { GiLevelFour } from "react-icons/gi";
 import Markdown from "react-markdown";
 
 export async function generateMetadata({ params }: any) {
