@@ -11,6 +11,9 @@ module.exports = {
   parser: '@babel/eslint-parser',
   plugins: ['react'],
   rules: {
+    "rules": {
+    "quotes": [2, "double", { "avoidEscape": true }]
+},
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
