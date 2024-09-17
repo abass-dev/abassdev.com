@@ -41,7 +41,8 @@ public/dist/
 dist/
 tmp/
 build/
-
+*build
+./build.zip
 # OSX
 .DS_Store
 
