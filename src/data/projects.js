@@ -1,47 +1,58 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
-    desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+    title: 'Form builder',
+    source: 'https://github.com/form-builder',
+    subtitle: 'A user-friendly solution for building HTML forms',
+    image: '/images/projects/php-code2.webp',
+    date: '2022-2-22',
+    desc: 'Looking for a user-friendly solution for building HTML forms? Check out Form Builder, an open-source project created by Abass Dev. The project is coded with PHP and styled using Bootstrap CSS, making it simple to create custom forms with ease.',
   },
   {
-    title: 'Harvest',
-    subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
-    desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+    title: 'Repo Inspector',
+    source: 'https://github.com/repo-inspector',
+    subtitle: 'Git Repo Inspector ',
+    image: '/images/projects/repo-inspector.webp',
+    date: '2023-4-15',
+    desc: 'Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase.',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
-    desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
+    title: 'Fakaray',
+    subtitle: 'chat application',
+    image: '/images/projects/fakaray.webp',
+    date: '2023-7-5',
+    desc: 'Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market.',
   },
   {
-    title: 'Cat Detector',
-    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
-    desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+    title: 'NigaPHP framework',
+    source: 'https://github.com/nigaphp',
+    subtitle: 'A lightweight PHP web application',
+    image: '/images/projects/project-nigaphp.webp',
+    date: '2021-8-10',
+    desc: 'NigaPHP is a lightweight PHP web application framework designed to simplify and speed up the development process for PHP developers. It was initially created by Abass Dev and has since been maintained and contributed to by a community of developers. With its user-friendly interface and powerful features, NigaPHP has become a popular choice for building scalable and secure web applications.',
+  },
+  {
+    title: 'Dynacard',
+    subtitle: 'A React Native library',
+    source: 'https://github.com/abass-dev/dynacard',
+    image: '/images/projects/react-code.webp',
+    date: '2022-10-02',
+    desc: 'Dynacard is a React Native library that enables developers to effortlessly design visually stunning cards for their applications. This open-source library provides a flexible and customizable platform for creating beautiful cards within your React Native project.',
+  },
+  {
+    title: 'Personal website (abassdev.com)',
+    subtitle: 'abassdev.com',
+    source: 'https://github.com/abass-dev/abassdev.com',
+    image: '/images/projects/project-portfolio.jpg',
+    date: '2021-1-20',
+    desc: 'This portfolio was built using ReactJS (TypeScript), allowing the developer to create reusable UI components that can be applied throughout the application. This approach improves maintainability and simplifies future updates.',
+  },
+  {
+    title: 'Mobile app portfolio',
+    subtitle: 'abassdev.com',
+    image: '/images/projects/mobile-app-portfolio.webp',
+    date: '2022-4-28',
+    desc: 'My personal portfolio using React Native (Mobile app)',
   },
 ];
 

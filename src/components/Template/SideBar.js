@@ -9,12 +9,12 @@ const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
+        <img src={`${PUBLIC_URL}/images/abassdev.png`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
+        <h2>Abass Dev</h2>
         <p>
-          <a href="mailto:michael@mldangelo.com">michael@mldangelo.com</a>
+          <a href="mailto:abass@abassdev.com">abass@abassdev.com</a>
         </p>
       </header>
     </section>
@@ -22,13 +22,12 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I&apos;m Michael. I am a{' '}
-        <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC
-        alumnus, and the co-founder and CTO of{' '}
-        <a href="https://promptfoo.dev">Promptfoo</a>. Previously, I
-        was VP of Engineering at <a href="https://usesmileid.com">SmileID</a>,
-        co-founder and CTO of <a href="https://arthena.com">Arthena</a>, and
-        co-founded <a href="https://matroid.com">Matroid</a>.
+        Hi, I’m Abass Dev. I’m a self-taught web and mobile app developer with
+        extensive experience. I enjoy sharing insights through my{' '}
+        <a href="https://blog.abassdev.com">blog</a> and actively contribute to{' '}
+        <a href="https://github.com/abass-dev">open-source</a> projects. I’m
+        also proud to have developed the{' '}
+        <a href="https://github.com/nigaphp">NigaPHP framework</a>.
       </p>
       <ul className="actions">
         <li>
@@ -48,7 +47,8 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.
+        &copy; 2021 - {new Date().getFullYear()} Abass Dev.{' '}
+        <Link to="/copyright">abassdev.com</Link>.
       </p>
     </section>
   </section>

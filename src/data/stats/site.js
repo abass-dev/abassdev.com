@@ -8,17 +8,17 @@ const data = [
   {
     label: 'Stars this repository has on github',
     key: 'stargazers_count',
-    link: 'https://github.com/mldangelo/personal-site/stargazers',
+    link: 'https://github.com/abass-dev/abassdev.com/stargazers',
   },
   {
     label: 'Number of people watching this repository',
     key: 'subscribers_count',
-    link: 'https://github.com/mldangelo/personal-site/stargazers',
+    link: 'https://github.com/abass-dev/abassdev.com/stargazers',
   },
   {
     label: 'Number of forks',
     key: 'forks',
-    link: 'https://github.com/mldangelo/personal-site/network',
+    link: 'https://github.com/abass-dev/abassdev.com/network',
   },
   {
     label: 'Number of spoons',
@@ -31,12 +31,12 @@ const data = [
   {
     label: 'Open github issues',
     key: 'open_issues_count',
-    link: 'https://github.com/mldangelo/personal-site/issues',
+    link: 'https://github.com/abass-dev/abassdev.com/issues',
   },
   {
     label: 'Last updated at',
     key: 'pushed_at',
-    link: 'https://github.com/mldangelo/personal-site/commits',
+    link: 'https://github.com/abass-dev/abassdev.com/commits',
     format: (x) => dayjs(x).format('MMMM DD, YYYY'),
   },
   {
@@ -44,8 +44,8 @@ const data = [
     /* find . | grep ".js" | grep -vE ".min.js|node_modules|.git|.json" |
     xargs -I file cat file | wc -l */
     label: 'Lines of Javascript powering this website',
-    value: '2150',
-    link: 'https://github.com/mldangelo/personal-site/graphs/contributors',
+    value: '4930',
+    link: 'https://github.com/abass-dev/abassdev.com/graphs/contributors',
   },
 ];
 

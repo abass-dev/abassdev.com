@@ -1,11 +1,11 @@
 {
-  "name": "personal-site",
-  "version": "4.0.0",
-  "homepage": "https://mldangelo.com/",
+  "name": "abassdev.com",
+  "version": "5.5.0",
+  "homepage": "https://abassdev.com/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mldangelo/personal-site.git"
+    "url": "https://github.com/abass-dev/abassdev.com.git"
   },
   "engines": {
     "node": ">=16.x"
@@ -19,6 +19,7 @@
     "test": "npx jest"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
@@ -30,6 +31,7 @@
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.3.1",
     "react-ga": "^3.3.1",
+    "react-google-recaptcha": "^3.1.0",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1"

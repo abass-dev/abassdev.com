@@ -11,6 +11,14 @@ const Cell = ({ data }) => (
         </h3>
         <time className="published">
           {dayjs(data.date).format('MMMM, YYYY')}
+          {data.source && (
+            <>
+              {' | '}
+              <small>
+                Source: <a href={data.source}>Github</a>
+              </small>
+            </>
+          )}
         </time>
       </header>
       <a href={data.link} className="image">
@@ -27,6 +35,7 @@ Cell.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     link: PropTypes.string,
+    source: PropTypes.string,
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
