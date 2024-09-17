@@ -1,4 +1,7 @@
 {
+  "theme_color": "#8936FF",
+  "background_color": "#2EC6FE",
+
   "name": "abassdev.com",
   "icons": [
     {
@@ -38,5 +41,14 @@
       "type": "image/png",
       "density": "4.0"
     }
-  ]
+  ],
+
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-US",
+  "short_name": "Abass Dev",
+  "start_url": "/",
+  "scope": "/",
+  "description": "Abass Dev | Full stack Web Developer "
 }
