@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import InArticle from '../utils/InArticle';
 
 const PageNotFound = () => (
   <HelmetProvider>
@@ -15,6 +16,7 @@ const PageNotFound = () => (
       <p>
         Return <Link to="/">home</Link>.
       </p>
+      <InArticle />
     </div>
   </HelmetProvider>
 );

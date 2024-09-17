@@ -5,6 +5,7 @@ import Main from '../layouts/Main';
 
 import Personal from '../components/Stats/Personal';
 import Site from '../components/Stats/Site';
+import InArticle from '../utils/InArticle';
 
 const Stats = () => (
   <Main
@@ -21,6 +22,7 @@ const Stats = () => (
       </header>
       <Personal />
       <Site />
+      <InArticle />
     </article>
   </Main>
 );

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Markdown from 'markdown-to-jsx';
 
 import Main from '../layouts/Main';
+import InArticle from '../utils/InArticle';
 
 const About = () => {
   const [markdown, setMarkdown] = useState('');
@@ -32,6 +33,7 @@ const About = () => {
           </div>
         </header>
         <Markdown>{markdown}</Markdown>
+        <InArticle />
       </article>
     </Main>
   );

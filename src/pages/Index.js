@@ -9,6 +9,7 @@ import ContactForm from '../components/Contact/ContactForm';
 import FAQList from '../components/FAQ/FAQList';
 import Skills from '../components/Resume/Skills';
 import { categories, skills } from '../data/resume/skills';
+import InArticle from '../utils/InArticle';
 
 // NOTE: sections are displayed in order defined.
 const sections = {
@@ -36,6 +37,7 @@ const Index = () => (
           </Link>
         </li>
       </ul>
+      <InArticle />
     </article>
 
     <article className="post" id="resume">
@@ -56,6 +58,7 @@ const Index = () => (
           </Link>
         </li>
       </ul>
+      <InArticle />
     </article>
 
     <article className="post" id="contact">
@@ -88,6 +91,7 @@ const Index = () => (
         </div>
       </header>
       <FAQList />
+      <InArticle />
     </article>
   </Main>
 );

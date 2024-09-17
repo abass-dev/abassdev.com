@@ -8,6 +8,7 @@ import Courses from '../components/Resume/Courses';
 
 import courses from '../data/resume/courses';
 import { skills, categories } from '../data/resume/skills';
+import InArticle from '../utils/InArticle';
 
 // NOTE: sections are displayed in order defined.
 const sections = {
@@ -39,6 +40,7 @@ const Resume = () => (
         <Section key={name} />
       ))}
     </article>
+    <InArticle />
   </Main>
 );
 

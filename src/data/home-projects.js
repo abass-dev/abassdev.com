@@ -20,7 +20,7 @@ const homePojectdata = [
     title: 'Personal website (abassdev.com)',
     subtitle: 'abassdev.com',
     source: 'https://github.com/abass-dev/abassdev.com',
-    image: '/images/projects/project-portfolio.jpg',
+    image: '/images/projects/project-portfolio.webp',
     date: '2021-1-20',
     desc: 'This portfolio was built using ReactJS (TypeScript), allowing the developer to create reusable UI components that can be applied throughout the application. This approach improves maintainability and simplifies future updates.',
   },

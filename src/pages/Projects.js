@@ -5,6 +5,7 @@ import Main from '../layouts/Main';
 
 import Cell from '../components/Projects/Cell';
 import data from '../data/projects';
+import InArticle from '../utils/InArticle';
 
 const Projects = () => (
   <Main title="Projects" description="Learn about Abass Dev's projects.">
@@ -20,6 +21,7 @@ const Projects = () => (
       {data.map((project) => (
         <Cell data={project} key={project.title} />
       ))}
+      <InArticle />
     </article>
   </Main>
 );

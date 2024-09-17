@@ -5,6 +5,7 @@ import Main from '../layouts/Main';
 import EmailLink from '../components/Contact/EmailLink';
 import ContactIcons from '../components/Contact/ContactIcons';
 import ContactForm from '../components/Contact/ContactForm';
+import InArticle from '../utils/InArticle';
 
 const Contact = () => (
   <Main title="Contact" description="Contact Abass Dev">
@@ -24,6 +25,7 @@ const Contact = () => (
         <ContactForm />
       </div>
       <ContactIcons />
+      <InArticle />
     </article>
   </Main>
 );
