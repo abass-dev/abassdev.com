@@ -64,10 +64,12 @@ const Skills = ({ skills, categories }) => {
   return (
     <div className="skills">
       <div className="link-to" id="skills" />
-      <div className="title">
-        <h3>Skills</h3>
-        <p>Here are the skills and technologies I bring to the table</p>
-      </div>
+      {window.location.pathname !== '/' && (
+        <div className="title">
+          <h3>Skills</h3>
+          <p>Here are the skills and technologies I bring to the table</p>
+        </div>
+      )}
       <div className="skill-button-container">{getButtons()}</div>
       <div className="skill-row-container">{getRows()}</div>
     </div>

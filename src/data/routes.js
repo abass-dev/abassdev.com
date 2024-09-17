@@ -21,6 +21,10 @@ const routes = [
     path: '/stats',
   },
   {
+    label: 'Blog',
+    path: 'https://blog.abassdev.com',
+  },
+  {
     label: 'Contact',
     path: '/contact',
   },
