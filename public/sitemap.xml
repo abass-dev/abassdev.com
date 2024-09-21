@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://abassdev.com</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://abassdev.com/blog</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://abassdev.com/projects</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://abassdev.com/contact</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://abassdev.com/about</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+    <url>
+      <loc>https://abassdev.com/resume</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+    <url>
+      <loc>https://abassdev.com/stats</loc>
+      <lastmod>2024-09-17</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+  
+</urlset>
