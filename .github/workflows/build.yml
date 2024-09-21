@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master  # Change to your default branch if different
+      - production  # Change to your default branch if different
 
 jobs:
   build:
