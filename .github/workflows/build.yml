@@ -30,8 +30,12 @@ jobs:
       run: npm install
 
     - name: Build the project
+      env:  # Set environment variables for the build
+        REACT_APP_RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
+        REACT_APP_GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+        NODE_ENV: production
       run: npm run build  # Ensure this is the correct build command
-    
+
     - name: List files
       run: ls -R
 
@@ -40,6 +44,6 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-        REMOTE_PATH: /home/abassdev/public_html/
+        REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
       run: |
         sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r build/* $USERNAME@$HOST:$REMOTE_PATH
