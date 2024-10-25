@@ -1,5 +1,8 @@
+import SuspenseLoading from "@/components/ui/SuspenseLoading";
 import { Metadata } from "next";
-import MyStory from "../../components/story/MyStory";
+import dynamic from "next/dynamic";
+
+const  MyStory =  dynamic(() => import('../../components/story/MyStory'), {ssr: false, loading: () => <SuspenseLoading />})
 
 export const metadata: Metadata = {
   title: "My story - Abass Dev",

@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { birthday } from "../../helpers";
 import { Report } from "../";
@@ -26,7 +25,7 @@ const MyStory = () => {
             <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
               <Image
                 className="w-full"
-                src="/assets/images/abassdev-about.webp"
+                src="/assets/images/cover_bg_1.webp"
                 width={430}
                 height={600}
                 alt="Who is Abass Dev?"

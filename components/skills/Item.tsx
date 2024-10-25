@@ -44,7 +44,7 @@ const Item = ({ icon, title, desc, toolIcons }) => {
       <div className="flex">
         {toolIcons &&
           toolIcons.map((item, index) => {
-            return <Icons key={index} toolIcons={item} />;
+            return <div key={index}><Icons toolIcons={item} /> </div>;
           })}
       </div>
       <p>{desc}</p>

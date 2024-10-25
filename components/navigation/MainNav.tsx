@@ -5,11 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
-import Others from "./Others";
 import { RiMenu3Fill } from "react-icons/ri";
 import ScrollProgress from "../ui/ScrollProgress";
 import ThemeToggle from "../ui/theme-toggle";
-import Snippets from "./Snippets";
 const Exo = localFont({
   src: "../../fonts/Exo_2/Exo2-VariableFont_wght.ttf",
 });
@@ -89,7 +87,7 @@ const MainNav = () => {
           id="navbar-search"
         >
           <div className="relative mt-3 md:hidden">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          {/*   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
                 className="w-4 h-4 text-gray-500 dark:text-gray-400"
                 aria-hidden="true"
@@ -111,7 +109,7 @@ const MainNav = () => {
               id="search-navbar"
               className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search..."
-            />
+            /> */}
           </div>
           <ul
             className={`${Exo.className} uppercase backdrop-blur bg-white/10 flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700`}

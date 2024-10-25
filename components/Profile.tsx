@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BsGithub, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsFacebook, BsTwitter, BsLinkedin, BsDownload } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import localFont from "next/font/local";
@@ -21,7 +21,7 @@ const Profile = () => {
             width={300}
             height={300}
             alt="Picture of Abass Dev"
-            className="h-auto hover:scale-110  hover:shadow-md rounded-full"
+            className="h-auto hover:scale-110 hover:shadow-md rounded-full"
           />
         </div>
         <div className="md:col-span-2">
@@ -41,13 +41,13 @@ const Profile = () => {
               experience in programming and the internet.
             </p>
             <p className="text-lg">
-              In my free time, I enjoy sharing my experiences through my blog{" "}
+              In my free time, I enjoy sharing my experiences through my {" "}
               <Link
                 target="_blank"
                 className="text-blue-700"
-                href="https:/byteteachers.com"
+                href="https://abassdev.com/blog"
               >
-                byteteachers.com{" "}
+                blog{" "}
               </Link>{" "}
               and contributing to the{" "}
               <Link
@@ -67,6 +67,9 @@ const Profile = () => {
               </Link>
               .
             </p>
+            <p className="flex justify-center items-center text-center gap-4 py-4">My CV 
+            <a href="/assets/pdf/abass-cv-fr.pdf" download={true}><BsDownload className="text-blue-800"/></a>
+            </p>
           </div>
           <div className="flex text-gray-600 dark:text-gray-100 justify-center w-full gap-3 py-4">
             <Link
@@ -75,6 +78,13 @@ const Profile = () => {
               href="https://github.com/abass-dev"
             >
               <BsGithub size={25} />
+            </Link>
+            <Link
+              target="_blank"
+              aria-label={`Abass Dev LinkedIn account`}
+              href="https://www.linkedin.com/in/abass-dev-a45932311"
+            >
+              <BsLinkedin size={25} />
             </Link>
             <Link
               target="_blank"

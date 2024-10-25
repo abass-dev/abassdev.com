@@ -112,3 +112,38 @@ html {
 .divide-bottom {
   border-bottom: 1px solid #00000030;
 }
+
+.lds-ripple {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 95vh;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 8px solid #9ceafd;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    width: 144px;
+    height: 144px;
+    opacity: 0;
+  }
+}

@@ -8,36 +8,28 @@ import Link from "next/link";
 import ThemeToggle from "../ui/theme-toggle";
 import Image from "next/image";
 import {
-  BsBugFill,
   BsCodeSlash,
   BsGlobeEuropeAfrica,
   BsPass,
-  BsQuestionCircleFill,
 } from "react-icons/bs";
 import { useTheme } from "next-themes";
 
 const SideBar = () => {
   const { theme, setTheme } = useTheme();
-  const [ThemeText, setThemeText] = useState("Light");
-
-  useEffect(() => {
-    setThemeText(theme === "dark" ? "Light" : "Dark");
-  }, [theme]);
-
+ 
   const menus = [
     { name: "Projects", link: "/projects", icon: MdFolder },
-    { name: "Repo Inspector", link: "/repo-inspector", icon: BsBugFill },
-    { name: "Snippets", link: "/snippets", icon: BsCodeSlash },
+    { name: "Web apps", link: "https://apps.abassdev.com", icon: BsCodeSlash },
     {
       name: "My Story",
       link: "/my-story",
       icon: BsPass,
-      margin: true,
     },
     {
       name: "Blog",
-      link: "https:byteteachers.com",
+      link: "https://abassdev.com/blog",
       icon: BsGlobeEuropeAfrica,
+      margin: true,
     },
     {
       name: "Contact Me",
@@ -45,18 +37,16 @@ const SideBar = () => {
       icon: FiMessageSquare,
     },
     {
-      name: ThemeText,
       link: "javasript:void(0)",
       icon: ThemeToggle,
-      margin: true,
     },
   ];
   const [open, setOpen] = useState(false);
   return (
     <section className="flex fixed z-50 gap-6 min-h-screen">
       <div
-        className={`bg-transparent backdrop-blur ${
-          open ? "w-72" : "w-16"
+        className={`bg-transparent  ${
+          open ? "w-72 backdrop-blur" : "w-12 md:w-16"
         } duration-500 text-gray-800 dark:text-gray-100 px-4`}
       >
         <div className="flex min-w-full justify-between">
@@ -85,7 +75,7 @@ const SideBar = () => {
             />
           </div>
         </div>
-        <div className="mt-4 flex flex-col gap-4 relative">
+        <div className={`${!open && 'hidden md:block'} mt-4 flex flex-col gap-4 relative`}>
           {menus?.map((menu, i) => (
             <Link
               onClick={() => open && setOpen(false)}

@@ -53,11 +53,8 @@ const Footer = () => {
           </h2>
           <h3 className="text-2xl mb-3">Let's connect</h3>
           <p className="first-letter:text-5xl">
-            If you have any suggestion, feedback, opportunity, or are interested
-            in collaborating on a project, we would love to hear from you!
-            Please feel free to reach out to us using the contact details
-            provided below. If you are expecting a reply, kindly mention your
-            contact details in your message.
+            If you have any opportunity, suggestion or feedback we would love to hear from you!
+            Please feel free to reach out to us using the contact form or our email address.
           </p>
           <div className="flex gap-3 pt-8 justify-center items-center">
             <a aria-label="Github account" href="https://github.com/abass-dev">
@@ -82,12 +79,12 @@ const Footer = () => {
           <div className="py-3 mt-5">
             <h3 className="py-5 text-3xl">Other Links</h3>
             <ul className="grid grid-cols-2 place-items-center">
-              <ImportantLinks href="/privacy-policy" text="Privacy Policy" />
-              <ImportantLinks href="/copyright/" text="Copyright" />
-              <ImportantLinks href="/snippets/" text="Snippets" />
-              <ImportantLinks href="/repo-inspector/" text="Repo Inspector" />
+              <ImportantLinks href="https://apps.abassdev.com" text="Web Apps" />
+              <ImportantLinks href="https://abassdev.com/blog" text="Blog" />
               <ImportantLinks href="/my-story/" text="About Me" />
               <ImportantLinks href="/contact/" text="Contact Me" />
+              <ImportantLinks href="/privacy-policy" text="Privacy Policy" />
+              <ImportantLinks href="/copyright/" text="Copyright" />
             </ul>
           </div>
         </div>
@@ -97,7 +94,9 @@ const Footer = () => {
             Copyright © 2021 - {new Date().getFullYear()} Abass Dev. All rights
             reserved.
           </p>
+          <br />
           <p> Current version: {appVersion}</p>
+          <br />
           <p> Last updated: {new Date(buildInfo.lastUpdate).toString()}</p>
         </div>
       </div>

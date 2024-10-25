@@ -1,13 +1,12 @@
-import MainNav from "./MainNav";
 import SideBar from "./SideBar";
 
 const Navigation = () => {
   return (
     <>
-      <div className="block lg:hidden">
+{/*       <div className="block md:hidden">
         <MainNav />
-      </div>
-      <div className="hidden lg:block">
+      </div> */}
+      <div>
         <SideBar />
       </div>
     </>
