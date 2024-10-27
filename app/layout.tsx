@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import ScrollUp from "../components/ui/ScrollUp";
 import Theme from "../context/theme-provider";
 import { CookieConsent } from "../components";
-import Script from "next/script";
 import HeadScript from "@/components/HeadScript";
 
 const Footer = dynamic(() => import("../components/Footer"), { ssr: false });

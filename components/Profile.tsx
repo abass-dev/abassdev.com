@@ -71,9 +71,9 @@ const Profile = () => {
           {/* CV Download */}
           <div className="mt-6 flex justify-center md:justify-start gap-4">
             <p className="text-lg text-gray-800 dark:text-gray-300">My CV:</p>
-            <Link href="/assets/pdf/abass-cv-fr.pdf" download={true}>
+            <a href="/assets/pdf/abass-cv-fr.pdf" download={true}>
               <BsDownload size={30} className="text-blue-600 hover:text-blue-800" />
-            </Link>
+            </a>
           </div>
 
           {/* Social Icons */}
