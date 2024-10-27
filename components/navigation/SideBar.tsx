@@ -15,8 +15,8 @@ import {
 import { useTheme } from "next-themes";
 
 const SideBar = () => {
-  const { theme, setTheme } = useTheme();
- 
+  const { theme } = useTheme();
+  const themeName = (theme === "dark" ? "Light" : "Dark");
   const menus = [
     { name: "Projects", link: "/projects", icon: MdFolder },
     { name: "Web apps", link: "https://apps.abassdev.com", icon: BsCodeSlash },
@@ -37,6 +37,7 @@ const SideBar = () => {
       icon: FiMessageSquare,
     },
     {
+      name: themeName,
       link: "javasript:void(0)",
       icon: ThemeToggle,
     },
@@ -75,7 +76,7 @@ const SideBar = () => {
             />
           </div>
         </div>
-        <div className={`${!open && 'hidden md:block'} mt-4 flex flex-col gap-4 relative`}>
+        <div className={`${!open && 'hidden md:block'} mt-4 flex flex-col gap-2 relative`}>
           {menus?.map((menu, i) => (
             <Link
               onClick={() => open && setOpen(false)}

@@ -26,7 +26,7 @@ const Contact = () => {
               <br />
               <p>Web and mobile app developer at self-employed.</p>
               <br />
-              <p>19 Patrice Lumumba Road, Accra, GH, GA-254-4987, Ghana.</p>
+              <p>Niamey, Niger</p>
               <br />
               <p>
                 Email:{" "}

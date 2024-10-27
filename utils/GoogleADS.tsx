@@ -28,7 +28,7 @@ const GoogleADS = ({ dataAdSlot }: ItemProps) => {
       style={{ display: "block", textAlign: "center" }}
       data-ad-layout="in-article"
       data-ad-format="fluid"
-      data-ad-client="ca-pub-6427962014782182"
+      data-ad-client="ca-pub-4160637975098001"
       data-ad-slot={dataAdSlot}
     ></ins>
   );

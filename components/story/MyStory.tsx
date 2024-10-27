@@ -25,10 +25,10 @@ const MyStory = () => {
             <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
               <Image
                 className="w-full"
-                src="/assets/images/cover_bg_1.webp"
+                src="/assets/images/about.webp"
                 width={430}
                 height={600}
-                alt="Who is Abass Dev?"
+                alt="Who is Abass Dev? - About Me"
               />
             </div>
             <div className="px-6 bg-white dark:bg-gray-800 grid grid-cols-1 gap-4 py-4">

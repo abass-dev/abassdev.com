@@ -2,8 +2,8 @@
 
 const Copyright = () => {
   return (
-    <div className="dark:text-white dark:bg-gray-900">
-      <div className="container mx-auto grid grid-cols-1 px-5 md:px-20 pt-32 lg:pt-20">
+    <div className="dark:text-gray-100 dark:bg-gray-900">
+      <div className={`container mx-auto px-10 md:px-20 pt-32 lg:pt-10 pb-10`}>
         <h1 className="dark:text-white text-3xl md:text-5xl pb-8 text-center">
           Copyright
         </h1>

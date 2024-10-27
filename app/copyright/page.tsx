@@ -1,3 +1,4 @@
+import SuspenseLoading from "@/components/ui/SuspenseLoading";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 
-const  Copyright =  dynamic(() => import('../../components/Copyright'), {ssr: false})
+const  Copyright =  dynamic(() => import('../../components/Copyright'), {ssr: false, loading: () => <SuspenseLoading />})
 
 const Page = () => {
   return <Copyright />;

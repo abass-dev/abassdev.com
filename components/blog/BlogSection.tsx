@@ -1,4 +1,4 @@
-import HomeItems from "../snippets/HomeItems";
+import BlogEntries from "./BlogEntries";
 import localFont from "next/font/local";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -11,27 +11,9 @@ const BlogSection = () => {
         <h1
           className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
         >
-          Blog Posts
+          RECENT BLOG POSTS
         </h1>
-
-        <div className="grid grid-cols-2  gap-10">
-          <HomeItems
-            learnMore={{ text: "Learn More...", href: "/snippets" }}
-            title="Internal blog"
-            bgImg={`bg-[url("/assets/images/react-code.webp")]`}
-            desk="Easily improve your skills with code snippets."
-          />
-
-          <HomeItems
-            learnMore={{
-              text: "Learn More...",
-              href: "https://byteteachers.com/",
-            }}
-            title="External blog"
-            bgImg={`bg-[url("/assets/images/project-nigaphp.webp")]`}
-            desk="External blog posts from Byteteachers.com"
-          />
-        </div>
+          <BlogEntries/>
       </div>
     </div>
   );

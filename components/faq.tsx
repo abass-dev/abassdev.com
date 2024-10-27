@@ -67,7 +67,6 @@ const FAQ = () => {
             FAQ's (Frequently Asked Questions)
           </h2>
           <List
-            open={true}
             title="Which operating system do I use?"
             desk="I primarily use WSL, which stands for Windows Subsystem for Linux, with Kali Linux as my operating system. WSL allows me to run a Linux distribution alongside my Windows environment, providing me with the flexibility and tools of Linux while still using Windows as the host operating system."
           />

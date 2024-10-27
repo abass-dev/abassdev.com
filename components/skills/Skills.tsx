@@ -36,7 +36,7 @@ const Skills = (): JSX.Element => {
   return (
     <div
       id="Skills"
-      className="container mx-auto md:px-10 lg:px-20 xl:px-32 dark:bg-gray-900 00  text-black px-10 dark:text-white pt-10 flex items-center flex-col justify-center"
+      className="container mx-auto md:px-10 lg:px-20 xl:px-32 dark:bg-gray-900 text-black px-10 dark:text-white pt-10 flex items-center flex-col justify-center"
     >
       <div className="">
         <h1

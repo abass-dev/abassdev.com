@@ -6,7 +6,6 @@ import Footer from "./Footer";
 import Report from "./Report";
 import Copyright from "./Copyright";
 import Contact from "./contact/Contact";
-import Inspector from "./inspector/RepoInspector";
 import CookieConsent from "./ui/CookieConsent";
 import FAQ from "./faq";
 export {
@@ -18,7 +17,6 @@ export {
   Report,
   Copyright,
   Contact,
-  Inspector,
   FAQ,
   CookieConsent,
 };

@@ -6,7 +6,7 @@ const Orbitron = localFont({
 
 const Friends = () => {
   return (
-    <div className="container mx-auto px-8 md:px-10 mt-20 lg:px-20 xl:px-32 dark:bg-gray-900">
+    <div className="container mx-auto px-8 md:px-10 lg:px-20 xl:px-32 dark:bg-gray-900">
       <h1
         className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
       >
