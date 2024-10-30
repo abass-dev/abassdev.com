@@ -16,17 +16,25 @@ import packageJson from "../package.json";
 import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import { FaArrowAltCircleRight } from "react-icons/fa";
+import Link from "next/link";
 const EduNSWACTFoundation = localFont({
   src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
 });
 const appVersion = packageJson.version;
 
 const ImportantLinks = ({ href, text }) => {
+
   return (
     <li className="mb-2 hover:text-gray-500">
-      <a className="flex text-lg gap-2 items-center" href={href}>
-        <FaArrowAltCircleRight /> {text}
-      </a>
+      {href.startsWith('/') ? (
+        <Link href={href} className="flex text-lg gap-2 items-center">
+          <FaArrowAltCircleRight /> {text}
+        </Link>
+      ) : (
+        <a className="flex text-lg gap-2 items-center" href={href}>
+          <FaArrowAltCircleRight /> {text}
+        </a>
+      )}
     </li>
   );
 };
@@ -44,9 +52,8 @@ const Footer = () => {
         )}
 
         <div
-          className={`col-span-4 text-center text-gray-300 ${
-            pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
-          }`}
+          className={`col-span-4 text-center text-gray-300 ${pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
+            }`}
         >
           <h2 className={`${EduNSWACTFoundation.className} mb-3 text-3xl`}>
             What's next?

@@ -13,15 +13,14 @@ const Contact = () => {
   const pathName = usePathname();
   return (
     <div className="dark:text-gray-100 dark:bg-gray-900">
-      <div className={`container mx-auto px-10 md:px-20 pt-32 lg:pt-10 pb-10`}>
+      <div className={`container mx-auto px-10 md:px-20 pt-20 lg:pt-10 pb-10`}>
         <h1
           className={`${Orbitron.className} text-center font-bold  dark:text-white text-3xl md:text-5xl pb-10 my-4 text-blue-950`}
         >
           Contact Me
         </h1>
-        <div className="">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="">
+            <div className="p-5 bg-gray-50 dark:bg-gray-800">
               <h1 className="text-3xl">Abass Dev</h1>
               <br />
               <p>Web and mobile app developer at self-employed.</p>
@@ -45,7 +44,6 @@ const Contact = () => {
             </div>
             <Form />
           </div>
-        </div>
       </div>
       <Report report="contact/page" />
     </div>

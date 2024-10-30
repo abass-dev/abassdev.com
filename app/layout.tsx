@@ -3,12 +3,11 @@ import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import dynamic from "next/dynamic";
-import ScrollUp from "../components/ui/ScrollUp";
 import Theme from "../context/theme-provider";
-import { CookieConsent } from "../components";
 import HeadScript from "@/components/HeadScript";
 
 const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
+const ScrollUp =  dynamic(() => import("../components/ui/ScrollUp"), { ssr: false });
 
 const Inter = localFont({
   src: "../fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <ScrollUp />
           <Footer />
-          <CookieConsent />
         </Theme>
         <HeadScript />
       </body>
