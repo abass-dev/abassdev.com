@@ -1,16 +1,15 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Form from "./Form";
 import { Report } from "../";
 
 import localFont from "next/font/local";
+import { Responsive } from "@/utils";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
 const Contact = () => {
-  const pathName = usePathname();
   return (
     <div className="dark:text-gray-100 dark:bg-gray-900">
       <div className={`container mx-auto px-10 md:px-20 pt-20 lg:pt-10 pb-10`}>
@@ -45,7 +44,9 @@ const Contact = () => {
             <Form />
           </div>
       </div>
+      <Responsive />
       <Report report="contact/page" />
+
     </div>
   );
 };

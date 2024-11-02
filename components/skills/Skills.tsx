@@ -23,6 +23,7 @@ import {
 } from "react-icons/si";
 
 import { TbBrandReactNative, TbBrandVscode, TbSql } from "react-icons/tb";
+import Responsive from "@/utils/googleADS/Responsive";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
@@ -171,6 +172,9 @@ const Skills = (): JSX.Element => {
                 },
               ]}
             />
+          </div>
+          <div>
+            <Responsive />
           </div>
         </div>
       </div>

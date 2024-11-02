@@ -1,4 +1,4 @@
-import GoogleADS from "./GoogleADS";
+import Responsive from "./googleADS/Responsive";
 import Notification from "./Notification";
 
-export { GoogleADS, Notification };
+export { Responsive, Notification };

@@ -1,3 +1,4 @@
+import Responsive from "@/utils/googleADS/Responsive";
 import Item from "./Item";
 import localFont from "next/font/local";
 const Orbitron = localFont({
@@ -65,6 +66,7 @@ const Friends = () => {
             github: "https://github.com/emicheldev",
           }}
         />
+        <Responsive />
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Item from "./Item";
 import { Report } from "../";
 import localFont from "next/font/local";
+import Responsive from "@/utils/googleADS/Responsive";
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
@@ -127,7 +128,6 @@ const Projects = () => {
               description="Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market."
               techs={["react", "sass", "firebase"]}
             />
-
             {pathName === "/projects/" ? (
               <>
                 <Item
@@ -168,7 +168,9 @@ const Projects = () => {
                 <SeeMoreButton text="See more projects..." goTo="/projects" />
               </div>
             )}
+
           </div>
+          <Responsive />
         </div>
       </section>
       {pathName === "/projects/" && <Report report="projects/page" />}

@@ -34,7 +34,7 @@ const Form = () => {
     message: "",
   });
 
-  function inputHandler(e) {
+  function inputHandler(e: React.FormEvent) {
     const inputValue = e.target.value;
     const inputName = e.target.name;
     setInvalidInput({

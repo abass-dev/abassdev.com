@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import Link from "next/link";
+import Responsive from "@/utils/googleADS/Responsive";
 const EduNSWACTFoundation = localFont({
   src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
 });
@@ -106,6 +107,7 @@ const Footer = () => {
           <br />
           <p> Last updated: {new Date(buildInfo.lastUpdate).toString()}</p>
         </div>
+        <Responsive />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import Responsive from "@/utils/googleADS/Responsive";
 import BlogEntries from "./BlogEntries";
 import localFont from "next/font/local";
 const Orbitron = localFont({
@@ -14,6 +15,7 @@ const BlogSection = () => {
           RECENT BLOG POSTS
         </h1>
           <BlogEntries/>
+          <Responsive />
       </div>
     </div>
   );

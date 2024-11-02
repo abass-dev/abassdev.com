@@ -3,6 +3,7 @@ import { BsGithub, BsFacebook, BsTwitter, BsLinkedin, BsDownload } from "react-i
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import localFont from "next/font/local";
+import { Responsive } from "@/utils";
 
 const Orbitron = localFont({
   src: "../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -67,14 +68,21 @@ const Profile = () => {
             </Link>
             .
           </p>
+{/* CV Download */}
+<div className="mt-6 flex justify-center md:justify-start gap-4 items-center">
+  <p className="text-lg font-bold text-gray-800 dark:text-gray-300">My CV:</p>
+  <a
+    href="/assets/pdf/abass-cv-fr.pdf"
+    download={true}
+    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-700 to-gray-900 text-white rounded-lg hover:from-gray-900 hover:to-red-900 transition duration-200"
+  >
+    <BsDownload size={24} />
+    <span>Download</span>
+  </a>
+</div>
 
-          {/* CV Download */}
-          <div className="mt-6 flex justify-center md:justify-start gap-4">
-            <p className="text-lg text-gray-800 dark:text-gray-300">My CV:</p>
-            <a href="/assets/pdf/abass-cv-fr.pdf" download={true}>
-              <BsDownload size={30} className="text-blue-600 hover:text-blue-800" />
-            </a>
-          </div>
+
+
 
           {/* Social Icons */}
           <div className="flex justify-center md:justify-start mt-8 gap-5 text-gray-700 dark:text-gray-300">

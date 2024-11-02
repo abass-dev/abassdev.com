@@ -4,6 +4,7 @@ import Image from "next/image";
 import { birthday } from "../../helpers";
 import { Report } from "../";
 import localFont from "next/font/local";
+import { Responsive } from "@/utils";
 
 const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
@@ -82,6 +83,7 @@ const MyStory = () => {
                 around the world.
               </p>
             </div>
+            <Responsive />
           </div>
         </div>
       </div>

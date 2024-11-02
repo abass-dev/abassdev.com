@@ -1,3 +1,4 @@
+import { Responsive } from "@/utils";
 
 const PrivacyPolicy = () => {
   return (
@@ -6,7 +7,7 @@ const PrivacyPolicy = () => {
         <h1 className="dark:text-white text-3xl md:text-5xl pb-8 text-center">
           Privacy Policy
         </h1>
-
+        <Responsive />
         <div className="shadow p-5 bg-gray-50 dark:bg-gray-800">
           <h2 className="text-2xl mb-4">Privacy policy for abassdev.com</h2>
           <p>

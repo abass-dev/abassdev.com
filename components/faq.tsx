@@ -1,5 +1,6 @@
 "use client";
 
+import Responsive from "@/utils/googleADS/Responsive";
 import localFont from "next/font/local";
 import { useEffect, useState } from "react";
 import {
@@ -91,6 +92,7 @@ const FAQ = () => {
             STORAGE CAPACITY: 256GB,
             STORAGE TYPE: SSD"
           />
+          <Responsive />
         </div>
       </div>
     </div>

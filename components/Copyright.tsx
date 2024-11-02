@@ -1,5 +1,7 @@
 "use client";
 
+import { Responsive } from "@/utils";
+
 const Copyright = () => {
   return (
     <div className="dark:text-gray-100 dark:bg-gray-900">
@@ -7,9 +9,11 @@ const Copyright = () => {
         <h1 className="dark:text-white text-3xl md:text-5xl pb-8 text-center">
           Copyright
         </h1>
+        <Responsive />
         <div className=" bg-gray-50 p-5 dark:bg-gray-800">
           <h2 className="text-xl">© 2023 Abass Dev. All rights reserved.</h2>
           <p>
+            
             The materials and content displayed on this website, including but not
             limited to text, graphics, logos, images, videos, and software, are
             the property of Abass Dev or its content suppliers and are protected
