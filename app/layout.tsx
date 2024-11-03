@@ -1,7 +1,6 @@
 import "./globals.css";
 import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import dynamic from "next/dynamic";
 import Theme from "../context/theme-provider";
 import HeadScript from "@/components/HeadScript";
@@ -9,10 +8,6 @@ import HeadScript from "@/components/HeadScript";
 const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
 const ScrollUp =  dynamic(() => import("../components/ui/ScrollUp"), { ssr: false });
 
-const Inter = localFont({
-  src: "../fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
-  display: "swap",  // Ensures text is displayed immediately with fallback fonts
-});
 
 export const metadata: Metadata = {
   title: "Abass Dev | Full-stack developer | Personal portfolio",
@@ -42,11 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:image" content="https://abassdev.com/images/bg_1.webp" />
         <meta name="twitter:url" content="https://abassdev.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preload" as="font" href="/fonts/Inter/Inter-VariableFont_slnt,wght.ttf" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${Inter.className} bg-gray-100`}>
+      <body className='bg-gray-100'>
         <Theme>
           <Nav />
           <main>{children}</main>

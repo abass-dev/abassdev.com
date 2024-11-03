@@ -173,10 +173,8 @@ const Skills = (): JSX.Element => {
               ]}
             />
           </div>
-          <div>
-            <Responsive />
-          </div>
         </div>
+        <Responsive />
       </div>
     </div>
   );

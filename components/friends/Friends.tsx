@@ -66,8 +66,8 @@ const Friends = () => {
             github: "https://github.com/emicheldev",
           }}
         />
-        <Responsive />
       </div>
+      <Responsive />
     </div>
   );
 };
