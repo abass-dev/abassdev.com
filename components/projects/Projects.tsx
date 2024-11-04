@@ -28,7 +28,7 @@ const Projects = () => {
               name="Repo Inspector"
               headerImg="/assets/images/repo-inspector.webp"
               description="Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase."
-              seeMore={{ url: "/repo-inspector", text: "Give it a try..." }}
+              seeMore={{ url: "https://apps.abassdev.com/repo-inspector", text: "Give it a try..." }}
               techs={["react", "bootstrap"]}
               headerLinks={{
                 github: {

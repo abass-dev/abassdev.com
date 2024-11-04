@@ -1,14 +1,15 @@
 version: '3'
 services:
-  next-app:
-    build: .
+  abassdev.com:
+    image: node:20-alpine
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
+    working_dir: /usr/src/app
     ports:
       - "3000:3000"
     env_file:
       - .env  
     stdin_open: true
     tty: true
-    command: sh -c "npm install && npm dev"
+    command: sh -c "npm install && npm run dev"
