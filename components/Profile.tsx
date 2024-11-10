@@ -10,30 +10,35 @@ const Orbitron = localFont({
 const EduNSWACTFoundation = localFont({
   src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
 });
+import ShimmerButton from "./ui/shimmer-button";
+import ShineBorder from "./ui/shine-border";
+import TypingAnimation from "./ui/typing-animation";
 
 const Profile = () => {
   return (
     <div className="bg-gradient-to-tr from-gray-50 to-gray-200 dark:from-gray-800 dark:to-gray-900 min-h-screen flex justify-center items-center">
       <section className="container mx-auto max-w-6xl p-10 grid md:grid-cols-3 gap-10 md:items-center">
         {/* Profile Picture */}
-        <div className="flex justify-center">
+        <ShineBorder 
+        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+        className="bg-transparent dark:bg-transparent overflow-hidden relative rounded-lg flex justify-center">
           <Image
             src="/assets/images/profile.webp"
             width={300}
             height={300}
             alt="Picture of Abass Dev"
-            className="transition-transform duration-300 hover:scale-105 hover:rounded-full hover:shadow-2xl"
+            className="rounded-full bg-transparent"
           />
-
-        </div>
+        </ShineBorder>
 
         {/* Profile Description */}
         <div className="md:col-span-2">
-          <p
-            className={`${EduNSWACTFoundation.className} text-5xl bg-gradient-to-r from-blue-400 to-red-600 bg-clip-text text-transparent`}
-          >
-            I am,
-          </p>
+        <TypingAnimation
+           text="I am,"
+            className={`${EduNSWACTFoundation.className} text-left text-5xl bg-gradient-to-r from-blue-400 to-red-600 bg-clip-text text-transparent`}
+          />
+            
+          
           <h1
             className={`${Orbitron.className} text-3xl md:text-5xl my-4 text-blue-900 dark:text-blue-300`}
           >
@@ -69,15 +74,14 @@ const Profile = () => {
           </p>
           {/* CV Download */}
           <div className="mt-6 flex justify-center md:justify-start gap-4 items-center">
-            <p className="text-lg font-bold text-gray-800 dark:text-gray-300">My CV:</p>
-            <a
-              href="/assets/pdf/abass-cv-fr.pdf"
-              download={true}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-700 to-gray-900 text-white rounded-lg hover:from-gray-900 hover:to-red-900 transition duration-200"
-            >
-              <BsDownload size={24} />
-              <span>Download</span>
-            </a>
+            <ShimmerButton className="shadow-2xl">
+              <a
+                href="/assets/pdf/abass-cv-fr.pdf"
+                download={true}
+                className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                RESUME
+              </a>
+            </ShimmerButton>
           </div>
 
           {/* Social Icons */}
