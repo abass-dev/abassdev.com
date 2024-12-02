@@ -6,7 +6,6 @@ import { MdFolder } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import Link from "next/link";
 import ThemeToggle from "../ui/theme-toggle";
-import Image from "next/image";
 import {
   BsCodeSlash,
   BsGlobeEuropeAfrica,
@@ -54,7 +53,7 @@ const SideBar = () => {
           <div className={`${open ? "block py-3" : "w-0"} duration-500`}>
             <Link href="/" className="flex items-center">
               {open && <span className="text-2xl">{`{`}</span>}
-              <Image
+              <img
                 onClick={() => {
                   open && setOpen(false);
                 }}

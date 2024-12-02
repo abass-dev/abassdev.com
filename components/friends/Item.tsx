@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   BsGlobeCentralSouthAsia,
   BsGithub,
@@ -23,7 +22,7 @@ interface ItemProps {
 const Item = ({ name, avatar, about, links }: ItemProps) => {
   return (
     <div className="text-black dark:text-white flex flex-col gap-8 justify-center items-center shadow-lg dark:shadow-slate-900 bg-white dark:bg-gray-800 p-5 mb-8 overflow-hidden">
-      <Image
+      <img
         src={avatar}
         alt={name}
         width={100}

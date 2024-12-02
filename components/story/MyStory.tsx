@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { birthday } from "../../helpers";
 import { Report } from "../";
 import localFont from "next/font/local";
@@ -24,7 +23,7 @@ const MyStory = () => {
               About Me
             </h1>
             <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
-              <Image
+              <img
                 className="w-full"
                 src="/assets/images/about.webp"
                 width={430}

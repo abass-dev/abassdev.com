@@ -1,55 +1,72 @@
-// @ts-ignore
-// @ts-nocheck
+'use client'
 
-import React from "react";
-import localFont from "next/font/local";
-const EduNSWACTFoundation = localFont({
-  src: "../../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
-});
+import React from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
-interface itemProps {
-  icon: React.ReactNode;
-  title: string;
-  desc: string;
+interface IconProps {
+  source: React.ReactNode
+  color: string
+  bg: string
 }
 
-const MainIcons = ({ icon }) => {
+interface ToolIconProps {
+  source: React.ReactNode
+  color: string
+  name: string
+}
+
+interface ServiceCardProps {
+  icon: IconProps
+  title: string
+  desc: string
+  toolIcons?: ToolIconProps[]
+}
+
+const MainIcon = ({ icon }: { icon: IconProps }) => {
   return (
-    <span className={`${icon.bg} ${icon.color} p-5 rounded-full`}>
+    <div className={cn("p-4 rounded-full inline-flex items-center justify-center", icon.bg, icon.color)}>
       {icon.source}
-    </span>
-  );
-};
-const Icons = ({ key, toolIcons }) => {
-  return (
-    <div
-      key={key}
-      className={`${toolIcons.color} rounded-full hover:scale-125 border-2 p-3`}
-    >
-      {toolIcons.source}
     </div>
-  );
-};
+  )
+}
 
-const Item = ({ icon, title, desc, toolIcons }) => {
+const ToolIcon = ({ toolIcon }: { toolIcon: ToolIconProps }) => {
   return (
-    <div className="hover:shadow-md mb-8 p-5 bg-white dark:bg-gray-800 shadow-lg dark:shadow-slate-900 flex  gap-2 items-center flex-col justify-center">
-      <MainIcons
-        icon={{ source: icon.source, color: icon.color, bg: icon.bg }}
-      />
-
-      <h1 className={`${EduNSWACTFoundation.className} text-3xl py-4`}>
-        {title}
-      </h1>
-      <div className="flex">
-        {toolIcons &&
-          toolIcons.map((item, index) => {
-            return <div key={index}><Icons toolIcons={item} /> </div>;
-          })}
-      </div>
-      <p>{desc}</p>
+    <div className={cn("rounded-full hover:scale-110 transition-transform border-2 p-2", toolIcon.color)}>
+      {toolIcon.source}
     </div>
-  );
-};
+  )
+}
 
-export default Item;
+export default function Item({ icon, title, desc, toolIcons }: ServiceCardProps) {
+  return (
+    <Card className="hover:shadow-lg transition-shadow">
+      <CardHeader className="flex flex-col items-center">
+        <MainIcon icon={icon} />
+        <CardTitle className="text-3xl mt-4 font-edu-nsw">{title}</CardTitle>
+      </CardHeader>
+      <CardContent className="text-center">
+        {toolIcons && (
+          <div className="flex justify-center gap-2 mb-4">
+            <TooltipProvider>
+              {toolIcons.map((item, index) => (
+                <Tooltip key={index}>
+                  <TooltipTrigger>
+                    <ToolIcon toolIcon={item} />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </TooltipProvider>
+          </div>
+        )}
+        <p className="text-muted-foreground">{desc}</p>
+      </CardContent>
+    </Card>
+  )
+}
+

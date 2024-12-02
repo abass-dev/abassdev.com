@@ -63,12 +63,22 @@ const Projects = () => {
         <IconCloud iconSlugs={slugs} />
        </div>
           <div className="grid gap-8 md:grid-cols-2">
+          <Item
+              name="Create images from your code snippet"
+              headerImg="/assets/images/image-from-code.webp"
+              description="A simple and intuitive web app that lets you transform your code snippets into beautifully styled images. Perfect for sharing on social media, documentation, or presentations, this tool makes your code visually appealing and easy to showcase."
+              seeMore={{ url: "https://apps.abassdev.com/image-from-code/", text: "Give it a try..." }}
+              techs={["nextjs", "tailwindcss"]}
+              headerLinks={{
+                privateSource: true,
+              }}
+            />
             <Item
               name="Repo Inspector"
               headerImg="/assets/images/repo-inspector.webp"
               description="Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase."
               seeMore={{ url: "https://apps.abassdev.com/repo-inspector", text: "Give it a try..." }}
-              techs={["react", "bootstrap"]}
+              techs={["nextjs", "tailwindcss"]}
               headerLinks={{
                 github: {
                   url: "https://github.com/abass-dev/abassdev.com",
@@ -77,11 +87,21 @@ const Projects = () => {
               }}
             />
             <Item
+              name="Invoice Generator"
+              headerImg="/assets/images/invoice-enerator.webp"
+              description="A streamlined tool designed to make invoice creation quick and hassle-free. Customize and generate professional invoices effortlessly."
+              seeMore={{ url: "https://success-facture.abassdev.com/", text: "Give it a try..." }}
+              techs={["vite", "reactjs"]}
+              headerLinks={{
+                privateSource: true,
+              }}
+            />
+            <Item
               name="NigaPHP framework"
               headerImg="/assets/images/project-nigaphp.webp"
               description="NigaPHP is a lightweight PHP web application framework designed to simplify and speed up the development process for PHP developers. It was initially created by Abass Dev and has since been maintained and contributed to by a community of developers. With its user-friendly interface and powerful features, NigaPHP has become a popular choice for building scalable and secure web applications."
               seeMore={{
-                url: "https://docs.nigaphp.abassdev.com",
+                url: "https://github.com/nigaphp",
                 before: "Let's discover",
                 text: "NigaPHP Framework",
                 after: "in 5 minutes.",
@@ -89,7 +109,7 @@ const Projects = () => {
               techs={["php", "javascript", "shell", "twig"]}
               headerLinks={{
                 github: {
-                  url: "https://nigaphp.abassdev.com",
+                  url: "https://github.com/nigaphp",
                   icon: <BsGithub />,
                 },
               }}
@@ -113,7 +133,16 @@ const Projects = () => {
                 },
               }}
             />
-
+             <Item
+              name="Python Interactive Console"
+              headerImg="/assets/images/run-python.webp"
+              description="An online Python console that allows you to run Python code directly in your web browser, offering an easy-to-use command-line interface (CLI) for quick testing and experimentation."
+              techs={["nextjs"]}
+              seeMore={{ url: "https://apps.abassdev.com/run-python", text: "Give it a try..." }}
+              headerLinks={{
+               privateSource: true,
+              }}
+            />
             <Item
               name="Form builder"
               headerImg="/assets/images/php_code.webp"
@@ -166,25 +195,28 @@ const Projects = () => {
               headerImg="/assets/images/fakaray.webp"
               description="Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market."
               techs={["react", "sass", "firebase"]}
+              headerLinks={{
+                privateSource: true,
+              }}
             />
-            {pathName === "/projects/" ? (
+           
+
+          </div>
+          {pathName === "/projects/" ? (
               <>
                 <Item
-                  name="Byte Teachers (Blog)"
+                  name="World Of Techs (Blog)"
                   headerImg="/assets/images/blogimg.webp"
-                  description="ByteTeachers.com is where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
+                  description="Where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time."
                   seeMore={{
-                    url: "https://byteteachers.com",
-                    text: "Byte Teachers",
+                    url: "https://abassdev.com/blog",
+                    text: "World Of Techs",
                     before: "Visit",
                     after: "now.",
                   }}
                   techs={["php", "wordpress"]}
                   headerLinks={{
-                    github: {
-                      url: "https://github.com/abass-dev/abassdev.com",
-                      icon: <BsGithub />,
-                    },
+                   privateSource: true
                   }}
                 />
 
@@ -193,6 +225,9 @@ const Projects = () => {
                   headerImg="/assets/images/mobile-app-portfolio.webp"
                   description="My personal portfolio using React Native (Mobile app)"
                   techs={["React Native"]}
+                  headerLinks={{
+                    privateSource: true,
+                  }}
                 />
 
                 <Item
@@ -200,15 +235,16 @@ const Projects = () => {
                   headerImg="/assets/images/social_contribution_app.webp"
                   description="No description for this project."
                   techs={["React Native"]}
+                  headerLinks={{
+                    privateSource: true,
+                  }}
                 />
               </>
             ) : (
-              <div className="w-full flex justify-start">
+              <div className="flex pt-10 justify-start">
                 <SeeMoreButton text="See more projects..." goTo="/projects" />
               </div>
             )}
-
-          </div>
           <Responsive />
         </div>
       </section>

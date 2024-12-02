@@ -1,3 +1,5 @@
+"use client"
+
 import {
   FaAppStore,
   FaChrome,
@@ -57,22 +59,27 @@ const Skills = (): JSX.Element => {
               }}
               toolIcons={[
                 {
+                  name: 'Wordpress',
                   source: <BsWordpress className={"text-3xl"} />,
                   color: "text-sky-800",
                 },
                 {
+                  name: 'Git',
                   source: <FaGitAlt className={"text-3xl"} />,
                   color: "text-gray-900",
                 },
                 {
+                  name: 'React',
                   source: <FaReact className={"text-3xl"} />,
                   color: "text-sky-700",
                 },
                 {
+                  name: 'Chrome',
                   source: <FaChrome className={"text-3xl"} />,
                   color: "text-green-700",
                 },
                 {
+                  name: 'VSCode',
                   source: <TbBrandVscode className={"text-3xl"} />,
                   color: "text-sky-800",
                 },
@@ -90,23 +97,28 @@ const Skills = (): JSX.Element => {
               }}
               toolIcons={[
                 {
+                  name: 'Database',
                   source: <BsDatabaseAdd className={"text-3xl"} />,
                   color: "text-red-600",
                 },
                 {
+                  name: 'Analytics',
                   source: <IoAnalyticsOutline className={"text-3xl"} />,
                   color: "text-yellow-600",
                 },
 
                 {
+                  name: 'Linux',
                   source: <FcLinux className={"text-3xl"} />,
                   color: "text-sky-700",
                 },
                 {
+                  name: 'Server',
                   source: <FaServer className={"text-3xl"} />,
                   color: "text-gray-700",
                 },
                 {
+                  name: 'Tor Browser',
                   source: <SiTorbrowser className={"text-3xl"} />,
                   color: "text-pink-800",
                 },
@@ -124,19 +136,23 @@ const Skills = (): JSX.Element => {
               desc="My web design skill include creating stunning, intuitive websites that effectively represent your brand and corporate identity through exceptional UI/UX design."
               toolIcons={[
                 {
+                  name: 'Adobe Illustrator',
                   source: <SiAdobeillustrator className={"text-3xl"} />,
                   color: "text-yellow-600",
                 },
 
                 {
+                  name: 'WordPress',
                   source: <BsWordpress className={"text-3xl"} />,
                   color: "text-sky-800",
                 },
                 {
+                  name: 'Figma',
                   source: <FaFigma className={"text-3xl"} />,
                   color: "text-orange-800",
                 },
                 {
+                  name: 'Photoshop',
                   source: <SiAdobephotoshop className={"text-3xl"} />,
                   color: "text-sky-400",
                 },
@@ -154,19 +170,23 @@ const Skills = (): JSX.Element => {
               desc="I create beautiful and functional apps for iOS and Android using React Native. With my expertise in this framework, I can bring your app idea to life and deliver top-notch results."
               toolIcons={[
                 {
+                  name: 'Android Studio',
                   source: <SiAndroidstudio className={"text-3xl"} />,
                   color: "text-sky-800",
                 },
 
                 {
+                  name: 'App Store',
                   source: <FaAppStore className={"text-3xl"} />,
                   color: "text-orange-700",
                 },
                 {
+                  name: 'Java',
                   source: <FaJava className={"text-3xl"} />,
                   color: "text-yellow-900",
                 },
                 {
+                  name: 'React Native',
                   source: <TbBrandReactNative className={"text-3xl"} />,
                   color: "text-green-700",
                 },

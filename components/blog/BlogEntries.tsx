@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface BlogEntryProps {
@@ -21,7 +20,7 @@ const BlogEntry: React.FC<BlogEntryProps> = ({
   <div className="w-full md:w-1/3 px-4 mb-8 animate-fade-in">
     <div className="bg-white shadow-lg dark:bg-gray-800 rounded-lg overflow-hidden">
       <Link href={link}>
-          <Image
+          <img
             src={imageUrl}
             alt={title}
             width={1024}

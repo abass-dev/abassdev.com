@@ -1,88 +1,99 @@
-import Image from "next/image";
-import React from "react";
+'use client'
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { GitHubLogoIcon, LockClosedIcon } from "@radix-ui/react-icons"
+import Link from "next/link"
 
 interface HeaderLink {
-  url: string;
-  icon: React.ReactNode;
+  url?: string
+  icon?: React.ReactNode
+  privateSource?: boolean
 }
 
 interface SeeMore {
-  before?: string;
-  after?: string;
-  url?: string;
-  text?: string;
+  before?: string
+  after?: string
+  url?: string
+  text?: string
 }
 
 interface ItemProps {
-  name: string;
-  description: string;
-  headerImg: string;
-  seeMore?: SeeMore;
-  techs: string[];
+  name: string
+  description: string
+  headerImg: string
+  seeMore?: SeeMore
+  techs: string[]
   headerLinks?: {
-    github: HeaderLink;
-  };
+    github?: HeaderLink
+    privateSource?: boolean
+  }
 }
 
-const Item = ({
+const PrivateSourceButton = () => (
+  <Button variant="outline" size="sm" asChild>
+    <Link href="https://github.com/abass-dev" className="flex items-center gap-2">
+      <LockClosedIcon className="h-4 w-4" />
+      Private source
+    </Link>
+  </Button>
+)
+
+export default function Item({
   name,
   headerImg,
   description,
   seeMore,
   techs,
   headerLinks,
-}: ItemProps) => {
+}: ItemProps) {
   return (
-    <div className="bg-white dark:text-gray-100 dark:bg-gray-800 mb-8 overflow-hidden rounded shadow-lg dark:shadow-slate-900">
-      <Image
-        quality={75}
-        className="w-full hover:scale-110"
-        src={headerImg}
-        width={640}
-        height={360}
-        alt={name}
-      />
-      <div className="p-4">
-        <h2 className="font-bold text-xl mb-2">{name}</h2>
+    <Card className="overflow-hidden">
+      <CardHeader className="p-0">
+        <div className="relative aspect-video overflow-hidden">
+          <img
+            className="object-cover transition-transform hover:scale-105"
+            src={headerImg}
+            alt={name}
+          />
+        </div>
+      </CardHeader>
+      <CardContent className="p-6">
+        <h2 className="text-2xl font-bold mb-4">{name}</h2>
         {headerLinks && (
-          <div className="divide-bottom py-3 flex gap-2 mb-3">
-            {headerLinks.github && (
-              <a
-                className="flex gap-2 bg-gray-200 px-1 rounded text-gray-700 items-center button text-sm"
-                href={headerLinks.github.url}
-              >
-                <span>Code source</span> {headerLinks.github.icon}
-              </a>
+          <div className="flex gap-2 mb-4">
+            {headerLinks.github ? (
+              <Button variant="outline" size="sm" asChild>
+                <Link href={headerLinks.github.url || "#"} className="flex items-center gap-2">
+                  <GitHubLogoIcon className="h-4 w-4" />
+                  Code source
+                </Link>
+              </Button>
+            ) : (
+              <PrivateSourceButton />
             )}
           </div>
         )}
-        <p className="text-black dark:text-gray-100 text-lg">{description}</p>
-        <br />
+        <p className="text-muted-foreground mb-4">{description}</p>
         {seeMore && (
           <p>
-            {seeMore.before}
-            <a className="text-blue-700" href={seeMore.url}>
-              {" "}
+            {seeMore.before}{" "}
+            <Link href={seeMore.url || "#"} className="text-primary hover:underline">
               {seeMore.text}
-            </a>{" "}
+            </Link>{" "}
             {seeMore.after}
           </p>
         )}
-      </div>
-      <div className="px-6 pt-4 pb-2">
-        {techs.map((value, index) => {
-          return (
-            <span
-              key={index}
-              className="inline-block bg-gray-200 hover:bg-blue-500 hover:text-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >
-              #{value}
-            </span>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
+      </CardContent>
+      <CardFooter className="flex flex-wrap gap-2 p-6 pt-0">
+        {techs.map((tech, index) => (
+          <Badge key={index} variant="secondary">
+            {tech}
+          </Badge>
+        ))}
+      </CardFooter>
+    </Card>
+  )
+}
 
-export default Item;
