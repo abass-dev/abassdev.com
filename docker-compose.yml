@@ -2,17 +2,13 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3005:3000"
     volumes:
       - .:/app
       - /app/node_modules
-      - abassdev:/app/.next
     environment:
-      - NODE_ENV=development
-
-volumes:
-  abassdev:
-
-
+      - NODE_ENV=production
