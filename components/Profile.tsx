@@ -133,10 +133,9 @@ const Profile = () => {
               </header>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                A passionate web and mobile app developer with over 6 years of experience in
-                programming and the internet. In my free time, I enjoy sharing my experiences through
-                my <Link href="https://abassdev.com/blog" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">blog</Link> and contributing to the open-source community.
-                Creator of <Link href="https://github.com/nigaphp" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">NigaPHP</Link> framework and a maintainer of <Link href="https://www.npmjs.com/org/open-react-hub" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">@open-react-hub</Link>.
+                I am a passionate web and mobile app developer with over 6 years of experience in programming and internet technologies.
+                In my free time, I enjoy sharing my experiences through my <Link href="https://abassdev.com/blog" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">blog</Link> and contributing to the <Link href="https://abassdev.com/blog" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">open-source</Link> community.
+                I am the creator of the <Link href="https://github.com/nigaphp" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">NigaPHP</Link> framework  and the maintainer of <Link href="https://www.npmjs.com/org/open-react-hub" className="text-blue-950 dark:text-white underline underline-offset-1 hover:text-primary transition-colors">@open-react-hub</Link>.
               </p>
 
               <div className="flex items-center gap-2 justify-center md:justify-start text-muted-foreground">
