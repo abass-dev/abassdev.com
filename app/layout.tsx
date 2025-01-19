@@ -6,7 +6,7 @@ import Theme from "../context/theme-provider";
 import HeadScript from "@/components/HeadScript";
 
 const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
-const ScrollUp =  dynamic(() => import("../components/ui/ScrollUp"), { ssr: false });
+const ScrollUp = dynamic(() => import("../components/ui/ScrollUp"), { ssr: false });
 
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <meta
           name="keywords"
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className='bg-gray-100'>
+      <body>
         <Theme>
           <Nav />
           <main>{children}</main>

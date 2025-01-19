@@ -117,7 +117,7 @@ const Form = () => {
   }
 
   return (
-    <div className="shadow-lg bg-white dark:bg-gray-800 p-5">
+    <div className="bg-background p-5">
       <h2 className="text-2xl text-gray-700 dark:text-gray-100 text-center pb-5">
         Let's Chat
       </h2>
@@ -128,11 +128,10 @@ const Form = () => {
       <form onSubmit={onSubmitEmailHandler}>
         <div>
           <label
-            className={`${
-              invalidInput.name
-                ? "text-red-800 dark:text-red-800"
-                : "text-gray-700"
-            } dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
+            className={`${invalidInput.name
+              ? "text-red-800 dark:text-red-800"
+              : "text-gray-700"
+              } dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
             htmlFor="username"
           >
             Name:{" "}
@@ -142,9 +141,8 @@ const Form = () => {
             name="name"
             value={userInput.name}
             onChange={inputHandler}
-            className={`${
-              invalidInput.name ? "border-red-300" : ""
-            } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+            className={`${invalidInput.name ? "border-red-300" : ""
+              } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             id="username"
             type="text"
             placeholder="Jane"
@@ -153,11 +151,10 @@ const Form = () => {
 
         <div>
           <label
-            className={`${
-              invalidInput.subject
-                ? "text-red-800 dark:text-red-800"
-                : "text-gray-700"
-            } dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
+            className={`${invalidInput.subject
+              ? "text-red-800 dark:text-red-800"
+              : "text-gray-700"
+              } dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
             htmlFor="subject"
           >
             Subject:{" "}
@@ -165,9 +162,8 @@ const Form = () => {
           <input
             value={userInput.subject}
             onChange={inputHandler}
-            className={`${
-              invalidInput.subject ? "border-red-300" : ""
-            } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+            className={`${invalidInput.subject ? "border-red-300" : ""
+              } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             id="subject"
             name="subject"
             type="text"
@@ -177,20 +173,18 @@ const Form = () => {
 
         <div>
           <label
-            className={`${
-              invalidInput.email
-                ? "text-red-800 dark:text-red-800"
-                : "text-gray-700"
-            } dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
+            className={`${invalidInput.email
+              ? "text-red-800 dark:text-red-800"
+              : "text-gray-700"
+              } dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
             htmlFor="email"
           >
             Email:{" "}
           </label>
           <input
             autoComplete="email"
-            className={`${
-              invalidInput.email ? "border-red-300" : ""
-            } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+            className={`${invalidInput.email ? "border-red-300" : ""
+              } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             id="email"
             name="email"
             type="text"
@@ -202,11 +196,10 @@ const Form = () => {
 
         <div>
           <label
-            className={`${
-              invalidInput.message
-                ? "text-red-800 dark:text-red-800"
-                : "text-gray-100"
-            } dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
+            className={`${invalidInput.message
+              ? "text-red-800 dark:text-red-800"
+              : "text-gray-100"
+              } dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
             htmlFor="message"
           >
             Message:{" "}
@@ -214,9 +207,8 @@ const Form = () => {
           <textarea
             rows={4}
             cols={40}
-            className={`${
-              invalidInput.message ? "border-red-300" : ""
-            } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+            className={`${invalidInput.message ? "border-red-300" : ""
+              } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             id="message"
             placeholder="Message"
             name="message"

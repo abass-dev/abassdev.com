@@ -12,7 +12,7 @@ const Orbitron = localFont({
   src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
 });
 
- 
+
 const slugs = [
   "typescript",
   "javascript",
@@ -48,22 +48,55 @@ const slugs = [
 
 const Projects = () => {
   const pathName = usePathname();
-
   return (
     <>
       <section id="projects" className="pt-20 dark:bg-gray-900">
- 
+
         <div className={`container mx-auto px-8 md:px-10 lg:px-20 xl:px-32`}>
           <h1
             className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
           >
             Notable Projects
-          </h1>    
+          </h1>
           <div className="relative flex size-full items-center justify-center overflow-hidden px-20 pb-20 pt-2">
-        <IconCloud iconSlugs={slugs} />
-       </div>
+            <IconCloud iconSlugs={slugs} />
+          </div>
           <div className="grid gap-8 md:grid-cols-2">
-          <Item
+            <Item
+              name="ONG Website"
+              headerImg="/assets/images/ong-site.webp"
+              description="A professional and user-friendly website tailored for NGOs to showcase their mission, activities, and impact. Designed to enhance engagement and communication with stakeholders."
+              seeMore={{ url: "https://ong-site-two.vercel.app/", text: "Visit the Website..." }}
+              techs={["nextjs", "i18n", "reactjs", "tailwindcss"]}
+              headerLinks={{
+                privateSource: true,
+              }}
+            />
+
+            <Item
+              name="Restaurant Website"
+              headerImg="/assets/images/restaurant-website.webp"
+              description="An elegant and responsive website designed for restaurants to showcase their menu, services, and unique dining experience. Built to attract customers and simplify online reservations."
+              seeMore={{ url: "https://w-food.abassdev.com/", text: "Check it out..." }}
+              techs={["nextjs", "firebase", "reactjs", "prisma", "postgreSQL", "tailwindcss"]}
+              headerLinks={{
+                privateSource: true,
+              }}
+            />
+            <Item
+              name="@open-react-hub"
+              headerImg="/assets/images/open-react-hub.webp"
+              description="A collection of React components and utilities for building modern web applications. Simplifies development with ready-to-use, customizable solutions for faster and more efficient workflows."
+              seeMore={{ url: "https://github.com/abass-dev/open-react-hub", text: "Explore the hub..." }}
+              techs={["reactjs", "javascript", "nextjs", "vercel", "open-source"]}
+              headerLinks={{
+                github: {
+                  url: "https://github.com/abass-dev/open-react-hub",
+                  icon: <BsGithub />,
+                },
+              }}
+            />
+            <Item
               name="Create images from your code snippet"
               headerImg="/assets/images/image-from-code.webp"
               description="A simple and intuitive web app that lets you transform your code snippets into beautifully styled images. Perfect for sharing on social media, documentation, or presentations, this tool makes your code visually appealing and easy to showcase."
@@ -133,14 +166,14 @@ const Projects = () => {
                 },
               }}
             />
-             <Item
+            <Item
               name="Python Interactive Console"
               headerImg="/assets/images/run-python.webp"
               description="An online Python console that allows you to run Python code directly in your web browser, offering an easy-to-use command-line interface (CLI) for quick testing and experimentation."
               techs={["nextjs"]}
               seeMore={{ url: "https://apps.abassdev.com/run-python", text: "Give it a try..." }}
               headerLinks={{
-               privateSource: true,
+                privateSource: true,
               }}
             />
             <Item
@@ -199,10 +232,8 @@ const Projects = () => {
                 privateSource: true,
               }}
             />
-           
 
-          </div>
-          {pathName === "/projects/" ? (
+            {pathName.startsWith('/projects') && (
               <>
                 <Item
                   name="World Of Techs (Blog)"
@@ -216,7 +247,7 @@ const Projects = () => {
                   }}
                   techs={["php", "wordpress"]}
                   headerLinks={{
-                   privateSource: true
+                    privateSource: true
                   }}
                 />
 
@@ -240,11 +271,13 @@ const Projects = () => {
                   }}
                 />
               </>
-            ) : (
-              <div className="flex pt-10 justify-start">
-                <SeeMoreButton text="See more projects..." goTo="/projects" />
-              </div>
             )}
+          </div>
+          {!pathName.startsWith("/projects") && (
+            <div className="flex pt-10 justify-start">
+              <SeeMoreButton text="See more projects..." goTo="/projects" />
+            </div>
+          )}
           <Responsive />
         </div>
       </section>

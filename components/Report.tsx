@@ -37,7 +37,7 @@ export default function Report({
 }: ReportProps) {
   const links = [
     {
-      href: `https://github.com/abass-dev/abassdev.com/blob/next-abassdev.com/${dir}/${report}${ext}`,
+      href: `https://github.com/abass-dev/abassdev.com/blob/dev/${dir}/${report}${ext}`,
       text: "Code source of this page",
       icon: <CodeIcon className="h-4 w-4" />,
     },
@@ -47,12 +47,12 @@ export default function Report({
       icon: <BugIcon className="h-4 w-4" />,
     },
     {
-      href: `mailto:abass@abassdev.com?subject=Report issues https://github.com/abass-dev/abassdev.com/blob/next-abassdev.com/${dir}/${report}${ext}&body=Hi Abass Dev, I found some issues with this component... [${report}]`,
+      href: `mailto:abass@abassdev.com?subject=Report issues https://github.com/abass-dev/abassdev.com/blob/dev/${dir}/${report}${ext}&body=Hi Abass Dev, I found some issues with this component... [${report}]`,
       text: "Report issue by email",
       icon: <MailIcon className="h-4 w-4" />,
     },
     {
-      href: `https://github.com/abass-dev/abassdev.com/edit/next-abassdev.com/${dir}/${report}${ext}`,
+      href: `https://github.com/abass-dev/abassdev.com/edit/dev/${dir}/${report}${ext}`,
       text: "Edit this page on GitHub",
       icon: <PencilIcon className="h-4 w-4" />,
     },
@@ -64,22 +64,22 @@ export default function Report({
   ]
 
   return (
-  <div className="container mx-auto px-8 md:px-10 lg:px-20 pb-20 xl:px-32">
-  <Card className="bg-background text-foreground">
-    <CardHeader>
-      <CardTitle className="text-3xl md:text-4xl font-edu-nsw text-primary">
-        Anything wrong with this page?
-      </CardTitle>
-    </CardHeader>
-    <CardContent>
-      <ul className="space-y-2">
-        {links.map((link, index) => (
-          <LinkItem key={index} {...link} />
-        ))}
-      </ul>
-    </CardContent>
-  </Card>
-  </div>
+    <div className="container mx-auto px-8 md:px-10 lg:px-20 pb-20 xl:px-32">
+      <Card className="bg-background text-foreground">
+        <CardHeader>
+          <CardTitle className="text-3xl md:text-4xl font-edu-nsw text-primary">
+            Anything wrong with this page?
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul className="space-y-2">
+            {links.map((link, index) => (
+              <LinkItem key={index} {...link} />
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
   )
 }
 
