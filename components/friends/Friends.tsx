@@ -1,15 +1,11 @@
 import Responsive from "@/utils/googleADS/Responsive";
 import Item from "./Item";
-import localFont from "next/font/local";
-const Orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
-});
 
 const Friends = () => {
   return (
     <div className="container mx-auto px-8 md:px-10 lg:px-20 xl:px-32 dark:bg-gray-900">
       <h1
-        className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
+        className={`font-orbitron text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
       >
         Friends
       </h1>

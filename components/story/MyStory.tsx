@@ -1,15 +1,8 @@
 "use client";
 import React from 'react';
-import localFont from 'next/font/local';
 import { birthday } from '../../helpers';
 import { Report } from '../';
 import { Responsive } from '@/utils';
-
-const Orbitron = localFont({
-  src: '../../fonts/Orbitron/static/Orbitron-Black.ttf',
-  display: 'swap',
-  variable: '--font-orbitron'
-});
 
 const biographyContent = [
   {
@@ -49,7 +42,7 @@ const MyStory = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 pt-20 pb-10">
         <header className="max-w-4xl mx-auto mb-12">
           <h1
-            className={`${Orbitron.className} text-4xl md:text-5xl font-bold text-center text-blue-950 dark:text-white mb-8`}
+            className="text-4xl md:text-5xl font-bold font-orbitron text-center text-blue-950 dark:text-white mb-8"
             id="about-title"
           >
             About Me

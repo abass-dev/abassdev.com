@@ -1,51 +1,38 @@
 "use client"
 import React from 'react';
-import { BsGithub, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ShimmerButton from "@/components/ui/shimmer-button";
-import localFont from "next/font/local";
-
-const Orbitron = localFont({
-  display: 'swap',
-  src: "../fonts/Orbitron/static/Orbitron-Black.ttf",
-});
-
-const EduNSWACTFoundation = localFont({
-  display: 'swap',
-  src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
-});
+import { ArrowRight, FacebookIcon, GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from 'lucide-react';
 
 // Social links data
 const SOCIAL_LINKS = [
   {
-    icon: BsGithub,
+    icon: GithubIcon,
     href: "https://github.com/abass-dev",
     label: "GitHub",
     hoverColor: "hover:bg-[#333]"
   },
   {
-    icon: BsLinkedin,
+    icon: LinkedinIcon,
     href: "https://www.linkedin.com/in/abass-dev-a45932311",
     label: "LinkedIn",
     hoverColor: "hover:bg-[#0077b5]"
   },
   {
-    icon: BsTwitter,
+    icon: TwitterIcon,
     href: "https://twitter.com/abass_dev",
     label: "Twitter",
     hoverColor: "hover:bg-[#1DA1F2]"
   },
   {
-    icon: BsFacebook,
+    icon: FacebookIcon,
     href: "https://m.facebook.com/abassthedev",
     label: "Facebook",
     hoverColor: "hover:bg-[#4267B2]"
   },
   {
-    icon: MdEmail,
+    icon: MailIcon,
     href: "/contact",
     label: "Email",
     hoverColor: "hover:bg-primary"
@@ -96,10 +83,10 @@ const SocialLinks = () => (
         href={href}
         target={href.startsWith('http') ? "_blank" : undefined}
         rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-        className={`group relative p-3 bg-background dark:bg-background/80 rounded-full text-foreground transition-all duration-300 ${hoverColor} hover:text-white`}
+        className={`group relative p-2 md:p-3 bg-background dark:bg-background/80 rounded-full text-foreground transition-all duration-300 ${hoverColor} hover:text-white`}
         aria-label={label}
       >
-        <Icon className="h-6 w-6 transition-transform group-hover:scale-110 duration-300" />
+        <Icon className="h-5 w-5 md:h-6 md:w-6  transition-transform group-hover:scale-110 duration-300" />
       </Link>
     ))}
   </div>
@@ -120,12 +107,12 @@ const Profile = () => {
 
             <div className="space-y-8 text-center md:text-left">
               <header className="space-y-4">
-                <div className={`${EduNSWACTFoundation.className} font-edu-nsw text-2xl md:text-3xl`}>
+                <div className="font-edu-nsw text-2xl md:text-3xl">
                   <span className="bg-gradient-to-r from-primary to-violet-500 bg-clip-text text-transparent">
                     Hello World, I am
                   </span>
                 </div>
-                <h1 className={`${Orbitron.className} font-orbitron text-4xl md:text-6xl lg:text-7xl`}>
+                <h1 className="font-orbitron text-4xl md:text-6xl lg:text-7xl">
                   <span className="bg-gradient-to-r from-primary via-violet-500 to-blue-500 bg-clip-text text-transparent">
                     Abass Dev
                   </span>
@@ -156,7 +143,7 @@ const Profile = () => {
                 >
                   <Link href="/my-story" className="flex dark:text-white items-center justify-center gap-2">
                     More About Me
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
               </div>

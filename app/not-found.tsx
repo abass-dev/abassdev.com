@@ -1,10 +1,5 @@
 import Link from "next/link";
-import localFont from "next/font/local";
 import { Metadata } from "next";
-
-const Orbitron = localFont({
-  src: "../fonts/Orbitron/static/Orbitron-Black.ttf",
-});
 
 export const metadata: Metadata = {
   title: "404 Not Found",
@@ -19,7 +14,7 @@ export default function NotFound() {
         <div className="min-h-screen flex justify-center flex-col items-center">
           <div className="text-center w-3/4 py-20 px-5 bg-[#ffffffd6] shadow-lg">
             <h2
-              className={`${Orbitron.className} text-5xl  lg:text-9xl inline-block bg-gradient-to-r bg-clip-text text-transparent from-blue-400 to-purple-400`}
+              className={`text-5xl  lg:text-9xl inline-block bg-gradient-to-r bg-clip-text text-transparent from-blue-400 to-purple-400`}
             >
               404
             </h2>

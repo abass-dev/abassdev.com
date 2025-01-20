@@ -1,14 +1,11 @@
 "use client";
 
 import React from "react";
-import { HiMenuAlt3 } from "react-icons/hi";
-import { MdFolder } from "react-icons/md";
-import { FiMessageSquare } from "react-icons/fi";
-import { BsCodeSlash, BsGlobeEuropeAfrica, BsPass } from "react-icons/bs";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "../ui/theme-toggle";
+import { BookAIcon, CodeXml, Contact, Folder, History, MenuIcon } from "lucide-react";
 
 interface NavigationItem {
   name: string;
@@ -30,11 +27,11 @@ interface NavigationItemProps {
 }
 
 const NAVIGATION_ITEMS: NavigationItem[] = [
-  { name: "Projects", link: "/projects", icon: MdFolder },
-  { name: "Web apps", link: "https://apps.abassdev.com", icon: BsCodeSlash, external: true },
-  { name: "My Story", link: "/my-story", icon: BsPass },
-  { name: "Blog", link: "https://abassdev.com/blog", icon: BsGlobeEuropeAfrica, margin: true, external: true },
-  { name: "Contact Me", link: "/contact", icon: FiMessageSquare },
+  { name: "Projects", link: "/projects", icon: Folder },
+  { name: "Web apps", link: "https://apps.abassdev.com", icon: CodeXml, external: true },
+  { name: "My Story", link: "/my-story", icon: History },
+  { name: "Blog", link: "https://abassdev.com/blog", icon: BookAIcon, margin: true, external: true },
+  { name: "Contact Me", link: "/contact", icon: Contact },
 ];
 
 const NavigationItem: React.FC<NavigationItemProps> = ({ item, open, onClick }) => {
@@ -145,7 +142,7 @@ const Sidebar = () => {
             aria-expanded={open}
             className="p-3 h-9 w-9"
           >
-            <HiMenuAlt3 size={50} />
+            <MenuIcon size={50} />
           </Button>
         </div>
 

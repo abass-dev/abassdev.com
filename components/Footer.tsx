@@ -3,24 +3,13 @@
 
 "use client";
 import ContactForm from "./contact/Form";
-import {
-  BsGithub,
-  BsFacebook,
-  BsTwitter,
-  BsLinkedin,
-  BsArrowBarRight,
-} from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 import buildInfo from "../build-info.json";
 import packageJson from "../package.json";
 import { usePathname } from "next/navigation";
-import localFont from "next/font/local";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import Responsive from "@/utils/googleADS/Responsive";
-const EduNSWACTFoundation = localFont({
-  src: "../fonts/Edu_NSW_ACT_Foundation/static/EduNSWACTFoundation-Bold.ttf",
-});
+import { FacebookIcon, LucideGithub, TwitterIcon, LucideLink2, ArrowRightIcon, MailIcon, ArrowRightCircle, GithubIcon } from "lucide-react";
+
 const appVersion = packageJson.version;
 
 const ImportantLinks = ({ href, text }) => {
@@ -29,11 +18,11 @@ const ImportantLinks = ({ href, text }) => {
     <li className="mb-2 hover:text-gray-500">
       {href.startsWith('/') ? (
         <Link href={href} className="flex text-lg gap-2 items-center">
-          <FaArrowAltCircleRight /> {text}
+          <ArrowRightCircle /> {text}
         </Link>
       ) : (
         <a className="flex text-lg gap-2 items-center" href={href}>
-          <FaArrowAltCircleRight /> {text}
+          <ArrowRightCircle /> {text}
         </a>
       )}
     </li>
@@ -56,7 +45,7 @@ const Footer = () => {
           className={`col-span-4 text-center text-gray-300 ${pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
             }`}
         >
-          <h2 className={`${EduNSWACTFoundation.className} mb-3 text-3xl`}>
+          <h2 className={`font-edu-nsw mb-3 text-3xl`}>
             What's next?
           </h2>
           <h3 className="text-2xl mb-3">Let's connect</h3>
@@ -66,22 +55,22 @@ const Footer = () => {
           </p>
           <div className="flex gap-3 pt-8 justify-center items-center">
             <a aria-label="Github account" href="https://github.com/abass-dev">
-              <BsGithub size={25} />
+              <GithubIcon size={25} />
             </a>
             <a
               aria-label="Twitter account"
               href="https://twitter.com/abass_dev"
             >
-              <BsTwitter size={25} />
+              <TwitterIcon size={25} />
             </a>
             <a
               aria-label="Facebook account"
               href="https://m.facebook.com/abassthedev"
             >
-              <BsFacebook size={25} />
+              <FacebookIcon size={25} />
             </a>
             <a aria-label="Email address" href="/contact/">
-              <MdEmail size={25} />
+              <MailIcon size={25} />
             </a>
           </div>
           <div className="py-3 mt-5">

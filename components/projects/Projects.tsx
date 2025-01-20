@@ -5,12 +5,8 @@ import { SeeMoreButton } from "../ui";
 import { usePathname } from "next/navigation";
 import Item from "./Item";
 import { Report } from "../";
-import localFont from "next/font/local";
 import Responsive from "@/utils/googleADS/Responsive";
 import IconCloud from "../ui/icon-cloud";
-const Orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
-});
 
 
 const slugs = [
@@ -51,10 +47,9 @@ const Projects = () => {
   return (
     <>
       <section id="projects" className="pt-20 dark:bg-gray-900">
-
         <div className={`container mx-auto px-8 md:px-10 lg:px-20 xl:px-32`}>
           <h1
-            className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
+            className={`font-orbitron text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
           >
             Notable Projects
           </h1>

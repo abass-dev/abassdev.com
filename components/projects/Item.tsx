@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { GitHubLogoIcon, LockClosedIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
+import { ExternalLink, GithubIcon, LockKeyhole } from 'lucide-react'
 
 interface HeaderLink {
   url?: string
@@ -35,7 +35,7 @@ interface ItemProps {
 const PrivateSourceButton = () => (
   <Button variant="outline" size="sm" asChild>
     <Link href="https://github.com/abass-dev" className="flex items-center gap-2 group">
-      <LockClosedIcon className="h-4 w-4 transition-transform group-hover:scale-110" />
+      <LockKeyhole className="h-4 w-4 transition-transform group-hover:scale-110" />
       <span>Private source</span>
     </Link>
   </Button>
@@ -54,16 +54,16 @@ export default function Item({
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/5">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
+
       <CardHeader className="p-0">
-        <div 
+        <div
           className="relative aspect-video overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-          
+
           {/* Image */}
           <img
             className="object-cover transition-all duration-500 group-hover:scale-105"
@@ -76,7 +76,7 @@ export default function Item({
             {headerLinks && headerLinks.github && (
               <Button variant="secondary" size="sm" asChild className="transform -translate-y-2 transition-all duration-300 hover:scale-105">
                 <Link href={headerLinks.github.url || "#"} className="flex items-center gap-2">
-                  <GitHubLogoIcon className="h-4 w-4" />
+                  <GithubIcon className="h-4 w-4" />
                   View Source
                 </Link>
               </Button>
@@ -96,7 +96,7 @@ export default function Item({
               {headerLinks.github ? (
                 <Button variant="ghost" size="sm" asChild className="hidden sm:flex">
                   <Link href={headerLinks.github.url || "#"} className="flex items-center gap-2 group">
-                    <GitHubLogoIcon className="h-4 w-4 transition-transform group-hover:scale-110" />
+                    <GithubIcon className="h-4 w-4 transition-transform group-hover:scale-110" />
                     <span className="hidden sm:inline">Source</span>
                   </Link>
                 </Button>
@@ -116,12 +116,12 @@ export default function Item({
         {seeMore && (
           <p className="text-sm">
             {seeMore.before}{" "}
-            <Link 
-              href={seeMore.url || "#"} 
+            <Link
+              href={seeMore.url || "#"}
               className="text-primary hover:text-primary/80 inline-flex items-center gap-1 group"
             >
               {seeMore.text}
-              <ExternalLinkIcon className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+              <ExternalLink className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
             </Link>{" "}
             {seeMore.after}
           </p>
@@ -130,8 +130,8 @@ export default function Item({
 
       <CardFooter className="flex flex-wrap gap-2 p-6 pt-0">
         {techs.map((tech, index) => (
-          <Badge 
-            key={index} 
+          <Badge
+            key={index}
             variant="secondary"
             className="bg-muted/50 hover:bg-primary/10 transition-colors duration-300 cursor-default"
           >

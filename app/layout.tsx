@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Orbitron, Edu_NSW_ACT_Foundation } from 'next/font/google';
 import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
@@ -18,6 +19,18 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+  weight: ['400', '500', '600', '700'],
+});
+
+export const eduNSW = Edu_NSW_ACT_Foundation({
+  subsets: ['latin'],
+  variable: '--font-edu-nsw',
+  weight: ['400'], // Only one weight is available for this font
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -40,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body>
+      <body className={`${orbitron.variable} ${eduNSW.variable}`}>
         <Theme>
           <Nav />
           <main>{children}</main>

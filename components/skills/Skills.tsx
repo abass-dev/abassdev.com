@@ -15,7 +15,6 @@ import { IoAnalyticsOutline } from "react-icons/io5";
 import { GiPadlock } from "react-icons/gi";
 import { BsDatabaseAdd, BsWordpress } from "react-icons/bs";
 import Item from "./Item";
-import localFont from "next/font/local";
 import { FcLinux, FcSmartphoneTablet } from "react-icons/fc";
 import {
   SiAdobeillustrator,
@@ -26,9 +25,6 @@ import {
 
 import { TbBrandReactNative, TbBrandVscode, TbSql } from "react-icons/tb";
 import Responsive from "@/utils/googleADS/Responsive";
-const Orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
-});
 
 /**
  * Renders the Skills component.
@@ -43,7 +39,7 @@ const Skills = (): JSX.Element => {
     >
       <div className="">
         <h1
-          className={`${Orbitron.className} text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
+          className={`font-orbitron text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
         >
           Skills
         </h1>

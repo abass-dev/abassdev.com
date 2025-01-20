@@ -12,7 +12,7 @@ import {
 import emailjs from "@emailjs/browser";
 import Alert from "../ui/Alert";
 import ProgressBar from "../ui/LoadingBar";
-import { BsFillSendFill } from "react-icons/bs";
+import { Send } from "lucide-react";
 
 const notyf = new Notification(3000);
 
@@ -118,9 +118,9 @@ const Form = () => {
   }
 
   return (
-    <div className="bg-background p-5">
-      <h2 className="text-2xl text-gray-700 dark:text-gray-100 text-center pb-5">
-        Let's Chat
+    <div className="bg-background shadow-md rounded-md p-5">
+      <h2 className="text-3xl text-gray-700 dark:text-gray-100 text-center pb-5">
+        Get in touch
       </h2>
       {isLoading && <ProgressBar />}
       {message.success && <Alert message={message.success} type="success" />}
@@ -219,7 +219,7 @@ const Form = () => {
         </div>
         <button className="flex items-center justify-center gap-2 bg-transparent w-full hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
           <span>Send</span>
-          <BsFillSendFill size={20} />
+          <Send size={20} />
         </button>
       </form>
     </div>
