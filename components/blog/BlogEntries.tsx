@@ -75,7 +75,7 @@ const BlogEntries: React.FC = () => {
     },
     {
       title: "Detect When a User Switches Browser Tabs Using JavaScript",
-      date: "October 05, 2024",
+      date: "January 24, 2025",
       category: "JavaScript",
       description:
         "Have you ever wanted to know when a user switches away from your website’s tab?",
