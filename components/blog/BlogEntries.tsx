@@ -74,14 +74,14 @@ const BlogEntries: React.FC = () => {
       link: "https://abassdev.com/blog/2024/09/21/guide-to-structuring-express-js-applications/",
     },
     {
-      title: "Create a Professional Portfolio",
+      title: "Detect When a User Switches Browser Tabs Using JavaScript",
       date: "October 05, 2024",
       category: "Web App",
       description:
-        "Learn how to create a professional portfolio that stands out in the tech world.",
+        "Have you ever wanted to know when a user switches away from your website’s tab?",
       imageUrl:
-        "https://abassdev.com/blog/wp-content/uploads/2024/10/Screenshot_20241006_172131_Chrome-1024x436.png",
-      link: "https://abassdev.com/blog/2024/10/06/create-a-professional-portfolio/",
+        "/assets/images/javascript-code.webp",
+      link: "https://abassdev.com/blog/2024/09/18/detect-when-a-user-switches-browser-tabs-using-javascript/",
     },
   ];
 
