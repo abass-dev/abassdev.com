@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "../ui/theme-toggle";
 import { BookAIcon, CodeXml, Contact, Folder, History, MenuIcon } from "lucide-react";
+import OrhIcon from "../svg-component/OrhIcon";
 
 interface NavigationItem {
   name: string;
@@ -30,7 +31,8 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: "Projects", link: "/projects", icon: Folder },
   { name: "Web apps", link: "https://apps.abassdev.com", icon: CodeXml, external: true },
   { name: "My Story", link: "/my-story", icon: History },
-  { name: "Blog", link: "https://abassdev.com/blog", icon: BookAIcon, margin: true, external: true },
+  { name: "Open React Hub", link: "https://orh.abassdev.com", icon: OrhIcon, margin: true, external: true },
+  { name: "Blog", link: "https://abassdev.com/blog", icon: BookAIcon },
   { name: "Contact Me", link: "/contact", icon: Contact },
 ];
 
