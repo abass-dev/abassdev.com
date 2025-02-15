@@ -1,12 +1,12 @@
 "use client";
 
-import { BsGithub } from "react-icons/bs";
 import { SeeMoreButton } from "../ui";
 import { usePathname } from "next/navigation";
 import Item from "./Item";
 import { Report } from "../";
 import Responsive from "@/utils/googleADS/Responsive";
 import IconCloud from "../ui/icon-cloud";
+import { GitBranch } from "lucide-react";
 
 
 const slugs = [
@@ -46,13 +46,13 @@ const Projects = () => {
   const pathName = usePathname();
   return (
     <>
-      <section id="projects" className="pt-20 dark:bg-gray-900">
+      <section id="projects" className="pt-20 from-background to-background/95">
         <div className={`container mx-auto px-8 md:px-10 lg:px-20 xl:px-32`}>
-          <h1
-            className={`font-orbitron text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
-          >
-            Notable Projects
-          </h1>
+          <header className="text-center mb-12">
+            <h1 className={`font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
+              Notable Projects
+            </h1>
+          </header>
           <div className="relative flex size-full items-center justify-center overflow-hidden px-20 pb-20 pt-2">
             <IconCloud iconSlugs={slugs} />
           </div>
@@ -87,8 +87,18 @@ const Projects = () => {
               headerLinks={{
                 github: {
                   url: "https://github.com/abass-dev/open-react-hub",
-                  icon: <BsGithub />,
+                  icon: <GitBranch />,
                 },
+              }}
+            />
+            <Item
+              name="UR_NOT_M Project"
+              headerImg="/assets/images/urnotm.webp"
+              description="Cyberpunk: The Cybernetic Edge of My Dark Side: No description available."
+              seeMore={{ url: "https://urnotm.abassdev.com/", text: "Step Into the Matrix..." }}
+              techs={["NextJs & Unkown Techs"]}
+              headerLinks={{
+                privateSource: true,
               }}
             />
             <Item
@@ -110,7 +120,7 @@ const Projects = () => {
               headerLinks={{
                 github: {
                   url: "https://github.com/abass-dev/abassdev.com",
-                  icon: <BsGithub />,
+                  icon: <GitBranch />,
                 },
               }}
             />
@@ -138,7 +148,7 @@ const Projects = () => {
               headerLinks={{
                 github: {
                   url: "https://github.com/nigaphp",
-                  icon: <BsGithub />,
+                  icon: <GitBranch />,
                 },
               }}
             />
@@ -157,7 +167,7 @@ const Projects = () => {
               headerLinks={{
                 github: {
                   url: "https://github.com/abass-dev/dynacard",
-                  icon: <BsGithub />,
+                  icon: <GitBranch />,
                 },
               }}
             />
@@ -185,7 +195,7 @@ const Projects = () => {
               headerLinks={{
                 github: {
                   url: "https://github.com/abass-dev/BenOSP-FormBuilder",
-                  icon: <BsGithub />,
+                  icon: <GitBranch />,
                 },
               }}
             />
@@ -213,7 +223,7 @@ const Projects = () => {
               headerLinks={{
                 github: {
                   url: "https://github.com/abass-dev/abassdev.com",
-                  icon: <BsGithub />,
+                  icon: <GitBranch />,
                 },
               }}
             />

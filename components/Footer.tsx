@@ -33,7 +33,7 @@ const Footer = () => {
   const pathname = usePathname();
 
   return (
-    <div className=" text-white text-xl bg-gray-900 py-8">
+    <div className=" text-white text-xl bg-black py-8">
       <div className="container mx-auto grid grid-cols-4 gap-10 px-8 md:px-20">
         {pathname !== "/contact/" && (
           <div className="col-span-4 md:col-span-2">
@@ -76,7 +76,9 @@ const Footer = () => {
           <div className="py-3 mt-5">
             <h3 className="py-5 text-3xl">Other Links</h3>
             <ul className="grid grid-cols-2 place-items-center">
-              <ImportantLinks href="https://apps.abassdev.com" text="Web Apps" />
+              <ImportantLinks href="https://apps.abassdev.com" text="WebUtilityX" />
+              <ImportantLinks href="https://orh.vercel.com" text="Orh" />
+              <ImportantLinks href="/projects/" text="Projects" />
               <ImportantLinks href="https://abassdev.com/blog" text="Blog" />
               <ImportantLinks href="/my-story/" text="About Me" />
               <ImportantLinks href="/contact/" text="Contact Me" />

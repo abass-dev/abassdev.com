@@ -41,13 +41,9 @@ const MyStory = () => {
     <article className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 dark:text-gray-100">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 pt-20 pb-10">
         <header className="max-w-4xl mx-auto mb-12">
-          <h1
-            className="text-4xl md:text-5xl font-bold font-orbitron text-center text-blue-950 dark:text-white mb-8"
-            id="about-title"
-          >
+          <h1 className={`font-orbitron text-4xl mb-12 md:text-5xl text-center lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
             About Me
           </h1>
-
           <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500" />
             <img

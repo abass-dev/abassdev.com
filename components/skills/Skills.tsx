@@ -35,12 +35,10 @@ const Skills = (): JSX.Element => {
   return (
     <div
       id="Skills"
-      className="container mx-auto md:px-10 lg:px-20 xl:px-32 dark:bg-gray-900 text-black px-10 dark:text-white pt-10 flex items-center flex-col justify-center"
+      className="container mx-auto md:px-10  lg:px-20 xl:px-32 from-background to-background/95 text-black px-10 dark:text-white pt-10 flex items-center flex-col justify-center"
     >
       <div className="">
-        <h1
-          className={`font-orbitron text-center font-bold  dark:text-white text-4xl pb-10 my-4 text-blue-950`}
-        >
+        <h1 className={`font-orbitron mb-16 text-center text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
           Skills
         </h1>
         <div className="grid gap-8  md:grid-cols-2">

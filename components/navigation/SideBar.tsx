@@ -5,8 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "../ui/theme-toggle";
-import { BookAIcon, CodeXml, Contact, Folder, History, MenuIcon } from "lucide-react";
-import OrhIcon from "../svg-component/OrhIcon";
+import { OrhIcon, WebUtilityXIcon, MenuAltLeft, Folder, BookAIcon, Contact, History } from "../svg-component";
 
 interface NavigationItem {
   name: string;
@@ -29,7 +28,7 @@ interface NavigationItemProps {
 
 const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: "Projects", link: "/projects", icon: Folder },
-  { name: "Web apps", link: "https://apps.abassdev.com", icon: CodeXml, external: true },
+  { name: "WebUtilityX", link: "https://apps.abassdev.com", icon: WebUtilityXIcon, external: true },
   { name: "My Story", link: "/my-story", icon: History },
   { name: "Open React Hub", link: "https://orh.abassdev.com", icon: OrhIcon, margin: true, external: true },
   { name: "Blog", link: "https://abassdev.com/blog", icon: BookAIcon },
@@ -144,7 +143,7 @@ const Sidebar = () => {
             aria-expanded={open}
             className="p-3 h-9 w-9"
           >
-            <MenuIcon size={50} />
+            <MenuAltLeft size={50} />
           </Button>
         </div>
 

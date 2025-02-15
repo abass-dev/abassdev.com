@@ -1,20 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, User } from "lucide-react";
-import localFont from "next/font/local";
 import Form from "./Form";
 import { Report } from "../";
 import { Responsive } from "@/utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-
-// Font configuration
-const orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
-  variable: '--font-orbitron',
-  display: 'swap',
-});
 
 // Contact information type
 interface ContactInfo {
@@ -78,7 +70,7 @@ const Contact = () => {
     <main className="min-h-screen bg-background">
       <div className="container mx-auto px-4 md:px-8 py-16">
         <header className="text-center mb-12">
-          <h1 className={`${orbitron.variable} font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
+          <h1 className={`font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
             Contact Me
           </h1>
         </header>

@@ -1,0 +1,21 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.icon:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.icon-interactive {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .icon {
+        transition: none;
+    }
+}

@@ -1,14 +1,9 @@
 import "./globals.css";
 import { Orbitron, Edu_NSW_ACT_Foundation } from 'next/font/google';
-import Nav from "../components/navigation/Navigation";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-import Theme from "../context/theme-provider";
-import HeadScript from "@/components/HeadScript";
-
-const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
-const ScrollUp = dynamic(() => import("../components/ui/ScrollUp"), { ssr: false });
-
+import { MainContextProvider } from "@/context/MainContext";
+import Main from "@/components/Main";
+import Theme from "@/context/theme-provider";
 
 export const metadata: Metadata = {
   title: "Abass Dev | Full-stack developer | Personal portfolio",
@@ -55,12 +50,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${orbitron.variable} ${eduNSW.variable}`}>
         <Theme>
-          <Nav />
-          <main>{children}</main>
-          <ScrollUp />
-          <Footer />
+          <MainContextProvider>
+            <Main>{children}</Main>
+          </MainContextProvider>
         </Theme>
-        <HeadScript />
       </body>
     </html>
   );
