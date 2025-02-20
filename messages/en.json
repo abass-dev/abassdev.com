@@ -1,0 +1,354 @@
+{
+    "profile": {
+        "header": {
+            "greeting": "Hello World, I am",
+            "name": "Abass Dev"
+        },
+        "bio": {
+            "description": "I am a passionate web and mobile app developer with over 6 years of experience in programming and internet technologies. In my free time, I enjoy sharing my experiences through my <blog>blog</blog> and contributing to the <openSource>open-source</openSource> community. I am the creator of the <nigaPHP>NigaPHP</nigaPHP> framework, as well as the maintainer of <webUtilityX>WebUtilityX</webUtilityX> and <openReactHub>Open React Hub</openReactHub>.",
+            "availableStatus": "Available for new projects"
+        },
+        "actions": {
+            "downloadResume": "Download Resume",
+            "moreAboutMe": "More About Me"
+        },
+        "links": {
+            "blog": "blog",
+            "openSource": "open-source",
+            "nigaPHP": "NigaPHP",
+            "webUtilityX": "WebUtilityX",
+            "openReactHub": "Open React Hub"
+        },
+        "social": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "email": "Email"
+        }
+    },
+    "navigation": {
+        "menu": {
+            "toggle": {
+                "open": "Open menu",
+                "close": "Close menu"
+            },
+            "items": {
+                "projects": "Projects",
+                "webUtilityX": "WebUtilityX",
+                "myStory": "My Story",
+                "openReactHub": "Open React Hub",
+                "blog": "Blog",
+                "contactMe": "Contact Me"
+            }
+        }
+    },
+    "projects": {
+        "metadata": {
+            "title": "Abass Dev - Projects",
+            "description": "Notable projects | Abass Dev"
+        },
+        "title": "Notable Projects",
+        "seeMore": "See more projects...",
+        "visitWebsite": "Visit the Website...",
+        "checkItOut": "Check it out...",
+        "exploreHub": "Explore the hub...",
+        "stepIntoMatrix": "Step Into the Matrix...",
+        "giveItATry": "Give it a try...",
+        "discoverFramework": "Let's discover NigaPHP Framework in 5 minutes.",
+        "checkoutNPM": "Checkout Dynacard on NPM (Nodejs Package Manager)",
+        "checkoutPackagist": "Checkout Form builder on packagist",
+        "checkoutSource": "Checkout the code source of this website.",
+        "visitBlog": "Visit World Of Techs now.",
+        "descriptions": {
+            "ongWebsite": "A professional and user-friendly website tailored for NGOs to showcase their mission, activities, and impact. Designed to enhance engagement and communication with stakeholders.",
+            "restaurantWebsite": "An elegant and responsive website designed for restaurants to showcase their menu, services, and unique dining experience. Built to attract customers and simplify online reservations.",
+            "openReactHub": "A collection of React components and utilities for building modern web applications. Simplifies development with ready-to-use, customizable solutions for faster and more efficient workflows.",
+            "urNotM": "Cyberpunk: The Cybernetic Edge of My Dark Side: No description available.",
+            "codeToImage": "A simple and intuitive web app that lets you transform your code snippets into beautifully styled images. Perfect for sharing on social media, documentation, or presentations, this tool makes your code visually appealing and easy to showcase.",
+            "repoInspector": "Repo Inspector is an innovative project designed to empower users with in-depth insights into their GitHub or GitLab repositories. With Repo Inspector, you gain a powerful tool that goes beyond the surface level, allowing you to unlock a wealth of information about your codebase.",
+            "invoiceGenerator": "A streamlined tool designed to make invoice creation quick and hassle-free. Customize and generate professional invoices effortlessly.",
+            "nigaPHP": "NigaPHP is a lightweight PHP web application framework designed to simplify and speed up the development process for PHP developers. It was initially created by Abass Dev and has since been maintained and contributed to by a community of developers. With its user-friendly interface and powerful features, NigaPHP has become a popular choice for building scalable and secure web applications.",
+            "dynacard": "Dynacard is a React Native library that enables developers to effortlessly design visually stunning cards for their applications. This open-source library provides a flexible and customizable platform for creating beautiful cards within your React Native project.",
+            "pythonConsole": "An online Python console that allows you to run Python code directly in your web browser, offering an easy-to-use command-line interface (CLI) for quick testing and experimentation.",
+            "formBuilder": "Looking for a user-friendly solution for building HTML forms? Check out Form Builder, an open-source project created by Abass Dev. The project is coded with PHP and styled using Bootstrap CSS, making it simple to create custom forms with ease.",
+            "portfolio": "This portfolio was developed with NextJs (Typescript). By using NextJs, the developer can create reusable UI components that can be used across the entire application, making it easier to maintain and update. NextJs also provides a virtual DOM (Document Object Model) that allows for faster updates to the user interface compared to traditional web development techniques.",
+            "fakaray": "Fakaray is a user-friendly chat application that enables seamless communication between friends and family. With its intuitive interface and robust features, Fakaray offers a chat experience that is comparable to that of other popular chat apps on the market.",
+            "worldOfTechs": "Where I passionately share my knowledge with the world during my free time. This website is using WordPress (CMS). WordPress allows us to streamline blog posting, saving us valuable time.",
+            "mobilePortfolio": "My personal portfolio using React Native (Mobile app)",
+            "socialContribution": "No description for this project."
+        }
+    },
+    "skills": {
+        "title": "Skills",
+        "webDevelopment": {
+            "title": "Web Development",
+            "description": "I specialize in providing functional web services that include custom website development, WordPress development, e-commerce solutions, and more."
+        },
+        "seoAndSecurity": {
+            "title": "SEO and security",
+            "description": "I offer top-notch solutions in both software security and SEO practices that can help boost the quantity and quality of traffic to your website."
+        },
+        "webDesign": {
+            "title": "Web Design",
+            "description": "My web design skill include creating stunning, intuitive websites that effectively represent your brand and corporate identity through exceptional UI/UX design."
+        },
+        "mobileApp": {
+            "title": "Mobile App",
+            "description": "I create beautiful and functional apps for iOS and Android using React Native. With my expertise in this framework, I can bring your app idea to life and deliver top-notch results."
+        }
+    },
+    "blogEntries": {
+        "title": "Blog Entries",
+        "entries": [
+            {
+                "title": "Understanding the New File-Based Routing System in Next.js 13",
+                "date": "September 22, 2024",
+                "category": "Next.js",
+                "description": "With the release of Next.js 13, a significant shift has taken place in how routing is handled, leaving many developers confused.",
+                "imageUrl": "https://abassdev.com/blog/wp-content/uploads/2024/09/Next.js-13-App-Router-1024x794.png",
+                "link": "https://abassdev.com/blog/2024/09/22/understanding-the-new-file-based-routing-system-in-next-js-13/"
+            },
+            {
+                "title": "Guide to Structuring Express.js Applications",
+                "date": "September 21, 2024",
+                "category": "Node.js",
+                "description": "Welcome to our comprehensive guide on building structured web applications using Express.js!",
+                "imageUrl": "https://abassdev.com/blog/wp-content/uploads/2024/09/image-1.png",
+                "link": "https://abassdev.com/blog/2024/09/21/guide-to-structuring-express-js-applications/"
+            },
+            {
+                "title": "Detect When a User Switches Browser Tabs Using JavaScript",
+                "date": "January 24, 2025",
+                "category": "JavaScript",
+                "description": "Have you ever wanted to know when a user switches away from your website’s tab?",
+                "imageUrl": "/assets/images/javascript-code.webp",
+                "link": "https://abassdev.com/blog/2024/09/18/detect-when-a-user-switches-browser-tabs-using-javascript/"
+            }
+        ]
+    },
+    "faq": {
+        "title": "FAQ (Frequently Asked Questions)",
+        "items": [
+            {
+                "question": "Which operating system do I use?",
+                "answer": "I primarily use WSL, which stands for Windows Subsystem for Linux, with Kali Linux as my operating system."
+            },
+            {
+                "question": "What programming language do I mostly use?",
+                "answer": "PHP and JavaScript are the programming languages I use most frequently."
+            },
+            {
+                "question": "What code editor do I mostly use?",
+                "answer": "Visual Studio Code (VSCode) is my most used code editor."
+            },
+            {
+                "question": "What is my favorite Web browser?",
+                "answer": "Tor and Chrome are my favorite Web browsers for browsing and development environment."
+            },
+            {
+                "question": "What is my current development environment?",
+                "answer": "BRAND: Dell, PROCESSOR: Intel Core i7, RAM: 16GB, OPERATING SYSTEM: Windows 11, STORAGE CAPACITY: 256GB, STORAGE TYPE: SSD"
+            }
+        ]
+    },
+    "report": {
+        "title": "Anything wrong with this page?",
+        "links": [
+            {
+                "text": "Code source of this page",
+                "tooltip": "View the source code on GitHub"
+            },
+            {
+                "text": "Report issue on GitHub",
+                "tooltip": "Report an issue via GitHub"
+            },
+            {
+                "text": "Report issue by email",
+                "tooltip": "Send an email to report an issue"
+            },
+            {
+                "text": "Edit this page on GitHub",
+                "tooltip": "Edit this page on GitHub"
+            },
+            {
+                "text": "Fork this repository",
+                "tooltip": "Fork this GitHub repository"
+            }
+        ]
+    },
+    "footer": {
+        "whatsNext": {
+            "title": "What's next?",
+            "subtitle": "Let's connect",
+            "description": "If you have any opportunity, suggestion or feedback we would love to hear from you! Please feel free to reach out to us using the contact form or our email address."
+        },
+        "otherLinks": {
+            "title": "Other Links",
+            "projects": "Projects",
+            "blog": "Blog",
+            "aboutMe": "About Me",
+            "contactMe": "Contact Me",
+            "privacyPolicy": "Privacy Policy",
+            "copyright": "Copyright"
+        },
+        "copyright": "Copyright © 2021 - {year} Abass Dev. All rights reserved.",
+        "currentVersion": "Current version: {version}"
+    },
+    "form": {
+        "getInTouch": "Get in touch",
+        "labels": {
+            "name": "Name",
+            "subject": "Subject",
+            "email": "Email",
+            "message": "Message"
+        },
+        "placeholders": {
+            "name": "Jane",
+            "subject": "Subject",
+            "email": "Email",
+            "message": "Message"
+        },
+        "validation": {
+            "nameLength": "Your name shouldn't be less than 2 characters",
+            "subjectLength": "Subject shouldn't be less than 2 characters"
+        },
+        "messageSent": "Message sent!",
+        "serverError": "Internal server error, technical issues!",
+        "button": {
+            "send": "Send"
+        }
+    },
+    "myStory": {
+        "metadata": {
+            "title": "My Story - Abass Dev",
+            "description": "Learn more about Abass Dev, a talented full-stack developer with a passion for building exceptional Web and Mobile applications."
+        },
+        "aboutMe": "About Me",
+        "whoIsAbassDev": "Who is Abass Dev?",
+        "intro": "Abass Ben Cheik, who goes by the name Abass Dev, is a talented full-stack developer with a passion for building exceptional Web and Mobile applications. He was born in Niamey, Niger, on February 2, 1994. He is currently {birthday}",
+        "earlyYears": "At a young age of 15 in 2009, Abass Dev became fascinated with the world of web development. However, he had no idea where to start. It wasn't until he met a friend on Skyrock, a social networking site, in 2011, that he was introduced to the world of blogging and tasked with administering a Wix-created blog. It was this experience that sparked his curiosity and ignited his passion for web development.",
+        "growth": "In 2012, Abass Dev created his first blog on the Blogspot platform, but soon discovered its limitations. Determined to expand his knowledge and capabilities, he began to explore the depths of web development using languages such as HTML, CSS, JavaScript, PHP, SQL, and others.",
+        "development": "With his dedication and hard work, Abass Dev honed his skills and became a self-taught full-stack developer.",
+        "portfolio": "Today, he has an impressive portfolio of work that showcases his expertise in building dynamic, responsive, and visually appealing web applications.",
+        "skills": "In addition to his technical abilities, Abass Dev has a keen eye for design and aesthetics, which allows him to create stunning and functional user interfaces. He is always learning and staying up-to-date with the latest trends and technologies in the ever-evolving field of web development.",
+        "conclusion": "Abass Dev is a true testament to the power of self-education and perseverance. His passion and commitment to his craft have led him to become a respected figure in the web development community, and a source of inspiration for aspiring developers around the world."
+    },
+    "contactPage": {
+        "metadata": {
+            "title": "Contact us - Abass Dev",
+            "description": "Web and mobile app developer at self-employed. | Abass Dev"
+        },
+        "contactMe": "Contact Me",
+        "role": "Web and mobile app developer at self-employed",
+        "location": "Niamey, Niger",
+        "email": "abass@abassdev.com",
+        "phone": "+233 59 820 8469",
+        "availableForProjects": "Available for new projects",
+        "collaborations": "Feel free to reach out for collaborations, opportunities, or just to say hello! I typically respond within 24 hours."
+    },
+    "meta": {
+        "title": "Abass Dev | Full-stack developer | Personal portfolio",
+        "description": "Abass Dev personal portfolio",
+        "keywords": "web development, mobile app development, graphic design, e-commerce, portfolio, Abass Dev",
+        "author": "Abass Dev",
+        "ogTitle": "Abass Dev- Web and Mobile Developer Portfolio",
+        "ogDescription": "Discover my work in web and mobile app development, graphic design, and more.",
+        "twitterTitle": "Abass - Web and Mobile Developer Portfolio",
+        "twitterDescription": "Discover my work in web and mobile app development, graphic design, and more."
+    },
+    "Copyright": {
+        "metadata": {
+            "title": "Copyright - Abass Dev",
+            "description": "Copyright © 2024 Abass Dev. All rights reserved. | Abass Dev"
+        },
+        "heading": "Copyright",
+        "rightsReserved": "© 2023 Abass Dev. All rights reserved.",
+        "content": {
+            "paragraph1": "The materials and content displayed on this website, including but not limited to text, graphics, logos, images, videos, and software, are the property of Abass Dev or its content suppliers and are protected by international copyright laws. Reproduction, modification, distribution, or any other form of exploitation of the materials and content on this website is prohibited without express written consent from Abass Dev.",
+            "paragraph2": "The information and materials provided on this website are for general informational purposes only and do not constitute professional advice. While Abass Dev strives to keep the information on this website accurate and up-to-date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.",
+            "paragraph3": "In no event will Abass Dev be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.",
+            "paragraph4": "Through this website, you are able to link to other websites which are not under the control of Abass Dev. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.",
+            "paragraph5": "Every effort is made to keep the website up and running smoothly. However, Abass Dev takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.",
+            "paragraph6": "Thank you for visiting our website. We hope you find it informative and useful."
+        }
+    },
+    "PrivacyPolicy": {
+        "metadata": {
+            "title": "Privacy Policy - Abass Dev",
+            "description": "Privacy Policy for abassdev.com | Abass Dev"
+        },
+        "heading": "Privacy Policy",
+        "content": {
+            "intro": {
+                "title": "Privacy policy for abassdev.com",
+                "text": "At abassdev.com, the privacy of our visitors is of utmost importance to us. This privacy policy outlines the types of personal information that is received and collected by abassdev.com and how it is used."
+            },
+            "informationCollection": {
+                "title": "Information We Collect",
+                "paragraph1": "We may collect personal information such as your name, email address, and other contact details when you fill out the contact form on our website. This information is collected solely for the purpose of communicating with you regarding your inquiry or request.",
+                "paragraph2": "We may also collect non-personal information such as your IP address, browser type, operating system, and the date and time of your visit. This information is used to analyze trends, administer the site, track user's movement around the site, and gather demographic information."
+            },
+            "googleServices": {
+                "title": "Google Services",
+                "paragraph1": "We use Google Analytics to collect information about how visitors use our website. Google Analytics collects information such as how often users visit our website, what pages they visit when they do so, and what other sites they used prior to coming to our website. We use the information we get from Google Analytics to improve our website and services.",
+                "paragraph2": "We also use Google Search Console to monitor and optimize the performance of our website in Google search results. Google Search Console collects information such as search queries, click-through rates, and website errors.",
+                "paragraph3": "Google may use cookies to collect information about your use of our website. You can learn more about how Google uses cookies by visiting Google's Privacy & Terms page."
+            },
+            "security": {
+                "title": "Security",
+                "text": "We take reasonable steps to protect the personal information we collect from unauthorized access, disclosure, alteration, or destruction. However, no website can be completely secure, so we cannot guarantee the security of your personal information."
+            },
+            "contact": {
+                "title": "Contact us",
+                "text": "If you have any questions about this privacy policy, please contact us."
+            }
+        }
+    },
+    "notFound": {
+        "metadata": {
+            "title": "404 Not Found",
+            "description": "The page you are looking for doesn't exist. if you think something is broken. report a problem."
+        },
+        "error": {
+            "code": "404",
+            "heading": "OPPS! PAGE NOT FOUND",
+            "message": "The page you are looking for doesn't exist. if you think something is broken. report a problem."
+        },
+        "buttons": {
+            "home": "RETURN HOME",
+            "report": "REPORT PROBLEM"
+        }
+    },
+    "layout": {
+        "metadata": {
+            "keywords": "web development, mobile app development, graphic design, e-commerce, portfolio, Abass Dev",
+            "author": "Abass Dev",
+            "og": {
+                "title": "Abass Dev - Web and Mobile Developer Portfolio",
+                "description": "Discover my work in web and mobile app development, graphic design, and more.",
+                "siteName": "Abass Dev Portfolio"
+            },
+            "twitter": {
+                "title": "Abass - Web and Mobile Developer Portfolio"
+            }
+        }
+    },
+    "LastUpdate": {
+        "label": "Last Updated",
+        "locale": "en-US"
+    },
+    "HomePage": {
+        "meta": {
+            "title": "Abass Dev | Full-stack developer | Personal portfolio",
+            "description": "Abass Dev personal portfolio",
+            "keywords": "web development, mobile app development, graphic design, e-commerce, portfolio, Abass Dev",
+            "author": "Abass Dev",
+            "ogTitle": "Abass Dev - Web and Mobile Developer Portfolio",
+            "ogDescription": "Discover my work in web and mobile app development, graphic design, and more.",
+            "siteName": "Abass Dev",
+            "twitterTitle": "Abass - Web and Mobile Developer Portfolio",
+            "twitterDescription": "Discover my work in web and mobile app development, graphic design, and more."
+        }
+    }
+}

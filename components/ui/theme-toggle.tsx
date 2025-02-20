@@ -52,7 +52,7 @@ const ThemeToggle = () => {
       size="icon"
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
       aria-label="Switch theme"
-      className="h-9 w-9"
+      className="ml-2 h-9 w-9"
     >
       <SunIcon />
       <MoonIcon />

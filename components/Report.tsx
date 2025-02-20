@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from "next-intl"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { CodeIcon, BugIcon, MailIcon, PencilIcon, GitForkIcon } from 'lucide-react'
@@ -35,30 +36,31 @@ export default function Report({
   dir = "app",
   ext = ".tsx",
 }: ReportProps) {
+  const t = useTranslations("report")
   const links = [
     {
       href: `https://github.com/abass-dev/abassdev.com/blob/dev/${dir}/${report}${ext}`,
-      text: "Code source of this page",
+      text: t("links.0.text"),
       icon: <CodeIcon className="h-4 w-4" />,
     },
     {
       href: "https://github.com/abass-dev/abassdev.com/issues/new?",
-      text: "Report issue on GitHub",
+      text: t("links.1.text"),
       icon: <BugIcon className="h-4 w-4" />,
     },
     {
       href: `mailto:abass@abassdev.com?subject=Report issues https://github.com/abass-dev/abassdev.com/blob/dev/${dir}/${report}${ext}&body=Hi Abass Dev, I found some issues with this component... [${report}]`,
-      text: "Report issue by email",
+      text: t("links.2.text"),
       icon: <MailIcon className="h-4 w-4" />,
     },
     {
       href: `https://github.com/abass-dev/abassdev.com/edit/dev/${dir}/${report}${ext}`,
-      text: "Edit this page on GitHub",
+      text: t("links.3.text"),
       icon: <PencilIcon className="h-4 w-4" />,
     },
     {
       href: "https://github.com/abass-dev/abassdev.com/fork",
-      text: "Fork this repository",
+      text: t("links.4.text"),
       icon: <GitForkIcon className="h-4 w-4" />,
     },
   ]
@@ -68,7 +70,7 @@ export default function Report({
       <Card className="bg-background text-foreground">
         <CardHeader>
           <CardTitle className="text-3xl md:text-4xl font-edu-nsw text-primary">
-            Anything wrong with this page?
+            {t("title")}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -82,4 +84,3 @@ export default function Report({
     </div>
   )
 }
-

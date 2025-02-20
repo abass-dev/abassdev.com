@@ -1,3 +1,4 @@
+import { getEndpoint } from '@/lib/utils/urlEncoder';
 import type { AnalyticsData, LocationData } from '../types';
 import { getReferrerInfo, getDeviceType, getOrCreateSessionId } from './helpers';
 
@@ -9,7 +10,7 @@ export const sendAnalytics = async (
     if (typeof window === 'undefined') return false;
 
     try {
-        const apiUrl = 'https://urnotm.vercel.app/api/urntm-analytics';
+        const apiUrl = getEndpoint('analytics');
         const referrerInfo = getReferrerInfo();
 
         const enrichedData: AnalyticsData = {
@@ -51,4 +52,15 @@ export const sendAnalytics = async (
         console.error('Error sending analytics:', error);
         return false;
     }
+};
+
+export const fetchLocation = async (ip: string): Promise<Response> => {
+    const locationEndpoint = getEndpoint('location');
+    return fetch(locationEndpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ip })
+    });
 };

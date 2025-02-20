@@ -1,13 +1,11 @@
-// @ts-ignore
-// @ts-nocheck
-"use client"
+'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { ChangeEvent, useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import Notification from "../../utils/Notification";
 import {
   validateEmail,
   validateTextarea,
-  validateUsername,
 } from "../../helpers";
 import emailjs from "@emailjs/browser";
 import Alert from "../ui/Alert";
@@ -17,6 +15,7 @@ import { Send } from "lucide-react";
 const notyf = new Notification(3000);
 
 const Form = () => {
+  const t = useTranslations("form");
   const [isLoading, setLoading] = useState(false);
   const [message, setMessage] = useState({
     success: "",
@@ -35,29 +34,24 @@ const Form = () => {
     message: "",
   });
 
-  function inputHandler(e: React.FormEvent) {
+
+  function inputHandler(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const inputValue = e.target.value;
     const inputName = e.target.name;
+
     setInvalidInput({
       name: false,
       subject: false,
       email: false,
       message: false,
     });
-    setUserInputs((prev) => {
-      return {
-        ...prev,
-        [inputName]: inputValue,
-      };
-    });
+
+    setUserInputs((prev) => ({
+      ...prev,
+      [inputName]: inputValue,
+    }));
   }
 
-  /**
-   * Submits the email form and sends an email using the provided input.
-   *
-   * @param {React.FormEvent} event - The form submit event.
-   * @return {Promise<void>} - A promise that resolves when the email is sent successfully.
-   */
   async function onSubmitEmailHandler(event: React.FormEvent) {
     event.preventDefault();
 
@@ -66,12 +60,12 @@ const Form = () => {
 
     if (name.length <= 2) {
       setInvalidInput((prev) => ({ ...prev, name: true }));
-      return notyf.error("Your name shouldn't be less than 2 characters");
+      return notyf.error(t("validation.nameLength"));
     }
 
     if (subject.length <= 2) {
       setInvalidInput((prev) => ({ ...prev, subject: true }));
-      return notyf.error("Subject shouldn't be less than 2 characters");
+      return notyf.error(t("validation.subjectLength"));
     }
 
     if (!valideEmail.valid) {
@@ -103,7 +97,7 @@ const Form = () => {
         templateParams,
         "9QHGoEPmDaBELUbZn"
       );
-      notyf.success("Message sent!");
+      notyf.success(t("messageSent"));
       userInput.name = "";
       userInput.subject = "";
       userInput.email = "";
@@ -111,7 +105,7 @@ const Form = () => {
     } catch (err) {
       setMessage({
         success: "",
-        error: "Internal server error, technical issues!",
+        error: t("serverError"),
       });
       setLoading(false);
     }
@@ -120,7 +114,7 @@ const Form = () => {
   return (
     <div className="bg-background shadow-md rounded-md p-5">
       <h2 className="text-3xl text-gray-700 dark:text-gray-100 text-center pb-5">
-        Get in touch
+        {t("getInTouch")}
       </h2>
       {isLoading && <ProgressBar />}
       {message.success && <Alert message={message.success} type="success" />}
@@ -135,7 +129,7 @@ const Form = () => {
               } dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
             htmlFor="username"
           >
-            Name:{" "}
+            {t("labels.name")}:
           </label>
           <input
             autoComplete="name"
@@ -146,7 +140,7 @@ const Form = () => {
               } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             id="username"
             type="text"
-            placeholder="Jane"
+            placeholder={t("placeholders.name")}
           />
         </div>
 
@@ -158,7 +152,7 @@ const Form = () => {
               } dark:text-gray-100 block uppercase tracking-wide text-xs font-bold mb-2`}
             htmlFor="subject"
           >
-            Subject:{" "}
+            {t("labels.subject")}:
           </label>
           <input
             value={userInput.subject}
@@ -168,7 +162,7 @@ const Form = () => {
             id="subject"
             name="subject"
             type="text"
-            placeholder="Subject"
+            placeholder={t("placeholders.subject")}
           />
         </div>
 
@@ -180,7 +174,7 @@ const Form = () => {
               } dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
             htmlFor="email"
           >
-            Email:{" "}
+            {t("labels.email")}:
           </label>
           <input
             autoComplete="email"
@@ -189,7 +183,7 @@ const Form = () => {
             id="email"
             name="email"
             type="text"
-            placeholder="Email"
+            placeholder={t("placeholders.email")}
             onChange={inputHandler}
             value={userInput.email}
           />
@@ -203,7 +197,7 @@ const Form = () => {
               } dark:text-gray-100 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2`}
             htmlFor="message"
           >
-            Message:{" "}
+            {t("labels.message")}:
           </label>
           <textarea
             rows={4}
@@ -211,14 +205,14 @@ const Form = () => {
             className={`${invalidInput.message ? "border-red-300" : ""
               } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             id="message"
-            placeholder="Message"
+            placeholder={t("placeholders.message")}
             name="message"
             onChange={inputHandler}
             value={userInput.message}
           />
         </div>
         <button className="flex items-center justify-center gap-2 bg-transparent w-full hover:bg-gray-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
-          <span>Send</span>
+          <span>{t("button.send")}</span>
           <Send size={20} />
         </button>
       </form>
