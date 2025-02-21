@@ -1,6 +1,6 @@
+import { GitBranch } from "lucide-react";
 import {
   BsGlobeCentralSouthAsia,
-  BsGithub,
   BsFacebook,
   BsTwitter,
 } from "react-icons/bs";
@@ -44,7 +44,7 @@ const Item = ({ name, avatar, about, links }: ItemProps) => {
 
             {links.github && (
               <a aria-label={`${name} github account`} href={links.github}>
-                <BsGithub size={25} />
+                <GitBranch size={25} />
               </a>
             )}
             {links.x && (

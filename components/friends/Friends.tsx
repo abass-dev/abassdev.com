@@ -1,7 +1,7 @@
 import Responsive from "@/utils/googleADS/Responsive";
 import Item from "./Item";
 
-const Friends = () => {
+export const Friends = () => {
   return (
     <div className="container mx-auto px-8 md:px-10 lg:px-20 xl:px-32 dark:bg-gray-900">
       <h1
@@ -67,5 +67,3 @@ const Friends = () => {
     </div>
   );
 };
-
-export default Friends;

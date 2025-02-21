@@ -2,13 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "../ui/theme-toggle";
-import { BookAIcon, CodeXml, Contact, Folder, History, MenuIcon } from "lucide-react";
+import { OrhIcon, WebUtilityXIcon, MenuAltLeft, Folder, BookAIcon, Contact, History } from "../svg-component";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 interface NavigationItem {
-  name: string;
+  nameKey: string;
   link: string;
   icon: React.ElementType;
   margin?: boolean;
@@ -27,14 +29,16 @@ interface NavigationItemProps {
 }
 
 const NAVIGATION_ITEMS: NavigationItem[] = [
-  { name: "Projects", link: "/projects", icon: Folder },
-  { name: "Web apps", link: "https://apps.abassdev.com", icon: CodeXml, external: true },
-  { name: "My Story", link: "/my-story", icon: History },
-  { name: "Blog", link: "https://abassdev.com/blog", icon: BookAIcon, margin: true, external: true },
-  { name: "Contact Me", link: "/contact", icon: Contact },
+  { nameKey: "projects", link: "/projects", icon: Folder },
+  { nameKey: "webUtilityX", link: "https://apps.abassdev.com", icon: WebUtilityXIcon, external: true },
+  { nameKey: "myStory", link: "/my-story", icon: History },
+  { nameKey: "openReactHub", link: "https://orh.abassdev.com", icon: OrhIcon, margin: true, external: true },
+  { nameKey: "blog", link: "https://abassdev.com/blog", icon: BookAIcon },
+  { nameKey: "contactMe", link: "/contact", icon: Contact },
 ];
 
 const NavigationItem: React.FC<NavigationItemProps> = ({ item, open, onClick }) => {
+  const t = useTranslations('navigation.menu.items');
   const isExternal = item.external;
 
   return (
@@ -61,7 +65,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({ item, open, onClick }) 
         )}
         style={{ transitionDelay: `${NAVIGATION_ITEMS.indexOf(item) + 7}0ms` }}
       >
-        {item.name}
+        {t(item.nameKey)}
       </span>
       <span
         className={cn(
@@ -71,7 +75,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({ item, open, onClick }) 
           open && "hidden"
         )}
       >
-        {item.name}
+        {t(item.nameKey)}
       </span>
     </Link>
   );
@@ -100,6 +104,7 @@ const Logo: React.FC<LogoProps> = ({ open, onClick }) => (
 
 const Sidebar = () => {
   const [open, setOpen] = React.useState(false);
+  const t = useTranslations('navigation.menu.toggle');
 
   // Close sidebar on route change
   React.useEffect(() => {
@@ -121,54 +126,61 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <nav
-      className="fixed z-50 flex gap-6 min-h-screen"
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div
-        className={cn(
-          "bg-transparent px-4 transition-all duration-300",
-          open ? "w-72 backdrop-blur" : "w-12 md:w-16"
-        )}
+    <>
+      <nav
+        className="fixed z-40 flex gap-6 min-h-screen"
+        role="navigation"
+        aria-label="Main navigation"
       >
-        <div className="flex min-w-full justify-between py-3">
-          <Logo open={open} onClick={() => setOpen(false)} />
-          <Button
-            variant="ghost"
-            size="lg"
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            className="p-3 h-9 w-9"
-          >
-            <MenuIcon size={50} />
-          </Button>
-        </div>
-
         <div
           className={cn(
-            "mt-4 flex flex-col gap-2 relative",
-            !open && "hidden md:block"
+            "bg-transparent px-4 transition-all duration-300",
+            open ? "w-72 backdrop-blur" : "w-12 md:w-16"
           )}
         >
-          {NAVIGATION_ITEMS.map((item) => (
-            <NavigationItem
-              key={item.name}
-              item={item}
-              open={open}
-              onClick={() => open && setOpen(false)}
-            />
-          ))}
-          <div className={cn(
-            "mt-5",
-            !open && "flex justify-center"
-          )}>
-            <ThemeToggle />
+          <div className="flex min-w-full justify-between py-3">
+            <Logo open={open} onClick={() => setOpen(false)} />
+            <Button
+              variant="ghost"
+              size="lg"
+              onClick={() => setOpen(!open)}
+              aria-label={open ? t('close') : t('open')}
+              aria-expanded={open}
+              className="p-3 h-9 w-9"
+            >
+              <MenuAltLeft size={50} />
+            </Button>
+          </div>
+
+          <div
+            className={cn(
+              "mt-4 flex flex-col gap-2 relative",
+              !open && "hidden md:block"
+            )}
+          >
+            {NAVIGATION_ITEMS.map((item) => (
+              <NavigationItem
+                key={item.nameKey}
+                item={item}
+                open={open}
+                onClick={() => open && setOpen(false)}
+              />
+            ))}
+            <div className="hidden md:block">
+              <LanguageSwitcher open={open} position="sidebar" />
+            </div>
+            <div className={cn(
+              !open && "flex justify-center"
+            )}>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
+      </nav>
+      <div className="md:hidden">
+        <LanguageSwitcher open={true} position="topRight" />
       </div>
-    </nav>
+    </>
   );
 };
 

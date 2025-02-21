@@ -2,8 +2,8 @@ import BlogSection from "@/components/blog/BlogSection";
 import Profile from "@/components/Profile";
 import Skills from "@/components/skills/Skills";
 import FAQ from "@/components/faq";
-import Projects from "@/components/projects/Projects";
 import Report from "@/components/Report";
+import { Projects } from "@/components/projects/Projects";
 
 export default function page() {
   return (

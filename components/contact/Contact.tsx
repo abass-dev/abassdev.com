@@ -1,20 +1,12 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, User } from "lucide-react";
-import localFont from "next/font/local";
+import { useTranslations } from "next-intl"; // Import useTranslations
 import Form from "./Form";
-import { Report } from "../";
 import { Responsive } from "@/utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-
-// Font configuration
-const orbitron = localFont({
-  src: "../../fonts/Orbitron/static/Orbitron-Black.ttf",
-  variable: '--font-orbitron',
-  display: 'swap',
-});
+import Report from "../Report";
 
 // Contact information type
 interface ContactInfo {
@@ -74,12 +66,14 @@ const ContactInfoItem: React.FC<ContactInfo> = ({ icon: Icon, label, value, href
 };
 
 const Contact = () => {
+  const t = useTranslations("contactPage"); // Access translations
+
   return (
     <main className="min-h-screen bg-background">
       <div className="container mx-auto px-4 md:px-8 py-16">
         <header className="text-center mb-12">
-          <h1 className={`${orbitron.variable} font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
-            Contact Me
+          <h1 className={`font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
+            {t("contactMe")} {/* Using translation */}
           </h1>
         </header>
 
@@ -99,13 +93,12 @@ const Contact = () => {
               {/* Additional Information */}
               <div className="mt-8 space-y-4">
                 <p className="text-muted-foreground">
-                  Feel free to reach out for collaborations, opportunities, or just to say hello!
-                  I typically respond within 24 hours.
+                  {t("collaborations")} {/* Using translation */}
                 </p>
                 <div className="flex gap-2">
                   <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-sm text-muted-foreground">
-                    Available for new projects
+                    {t("availableForProjects")} {/* Using translation */}
                   </span>
                 </div>
               </div>

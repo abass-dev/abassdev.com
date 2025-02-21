@@ -51,8 +51,8 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      aria-label={`Switch to ${currentTheme === "dark" ? "light" : "dark"} mode`}
-      className="h-9 w-9"
+      aria-label="Switch theme"
+      className="ml-2 h-9 w-9"
     >
       <SunIcon />
       <MoonIcon />
