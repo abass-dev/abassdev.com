@@ -175,7 +175,12 @@
                 "text": "Fork this repository",
                 "tooltip": "Fork this GitHub repository"
             }
-        ]
+        ],
+        "disclaimer": {
+            "title": "Important Notice:",
+            "messageBeforeEmail": "This code is part of the personal portfolio of Abass Alzouma (Abass Dev) and is open-source for educational and demonstration purposes only. It is not free to use, modify, or distribute without explicit permission from Abass Alzouma. Unauthorized use may result in legal action. By accessing this code, you agree that Abass Alzouma (Abass Dev) is not liable for any damages, data loss, or issues arising from its use. For inquiries or permissions, please contact me at ",
+            "messageAfterEmail": "."
+        }
     },
     "footer": {
         "whatsNext": {
@@ -226,7 +231,7 @@
         },
         "aboutMe": "About Me",
         "whoIsAbassDev": "Who is Abass Dev?",
-        "intro": "Abass Ben Cheik, who goes by the name Abass Dev, is a talented full-stack developer with a passion for building exceptional Web and Mobile applications. He was born in Niamey, Niger, on February 2, 1994. He is currently {birthday}",
+        "intro": "Abass Alzouma, who goes by the name Abass Dev, is a talented full-stack developer with a passion for building exceptional Web and Mobile applications. He was born in Niamey, Niger, on February 2, 1994. He is currently {birthday}",
         "earlyYears": "At a young age of 15 in 2009, Abass Dev became fascinated with the world of web development. However, he had no idea where to start. It wasn't until he met a friend on Skyrock, a social networking site, in 2011, that he was introduced to the world of blogging and tasked with administering a Wix-created blog. It was this experience that sparked his curiosity and ignited his passion for web development.",
         "growth": "In 2012, Abass Dev created his first blog on the Blogspot platform, but soon discovered its limitations. Determined to expand his knowledge and capabilities, he began to explore the depths of web development using languages such as HTML, CSS, JavaScript, PHP, SQL, and others.",
         "development": "With his dedication and hard work, Abass Dev honed his skills and became a self-taught full-stack developer.",
@@ -248,10 +253,10 @@
         "collaborations": "Feel free to reach out for collaborations, opportunities, or just to say hello! I typically respond within 24 hours."
     },
     "meta": {
-        "title": "Abass Dev | Full-stack developer | Personal portfolio",
-        "description": "Abass Dev personal portfolio",
-        "keywords": "web development, mobile app development, graphic design, e-commerce, portfolio, Abass Dev",
-        "author": "Abass Dev",
+        "title": "Abass Dev | Full-stack developer | Personal portfolio | nextjs portfolio",
+        "description": "Abass Dev personal portfolio | Web developer portfolio | Abass Alzouma | mobile app developer portfolio | nextjs portfolio",
+        "keywords": "web development, Web developer portfolio, Abass Alzouma, mobile app developer portfolio, mobile app development, nextjs portfolio, graphic design, e-commerce, portfolio, Abass Dev",
+        "author": "Abass Alzouma (Abass Dev)",
         "ogTitle": "Abass Dev- Web and Mobile Developer Portfolio",
         "ogDescription": "Discover my work in web and mobile app development, graphic design, and more.",
         "twitterTitle": "Abass - Web and Mobile Developer Portfolio",
@@ -322,8 +327,10 @@
     },
     "layout": {
         "metadata": {
-            "keywords": "web development, mobile app development, graphic design, e-commerce, portfolio, Abass Dev",
-            "author": "Abass Dev",
+            "title": "Abass Dev | Full-stack developer | Personal portfolio | nextjs portfolio",
+            "description": "Abass Dev personal portfolio | Web developer portfolio | Abass Alzouma | mobile app developer portfolio | nextjs portfolio",
+            "keywords": "web development, Web developer portfolio, Abass Alzouma, mobile app developer portfolio, mobile app development, nextjs portfolio, graphic design, e-commerce, portfolio, Abass Dev",
+            "author": "Abass Alzouma (Abass Dev)",
             "og": {
                 "title": "Abass Dev - Web and Mobile Developer Portfolio",
                 "description": "Discover my work in web and mobile app development, graphic design, and more.",

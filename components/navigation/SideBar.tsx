@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import ThemeToggle from "../ui/theme-toggle";
 import { OrhIcon, WebUtilityXIcon, MenuAltLeft, Folder, BookAIcon, Contact, History } from "../svg-component";
 import LanguageSwitcher from "../LanguageSwitcher";
+import Image from "next/image";
 
 interface NavigationItem {
   nameKey: string;
@@ -91,11 +92,13 @@ const Logo: React.FC<LogoProps> = ({ open, onClick }) => (
     onClick={onClick}
   >
     {open && <span className="text-2xl">{`{`}</span>}
-    <img
+    <Image
       src="/assets/images/logo.webp"
       alt="Abass Dev Logo"
       width={25}
       height={25}
+      placeholder="blur" // Blurred placeholder
+      blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVQAAA="
       className="rounded-xl"
     />
     {open && <span className="text-2xl">{`}`}</span>}

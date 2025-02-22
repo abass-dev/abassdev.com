@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import ShimmerButton from "@/components/ui/shimmer-button";
 import { ArrowRight, FacebookIcon, GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const SOCIAL_LINKS = [
   {
@@ -63,11 +64,13 @@ const ProfileImage = () => (
     </div>
     <div className="relative rounded-full overflow-hidden h-48 w-48 md:h-64 md:w-64">
       <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-violet-500/10 group-hover:opacity-0 transition duration-500" />
-      <img
+      <Image
         src="/assets/images/profile.webp"
         alt="Abass Dev"
         width={256}
         height={256}
+        blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVQAAA="
+        placeholder="blur" // Blurred placeholder
         className="object-cover w-full h-full transform group-hover:scale-105 transition duration-500"
       />
     </div>

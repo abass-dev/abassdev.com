@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { birthday } from '../../helpers';
 import { Responsive } from '@/utils';
 import Report from '../Report';
+import Image from 'next/image';
 
 const MyStory = () => {
   const t = useTranslations("myStory");
@@ -17,13 +18,14 @@ const MyStory = () => {
           </h1>
           <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500" />
-            <img
-              src="/assets/images/about.webp"
-              alt="Portrait de Abass Dev - Développeur Full Stack"
+            <Image
+              src="/assets/images/about.webp" // Path relative to the public folder
+              alt={t('whoIsAbassDev')}
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVQAAA="
               className="w-full h-auto object-cover relative z-10"
               width={1200}
               height={675}
-              loading="eager"
             />
           </div>
         </header>
