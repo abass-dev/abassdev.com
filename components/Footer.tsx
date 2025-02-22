@@ -11,7 +11,6 @@ import { FacebookIcon, GithubIcon, TwitterIcon, MailIcon, ArrowRightCircle } fro
 import React from 'react';
 import LastUpdateDisplay from "@/utils/LastUpdateDisplay";
 
-// Define types for the ImportantLinks component props
 interface ImportantLinksProps {
   href: string;
   text: string;
@@ -19,7 +18,7 @@ interface ImportantLinksProps {
 
 const ImportantLinks: React.FC<ImportantLinksProps> = ({ href, text }) => {
   return (
-    <li className="mb-2 hover:text-gray-500">
+    <li className="mb-2 hover:text-gray-600 dark:hover:text-gray-400">
       {href.startsWith('/') ? (
         <Link href={href} className="flex text-lg gap-2 items-center">
           <ArrowRightCircle /> {text}
@@ -39,7 +38,7 @@ export const Footer: React.FC = () => {
   const appVersion = packageJson.version;
 
   return (
-    <div className="text-white text-xl bg-black py-8">
+    <div className="text-gray-800 dark:text-white bg-gray-100 dark:bg-black py-8">
       <div className="container mx-auto grid grid-cols-4 gap-10 px-8 md:px-20">
         {pathname !== "/contact/" && (
           <div className="col-span-4 md:col-span-2">
@@ -48,38 +47,36 @@ export const Footer: React.FC = () => {
         )}
 
         <div
-          className={`col-span-4 text-center text-gray-300 ${pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
+          className={`col-span-4 text-center text-gray-600 dark:text-gray-300 ${pathname === "/contact/" ? "md:-col-span-4" : "md:col-span-2"
             }`}
         >
-          <h2 className={`font-edu-nsw mb-3 text-3xl`}>
+          <h2 className="font-edu-nsw mb-3 text-3xl text-gray-800 dark:text-white">
             {t("whatsNext.title")}
           </h2>
-          <h3 className="text-2xl mb-3">{t("whatsNext.subtitle")}</h3>
+          <h3 className="text-2xl mb-3 text-gray-700 dark:text-gray-200">
+            {t("whatsNext.subtitle")}
+          </h3>
           <p className="first-letter:text-5xl">
             {t("whatsNext.description")}
           </p>
           <div className="flex gap-3 pt-8 justify-center items-center">
-            <a aria-label="Github account" href="https://github.com/abass-dev">
+            <a aria-label="Github account" href="https://github.com/abass-dev" className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               <GithubIcon size={25} />
             </a>
-            <a
-              aria-label="Twitter account"
-              href="https://twitter.com/abass_dev"
-            >
+            <a aria-label="Twitter account" href="https://twitter.com/abass_dev" className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               <TwitterIcon size={25} />
             </a>
-            <a
-              aria-label="Facebook account"
-              href="https://m.facebook.com/abassthedev"
-            >
+            <a aria-label="Facebook account" href="https://m.facebook.com/abassthedev" className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               <FacebookIcon size={25} />
             </a>
-            <a aria-label="Email address" href="/contact/">
+            <a aria-label="Email address" href="/contact/" className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               <MailIcon size={25} />
             </a>
           </div>
           <div className="py-3 mt-5">
-            <h3 className="py-5 text-3xl">{t("otherLinks.title")}</h3>
+            <h3 className="py-5 text-3xl text-gray-800 dark:text-white">
+              {t("otherLinks.title")}
+            </h3>
             <ul className="grid grid-cols-2 place-items-center">
               <ImportantLinks href="https://apps.abassdev.com" text="WebUtilityX" />
               <ImportantLinks href="https://orh.vercel.com" text="Orh" />
@@ -93,7 +90,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center text-lg text-gray-300 col-span-4">
+        <div className="text-center text-lg text-gray-600 dark:text-gray-300 col-span-4">
           <p className="mb-2">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
