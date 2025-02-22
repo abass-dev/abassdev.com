@@ -7,7 +7,7 @@ export default function Theme({ children }: { children: React.ReactNode }) {
     <ThemeProvider
       enableSystem={true}
       attribute="class"
-      defaultTheme="dark">
+      defaultTheme="light">
       {children}
     </ThemeProvider>
   );

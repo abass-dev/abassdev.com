@@ -7,8 +7,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import Navigation from "@/components/navigation/Navigation";
 import ScrollUp from "@/components/ui/ScrollUp";
 import { Footer } from "@/components/Footer";
-import HeadScript from "@/components/HeadScript";
 import { generateMetadata as pageMetadata } from './metadata';
+import Analytics from "@/components/Analytics";
 
 const orbitron = Orbitron({
   subsets: ['latin'],
@@ -55,7 +55,7 @@ export default async function RootLayout({
   if (!locales.includes(locale as any)) notFound();
 
   return (
-    <html lang={locale} className="dark" suppressHydrationWarning>
+    <html lang={locale} className="" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -67,7 +67,10 @@ export default async function RootLayout({
             <main>{children}</main>
             <ScrollUp />
             <Footer />
-            <HeadScript />
+            <Analytics
+              GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}
+              ADS_ID={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID!}
+            />
           </Theme>
         </NextIntlClientProvider>
       </body>

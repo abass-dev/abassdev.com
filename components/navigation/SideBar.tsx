@@ -104,7 +104,20 @@ const Logo: React.FC<LogoProps> = ({ open, onClick }) => (
 
 const Sidebar = () => {
   const [open, setOpen] = React.useState(false);
+  const sidebarRef = React.useRef<HTMLDivElement>(null);
   const t = useTranslations('navigation.menu.toggle');
+
+  // Handle click outside
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (open && sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [open]);
 
   // Close sidebar on route change
   React.useEffect(() => {
@@ -133,6 +146,7 @@ const Sidebar = () => {
         aria-label="Main navigation"
       >
         <div
+          ref={sidebarRef}
           className={cn(
             "bg-transparent px-4 transition-all duration-300",
             open ? "w-72 backdrop-blur" : "w-12 md:w-16"
@@ -166,7 +180,7 @@ const Sidebar = () => {
                 onClick={() => open && setOpen(false)}
               />
             ))}
-            <div className="hidden md:block">
+            <div className="hidden mt-5 md:block">
               <LanguageSwitcher open={open} position="sidebar" />
             </div>
             <div className={cn(
