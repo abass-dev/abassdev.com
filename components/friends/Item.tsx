@@ -1,4 +1,5 @@
 import { GitBranch } from "lucide-react";
+import Image from "next/image";
 import {
   BsGlobeCentralSouthAsia,
   BsFacebook,
@@ -22,11 +23,13 @@ interface ItemProps {
 const Item = ({ name, avatar, about, links }: ItemProps) => {
   return (
     <div className="text-black dark:text-white flex flex-col gap-8 justify-center items-center shadow-lg dark:shadow-slate-900 bg-white dark:bg-gray-800 p-5 mb-8 overflow-hidden">
-      <img
+      <Image
         src={avatar}
         alt={name}
         width={100}
         height={100}
+        blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVQAAA="
+        placeholder="blur" // Blurred placeholder
         style={{ borderRadius: 100 }}
       />
       <p>

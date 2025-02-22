@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface BlogEntryProps {
   title: string;
@@ -23,8 +24,12 @@ const BlogEntry: React.FC<BlogEntryProps> = ({
     <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <Link href={link}>
         <div className="relative aspect-w-16 aspect-h-9">
-          <img
+          <Image
+            width={800} // Set appropriate width
+            height={450} // Set appropriate height
             src={imageUrl}
+            placeholder="blur" // Blurred placeholder
+            blurDataURL="data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVQAAA="
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
