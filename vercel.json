@@ -1,14 +1,4 @@
 {
-    "domains": [
-        {
-            "domain": "abassdev.com",
-            "redirect": "www.abassdev.com"
-        },
-        {
-            "domain": "www.abassdev.com",
-            "type": "primary"
-        }
-    ],
     "rewrites": [
         {
             "source": "/blog/:path*",
@@ -38,13 +28,6 @@
                 "Content-Type": "text/plain"
             },
             "dest": "/ads.txt"
-        }
-    ],
-    "redirects": [
-        {
-            "source": "abassdev.com",
-            "destination": "www.abassdev.com",
-            "permanent": true
         }
     ],
     "cleanUrls": true,
