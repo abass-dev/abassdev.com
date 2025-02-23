@@ -2,22 +2,6 @@
     "rewrites": [
         {
             "source": "/blog/:path*",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "abassdev.com"
-                }
-            ],
-            "destination": "http://server6.stormerhost.com/~abassdev/blog/:path*"
-        },
-        {
-            "source": "/blog/:path*",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "www.abassdev.com"
-                }
-            ],
             "destination": "http://server6.stormerhost.com/~abassdev/blog/:path*"
         }
     ],
@@ -29,7 +13,5 @@
             },
             "dest": "/ads.txt"
         }
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false
+    ]
 }
