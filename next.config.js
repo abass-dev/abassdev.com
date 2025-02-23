@@ -25,6 +25,10 @@ const nextConfig = {
           },
         ],
         destination: 'http://server6.stormerhost.com/blog/:path*'
+      },
+      {
+        source: '/ads.txt',
+        destination: '/ads.txt'
       }
     ]
   },
