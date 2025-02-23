@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, User } from "lucide-react";
-import { useTranslations } from "next-intl"; // Import useTranslations
+import { useTranslations } from "next-intl";
 import Form from "./Form";
 import { Responsive } from "@/utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -15,31 +15,6 @@ interface ContactInfo {
   value: string;
   href?: string;
 }
-
-const contactInfo: ContactInfo[] = [
-  {
-    icon: User,
-    label: "Role",
-    value: "Web and mobile app developer at self-employed"
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Niamey, Niger"
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "abass@abassdev.com",
-    href: "mailto:abass@abassdev.com"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+233 59 820 8469",
-    href: "tel:+233598208469"
-  }
-];
 
 const ContactInfoItem: React.FC<ContactInfo> = ({ icon: Icon, label, value, href }) => {
   const content = (
@@ -66,14 +41,40 @@ const ContactInfoItem: React.FC<ContactInfo> = ({ icon: Icon, label, value, href
 };
 
 const Contact = () => {
-  const t = useTranslations("contactPage"); // Access translations
+  const t = useTranslations("contactPage");
+
+  // Fetch contact info from translations
+  const contactInfo: ContactInfo[] = [
+    {
+      icon: User,
+      label: "Role",
+      value: t("role"),
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: t("location"),
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      value: t("email"),
+      href: `mailto:${t("email")}`,
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: t("phone"),
+      href: `tel:${t("phone")}`,
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-background">
       <div className="container mx-auto px-4 md:px-8 py-16">
         <header className="text-center mb-12">
           <h1 className={`font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent`}>
-            {t("contactMe")} {/* Using translation */}
+            {t("contactMe")}
           </h1>
         </header>
 
@@ -93,12 +94,12 @@ const Contact = () => {
               {/* Additional Information */}
               <div className="mt-8 space-y-4">
                 <p className="text-muted-foreground">
-                  {t("collaborations")} {/* Using translation */}
+                  {t("collaborations")}
                 </p>
-                <div className="flex gap-2">
+                <div className="flex gap-2 items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-sm text-muted-foreground">
-                    {t("availableForProjects")} {/* Using translation */}
+                    {t("availableForProjects")}
                   </span>
                 </div>
               </div>

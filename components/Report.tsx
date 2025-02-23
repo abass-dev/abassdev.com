@@ -74,20 +74,39 @@ export default function Report({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          {/* Disclaimer Section */}
-          <div className="mb-6 p-4 bg-yellow-100 dark:bg-yellow-900 border-l-4 border-yellow-500 dark:border-yellow-600 text-yellow-700 dark:text-yellow-200">
-            <p className="font-semibold">{t("disclaimer.title")}</p>
-            <p>
-              {t("disclaimer.messageBeforeEmail")}
-              <a
-                href="mailto:abass@abassdev.com"
-                className="text-blue-500 dark:text-blue-400 underline"
+          {/* Disclaimer Section in a Dropdown */}
+          <details className="mb-6 group">
+            <summary className="cursor-pointer list-none flex items-center justify-between p-4 bg-yellow-100 dark:bg-yellow-900 border-l-4 border-yellow-500 dark:border-yellow-600 text-yellow-700 dark:text-yellow-200">
+              <p className="font-semibold">{t("disclaimer.title")}</p>
+              <svg
+                className="h-5 w-5 transform transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                abass@abassdev.com
-              </a>
-              {t("disclaimer.messageAfterEmail")}
-            </p>
-          </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div className="p-4 bg-yellow-50 dark:bg-yellow-800 border-l-4 border-yellow-500 dark:border-yellow-600 text-yellow-700 dark:text-yellow-200">
+              <p>
+                {t("disclaimer.messageBeforeEmail")}
+                <a
+                  href="mailto:abass@abassdev.com"
+                  className="text-blue-500 dark:text-blue-400 underline"
+                >
+                  abass@abassdev.com
+                </a>
+                {t("disclaimer.messageAfterEmail")}
+              </p>
+            </div>
+          </details>
+
           {/* Links Section */}
           <ul className="space-y-2">
             {links.map((link, index) => (

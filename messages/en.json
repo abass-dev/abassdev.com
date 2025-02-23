@@ -241,16 +241,16 @@
     },
     "contactPage": {
         "metadata": {
-            "title": "Contact us - Abass Dev",
-            "description": "Web and mobile app developer at self-employed. | Abass Dev"
+            "title": "Contact Us - Abass Dev",
+            "description": "Freelance web and mobile app developer. | Abass Dev"
         },
         "contactMe": "Contact Me",
-        "role": "Web and mobile app developer at self-employed",
+        "role": "Freelance Web and Mobile App Developer",
         "location": "Niamey, Niger",
         "email": "abass@abassdev.com",
         "phone": "+233 59 820 8469",
         "availableForProjects": "Available for new projects",
-        "collaborations": "Feel free to reach out for collaborations, opportunities, or just to say hello! I typically respond within 24 hours."
+        "collaborations": "Feel free to reach out for collaborations, opportunities, or just to say hi! I typically respond within 24 hours."
     },
     "meta": {
         "title": "Abass Dev | Full-stack developer | Personal portfolio | nextjs portfolio",
