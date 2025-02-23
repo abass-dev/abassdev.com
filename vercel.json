@@ -1,10 +1,4 @@
 {
-    "rewrites": [
-        {
-            "source": "/blog/:path*",
-            "destination": "http://server6.stormerhost.com/~abassdev/blog/:path*"
-        }
-    ],
     "routes": [
         {
             "src": "/ads.txt",

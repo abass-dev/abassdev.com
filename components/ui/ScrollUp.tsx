@@ -1,55 +1,59 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { BsChevronDoubleUp } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import ChevronDoubleUpIcon from "../svg-component/ChevronDoubleUp";
+
+const SCROLL_THRESHOLD = 712;
+const SCROLL_BEHAVIOR: ScrollBehavior = "smooth";
 
 const ScrollUp = () => {
-  const btnUpRef = useRef<HTMLDivElement | null>(null); // Specify the HTMLDivElement type
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    let ticking = false;
 
-      if (scrollY < 712 && btnUpRef.current && btnUpRef.current.classList) {
-        btnUpRef.current.classList.add("hidden");
-      } else if (btnUpRef.current && btnUpRef.current.classList) {
-        btnUpRef.current.classList.remove("hidden");
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          setIsVisible(scrollY >= SCROLL_THRESHOLD);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Empty dependency array ensures the effect only runs on mount and unmount
+  }, []);
 
-  const handleOnGoUp = () => {
-    window.scrollTo({ top: 0 });
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: SCROLL_BEHAVIOR,
+    });
   };
 
+  if (!isVisible) return null;
+
   return (
-    <div
-      style={{
-        width: 40,
-        height: 40,
-        position: "fixed",
-        right: 10,
-        bottom: 10,
-        borderRadius: 100,
-        zIndex: 49,
-        backgroundColor: "#00835a99",
-        margin: "auto",
-      }}
-      onClick={handleOnGoUp}
-      className={`scroll-up hidden`}
-      ref={btnUpRef}
-      id="scrollUpButton"
+    <button
+      onClick={handleScrollToTop}
+      className="fixed bottom-8 right-8 p-3 rounded-full shadow-lg 
+        bg-white dark:bg-gray-800
+        hover:bg-gray-100 dark:hover:bg-gray-700
+        ring-1 ring-gray-200 dark:ring-gray-700
+        focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400
+        transition-all duration-300"
+      aria-label="Scroll to top"
     >
-      <div style={{ display: "flex", justifyContent: "center", paddingTop: 6 }}>
-        <BsChevronDoubleUp color="white" size={25} />
-      </div>
-    </div>
+      <ChevronDoubleUpIcon
+        className="w-6 h-6 text-gray-700 dark:text-gray-200"
+      />
+    </button>
   );
 };
 

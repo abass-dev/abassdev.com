@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CodeIcon, BugIcon, MailIcon, PencilIcon, GitForkIcon } from 'lucide-react';
-import Link from "next/link";
 
 interface ReportProps {
   report?: string;
@@ -22,10 +21,10 @@ const LinkItem = ({ href, text, icon }: LinkItemProps) => {
   return (
     <li>
       <Button asChild variant="ghost" className="w-full justify-start">
-        <Link href={href} className="flex items-center gap-2">
+        <a href={href} className="flex items-center gap-2">
           {icon}
           <span>{text}</span>
-        </Link>
+        </a>
       </Button>
     </li>
   );
@@ -33,7 +32,7 @@ const LinkItem = ({ href, text, icon }: LinkItemProps) => {
 
 export default function Report({
   report = "page",
-  dir = "app",
+  dir = "app/%5Blocale%5D",
   ext = ".tsx",
 }: ReportProps) {
   const t = useTranslations("report");

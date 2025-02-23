@@ -62,6 +62,9 @@ const config: Config = {
 				}
 			},
 			animation: {
+				'blob-slow': 'blob 25s infinite',
+				'spin-slower': 'spin 8s linear infinite',
+				'gradient': 'gradient 8s linear infinite',
 				'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
 				'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
 				'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
@@ -71,6 +74,16 @@ const config: Config = {
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
 			keyframes: {
+				blob: {
+					'0%': { transform: 'translate(0px, 0px) scale(1)' },
+					'33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+					'66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+					'100%': { transform: 'translate(0px, 0px) scale(1)' },
+				},
+				gradient: {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
 				'shimmer-slide': {
 					to: {
 						transform: 'translate(calc(100cqw - 100%), 0)'

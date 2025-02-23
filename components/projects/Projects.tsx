@@ -226,7 +226,7 @@ export const Projects = () => {
               </>
             )}
           </div>
-          {!pathName.startsWith("/projects") && (
+          {!pathName.includes("/projects") && (
             <div className="flex pt-10 justify-start">
               <SeeMoreButton text={t("seeMore")} goTo="/projects" />
             </div>
@@ -234,7 +234,7 @@ export const Projects = () => {
           <Responsive />
         </div>
       </section>
-      {pathName === "/projects/" && <Report report="projects/page" />}
+      {pathName.includes("/projects") && <Report report="projects/page" />}
     </>
   )
 }
