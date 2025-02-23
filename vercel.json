@@ -1,4 +1,36 @@
 {
+    "domains": [
+        {
+            "domain": "abassdev.com",
+            "redirect": "www.abassdev.com"
+        },
+        {
+            "domain": "www.abassdev.com",
+            "type": "primary"
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/blog/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "abassdev.com"
+                }
+            ],
+            "destination": "http://server6.stormerhost.com/~abassdev/blog/:path*"
+        },
+        {
+            "source": "/blog/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.abassdev.com"
+                }
+            ],
+            "destination": "http://server6.stormerhost.com/~abassdev/blog/:path*"
+        }
+    ],
     "routes": [
         {
             "src": "/ads.txt",
@@ -7,5 +39,14 @@
             },
             "dest": "/ads.txt"
         }
-    ]
+    ],
+    "redirects": [
+        {
+            "source": "abassdev.com",
+            "destination": "www.abassdev.com",
+            "permanent": true
+        }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
 }
