@@ -1,11 +1,11 @@
 const createNextIntlPlugin = require('next-intl/plugin');
-
 const withNextIntl = createNextIntlPlugin('./app/i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
     return [
+      // Only rewrite the non-localized /blog path
       {
         source: '/blog/:path*',
         has: [
@@ -14,7 +14,7 @@ const nextConfig = {
             value: 'abassdev.com',
           },
         ],
-        destination: 'http://abassdev.com/blog/:path*'
+        destination: 'http://server6.stormerhost.com/blog/:path*'
       },
       {
         source: '/blog/:path*',
@@ -24,13 +24,13 @@ const nextConfig = {
             value: 'www.abassdev.com',
           },
         ],
-        destination: 'http://abassdev.com/blog/:path*'
+        destination: 'http://server6.stormerhost.com/blog/:path*'
       }
     ]
   },
-    images: {
-        domains: ['abassdev.com'],
-    },
+  images: {
+    domains: ['abassdev.com'],
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
