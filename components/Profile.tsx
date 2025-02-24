@@ -95,19 +95,19 @@ const SocialLinks = () => {
   const t = useTranslations('profile.social');
 
   return (
-    <div className="flex flex-wrap gap-5 justify-center md:justify-start">
+    <div className="flex flex-wrap gap-4 md:gap-5 justify-center md:justify-start">
       {SOCIAL_LINKS.map(({ icon: Icon, href, labelKey, hoverColor }) => (
         <Link
           key={labelKey}
           href={href}
           target={href.startsWith('http') ? "_blank" : undefined}
           rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-          className={`group relative p-3 md:p-4 bg-background/80 dark:bg-background/60 rounded-xl text-foreground 
+          className={`group relative p-2 md:p-4 bg-background/80 dark:bg-background/60 rounded-xl text-foreground 
             shadow-lg hover:shadow-xl transform hover:-translate-y-1 
             transition-all duration-300 ${hoverColor} hover:text-white`}
           aria-label={t(labelKey)}
         >
-          <Icon className="h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:scale-110 duration-300" />
+          <Icon className="h-4 w-4 md:h-6 md:w-6 transition-transform group-hover:scale-110 duration-300" />
         </Link>
       ))}
     </div>
@@ -118,10 +118,10 @@ const Profile = () => {
   const t = useTranslations('profile');
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-background to-background/95 flex items-center justify-center p-6 overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-background to-background/95 flex items-center justify-center p-4 md:p-6 overflow-hidden">
       <BackgroundBlobs />
 
-      <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative w-full max-w-7xl mx-auto">
         <article className="backdrop-blur-xl bg-background/40 dark:bg-background/10 rounded-3xl border border-border/50 shadow-2xl">
           <div className="grid md:grid-cols-[1fr,1.5fr] gap-10 p-8 md:p-14">
             <div className="space-y-10">

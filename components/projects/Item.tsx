@@ -81,13 +81,25 @@ export default function Item({ name, headerImg, description, seeMore, techs, hea
           <Image
             src={headerImg}
             alt={name}
-            width={800} // Set appropriate width
-            height={450} // Set appropriate height
+            width={800}
+            height={450}
             className={`object-cover transition-all duration-500 ${isHovered ? 'scale-105' : ''}`}
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
-            priority // Preload above-the-fold images
+            priority
           />
+
+          {/* Diagonal overlay shape */}
+          <div className="absolute inset-0 z-10 overflow-hidden">
+            <div className="absolute bottom-0 right-0 w-full h-full bg-background/90 dark:bg-background/95"
+              style={{
+                clipPath: 'polygon(100% 0, 100% 100%, 0 190%, 100% 0)',
+                height: '100%',
+                width: '100%'
+              }}
+            />
+          </div>
+
           {headerLinks?.github && (
             <div
               className={`absolute inset-0 flex items-center justify-center z-20 bg-background/10 backdrop-blur-sm transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}

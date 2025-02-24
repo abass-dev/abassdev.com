@@ -158,7 +158,7 @@ const Sidebar = () => {
           <div className="flex min-w-full justify-between py-3">
             <Logo open={open} onClick={() => setOpen(false)} />
             <Button
-              variant="ghost"
+              variant="default"
               size="lg"
               onClick={() => setOpen(!open)}
               aria-label={open ? t('close') : t('open')}
