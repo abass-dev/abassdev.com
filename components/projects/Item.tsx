@@ -89,7 +89,7 @@ export default function Item({ name, headerImg, description, seeMore, techs, hea
             priority
           />
 
-          {/* Diagonal overlay shape */}
+          {/* Diagonal overlay shape 
           <div className="absolute inset-0 z-10 overflow-hidden">
             <div className="absolute bottom-0 right-0 w-full h-full bg-background/90 dark:bg-background/95"
               style={{
@@ -99,6 +99,7 @@ export default function Item({ name, headerImg, description, seeMore, techs, hea
               }}
             />
           </div>
+          */}
 
           {headerLinks?.github && (
             <div
