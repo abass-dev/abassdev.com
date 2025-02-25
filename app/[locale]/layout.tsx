@@ -67,7 +67,7 @@ export default async function RootLayout({
               GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}
               ADS_ID={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID!}
             />
-            <VercelAnalytics />
+            <VercelAnalytics /> 
           </Theme>
         </NextIntlClientProvider>
       </body>
