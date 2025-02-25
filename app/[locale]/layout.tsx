@@ -9,7 +9,7 @@ import ScrollUp from "@/components/ui/ScrollUp";
 import { Footer } from "@/components/Footer";
 import { generateMetadata as pageMetadata } from './metadata';
 import Analytics from "@/components/Analytics";
-
+import { Analytics as VercelAnalytics} from "@vercel/analytics/react"
 const orbitron = Orbitron({
   subsets: ['latin'],
   variable: '--font-orbitron',
@@ -67,6 +67,7 @@ export default async function RootLayout({
               GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}
               ADS_ID={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID!}
             />
+            <VercelAnalytics />
           </Theme>
         </NextIntlClientProvider>
       </body>
